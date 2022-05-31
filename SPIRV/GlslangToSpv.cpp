@@ -2913,8 +2913,16 @@ bool TGlslangToSpvTraverser::visitAggregate(glslang::TVisit visit, glslang::TInt
         std::vector<spv::Id> arguments;
         translateArguments(*node, arguments, lvalueCoherentFlags);
         spv::Id constructed;
-        if (node->getOp() == glslang::EOpConstructTextureSampler)
-            constructed = builder.createOp(spv::OpSampledImage, resultType(), arguments);
+        if (node->getOp() == glslang::EOpConstructTextureSampler) {
+            const glslang::TType& texType = node->getSequence()[0]->getAsTyped()->getType();
+            if (node->isTexture() && texType.getSampler().isBuffer()) {
+                // we treat `bufferSampler(bufferTexture, sampler)` as nop here
+                constructed = arguments[0];
+            }
+            else {
+                constructed = builder.createOp(spv::OpSampledImage, resultType(), arguments);
+            }
+        }
         else if (node->getOp() == glslang::EOpConstructStruct ||
                  node->getOp() == glslang::EOpConstructCooperativeMatrix ||
                  node->getType().isArray()) {
@@ -4150,7 +4158,7 @@ spv::Id TGlslangToSpvTraverser::convertGlslangToSpvType(const glslang::TType& ty
                 spvType = builder.makeImageType(getSampledType(sampler), TranslateDimensionality(sampler),
                                                 sampler.isShadow(), sampler.isArrayed(), sampler.isMultiSample(),
                                                 sampler.isImageClass() ? 2 : 1, TranslateImageFormat(type));
-                if (sampler.isCombined()) {
+                if (sampler.isCombined() && !sampler.isBuffer()) {
                     // already has both image and sampler, make the combined type
                     spvType = builder.makeSampledImageType(spvType);
                 }
