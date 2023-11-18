@@ -215,6 +215,14 @@ public:
         int column {0};
     };
     std::unordered_map<Id, DebugTypeLoc> debugTypeLocs;
+    Id getDebugType(Id spirvType) {
+        if (auto it = debugId.find(spirvType); it != debugId.end()) {
+            return it->second;
+        }
+        else {
+            return makeDebugInfoNone();
+        }
+    }
     Id makeDebugInfoNone();
     Id makeBoolDebugType(int const size);
     Id makeIntegerDebugType(int const width, bool const hasSign);
@@ -947,8 +955,8 @@ public:
     // map from include file name ids to their contents
     std::map<spv::Id, const std::string*> includeFiles;
 
-    // map from core id to debug id
-    std::map <spv::Id, spv::Id> debugId;
+    // map from SPIR-V type id to non-semantic debug type id
+    std::map<spv::Id, spv::Id> debugId;
 
     // map from file name string id to DebugSource id
     std::unordered_map<spv::Id, spv::Id> debugSourceId;

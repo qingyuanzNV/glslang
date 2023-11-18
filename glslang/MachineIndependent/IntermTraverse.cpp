@@ -149,6 +149,26 @@ void TIntermUnary::traverse(TIntermTraverser *it)
 }
 
 //
+// Traverse a declaration.
+//
+void TIntermDecl::traverse(TIntermTraverser *it)
+{
+    bool visit = true;
+
+    if (it->preVisit)
+        visit = it->visitDecl(EvPreVisit, this);
+
+    if (visit && initNode) {
+        it->incrementDepth(this);
+        initNode->traverse(it);
+        it->decrementDepth();
+    }
+
+    if (visit && it->postVisit)
+        it->visitDecl(EvPostVisit, this);
+}
+
+//
 // Traverse an aggregate node.  Same comments in binary node apply here.
 //
 void TIntermAggregate::traverse(TIntermTraverser *it)

@@ -120,12 +120,12 @@ void Builder::setLine(int lineNum, const char* filename)
             strncmp(filename, currentFile, strlen(currentFile) + 1) != 0) {
         currentLine = lineNum;
         currentFile = filename;
+        currentFileId = getStringId(filename);
         if (emitOpLines) {
-            spv::Id strId = getStringId(filename);
             if (emitNonSemanticShaderDebugInfo)
-                addDebugScopeAndLine(strId, currentLine, 0);
+                addDebugScopeAndLine(currentFileId, currentLine, 0);
             else
-                addLine(strId, currentLine, 0);
+                addLine(currentFileId, currentLine, 0);
         }
     }
 }
@@ -1126,7 +1126,7 @@ Id Builder::createDebugGlobalVariable(Id const type, char const*const name, Id c
     inst->addImmediateOperand(NonSemanticShaderDebugInfo100DebugGlobalVariable);
     inst->addIdOperand(getStringId(name)); // name id
     inst->addIdOperand(type); // type id
-    inst->addIdOperand(makeDebugSource(sourceFileStringId)); // source id
+    inst->addIdOperand(makeDebugSource(currentFileId)); // source id
     inst->addIdOperand(makeUintConstant(currentLine)); // line id TODO: currentLine always zero?
     inst->addIdOperand(makeUintConstant(0)); // TODO: column id
     inst->addIdOperand(makeDebugCompilationUnit()); // scope id

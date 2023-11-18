@@ -74,6 +74,7 @@ public:
 
     virtual bool visitBinary(TVisit, TIntermBinary* node);
     virtual bool visitUnary(TVisit, TIntermUnary* node);
+    virtual bool visitDecl(TVisit, TIntermDecl* node);
     virtual bool visitAggregate(TVisit, TIntermAggregate* node);
     virtual bool visitSelection(TVisit, TIntermSelection* node);
     virtual void visitConstantUnion(TIntermConstantUnion* node);
@@ -676,6 +677,16 @@ bool TOutputTraverser::visitUnary(TVisit /* visit */, TIntermUnary* node)
 
     out.debug << "\n";
 
+    return true;
+}
+
+bool TOutputTraverser::visitDecl(TVisit, TIntermDecl* node)
+{
+    TInfoSink& out = infoSink;
+
+    OutputTreeText(out, node, depth);
+
+    out.debug << "Decl: " << node->getDeclSymbol()->getName() << '\n';
     return true;
 }
 

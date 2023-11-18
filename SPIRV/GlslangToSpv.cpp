@@ -125,6 +125,7 @@ public:
         glslang::SpvOptions& options);
     virtual ~TGlslangToSpvTraverser() { }
 
+    bool visitDecl(glslang::TVisit, glslang::TIntermDecl*);
     bool visitAggregate(glslang::TVisit, glslang::TIntermAggregate*);
     bool visitBinary(glslang::TVisit, glslang::TIntermBinary*);
     void visitConstantUnion(glslang::TIntermConstantUnion*);
@@ -223,6 +224,8 @@ protected:
     spv::Id createMiscOperation(glslang::TOperator op, spv::Decoration precision, spv::Id typeId,
         std::vector<spv::Id>& operands, glslang::TBasicType typeProxy);
     spv::Id createNoArgOperation(glslang::TOperator op, spv::Decoration precision, spv::Id typeId);
+
+    // Get the OpVariable id that a symbol node is accessing. Create it if it's not available yet.
     spv::Id getSymbolId(const glslang::TIntermSymbol* node);
     void addMeshNVDecoration(spv::Id id, int member, const glslang::TQualifier & qualifier);
     void addImageProcessingQCOMDecoration(spv::Id id, spv::Decoration decor);
@@ -258,6 +261,7 @@ protected:
     spv::Id nonSemanticDebugPrintf;
     std::unordered_map<std::string, spv::Id> extBuiltinMap;
 
+    // AST symbol id -> OpVariable id
     std::unordered_map<long long, spv::Id> symbolValues;
     std::unordered_map<uint32_t, spv::Id> builtInVariableIds;
     std::unordered_set<long long> rValueParameters;  // set of formal function parameters passed as rValues,
@@ -2820,6 +2824,16 @@ spv::Id TGlslangToSpvTraverser::createCompositeConstruct(spv::Id resultTypeId, s
         }
     }
     return builder.createCompositeConstruct(resultTypeId, constituents);
+}
+
+bool TGlslangToSpvTraverser::visitDecl(glslang::TVisit visit, glslang::TIntermDecl* node)
+{
+    builder.setLine(node->getDeclSymbol()->getLoc().line, node->getDeclSymbol()->getLoc().getFilename());
+    getSymbolId(node->getDeclSymbol());
+    if (node->getInitNode()) {
+        node->getInitNode()->traverse(this);
+    }
+    return false;
 }
 
 bool TGlslangToSpvTraverser::visitAggregate(glslang::TVisit visit, glslang::TIntermAggregate* node)
@@ -9718,12 +9732,27 @@ spv::Id TGlslangToSpvTraverser::createSpvConstant(const glslang::TIntermTyped& n
         // hand off to the non-spec-constant path
         assert(node.getAsConstantUnion() != nullptr || node.getAsSymbolNode() != nullptr);
         int nextConst = 0;
-        return createSpvConstantFromConstUnionArray(node.getType(), node.getAsConstantUnion() ?
+        auto result = createSpvConstantFromConstUnionArray(node.getType(), node.getAsConstantUnion() ?
             node.getAsConstantUnion()->getConstArray() : node.getAsSymbolNode()->getConstArray(),
             nextConst, false);
+        
+        // FIXME: this is currently a hack.
+        auto name = node.getAsSymbolNode()->getAccessName().c_str();
+        if (!currentFunction) {
+            auto typeId = builder.getDebugType(convertGlslangToSpvType(node.getType()));
+            builder.createDebugGlobalVariable(typeId, name, result);
+        }
+        else {
+            auto typeId = builder.getDebugType(convertGlslangToSpvType(node.getType()));
+            auto debugLocal = builder.createDebugLocalVariable(typeId, name);
+            builder.makeDebugValue(debugLocal, result);
+        }
+
+        return result;
     }
 
     // We now know we have a specialization constant to build
+    // FIXME: generate debug info?
 
     // Extra capabilities may be needed.
     if (node.getType().contains8BitInt())

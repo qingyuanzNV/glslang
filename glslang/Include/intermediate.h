@@ -1125,6 +1125,7 @@ class TIntermSelection;
 class TIntermSwitch;
 class TIntermBranch;
 class TIntermTyped;
+class TIntermDecl;
 class TIntermMethod;
 class TIntermSymbol;
 class TIntermLoop;
@@ -1145,6 +1146,7 @@ public:
     virtual void setLoc(const glslang::TSourceLoc& l) { loc = l; }
     virtual void traverse(glslang::TIntermTraverser*) = 0;
     virtual       glslang::TIntermTyped*         getAsTyped()               { return nullptr; }
+    virtual       glslang::TIntermDecl*          getAsDecl()                { return nullptr; }
     virtual       glslang::TIntermOperator*      getAsOperator()            { return nullptr; }
     virtual       glslang::TIntermConstantUnion* getAsConstantUnion()       { return nullptr; }
     virtual       glslang::TIntermAggregate*     getAsAggregate()           { return nullptr; }
@@ -1158,6 +1160,7 @@ public:
     virtual       glslang::TIntermLoop*          getAsLoopNode()            { return nullptr; }
 
     virtual const glslang::TIntermTyped*         getAsTyped()         const { return nullptr; }
+    virtual const glslang::TIntermDecl*          getAsDecl()          const { return nullptr; }
     virtual const glslang::TIntermOperator*      getAsOperator()      const { return nullptr; }
     virtual const glslang::TIntermConstantUnion* getAsConstantUnion() const { return nullptr; }
     virtual const glslang::TIntermAggregate*     getAsAggregate()     const { return nullptr; }
@@ -1223,6 +1226,33 @@ public:
 protected:
     TIntermTyped& operator=(const TIntermTyped&);
     TType type;
+};
+
+//
+// Represent a declaration of variable.
+//
+class TIntermDecl : public TIntermNode {
+public:
+    TIntermDecl(TIntermSymbol* declSymbol, TIntermNode* initNode)
+        : declSymbol(declSymbol), initNode(initNode) {
+    }
+    TIntermDecl(const TIntermDecl&) = delete;
+    TIntermDecl& operator=(const TIntermDecl&) = delete;
+
+    void traverse(glslang::TIntermTraverser* traverser) override;
+
+    TIntermDecl* getAsDecl() override { return this; }
+    const TIntermDecl* getAsDecl() const override { return this; }
+
+    TIntermSymbol* getDeclSymbol() { return declSymbol; }
+    const TIntermSymbol* getDeclSymbol() const { return declSymbol; }
+
+    TIntermNode* getInitNode() { return initNode; }
+    const TIntermNode* getInitNode() const { return initNode; }
+
+private:
+    TIntermSymbol* declSymbol = nullptr;
+    TIntermNode* initNode = nullptr;
 };
 
 //
@@ -1840,6 +1870,7 @@ public:
     virtual bool visitUnary(TVisit, TIntermUnary*)         { return true; }
     virtual bool visitSelection(TVisit, TIntermSelection*) { return true; }
     virtual bool visitAggregate(TVisit, TIntermAggregate*) { return true; }
+    virtual bool visitDecl(TVisit, TIntermDecl*)           { return true; }
     virtual bool visitLoop(TVisit, TIntermLoop*)           { return true; }
     virtual bool visitBranch(TVisit, TIntermBranch*)       { return true; }
     virtual bool visitSwitch(TVisit, TIntermSwitch*)       { return true; }

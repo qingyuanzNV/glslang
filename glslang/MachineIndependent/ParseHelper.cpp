@@ -7616,7 +7616,7 @@ TIntermNode* TParseContext::declareVariable(const TSourceLoc& loc, TString& iden
     // fix up
     fixOffset(loc, *symbol);
 
-    return initNode;
+    return new TIntermDecl(intermediate.addSymbol(*symbol->getAsVariable(), loc), initNode);
 }
 
 // Pick up global defaults from the provide global defaults into dst.
