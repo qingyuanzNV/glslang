@@ -4,84 +4,84 @@ spv.vecMatConstruct.frag
 // Id's are bound by 62
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "v2"
-                              Name 13  "m"
-                              Name 19  "v3"
-                              Name 27  "v4"
-                              Name 37  "iv2"
-                              Name 45  "iv3"
-                              Name 54  "iv4"
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypePointer Function 7(fvec2)
-              10:             TypeVector 6(float) 3
-              11:             TypeMatrix 10(fvec3) 4
-              12:             TypePointer Function 11
-              18:             TypePointer Function 10(fvec3)
-              25:             TypeVector 6(float) 4
-              26:             TypePointer Function 25(fvec4)
-              34:             TypeInt 32 1
-              35:             TypeVector 34(int) 2
-              36:             TypePointer Function 35(ivec2)
-              43:             TypeVector 34(int) 3
-              44:             TypePointer Function 43(ivec3)
-              52:             TypeVector 34(int) 4
-              53:             TypePointer Function 52(ivec4)
-         4(main):           2 Function None 3
-               5:             Label
-           9(v2):      8(ptr) Variable Function
-           13(m):     12(ptr) Variable Function
-          19(v3):     18(ptr) Variable Function
-          27(v4):     26(ptr) Variable Function
-         37(iv2):     36(ptr) Variable Function
-         45(iv3):     44(ptr) Variable Function
-         54(iv4):     53(ptr) Variable Function
-              14:          11 Load 13(m)
-              15:    6(float) CompositeExtract 14 0 0
-              16:    6(float) CompositeExtract 14 0 1
-              17:    7(fvec2) CompositeConstruct 15 16
-                              Store 9(v2) 17
-              20:          11 Load 13(m)
-              21:    6(float) CompositeExtract 20 0 0
-              22:    6(float) CompositeExtract 20 0 1
-              23:    6(float) CompositeExtract 20 0 2
-              24:   10(fvec3) CompositeConstruct 21 22 23
-                              Store 19(v3) 24
-              28:          11 Load 13(m)
-              29:    6(float) CompositeExtract 28 0 0
-              30:    6(float) CompositeExtract 28 0 1
-              31:    6(float) CompositeExtract 28 0 2
-              32:    6(float) CompositeExtract 28 1 0
-              33:   25(fvec4) CompositeConstruct 29 30 31 32
-                              Store 27(v4) 33
-              38:          11 Load 13(m)
-              39:    6(float) CompositeExtract 38 0 0
-              40:    6(float) CompositeExtract 38 0 1
-              41:    7(fvec2) CompositeConstruct 39 40
-              42:   35(ivec2) ConvertFToS 41
-                              Store 37(iv2) 42
-              46:          11 Load 13(m)
-              47:    6(float) CompositeExtract 46 0 0
-              48:    6(float) CompositeExtract 46 0 1
-              49:    6(float) CompositeExtract 46 0 2
-              50:   10(fvec3) CompositeConstruct 47 48 49
-              51:   43(ivec3) ConvertFToS 50
-                              Store 45(iv3) 51
-              55:          11 Load 13(m)
-              56:    6(float) CompositeExtract 55 0 0
-              57:    6(float) CompositeExtract 55 0 1
-              58:    6(float) CompositeExtract 55 0 2
-              59:    6(float) CompositeExtract 55 1 0
-              60:   25(fvec4) CompositeConstruct 56 57 58 59
-              61:   52(ivec4) ConvertFToS 60
-                              Store 54(iv4) 61
+                              Name 54_1  "main"
+                              Name 59_1  "v2"
+                              Name 59_2  "m"
+                              Name 59_3  "v3"
+                              Name 59_4  "v4"
+                              Name 59_5  "iv2"
+                              Name 59_6  "iv3"
+                              Name 59_7  "iv4"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            32_1:             TypePointer Function 23_1(fvec2)
+            23_2:             TypeVector 22_1(float) 3
+            24_1:             TypeMatrix 23_2(fvec3) 4
+            32_2:             TypePointer Function 24_1
+            32_3:             TypePointer Function 23_2(fvec3)
+            23_3:             TypeVector 22_1(float) 4
+            32_4:             TypePointer Function 23_3(fvec4)
+            21_1:             TypeInt 32 1
+            23_4:             TypeVector 21_1(int) 2
+            32_5:             TypePointer Function 23_4(ivec2)
+            23_5:             TypeVector 21_1(int) 3
+            32_6:             TypePointer Function 23_5(ivec3)
+            23_6:             TypeVector 21_1(int) 4
+            32_7:             TypePointer Function 23_6(ivec4)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_1(v2):   32_1(ptr) Variable Function
+         59_2(m):   32_2(ptr) Variable Function
+        59_3(v3):   32_3(ptr) Variable Function
+        59_4(v4):   32_4(ptr) Variable Function
+       59_5(iv2):   32_5(ptr) Variable Function
+       59_6(iv3):   32_6(ptr) Variable Function
+       59_7(iv4):   32_7(ptr) Variable Function
+            61_1:        24_1 Load 59_2(m)
+            81_1: 22_1(float) CompositeExtract 61_1 0 0
+            81_2: 22_1(float) CompositeExtract 61_1 0 1
+            80_1: 23_1(fvec2) CompositeConstruct 81_1 81_2
+                              Store 59_1(v2) 80_1
+            61_2:        24_1 Load 59_2(m)
+            81_3: 22_1(float) CompositeExtract 61_2 0 0
+            81_4: 22_1(float) CompositeExtract 61_2 0 1
+            81_5: 22_1(float) CompositeExtract 61_2 0 2
+            80_2: 23_2(fvec3) CompositeConstruct 81_3 81_4 81_5
+                              Store 59_3(v3) 80_2
+            61_3:        24_1 Load 59_2(m)
+            81_6: 22_1(float) CompositeExtract 61_3 0 0
+            81_7: 22_1(float) CompositeExtract 61_3 0 1
+            81_8: 22_1(float) CompositeExtract 61_3 0 2
+            81_9: 22_1(float) CompositeExtract 61_3 1 0
+            80_3: 23_3(fvec4) CompositeConstruct 81_6 81_7 81_8 81_9
+                              Store 59_4(v4) 80_3
+            61_4:        24_1 Load 59_2(m)
+           81_10: 22_1(float) CompositeExtract 61_4 0 0
+           81_11: 22_1(float) CompositeExtract 61_4 0 1
+            80_4: 23_1(fvec2) CompositeConstruct 81_10 81_11
+           110_1: 23_4(ivec2) ConvertFToS 80_4
+                              Store 59_5(iv2) 110_1
+            61_5:        24_1 Load 59_2(m)
+           81_12: 22_1(float) CompositeExtract 61_5 0 0
+           81_13: 22_1(float) CompositeExtract 61_5 0 1
+           81_14: 22_1(float) CompositeExtract 61_5 0 2
+            80_5: 23_2(fvec3) CompositeConstruct 81_12 81_13 81_14
+           110_2: 23_5(ivec3) ConvertFToS 80_5
+                              Store 59_6(iv3) 110_2
+            61_6:        24_1 Load 59_2(m)
+           81_15: 22_1(float) CompositeExtract 61_6 0 0
+           81_16: 22_1(float) CompositeExtract 61_6 0 1
+           81_17: 22_1(float) CompositeExtract 61_6 0 2
+           81_18: 22_1(float) CompositeExtract 61_6 1 0
+            80_6: 23_3(fvec4) CompositeConstruct 81_15 81_16 81_17 81_18
+           110_3: 23_6(ivec4) ConvertFToS 80_6
+                              Store 59_7(iv4) 110_3
                               Return
                               FunctionEnd

@@ -6,60 +6,60 @@ spv.ARMCoreBuiltIns.vert
                               Capability Shader
                               Capability CoreBuiltinsARM
                               Extension  "SPV_ARM_core_builtins"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 10 18 20 22 24
+                              EntryPoint Vertex 54_1  "main" 59_1 59_3 59_4 59_5 59_6
                               Source GLSL 450
                               SourceExtension  "GL_ARM_shader_core_builtins"
-                              Name 4  "main"
-                              Name 8  "temp"
-                              Name 10  "gl_WarpMaxIDARM"
-                              Name 13  "Output"
-                              MemberName 13(Output) 0  "result"
-                              Name 15  ""
-                              Name 18  "gl_CoreIDARM"
-                              Name 20  "gl_CoreCountARM"
-                              Name 22  "gl_CoreMaxIDARM"
-                              Name 24  "gl_WarpIDARM"
-                              Decorate 10(gl_WarpMaxIDARM) BuiltIn BuiltInWarpMaxIDARM
-                              Decorate 13(Output) BufferBlock
-                              MemberDecorate 13(Output) 0 Offset 0
-                              Decorate 15 Binding 0
-                              Decorate 15 DescriptorSet 0
-                              Decorate 18(gl_CoreIDARM) BuiltIn CoreIDARM
-                              Decorate 20(gl_CoreCountARM) BuiltIn CoreCountARM
-                              Decorate 22(gl_CoreMaxIDARM) BuiltIn CoreMaxIDARM
-                              Decorate 24(gl_WarpIDARM) BuiltIn WarpIDARM
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               9:             TypePointer Input 6(int)
-10(gl_WarpMaxIDARM):      9(ptr) Variable Input
-              12:             TypeVector 6(int) 4
-      13(Output):             TypeStruct 12(ivec4)
-              14:             TypePointer Uniform 13(Output)
-              15:     14(ptr) Variable Uniform
-              16:             TypeInt 32 1
-              17:     16(int) Constant 0
-18(gl_CoreIDARM):      9(ptr) Variable Input
-20(gl_CoreCountARM):      9(ptr) Variable Input
-22(gl_CoreMaxIDARM):      9(ptr) Variable Input
-24(gl_WarpIDARM):      9(ptr) Variable Input
-              29:             TypePointer Uniform 12(ivec4)
-         4(main):           2 Function None 3
-               5:             Label
-         8(temp):      7(ptr) Variable Function
-              11:      6(int) Load 10(gl_WarpMaxIDARM)
-                              Store 8(temp) 11
-              19:      6(int) Load 18(gl_CoreIDARM)
-              21:      6(int) Load 20(gl_CoreCountARM)
-              23:      6(int) Load 22(gl_CoreMaxIDARM)
-              25:      6(int) Load 24(gl_WarpIDARM)
-              26:      6(int) Load 8(temp)
-              27:      6(int) IAdd 25 26
-              28:   12(ivec4) CompositeConstruct 19 21 23 27
-              30:     29(ptr) AccessChain 15 17
-                              Store 30 28
+                              Name 54_1  "main"
+                              Name 59_7  "temp"
+                              Name 59_1  "gl_WarpMaxIDARM"
+                              Name 30_1  "Output"
+                              MemberName 30_1(Output) 0  "result"
+                              Name 59_2  ""
+                              Name 59_3  "gl_CoreIDARM"
+                              Name 59_4  "gl_CoreCountARM"
+                              Name 59_5  "gl_CoreMaxIDARM"
+                              Name 59_6  "gl_WarpIDARM"
+                              Decorate 59_1(gl_WarpMaxIDARM) BuiltIn BuiltInWarpMaxIDARM
+                              Decorate 30_1(Output) BufferBlock
+                              MemberDecorate 30_1(Output) 0 Offset 0
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 59_3(gl_CoreIDARM) BuiltIn CoreIDARM
+                              Decorate 59_4(gl_CoreCountARM) BuiltIn CoreCountARM
+                              Decorate 59_5(gl_CoreMaxIDARM) BuiltIn CoreMaxIDARM
+                              Decorate 59_6(gl_WarpIDARM) BuiltIn WarpIDARM
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            32_2:             TypePointer Input 21_1(int)
+59_1(gl_WarpMaxIDARM):   32_2(ptr) Variable Input
+            23_1:             TypeVector 21_1(int) 4
+    30_1(Output):             TypeStruct 23_1(ivec4)
+            32_3:             TypePointer Uniform 30_1(Output)
+            59_2:   32_3(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+59_3(gl_CoreIDARM):   32_2(ptr) Variable Input
+59_4(gl_CoreCountARM):   32_2(ptr) Variable Input
+59_5(gl_CoreMaxIDARM):   32_2(ptr) Variable Input
+59_6(gl_WarpIDARM):   32_2(ptr) Variable Input
+            32_4:             TypePointer Uniform 23_1(ivec4)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+      59_7(temp):   32_1(ptr) Variable Function
+            61_1:   21_1(int) Load 59_1(gl_WarpMaxIDARM)
+                              Store 59_7(temp) 61_1
+            61_2:   21_1(int) Load 59_3(gl_CoreIDARM)
+            61_3:   21_1(int) Load 59_4(gl_CoreCountARM)
+            61_4:   21_1(int) Load 59_5(gl_CoreMaxIDARM)
+            61_5:   21_1(int) Load 59_6(gl_WarpIDARM)
+            61_6:   21_1(int) Load 59_7(temp)
+           128_1:   21_1(int) IAdd 61_5 61_6
+            80_1: 23_1(ivec4) CompositeConstruct 61_2 61_3 61_4 128_1
+            65_1:   32_4(ptr) AccessChain 59_2 43_1
+                              Store 65_1 80_1
                               Return
                               FunctionEnd

@@ -4,141 +4,141 @@ spv.prepost.frag
 // Id's are bound by 94
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 90
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 8  "index"
-                              Name 14  "s"
-                              MemberName 14(s) 0  "y"
-                              Name 16  "str"
-                              Name 22  "t"
-                              Name 50  "x"
-                              Name 61  "y"
-                              Name 66  "z"
-                              Name 73  "v"
-                              Name 90  "gl_FragColor"
-                              Decorate 90(gl_FragColor) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:      6(int) Constant 5
-              10:             TypeFloat 32
-              11:             TypeInt 32 0
-              12:     11(int) Constant 5
-              13:             TypeArray 10(float) 12
-           14(s):             TypeStruct 13
-              15:             TypePointer Function 14(s)
-              17:      6(int) Constant 0
-              18:      6(int) Constant 4
-              19:   10(float) Constant 1073741824
-              20:             TypePointer Function 10(float)
-              24:      6(int) Constant 1
-              28:   10(float) Constant 1065353216
-              71:             TypeVector 10(float) 4
-              72:             TypePointer Function 71(fvec4)
-              74:   10(float) Constant 1077936128
-              75:   10(float) Constant 1082130432
-              76:   71(fvec4) ConstantComposite 28 19 74 75
-              77:     11(int) Constant 2
-              81:     11(int) Constant 1
-              83:     11(int) Constant 3
-              87:     11(int) Constant 0
-              89:             TypePointer Output 71(fvec4)
-90(gl_FragColor):     89(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-        8(index):      7(ptr) Variable Function
-         16(str):     15(ptr) Variable Function
-           22(t):     20(ptr) Variable Function
-           50(x):     20(ptr) Variable Function
-           61(y):     20(ptr) Variable Function
-           66(z):     20(ptr) Variable Function
-           73(v):     72(ptr) Variable Function
-                              Store 8(index) 9
-              21:     20(ptr) AccessChain 16(str) 17 18
-                              Store 21 19
-              23:      6(int) Load 8(index)
-              25:      6(int) ISub 23 24
-                              Store 8(index) 25
-              26:     20(ptr) AccessChain 16(str) 17 25
-              27:   10(float) Load 26
-              29:   10(float) FAdd 27 28
-                              Store 26 29
-                              Store 22(t) 29
-              30:   10(float) Load 22(t)
-              31:     20(ptr) AccessChain 16(str) 17 18
-              32:   10(float) Load 31
-              33:   10(float) FAdd 32 30
-              34:     20(ptr) AccessChain 16(str) 17 18
-                              Store 34 33
-              35:     20(ptr) AccessChain 16(str) 17 18
-              36:   10(float) Load 35
-              37:   10(float) FSub 36 28
-                              Store 35 37
-                              Store 22(t) 36
-              38:      6(int) Load 8(index)
-              39:      6(int) IAdd 38 24
-                              Store 8(index) 39
-              40:   10(float) Load 22(t)
-              41:     20(ptr) AccessChain 16(str) 17 38
-              42:   10(float) Load 41
-              43:   10(float) FAdd 42 40
-              44:     20(ptr) AccessChain 16(str) 17 38
-                              Store 44 43
-              45:      6(int) Load 8(index)
-              46:      6(int) ISub 45 24
-                              Store 8(index) 46
-              47:     20(ptr) AccessChain 16(str) 17 46
-              48:   10(float) Load 47
-              49:   10(float) FSub 48 28
-                              Store 47 49
-              51:     20(ptr) AccessChain 16(str) 17 18
-              52:   10(float) Load 51
-                              Store 50(x) 52
-              53:   10(float) Load 50(x)
-              54:   10(float) FAdd 53 28
-                              Store 50(x) 54
-              55:   10(float) Load 50(x)
-              56:   10(float) FSub 55 28
-                              Store 50(x) 56
-              57:   10(float) Load 50(x)
-              58:   10(float) FAdd 57 28
-                              Store 50(x) 58
-              59:   10(float) Load 50(x)
-              60:   10(float) FSub 59 28
-                              Store 50(x) 60
-              62:   10(float) Load 50(x)
-              63:   10(float) Load 50(x)
-              64:   10(float) FAdd 63 28
-                              Store 50(x) 64
-              65:   10(float) FMul 62 64
-                              Store 61(y) 65
-              67:   10(float) Load 61(y)
-              68:   10(float) Load 50(x)
-              69:   10(float) FSub 68 28
-                              Store 50(x) 69
-              70:   10(float) FMul 67 68
-                              Store 66(z) 70
-                              Store 73(v) 76
-              78:     20(ptr) AccessChain 73(v) 77
-              79:   10(float) Load 78
-              80:   10(float) FSub 79 28
-                              Store 78 80
-              82:     20(ptr) AccessChain 73(v) 81
-                              Store 82 79
-              84:     20(ptr) AccessChain 73(v) 83
-              85:   10(float) Load 84
-              86:   10(float) FSub 85 28
-                              Store 84 86
-              88:     20(ptr) AccessChain 73(v) 87
-                              Store 88 86
-              91:   10(float) Load 66(z)
-              92:   71(fvec4) Load 73(v)
-              93:   71(fvec4) VectorTimesScalar 92 91
-                              Store 90(gl_FragColor) 93
+                              Name 54_1  "main"
+                              Name 59_2  "index"
+                              Name 30_1  "s"
+                              MemberName 30_1(s) 0  "y"
+                              Name 59_3  "str"
+                              Name 59_4  "t"
+                              Name 59_5  "x"
+                              Name 59_6  "y"
+                              Name 59_7  "z"
+                              Name 59_8  "v"
+                              Name 59_1  "gl_FragColor"
+                              Decorate 59_1(gl_FragColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 5
+            22_1:             TypeFloat 32
+            21_2:             TypeInt 32 0
+         uint(5):   21_2(int) Constant 5
+            28_1:             TypeArray 22_1(float) uint(5)
+         30_1(s):             TypeStruct 28_1
+            32_2:             TypePointer Function 30_1(s)
+            43_2:   21_1(int) Constant 0
+            43_3:   21_1(int) Constant 4
+            43_4: 22_1(float) Constant 1073741824
+            32_3:             TypePointer Function 22_1(float)
+            43_5:   21_1(int) Constant 1
+            43_6: 22_1(float) Constant 1065353216
+            23_1:             TypeVector 22_1(float) 4
+            32_4:             TypePointer Function 23_1(fvec4)
+            43_7: 22_1(float) Constant 1077936128
+            43_8: 22_1(float) Constant 1082130432
+            44_1: 23_1(fvec4) ConstantComposite 43_6 43_4 43_7 43_8
+         uint(2):   21_2(int) Constant 2
+         uint(1):   21_2(int) Constant 1
+         uint(3):   21_2(int) Constant 3
+         uint(0):   21_2(int) Constant 0
+            32_5:             TypePointer Output 23_1(fvec4)
+59_1(gl_FragColor):   32_5(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_2(index):   32_1(ptr) Variable Function
+       59_3(str):   32_2(ptr) Variable Function
+         59_4(t):   32_3(ptr) Variable Function
+         59_5(x):   32_3(ptr) Variable Function
+         59_6(y):   32_3(ptr) Variable Function
+         59_7(z):   32_3(ptr) Variable Function
+         59_8(v):   32_4(ptr) Variable Function
+                              Store 59_2(index) 43_1
+            65_1:   32_3(ptr) AccessChain 59_3(str) 43_2 43_3
+                              Store 65_1 43_4
+            61_1:   21_1(int) Load 59_2(index)
+           130_1:   21_1(int) ISub 61_1 43_5
+                              Store 59_2(index) 130_1
+            65_2:   32_3(ptr) AccessChain 59_3(str) 43_2 130_1
+            61_2: 22_1(float) Load 65_2
+           129_1: 22_1(float) FAdd 61_2 43_6
+                              Store 65_2 129_1
+                              Store 59_4(t) 129_1
+            61_3: 22_1(float) Load 59_4(t)
+            65_3:   32_3(ptr) AccessChain 59_3(str) 43_2 43_3
+            61_4: 22_1(float) Load 65_3
+           129_2: 22_1(float) FAdd 61_4 61_3
+            65_4:   32_3(ptr) AccessChain 59_3(str) 43_2 43_3
+                              Store 65_4 129_2
+            65_5:   32_3(ptr) AccessChain 59_3(str) 43_2 43_3
+            61_5: 22_1(float) Load 65_5
+           131_1: 22_1(float) FSub 61_5 43_6
+                              Store 65_5 131_1
+                              Store 59_4(t) 61_5
+            61_6:   21_1(int) Load 59_2(index)
+           128_1:   21_1(int) IAdd 61_6 43_5
+                              Store 59_2(index) 128_1
+            61_7: 22_1(float) Load 59_4(t)
+            65_6:   32_3(ptr) AccessChain 59_3(str) 43_2 61_6
+            61_8: 22_1(float) Load 65_6
+           129_3: 22_1(float) FAdd 61_8 61_7
+            65_7:   32_3(ptr) AccessChain 59_3(str) 43_2 61_6
+                              Store 65_7 129_3
+            61_9:   21_1(int) Load 59_2(index)
+           130_2:   21_1(int) ISub 61_9 43_5
+                              Store 59_2(index) 130_2
+            65_8:   32_3(ptr) AccessChain 59_3(str) 43_2 130_2
+           61_10: 22_1(float) Load 65_8
+           131_2: 22_1(float) FSub 61_10 43_6
+                              Store 65_8 131_2
+            65_9:   32_3(ptr) AccessChain 59_3(str) 43_2 43_3
+           61_11: 22_1(float) Load 65_9
+                              Store 59_5(x) 61_11
+           61_12: 22_1(float) Load 59_5(x)
+           129_4: 22_1(float) FAdd 61_12 43_6
+                              Store 59_5(x) 129_4
+           61_13: 22_1(float) Load 59_5(x)
+           131_3: 22_1(float) FSub 61_13 43_6
+                              Store 59_5(x) 131_3
+           61_14: 22_1(float) Load 59_5(x)
+           129_5: 22_1(float) FAdd 61_14 43_6
+                              Store 59_5(x) 129_5
+           61_15: 22_1(float) Load 59_5(x)
+           131_4: 22_1(float) FSub 61_15 43_6
+                              Store 59_5(x) 131_4
+           61_16: 22_1(float) Load 59_5(x)
+           61_17: 22_1(float) Load 59_5(x)
+           129_6: 22_1(float) FAdd 61_17 43_6
+                              Store 59_5(x) 129_6
+           133_1: 22_1(float) FMul 61_16 129_6
+                              Store 59_6(y) 133_1
+           61_18: 22_1(float) Load 59_6(y)
+           61_19: 22_1(float) Load 59_5(x)
+           131_5: 22_1(float) FSub 61_19 43_6
+                              Store 59_5(x) 131_5
+           133_2: 22_1(float) FMul 61_18 61_19
+                              Store 59_7(z) 133_2
+                              Store 59_8(v) 44_1
+           65_10:   32_3(ptr) AccessChain 59_8(v) uint(2)
+           61_20: 22_1(float) Load 65_10
+           131_6: 22_1(float) FSub 61_20 43_6
+                              Store 65_10 131_6
+           65_11:   32_3(ptr) AccessChain 59_8(v) uint(1)
+                              Store 65_11 61_20
+           65_12:   32_3(ptr) AccessChain 59_8(v) uint(3)
+           61_21: 22_1(float) Load 65_12
+           131_7: 22_1(float) FSub 61_21 43_6
+                              Store 65_12 131_7
+           65_13:   32_3(ptr) AccessChain 59_8(v) uint(0)
+                              Store 65_13 131_7
+           61_22: 22_1(float) Load 59_7(z)
+           61_23: 23_1(fvec4) Load 59_8(v)
+           142_1: 23_1(fvec4) VectorTimesScalar 61_23 61_22
+                              Store 59_1(gl_FragColor) 142_1
                               Return
                               FunctionEnd

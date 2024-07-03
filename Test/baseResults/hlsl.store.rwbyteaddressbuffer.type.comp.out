@@ -100,75 +100,75 @@ local_size = (64, 1, 1)
 // Id's are bound by 42
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 37
-                              ExecutionMode 4 LocalSize 64 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_2
+                              ExecutionMode 54_1 LocalSize 64 1 1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 11  "@main(vu3;"
-                              Name 10  "dispatchThreadID"
-                              Name 23  "byteAddrTemp"
-                              Name 28  "buffer"
-                              MemberName 28(buffer) 0  "@data"
-                              Name 30  "buffer"
-                              Name 35  "dispatchThreadID"
-                              Name 37  "dispatchThreadID"
-                              Name 39  "param"
-                              Decorate 27 ArrayStride 4
-                              Decorate 28(buffer) BufferBlock
-                              MemberDecorate 28(buffer) 0 Offset 0
-                              Decorate 30(buffer) Binding 0
-                              Decorate 30(buffer) DescriptorSet 0
-                              Decorate 37(dispatchThreadID) BuiltIn GlobalInvocationId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 3
-               8:             TypePointer Function 7(ivec3)
-               9:             TypeFunction 2 8(ptr)
-              13:      6(int) Constant 0
-              14:             TypePointer Function 6(int)
-              17:             TypeBool
-              21:             TypeInt 32 1
-              22:             TypePointer Function 21(int)
-              24:     21(int) Constant 0
-              25:     21(int) Constant 2
-              27:             TypeRuntimeArray 6(int)
-      28(buffer):             TypeStruct 27
-              29:             TypePointer Uniform 28(buffer)
-      30(buffer):     29(ptr) Variable Uniform
-              32:      6(int) Constant 2
-              33:             TypePointer Uniform 6(int)
-              36:             TypePointer Input 7(ivec3)
-37(dispatchThreadID):     36(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-35(dispatchThreadID):      8(ptr) Variable Function
-       39(param):      8(ptr) Variable Function
-              38:    7(ivec3) Load 37(dispatchThreadID)
-                              Store 35(dispatchThreadID) 38
-              40:    7(ivec3) Load 35(dispatchThreadID)
-                              Store 39(param) 40
-              41:           2 FunctionCall 11(@main(vu3;) 39(param)
+                              Name 54_1  "main"
+                              Name 54_2  "@main(vu3;"
+                              Name 55_1  "dispatchThreadID"
+                              Name 59_5  "byteAddrTemp"
+                              Name 30_1  "buffer"
+                              MemberName 30_1(buffer) 0  "@data"
+                              Name 59_1  "buffer"
+                              Name 59_3  "dispatchThreadID"
+                              Name 59_2  "dispatchThreadID"
+                              Name 59_4  "param"
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_1(buffer) BufferBlock
+                              MemberDecorate 30_1(buffer) 0 Offset 0
+                              Decorate 59_1(buffer) Binding 0
+                              Decorate 59_1(buffer) DescriptorSet 0
+                              Decorate 59_2(dispatchThreadID) BuiltIn GlobalInvocationId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 3
+            32_1:             TypePointer Function 23_1(ivec3)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+         uint(0):   21_1(int) Constant 0
+            32_2:             TypePointer Function 21_1(int)
+            20_1:             TypeBool
+            21_2:             TypeInt 32 1
+            32_3:             TypePointer Function 21_2(int)
+            43_1:   21_2(int) Constant 0
+            43_2:   21_2(int) Constant 2
+            29_1:             TypeRuntimeArray 21_1(int)
+    30_1(buffer):             TypeStruct 29_1
+            32_4:             TypePointer Uniform 30_1(buffer)
+    59_1(buffer):   32_4(ptr) Variable Uniform
+         uint(2):   21_1(int) Constant 2
+            32_5:             TypePointer Uniform 21_1(int)
+            32_6:             TypePointer Input 23_1(ivec3)
+59_2(dispatchThreadID):   32_6(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_3(dispatchThreadID):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1: 23_1(ivec3) Load 59_2(dispatchThreadID)
+                              Store 59_3(dispatchThreadID) 61_1
+            61_2: 23_1(ivec3) Load 59_3(dispatchThreadID)
+                              Store 59_4(param) 61_2
+            57_1:        19_1 FunctionCall 54_2(@main(vu3;) 59_4(param)
                               Return
                               FunctionEnd
-  11(@main(vu3;):           2 Function None 9
-10(dispatchThreadID):      8(ptr) FunctionParameter
-              12:             Label
-23(byteAddrTemp):     22(ptr) Variable Function
-              15:     14(ptr) AccessChain 10(dispatchThreadID) 13
-              16:      6(int) Load 15
-              18:    17(bool) IEqual 16 13
-                              SelectionMerge 20 None
-                              BranchConditional 18 19 20
-              19:               Label
-              26:     21(int)   ShiftRightArithmetic 24 25
-                                Store 23(byteAddrTemp) 26
-              31:     21(int)   Load 23(byteAddrTemp)
-              34:     33(ptr)   AccessChain 30(buffer) 24 31
-                                Store 34 32
-                                Branch 20
-              20:             Label
+54_2(@main(vu3;):        19_1 Function None 33_2
+55_1(dispatchThreadID):   32_1(ptr) FunctionParameter
+           248_2:             Label
+59_5(byteAddrTemp):   32_3(ptr) Variable Function
+            65_1:   32_2(ptr) AccessChain 55_1(dispatchThreadID) uint(0)
+            61_3:   21_1(int) Load 65_1
+           170_1:  20_1(bool) IEqual 61_3 uint(0)
+                              SelectionMerge 248_4 None
+                              BranchConditional 170_1 248_3 248_4
+           248_3:               Label
+           195_1:   21_2(int)   ShiftRightArithmetic 43_1 43_2
+                                Store 59_5(byteAddrTemp) 195_1
+            61_4:   21_2(int)   Load 59_5(byteAddrTemp)
+            65_2:   32_5(ptr)   AccessChain 59_1(buffer) 43_1 61_4
+                                Store 65_2 uint(2)
+                                Branch 248_4
+           248_4:             Label
                               Return
                               FunctionEnd

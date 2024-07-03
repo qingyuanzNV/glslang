@@ -142,107 +142,107 @@ local_size = (256, 1, 1)
                               Capability Shader
                               Capability ImageBuffer
                               Capability StorageImageExtendedFormats
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 57
-                              ExecutionMode 4 LocalSize 256 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_3
+                              ExecutionMode 54_1 LocalSize 256 1 1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  ""
-                              MemberName 9 0  "@data"
-                              Name 15  "testLoad(u1;block--u1[0]1;"
-                              Name 13  "loc"
-                              Name 14  "buffer"
-                              Name 19  "@main(u1;"
-                              Name 18  "dispatchId"
-                              Name 22  "result"
-                              Name 25  "byteAddrTemp"
-                              Name 43  "result"
-                              Name 44  "g_input"
-                              Name 45  "param"
-                              Name 50  "g_output"
-                              Name 54  "dispatchId"
-                              Name 57  "dispatchId"
-                              Name 60  "param"
-                              Decorate 8 ArrayStride 4
-                              Decorate 9 BufferBlock
-                              MemberDecorate 9 0 NonWritable
-                              MemberDecorate 9 0 Offset 0
-                              Decorate 14(buffer) NonWritable
-                              Decorate 44(g_input) Binding 0
-                              Decorate 44(g_input) DescriptorSet 0
-                              Decorate 50(g_output) Binding 1
-                              Decorate 50(g_output) DescriptorSet 0
-                              Decorate 57(dispatchId) BuiltIn GlobalInvocationId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               8:             TypeRuntimeArray 6(int)
-               9:             TypeStruct 8
-              10:             TypePointer Uniform 9(struct)
-              11:             TypeVector 6(int) 2
-              12:             TypeFunction 11(ivec2) 7(ptr) 10(ptr)
-              17:             TypeFunction 2 7(ptr)
-              21:             TypePointer Function 11(ivec2)
-              23:             TypeInt 32 1
-              24:             TypePointer Function 23(int)
-              27:     23(int) Constant 2
-              29:     23(int) Constant 0
-              31:             TypePointer Uniform 6(int)
-              35:     23(int) Constant 1
-     44(g_input):     10(ptr) Variable Uniform
-              48:             TypeImage 6(int) Buffer nonsampled format:Rg32ui
-              49:             TypePointer UniformConstant 48
-    50(g_output):     49(ptr) Variable UniformConstant
-              55:             TypeVector 6(int) 3
-              56:             TypePointer Input 55(ivec3)
-  57(dispatchId):     56(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-  54(dispatchId):      7(ptr) Variable Function
-       60(param):      7(ptr) Variable Function
-              58:   55(ivec3) Load 57(dispatchId)
-              59:      6(int) CompositeExtract 58 0
-                              Store 54(dispatchId) 59
-              61:      6(int) Load 54(dispatchId)
-                              Store 60(param) 61
-              62:           2 FunctionCall 19(@main(u1;) 60(param)
+                              Name 54_1  "main"
+                              Name 30_1  ""
+                              MemberName 30_1 0  "@data"
+                              Name 54_2  "testLoad(u1;block--u1[0]1;"
+                              Name 55_1  "loc"
+                              Name 55_2  "buffer"
+                              Name 54_3  "@main(u1;"
+                              Name 55_3  "dispatchId"
+                              Name 59_6  "result"
+                              Name 59_7  "byteAddrTemp"
+                              Name 59_8  "result"
+                              Name 59_1  "g_input"
+                              Name 59_9  "param"
+                              Name 59_2  "g_output"
+                              Name 59_4  "dispatchId"
+                              Name 59_3  "dispatchId"
+                              Name 59_5  "param"
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_1 BufferBlock
+                              MemberDecorate 30_1 0 NonWritable
+                              MemberDecorate 30_1 0 Offset 0
+                              Decorate 55_2(buffer) NonWritable
+                              Decorate 59_1(g_input) Binding 0
+                              Decorate 59_1(g_input) DescriptorSet 0
+                              Decorate 59_2(g_output) Binding 1
+                              Decorate 59_2(g_output) DescriptorSet 0
+                              Decorate 59_3(dispatchId) BuiltIn GlobalInvocationId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            29_1:             TypeRuntimeArray 21_1(int)
+            30_1:             TypeStruct 29_1
+            32_2:             TypePointer Uniform 30_1(struct)
+            23_1:             TypeVector 21_1(int) 2
+            33_2:             TypeFunction 23_1(ivec2) 32_1(ptr) 32_2(ptr)
+            33_3:             TypeFunction 19_1 32_1(ptr)
+            32_3:             TypePointer Function 23_1(ivec2)
+            21_2:             TypeInt 32 1
+            32_4:             TypePointer Function 21_2(int)
+            43_1:   21_2(int) Constant 2
+            43_2:   21_2(int) Constant 0
+            32_5:             TypePointer Uniform 21_1(int)
+            43_3:   21_2(int) Constant 1
+   59_1(g_input):   32_2(ptr) Variable Uniform
+            25_1:             TypeImage 21_1(int) Buffer nonsampled format:Rg32ui
+            32_6:             TypePointer UniformConstant 25_1
+  59_2(g_output):   32_6(ptr) Variable UniformConstant
+            23_2:             TypeVector 21_1(int) 3
+            32_7:             TypePointer Input 23_2(ivec3)
+59_3(dispatchId):   32_7(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_4(dispatchId):   32_1(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+            61_1: 23_2(ivec3) Load 59_3(dispatchId)
+            81_1:   21_1(int) CompositeExtract 61_1 0
+                              Store 59_4(dispatchId) 81_1
+            61_2:   21_1(int) Load 59_4(dispatchId)
+                              Store 59_5(param) 61_2
+            57_1:        19_1 FunctionCall 54_3(@main(u1;) 59_5(param)
                               Return
                               FunctionEnd
-15(testLoad(u1;block--u1[0]1;):   11(ivec2) Function None 12
-         13(loc):      7(ptr) FunctionParameter
-      14(buffer):     10(ptr) FunctionParameter
-              16:             Label
-      22(result):     21(ptr) Variable Function
-25(byteAddrTemp):     24(ptr) Variable Function
-              26:      6(int) Load 13(loc)
-              28:     23(int) ShiftRightLogical 26 27
-                              Store 25(byteAddrTemp) 28
-              30:     23(int) Load 25(byteAddrTemp)
-              32:     31(ptr) AccessChain 14(buffer) 29 30
-              33:      6(int) Load 32
-              34:     23(int) Load 25(byteAddrTemp)
-              36:     23(int) IAdd 34 35
-              37:     31(ptr) AccessChain 14(buffer) 29 36
-              38:      6(int) Load 37
-              39:   11(ivec2) CompositeConstruct 33 38
-                              Store 22(result) 39
-              40:   11(ivec2) Load 22(result)
-                              ReturnValue 40
+54_2(testLoad(u1;block--u1[0]1;): 23_1(ivec2) Function None 33_2
+       55_1(loc):   32_1(ptr) FunctionParameter
+    55_2(buffer):   32_2(ptr) FunctionParameter
+           248_2:             Label
+    59_6(result):   32_3(ptr) Variable Function
+59_7(byteAddrTemp):   32_4(ptr) Variable Function
+            61_3:   21_1(int) Load 55_1(loc)
+           194_1:   21_2(int) ShiftRightLogical 61_3 43_1
+                              Store 59_7(byteAddrTemp) 194_1
+            61_4:   21_2(int) Load 59_7(byteAddrTemp)
+            65_1:   32_5(ptr) AccessChain 55_2(buffer) 43_2 61_4
+            61_5:   21_1(int) Load 65_1
+            61_6:   21_2(int) Load 59_7(byteAddrTemp)
+           128_1:   21_2(int) IAdd 61_6 43_3
+            65_2:   32_5(ptr) AccessChain 55_2(buffer) 43_2 128_1
+            61_7:   21_1(int) Load 65_2
+            80_1: 23_1(ivec2) CompositeConstruct 61_5 61_7
+                              Store 59_6(result) 80_1
+            61_8: 23_1(ivec2) Load 59_6(result)
+                              ReturnValue 61_8
                               FunctionEnd
-   19(@main(u1;):           2 Function None 17
-  18(dispatchId):      7(ptr) FunctionParameter
-              20:             Label
-      43(result):     21(ptr) Variable Function
-       45(param):      7(ptr) Variable Function
-              46:      6(int) Load 18(dispatchId)
-                              Store 45(param) 46
-              47:   11(ivec2) FunctionCall 15(testLoad(u1;block--u1[0]1;) 45(param) 44(g_input)
-                              Store 43(result) 47
-              51:          48 Load 50(g_output)
-              52:      6(int) Load 18(dispatchId)
-              53:   11(ivec2) Load 43(result)
-                              ImageWrite 51 52 53
+ 54_3(@main(u1;):        19_1 Function None 33_3
+55_3(dispatchId):   32_1(ptr) FunctionParameter
+           248_3:             Label
+    59_8(result):   32_3(ptr) Variable Function
+     59_9(param):   32_1(ptr) Variable Function
+            61_9:   21_1(int) Load 55_3(dispatchId)
+                              Store 59_9(param) 61_9
+            57_2: 23_1(ivec2) FunctionCall 54_2(testLoad(u1;block--u1[0]1;) 59_9(param) 59_1(g_input)
+                              Store 59_8(result) 57_2
+           61_10:        25_1 Load 59_2(g_output)
+           61_11:   21_1(int) Load 55_3(dispatchId)
+           61_12: 23_1(ivec2) Load 59_8(result)
+                              ImageWrite 61_10 61_11 61_12
                               Return
                               FunctionEnd

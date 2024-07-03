@@ -188,126 +188,126 @@ gl_FragCoord origin is upper left
 // Id's are bound by 84
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 81
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_OUTPUT"
-                              MemberName 8(PS_OUTPUT) 0  "Color"
-                              Name 10  "@main("
-                              Name 14  "$Global"
-                              MemberName 14($Global) 0  "ival"
-                              MemberName 14($Global) 1  "ival4"
-                              MemberName 14($Global) 2  "fval"
-                              MemberName 14($Global) 3  "fval4"
-                              Name 16  ""
-                              Name 72  "psout"
-                              Name 81  "@entryPointOutput.Color"
-                              Decorate 14($Global) Block
-                              MemberDecorate 14($Global) 0 Offset 0
-                              MemberDecorate 14($Global) 1 Offset 16
-                              MemberDecorate 14($Global) 2 Offset 32
-                              MemberDecorate 14($Global) 3 Offset 48
-                              Decorate 16 Binding 0
-                              Decorate 16 DescriptorSet 0
-                              Decorate 81(@entryPointOutput.Color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(PS_OUTPUT):             TypeStruct 7(fvec4)
-               9:             TypeFunction 8(PS_OUTPUT)
-              12:             TypeInt 32 1
-              13:             TypeVector 12(int) 4
-     14($Global):             TypeStruct 12(int) 13(ivec4) 6(float) 7(fvec4)
-              15:             TypePointer Uniform 14($Global)
-              16:     15(ptr) Variable Uniform
-              17:     12(int) Constant 0
-              18:             TypePointer Uniform 12(int)
-              21:             TypeBool
-              22:             TypeInt 32 0
-              23:     22(int) Constant 0
-              26:     12(int) Constant 1
-              27:             TypePointer Uniform 13(ivec4)
-              30:             TypeVector 21(bool) 4
-              31:             TypeVector 22(int) 4
-              32:   31(ivec4) ConstantComposite 23 23 23 23
-              35:     12(int) Constant 2
-              36:             TypePointer Uniform 6(float)
-              39:    6(float) Constant 0
-              42:     12(int) Constant 3
-              43:             TypePointer Uniform 7(fvec4)
-              46:    7(fvec4) ConstantComposite 39 39 39 39
-              71:             TypePointer Function 8(PS_OUTPUT)
-              73:    6(float) Constant 1065353216
-              74:    7(fvec4) ConstantComposite 73 73 73 73
-              75:             TypePointer Function 7(fvec4)
-              80:             TypePointer Output 7(fvec4)
-81(@entryPointOutput.Color):     80(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              82:8(PS_OUTPUT) FunctionCall 10(@main()
-              83:    7(fvec4) CompositeExtract 82 0
-                              Store 81(@entryPointOutput.Color) 83
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              Name 54_2  "@main("
+                              Name 30_2  "$Global"
+                              MemberName 30_2($Global) 0  "ival"
+                              MemberName 30_2($Global) 1  "ival4"
+                              MemberName 30_2($Global) 2  "fval"
+                              MemberName 30_2($Global) 3  "fval4"
+                              Name 59_1  ""
+                              Name 59_3  "psout"
+                              Name 59_2  "@entryPointOutput.Color"
+                              Decorate 30_2($Global) Block
+                              MemberDecorate 30_2($Global) 0 Offset 0
+                              MemberDecorate 30_2($Global) 1 Offset 16
+                              MemberDecorate 30_2($Global) 2 Offset 32
+                              MemberDecorate 30_2($Global) 3 Offset 48
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(@entryPointOutput.Color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            21_1:             TypeInt 32 1
+            23_2:             TypeVector 21_1(int) 4
+   30_2($Global):             TypeStruct 21_1(int) 23_2(ivec4) 22_1(float) 23_1(fvec4)
+            32_1:             TypePointer Uniform 30_2($Global)
+            59_1:   32_1(ptr) Variable Uniform
+            43_1:   21_1(int) Constant 0
+            32_2:             TypePointer Uniform 21_1(int)
+            20_1:             TypeBool
+            21_2:             TypeInt 32 0
+         uint(0):   21_2(int) Constant 0
+            43_2:   21_1(int) Constant 1
+            32_3:             TypePointer Uniform 23_2(ivec4)
+            23_3:             TypeVector 20_1(bool) 4
+            23_4:             TypeVector 21_2(int) 4
+            44_1: 23_4(ivec4) ConstantComposite uint(0) uint(0) uint(0) uint(0)
+            43_3:   21_1(int) Constant 2
+            32_4:             TypePointer Uniform 22_1(float)
+            43_4: 22_1(float) Constant 0
+            43_5:   21_1(int) Constant 3
+            32_5:             TypePointer Uniform 23_1(fvec4)
+            44_2: 23_1(fvec4) ConstantComposite 43_4 43_4 43_4 43_4
+            32_6:             TypePointer Function 30_1(PS_OUTPUT)
+            43_6: 22_1(float) Constant 1065353216
+            44_3: 23_1(fvec4) ConstantComposite 43_6 43_6 43_6 43_6
+            32_7:             TypePointer Function 23_1(fvec4)
+            32_8:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput.Color):   32_8(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_2(@main()
+            81_1: 23_1(fvec4) CompositeExtract 57_1 0
+                              Store 59_2(@entryPointOutput.Color) 81_1
                               Return
                               FunctionEnd
-      10(@main():8(PS_OUTPUT) Function None 9
-              11:             Label
-       72(psout):     71(ptr) Variable Function
-              19:     18(ptr) AccessChain 16 17
-              20:     12(int) Load 19
-              24:    21(bool) INotEqual 20 23
-              25:    21(bool) LogicalNot 24
-              28:     27(ptr) AccessChain 16 26
-              29:   13(ivec4) Load 28
-              33:   30(bvec4) INotEqual 29 32
-              34:   30(bvec4) LogicalNot 33
-              37:     36(ptr) AccessChain 16 35
-              38:    6(float) Load 37
-              40:    21(bool) FUnordNotEqual 38 39
-              41:    21(bool) LogicalNot 40
-              44:     43(ptr) AccessChain 16 42
-              45:    7(fvec4) Load 44
-              47:   30(bvec4) FUnordNotEqual 45 46
-              48:   30(bvec4) LogicalNot 47
-              49:     18(ptr) AccessChain 16 17
-              50:     12(int) Load 49
-              51:    21(bool) INotEqual 50 23
-                              SelectionMerge 53 None
-                              BranchConditional 51 52 53
-              52:               Label
-                                Branch 53
-              53:             Label
-              54:     36(ptr) AccessChain 16 35
-              55:    6(float) Load 54
-              56:    21(bool) FUnordNotEqual 55 39
-                              SelectionMerge 58 None
-                              BranchConditional 56 57 58
-              57:               Label
-                                Branch 58
-              58:             Label
-              59:     18(ptr) AccessChain 16 17
-              60:     12(int) Load 59
-              61:    21(bool) INotEqual 60 23
-              62:    21(bool) LogicalNot 61
-                              SelectionMerge 64 None
-                              BranchConditional 62 63 64
-              63:               Label
-                                Branch 64
-              64:             Label
-              65:     36(ptr) AccessChain 16 35
-              66:    6(float) Load 65
-              67:    21(bool) FUnordNotEqual 66 39
-              68:    21(bool) LogicalNot 67
-                              SelectionMerge 70 None
-                              BranchConditional 68 69 70
-              69:               Label
-                                Branch 70
-              70:             Label
-              76:     75(ptr) AccessChain 72(psout) 17
-                              Store 76 74
-              77:8(PS_OUTPUT) Load 72(psout)
-                              ReturnValue 77
+    54_2(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_2:             Label
+     59_3(psout):   32_6(ptr) Variable Function
+            65_1:   32_2(ptr) AccessChain 59_1 43_1
+            61_1:   21_1(int) Load 65_1
+           171_1:  20_1(bool) INotEqual 61_1 uint(0)
+           168_1:  20_1(bool) LogicalNot 171_1
+            65_2:   32_3(ptr) AccessChain 59_1 43_2
+            61_2: 23_2(ivec4) Load 65_2
+           171_2: 23_3(bvec4) INotEqual 61_2 44_1
+           168_2: 23_3(bvec4) LogicalNot 171_2
+            65_3:   32_4(ptr) AccessChain 59_1 43_3
+            61_3: 22_1(float) Load 65_3
+           183_1:  20_1(bool) FUnordNotEqual 61_3 43_4
+           168_3:  20_1(bool) LogicalNot 183_1
+            65_4:   32_5(ptr) AccessChain 59_1 43_5
+            61_4: 23_1(fvec4) Load 65_4
+           183_2: 23_3(bvec4) FUnordNotEqual 61_4 44_2
+           168_4: 23_3(bvec4) LogicalNot 183_2
+            65_5:   32_2(ptr) AccessChain 59_1 43_1
+            61_5:   21_1(int) Load 65_5
+           171_3:  20_1(bool) INotEqual 61_5 uint(0)
+                              SelectionMerge 248_4 None
+                              BranchConditional 171_3 248_3 248_4
+           248_3:               Label
+                                Branch 248_4
+           248_4:             Label
+            65_6:   32_4(ptr) AccessChain 59_1 43_3
+            61_6: 22_1(float) Load 65_6
+           183_3:  20_1(bool) FUnordNotEqual 61_6 43_4
+                              SelectionMerge 248_6 None
+                              BranchConditional 183_3 248_5 248_6
+           248_5:               Label
+                                Branch 248_6
+           248_6:             Label
+            65_7:   32_2(ptr) AccessChain 59_1 43_1
+            61_7:   21_1(int) Load 65_7
+           171_4:  20_1(bool) INotEqual 61_7 uint(0)
+           168_5:  20_1(bool) LogicalNot 171_4
+                              SelectionMerge 248_8 None
+                              BranchConditional 168_5 248_7 248_8
+           248_7:               Label
+                                Branch 248_8
+           248_8:             Label
+            65_8:   32_4(ptr) AccessChain 59_1 43_3
+            61_8: 22_1(float) Load 65_8
+           183_4:  20_1(bool) FUnordNotEqual 61_8 43_4
+           168_6:  20_1(bool) LogicalNot 183_4
+                              SelectionMerge 248_10 None
+                              BranchConditional 168_6 248_9 248_10
+           248_9:               Label
+                                Branch 248_10
+          248_10:             Label
+            65_9:   32_7(ptr) AccessChain 59_3(psout) 43_1
+                              Store 65_9 44_3
+            61_9:30_1(PS_OUTPUT) Load 59_3(psout)
+                              ReturnValue 61_9
                               FunctionEnd

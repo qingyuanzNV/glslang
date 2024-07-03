@@ -6,10 +6,10 @@ spv.ext.AccelDecl.frag
                               Capability Shader
                               Capability RayQueryKHR
                               Extension  "SPV_KHR_ray_query"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 9 14
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 460
                               SourceExtension  "GL_ARB_separate_shader_objects"
                               SourceExtension  "GL_EXT_nonuniform_qualifier"
@@ -17,25 +17,25 @@ spv.ext.AccelDecl.frag
                               SourceExtension  "GL_EXT_scalar_block_layout"
                               SourceExtension  "GL_GOOGLE_cpp_style_line_directive"
                               SourceExtension  "GL_GOOGLE_include_directive"
-                              Name 4  "main"
-                              Name 9  "outColor"
-                              Name 14  "topLevelAS"
-                              Decorate 9(outColor) Location 0
-                              Decorate 14(topLevelAS) Binding 1
-                              Decorate 14(topLevelAS) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Output 7(fvec4)
-     9(outColor):      8(ptr) Variable Output
-              10:    6(float) Constant 0
-              11:    7(fvec4) ConstantComposite 10 10 10 10
-              12:             TypeAccelerationStructureKHR
-              13:             TypePointer UniformConstant 12
-  14(topLevelAS):     13(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-                              Store 9(outColor) 11
+                              Name 54_1  "main"
+                              Name 59_1  "outColor"
+                              Name 59_2  "topLevelAS"
+                              Decorate 59_1(outColor) Location 0
+                              Decorate 59_2(topLevelAS) Binding 1
+                              Decorate 59_2(topLevelAS) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Output 23_1(fvec4)
+  59_1(outColor):   32_1(ptr) Variable Output
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+          5341_1:             TypeAccelerationStructureKHR
+            32_2:             TypePointer UniformConstant 5341_1
+59_2(topLevelAS):   32_2(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+                              Store 59_1(outColor) 44_1
                               Return
                               FunctionEnd

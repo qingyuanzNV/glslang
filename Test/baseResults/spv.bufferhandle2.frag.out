@@ -7,88 +7,88 @@ spv.bufferhandle2.frag
                               Capability PhysicalStorageBufferAddressesEXT
                               Extension  "SPV_KHR_physical_storage_buffer"
                               Extension  "SPV_KHR_storage_buffer_storage_class"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_buffer_reference"
-                              Name 4  "main"
-                              Name 8  "blockType"
-                              MemberName 8(blockType) 0  "a"
-                              MemberName 8(blockType) 1  "b"
-                              MemberName 8(blockType) 2  "c"
-                              MemberName 8(blockType) 3  "d"
-                              MemberName 8(blockType) 4  "e"
-                              Name 13  "b1"
-                              Name 14  "t2"
-                              MemberName 14(t2) 0  "f"
-                              MemberName 14(t2) 1  "g"
-                              Name 16  "t"
-                              Name 34  "b2"
-                              Name 37  "b3"
-                              Decorate 8(blockType) Block
-                              MemberDecorate 8(blockType) 0 Offset 0
-                              MemberDecorate 8(blockType) 1 Offset 4
-                              MemberDecorate 8(blockType) 2 Offset 8
-                              MemberDecorate 8(blockType) 3 Offset 12
-                              MemberDecorate 8(blockType) 4 Offset 16
-                              Decorate 13(b1) DecorationAliasedPointerEXT
-                              Decorate 14(t2) Block
-                              MemberDecorate 14(t2) 0 Offset 0
-                              MemberDecorate 14(t2) 1 Offset 8
-                              Decorate 16(t) Binding 0
-                              Decorate 16(t) DescriptorSet 0
-                              Decorate 34(b2) DecorationAliasedPointerEXT
-                              Decorate 37(b3) DecorationAliasedPointerEXT
-               2:             TypeVoid
-               3:             TypeFunction 2
-                              TypeForwardPointer 6 PhysicalStorageBufferEXT
-               7:             TypeInt 32 1
-    8(blockType):             TypeStruct 7(int) 7(int) 7(int) 7(int) 7(int)
-               6:             TypePointer PhysicalStorageBufferEXT 8(blockType)
-               9:             TypeInt 32 0
-              10:      9(int) Constant 2
-              11:             TypeArray 6(ptr) 10
-              12:             TypePointer Function 11
-          14(t2):             TypeStruct 6(ptr) 6(ptr)
-              15:             TypePointer StorageBuffer 14(t2)
-           16(t):     15(ptr) Variable StorageBuffer
-              17:      7(int) Constant 0
-              18:             TypePointer StorageBuffer 6(ptr)
-              21:      7(int) Constant 1
-              25:             TypePointer Function 6(ptr)
-              30:             TypePointer PhysicalStorageBufferEXT 7(int)
-         4(main):           2 Function None 3
-               5:             Label
-          13(b1):     12(ptr) Variable Function
-          34(b2):     25(ptr) Variable Function
-          37(b3):     25(ptr) Variable Function
-              19:     18(ptr) AccessChain 16(t) 17
-              20:      6(ptr) Load 19
-              22:     18(ptr) AccessChain 16(t) 21
-              23:      6(ptr) Load 22
-              24:          11 CompositeConstruct 20 23
-                              Store 13(b1) 24
-              26:     25(ptr) AccessChain 13(b1) 17
-              27:      6(ptr) Load 26
-              28:     25(ptr) AccessChain 13(b1) 21
-              29:      6(ptr) Load 28
-              31:     30(ptr) AccessChain 29 21
-              32:      7(int) Load 31 Aligned 4
-              33:     30(ptr) AccessChain 27 17
-                              Store 33 32 Aligned 16
-              35:     18(ptr) AccessChain 16(t) 17
-              36:      6(ptr) Load 35
-                              Store 34(b2) 36
-              38:     18(ptr) AccessChain 16(t) 21
-              39:      6(ptr) Load 38
-                              Store 37(b3) 39
-              40:      6(ptr) Load 34(b2)
-              41:      6(ptr) Load 37(b3)
-              42:     30(ptr) AccessChain 41 21
-              43:      7(int) Load 42 Aligned 4
-              44:     30(ptr) AccessChain 40 17
-                              Store 44 43 Aligned 16
+                              Name 54_1  "main"
+                              Name 30_1  "blockType"
+                              MemberName 30_1(blockType) 0  "a"
+                              MemberName 30_1(blockType) 1  "b"
+                              MemberName 30_1(blockType) 2  "c"
+                              MemberName 30_1(blockType) 3  "d"
+                              MemberName 30_1(blockType) 4  "e"
+                              Name 59_2  "b1"
+                              Name 30_2  "t2"
+                              MemberName 30_2(t2) 0  "f"
+                              MemberName 30_2(t2) 1  "g"
+                              Name 59_1  "t"
+                              Name 59_3  "b2"
+                              Name 59_4  "b3"
+                              Decorate 30_1(blockType) Block
+                              MemberDecorate 30_1(blockType) 0 Offset 0
+                              MemberDecorate 30_1(blockType) 1 Offset 4
+                              MemberDecorate 30_1(blockType) 2 Offset 8
+                              MemberDecorate 30_1(blockType) 3 Offset 12
+                              MemberDecorate 30_1(blockType) 4 Offset 16
+                              Decorate 59_2(b1) DecorationAliasedPointerEXT
+                              Decorate 30_2(t2) Block
+                              MemberDecorate 30_2(t2) 0 Offset 0
+                              MemberDecorate 30_2(t2) 1 Offset 8
+                              Decorate 59_1(t) Binding 0
+                              Decorate 59_1(t) DescriptorSet 0
+                              Decorate 59_3(b2) DecorationAliasedPointerEXT
+                              Decorate 59_4(b3) DecorationAliasedPointerEXT
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+                              TypeForwardPointer 32_1 PhysicalStorageBufferEXT
+            21_1:             TypeInt 32 1
+ 30_1(blockType):             TypeStruct 21_1(int) 21_1(int) 21_1(int) 21_1(int) 21_1(int)
+            32_1:             TypePointer PhysicalStorageBufferEXT 30_1(blockType)
+            21_2:             TypeInt 32 0
+         uint(2):   21_2(int) Constant 2
+            28_1:             TypeArray 32_1(ptr) uint(2)
+            32_2:             TypePointer Function 28_1
+        30_2(t2):             TypeStruct 32_1(ptr) 32_1(ptr)
+            32_3:             TypePointer StorageBuffer 30_2(t2)
+         59_1(t):   32_3(ptr) Variable StorageBuffer
+            43_1:   21_1(int) Constant 0
+            32_4:             TypePointer StorageBuffer 32_1(ptr)
+            43_2:   21_1(int) Constant 1
+            32_5:             TypePointer Function 32_1(ptr)
+            32_6:             TypePointer PhysicalStorageBufferEXT 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_2(b1):   32_2(ptr) Variable Function
+        59_3(b2):   32_5(ptr) Variable Function
+        59_4(b3):   32_5(ptr) Variable Function
+            65_1:   32_4(ptr) AccessChain 59_1(t) 43_1
+            61_1:   32_1(ptr) Load 65_1
+            65_2:   32_4(ptr) AccessChain 59_1(t) 43_2
+            61_2:   32_1(ptr) Load 65_2
+            80_1:        28_1 CompositeConstruct 61_1 61_2
+                              Store 59_2(b1) 80_1
+            65_3:   32_5(ptr) AccessChain 59_2(b1) 43_1
+            61_3:   32_1(ptr) Load 65_3
+            65_4:   32_5(ptr) AccessChain 59_2(b1) 43_2
+            61_4:   32_1(ptr) Load 65_4
+            65_5:   32_6(ptr) AccessChain 61_4 43_2
+            61_5:   21_1(int) Load 65_5 Aligned 4
+            65_6:   32_6(ptr) AccessChain 61_3 43_1
+                              Store 65_6 61_5 Aligned 16
+            65_7:   32_4(ptr) AccessChain 59_1(t) 43_1
+            61_6:   32_1(ptr) Load 65_7
+                              Store 59_3(b2) 61_6
+            65_8:   32_4(ptr) AccessChain 59_1(t) 43_2
+            61_7:   32_1(ptr) Load 65_8
+                              Store 59_4(b3) 61_7
+            61_8:   32_1(ptr) Load 59_3(b2)
+            61_9:   32_1(ptr) Load 59_4(b3)
+            65_9:   32_6(ptr) AccessChain 61_9 43_2
+           61_10:   21_1(int) Load 65_9 Aligned 4
+           65_10:   32_6(ptr) AccessChain 61_8 43_1
+                              Store 65_10 61_10 Aligned 16
                               Return
                               FunctionEnd

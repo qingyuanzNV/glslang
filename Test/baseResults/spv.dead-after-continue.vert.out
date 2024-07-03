@@ -4,51 +4,51 @@ spv.dead-after-continue.vert
 // Id's are bound by 29
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 20 28
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 8  "i"
-                              Name 20  "o"
-                              Name 28  "c"
-                              Decorate 20(o) Location 0
-                              Decorate 28(c) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:      6(int) Constant 0
-              16:      6(int) Constant 5
-              17:             TypeBool
-              19:             TypePointer Output 6(int)
-           20(o):     19(ptr) Variable Output
-              21:      6(int) Constant 1
-              23:      6(int) Constant 2
-              26:      6(int) Constant 3
-              27:             TypePointer Input 6(int)
-           28(c):     27(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-            8(i):      7(ptr) Variable Function
-                              Store 8(i) 9
-                              Branch 10
-              10:             Label
-                              LoopMerge 12 13 None
-                              Branch 14
-              14:             Label
-              15:      6(int) Load 8(i)
-              18:    17(bool) SLessThan 15 16
-                              BranchConditional 18 11 12
-              11:               Label
-                                Store 20(o) 21
-                                Branch 13
-              13:               Label
-              24:      6(int)   Load 8(i)
-              25:      6(int)   IAdd 24 21
-                                Store 8(i) 25
-                                Branch 10
-              12:             Label
-                              Store 20(o) 26
+                              Name 54_1  "main"
+                              Name 59_3  "i"
+                              Name 59_1  "o"
+                              Name 59_2  "c"
+                              Decorate 59_1(o) Location 0
+                              Decorate 59_2(c) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 5
+            20_1:             TypeBool
+            32_2:             TypePointer Output 21_1(int)
+         59_1(o):   32_2(ptr) Variable Output
+            43_3:   21_1(int) Constant 1
+            43_4:   21_1(int) Constant 2
+            43_5:   21_1(int) Constant 3
+            32_3:             TypePointer Input 21_1(int)
+         59_2(c):   32_3(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_3(i):   32_1(ptr) Variable Function
+                              Store 59_3(i) 43_1
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 None
+                              Branch 248_3
+           248_3:             Label
+            61_1:   21_1(int) Load 59_3(i)
+           177_1:  20_1(bool) SLessThan 61_1 43_2
+                              BranchConditional 177_1 248_4 248_6
+           248_4:               Label
+                                Store 59_1(o) 43_3
+                                Branch 248_5
+           248_5:               Label
+            61_2:   21_1(int)   Load 59_3(i)
+           128_1:   21_1(int)   IAdd 61_2 43_3
+                                Store 59_3(i) 128_1
+                                Branch 248_2
+           248_6:             Label
+                              Store 59_1(o) 43_5
                               Return
                               FunctionEnd

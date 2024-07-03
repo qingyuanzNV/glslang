@@ -6,271 +6,271 @@ spv.expect_assume.expectEXT.comp
                               Capability Shader
                               Capability ExpectAssumeKHR
                               Extension  "SPV_KHR_expect_assume"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 8 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 8 1 1
                               Source GLSL 450
                               SourceExtension  "GL_EXT_expect_assume"
-                              Name 4  "main"
-                              Name 8  "x"
-                              Name 18  "roblock"
-                              MemberName 18(roblock) 0  "b"
-                              MemberName 18(roblock) 1  "bv2"
-                              MemberName 18(roblock) 2  "bv3"
-                              MemberName 18(roblock) 3  "bv4"
-                              MemberName 18(roblock) 4  "i"
-                              MemberName 18(roblock) 5  "iv2"
-                              MemberName 18(roblock) 6  "iv3"
-                              MemberName 18(roblock) 7  "iv4"
-                              MemberName 18(roblock) 8  "ui"
-                              MemberName 18(roblock) 9  "uv2"
-                              MemberName 18(roblock) 10  "uv3"
-                              MemberName 18(roblock) 11  "uv4"
-                              Name 20  "ro"
-                              Decorate 18(roblock) BufferBlock
-                              MemberDecorate 18(roblock) 0 NonWritable
-                              MemberDecorate 18(roblock) 0 Offset 0
-                              MemberDecorate 18(roblock) 1 NonWritable
-                              MemberDecorate 18(roblock) 1 Offset 8
-                              MemberDecorate 18(roblock) 2 NonWritable
-                              MemberDecorate 18(roblock) 2 Offset 16
-                              MemberDecorate 18(roblock) 3 NonWritable
-                              MemberDecorate 18(roblock) 3 Offset 32
-                              MemberDecorate 18(roblock) 4 NonWritable
-                              MemberDecorate 18(roblock) 4 Offset 48
-                              MemberDecorate 18(roblock) 5 NonWritable
-                              MemberDecorate 18(roblock) 5 Offset 56
-                              MemberDecorate 18(roblock) 6 NonWritable
-                              MemberDecorate 18(roblock) 6 Offset 64
-                              MemberDecorate 18(roblock) 7 NonWritable
-                              MemberDecorate 18(roblock) 7 Offset 80
-                              MemberDecorate 18(roblock) 8 NonWritable
-                              MemberDecorate 18(roblock) 8 Offset 96
-                              MemberDecorate 18(roblock) 9 NonWritable
-                              MemberDecorate 18(roblock) 9 Offset 104
-                              MemberDecorate 18(roblock) 10 NonWritable
-                              MemberDecorate 18(roblock) 10 Offset 112
-                              MemberDecorate 18(roblock) 11 NonWritable
-                              MemberDecorate 18(roblock) 11 Offset 128
-                              Decorate 20(ro) Binding 0
-                              Decorate 20(ro) DescriptorSet 0
-                              Decorate 177 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:      6(int) Constant 0
-              10:             TypeBool
-              11:             TypeInt 32 0
-              12:             TypeVector 11(int) 2
-              13:             TypeVector 11(int) 3
-              14:             TypeVector 11(int) 4
-              15:             TypeVector 6(int) 2
-              16:             TypeVector 6(int) 3
-              17:             TypeVector 6(int) 4
-     18(roblock):             TypeStruct 11(int) 12(ivec2) 13(ivec3) 14(ivec4) 6(int) 15(ivec2) 16(ivec3) 17(ivec4) 11(int) 12(ivec2) 13(ivec3) 14(ivec4)
-              19:             TypePointer Uniform 18(roblock)
-          20(ro):     19(ptr) Variable Uniform
-              21:             TypePointer Uniform 11(int)
-              24:     11(int) Constant 0
-              26:    10(bool) ConstantTrue
-              32:      6(int) Constant 1
-              33:             TypePointer Uniform 12(ivec2)
-              36:             TypeVector 10(bool) 2
-              37:   12(ivec2) ConstantComposite 24 24
-              39:    10(bool) ConstantFalse
-              40:   36(bvec2) ConstantComposite 26 39
-              48:      6(int) Constant 2
-              49:             TypePointer Uniform 13(ivec3)
-              52:             TypeVector 10(bool) 3
-              53:   13(ivec3) ConstantComposite 24 24 24
-              55:   52(bvec3) ConstantComposite 26 39 26
-              63:      6(int) Constant 3
-              64:             TypePointer Uniform 14(ivec4)
-              67:             TypeVector 10(bool) 4
-              68:   14(ivec4) ConstantComposite 24 24 24 24
-              70:   67(bvec4) ConstantComposite 39 26 39 26
-              79:      6(int) Constant 4
-              80:             TypePointer Uniform 6(int)
-              83:      6(int) Constant 10
-              89:      6(int) Constant 5
-              90:             TypePointer Uniform 15(ivec2)
-              93:      6(int) Constant 11
-              94:      6(int) Constant 4294967274
-              95:   15(ivec2) ConstantComposite 93 94
-             103:      6(int) Constant 6
-             104:             TypePointer Uniform 16(ivec3)
-             107:      6(int) Constant 33
-             108:   16(ivec3) ConstantComposite 93 94 107
-             116:      6(int) Constant 7
-             117:             TypePointer Uniform 17(ivec4)
-             120:      6(int) Constant 44
-             121:   17(ivec4) ConstantComposite 93 94 107 120
-             130:      6(int) Constant 8
-             133:     11(int) Constant 10
-             139:      6(int) Constant 9
-             142:     11(int) Constant 11
-             143:     11(int) Constant 22
-             144:   12(ivec2) ConstantComposite 142 143
-             154:     11(int) Constant 33
-             155:   13(ivec3) ConstantComposite 142 143 154
-             165:     11(int) Constant 44
-             166:   14(ivec4) ConstantComposite 142 143 154 165
-             175:     11(int) Constant 8
-             176:     11(int) Constant 1
-             177:   13(ivec3) ConstantComposite 175 176 176
-         4(main):           2 Function None 3
-               5:             Label
-            8(x):      7(ptr) Variable Function
-                              Store 8(x) 9
-              22:     21(ptr) AccessChain 20(ro) 9
-              23:     11(int) Load 22
-              25:    10(bool) INotEqual 23 24
-              27:    10(bool) ExpectKHR 25 26
-              28:    10(bool) LogicalEqual 27 26
-              29:    10(bool) LogicalNot 28
-                              SelectionMerge 31 None
-                              BranchConditional 29 30 31
-              30:               Label
-              34:     33(ptr)   AccessChain 20(ro) 32
-              35:   12(ivec2)   Load 34
-              38:   36(bvec2)   INotEqual 35 37
-              41:   36(bvec2)   ExpectKHR 38 40
-              42:   36(bvec2)   LogicalEqual 41 40
-              43:    10(bool)   All 42
-                                Branch 31
-              31:             Label
-              44:    10(bool) Phi 28 5 43 30
-              45:    10(bool) LogicalNot 44
-                              SelectionMerge 47 None
-                              BranchConditional 45 46 47
-              46:               Label
-              50:     49(ptr)   AccessChain 20(ro) 48
-              51:   13(ivec3)   Load 50
-              54:   52(bvec3)   INotEqual 51 53
-              56:   52(bvec3)   ExpectKHR 54 55
-              57:   52(bvec3)   LogicalEqual 56 55
-              58:    10(bool)   All 57
-                                Branch 47
-              47:             Label
-              59:    10(bool) Phi 44 31 58 46
-              60:    10(bool) LogicalNot 59
-                              SelectionMerge 62 None
-                              BranchConditional 60 61 62
-              61:               Label
-              65:     64(ptr)   AccessChain 20(ro) 63
-              66:   14(ivec4)   Load 65
-              69:   67(bvec4)   INotEqual 66 68
-              71:   67(bvec4)   ExpectKHR 69 70
-              72:   67(bvec4)   LogicalEqual 71 70
-              73:    10(bool)   All 72
-                                Branch 62
-              62:             Label
-              74:    10(bool) Phi 59 47 73 61
-                              SelectionMerge 76 None
-                              BranchConditional 74 75 76
-              75:               Label
-              77:      6(int)   Load 8(x)
-              78:      6(int)   IAdd 77 32
-                                Store 8(x) 78
-                                Branch 76
-              76:             Label
-              81:     80(ptr) AccessChain 20(ro) 79
-              82:      6(int) Load 81
-              84:      6(int) ExpectKHR 82 83
-              85:    10(bool) IEqual 84 83
-              86:    10(bool) LogicalNot 85
-                              SelectionMerge 88 None
-                              BranchConditional 86 87 88
-              87:               Label
-              91:     90(ptr)   AccessChain 20(ro) 89
-              92:   15(ivec2)   Load 91
-              96:   15(ivec2)   ExpectKHR 92 95
-              97:   36(bvec2)   IEqual 96 95
-              98:    10(bool)   All 97
-                                Branch 88
-              88:             Label
-              99:    10(bool) Phi 85 76 98 87
-             100:    10(bool) LogicalNot 99
-                              SelectionMerge 102 None
-                              BranchConditional 100 101 102
-             101:               Label
-             105:    104(ptr)   AccessChain 20(ro) 103
-             106:   16(ivec3)   Load 105
-             109:   16(ivec3)   ExpectKHR 106 108
-             110:   52(bvec3)   IEqual 109 108
-             111:    10(bool)   All 110
-                                Branch 102
-             102:             Label
-             112:    10(bool) Phi 99 88 111 101
-             113:    10(bool) LogicalNot 112
-                              SelectionMerge 115 None
-                              BranchConditional 113 114 115
-             114:               Label
-             118:    117(ptr)   AccessChain 20(ro) 116
-             119:   17(ivec4)   Load 118
-             122:   17(ivec4)   ExpectKHR 119 121
-             123:   67(bvec4)   IEqual 122 121
-             124:    10(bool)   All 123
-                                Branch 115
-             115:             Label
-             125:    10(bool) Phi 112 102 124 114
-                              SelectionMerge 127 None
-                              BranchConditional 125 126 127
-             126:               Label
-             128:      6(int)   Load 8(x)
-             129:      6(int)   IAdd 128 32
-                                Store 8(x) 129
-                                Branch 127
-             127:             Label
-             131:     21(ptr) AccessChain 20(ro) 130
-             132:     11(int) Load 131
-             134:     11(int) ExpectKHR 132 133
-             135:    10(bool) IEqual 134 133
-             136:    10(bool) LogicalNot 135
-                              SelectionMerge 138 None
-                              BranchConditional 136 137 138
-             137:               Label
-             140:     33(ptr)   AccessChain 20(ro) 139
-             141:   12(ivec2)   Load 140
-             145:   12(ivec2)   ExpectKHR 141 144
-             146:   36(bvec2)   IEqual 145 144
-             147:    10(bool)   All 146
-                                Branch 138
-             138:             Label
-             148:    10(bool) Phi 135 127 147 137
-             149:    10(bool) LogicalNot 148
-                              SelectionMerge 151 None
-                              BranchConditional 149 150 151
-             150:               Label
-             152:     49(ptr)   AccessChain 20(ro) 83
-             153:   13(ivec3)   Load 152
-             156:   13(ivec3)   ExpectKHR 153 155
-             157:   52(bvec3)   IEqual 156 155
-             158:    10(bool)   All 157
-                                Branch 151
-             151:             Label
-             159:    10(bool) Phi 148 138 158 150
-             160:    10(bool) LogicalNot 159
-                              SelectionMerge 162 None
-                              BranchConditional 160 161 162
-             161:               Label
-             163:     64(ptr)   AccessChain 20(ro) 93
-             164:   14(ivec4)   Load 163
-             167:   14(ivec4)   ExpectKHR 164 166
-             168:   67(bvec4)   IEqual 167 166
-             169:    10(bool)   All 168
-                                Branch 162
-             162:             Label
-             170:    10(bool) Phi 159 151 169 161
-                              SelectionMerge 172 None
-                              BranchConditional 170 171 172
-             171:               Label
-             173:      6(int)   Load 8(x)
-             174:      6(int)   IAdd 173 32
-                                Store 8(x) 174
-                                Branch 172
-             172:             Label
+                              Name 54_1  "main"
+                              Name 59_2  "x"
+                              Name 30_1  "roblock"
+                              MemberName 30_1(roblock) 0  "b"
+                              MemberName 30_1(roblock) 1  "bv2"
+                              MemberName 30_1(roblock) 2  "bv3"
+                              MemberName 30_1(roblock) 3  "bv4"
+                              MemberName 30_1(roblock) 4  "i"
+                              MemberName 30_1(roblock) 5  "iv2"
+                              MemberName 30_1(roblock) 6  "iv3"
+                              MemberName 30_1(roblock) 7  "iv4"
+                              MemberName 30_1(roblock) 8  "ui"
+                              MemberName 30_1(roblock) 9  "uv2"
+                              MemberName 30_1(roblock) 10  "uv3"
+                              MemberName 30_1(roblock) 11  "uv4"
+                              Name 59_1  "ro"
+                              Decorate 30_1(roblock) BufferBlock
+                              MemberDecorate 30_1(roblock) 0 NonWritable
+                              MemberDecorate 30_1(roblock) 0 Offset 0
+                              MemberDecorate 30_1(roblock) 1 NonWritable
+                              MemberDecorate 30_1(roblock) 1 Offset 8
+                              MemberDecorate 30_1(roblock) 2 NonWritable
+                              MemberDecorate 30_1(roblock) 2 Offset 16
+                              MemberDecorate 30_1(roblock) 3 NonWritable
+                              MemberDecorate 30_1(roblock) 3 Offset 32
+                              MemberDecorate 30_1(roblock) 4 NonWritable
+                              MemberDecorate 30_1(roblock) 4 Offset 48
+                              MemberDecorate 30_1(roblock) 5 NonWritable
+                              MemberDecorate 30_1(roblock) 5 Offset 56
+                              MemberDecorate 30_1(roblock) 6 NonWritable
+                              MemberDecorate 30_1(roblock) 6 Offset 64
+                              MemberDecorate 30_1(roblock) 7 NonWritable
+                              MemberDecorate 30_1(roblock) 7 Offset 80
+                              MemberDecorate 30_1(roblock) 8 NonWritable
+                              MemberDecorate 30_1(roblock) 8 Offset 96
+                              MemberDecorate 30_1(roblock) 9 NonWritable
+                              MemberDecorate 30_1(roblock) 9 Offset 104
+                              MemberDecorate 30_1(roblock) 10 NonWritable
+                              MemberDecorate 30_1(roblock) 10 Offset 112
+                              MemberDecorate 30_1(roblock) 11 NonWritable
+                              MemberDecorate 30_1(roblock) 11 Offset 128
+                              Decorate 59_1(ro) Binding 0
+                              Decorate 59_1(ro) DescriptorSet 0
+                              Decorate 44_13 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+            20_1:             TypeBool
+            21_2:             TypeInt 32 0
+            23_1:             TypeVector 21_2(int) 2
+            23_2:             TypeVector 21_2(int) 3
+            23_3:             TypeVector 21_2(int) 4
+            23_4:             TypeVector 21_1(int) 2
+            23_5:             TypeVector 21_1(int) 3
+            23_6:             TypeVector 21_1(int) 4
+   30_1(roblock):             TypeStruct 21_2(int) 23_1(ivec2) 23_2(ivec3) 23_3(ivec4) 21_1(int) 23_4(ivec2) 23_5(ivec3) 23_6(ivec4) 21_2(int) 23_1(ivec2) 23_2(ivec3) 23_3(ivec4)
+            32_2:             TypePointer Uniform 30_1(roblock)
+        59_1(ro):   32_2(ptr) Variable Uniform
+            32_3:             TypePointer Uniform 21_2(int)
+         uint(0):   21_2(int) Constant 0
+            41_1:  20_1(bool) ConstantTrue
+            43_2:   21_1(int) Constant 1
+            32_4:             TypePointer Uniform 23_1(ivec2)
+            23_7:             TypeVector 20_1(bool) 2
+            44_1: 23_1(ivec2) ConstantComposite uint(0) uint(0)
+            42_1:  20_1(bool) ConstantFalse
+            44_2: 23_7(bvec2) ConstantComposite 41_1 42_1
+            43_3:   21_1(int) Constant 2
+            32_5:             TypePointer Uniform 23_2(ivec3)
+            23_8:             TypeVector 20_1(bool) 3
+            44_3: 23_2(ivec3) ConstantComposite uint(0) uint(0) uint(0)
+            44_4: 23_8(bvec3) ConstantComposite 41_1 42_1 41_1
+            43_4:   21_1(int) Constant 3
+            32_6:             TypePointer Uniform 23_3(ivec4)
+            23_9:             TypeVector 20_1(bool) 4
+            44_5: 23_3(ivec4) ConstantComposite uint(0) uint(0) uint(0) uint(0)
+            44_6: 23_9(bvec4) ConstantComposite 42_1 41_1 42_1 41_1
+            43_5:   21_1(int) Constant 4
+            32_7:             TypePointer Uniform 21_1(int)
+            43_6:   21_1(int) Constant 10
+            43_7:   21_1(int) Constant 5
+            32_8:             TypePointer Uniform 23_4(ivec2)
+            43_8:   21_1(int) Constant 11
+            43_9:   21_1(int) Constant 4294967274
+            44_7: 23_4(ivec2) ConstantComposite 43_8 43_9
+           43_10:   21_1(int) Constant 6
+            32_9:             TypePointer Uniform 23_5(ivec3)
+           43_11:   21_1(int) Constant 33
+            44_8: 23_5(ivec3) ConstantComposite 43_8 43_9 43_11
+           43_12:   21_1(int) Constant 7
+           32_10:             TypePointer Uniform 23_6(ivec4)
+           43_13:   21_1(int) Constant 44
+            44_9: 23_6(ivec4) ConstantComposite 43_8 43_9 43_11 43_13
+           43_14:   21_1(int) Constant 8
+        uint(10):   21_2(int) Constant 10
+           43_15:   21_1(int) Constant 9
+        uint(11):   21_2(int) Constant 11
+        uint(22):   21_2(int) Constant 22
+           44_10: 23_1(ivec2) ConstantComposite uint(11) uint(22)
+        uint(33):   21_2(int) Constant 33
+           44_11: 23_2(ivec3) ConstantComposite uint(11) uint(22) uint(33)
+        uint(44):   21_2(int) Constant 44
+           44_12: 23_3(ivec4) ConstantComposite uint(11) uint(22) uint(33) uint(44)
+         uint(8):   21_2(int) Constant 8
+         uint(1):   21_2(int) Constant 1
+           44_13: 23_2(ivec3) ConstantComposite uint(8) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_2(x):   32_1(ptr) Variable Function
+                              Store 59_2(x) 43_1
+            65_1:   32_3(ptr) AccessChain 59_1(ro) 43_1
+            61_1:   21_2(int) Load 65_1
+           171_1:  20_1(bool) INotEqual 61_1 uint(0)
+          5631_1:  20_1(bool) ExpectKHR 171_1 41_1
+           164_1:  20_1(bool) LogicalEqual 5631_1 41_1
+           168_1:  20_1(bool) LogicalNot 164_1
+                              SelectionMerge 248_3 None
+                              BranchConditional 168_1 248_2 248_3
+           248_2:               Label
+            65_2:   32_4(ptr)   AccessChain 59_1(ro) 43_2
+            61_2: 23_1(ivec2)   Load 65_2
+           171_2: 23_7(bvec2)   INotEqual 61_2 44_1
+          5631_2: 23_7(bvec2)   ExpectKHR 171_2 44_2
+           164_2: 23_7(bvec2)   LogicalEqual 5631_2 44_2
+           155_1:  20_1(bool)   All 164_2
+                                Branch 248_3
+           248_3:             Label
+           245_1:  20_1(bool) Phi 164_1 248_1 155_1 248_2
+           168_2:  20_1(bool) LogicalNot 245_1
+                              SelectionMerge 248_5 None
+                              BranchConditional 168_2 248_4 248_5
+           248_4:               Label
+            65_3:   32_5(ptr)   AccessChain 59_1(ro) 43_3
+            61_3: 23_2(ivec3)   Load 65_3
+           171_3: 23_8(bvec3)   INotEqual 61_3 44_3
+          5631_3: 23_8(bvec3)   ExpectKHR 171_3 44_4
+           164_3: 23_8(bvec3)   LogicalEqual 5631_3 44_4
+           155_2:  20_1(bool)   All 164_3
+                                Branch 248_5
+           248_5:             Label
+           245_2:  20_1(bool) Phi 245_1 248_3 155_2 248_4
+           168_3:  20_1(bool) LogicalNot 245_2
+                              SelectionMerge 248_7 None
+                              BranchConditional 168_3 248_6 248_7
+           248_6:               Label
+            65_4:   32_6(ptr)   AccessChain 59_1(ro) 43_4
+            61_4: 23_3(ivec4)   Load 65_4
+           171_4: 23_9(bvec4)   INotEqual 61_4 44_5
+          5631_4: 23_9(bvec4)   ExpectKHR 171_4 44_6
+           164_4: 23_9(bvec4)   LogicalEqual 5631_4 44_6
+           155_3:  20_1(bool)   All 164_4
+                                Branch 248_7
+           248_7:             Label
+           245_3:  20_1(bool) Phi 245_2 248_5 155_3 248_6
+                              SelectionMerge 248_9 None
+                              BranchConditional 245_3 248_8 248_9
+           248_8:               Label
+            61_5:   21_1(int)   Load 59_2(x)
+           128_1:   21_1(int)   IAdd 61_5 43_2
+                                Store 59_2(x) 128_1
+                                Branch 248_9
+           248_9:             Label
+            65_5:   32_7(ptr) AccessChain 59_1(ro) 43_5
+            61_6:   21_1(int) Load 65_5
+          5631_5:   21_1(int) ExpectKHR 61_6 43_6
+           170_1:  20_1(bool) IEqual 5631_5 43_6
+           168_4:  20_1(bool) LogicalNot 170_1
+                              SelectionMerge 248_11 None
+                              BranchConditional 168_4 248_10 248_11
+          248_10:               Label
+            65_6:   32_8(ptr)   AccessChain 59_1(ro) 43_7
+            61_7: 23_4(ivec2)   Load 65_6
+          5631_6: 23_4(ivec2)   ExpectKHR 61_7 44_7
+           170_2: 23_7(bvec2)   IEqual 5631_6 44_7
+           155_4:  20_1(bool)   All 170_2
+                                Branch 248_11
+          248_11:             Label
+           245_4:  20_1(bool) Phi 170_1 248_9 155_4 248_10
+           168_5:  20_1(bool) LogicalNot 245_4
+                              SelectionMerge 248_13 None
+                              BranchConditional 168_5 248_12 248_13
+          248_12:               Label
+            65_7:   32_9(ptr)   AccessChain 59_1(ro) 43_10
+            61_8: 23_5(ivec3)   Load 65_7
+          5631_7: 23_5(ivec3)   ExpectKHR 61_8 44_8
+           170_3: 23_8(bvec3)   IEqual 5631_7 44_8
+           155_5:  20_1(bool)   All 170_3
+                                Branch 248_13
+          248_13:             Label
+           245_5:  20_1(bool) Phi 245_4 248_11 155_5 248_12
+           168_6:  20_1(bool) LogicalNot 245_5
+                              SelectionMerge 248_15 None
+                              BranchConditional 168_6 248_14 248_15
+          248_14:               Label
+            65_8:  32_10(ptr)   AccessChain 59_1(ro) 43_12
+            61_9: 23_6(ivec4)   Load 65_8
+          5631_8: 23_6(ivec4)   ExpectKHR 61_9 44_9
+           170_4: 23_9(bvec4)   IEqual 5631_8 44_9
+           155_6:  20_1(bool)   All 170_4
+                                Branch 248_15
+          248_15:             Label
+           245_6:  20_1(bool) Phi 245_5 248_13 155_6 248_14
+                              SelectionMerge 248_17 None
+                              BranchConditional 245_6 248_16 248_17
+          248_16:               Label
+           61_10:   21_1(int)   Load 59_2(x)
+           128_2:   21_1(int)   IAdd 61_10 43_2
+                                Store 59_2(x) 128_2
+                                Branch 248_17
+          248_17:             Label
+            65_9:   32_3(ptr) AccessChain 59_1(ro) 43_14
+           61_11:   21_2(int) Load 65_9
+          5631_9:   21_2(int) ExpectKHR 61_11 uint(10)
+           170_5:  20_1(bool) IEqual 5631_9 uint(10)
+           168_7:  20_1(bool) LogicalNot 170_5
+                              SelectionMerge 248_19 None
+                              BranchConditional 168_7 248_18 248_19
+          248_18:               Label
+           65_10:   32_4(ptr)   AccessChain 59_1(ro) 43_15
+           61_12: 23_1(ivec2)   Load 65_10
+         5631_10: 23_1(ivec2)   ExpectKHR 61_12 44_10
+           170_6: 23_7(bvec2)   IEqual 5631_10 44_10
+           155_7:  20_1(bool)   All 170_6
+                                Branch 248_19
+          248_19:             Label
+           245_7:  20_1(bool) Phi 170_5 248_17 155_7 248_18
+           168_8:  20_1(bool) LogicalNot 245_7
+                              SelectionMerge 248_21 None
+                              BranchConditional 168_8 248_20 248_21
+          248_20:               Label
+           65_11:   32_5(ptr)   AccessChain 59_1(ro) 43_6
+           61_13: 23_2(ivec3)   Load 65_11
+         5631_11: 23_2(ivec3)   ExpectKHR 61_13 44_11
+           170_7: 23_8(bvec3)   IEqual 5631_11 44_11
+           155_8:  20_1(bool)   All 170_7
+                                Branch 248_21
+          248_21:             Label
+           245_8:  20_1(bool) Phi 245_7 248_19 155_8 248_20
+           168_9:  20_1(bool) LogicalNot 245_8
+                              SelectionMerge 248_23 None
+                              BranchConditional 168_9 248_22 248_23
+          248_22:               Label
+           65_12:   32_6(ptr)   AccessChain 59_1(ro) 43_8
+           61_14: 23_3(ivec4)   Load 65_12
+         5631_12: 23_3(ivec4)   ExpectKHR 61_14 44_12
+           170_8: 23_9(bvec4)   IEqual 5631_12 44_12
+           155_9:  20_1(bool)   All 170_8
+                                Branch 248_23
+          248_23:             Label
+           245_9:  20_1(bool) Phi 245_8 248_21 155_9 248_22
+                              SelectionMerge 248_25 None
+                              BranchConditional 245_9 248_24 248_25
+          248_24:               Label
+           61_15:   21_1(int)   Load 59_2(x)
+           128_3:   21_1(int)   IAdd 61_15 43_2
+                                Store 59_2(x) 128_3
+                                Branch 248_25
+          248_25:             Label
                               Return
                               FunctionEnd

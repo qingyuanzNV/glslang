@@ -5,17 +5,17 @@ spv.debuginfo.include.glsl.frag
 
                               Capability Shader
                               Extension  "SPV_KHR_non_semantic_info"
-               1:             ExtInstImport  "NonSemantic.Shader.DebugInfo.100"
-               4:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "NonSemantic.Shader.DebugInfo.100"
+            11_2:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 15  "main" 82
-                              ExecutionMode 15 OriginUpperLeft
-               2:             String  "spv.debuginfo.include.glsl.frag"
-               3:             String  "spv.debuginfo.include.glsl.h"
-               9:             String  "uint"
-              18:             String  "float"
-              31:             String  "headerFunction"
-              34:             String  "
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
+             7_1:             String  "spv.debuginfo.include.glsl.frag"
+             7_2:             String  "spv.debuginfo.include.glsl.h"
+             7_3:             String  "uint"
+             7_4:             String  "float"
+             7_5:             String  "headerFunction"
+             7_6:             String  "
 out vec4 headerOut;
 
 uniform UBO {
@@ -25,7 +25,7 @@ uniform UBO {
 vec4 headerFunction(vec4 a) {
 	return -a;
 }"
-              39:             String  "// OpModuleProcessed auto-map-locations
+             7_7:             String  "// OpModuleProcessed auto-map-locations
 // OpModuleProcessed auto-map-bindings
 // OpModuleProcessed client vulkan100
 // OpModuleProcessed target-env vulkan1.0
@@ -44,124 +44,122 @@ vec4 mainFileFunction(vec4 v) {
 void main() {
 	headerOut = headerFunction(mainFileFunction(headerUboItem));
 }"
-              42:             String  "a"
-              50:             String  "mainFileFunction"
-              53:             String  "v"
-              57:             String  "main"
-              84:             String  "headerOut"
-              88:             String  "headerUboItem"
-              91:             String  "UBO"
-              96:             String  ""
-              98:             String  "int"
+             7_8:             String  "a"
+             7_9:             String  "mainFileFunction"
+            7_10:             String  "v"
+            7_11:             String  "main"
+            7_12:             String  "headerOut"
+            7_13:             String  "headerUboItem"
+            7_14:             String  "UBO"
+            7_15:             String  ""
+            7_16:             String  "int"
                               SourceExtension  "GL_GOOGLE_cpp_style_line_directive"
                               SourceExtension  "GL_GOOGLE_include_directive"
-                              Name 15  "main"
-                              Name 29  "headerFunction(vf4;"
-                              Name 28  "a"
-                              Name 48  "mainFileFunction(vf4;"
-                              Name 47  "v"
-                              Name 82  "headerOut"
-                              Name 86  "UBO"
-                              MemberName 86(UBO) 0  "headerUboItem"
-                              Name 94  ""
-                              Name 101  "param"
-                              Name 108  "param"
-                              Decorate 82(headerOut) Location 0
-                              Decorate 86(UBO) Block
-                              MemberDecorate 86(UBO) 0 Offset 0
-                              Decorate 94 Binding 0
-                              Decorate 94 DescriptorSet 0
-               5:             TypeVoid
-               6:             TypeFunction 5
-               8:             TypeInt 32 0
-              11:      8(int) Constant 32
-              12:      8(int) Constant 6
-              13:      8(int) Constant 0
-              10:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 9 11 12 13
-              14:      8(int) Constant 3
-               7:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 8(DebugTypeFunction) 14 5
-              17:             TypeFloat 32
-              19:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 18 11 14 13
-              20:             TypeVector 17(float) 4
-              21:      8(int) Constant 4
-              22:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 19 21
-              23:             TypePointer Function 20(fvec4)
-              24:      8(int) Constant 7
-              25:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 22 24 13
-              26:             TypeFunction 20(fvec4) 23(ptr)
-              27:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 8(DebugTypeFunction) 14 22 22
-              33:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 35(DebugSource) 3 34
-              35:      8(int) Constant 8
-              37:      8(int) Constant 1
-              38:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 35(DebugSource) 2 39
-              40:      8(int) Constant 2
-              36:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 1(DebugCompilationUnit) 37 21 38 40
-              32:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 31 27 33 35 13 36 31 14 35
-              41:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 42 22 33 35 13 32 21 37
-              44:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 31(DebugExpression)
-              51:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 50 27 38 12 13 36 50 14 12
-              52:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 53 22 38 12 13 51 21 37
-              59:      8(int) Constant 10
-              58:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 57 7 38 59 13 36 57 14 59
-              63:      8(int) Constant 9
-              80:             TypePointer Output 20(fvec4)
-              81:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 22 14 13
-   82(headerOut):     80(ptr) Variable Output
-              85:      8(int) Constant 11
-              83:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 84 22 38 85 13 36 84 82(headerOut) 35
-         86(UBO):             TypeStruct 20(fvec4)
-              89:      8(int) Constant 5
-              87:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 88 22 38 89 24 13 13 14
-              90:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 91 37 38 85 13 36 91 13 14 87
-              92:             TypePointer Uniform 86(UBO)
-              93:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 90 40 13
-              94:     92(ptr) Variable Uniform
-              95:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 96 90 38 85 13 36 96 94 35
-              97:             TypeInt 32 1
-              99:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 98 11 21 13
-             100:     97(int) Constant 0
-             102:             TypePointer Uniform 20(fvec4)
-             103:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 22 40 13
-             111:      8(int) Constant 12
-        15(main):           5 Function None 6
-              16:             Label
-      101(param):     23(ptr) Variable Function
-      108(param):     23(ptr) Variable Function
-              78:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 58
-              79:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 38 59 59 13 13
-              77:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 58 15(main)
-             105:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 38 85 85 13 13
-             104:    102(ptr) AccessChain 94 100
-             106:   20(fvec4) Load 104
-                              Store 101(param) 106
-             107:   20(fvec4) FunctionCall 48(mainFileFunction(vf4;) 101(param)
-                              Store 108(param) 107
-             109:   20(fvec4) FunctionCall 29(headerFunction(vf4;) 108(param)
-                              Store 82(headerOut) 109
-             110:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 38 111 111 13 13
+                              Name 54_1  "main"
+                              Name 54_2  "headerFunction(vf4;"
+                              Name 55_1  "a"
+                              Name 54_3  "mainFileFunction(vf4;"
+                              Name 55_2  "v"
+                              Name 59_1  "headerOut"
+                              Name 30_1  "UBO"
+                              MemberName 30_1(UBO) 0  "headerUboItem"
+                              Name 59_2  ""
+                              Name 59_3  "param"
+                              Name 59_4  "param"
+                              Decorate 59_1(headerOut) Location 0
+                              Decorate 30_1(UBO) Block
+                              MemberDecorate 30_1(UBO) 0 Offset 0
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+        uint(32):   21_1(int) Constant 32
+         uint(6):   21_1(int) Constant 6
+         uint(0):   21_1(int) Constant 0
+           1-2_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_3 uint(32) uint(6) uint(0)
+         uint(3):   21_1(int) Constant 3
+           1-8_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 8(DebugTypeFunction) uint(3) 19_1
+            22_1:             TypeFloat 32
+           1-2_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_4 uint(32) uint(3) uint(0)
+            23_1:             TypeVector 22_1(float) 4
+         uint(4):   21_1(int) Constant 4
+           1-6_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 1-2_2 uint(4)
+            32_1:             TypePointer Function 23_1(fvec4)
+         uint(7):   21_1(int) Constant 7
+           1-3_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-6_1 uint(7) uint(0)
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+           1-8_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 8(DebugTypeFunction) uint(3) 1-6_1 1-6_1
+          1-35_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 35(DebugSource) 7_2 7_6
+         uint(8):   21_1(int) Constant 8
+         uint(1):   21_1(int) Constant 1
+          1-35_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 35(DebugSource) 7_1 7_7
+         uint(2):   21_1(int) Constant 2
+           1-1_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 1(DebugCompilationUnit) uint(1) uint(4) 1-35_2 uint(2)
+          1-20_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 7_5 1-8_2 1-35_1 uint(8) uint(0) 1-1_1 7_5 uint(3) uint(8)
+          1-26_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_8 1-6_1 1-35_1 uint(8) uint(0) 1-20_1 uint(4) uint(1)
+          1-31_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 31(DebugExpression)
+          1-20_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 7_9 1-8_2 1-35_2 uint(6) uint(0) 1-1_1 7_9 uint(3) uint(6)
+          1-26_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_10 1-6_1 1-35_2 uint(6) uint(0) 1-20_2 uint(4) uint(1)
+        uint(10):   21_1(int) Constant 10
+          1-20_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 7_11 1-8_1 1-35_2 uint(10) uint(0) 1-1_1 7_11 uint(3) uint(10)
+         uint(9):   21_1(int) Constant 9
+            32_2:             TypePointer Output 23_1(fvec4)
+           1-3_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-6_1 uint(3) uint(0)
+ 59_1(headerOut):   32_2(ptr) Variable Output
+        uint(11):   21_1(int) Constant 11
+          1-18_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 7_12 1-6_1 1-35_2 uint(11) uint(0) 1-1_1 7_12 59_1(headerOut) uint(8)
+       30_1(UBO):             TypeStruct 23_1(fvec4)
+         uint(5):   21_1(int) Constant 5
+          1-11_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_13 1-6_1 1-35_2 uint(5) uint(7) uint(0) uint(0) uint(3)
+          1-10_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 7_14 uint(1) 1-35_2 uint(11) uint(0) 1-1_1 7_14 uint(0) uint(3) 1-11_1
+            32_3:             TypePointer Uniform 30_1(UBO)
+           1-3_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-10_1 uint(2) uint(0)
+            59_2:   32_3(ptr) Variable Uniform
+          1-18_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 7_15 1-10_1 1-35_2 uint(11) uint(0) 1-1_1 7_15 59_2 uint(8)
+            21_2:             TypeInt 32 1
+           1-2_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_16 uint(32) uint(4) uint(0)
+            43_1:   21_2(int) Constant 0
+            32_4:             TypePointer Uniform 23_1(fvec4)
+           1-3_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-6_1 uint(2) uint(0)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(param):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+          1-23_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 1-20_3
+         1-103_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_2 uint(10) uint(10) uint(0) uint(0)
+         1-101_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 1-20_3 54_1(main)
+         1-103_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_2 uint(11) uint(11) uint(0) uint(0)
+            65_1:   32_4(ptr) AccessChain 59_2 43_1
+            61_1: 23_1(fvec4) Load 65_1
+                              Store 59_3(param) 61_1
+            57_1: 23_1(fvec4) FunctionCall 54_3(mainFileFunction(vf4;) 59_3(param)
+                              Store 59_4(param) 57_1
+            57_2: 23_1(fvec4) FunctionCall 54_2(headerFunction(vf4;) 59_4(param)
+                              Store 59_1(headerOut) 57_2
                               Return
                               FunctionEnd
-29(headerFunction(vf4;):   20(fvec4) Function None 26
-           28(a):     23(ptr) FunctionParameter
-              30:             Label
-              45:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 32
-              46:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 33 35 35 13 13
-              43:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 41 28(a) 44
-              60:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 32 29(headerFunction(vf4;)
-              62:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 33 63 63 13 13
-              61:   20(fvec4) Load 28(a)
-              64:   20(fvec4) FNegate 61
-                              ReturnValue 64
+54_2(headerFunction(vf4;): 23_1(fvec4) Function None 33_2
+         55_1(a):   32_1(ptr) FunctionParameter
+           248_2:             Label
+          1-23_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 1-20_1
+         1-103_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(8) uint(8) uint(0) uint(0)
+          1-28_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_1 55_1(a) 1-31_1
+         1-101_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 1-20_1 54_2(headerFunction(vf4;)
+         1-103_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(9) uint(9) uint(0) uint(0)
+            61_2: 23_1(fvec4) Load 55_1(a)
+           127_1: 23_1(fvec4) FNegate 61_2
+                              ReturnValue 127_1
                               FunctionEnd
-48(mainFileFunction(vf4;):   20(fvec4) Function None 26
-           47(v):     23(ptr) FunctionParameter
-              49:             Label
-              55:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 51
-              56:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 38 12 12 13 13
-              54:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 52 47(v) 44
-              69:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 51 48(mainFileFunction(vf4;)
-              71:           5 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 38 24 24 13 13
-              70:   20(fvec4) Load 47(v)
-              72:   20(fvec4) FNegate 70
-                              ReturnValue 72
+54_3(mainFileFunction(vf4;): 23_1(fvec4) Function None 33_2
+         55_2(v):   32_1(ptr) FunctionParameter
+           248_3:             Label
+          1-23_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 1-20_2
+         1-103_5:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_2 uint(6) uint(6) uint(0) uint(0)
+          1-28_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_2 55_2(v) 1-31_1
+         1-101_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 1-20_2 54_3(mainFileFunction(vf4;)
+         1-103_6:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_2 uint(7) uint(7) uint(0) uint(0)
+            61_3: 23_1(fvec4) Load 55_2(v)
+           127_2: 23_1(fvec4) FNegate 61_3
+                              ReturnValue 127_2
                               FunctionEnd

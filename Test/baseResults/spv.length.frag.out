@@ -4,50 +4,50 @@ spv.length.frag
 // Id's are bound by 33
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 14 26
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 9  "t"
-                              Name 14  "v"
-                              Name 26  "gl_FragColor"
-                              Name 32  "u"
-                              Decorate 14(v) Location 0
-                              Decorate 26(gl_FragColor) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypePointer Function 7(fvec2)
-              10:             TypeInt 32 0
-              11:     10(int) Constant 2
-              12:             TypeArray 7(fvec2) 11
-              13:             TypePointer Input 12
-           14(v):     13(ptr) Variable Input
-              15:             TypeInt 32 1
-              16:     15(int) Constant 0
-              17:             TypePointer Input 7(fvec2)
-              20:     15(int) Constant 1
-              24:             TypeVector 6(float) 4
-              25:             TypePointer Output 24(fvec4)
-26(gl_FragColor):     25(ptr) Variable Output
-              27:    6(float) Constant 1106247680
-              28:   24(fvec4) ConstantComposite 27 27 27 27
-              29:     10(int) Constant 3
-              30:             TypeArray 24(fvec4) 29
-              31:             TypePointer Private 30
-           32(u):     31(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-            9(t):      8(ptr) Variable Function
-              18:     17(ptr) AccessChain 14(v) 16
-              19:    7(fvec2) Load 18
-              21:     17(ptr) AccessChain 14(v) 20
-              22:    7(fvec2) Load 21
-              23:    7(fvec2) FAdd 19 22
-                              Store 9(t) 23
-                              Store 26(gl_FragColor) 28
+                              Name 54_1  "main"
+                              Name 59_4  "t"
+                              Name 59_1  "v"
+                              Name 59_2  "gl_FragColor"
+                              Name 59_3  "u"
+                              Decorate 59_1(v) Location 0
+                              Decorate 59_2(gl_FragColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            32_1:             TypePointer Function 23_1(fvec2)
+            21_1:             TypeInt 32 0
+         uint(2):   21_1(int) Constant 2
+            28_1:             TypeArray 23_1(fvec2) uint(2)
+            32_2:             TypePointer Input 28_1
+         59_1(v):   32_2(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_3:             TypePointer Input 23_1(fvec2)
+            43_2:   21_2(int) Constant 1
+            23_2:             TypeVector 22_1(float) 4
+            32_4:             TypePointer Output 23_2(fvec4)
+59_2(gl_FragColor):   32_4(ptr) Variable Output
+            43_3: 22_1(float) Constant 1106247680
+            44_1: 23_2(fvec4) ConstantComposite 43_3 43_3 43_3 43_3
+         uint(3):   21_1(int) Constant 3
+            28_2:             TypeArray 23_2(fvec4) uint(3)
+            32_5:             TypePointer Private 28_2
+         59_3(u):   32_5(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_4(t):   32_1(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(v) 43_1
+            61_1: 23_1(fvec2) Load 65_1
+            65_2:   32_3(ptr) AccessChain 59_1(v) 43_2
+            61_2: 23_1(fvec2) Load 65_2
+           129_1: 23_1(fvec2) FAdd 61_1 61_2
+                              Store 59_4(t) 129_1
+                              Store 59_2(gl_FragColor) 44_1
                               Return
                               FunctionEnd

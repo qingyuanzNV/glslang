@@ -8,36 +8,36 @@ spv.intrinsicsSpirvType.rgen
                               Capability RayTracingKHR
                               Extension  "SPV_KHR_ray_query"
                               Extension  "SPV_KHR_ray_tracing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint RayGenerationKHR 4  "main"
+                              EntryPoint RayGenerationKHR 54_1  "main"
                               Source GLSL 460
                               SourceExtension  "GL_EXT_spirv_intrinsics"
-                              Name 4  "main"
-                              Name 8  "rq"
-                              Name 11  "as"
-                              Decorate 11(as) Binding 0
-                              Decorate 11(as) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeRayQueryKHR
-               7:             TypePointer Function 6
-               9:             TypeAccelerationStructureKHR
-              10:             TypePointer UniformConstant 9
-          11(as):     10(ptr) Variable UniformConstant
-              13:             TypeInt 32 0
-              14:     13(int) Constant 0
-              15:             TypeFloat 32
-              16:             TypeVector 15(float) 3
-              17:   15(float) Constant 0
-              18:   16(fvec3) ConstantComposite 17 17 17
-              19:   15(float) Constant 1065353216
-              20:   16(fvec3) ConstantComposite 19 19 19
-         4(main):           2 Function None 3
-               5:             Label
-           8(rq):      7(ptr) Variable Function
-              12:           9 Load 11(as)
-                              RayQueryInitializeKHR 8(rq) 12 14 14 18 17 20 19
-                              RayQueryTerminateKHR 8(rq)
+                              Name 54_1  "main"
+                              Name 59_2  "rq"
+                              Name 59_1  "as"
+                              Decorate 59_1(as) Binding 0
+                              Decorate 59_1(as) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+          4472_1:             TypeRayQueryKHR
+            32_1:             TypePointer Function 4472_1
+          5341_1:             TypeAccelerationStructureKHR
+            32_2:             TypePointer UniformConstant 5341_1
+        59_1(as):   32_2(ptr) Variable UniformConstant
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec3) ConstantComposite 43_1 43_1 43_1
+            43_2: 22_1(float) Constant 1065353216
+            44_2: 23_1(fvec3) ConstantComposite 43_2 43_2 43_2
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_2(rq):   32_1(ptr) Variable Function
+            61_1:      5341_1 Load 59_1(as)
+                              RayQueryInitializeKHR 59_2(rq) 61_1 uint(0) uint(0) 44_1 43_1 44_2 43_2
+                              RayQueryTerminateKHR 59_2(rq)
                               Return
                               FunctionEnd

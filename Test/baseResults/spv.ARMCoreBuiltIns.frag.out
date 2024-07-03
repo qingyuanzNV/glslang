@@ -6,56 +6,56 @@ spv.ARMCoreBuiltIns.frag
                               Capability Shader
                               Capability CoreBuiltinsARM
                               Extension  "SPV_ARM_core_builtins"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 10 14 15 17 19 21
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_ARM_shader_core_builtins"
-                              Name 4  "main"
-                              Name 8  "temp"
-                              Name 10  "gl_WarpMaxIDARM"
-                              Name 14  "data"
-                              Name 15  "gl_CoreIDARM"
-                              Name 17  "gl_CoreCountARM"
-                              Name 19  "gl_CoreMaxIDARM"
-                              Name 21  "gl_WarpIDARM"
-                              Decorate 10(gl_WarpMaxIDARM) BuiltIn BuiltInWarpMaxIDARM
-                              Decorate 10(gl_WarpMaxIDARM) Flat
-                              Decorate 14(data) Location 0
-                              Decorate 15(gl_CoreIDARM) BuiltIn CoreIDARM
-                              Decorate 15(gl_CoreIDARM) Flat
-                              Decorate 17(gl_CoreCountARM) BuiltIn CoreCountARM
-                              Decorate 17(gl_CoreCountARM) Flat
-                              Decorate 19(gl_CoreMaxIDARM) BuiltIn CoreMaxIDARM
-                              Decorate 19(gl_CoreMaxIDARM) Flat
-                              Decorate 21(gl_WarpIDARM) BuiltIn WarpIDARM
-                              Decorate 21(gl_WarpIDARM) Flat
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               9:             TypePointer Input 6(int)
-10(gl_WarpMaxIDARM):      9(ptr) Variable Input
-              12:             TypeVector 6(int) 4
-              13:             TypePointer Output 12(ivec4)
-        14(data):     13(ptr) Variable Output
-15(gl_CoreIDARM):      9(ptr) Variable Input
-17(gl_CoreCountARM):      9(ptr) Variable Input
-19(gl_CoreMaxIDARM):      9(ptr) Variable Input
-21(gl_WarpIDARM):      9(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-         8(temp):      7(ptr) Variable Function
-              11:      6(int) Load 10(gl_WarpMaxIDARM)
-                              Store 8(temp) 11
-              16:      6(int) Load 15(gl_CoreIDARM)
-              18:      6(int) Load 17(gl_CoreCountARM)
-              20:      6(int) Load 19(gl_CoreMaxIDARM)
-              22:      6(int) Load 21(gl_WarpIDARM)
-              23:      6(int) Load 8(temp)
-              24:      6(int) IAdd 22 23
-              25:   12(ivec4) CompositeConstruct 16 18 20 24
-                              Store 14(data) 25
+                              Name 54_1  "main"
+                              Name 59_7  "temp"
+                              Name 59_1  "gl_WarpMaxIDARM"
+                              Name 59_2  "data"
+                              Name 59_3  "gl_CoreIDARM"
+                              Name 59_4  "gl_CoreCountARM"
+                              Name 59_5  "gl_CoreMaxIDARM"
+                              Name 59_6  "gl_WarpIDARM"
+                              Decorate 59_1(gl_WarpMaxIDARM) BuiltIn BuiltInWarpMaxIDARM
+                              Decorate 59_1(gl_WarpMaxIDARM) Flat
+                              Decorate 59_2(data) Location 0
+                              Decorate 59_3(gl_CoreIDARM) BuiltIn CoreIDARM
+                              Decorate 59_3(gl_CoreIDARM) Flat
+                              Decorate 59_4(gl_CoreCountARM) BuiltIn CoreCountARM
+                              Decorate 59_4(gl_CoreCountARM) Flat
+                              Decorate 59_5(gl_CoreMaxIDARM) BuiltIn CoreMaxIDARM
+                              Decorate 59_5(gl_CoreMaxIDARM) Flat
+                              Decorate 59_6(gl_WarpIDARM) BuiltIn WarpIDARM
+                              Decorate 59_6(gl_WarpIDARM) Flat
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            32_2:             TypePointer Input 21_1(int)
+59_1(gl_WarpMaxIDARM):   32_2(ptr) Variable Input
+            23_1:             TypeVector 21_1(int) 4
+            32_3:             TypePointer Output 23_1(ivec4)
+      59_2(data):   32_3(ptr) Variable Output
+59_3(gl_CoreIDARM):   32_2(ptr) Variable Input
+59_4(gl_CoreCountARM):   32_2(ptr) Variable Input
+59_5(gl_CoreMaxIDARM):   32_2(ptr) Variable Input
+59_6(gl_WarpIDARM):   32_2(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+      59_7(temp):   32_1(ptr) Variable Function
+            61_1:   21_1(int) Load 59_1(gl_WarpMaxIDARM)
+                              Store 59_7(temp) 61_1
+            61_2:   21_1(int) Load 59_3(gl_CoreIDARM)
+            61_3:   21_1(int) Load 59_4(gl_CoreCountARM)
+            61_4:   21_1(int) Load 59_5(gl_CoreMaxIDARM)
+            61_5:   21_1(int) Load 59_6(gl_WarpIDARM)
+            61_6:   21_1(int) Load 59_7(temp)
+           128_1:   21_1(int) IAdd 61_5 61_6
+            80_1: 23_1(ivec4) CompositeConstruct 61_2 61_3 61_4 128_1
+                              Store 59_2(data) 80_1
                               Return
                               FunctionEnd

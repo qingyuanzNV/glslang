@@ -9,399 +9,399 @@ WARNING: 0:12: varying deprecated in version 130; may be removed in future relea
 
                               Capability Shader
                               Capability Sampled1D
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 47 291 294 297 303 304
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2 59_8 59_9 59_10 59_11 59_12
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 8  "blendscale"
-                              Name 10  "bias"
-                              Name 12  "lod"
-                              Name 14  "proj"
-                              Name 15  "coords1D"
-                              Name 18  "coords3D"
-                              Name 24  "coords4D"
-                              Name 26  "color"
-                              Name 32  "texSampler1D"
-                              Name 47  "coords2D"
-                              Name 76  "texSampler2D"
-                              Name 104  "texSampler3D"
-                              Name 130  "texSamplerCube"
-                              Name 145  "shadowSampler1D"
-                              Name 164  "shadowSampler2D"
-                              Name 221  "iCoords2D"
-                              Name 226  "iLod"
-                              Name 236  "gradX"
-                              Name 239  "gradY"
-                              Name 291  "gl_FragColor"
-                              Name 294  "u"
-                              Name 297  "blend"
-                              Name 303  "scale"
-                              Name 304  "t"
-                              Decorate 32(texSampler1D) Binding 0
-                              Decorate 32(texSampler1D) DescriptorSet 0
-                              Decorate 47(coords2D) Location 4
-                              Decorate 76(texSampler2D) Binding 1
-                              Decorate 76(texSampler2D) DescriptorSet 0
-                              Decorate 104(texSampler3D) Binding 2
-                              Decorate 104(texSampler3D) DescriptorSet 0
-                              Decorate 130(texSamplerCube) Binding 3
-                              Decorate 130(texSamplerCube) DescriptorSet 0
-                              Decorate 145(shadowSampler1D) Binding 4
-                              Decorate 145(shadowSampler1D) DescriptorSet 0
-                              Decorate 164(shadowSampler2D) Binding 5
-                              Decorate 164(shadowSampler2D) DescriptorSet 0
-                              Decorate 291(gl_FragColor) Location 0
-                              Decorate 294(u) Location 2
-                              Decorate 297(blend) Location 0
-                              Decorate 303(scale) Location 1
-                              Decorate 304(t) Location 3
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               9:    6(float) Constant 1071971828
-              11:    6(float) Constant 1073741824
-              13:    6(float) Constant 1077936128
-              16:             TypeVector 6(float) 3
-              17:             TypePointer Function 16(fvec3)
-              19:    6(float) Constant 1076753334
-              20:    6(float) Constant 1079836148
-              21:   16(fvec3) ConstantComposite 9 19 20
-              22:             TypeVector 6(float) 4
-              23:             TypePointer Function 22(fvec4)
-              25:   22(fvec4) ConstantComposite 9 19 20 11
-              27:    6(float) Constant 0
-              28:   22(fvec4) ConstantComposite 27 27 27 27
-              29:             TypeImage 6(float) 1D sampled format:Unknown
-              30:             TypeSampledImage 29
-              31:             TypePointer UniformConstant 30
-32(texSampler1D):     31(ptr) Variable UniformConstant
-              45:             TypeVector 6(float) 2
-              46:             TypePointer Input 45(fvec2)
-    47(coords2D):     46(ptr) Variable Input
-              73:             TypeImage 6(float) 2D sampled format:Unknown
-              74:             TypeSampledImage 73
-              75:             TypePointer UniformConstant 74
-76(texSampler2D):     75(ptr) Variable UniformConstant
-             101:             TypeImage 6(float) 3D sampled format:Unknown
-             102:             TypeSampledImage 101
-             103:             TypePointer UniformConstant 102
-104(texSampler3D):    103(ptr) Variable UniformConstant
-             127:             TypeImage 6(float) Cube sampled format:Unknown
-             128:             TypeSampledImage 127
-             129:             TypePointer UniformConstant 128
-130(texSamplerCube):    129(ptr) Variable UniformConstant
-             142:             TypeImage 6(float) 1D depth sampled format:Unknown
-             143:             TypeSampledImage 142
-             144:             TypePointer UniformConstant 143
-145(shadowSampler1D):    144(ptr) Variable UniformConstant
-             161:             TypeImage 6(float) 2D depth sampled format:Unknown
-             162:             TypeSampledImage 161
-             163:             TypePointer UniformConstant 162
-164(shadowSampler2D):    163(ptr) Variable UniformConstant
-             218:             TypeInt 32 1
-             219:             TypeVector 218(int) 2
-             220:             TypePointer Function 219(ivec2)
-             222:    218(int) Constant 0
-             223:    218(int) Constant 5
-             224:  219(ivec2) ConstantComposite 222 223
-             225:             TypePointer Function 218(int)
-             227:    218(int) Constant 1
-             235:             TypePointer Function 45(fvec2)
-             264:    218(int) Constant 3
-             265:    218(int) Constant 4294967289
-             266:  219(ivec2) ConstantComposite 264 265
-             290:             TypePointer Output 22(fvec4)
-291(gl_FragColor):    290(ptr) Variable Output
-             293:             TypePointer Input 22(fvec4)
-          294(u):    293(ptr) Variable Input
-             296:             TypePointer Input 6(float)
-      297(blend):    296(ptr) Variable Input
-      303(scale):     46(ptr) Variable Input
-          304(t):     46(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-   8(blendscale):      7(ptr) Variable Function
-        10(bias):      7(ptr) Variable Function
-         12(lod):      7(ptr) Variable Function
-        14(proj):      7(ptr) Variable Function
-    15(coords1D):      7(ptr) Variable Function
-    18(coords3D):     17(ptr) Variable Function
-    24(coords4D):     23(ptr) Variable Function
-       26(color):     23(ptr) Variable Function
-  221(iCoords2D):    220(ptr) Variable Function
-       226(iLod):    225(ptr) Variable Function
-      236(gradX):    235(ptr) Variable Function
-      239(gradY):    235(ptr) Variable Function
-                              Store 8(blendscale) 9
-                              Store 10(bias) 11
-                              Store 12(lod) 13
-                              Store 14(proj) 11
-                              Store 15(coords1D) 9
-                              Store 18(coords3D) 21
-                              Store 24(coords4D) 25
-                              Store 26(color) 28
-              33:          30 Load 32(texSampler1D)
-              34:    6(float) Load 15(coords1D)
-              35:   22(fvec4) ImageSampleImplicitLod 33 34
-              36:   22(fvec4) Load 26(color)
-              37:   22(fvec4) FAdd 36 35
-                              Store 26(color) 37
-              38:          30 Load 32(texSampler1D)
-              39:    6(float) Load 15(coords1D)
-              40:    6(float) Load 10(bias)
-              41:   22(fvec4) ImageSampleImplicitLod 38 39 Bias 40
-              42:   22(fvec4) Load 26(color)
-              43:   22(fvec4) FAdd 42 41
-                              Store 26(color) 43
-              44:          30 Load 32(texSampler1D)
-              48:   45(fvec2) Load 47(coords2D)
-              49:   22(fvec4) ImageSampleProjImplicitLod 44 48
-              50:   22(fvec4) Load 26(color)
-              51:   22(fvec4) FAdd 50 49
-                              Store 26(color) 51
-              52:          30 Load 32(texSampler1D)
-              53:   22(fvec4) Load 24(coords4D)
-              54:    6(float) CompositeExtract 53 3
-              55:   22(fvec4) CompositeInsert 54 53 1
-              56:   22(fvec4) ImageSampleProjImplicitLod 52 55
-              57:   22(fvec4) Load 26(color)
-              58:   22(fvec4) FAdd 57 56
-                              Store 26(color) 58
-              59:          30 Load 32(texSampler1D)
-              60:   45(fvec2) Load 47(coords2D)
-              61:    6(float) Load 10(bias)
-              62:   22(fvec4) ImageSampleProjImplicitLod 59 60 Bias 61
-              63:   22(fvec4) Load 26(color)
-              64:   22(fvec4) FAdd 63 62
-                              Store 26(color) 64
-              65:          30 Load 32(texSampler1D)
-              66:   22(fvec4) Load 24(coords4D)
-              67:    6(float) Load 10(bias)
-              68:    6(float) CompositeExtract 66 3
-              69:   22(fvec4) CompositeInsert 68 66 1
-              70:   22(fvec4) ImageSampleProjImplicitLod 65 69 Bias 67
-              71:   22(fvec4) Load 26(color)
-              72:   22(fvec4) FAdd 71 70
-                              Store 26(color) 72
-              77:          74 Load 76(texSampler2D)
-              78:   45(fvec2) Load 47(coords2D)
-              79:   22(fvec4) ImageSampleImplicitLod 77 78
-              80:   22(fvec4) Load 26(color)
-              81:   22(fvec4) FAdd 80 79
-                              Store 26(color) 81
-              82:          74 Load 76(texSampler2D)
-              83:   45(fvec2) Load 47(coords2D)
-              84:    6(float) Load 10(bias)
-              85:   22(fvec4) ImageSampleImplicitLod 82 83 Bias 84
-              86:   22(fvec4) Load 26(color)
-              87:   22(fvec4) FAdd 86 85
-                              Store 26(color) 87
-              88:          74 Load 76(texSampler2D)
-              89:   16(fvec3) Load 18(coords3D)
-              90:   22(fvec4) ImageSampleProjImplicitLod 88 89
-              91:   22(fvec4) Load 26(color)
-              92:   22(fvec4) FAdd 91 90
-                              Store 26(color) 92
-              93:          74 Load 76(texSampler2D)
-              94:   22(fvec4) Load 24(coords4D)
-              95:    6(float) Load 10(bias)
-              96:    6(float) CompositeExtract 94 3
-              97:   22(fvec4) CompositeInsert 96 94 2
-              98:   22(fvec4) ImageSampleProjImplicitLod 93 97 Bias 95
-              99:   22(fvec4) Load 26(color)
-             100:   22(fvec4) FAdd 99 98
-                              Store 26(color) 100
-             105:         102 Load 104(texSampler3D)
-             106:   16(fvec3) Load 18(coords3D)
-             107:   22(fvec4) ImageSampleImplicitLod 105 106
-             108:   22(fvec4) Load 26(color)
-             109:   22(fvec4) FAdd 108 107
-                              Store 26(color) 109
-             110:         102 Load 104(texSampler3D)
-             111:   16(fvec3) Load 18(coords3D)
-             112:    6(float) Load 10(bias)
-             113:   22(fvec4) ImageSampleImplicitLod 110 111 Bias 112
-             114:   22(fvec4) Load 26(color)
-             115:   22(fvec4) FAdd 114 113
-                              Store 26(color) 115
-             116:         102 Load 104(texSampler3D)
-             117:   22(fvec4) Load 24(coords4D)
-             118:   22(fvec4) ImageSampleProjImplicitLod 116 117
-             119:   22(fvec4) Load 26(color)
-             120:   22(fvec4) FAdd 119 118
-                              Store 26(color) 120
-             121:         102 Load 104(texSampler3D)
-             122:   22(fvec4) Load 24(coords4D)
-             123:    6(float) Load 10(bias)
-             124:   22(fvec4) ImageSampleProjImplicitLod 121 122 Bias 123
-             125:   22(fvec4) Load 26(color)
-             126:   22(fvec4) FAdd 125 124
-                              Store 26(color) 126
-             131:         128 Load 130(texSamplerCube)
-             132:   16(fvec3) Load 18(coords3D)
-             133:   22(fvec4) ImageSampleImplicitLod 131 132
-             134:   22(fvec4) Load 26(color)
-             135:   22(fvec4) FAdd 134 133
-                              Store 26(color) 135
-             136:         128 Load 130(texSamplerCube)
-             137:   16(fvec3) Load 18(coords3D)
-             138:    6(float) Load 10(bias)
-             139:   22(fvec4) ImageSampleImplicitLod 136 137 Bias 138
-             140:   22(fvec4) Load 26(color)
-             141:   22(fvec4) FAdd 140 139
-                              Store 26(color) 141
-             146:         143 Load 145(shadowSampler1D)
-             147:   16(fvec3) Load 18(coords3D)
-             148:    6(float) CompositeExtract 147 2
-             149:    6(float) ImageSampleDrefImplicitLod 146 147 148
-             150:   22(fvec4) Load 26(color)
-             151:   22(fvec4) CompositeConstruct 149 149 149 149
-             152:   22(fvec4) FAdd 150 151
-                              Store 26(color) 152
-             153:         143 Load 145(shadowSampler1D)
-             154:   16(fvec3) Load 18(coords3D)
-             155:    6(float) Load 10(bias)
-             156:    6(float) CompositeExtract 154 2
-             157:    6(float) ImageSampleDrefImplicitLod 153 154 156 Bias 155
-             158:   22(fvec4) Load 26(color)
-             159:   22(fvec4) CompositeConstruct 157 157 157 157
-             160:   22(fvec4) FAdd 158 159
-                              Store 26(color) 160
-             165:         162 Load 164(shadowSampler2D)
-             166:   16(fvec3) Load 18(coords3D)
-             167:    6(float) CompositeExtract 166 2
-             168:    6(float) ImageSampleDrefImplicitLod 165 166 167
-             169:   22(fvec4) Load 26(color)
-             170:   22(fvec4) CompositeConstruct 168 168 168 168
-             171:   22(fvec4) FAdd 169 170
-                              Store 26(color) 171
-             172:         162 Load 164(shadowSampler2D)
-             173:   16(fvec3) Load 18(coords3D)
-             174:    6(float) Load 10(bias)
-             175:    6(float) CompositeExtract 173 2
-             176:    6(float) ImageSampleDrefImplicitLod 172 173 175 Bias 174
-             177:   22(fvec4) Load 26(color)
-             178:   22(fvec4) CompositeConstruct 176 176 176 176
-             179:   22(fvec4) FAdd 177 178
-                              Store 26(color) 179
-             180:         143 Load 145(shadowSampler1D)
-             181:   22(fvec4) Load 24(coords4D)
-             182:    6(float) CompositeExtract 181 2
-             183:    6(float) CompositeExtract 181 3
-             184:   22(fvec4) CompositeInsert 183 181 1
-             185:    6(float) ImageSampleProjDrefImplicitLod 180 184 182
-             186:   22(fvec4) Load 26(color)
-             187:   22(fvec4) CompositeConstruct 185 185 185 185
-             188:   22(fvec4) FAdd 186 187
-                              Store 26(color) 188
-             189:         143 Load 145(shadowSampler1D)
-             190:   22(fvec4) Load 24(coords4D)
-             191:    6(float) Load 10(bias)
-             192:    6(float) CompositeExtract 190 2
-             193:    6(float) CompositeExtract 190 3
-             194:   22(fvec4) CompositeInsert 193 190 1
-             195:    6(float) ImageSampleProjDrefImplicitLod 189 194 192 Bias 191
-             196:   22(fvec4) Load 26(color)
-             197:   22(fvec4) CompositeConstruct 195 195 195 195
-             198:   22(fvec4) FAdd 196 197
-                              Store 26(color) 198
-             199:         162 Load 164(shadowSampler2D)
-             200:   22(fvec4) Load 24(coords4D)
-             201:    6(float) CompositeExtract 200 2
-             202:    6(float) CompositeExtract 200 3
-             203:   22(fvec4) CompositeInsert 202 200 2
-             204:    6(float) ImageSampleProjDrefImplicitLod 199 203 201
-             205:   22(fvec4) Load 26(color)
-             206:   22(fvec4) CompositeConstruct 204 204 204 204
-             207:   22(fvec4) FAdd 205 206
-                              Store 26(color) 207
-             208:         162 Load 164(shadowSampler2D)
-             209:   22(fvec4) Load 24(coords4D)
-             210:    6(float) Load 10(bias)
-             211:    6(float) CompositeExtract 209 2
-             212:    6(float) CompositeExtract 209 3
-             213:   22(fvec4) CompositeInsert 212 209 2
-             214:    6(float) ImageSampleProjDrefImplicitLod 208 213 211 Bias 210
-             215:   22(fvec4) Load 26(color)
-             216:   22(fvec4) CompositeConstruct 214 214 214 214
-             217:   22(fvec4) FAdd 215 216
-                              Store 26(color) 217
-                              Store 221(iCoords2D) 224
-                              Store 226(iLod) 227
-             228:          74 Load 76(texSampler2D)
-             229:  219(ivec2) Load 221(iCoords2D)
-             230:    218(int) Load 226(iLod)
-             231:          73 Image 228
-             232:   22(fvec4) ImageFetch 231 229 Lod 230
-             233:   22(fvec4) Load 26(color)
-             234:   22(fvec4) FAdd 233 232
-                              Store 26(color) 234
-             237:   45(fvec2) Load 47(coords2D)
-             238:   45(fvec2) DPdx 237
-                              Store 236(gradX) 238
-             240:   45(fvec2) Load 47(coords2D)
-             241:   45(fvec2) DPdy 240
-                              Store 239(gradY) 241
-             242:          74 Load 76(texSampler2D)
-             243:   45(fvec2) Load 47(coords2D)
-             244:   45(fvec2) Load 236(gradX)
-             245:   45(fvec2) Load 239(gradY)
-             246:   22(fvec4) ImageSampleExplicitLod 242 243 Grad 244 245
-             247:   22(fvec4) Load 26(color)
-             248:   22(fvec4) FAdd 247 246
-                              Store 26(color) 248
-             249:          74 Load 76(texSampler2D)
-             250:   45(fvec2) Load 47(coords2D)
-             251:    6(float) Load 14(proj)
-             252:    6(float) CompositeExtract 250 0
-             253:    6(float) CompositeExtract 250 1
-             254:   16(fvec3) CompositeConstruct 252 253 251
-             255:   45(fvec2) Load 236(gradX)
-             256:   45(fvec2) Load 239(gradY)
-             257:   22(fvec4) ImageSampleProjExplicitLod 249 254 Grad 255 256
-             258:   22(fvec4) Load 26(color)
-             259:   22(fvec4) FAdd 258 257
-                              Store 26(color) 259
-             260:          74 Load 76(texSampler2D)
-             261:   45(fvec2) Load 47(coords2D)
-             262:   45(fvec2) Load 236(gradX)
-             263:   45(fvec2) Load 239(gradY)
-             267:   22(fvec4) ImageSampleExplicitLod 260 261 Grad ConstOffset 262 263 266
-             268:   22(fvec4) Load 26(color)
-             269:   22(fvec4) FAdd 268 267
-                              Store 26(color) 269
-             270:          74 Load 76(texSampler2D)
-             271:   16(fvec3) Load 18(coords3D)
-             272:   45(fvec2) Load 236(gradX)
-             273:   45(fvec2) Load 239(gradY)
-             274:   22(fvec4) ImageSampleProjExplicitLod 270 271 Grad ConstOffset 272 273 266
-             275:   22(fvec4) Load 26(color)
-             276:   22(fvec4) FAdd 275 274
-                              Store 26(color) 276
-             277:         162 Load 164(shadowSampler2D)
-             278:   45(fvec2) Load 47(coords2D)
-             279:    6(float) Load 12(lod)
-             280:    6(float) CompositeExtract 278 0
-             281:    6(float) CompositeExtract 278 1
-             282:   16(fvec3) CompositeConstruct 280 281 279
-             283:   45(fvec2) Load 236(gradX)
-             284:   45(fvec2) Load 239(gradY)
-             285:    6(float) CompositeExtract 282 2
-             286:    6(float) ImageSampleDrefExplicitLod 277 282 285 Grad 283 284
-             287:   22(fvec4) Load 26(color)
-             288:   22(fvec4) CompositeConstruct 286 286 286 286
-             289:   22(fvec4) FAdd 287 288
-                              Store 26(color) 289
-             292:   22(fvec4) Load 26(color)
-             295:   22(fvec4) Load 294(u)
-             298:    6(float) Load 297(blend)
-             299:    6(float) Load 8(blendscale)
-             300:    6(float) FMul 298 299
-             301:   22(fvec4) CompositeConstruct 300 300 300 300
-             302:   22(fvec4) ExtInst 1(GLSL.std.450) 46(FMix) 292 295 301
-                              Store 291(gl_FragColor) 302
+                              Name 54_1  "main"
+                              Name 59_13  "blendscale"
+                              Name 59_14  "bias"
+                              Name 59_15  "lod"
+                              Name 59_16  "proj"
+                              Name 59_17  "coords1D"
+                              Name 59_18  "coords3D"
+                              Name 59_19  "coords4D"
+                              Name 59_20  "color"
+                              Name 59_1  "texSampler1D"
+                              Name 59_2  "coords2D"
+                              Name 59_3  "texSampler2D"
+                              Name 59_4  "texSampler3D"
+                              Name 59_5  "texSamplerCube"
+                              Name 59_6  "shadowSampler1D"
+                              Name 59_7  "shadowSampler2D"
+                              Name 59_21  "iCoords2D"
+                              Name 59_22  "iLod"
+                              Name 59_23  "gradX"
+                              Name 59_24  "gradY"
+                              Name 59_8  "gl_FragColor"
+                              Name 59_9  "u"
+                              Name 59_10  "blend"
+                              Name 59_11  "scale"
+                              Name 59_12  "t"
+                              Decorate 59_1(texSampler1D) Binding 0
+                              Decorate 59_1(texSampler1D) DescriptorSet 0
+                              Decorate 59_2(coords2D) Location 4
+                              Decorate 59_3(texSampler2D) Binding 1
+                              Decorate 59_3(texSampler2D) DescriptorSet 0
+                              Decorate 59_4(texSampler3D) Binding 2
+                              Decorate 59_4(texSampler3D) DescriptorSet 0
+                              Decorate 59_5(texSamplerCube) Binding 3
+                              Decorate 59_5(texSamplerCube) DescriptorSet 0
+                              Decorate 59_6(shadowSampler1D) Binding 4
+                              Decorate 59_6(shadowSampler1D) DescriptorSet 0
+                              Decorate 59_7(shadowSampler2D) Binding 5
+                              Decorate 59_7(shadowSampler2D) DescriptorSet 0
+                              Decorate 59_8(gl_FragColor) Location 0
+                              Decorate 59_9(u) Location 2
+                              Decorate 59_10(blend) Location 0
+                              Decorate 59_11(scale) Location 1
+                              Decorate 59_12(t) Location 3
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            43_1: 22_1(float) Constant 1071971828
+            43_2: 22_1(float) Constant 1073741824
+            43_3: 22_1(float) Constant 1077936128
+            23_1:             TypeVector 22_1(float) 3
+            32_2:             TypePointer Function 23_1(fvec3)
+            43_4: 22_1(float) Constant 1076753334
+            43_5: 22_1(float) Constant 1079836148
+            44_1: 23_1(fvec3) ConstantComposite 43_1 43_4 43_5
+            23_2:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Function 23_2(fvec4)
+            44_2: 23_2(fvec4) ConstantComposite 43_1 43_4 43_5 43_2
+            43_6: 22_1(float) Constant 0
+            44_3: 23_2(fvec4) ConstantComposite 43_6 43_6 43_6 43_6
+            25_1:             TypeImage 22_1(float) 1D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_4:             TypePointer UniformConstant 27_1
+59_1(texSampler1D):   32_4(ptr) Variable UniformConstant
+            23_3:             TypeVector 22_1(float) 2
+            32_5:             TypePointer Input 23_3(fvec2)
+  59_2(coords2D):   32_5(ptr) Variable Input
+            25_2:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_2:             TypeSampledImage 25_2
+            32_6:             TypePointer UniformConstant 27_2
+59_3(texSampler2D):   32_6(ptr) Variable UniformConstant
+            25_3:             TypeImage 22_1(float) 3D sampled format:Unknown
+            27_3:             TypeSampledImage 25_3
+            32_7:             TypePointer UniformConstant 27_3
+59_4(texSampler3D):   32_7(ptr) Variable UniformConstant
+            25_4:             TypeImage 22_1(float) Cube sampled format:Unknown
+            27_4:             TypeSampledImage 25_4
+            32_8:             TypePointer UniformConstant 27_4
+59_5(texSamplerCube):   32_8(ptr) Variable UniformConstant
+            25_5:             TypeImage 22_1(float) 1D depth sampled format:Unknown
+            27_5:             TypeSampledImage 25_5
+            32_9:             TypePointer UniformConstant 27_5
+59_6(shadowSampler1D):   32_9(ptr) Variable UniformConstant
+            25_6:             TypeImage 22_1(float) 2D depth sampled format:Unknown
+            27_6:             TypeSampledImage 25_6
+           32_10:             TypePointer UniformConstant 27_6
+59_7(shadowSampler2D):  32_10(ptr) Variable UniformConstant
+            21_1:             TypeInt 32 1
+            23_4:             TypeVector 21_1(int) 2
+           32_11:             TypePointer Function 23_4(ivec2)
+            43_7:   21_1(int) Constant 0
+            43_8:   21_1(int) Constant 5
+            44_4: 23_4(ivec2) ConstantComposite 43_7 43_8
+           32_12:             TypePointer Function 21_1(int)
+            43_9:   21_1(int) Constant 1
+           32_13:             TypePointer Function 23_3(fvec2)
+           43_10:   21_1(int) Constant 3
+           43_11:   21_1(int) Constant 4294967289
+            44_5: 23_4(ivec2) ConstantComposite 43_10 43_11
+           32_14:             TypePointer Output 23_2(fvec4)
+59_8(gl_FragColor):  32_14(ptr) Variable Output
+           32_15:             TypePointer Input 23_2(fvec4)
+         59_9(u):  32_15(ptr) Variable Input
+           32_16:             TypePointer Input 22_1(float)
+    59_10(blend):  32_16(ptr) Variable Input
+    59_11(scale):   32_5(ptr) Variable Input
+        59_12(t):   32_5(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_13(blendscale):   32_1(ptr) Variable Function
+     59_14(bias):   32_1(ptr) Variable Function
+      59_15(lod):   32_1(ptr) Variable Function
+     59_16(proj):   32_1(ptr) Variable Function
+ 59_17(coords1D):   32_1(ptr) Variable Function
+ 59_18(coords3D):   32_2(ptr) Variable Function
+ 59_19(coords4D):   32_3(ptr) Variable Function
+    59_20(color):   32_3(ptr) Variable Function
+59_21(iCoords2D):  32_11(ptr) Variable Function
+     59_22(iLod):  32_12(ptr) Variable Function
+    59_23(gradX):  32_13(ptr) Variable Function
+    59_24(gradY):  32_13(ptr) Variable Function
+                              Store 59_13(blendscale) 43_1
+                              Store 59_14(bias) 43_2
+                              Store 59_15(lod) 43_3
+                              Store 59_16(proj) 43_2
+                              Store 59_17(coords1D) 43_1
+                              Store 59_18(coords3D) 44_1
+                              Store 59_19(coords4D) 44_2
+                              Store 59_20(color) 44_3
+            61_1:        27_1 Load 59_1(texSampler1D)
+            61_2: 22_1(float) Load 59_17(coords1D)
+            87_1: 23_2(fvec4) ImageSampleImplicitLod 61_1 61_2
+            61_3: 23_2(fvec4) Load 59_20(color)
+           129_1: 23_2(fvec4) FAdd 61_3 87_1
+                              Store 59_20(color) 129_1
+            61_4:        27_1 Load 59_1(texSampler1D)
+            61_5: 22_1(float) Load 59_17(coords1D)
+            61_6: 22_1(float) Load 59_14(bias)
+            87_2: 23_2(fvec4) ImageSampleImplicitLod 61_4 61_5 Bias 61_6
+            61_7: 23_2(fvec4) Load 59_20(color)
+           129_2: 23_2(fvec4) FAdd 61_7 87_2
+                              Store 59_20(color) 129_2
+            61_8:        27_1 Load 59_1(texSampler1D)
+            61_9: 23_3(fvec2) Load 59_2(coords2D)
+            91_1: 23_2(fvec4) ImageSampleProjImplicitLod 61_8 61_9
+           61_10: 23_2(fvec4) Load 59_20(color)
+           129_3: 23_2(fvec4) FAdd 61_10 91_1
+                              Store 59_20(color) 129_3
+           61_11:        27_1 Load 59_1(texSampler1D)
+           61_12: 23_2(fvec4) Load 59_19(coords4D)
+            81_1: 22_1(float) CompositeExtract 61_12 3
+            82_1: 23_2(fvec4) CompositeInsert 81_1 61_12 1
+            91_2: 23_2(fvec4) ImageSampleProjImplicitLod 61_11 82_1
+           61_13: 23_2(fvec4) Load 59_20(color)
+           129_4: 23_2(fvec4) FAdd 61_13 91_2
+                              Store 59_20(color) 129_4
+           61_14:        27_1 Load 59_1(texSampler1D)
+           61_15: 23_3(fvec2) Load 59_2(coords2D)
+           61_16: 22_1(float) Load 59_14(bias)
+            91_3: 23_2(fvec4) ImageSampleProjImplicitLod 61_14 61_15 Bias 61_16
+           61_17: 23_2(fvec4) Load 59_20(color)
+           129_5: 23_2(fvec4) FAdd 61_17 91_3
+                              Store 59_20(color) 129_5
+           61_18:        27_1 Load 59_1(texSampler1D)
+           61_19: 23_2(fvec4) Load 59_19(coords4D)
+           61_20: 22_1(float) Load 59_14(bias)
+            81_2: 22_1(float) CompositeExtract 61_19 3
+            82_2: 23_2(fvec4) CompositeInsert 81_2 61_19 1
+            91_4: 23_2(fvec4) ImageSampleProjImplicitLod 61_18 82_2 Bias 61_20
+           61_21: 23_2(fvec4) Load 59_20(color)
+           129_6: 23_2(fvec4) FAdd 61_21 91_4
+                              Store 59_20(color) 129_6
+           61_22:        27_2 Load 59_3(texSampler2D)
+           61_23: 23_3(fvec2) Load 59_2(coords2D)
+            87_3: 23_2(fvec4) ImageSampleImplicitLod 61_22 61_23
+           61_24: 23_2(fvec4) Load 59_20(color)
+           129_7: 23_2(fvec4) FAdd 61_24 87_3
+                              Store 59_20(color) 129_7
+           61_25:        27_2 Load 59_3(texSampler2D)
+           61_26: 23_3(fvec2) Load 59_2(coords2D)
+           61_27: 22_1(float) Load 59_14(bias)
+            87_4: 23_2(fvec4) ImageSampleImplicitLod 61_25 61_26 Bias 61_27
+           61_28: 23_2(fvec4) Load 59_20(color)
+           129_8: 23_2(fvec4) FAdd 61_28 87_4
+                              Store 59_20(color) 129_8
+           61_29:        27_2 Load 59_3(texSampler2D)
+           61_30: 23_1(fvec3) Load 59_18(coords3D)
+            91_5: 23_2(fvec4) ImageSampleProjImplicitLod 61_29 61_30
+           61_31: 23_2(fvec4) Load 59_20(color)
+           129_9: 23_2(fvec4) FAdd 61_31 91_5
+                              Store 59_20(color) 129_9
+           61_32:        27_2 Load 59_3(texSampler2D)
+           61_33: 23_2(fvec4) Load 59_19(coords4D)
+           61_34: 22_1(float) Load 59_14(bias)
+            81_3: 22_1(float) CompositeExtract 61_33 3
+            82_3: 23_2(fvec4) CompositeInsert 81_3 61_33 2
+            91_6: 23_2(fvec4) ImageSampleProjImplicitLod 61_32 82_3 Bias 61_34
+           61_35: 23_2(fvec4) Load 59_20(color)
+          129_10: 23_2(fvec4) FAdd 61_35 91_6
+                              Store 59_20(color) 129_10
+           61_36:        27_3 Load 59_4(texSampler3D)
+           61_37: 23_1(fvec3) Load 59_18(coords3D)
+            87_5: 23_2(fvec4) ImageSampleImplicitLod 61_36 61_37
+           61_38: 23_2(fvec4) Load 59_20(color)
+          129_11: 23_2(fvec4) FAdd 61_38 87_5
+                              Store 59_20(color) 129_11
+           61_39:        27_3 Load 59_4(texSampler3D)
+           61_40: 23_1(fvec3) Load 59_18(coords3D)
+           61_41: 22_1(float) Load 59_14(bias)
+            87_6: 23_2(fvec4) ImageSampleImplicitLod 61_39 61_40 Bias 61_41
+           61_42: 23_2(fvec4) Load 59_20(color)
+          129_12: 23_2(fvec4) FAdd 61_42 87_6
+                              Store 59_20(color) 129_12
+           61_43:        27_3 Load 59_4(texSampler3D)
+           61_44: 23_2(fvec4) Load 59_19(coords4D)
+            91_7: 23_2(fvec4) ImageSampleProjImplicitLod 61_43 61_44
+           61_45: 23_2(fvec4) Load 59_20(color)
+          129_13: 23_2(fvec4) FAdd 61_45 91_7
+                              Store 59_20(color) 129_13
+           61_46:        27_3 Load 59_4(texSampler3D)
+           61_47: 23_2(fvec4) Load 59_19(coords4D)
+           61_48: 22_1(float) Load 59_14(bias)
+            91_8: 23_2(fvec4) ImageSampleProjImplicitLod 61_46 61_47 Bias 61_48
+           61_49: 23_2(fvec4) Load 59_20(color)
+          129_14: 23_2(fvec4) FAdd 61_49 91_8
+                              Store 59_20(color) 129_14
+           61_50:        27_4 Load 59_5(texSamplerCube)
+           61_51: 23_1(fvec3) Load 59_18(coords3D)
+            87_7: 23_2(fvec4) ImageSampleImplicitLod 61_50 61_51
+           61_52: 23_2(fvec4) Load 59_20(color)
+          129_15: 23_2(fvec4) FAdd 61_52 87_7
+                              Store 59_20(color) 129_15
+           61_53:        27_4 Load 59_5(texSamplerCube)
+           61_54: 23_1(fvec3) Load 59_18(coords3D)
+           61_55: 22_1(float) Load 59_14(bias)
+            87_8: 23_2(fvec4) ImageSampleImplicitLod 61_53 61_54 Bias 61_55
+           61_56: 23_2(fvec4) Load 59_20(color)
+          129_16: 23_2(fvec4) FAdd 61_56 87_8
+                              Store 59_20(color) 129_16
+           61_57:        27_5 Load 59_6(shadowSampler1D)
+           61_58: 23_1(fvec3) Load 59_18(coords3D)
+            81_4: 22_1(float) CompositeExtract 61_58 2
+            89_1: 22_1(float) ImageSampleDrefImplicitLod 61_57 61_58 81_4
+           61_59: 23_2(fvec4) Load 59_20(color)
+            80_1: 23_2(fvec4) CompositeConstruct 89_1 89_1 89_1 89_1
+          129_17: 23_2(fvec4) FAdd 61_59 80_1
+                              Store 59_20(color) 129_17
+           61_60:        27_5 Load 59_6(shadowSampler1D)
+           61_61: 23_1(fvec3) Load 59_18(coords3D)
+           61_62: 22_1(float) Load 59_14(bias)
+            81_5: 22_1(float) CompositeExtract 61_61 2
+            89_2: 22_1(float) ImageSampleDrefImplicitLod 61_60 61_61 81_5 Bias 61_62
+           61_63: 23_2(fvec4) Load 59_20(color)
+            80_2: 23_2(fvec4) CompositeConstruct 89_2 89_2 89_2 89_2
+          129_18: 23_2(fvec4) FAdd 61_63 80_2
+                              Store 59_20(color) 129_18
+           61_64:        27_6 Load 59_7(shadowSampler2D)
+           61_65: 23_1(fvec3) Load 59_18(coords3D)
+            81_6: 22_1(float) CompositeExtract 61_65 2
+            89_3: 22_1(float) ImageSampleDrefImplicitLod 61_64 61_65 81_6
+           61_66: 23_2(fvec4) Load 59_20(color)
+            80_3: 23_2(fvec4) CompositeConstruct 89_3 89_3 89_3 89_3
+          129_19: 23_2(fvec4) FAdd 61_66 80_3
+                              Store 59_20(color) 129_19
+           61_67:        27_6 Load 59_7(shadowSampler2D)
+           61_68: 23_1(fvec3) Load 59_18(coords3D)
+           61_69: 22_1(float) Load 59_14(bias)
+            81_7: 22_1(float) CompositeExtract 61_68 2
+            89_4: 22_1(float) ImageSampleDrefImplicitLod 61_67 61_68 81_7 Bias 61_69
+           61_70: 23_2(fvec4) Load 59_20(color)
+            80_4: 23_2(fvec4) CompositeConstruct 89_4 89_4 89_4 89_4
+          129_20: 23_2(fvec4) FAdd 61_70 80_4
+                              Store 59_20(color) 129_20
+           61_71:        27_5 Load 59_6(shadowSampler1D)
+           61_72: 23_2(fvec4) Load 59_19(coords4D)
+            81_8: 22_1(float) CompositeExtract 61_72 2
+            81_9: 22_1(float) CompositeExtract 61_72 3
+            82_4: 23_2(fvec4) CompositeInsert 81_9 61_72 1
+            93_1: 22_1(float) ImageSampleProjDrefImplicitLod 61_71 82_4 81_8
+           61_73: 23_2(fvec4) Load 59_20(color)
+            80_5: 23_2(fvec4) CompositeConstruct 93_1 93_1 93_1 93_1
+          129_21: 23_2(fvec4) FAdd 61_73 80_5
+                              Store 59_20(color) 129_21
+           61_74:        27_5 Load 59_6(shadowSampler1D)
+           61_75: 23_2(fvec4) Load 59_19(coords4D)
+           61_76: 22_1(float) Load 59_14(bias)
+           81_10: 22_1(float) CompositeExtract 61_75 2
+           81_11: 22_1(float) CompositeExtract 61_75 3
+            82_5: 23_2(fvec4) CompositeInsert 81_11 61_75 1
+            93_2: 22_1(float) ImageSampleProjDrefImplicitLod 61_74 82_5 81_10 Bias 61_76
+           61_77: 23_2(fvec4) Load 59_20(color)
+            80_6: 23_2(fvec4) CompositeConstruct 93_2 93_2 93_2 93_2
+          129_22: 23_2(fvec4) FAdd 61_77 80_6
+                              Store 59_20(color) 129_22
+           61_78:        27_6 Load 59_7(shadowSampler2D)
+           61_79: 23_2(fvec4) Load 59_19(coords4D)
+           81_12: 22_1(float) CompositeExtract 61_79 2
+           81_13: 22_1(float) CompositeExtract 61_79 3
+            82_6: 23_2(fvec4) CompositeInsert 81_13 61_79 2
+            93_3: 22_1(float) ImageSampleProjDrefImplicitLod 61_78 82_6 81_12
+           61_80: 23_2(fvec4) Load 59_20(color)
+            80_7: 23_2(fvec4) CompositeConstruct 93_3 93_3 93_3 93_3
+          129_23: 23_2(fvec4) FAdd 61_80 80_7
+                              Store 59_20(color) 129_23
+           61_81:        27_6 Load 59_7(shadowSampler2D)
+           61_82: 23_2(fvec4) Load 59_19(coords4D)
+           61_83: 22_1(float) Load 59_14(bias)
+           81_14: 22_1(float) CompositeExtract 61_82 2
+           81_15: 22_1(float) CompositeExtract 61_82 3
+            82_7: 23_2(fvec4) CompositeInsert 81_15 61_82 2
+            93_4: 22_1(float) ImageSampleProjDrefImplicitLod 61_81 82_7 81_14 Bias 61_83
+           61_84: 23_2(fvec4) Load 59_20(color)
+            80_8: 23_2(fvec4) CompositeConstruct 93_4 93_4 93_4 93_4
+          129_24: 23_2(fvec4) FAdd 61_84 80_8
+                              Store 59_20(color) 129_24
+                              Store 59_21(iCoords2D) 44_4
+                              Store 59_22(iLod) 43_9
+           61_85:        27_2 Load 59_3(texSampler2D)
+           61_86: 23_4(ivec2) Load 59_21(iCoords2D)
+           61_87:   21_1(int) Load 59_22(iLod)
+           100_1:        25_2 Image 61_85
+            95_1: 23_2(fvec4) ImageFetch 100_1 61_86 Lod 61_87
+           61_88: 23_2(fvec4) Load 59_20(color)
+          129_25: 23_2(fvec4) FAdd 61_88 95_1
+                              Store 59_20(color) 129_25
+           61_89: 23_3(fvec2) Load 59_2(coords2D)
+           207_1: 23_3(fvec2) DPdx 61_89
+                              Store 59_23(gradX) 207_1
+           61_90: 23_3(fvec2) Load 59_2(coords2D)
+           208_1: 23_3(fvec2) DPdy 61_90
+                              Store 59_24(gradY) 208_1
+           61_91:        27_2 Load 59_3(texSampler2D)
+           61_92: 23_3(fvec2) Load 59_2(coords2D)
+           61_93: 23_3(fvec2) Load 59_23(gradX)
+           61_94: 23_3(fvec2) Load 59_24(gradY)
+            88_1: 23_2(fvec4) ImageSampleExplicitLod 61_91 61_92 Grad 61_93 61_94
+           61_95: 23_2(fvec4) Load 59_20(color)
+          129_26: 23_2(fvec4) FAdd 61_95 88_1
+                              Store 59_20(color) 129_26
+           61_96:        27_2 Load 59_3(texSampler2D)
+           61_97: 23_3(fvec2) Load 59_2(coords2D)
+           61_98: 22_1(float) Load 59_16(proj)
+           81_16: 22_1(float) CompositeExtract 61_97 0
+           81_17: 22_1(float) CompositeExtract 61_97 1
+            80_9: 23_1(fvec3) CompositeConstruct 81_16 81_17 61_98
+           61_99: 23_3(fvec2) Load 59_23(gradX)
+          61_100: 23_3(fvec2) Load 59_24(gradY)
+            92_1: 23_2(fvec4) ImageSampleProjExplicitLod 61_96 80_9 Grad 61_99 61_100
+          61_101: 23_2(fvec4) Load 59_20(color)
+          129_27: 23_2(fvec4) FAdd 61_101 92_1
+                              Store 59_20(color) 129_27
+          61_102:        27_2 Load 59_3(texSampler2D)
+          61_103: 23_3(fvec2) Load 59_2(coords2D)
+          61_104: 23_3(fvec2) Load 59_23(gradX)
+          61_105: 23_3(fvec2) Load 59_24(gradY)
+            88_2: 23_2(fvec4) ImageSampleExplicitLod 61_102 61_103 Grad ConstOffset 61_104 61_105 44_5
+          61_106: 23_2(fvec4) Load 59_20(color)
+          129_28: 23_2(fvec4) FAdd 61_106 88_2
+                              Store 59_20(color) 129_28
+          61_107:        27_2 Load 59_3(texSampler2D)
+          61_108: 23_1(fvec3) Load 59_18(coords3D)
+          61_109: 23_3(fvec2) Load 59_23(gradX)
+          61_110: 23_3(fvec2) Load 59_24(gradY)
+            92_2: 23_2(fvec4) ImageSampleProjExplicitLod 61_107 61_108 Grad ConstOffset 61_109 61_110 44_5
+          61_111: 23_2(fvec4) Load 59_20(color)
+          129_29: 23_2(fvec4) FAdd 61_111 92_2
+                              Store 59_20(color) 129_29
+          61_112:        27_6 Load 59_7(shadowSampler2D)
+          61_113: 23_3(fvec2) Load 59_2(coords2D)
+          61_114: 22_1(float) Load 59_15(lod)
+           81_18: 22_1(float) CompositeExtract 61_113 0
+           81_19: 22_1(float) CompositeExtract 61_113 1
+           80_10: 23_1(fvec3) CompositeConstruct 81_18 81_19 61_114
+          61_115: 23_3(fvec2) Load 59_23(gradX)
+          61_116: 23_3(fvec2) Load 59_24(gradY)
+           81_20: 22_1(float) CompositeExtract 80_10 2
+            90_1: 22_1(float) ImageSampleDrefExplicitLod 61_112 80_10 81_20 Grad 61_115 61_116
+          61_117: 23_2(fvec4) Load 59_20(color)
+           80_11: 23_2(fvec4) CompositeConstruct 90_1 90_1 90_1 90_1
+          129_30: 23_2(fvec4) FAdd 61_117 80_11
+                              Store 59_20(color) 129_30
+          61_118: 23_2(fvec4) Load 59_20(color)
+          61_119: 23_2(fvec4) Load 59_9(u)
+          61_120: 22_1(float) Load 59_10(blend)
+          61_121: 22_1(float) Load 59_13(blendscale)
+           133_1: 22_1(float) FMul 61_120 61_121
+           80_12: 23_2(fvec4) CompositeConstruct 133_1 133_1 133_1 133_1
+          1-46_1: 23_2(fvec4) ExtInst 11_1(GLSL.std.450) 46(FMix) 61_118 61_119 80_12
+                              Store 59_8(gl_FragColor) 1-46_1
                               Return
                               FunctionEnd

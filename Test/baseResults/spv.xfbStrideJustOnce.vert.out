@@ -5,70 +5,70 @@ spv.xfbStrideJustOnce.vert
 
                               Capability Shader
                               Capability TransformFeedback
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 10 27 31 32
-                              ExecutionMode 4 Xfb
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 Xfb
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 8  "block"
-                              MemberName 8(block) 0  "y1_out"
-                              MemberName 8(block) 1  "y2_out"
-                              Name 10  ""
-                              Name 25  "gl_PerVertex"
-                              MemberName 25(gl_PerVertex) 0  "gl_Position"
-                              MemberName 25(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 25(gl_PerVertex) 2  "gl_ClipDistance"
-                              MemberName 25(gl_PerVertex) 3  "gl_CullDistance"
-                              Name 27  ""
-                              Name 31  "gl_VertexID"
-                              Name 32  "gl_InstanceID"
-                              Decorate 8(block) Block
-                              Decorate 10 Location 5
-                              Decorate 10 XfbBuffer 2
-                              Decorate 10 XfbStride 20
-                              Decorate 25(gl_PerVertex) Block
-                              MemberDecorate 25(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 25(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 25(gl_PerVertex) 2 BuiltIn ClipDistance
-                              MemberDecorate 25(gl_PerVertex) 3 BuiltIn CullDistance
-                              Decorate 27 XfbBuffer 0
-                              Decorate 27 XfbStride 0
-                              Decorate 31(gl_VertexID) BuiltIn VertexId
-                              Decorate 32(gl_InstanceID) BuiltIn InstanceId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-        8(block):             TypeStruct 6(float) 7(fvec4)
-               9:             TypePointer Output 8(block)
-              10:      9(ptr) Variable Output
-              11:             TypeInt 32 1
-              12:     11(int) Constant 0
-              13:    6(float) Constant 1088421888
-              14:             TypePointer Output 6(float)
-              16:     11(int) Constant 1
-              17:    6(float) Constant 1065353216
-              18:    6(float) Constant 0
-              19:    7(fvec4) ConstantComposite 17 18 18 17
-              20:             TypePointer Output 7(fvec4)
-              22:             TypeInt 32 0
-              23:     22(int) Constant 1
-              24:             TypeArray 6(float) 23
-25(gl_PerVertex):             TypeStruct 7(fvec4) 6(float) 24 24
-              26:             TypePointer Output 25(gl_PerVertex)
-              27:     26(ptr) Variable Output
-              28:    7(fvec4) ConstantComposite 18 18 18 18
-              30:             TypePointer Input 11(int)
- 31(gl_VertexID):     30(ptr) Variable Input
-32(gl_InstanceID):     30(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              15:     14(ptr) AccessChain 10 12
-                              Store 15 13
-              21:     20(ptr) AccessChain 10 16
-                              Store 21 19
-              29:     20(ptr) AccessChain 27 12
-                              Store 29 28
+                              Name 54_1  "main"
+                              Name 30_1  "block"
+                              MemberName 30_1(block) 0  "y1_out"
+                              MemberName 30_1(block) 1  "y2_out"
+                              Name 59_1  ""
+                              Name 30_2  "gl_PerVertex"
+                              MemberName 30_2(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_2(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_2(gl_PerVertex) 2  "gl_ClipDistance"
+                              MemberName 30_2(gl_PerVertex) 3  "gl_CullDistance"
+                              Name 59_2  ""
+                              Name 59_3  "gl_VertexID"
+                              Name 59_4  "gl_InstanceID"
+                              Decorate 30_1(block) Block
+                              Decorate 59_1 Location 5
+                              Decorate 59_1 XfbBuffer 2
+                              Decorate 59_1 XfbStride 20
+                              Decorate 30_2(gl_PerVertex) Block
+                              MemberDecorate 30_2(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_2(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_2(gl_PerVertex) 2 BuiltIn ClipDistance
+                              MemberDecorate 30_2(gl_PerVertex) 3 BuiltIn CullDistance
+                              Decorate 59_2 XfbBuffer 0
+                              Decorate 59_2 XfbStride 0
+                              Decorate 59_3(gl_VertexID) BuiltIn VertexId
+                              Decorate 59_4(gl_InstanceID) BuiltIn InstanceId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+     30_1(block):             TypeStruct 22_1(float) 23_1(fvec4)
+            32_1:             TypePointer Output 30_1(block)
+            59_1:   32_1(ptr) Variable Output
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            43_2: 22_1(float) Constant 1088421888
+            32_2:             TypePointer Output 22_1(float)
+            43_3:   21_1(int) Constant 1
+            43_4: 22_1(float) Constant 1065353216
+            43_5: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_4 43_5 43_5 43_4
+            32_3:             TypePointer Output 23_1(fvec4)
+            21_2:             TypeInt 32 0
+         uint(1):   21_2(int) Constant 1
+            28_1:             TypeArray 22_1(float) uint(1)
+30_2(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float) 28_1 28_1
+            32_4:             TypePointer Output 30_2(gl_PerVertex)
+            59_2:   32_4(ptr) Variable Output
+            44_2: 23_1(fvec4) ConstantComposite 43_5 43_5 43_5 43_5
+            32_5:             TypePointer Input 21_1(int)
+59_3(gl_VertexID):   32_5(ptr) Variable Input
+59_4(gl_InstanceID):   32_5(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_1 43_2
+            65_2:   32_3(ptr) AccessChain 59_1 43_3
+                              Store 65_2 44_1
+            65_3:   32_3(ptr) AccessChain 59_2 43_1
+                              Store 65_3 44_2
                               Return
                               FunctionEnd

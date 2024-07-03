@@ -6,38 +6,38 @@ spv.queueFamilyScope.comp
                               Capability Shader
                               Capability VulkanMemoryModelKHR
                               Extension  "SPV_KHR_vulkan_memory_model"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical VulkanKHR
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 450
                               SourceExtension  "GL_KHR_memory_scope_semantics"
-                              Name 4  "main"
-                              Name 7  "Buffer"
-                              MemberName 7(Buffer) 0  "a"
-                              Name 9  "A"
-                              Decorate 7(Buffer) Block
-                              MemberDecorate 7(Buffer) 0 Offset 0
-                              Decorate 9(A) Binding 0
-                              Decorate 9(A) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-       7(Buffer):             TypeStruct 6(int)
-               8:             TypePointer StorageBuffer 7(Buffer)
-            9(A):      8(ptr) Variable StorageBuffer
-              10:             TypeInt 32 1
-              11:     10(int) Constant 0
-              12:             TypePointer StorageBuffer 6(int)
-              14:     10(int) Constant 5
-              15:     10(int) Constant 64
-              16:     10(int) Constant 2
-              17:      6(int) Constant 1
-              18:      6(int) Constant 0
-              19:      6(int) Constant 66
-         4(main):           2 Function None 3
-               5:             Label
-              13:     12(ptr) AccessChain 9(A) 11
-              20:      6(int) AtomicLoad 13 14 19
+                              Name 54_1  "main"
+                              Name 30_1  "Buffer"
+                              MemberName 30_1(Buffer) 0  "a"
+                              Name 59_1  "A"
+                              Decorate 30_1(Buffer) Block
+                              MemberDecorate 30_1(Buffer) 0 Offset 0
+                              Decorate 59_1(A) Binding 0
+                              Decorate 59_1(A) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+    30_1(Buffer):             TypeStruct 21_1(int)
+            32_1:             TypePointer StorageBuffer 30_1(Buffer)
+         59_1(A):   32_1(ptr) Variable StorageBuffer
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_2:             TypePointer StorageBuffer 21_1(int)
+            43_2:   21_2(int) Constant 5
+            43_3:   21_2(int) Constant 64
+            43_4:   21_2(int) Constant 2
+         uint(1):   21_1(int) Constant 1
+         uint(0):   21_1(int) Constant 0
+        uint(66):   21_1(int) Constant 66
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1(A) 43_1
+           227_1:   21_1(int) AtomicLoad 65_1 43_2 uint(66)
                               Return
                               FunctionEnd

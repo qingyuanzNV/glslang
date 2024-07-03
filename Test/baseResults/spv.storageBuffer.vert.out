@@ -5,65 +5,65 @@ spv.storageBuffer.vert
 
                               Capability Shader
                               Extension  "SPV_KHR_storage_buffer_storage_class"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 13
+                              EntryPoint Vertex 54_1  "main" 59_1
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 11  "gl_PerVertex"
-                              MemberName 11(gl_PerVertex) 0  "gl_Position"
-                              MemberName 11(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 11(gl_PerVertex) 2  "gl_ClipDistance"
-                              MemberName 11(gl_PerVertex) 3  "gl_CullDistance"
-                              Name 13  ""
-                              Name 16  "ub"
-                              MemberName 16(ub) 0  "a"
-                              Name 18  "ubi"
-                              Name 22  "bb"
-                              MemberName 22(bb) 0  "b"
-                              Name 24  "bbi"
-                              Decorate 11(gl_PerVertex) Block
-                              MemberDecorate 11(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 11(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 11(gl_PerVertex) 2 BuiltIn ClipDistance
-                              MemberDecorate 11(gl_PerVertex) 3 BuiltIn CullDistance
-                              Decorate 16(ub) Block
-                              MemberDecorate 16(ub) 0 Offset 0
-                              Decorate 18(ubi) Binding 0
-                              Decorate 18(ubi) DescriptorSet 0
-                              Decorate 22(bb) Block
-                              MemberDecorate 22(bb) 0 Offset 0
-                              Decorate 24(bbi) Binding 1
-                              Decorate 24(bbi) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeInt 32 0
-               9:      8(int) Constant 1
-              10:             TypeArray 6(float) 9
-11(gl_PerVertex):             TypeStruct 7(fvec4) 6(float) 10 10
-              12:             TypePointer Output 11(gl_PerVertex)
-              13:     12(ptr) Variable Output
-              14:             TypeInt 32 1
-              15:     14(int) Constant 0
-          16(ub):             TypeStruct 7(fvec4)
-              17:             TypePointer Uniform 16(ub)
-         18(ubi):     17(ptr) Variable Uniform
-              19:             TypePointer Uniform 7(fvec4)
-          22(bb):             TypeStruct 7(fvec4)
-              23:             TypePointer StorageBuffer 22(bb)
-         24(bbi):     23(ptr) Variable StorageBuffer
-              25:             TypePointer StorageBuffer 7(fvec4)
-              29:             TypePointer Output 7(fvec4)
-         4(main):           2 Function None 3
-               5:             Label
-              20:     19(ptr) AccessChain 18(ubi) 15
-              21:    7(fvec4) Load 20
-              26:     25(ptr) AccessChain 24(bbi) 15
-              27:    7(fvec4) Load 26
-              28:    7(fvec4) FAdd 21 27
-              30:     29(ptr) AccessChain 13 15
-                              Store 30 28
+                              Name 54_1  "main"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_1(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_1(gl_PerVertex) 2  "gl_ClipDistance"
+                              MemberName 30_1(gl_PerVertex) 3  "gl_CullDistance"
+                              Name 59_1  ""
+                              Name 30_2  "ub"
+                              MemberName 30_2(ub) 0  "a"
+                              Name 59_2  "ubi"
+                              Name 30_3  "bb"
+                              MemberName 30_3(bb) 0  "b"
+                              Name 59_3  "bbi"
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_1(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_1(gl_PerVertex) 2 BuiltIn ClipDistance
+                              MemberDecorate 30_1(gl_PerVertex) 3 BuiltIn CullDistance
+                              Decorate 30_2(ub) Block
+                              MemberDecorate 30_2(ub) 0 Offset 0
+                              Decorate 59_2(ubi) Binding 0
+                              Decorate 59_2(ubi) DescriptorSet 0
+                              Decorate 30_3(bb) Block
+                              MemberDecorate 30_3(bb) 0 Offset 0
+                              Decorate 59_3(bbi) Binding 1
+                              Decorate 59_3(bbi) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            21_1:             TypeInt 32 0
+         uint(1):   21_1(int) Constant 1
+            28_1:             TypeArray 22_1(float) uint(1)
+30_1(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float) 28_1 28_1
+            32_1:             TypePointer Output 30_1(gl_PerVertex)
+            59_1:   32_1(ptr) Variable Output
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+        30_2(ub):             TypeStruct 23_1(fvec4)
+            32_2:             TypePointer Uniform 30_2(ub)
+       59_2(ubi):   32_2(ptr) Variable Uniform
+            32_3:             TypePointer Uniform 23_1(fvec4)
+        30_3(bb):             TypeStruct 23_1(fvec4)
+            32_4:             TypePointer StorageBuffer 30_3(bb)
+       59_3(bbi):   32_4(ptr) Variable StorageBuffer
+            32_5:             TypePointer StorageBuffer 23_1(fvec4)
+            32_6:             TypePointer Output 23_1(fvec4)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2(ubi) 43_1
+            61_1: 23_1(fvec4) Load 65_1
+            65_2:   32_5(ptr) AccessChain 59_3(bbi) 43_1
+            61_2: 23_1(fvec4) Load 65_2
+           129_1: 23_1(fvec4) FAdd 61_1 61_2
+            65_3:   32_6(ptr) AccessChain 59_1 43_1
+                              Store 65_3 129_1
                               Return
                               FunctionEnd

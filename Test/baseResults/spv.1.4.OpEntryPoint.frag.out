@@ -4,102 +4,102 @@ spv.1.4.OpEntryPoint.frag
 // Id's are bound by 64
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 11 14 17 25 33 41
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "functionv"
-                              Name 11  "inv"
-                              Name 14  "globalv"
-                              Name 17  "outv"
-                              Name 23  "ubt"
-                              MemberName 23(ubt) 0  "v"
-                              Name 25  "uniformv"
-                              Name 31  "pushB"
-                              MemberName 31(pushB) 0  "a"
-                              Name 33  "pushv"
-                              Name 39  "bbt"
-                              MemberName 39(bbt) 0  "f"
-                              Name 41  "bufferv"
-                              Decorate 11(inv) Location 0
-                              Decorate 17(outv) Location 0
-                              Decorate 23(ubt) Block
-                              MemberDecorate 23(ubt) 0 Offset 0
-                              Decorate 25(uniformv) Binding 0
-                              Decorate 25(uniformv) DescriptorSet 0
-                              Decorate 31(pushB) Block
-                              MemberDecorate 31(pushB) 0 Offset 0
-                              Decorate 39(bbt) Block
-                              MemberDecorate 39(bbt) 0 Offset 0
-                              Decorate 41(bufferv) Binding 1
-                              Decorate 41(bufferv) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-              10:             TypePointer Input 7(fvec4)
-         11(inv):     10(ptr) Variable Input
-              13:             TypePointer Private 7(fvec4)
-     14(globalv):     13(ptr) Variable Private
-              16:             TypePointer Output 7(fvec4)
-        17(outv):     16(ptr) Variable Output
-         23(ubt):             TypeStruct 7(fvec4)
-              24:             TypePointer Uniform 23(ubt)
-    25(uniformv):     24(ptr) Variable Uniform
-              26:             TypeInt 32 1
-              27:     26(int) Constant 0
-              28:             TypePointer Uniform 7(fvec4)
-       31(pushB):             TypeStruct 26(int)
-              32:             TypePointer PushConstant 31(pushB)
-       33(pushv):     32(ptr) Variable PushConstant
-              34:             TypePointer PushConstant 26(int)
-         39(bbt):             TypeStruct 6(float)
-              40:             TypePointer StorageBuffer 39(bbt)
-     41(bufferv):     40(ptr) Variable StorageBuffer
-              42:             TypePointer StorageBuffer 6(float)
-         4(main):           2 Function None 3
-               5:             Label
-    9(functionv):      8(ptr) Variable Function
-              12:    7(fvec4) Load 11(inv)
-                              Store 9(functionv) 12
-              15:    7(fvec4) Load 11(inv)
-                              Store 14(globalv) 15
-              18:    7(fvec4) Load 9(functionv)
-              19:    7(fvec4) Load 11(inv)
-              20:    7(fvec4) FAdd 18 19
-              21:    7(fvec4) Load 14(globalv)
-              22:    7(fvec4) FAdd 20 21
-              29:     28(ptr) AccessChain 25(uniformv) 27
-              30:    7(fvec4) Load 29
-              35:     34(ptr) AccessChain 33(pushv) 27
-              36:     26(int) Load 35
-              37:    6(float) ConvertSToF 36
-              38:    7(fvec4) VectorTimesScalar 30 37
-              43:     42(ptr) AccessChain 41(bufferv) 27
-              44:    6(float) Load 43
-              45:    7(fvec4) VectorTimesScalar 38 44
-              46:    7(fvec4) FAdd 22 45
-                              Store 17(outv) 46
-              47:    7(fvec4) Load 9(functionv)
-              48:    7(fvec4) Load 11(inv)
-              49:    7(fvec4) FAdd 47 48
-              50:    7(fvec4) Load 14(globalv)
-              51:    7(fvec4) FAdd 49 50
-              52:     28(ptr) AccessChain 25(uniformv) 27
-              53:    7(fvec4) Load 52
-              54:     34(ptr) AccessChain 33(pushv) 27
-              55:     26(int) Load 54
-              56:    6(float) ConvertSToF 55
-              57:    7(fvec4) VectorTimesScalar 53 56
-              58:     42(ptr) AccessChain 41(bufferv) 27
-              59:    6(float) Load 58
-              60:    7(fvec4) VectorTimesScalar 57 59
-              61:    7(fvec4) FAdd 51 60
-              62:    7(fvec4) Load 17(outv)
-              63:    7(fvec4) FAdd 62 61
-                              Store 17(outv) 63
+                              Name 54_1  "main"
+                              Name 59_7  "functionv"
+                              Name 59_1  "inv"
+                              Name 59_2  "globalv"
+                              Name 59_3  "outv"
+                              Name 30_1  "ubt"
+                              MemberName 30_1(ubt) 0  "v"
+                              Name 59_4  "uniformv"
+                              Name 30_2  "pushB"
+                              MemberName 30_2(pushB) 0  "a"
+                              Name 59_5  "pushv"
+                              Name 30_3  "bbt"
+                              MemberName 30_3(bbt) 0  "f"
+                              Name 59_6  "bufferv"
+                              Decorate 59_1(inv) Location 0
+                              Decorate 59_3(outv) Location 0
+                              Decorate 30_1(ubt) Block
+                              MemberDecorate 30_1(ubt) 0 Offset 0
+                              Decorate 59_4(uniformv) Binding 0
+                              Decorate 59_4(uniformv) DescriptorSet 0
+                              Decorate 30_2(pushB) Block
+                              MemberDecorate 30_2(pushB) 0 Offset 0
+                              Decorate 30_3(bbt) Block
+                              MemberDecorate 30_3(bbt) 0 Offset 0
+                              Decorate 59_6(bufferv) Binding 1
+                              Decorate 59_6(bufferv) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            32_2:             TypePointer Input 23_1(fvec4)
+       59_1(inv):   32_2(ptr) Variable Input
+            32_3:             TypePointer Private 23_1(fvec4)
+   59_2(globalv):   32_3(ptr) Variable Private
+            32_4:             TypePointer Output 23_1(fvec4)
+      59_3(outv):   32_4(ptr) Variable Output
+       30_1(ubt):             TypeStruct 23_1(fvec4)
+            32_5:             TypePointer Uniform 30_1(ubt)
+  59_4(uniformv):   32_5(ptr) Variable Uniform
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            32_6:             TypePointer Uniform 23_1(fvec4)
+     30_2(pushB):             TypeStruct 21_1(int)
+            32_7:             TypePointer PushConstant 30_2(pushB)
+     59_5(pushv):   32_7(ptr) Variable PushConstant
+            32_8:             TypePointer PushConstant 21_1(int)
+       30_3(bbt):             TypeStruct 22_1(float)
+            32_9:             TypePointer StorageBuffer 30_3(bbt)
+   59_6(bufferv):   32_9(ptr) Variable StorageBuffer
+           32_10:             TypePointer StorageBuffer 22_1(float)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+ 59_7(functionv):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(inv)
+                              Store 59_7(functionv) 61_1
+            61_2: 23_1(fvec4) Load 59_1(inv)
+                              Store 59_2(globalv) 61_2
+            61_3: 23_1(fvec4) Load 59_7(functionv)
+            61_4: 23_1(fvec4) Load 59_1(inv)
+           129_1: 23_1(fvec4) FAdd 61_3 61_4
+            61_5: 23_1(fvec4) Load 59_2(globalv)
+           129_2: 23_1(fvec4) FAdd 129_1 61_5
+            65_1:   32_6(ptr) AccessChain 59_4(uniformv) 43_1
+            61_6: 23_1(fvec4) Load 65_1
+            65_2:   32_8(ptr) AccessChain 59_5(pushv) 43_1
+            61_7:   21_1(int) Load 65_2
+           111_1: 22_1(float) ConvertSToF 61_7
+           142_1: 23_1(fvec4) VectorTimesScalar 61_6 111_1
+            65_3:  32_10(ptr) AccessChain 59_6(bufferv) 43_1
+            61_8: 22_1(float) Load 65_3
+           142_2: 23_1(fvec4) VectorTimesScalar 142_1 61_8
+           129_3: 23_1(fvec4) FAdd 129_2 142_2
+                              Store 59_3(outv) 129_3
+            61_9: 23_1(fvec4) Load 59_7(functionv)
+           61_10: 23_1(fvec4) Load 59_1(inv)
+           129_4: 23_1(fvec4) FAdd 61_9 61_10
+           61_11: 23_1(fvec4) Load 59_2(globalv)
+           129_5: 23_1(fvec4) FAdd 129_4 61_11
+            65_4:   32_6(ptr) AccessChain 59_4(uniformv) 43_1
+           61_12: 23_1(fvec4) Load 65_4
+            65_5:   32_8(ptr) AccessChain 59_5(pushv) 43_1
+           61_13:   21_1(int) Load 65_5
+           111_2: 22_1(float) ConvertSToF 61_13
+           142_3: 23_1(fvec4) VectorTimesScalar 61_12 111_2
+            65_6:  32_10(ptr) AccessChain 59_6(bufferv) 43_1
+           61_14: 22_1(float) Load 65_6
+           142_4: 23_1(fvec4) VectorTimesScalar 142_3 61_14
+           129_6: 23_1(fvec4) FAdd 129_5 142_4
+           61_15: 23_1(fvec4) Load 59_3(outv)
+           129_7: 23_1(fvec4) FAdd 61_15 129_6
+                              Store 59_3(outv) 129_7
                               Return
                               FunctionEnd

@@ -14,10 +14,10 @@ spv.460.subgroupEXT.task
                               Capability GroupNonUniformQuad
                               Capability MeshShadingEXT
                               Extension  "SPV_EXT_mesh_shader"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TaskEXT 4  "main" 35 41 56 61 77 102 123 124 129 130 133 134 135 136 137
-                              ExecutionMode 4 LocalSize 32 1 1
+                              EntryPoint TaskEXT 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8 59_9 59_10 59_11 59_12 59_13 59_14 59_15
+                              ExecutionMode 54_1 LocalSize 32 1 1
                               Source GLSL 460
                               SourceExtension  "GL_EXT_mesh_shader"
                               SourceExtension  "GL_KHR_shader_subgroup_arithmetic"
@@ -28,348 +28,348 @@ spv.460.subgroupEXT.task
                               SourceExtension  "GL_KHR_shader_subgroup_shuffle"
                               SourceExtension  "GL_KHR_shader_subgroup_shuffle_relative"
                               SourceExtension  "GL_KHR_shader_subgroup_vote"
-                              Name 4  "main"
-                              Name 6  "basic_works("
-                              Name 13  "ballot_works(vf4;"
-                              Name 12  "f4"
-                              Name 16  "vote_works(vf4;"
-                              Name 15  "f4"
-                              Name 19  "shuffle_works(vf4;"
-                              Name 18  "f4"
-                              Name 22  "arith_works(vf4;"
-                              Name 21  "f4"
-                              Name 25  "clustered_works(vf4;"
-                              Name 24  "f4"
-                              Name 28  "quad_works(vf4;"
-                              Name 27  "f4"
-                              Name 32  "iid"
-                              Name 35  "gl_LocalInvocationID"
-                              Name 40  "gid"
-                              Name 41  "gl_WorkGroupID"
-                              Name 44  "i"
-                              Name 56  "mem"
-                              Name 59  "block0"
-                              MemberName 59(block0) 0  "uni_value"
-                              Name 61  ""
-                              Name 77  "uni_image"
-                              Name 100  "Task"
-                              MemberName 100(Task) 0  "dummy"
-                              MemberName 100(Task) 1  "submesh"
-                              Name 102  "mytask"
-                              Name 123  "gl_SubgroupSize"
-                              Name 124  "gl_SubgroupInvocationID"
-                              Name 129  "gl_NumSubgroups"
-                              Name 130  "gl_SubgroupID"
-                              Name 133  "gl_SubgroupEqMask"
-                              Name 134  "gl_SubgroupGeMask"
-                              Name 135  "gl_SubgroupGtMask"
-                              Name 136  "gl_SubgroupLeMask"
-                              Name 137  "gl_SubgroupLtMask"
-                              Name 143  "ballot"
-                              Name 181  "ballot"
-                              Name 216  "ballot"
-                              Decorate 35(gl_LocalInvocationID) BuiltIn LocalInvocationId
-                              Decorate 41(gl_WorkGroupID) BuiltIn WorkgroupId
-                              Decorate 59(block0) Block
-                              MemberDecorate 59(block0) 0 Offset 0
-                              Decorate 61 Binding 1
-                              Decorate 61 DescriptorSet 0
-                              Decorate 77(uni_image) NonReadable
-                              Decorate 77(uni_image) Binding 0
-                              Decorate 77(uni_image) DescriptorSet 0
-                              Decorate 123(gl_SubgroupSize) RelaxedPrecision
-                              Decorate 123(gl_SubgroupSize) BuiltIn SubgroupSize
-                              Decorate 124(gl_SubgroupInvocationID) RelaxedPrecision
-                              Decorate 124(gl_SubgroupInvocationID) BuiltIn SubgroupLocalInvocationId
-                              Decorate 129(gl_NumSubgroups) BuiltIn NumSubgroups
-                              Decorate 130(gl_SubgroupID) BuiltIn SubgroupId
-                              Decorate 133(gl_SubgroupEqMask) BuiltIn SubgroupEqMaskKHR
-                              Decorate 134(gl_SubgroupGeMask) BuiltIn SubgroupGeMaskKHR
-                              Decorate 135(gl_SubgroupGtMask) BuiltIn SubgroupGtMaskKHR
-                              Decorate 136(gl_SubgroupLeMask) BuiltIn SubgroupLeMaskKHR
-                              Decorate 137(gl_SubgroupLtMask) BuiltIn SubgroupLtMaskKHR
-                              Decorate 242 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               8:             TypeFloat 32
-               9:             TypeVector 8(float) 4
-              10:             TypePointer Function 9(fvec4)
-              11:             TypeFunction 2 10(ptr)
-              30:             TypeInt 32 0
-              31:             TypePointer Function 30(int)
-              33:             TypeVector 30(int) 3
-              34:             TypePointer Input 33(ivec3)
-35(gl_LocalInvocationID):     34(ptr) Variable Input
-              36:     30(int) Constant 0
-              37:             TypePointer Input 30(int)
-41(gl_WorkGroupID):     34(ptr) Variable Input
-              51:     30(int) Constant 10
-              52:             TypeBool
-              54:             TypeArray 9(fvec4) 51
-              55:             TypePointer Workgroup 54
-         56(mem):     55(ptr) Variable Workgroup
-      59(block0):             TypeStruct 30(int)
-              60:             TypePointer Uniform 59(block0)
-              61:     60(ptr) Variable Uniform
-              62:             TypeInt 32 1
-              63:     62(int) Constant 0
-              64:             TypePointer Uniform 30(int)
-              70:             TypePointer Workgroup 9(fvec4)
-              73:     62(int) Constant 1
-              75:             TypeImage 8(float) 2D nonsampled format:Unknown
-              76:             TypePointer UniformConstant 75
-   77(uni_image):     76(ptr) Variable UniformConstant
-              81:             TypeVector 62(int) 2
-              91:     30(int) Constant 1
-              95:     30(int) Constant 264
-              96:     30(int) Constant 2
-              97:             TypeVector 8(float) 2
-              98:     30(int) Constant 3
-              99:             TypeArray 97(fvec2) 98
-       100(Task):             TypeStruct 97(fvec2) 99
-             101:             TypePointer TaskPayloadWorkgroupEXT 100(Task)
-     102(mytask):    101(ptr) Variable TaskPayloadWorkgroupEXT
-             103:    8(float) Constant 1106247680
-             104:    8(float) Constant 1106771968
-             105:   97(fvec2) ConstantComposite 103 104
-             106:             TypePointer TaskPayloadWorkgroupEXT 97(fvec2)
-             108:    8(float) Constant 1107296256
-             109:    8(float) Constant 1107558400
-             110:   97(fvec2) ConstantComposite 108 109
-             112:    8(float) Constant 1107820544
-             113:    8(float) Constant 1108082688
-             114:   97(fvec2) ConstantComposite 112 113
-             116:     62(int) Constant 2
-123(gl_SubgroupSize):     37(ptr) Variable Input
-124(gl_SubgroupInvocationID):     37(ptr) Variable Input
-             125:     30(int) Constant 3400
-             126:     30(int) Constant 72
-             127:     30(int) Constant 2056
-129(gl_NumSubgroups):     37(ptr) Variable Input
-130(gl_SubgroupID):     37(ptr) Variable Input
-             131:             TypeVector 30(int) 4
-             132:             TypePointer Input 131(ivec4)
-133(gl_SubgroupEqMask):    132(ptr) Variable Input
-134(gl_SubgroupGeMask):    132(ptr) Variable Input
-135(gl_SubgroupGtMask):    132(ptr) Variable Input
-136(gl_SubgroupLeMask):    132(ptr) Variable Input
-137(gl_SubgroupLtMask):    132(ptr) Variable Input
-             142:             TypePointer Function 131(ivec4)
-             144:    52(bool) ConstantFalse
-             146:  131(ivec4) ConstantComposite 91 91 91 91
-             160:    52(bool) ConstantTrue
-             217:     30(int) Constant 85
-             218:  131(ivec4) ConstantComposite 217 36 36 36
-             241:     30(int) Constant 32
-             242:   33(ivec3) ConstantComposite 241 91 91
-         4(main):           2 Function None 3
-               5:             Label
-         32(iid):     31(ptr) Variable Function
-         40(gid):     31(ptr) Variable Function
-           44(i):     31(ptr) Variable Function
-              38:     37(ptr) AccessChain 35(gl_LocalInvocationID) 36
-              39:     30(int) Load 38
-                              Store 32(iid) 39
-              42:     37(ptr) AccessChain 41(gl_WorkGroupID) 36
-              43:     30(int) Load 42
-                              Store 40(gid) 43
-                              Store 44(i) 36
-                              Branch 45
-              45:             Label
-                              LoopMerge 47 48 None
-                              Branch 49
-              49:             Label
-              50:     30(int) Load 44(i)
-              53:    52(bool) ULessThan 50 51
-                              BranchConditional 53 46 47
-              46:               Label
-              57:     30(int)   Load 44(i)
-              58:     30(int)   Load 44(i)
-              65:     64(ptr)   AccessChain 61 63
-              66:     30(int)   Load 65
-              67:     30(int)   IAdd 58 66
-              68:    8(float)   ConvertUToF 67
-              69:    9(fvec4)   CompositeConstruct 68 68 68 68
-              71:     70(ptr)   AccessChain 56(mem) 57
-                                Store 71 69
-                                Branch 48
-              48:               Label
-              72:     30(int)   Load 44(i)
-              74:     30(int)   IAdd 72 73
-                                Store 44(i) 74
-                                Branch 45
-              47:             Label
-              78:          75 Load 77(uni_image)
-              79:     30(int) Load 32(iid)
-              80:     62(int) Bitcast 79
-              82:   81(ivec2) CompositeConstruct 80 80
-              83:     30(int) Load 40(gid)
-              84:     70(ptr) AccessChain 56(mem) 83
-              85:    9(fvec4) Load 84
-                              ImageWrite 78 82 85
-              86:          75 Load 77(uni_image)
-              87:     30(int) Load 32(iid)
-              88:     62(int) Bitcast 87
-              89:   81(ivec2) CompositeConstruct 88 88
-              90:     30(int) Load 40(gid)
-              92:     30(int) IAdd 90 91
-              93:     70(ptr) AccessChain 56(mem) 92
-              94:    9(fvec4) Load 93
-                              ImageWrite 86 89 94
-                              MemoryBarrier 91 95
-                              ControlBarrier 96 96 95
-             107:    106(ptr) AccessChain 102(mytask) 63
-                              Store 107 105
-             111:    106(ptr) AccessChain 102(mytask) 73 63
-                              Store 111 110
-             115:    106(ptr) AccessChain 102(mytask) 73 73
-                              Store 115 114
-             117:     30(int) Load 40(gid)
-             118:     30(int) UMod 117 96
-             119:    106(ptr) AccessChain 102(mytask) 73 118
-             120:   97(fvec2) Load 119
-             121:    106(ptr) AccessChain 102(mytask) 73 116
-                              Store 121 120
-                              MemoryBarrier 91 95
-                              ControlBarrier 96 96 95
-                              EmitMeshTasksEXT 98 91 91 102(mytask)
+                              Name 54_1  "main"
+                              Name 54_2  "basic_works("
+                              Name 54_3  "ballot_works(vf4;"
+                              Name 55_1  "f4"
+                              Name 54_4  "vote_works(vf4;"
+                              Name 55_2  "f4"
+                              Name 54_5  "shuffle_works(vf4;"
+                              Name 55_3  "f4"
+                              Name 54_6  "arith_works(vf4;"
+                              Name 55_4  "f4"
+                              Name 54_7  "clustered_works(vf4;"
+                              Name 55_5  "f4"
+                              Name 54_8  "quad_works(vf4;"
+                              Name 55_6  "f4"
+                              Name 59_16  "iid"
+                              Name 59_1  "gl_LocalInvocationID"
+                              Name 59_17  "gid"
+                              Name 59_2  "gl_WorkGroupID"
+                              Name 59_18  "i"
+                              Name 59_3  "mem"
+                              Name 30_1  "block0"
+                              MemberName 30_1(block0) 0  "uni_value"
+                              Name 59_4  ""
+                              Name 59_5  "uni_image"
+                              Name 30_2  "Task"
+                              MemberName 30_2(Task) 0  "dummy"
+                              MemberName 30_2(Task) 1  "submesh"
+                              Name 59_6  "mytask"
+                              Name 59_7  "gl_SubgroupSize"
+                              Name 59_8  "gl_SubgroupInvocationID"
+                              Name 59_9  "gl_NumSubgroups"
+                              Name 59_10  "gl_SubgroupID"
+                              Name 59_11  "gl_SubgroupEqMask"
+                              Name 59_12  "gl_SubgroupGeMask"
+                              Name 59_13  "gl_SubgroupGtMask"
+                              Name 59_14  "gl_SubgroupLeMask"
+                              Name 59_15  "gl_SubgroupLtMask"
+                              Name 59_19  "ballot"
+                              Name 59_20  "ballot"
+                              Name 59_21  "ballot"
+                              Decorate 59_1(gl_LocalInvocationID) BuiltIn LocalInvocationId
+                              Decorate 59_2(gl_WorkGroupID) BuiltIn WorkgroupId
+                              Decorate 30_1(block0) Block
+                              MemberDecorate 30_1(block0) 0 Offset 0
+                              Decorate 59_4 Binding 1
+                              Decorate 59_4 DescriptorSet 0
+                              Decorate 59_5(uni_image) NonReadable
+                              Decorate 59_5(uni_image) Binding 0
+                              Decorate 59_5(uni_image) DescriptorSet 0
+                              Decorate 59_7(gl_SubgroupSize) RelaxedPrecision
+                              Decorate 59_7(gl_SubgroupSize) BuiltIn SubgroupSize
+                              Decorate 59_8(gl_SubgroupInvocationID) RelaxedPrecision
+                              Decorate 59_8(gl_SubgroupInvocationID) BuiltIn SubgroupLocalInvocationId
+                              Decorate 59_9(gl_NumSubgroups) BuiltIn NumSubgroups
+                              Decorate 59_10(gl_SubgroupID) BuiltIn SubgroupId
+                              Decorate 59_11(gl_SubgroupEqMask) BuiltIn SubgroupEqMaskKHR
+                              Decorate 59_12(gl_SubgroupGeMask) BuiltIn SubgroupGeMaskKHR
+                              Decorate 59_13(gl_SubgroupGtMask) BuiltIn SubgroupGtMaskKHR
+                              Decorate 59_14(gl_SubgroupLeMask) BuiltIn SubgroupLeMaskKHR
+                              Decorate 59_15(gl_SubgroupLtMask) BuiltIn SubgroupLtMaskKHR
+                              Decorate 44_6 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            21_1:             TypeInt 32 0
+            32_2:             TypePointer Function 21_1(int)
+            23_2:             TypeVector 21_1(int) 3
+            32_3:             TypePointer Input 23_2(ivec3)
+59_1(gl_LocalInvocationID):   32_3(ptr) Variable Input
+         uint(0):   21_1(int) Constant 0
+            32_4:             TypePointer Input 21_1(int)
+59_2(gl_WorkGroupID):   32_3(ptr) Variable Input
+        uint(10):   21_1(int) Constant 10
+            20_1:             TypeBool
+            28_1:             TypeArray 23_1(fvec4) uint(10)
+            32_5:             TypePointer Workgroup 28_1
+       59_3(mem):   32_5(ptr) Variable Workgroup
+    30_1(block0):             TypeStruct 21_1(int)
+            32_6:             TypePointer Uniform 30_1(block0)
+            59_4:   32_6(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_7:             TypePointer Uniform 21_1(int)
+            32_8:             TypePointer Workgroup 23_1(fvec4)
+            43_2:   21_2(int) Constant 1
+            25_1:             TypeImage 22_1(float) 2D nonsampled format:Unknown
+            32_9:             TypePointer UniformConstant 25_1
+ 59_5(uni_image):   32_9(ptr) Variable UniformConstant
+            23_3:             TypeVector 21_2(int) 2
+         uint(1):   21_1(int) Constant 1
+       uint(264):   21_1(int) Constant 264
+         uint(2):   21_1(int) Constant 2
+            23_4:             TypeVector 22_1(float) 2
+         uint(3):   21_1(int) Constant 3
+            28_2:             TypeArray 23_4(fvec2) uint(3)
+      30_2(Task):             TypeStruct 23_4(fvec2) 28_2
+           32_10:             TypePointer TaskPayloadWorkgroupEXT 30_2(Task)
+    59_6(mytask):  32_10(ptr) Variable TaskPayloadWorkgroupEXT
+            43_3: 22_1(float) Constant 1106247680
+            43_4: 22_1(float) Constant 1106771968
+            44_1: 23_4(fvec2) ConstantComposite 43_3 43_4
+           32_11:             TypePointer TaskPayloadWorkgroupEXT 23_4(fvec2)
+            43_5: 22_1(float) Constant 1107296256
+            43_6: 22_1(float) Constant 1107558400
+            44_2: 23_4(fvec2) ConstantComposite 43_5 43_6
+            43_7: 22_1(float) Constant 1107820544
+            43_8: 22_1(float) Constant 1108082688
+            44_3: 23_4(fvec2) ConstantComposite 43_7 43_8
+            43_9:   21_2(int) Constant 2
+59_7(gl_SubgroupSize):   32_4(ptr) Variable Input
+59_8(gl_SubgroupInvocationID):   32_4(ptr) Variable Input
+      uint(3400):   21_1(int) Constant 3400
+        uint(72):   21_1(int) Constant 72
+      uint(2056):   21_1(int) Constant 2056
+59_9(gl_NumSubgroups):   32_4(ptr) Variable Input
+59_10(gl_SubgroupID):   32_4(ptr) Variable Input
+            23_5:             TypeVector 21_1(int) 4
+           32_12:             TypePointer Input 23_5(ivec4)
+59_11(gl_SubgroupEqMask):  32_12(ptr) Variable Input
+59_12(gl_SubgroupGeMask):  32_12(ptr) Variable Input
+59_13(gl_SubgroupGtMask):  32_12(ptr) Variable Input
+59_14(gl_SubgroupLeMask):  32_12(ptr) Variable Input
+59_15(gl_SubgroupLtMask):  32_12(ptr) Variable Input
+           32_13:             TypePointer Function 23_5(ivec4)
+            42_1:  20_1(bool) ConstantFalse
+            44_4: 23_5(ivec4) ConstantComposite uint(1) uint(1) uint(1) uint(1)
+            41_1:  20_1(bool) ConstantTrue
+        uint(85):   21_1(int) Constant 85
+            44_5: 23_5(ivec4) ConstantComposite uint(85) uint(0) uint(0) uint(0)
+        uint(32):   21_1(int) Constant 32
+            44_6: 23_2(ivec3) ConstantComposite uint(32) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+      59_16(iid):   32_2(ptr) Variable Function
+      59_17(gid):   32_2(ptr) Variable Function
+        59_18(i):   32_2(ptr) Variable Function
+            65_1:   32_4(ptr) AccessChain 59_1(gl_LocalInvocationID) uint(0)
+            61_1:   21_1(int) Load 65_1
+                              Store 59_16(iid) 61_1
+            65_2:   32_4(ptr) AccessChain 59_2(gl_WorkGroupID) uint(0)
+            61_2:   21_1(int) Load 65_2
+                              Store 59_17(gid) 61_2
+                              Store 59_18(i) uint(0)
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 None
+                              Branch 248_3
+           248_3:             Label
+            61_3:   21_1(int) Load 59_18(i)
+           176_1:  20_1(bool) ULessThan 61_3 uint(10)
+                              BranchConditional 176_1 248_4 248_6
+           248_4:               Label
+            61_4:   21_1(int)   Load 59_18(i)
+            61_5:   21_1(int)   Load 59_18(i)
+            65_3:   32_7(ptr)   AccessChain 59_4 43_1
+            61_6:   21_1(int)   Load 65_3
+           128_1:   21_1(int)   IAdd 61_5 61_6
+           112_1: 22_1(float)   ConvertUToF 128_1
+            80_1: 23_1(fvec4)   CompositeConstruct 112_1 112_1 112_1 112_1
+            65_4:   32_8(ptr)   AccessChain 59_3(mem) 61_4
+                                Store 65_4 80_1
+                                Branch 248_5
+           248_5:               Label
+            61_7:   21_1(int)   Load 59_18(i)
+           128_2:   21_1(int)   IAdd 61_7 43_2
+                                Store 59_18(i) 128_2
+                                Branch 248_2
+           248_6:             Label
+            61_8:        25_1 Load 59_5(uni_image)
+            61_9:   21_1(int) Load 59_16(iid)
+           124_1:   21_2(int) Bitcast 61_9
+            80_2: 23_3(ivec2) CompositeConstruct 124_1 124_1
+           61_10:   21_1(int) Load 59_17(gid)
+            65_5:   32_8(ptr) AccessChain 59_3(mem) 61_10
+           61_11: 23_1(fvec4) Load 65_5
+                              ImageWrite 61_8 80_2 61_11
+           61_12:        25_1 Load 59_5(uni_image)
+           61_13:   21_1(int) Load 59_16(iid)
+           124_2:   21_2(int) Bitcast 61_13
+            80_3: 23_3(ivec2) CompositeConstruct 124_2 124_2
+           61_14:   21_1(int) Load 59_17(gid)
+           128_3:   21_1(int) IAdd 61_14 uint(1)
+            65_6:   32_8(ptr) AccessChain 59_3(mem) 128_3
+           61_15: 23_1(fvec4) Load 65_6
+                              ImageWrite 61_12 80_3 61_15
+                              MemoryBarrier uint(1) uint(264)
+                              ControlBarrier uint(2) uint(2) uint(264)
+            65_7:  32_11(ptr) AccessChain 59_6(mytask) 43_1
+                              Store 65_7 44_1
+            65_8:  32_11(ptr) AccessChain 59_6(mytask) 43_2 43_1
+                              Store 65_8 44_2
+            65_9:  32_11(ptr) AccessChain 59_6(mytask) 43_2 43_2
+                              Store 65_9 44_3
+           61_16:   21_1(int) Load 59_17(gid)
+           137_1:   21_1(int) UMod 61_16 uint(2)
+           65_10:  32_11(ptr) AccessChain 59_6(mytask) 43_2 137_1
+           61_17: 23_4(fvec2) Load 65_10
+           65_11:  32_11(ptr) AccessChain 59_6(mytask) 43_2 43_9
+                              Store 65_11 61_17
+                              MemoryBarrier uint(1) uint(264)
+                              ControlBarrier uint(2) uint(2) uint(264)
+                              EmitMeshTasksEXT uint(3) uint(1) uint(1) 59_6(mytask)
                               FunctionEnd
- 6(basic_works():           2 Function None 3
-               7:             Label
-                              ControlBarrier 98 98 125
-                              MemoryBarrier 98 125
-                              MemoryBarrier 98 126
-                              MemoryBarrier 98 127
-             128:    52(bool) GroupNonUniformElect 98
-                              MemoryBarrier 98 95
+54_2(basic_works():        19_1 Function None 33_1
+           248_7:             Label
+                              ControlBarrier uint(3) uint(3) uint(3400)
+                              MemoryBarrier uint(3) uint(3400)
+                              MemoryBarrier uint(3) uint(72)
+                              MemoryBarrier uint(3) uint(2056)
+           333_1:  20_1(bool) GroupNonUniformElect uint(3)
+                              MemoryBarrier uint(3) uint(264)
                               Return
                               FunctionEnd
-13(ballot_works(vf4;):           2 Function None 11
-          12(f4):     10(ptr) FunctionParameter
-              14:             Label
-     143(ballot):    142(ptr) Variable Function
-             138:    9(fvec4) Load 12(f4)
-             139:    9(fvec4) GroupNonUniformBroadcast 98 138 36
-             140:    9(fvec4) Load 12(f4)
-             141:    9(fvec4) GroupNonUniformBroadcastFirst 98 140
-             145:  131(ivec4) GroupNonUniformBallot 98 144
-                              Store 143(ballot) 145
-             147:    52(bool) GroupNonUniformInverseBallot 98 146
-             148:  131(ivec4) Load 143(ballot)
-             149:    52(bool) GroupNonUniformBallotBitExtract 98 148 36
-             150:  131(ivec4) Load 143(ballot)
-             151:     30(int) GroupNonUniformBallotBitCount 98 Reduce 150
-             152:  131(ivec4) Load 143(ballot)
-             153:     30(int) GroupNonUniformBallotBitCount 98 InclusiveScan 152
-             154:  131(ivec4) Load 143(ballot)
-             155:     30(int) GroupNonUniformBallotBitCount 98 ExclusiveScan 154
-             156:  131(ivec4) Load 143(ballot)
-             157:     30(int) GroupNonUniformBallotFindLSB 98 156
-             158:  131(ivec4) Load 143(ballot)
-             159:     30(int) GroupNonUniformBallotFindMSB 98 158
+54_3(ballot_works(vf4;):        19_1 Function None 33_2
+        55_1(f4):   32_1(ptr) FunctionParameter
+           248_8:             Label
+   59_19(ballot):  32_13(ptr) Variable Function
+           61_18: 23_1(fvec4) Load 55_1(f4)
+           337_1: 23_1(fvec4) GroupNonUniformBroadcast uint(3) 61_18 uint(0)
+           61_19: 23_1(fvec4) Load 55_1(f4)
+           338_1: 23_1(fvec4) GroupNonUniformBroadcastFirst uint(3) 61_19
+           339_1: 23_5(ivec4) GroupNonUniformBallot uint(3) 42_1
+                              Store 59_19(ballot) 339_1
+           340_1:  20_1(bool) GroupNonUniformInverseBallot uint(3) 44_4
+           61_20: 23_5(ivec4) Load 59_19(ballot)
+           341_1:  20_1(bool) GroupNonUniformBallotBitExtract uint(3) 61_20 uint(0)
+           61_21: 23_5(ivec4) Load 59_19(ballot)
+           342_1:   21_1(int) GroupNonUniformBallotBitCount uint(3) Reduce 61_21
+           61_22: 23_5(ivec4) Load 59_19(ballot)
+           342_2:   21_1(int) GroupNonUniformBallotBitCount uint(3) InclusiveScan 61_22
+           61_23: 23_5(ivec4) Load 59_19(ballot)
+           342_3:   21_1(int) GroupNonUniformBallotBitCount uint(3) ExclusiveScan 61_23
+           61_24: 23_5(ivec4) Load 59_19(ballot)
+           343_1:   21_1(int) GroupNonUniformBallotFindLSB uint(3) 61_24
+           61_25: 23_5(ivec4) Load 59_19(ballot)
+           344_1:   21_1(int) GroupNonUniformBallotFindMSB uint(3) 61_25
                               Return
                               FunctionEnd
-16(vote_works(vf4;):           2 Function None 11
-          15(f4):     10(ptr) FunctionParameter
-              17:             Label
-             161:    52(bool) GroupNonUniformAll 98 160
-             162:    52(bool) GroupNonUniformAny 98 144
-             163:    9(fvec4) Load 15(f4)
-             164:    52(bool) GroupNonUniformAllEqual 98 163
+54_4(vote_works(vf4;):        19_1 Function None 33_2
+        55_2(f4):   32_1(ptr) FunctionParameter
+           248_9:             Label
+           334_1:  20_1(bool) GroupNonUniformAll uint(3) 41_1
+           335_1:  20_1(bool) GroupNonUniformAny uint(3) 42_1
+           61_26: 23_1(fvec4) Load 55_2(f4)
+           336_1:  20_1(bool) GroupNonUniformAllEqual uint(3) 61_26
                               Return
                               FunctionEnd
-19(shuffle_works(vf4;):           2 Function None 11
-          18(f4):     10(ptr) FunctionParameter
-              20:             Label
-             165:    9(fvec4) Load 18(f4)
-             166:    9(fvec4) GroupNonUniformShuffle 98 165 36
-             167:    9(fvec4) Load 18(f4)
-             168:    9(fvec4) GroupNonUniformShuffleXor 98 167 91
-             169:    9(fvec4) Load 18(f4)
-             170:    9(fvec4) GroupNonUniformShuffleUp 98 169 91
-             171:    9(fvec4) Load 18(f4)
-             172:    9(fvec4) GroupNonUniformShuffleDown 98 171 91
+54_5(shuffle_works(vf4;):        19_1 Function None 33_2
+        55_3(f4):   32_1(ptr) FunctionParameter
+          248_10:             Label
+           61_27: 23_1(fvec4) Load 55_3(f4)
+           345_1: 23_1(fvec4) GroupNonUniformShuffle uint(3) 61_27 uint(0)
+           61_28: 23_1(fvec4) Load 55_3(f4)
+           346_1: 23_1(fvec4) GroupNonUniformShuffleXor uint(3) 61_28 uint(1)
+           61_29: 23_1(fvec4) Load 55_3(f4)
+           347_1: 23_1(fvec4) GroupNonUniformShuffleUp uint(3) 61_29 uint(1)
+           61_30: 23_1(fvec4) Load 55_3(f4)
+           348_1: 23_1(fvec4) GroupNonUniformShuffleDown uint(3) 61_30 uint(1)
                               Return
                               FunctionEnd
-22(arith_works(vf4;):           2 Function None 11
-          21(f4):     10(ptr) FunctionParameter
-              23:             Label
-     181(ballot):    142(ptr) Variable Function
-             173:    9(fvec4) Load 21(f4)
-             174:    9(fvec4) GroupNonUniformFAdd 98 Reduce 173
-             175:    9(fvec4) Load 21(f4)
-             176:    9(fvec4) GroupNonUniformFMul 98 Reduce 175
-             177:    9(fvec4) Load 21(f4)
-             178:    9(fvec4) GroupNonUniformFMin 98 Reduce 177
-             179:    9(fvec4) Load 21(f4)
-             180:    9(fvec4) GroupNonUniformFMax 98 Reduce 179
-             182:  131(ivec4) Load 181(ballot)
-             183:  131(ivec4) GroupNonUniformBitwiseAnd 98 Reduce 182
-             184:  131(ivec4) Load 181(ballot)
-             185:  131(ivec4) GroupNonUniformBitwiseOr 98 Reduce 184
-             186:  131(ivec4) Load 181(ballot)
-             187:  131(ivec4) GroupNonUniformBitwiseXor 98 Reduce 186
-             188:    9(fvec4) Load 21(f4)
-             189:    9(fvec4) GroupNonUniformFAdd 98 InclusiveScan 188
-             190:    9(fvec4) Load 21(f4)
-             191:    9(fvec4) GroupNonUniformFMul 98 InclusiveScan 190
-             192:    9(fvec4) Load 21(f4)
-             193:    9(fvec4) GroupNonUniformFMin 98 InclusiveScan 192
-             194:    9(fvec4) Load 21(f4)
-             195:    9(fvec4) GroupNonUniformFMax 98 InclusiveScan 194
-             196:  131(ivec4) Load 181(ballot)
-             197:  131(ivec4) GroupNonUniformBitwiseAnd 98 InclusiveScan 196
-             198:  131(ivec4) Load 181(ballot)
-             199:  131(ivec4) GroupNonUniformBitwiseOr 98 InclusiveScan 198
-             200:  131(ivec4) Load 181(ballot)
-             201:  131(ivec4) GroupNonUniformBitwiseXor 98 InclusiveScan 200
-             202:    9(fvec4) Load 21(f4)
-             203:    9(fvec4) GroupNonUniformFAdd 98 ExclusiveScan 202
-             204:    9(fvec4) Load 21(f4)
-             205:    9(fvec4) GroupNonUniformFMul 98 ExclusiveScan 204
-             206:    9(fvec4) Load 21(f4)
-             207:    9(fvec4) GroupNonUniformFMin 98 ExclusiveScan 206
-             208:    9(fvec4) Load 21(f4)
-             209:    9(fvec4) GroupNonUniformFMax 98 ExclusiveScan 208
-             210:  131(ivec4) Load 181(ballot)
-             211:  131(ivec4) GroupNonUniformBitwiseAnd 98 ExclusiveScan 210
-             212:  131(ivec4) Load 181(ballot)
-             213:  131(ivec4) GroupNonUniformBitwiseOr 98 ExclusiveScan 212
-             214:  131(ivec4) Load 181(ballot)
-             215:  131(ivec4) GroupNonUniformBitwiseXor 98 ExclusiveScan 214
+54_6(arith_works(vf4;):        19_1 Function None 33_2
+        55_4(f4):   32_1(ptr) FunctionParameter
+          248_11:             Label
+   59_20(ballot):  32_13(ptr) Variable Function
+           61_31: 23_1(fvec4) Load 55_4(f4)
+           350_1: 23_1(fvec4) GroupNonUniformFAdd uint(3) Reduce 61_31
+           61_32: 23_1(fvec4) Load 55_4(f4)
+           352_1: 23_1(fvec4) GroupNonUniformFMul uint(3) Reduce 61_32
+           61_33: 23_1(fvec4) Load 55_4(f4)
+           355_1: 23_1(fvec4) GroupNonUniformFMin uint(3) Reduce 61_33
+           61_34: 23_1(fvec4) Load 55_4(f4)
+           358_1: 23_1(fvec4) GroupNonUniformFMax uint(3) Reduce 61_34
+           61_35: 23_5(ivec4) Load 59_20(ballot)
+           359_1: 23_5(ivec4) GroupNonUniformBitwiseAnd uint(3) Reduce 61_35
+           61_36: 23_5(ivec4) Load 59_20(ballot)
+           360_1: 23_5(ivec4) GroupNonUniformBitwiseOr uint(3) Reduce 61_36
+           61_37: 23_5(ivec4) Load 59_20(ballot)
+           361_1: 23_5(ivec4) GroupNonUniformBitwiseXor uint(3) Reduce 61_37
+           61_38: 23_1(fvec4) Load 55_4(f4)
+           350_2: 23_1(fvec4) GroupNonUniformFAdd uint(3) InclusiveScan 61_38
+           61_39: 23_1(fvec4) Load 55_4(f4)
+           352_2: 23_1(fvec4) GroupNonUniformFMul uint(3) InclusiveScan 61_39
+           61_40: 23_1(fvec4) Load 55_4(f4)
+           355_2: 23_1(fvec4) GroupNonUniformFMin uint(3) InclusiveScan 61_40
+           61_41: 23_1(fvec4) Load 55_4(f4)
+           358_2: 23_1(fvec4) GroupNonUniformFMax uint(3) InclusiveScan 61_41
+           61_42: 23_5(ivec4) Load 59_20(ballot)
+           359_2: 23_5(ivec4) GroupNonUniformBitwiseAnd uint(3) InclusiveScan 61_42
+           61_43: 23_5(ivec4) Load 59_20(ballot)
+           360_2: 23_5(ivec4) GroupNonUniformBitwiseOr uint(3) InclusiveScan 61_43
+           61_44: 23_5(ivec4) Load 59_20(ballot)
+           361_2: 23_5(ivec4) GroupNonUniformBitwiseXor uint(3) InclusiveScan 61_44
+           61_45: 23_1(fvec4) Load 55_4(f4)
+           350_3: 23_1(fvec4) GroupNonUniformFAdd uint(3) ExclusiveScan 61_45
+           61_46: 23_1(fvec4) Load 55_4(f4)
+           352_3: 23_1(fvec4) GroupNonUniformFMul uint(3) ExclusiveScan 61_46
+           61_47: 23_1(fvec4) Load 55_4(f4)
+           355_3: 23_1(fvec4) GroupNonUniformFMin uint(3) ExclusiveScan 61_47
+           61_48: 23_1(fvec4) Load 55_4(f4)
+           358_3: 23_1(fvec4) GroupNonUniformFMax uint(3) ExclusiveScan 61_48
+           61_49: 23_5(ivec4) Load 59_20(ballot)
+           359_3: 23_5(ivec4) GroupNonUniformBitwiseAnd uint(3) ExclusiveScan 61_49
+           61_50: 23_5(ivec4) Load 59_20(ballot)
+           360_3: 23_5(ivec4) GroupNonUniformBitwiseOr uint(3) ExclusiveScan 61_50
+           61_51: 23_5(ivec4) Load 59_20(ballot)
+           361_3: 23_5(ivec4) GroupNonUniformBitwiseXor uint(3) ExclusiveScan 61_51
                               Return
                               FunctionEnd
-25(clustered_works(vf4;):           2 Function None 11
-          24(f4):     10(ptr) FunctionParameter
-              26:             Label
-     216(ballot):    142(ptr) Variable Function
-                              Store 216(ballot) 218
-             219:    9(fvec4) Load 24(f4)
-             220:    9(fvec4) GroupNonUniformFAdd 98 ClusteredReduce 219 96
-             221:    9(fvec4) Load 24(f4)
-             222:    9(fvec4) GroupNonUniformFMul 98 ClusteredReduce 221 96
-             223:    9(fvec4) Load 24(f4)
-             224:    9(fvec4) GroupNonUniformFMin 98 ClusteredReduce 223 96
-             225:    9(fvec4) Load 24(f4)
-             226:    9(fvec4) GroupNonUniformFMax 98 ClusteredReduce 225 96
-             227:  131(ivec4) Load 216(ballot)
-             228:  131(ivec4) GroupNonUniformBitwiseAnd 98 ClusteredReduce 227 96
-             229:  131(ivec4) Load 216(ballot)
-             230:  131(ivec4) GroupNonUniformBitwiseOr 98 ClusteredReduce 229 96
-             231:  131(ivec4) Load 216(ballot)
-             232:  131(ivec4) GroupNonUniformBitwiseXor 98 ClusteredReduce 231 96
+54_7(clustered_works(vf4;):        19_1 Function None 33_2
+        55_5(f4):   32_1(ptr) FunctionParameter
+          248_12:             Label
+   59_21(ballot):  32_13(ptr) Variable Function
+                              Store 59_21(ballot) 44_5
+           61_52: 23_1(fvec4) Load 55_5(f4)
+           350_4: 23_1(fvec4) GroupNonUniformFAdd uint(3) ClusteredReduce 61_52 uint(2)
+           61_53: 23_1(fvec4) Load 55_5(f4)
+           352_4: 23_1(fvec4) GroupNonUniformFMul uint(3) ClusteredReduce 61_53 uint(2)
+           61_54: 23_1(fvec4) Load 55_5(f4)
+           355_4: 23_1(fvec4) GroupNonUniformFMin uint(3) ClusteredReduce 61_54 uint(2)
+           61_55: 23_1(fvec4) Load 55_5(f4)
+           358_4: 23_1(fvec4) GroupNonUniformFMax uint(3) ClusteredReduce 61_55 uint(2)
+           61_56: 23_5(ivec4) Load 59_21(ballot)
+           359_4: 23_5(ivec4) GroupNonUniformBitwiseAnd uint(3) ClusteredReduce 61_56 uint(2)
+           61_57: 23_5(ivec4) Load 59_21(ballot)
+           360_4: 23_5(ivec4) GroupNonUniformBitwiseOr uint(3) ClusteredReduce 61_57 uint(2)
+           61_58: 23_5(ivec4) Load 59_21(ballot)
+           361_4: 23_5(ivec4) GroupNonUniformBitwiseXor uint(3) ClusteredReduce 61_58 uint(2)
                               Return
                               FunctionEnd
-28(quad_works(vf4;):           2 Function None 11
-          27(f4):     10(ptr) FunctionParameter
-              29:             Label
-             233:    9(fvec4) Load 27(f4)
-             234:    9(fvec4) GroupNonUniformQuadBroadcast 98 233 36
-             235:    9(fvec4) Load 27(f4)
-             236:    9(fvec4) GroupNonUniformQuadSwap 98 235 36
-             237:    9(fvec4) Load 27(f4)
-             238:    9(fvec4) GroupNonUniformQuadSwap 98 237 91
-             239:    9(fvec4) Load 27(f4)
-             240:    9(fvec4) GroupNonUniformQuadSwap 98 239 96
+54_8(quad_works(vf4;):        19_1 Function None 33_2
+        55_6(f4):   32_1(ptr) FunctionParameter
+          248_13:             Label
+           61_59: 23_1(fvec4) Load 55_6(f4)
+           365_1: 23_1(fvec4) GroupNonUniformQuadBroadcast uint(3) 61_59 uint(0)
+           61_60: 23_1(fvec4) Load 55_6(f4)
+           366_1: 23_1(fvec4) GroupNonUniformQuadSwap uint(3) 61_60 uint(0)
+           61_61: 23_1(fvec4) Load 55_6(f4)
+           366_2: 23_1(fvec4) GroupNonUniformQuadSwap uint(3) 61_61 uint(1)
+           61_62: 23_1(fvec4) Load 55_6(f4)
+           366_3: 23_1(fvec4) GroupNonUniformQuadSwap uint(3) 61_62 uint(2)
                               Return
                               FunctionEnd

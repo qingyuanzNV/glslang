@@ -10,62 +10,62 @@ spv.intrinsicsInteractWithCoopMat.comp
                               Extension  "SPV_KHR_cooperative_matrix"
                               Extension  "SPV_KHR_storage_buffer_storage_class"
                               Extension  "SPV_KHR_vulkan_memory_model"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical VulkanKHR
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 32 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 32 1 1
                               Source GLSL 450
                               SourceExtension  "GL_EXT_spirv_intrinsics"
                               SourceExtension  "GL_KHR_cooperative_matrix"
                               SourceExtension  "GL_KHR_memory_scope_semantics"
-                              Name 4  "main"
-                              Name 13  "tempArg"
-                              Name 16  "Buf"
-                              MemberName 16(Buf) 0  "x"
-                              Name 18  "buf"
-                              Name 26  "A"
-                              Decorate 15 ArrayStride 16
-                              Decorate 16(Buf) Block
-                              MemberDecorate 16(Buf) 0 Offset 0
-                              Decorate 18(buf) Binding 0
-                              Decorate 18(buf) DescriptorSet 0
-                              Decorate 35 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 16
-               7:             TypeInt 32 0
-               8:      7(int) Constant 3
-               9:      7(int) Constant 16
-              10:      7(int) Constant 0
-              11:             TypeCooperativeMatrixKHR 6(float16_t) 8 9 9 10
-              12:             TypePointer Function 11
-              14:             TypeVector 7(int) 4
-              15:             TypeRuntimeArray 14(ivec4)
-         16(Buf):             TypeStruct 15
-              17:             TypePointer StorageBuffer 16(Buf)
-         18(buf):     17(ptr) Variable StorageBuffer
-              19:             TypeInt 32 1
-              20:     19(int) Constant 0
-              21:             TypePointer StorageBuffer 14(ivec4)
-              23:      7(int) Constant 2
-              25:             TypePointer Private 11
-           26(A):     25(ptr) Variable Private
-              29:      7(int) Constant 64
-              31:      7(int) Constant 4
-              32:             TypeVector 7(int) 3
-              33:      7(int) Constant 32
-              34:      7(int) Constant 1
-              35:   32(ivec3) ConstantComposite 33 34 34
-         4(main):           2 Function None 3
-               5:             Label
-     13(tempArg):     12(ptr) Variable Function
-              22:     21(ptr) AccessChain 18(buf) 20 10
-              24:          11 CooperativeMatrixLoadKHR 22 20 23 None
-                              Store 13(tempArg) 24
-              27:          11 Load 13(tempArg)
-                              Store 26(A) 27
-              28:          11 Load 26(A)
-              30:     21(ptr) AccessChain 18(buf) 20 29
-                              CooperativeMatrixStoreKHR 30 28 20 31 None
+                              Name 54_1  "main"
+                              Name 59_3  "tempArg"
+                              Name 30_1  "Buf"
+                              MemberName 30_1(Buf) 0  "x"
+                              Name 59_1  "buf"
+                              Name 59_2  "A"
+                              Decorate 29_1 ArrayStride 16
+                              Decorate 30_1(Buf) Block
+                              MemberDecorate 30_1(Buf) 0 Offset 0
+                              Decorate 59_1(buf) Binding 0
+                              Decorate 59_1(buf) DescriptorSet 0
+                              Decorate 44_1 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 16
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+        uint(16):   21_1(int) Constant 16
+         uint(0):   21_1(int) Constant 0
+          4456_1:             TypeCooperativeMatrixKHR 22_1(float16_t) uint(3) uint(16) uint(16) uint(0)
+            32_1:             TypePointer Function 4456_1
+            23_1:             TypeVector 21_1(int) 4
+            29_1:             TypeRuntimeArray 23_1(ivec4)
+       30_1(Buf):             TypeStruct 29_1
+            32_2:             TypePointer StorageBuffer 30_1(Buf)
+       59_1(buf):   32_2(ptr) Variable StorageBuffer
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_3:             TypePointer StorageBuffer 23_1(ivec4)
+         uint(2):   21_1(int) Constant 2
+            32_4:             TypePointer Private 4456_1
+         59_2(A):   32_4(ptr) Variable Private
+        uint(64):   21_1(int) Constant 64
+         uint(4):   21_1(int) Constant 4
+            23_2:             TypeVector 21_1(int) 3
+        uint(32):   21_1(int) Constant 32
+         uint(1):   21_1(int) Constant 1
+            44_1: 23_2(ivec3) ConstantComposite uint(32) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+   59_3(tempArg):   32_1(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(buf) 43_1 uint(0)
+          4457_1:      4456_1 CooperativeMatrixLoadKHR 65_1 43_1 uint(2) None
+                              Store 59_3(tempArg) 4457_1
+            61_1:      4456_1 Load 59_3(tempArg)
+                              Store 59_2(A) 61_1
+            61_2:      4456_1 Load 59_2(A)
+            65_2:   32_3(ptr) AccessChain 59_1(buf) 43_1 uint(64)
+                              CooperativeMatrixStoreKHR 65_2 61_2 43_1 uint(4) None
                               Return
                               FunctionEnd

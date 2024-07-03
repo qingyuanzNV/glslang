@@ -153,97 +153,97 @@ gl_FragCoord origin is upper left
 // Id's are bound by 56
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 49 52
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 11  "@main(vf4;"
-                              Name 10  "vpos"
-                              Name 14  "Nested"
-                              MemberName 14(Nested) 0  "y"
-                              MemberName 14(Nested) 1  "texNested"
-                              Name 15  "A"
-                              MemberName 15(A) 0  "n"
-                              MemberName 15(A) 1  "x"
-                              Name 17  "a1"
-                              Name 20  "a2"
-                              Name 25  "B"
-                              MemberName 25(B) 0  "n"
-                              MemberName 25(B) 1  "tex"
-                              Name 27  "b"
-                              Name 31  "n"
-                              Name 36  "someTex"
-                              Name 47  "vpos"
-                              Name 49  "vpos"
-                              Name 52  "@entryPointOutput"
-                              Name 53  "param"
-                              Decorate 36(someTex) Binding 0
-                              Decorate 36(someTex) DescriptorSet 0
-                              Decorate 49(vpos) Location 0
-                              Decorate 52(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeFunction 7(fvec4) 8(ptr)
-              13:             TypeImage 6(float) 2D sampled format:Unknown
-      14(Nested):             TypeStruct 6(float) 13
-           15(A):             TypeStruct 14(Nested) 6(float)
-              16:             TypePointer Function 15(A)
-              18:             TypeInt 32 1
-              19:     18(int) Constant 0
-              21:             TypePointer Function 14(Nested)
-           25(B):             TypeStruct 14(Nested) 13
-              26:             TypePointer Function 25(B)
-              34:     18(int) Constant 1
-              35:             TypePointer UniformConstant 13
-     36(someTex):     35(ptr) Variable UniformConstant
-              38:             TypePointer Function 13
-              40:    6(float) Constant 1065353216
-              41:             TypePointer Function 6(float)
-              43:    6(float) Constant 0
-              44:    7(fvec4) ConstantComposite 43 43 43 43
-              48:             TypePointer Input 7(fvec4)
-        49(vpos):     48(ptr) Variable Input
-              51:             TypePointer Output 7(fvec4)
-52(@entryPointOutput):     51(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-        47(vpos):      8(ptr) Variable Function
-       53(param):      8(ptr) Variable Function
-              50:    7(fvec4) Load 49(vpos)
-                              Store 47(vpos) 50
-              54:    7(fvec4) Load 47(vpos)
-                              Store 53(param) 54
-              55:    7(fvec4) FunctionCall 11(@main(vf4;) 53(param)
-                              Store 52(@entryPointOutput) 55
+                              Name 54_1  "main"
+                              Name 54_2  "@main(vf4;"
+                              Name 55_1  "vpos"
+                              Name 30_1  "Nested"
+                              MemberName 30_1(Nested) 0  "y"
+                              MemberName 30_1(Nested) 1  "texNested"
+                              Name 30_2  "A"
+                              MemberName 30_2(A) 0  "n"
+                              MemberName 30_2(A) 1  "x"
+                              Name 59_6  "a1"
+                              Name 59_7  "a2"
+                              Name 30_3  "B"
+                              MemberName 30_3(B) 0  "n"
+                              MemberName 30_3(B) 1  "tex"
+                              Name 59_8  "b"
+                              Name 59_9  "n"
+                              Name 59_1  "someTex"
+                              Name 59_4  "vpos"
+                              Name 59_2  "vpos"
+                              Name 59_3  "@entryPointOutput"
+                              Name 59_5  "param"
+                              Decorate 59_1(someTex) Binding 0
+                              Decorate 59_1(someTex) DescriptorSet 0
+                              Decorate 59_2(vpos) Location 0
+                              Decorate 59_3(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+    30_1(Nested):             TypeStruct 22_1(float) 25_1
+         30_2(A):             TypeStruct 30_1(Nested) 22_1(float)
+            32_2:             TypePointer Function 30_2(A)
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            32_3:             TypePointer Function 30_1(Nested)
+         30_3(B):             TypeStruct 30_1(Nested) 25_1
+            32_4:             TypePointer Function 30_3(B)
+            43_2:   21_1(int) Constant 1
+            32_5:             TypePointer UniformConstant 25_1
+   59_1(someTex):   32_5(ptr) Variable UniformConstant
+            32_6:             TypePointer Function 25_1
+            43_3: 22_1(float) Constant 1065353216
+            32_7:             TypePointer Function 22_1(float)
+            43_4: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_4 43_4 43_4 43_4
+            32_8:             TypePointer Input 23_1(fvec4)
+      59_2(vpos):   32_8(ptr) Variable Input
+            32_9:             TypePointer Output 23_1(fvec4)
+59_3(@entryPointOutput):   32_9(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+      59_4(vpos):   32_1(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_2(vpos)
+                              Store 59_4(vpos) 61_1
+            61_2: 23_1(fvec4) Load 59_4(vpos)
+                              Store 59_5(param) 61_2
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main(vf4;) 59_5(param)
+                              Store 59_3(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-  11(@main(vf4;):    7(fvec4) Function None 9
-        10(vpos):      8(ptr) FunctionParameter
-              12:             Label
-          17(a1):     16(ptr) Variable Function
-          20(a2):     16(ptr) Variable Function
-           27(b):     26(ptr) Variable Function
-           31(n):     21(ptr) Variable Function
-              22:     21(ptr) AccessChain 20(a2) 19
-              23:  14(Nested) Load 22
-              24:     21(ptr) AccessChain 17(a1) 19
-                              Store 24 23
-              28:     21(ptr) AccessChain 17(a1) 19
-              29:  14(Nested) Load 28
-              30:     21(ptr) AccessChain 27(b) 19
-                              Store 30 29
-              32:     21(ptr) AccessChain 27(b) 19
-              33:  14(Nested) Load 32
-                              Store 31(n) 33
-              37:          13 Load 36(someTex)
-              39:     38(ptr) AccessChain 20(a2) 19 34
-                              Store 39 37
-              42:     41(ptr) AccessChain 17(a1) 19 19
-                              Store 42 40
-                              ReturnValue 44
+54_2(@main(vf4;): 23_1(fvec4) Function None 33_2
+      55_1(vpos):   32_1(ptr) FunctionParameter
+           248_2:             Label
+        59_6(a1):   32_2(ptr) Variable Function
+        59_7(a2):   32_2(ptr) Variable Function
+         59_8(b):   32_4(ptr) Variable Function
+         59_9(n):   32_3(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_7(a2) 43_1
+            61_3:30_1(Nested) Load 65_1
+            65_2:   32_3(ptr) AccessChain 59_6(a1) 43_1
+                              Store 65_2 61_3
+            65_3:   32_3(ptr) AccessChain 59_6(a1) 43_1
+            61_4:30_1(Nested) Load 65_3
+            65_4:   32_3(ptr) AccessChain 59_8(b) 43_1
+                              Store 65_4 61_4
+            65_5:   32_3(ptr) AccessChain 59_8(b) 43_1
+            61_5:30_1(Nested) Load 65_5
+                              Store 59_9(n) 61_5
+            61_6:        25_1 Load 59_1(someTex)
+            65_6:   32_6(ptr) AccessChain 59_7(a2) 43_1 43_2
+                              Store 65_6 61_6
+            65_7:   32_7(ptr) AccessChain 59_6(a1) 43_1 43_1
+                              Store 65_7 43_3
+                              ReturnValue 44_1
                               FunctionEnd

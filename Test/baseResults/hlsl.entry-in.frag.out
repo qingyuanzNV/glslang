@@ -170,117 +170,117 @@ gl_FragCoord origin is upper left
 // Id's are bound by 74
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "PixelShaderFunction" 55 60 65 70
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "PixelShaderFunction" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "PixelShaderFunction"
-                              Name 11  "InParam"
-                              MemberName 11(InParam) 0  "v"
-                              MemberName 11(InParam) 1  "fragCoord"
-                              MemberName 11(InParam) 2  "i2"
-                              Name 15  "fun(struct-InParam-vf2-vf4-vi21;"
-                              Name 14  "p"
-                              Name 19  "@PixelShaderFunction(struct-InParam-vf2-vf4-vi21;"
-                              Name 18  "i"
-                              Name 34  "local"
-                              Name 36  "ret1"
-                              Name 37  "param"
-                              Name 40  "ret2"
-                              Name 41  "param"
-                              Name 53  "i"
-                              Name 55  "i.v"
-                              Name 60  "i.fragCoord"
-                              Name 65  "i.i2"
-                              Name 70  "@entryPointOutput"
-                              Name 71  "param"
-                              Decorate 55(i.v) Location 0
-                              Decorate 60(i.fragCoord) BuiltIn FragCoord
-                              Decorate 65(i.i2) Flat
-                              Decorate 65(i.i2) Location 1
-                              Decorate 70(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypeVector 6(float) 4
-               9:             TypeInt 32 1
-              10:             TypeVector 9(int) 2
-     11(InParam):             TypeStruct 7(fvec2) 8(fvec4) 10(ivec2)
-              12:             TypePointer Function 11(InParam)
-              13:             TypeFunction 6(float) 12(ptr)
-              17:             TypeFunction 8(fvec4) 12(ptr)
-              21:      9(int) Constant 0
-              22:             TypeInt 32 0
-              23:     22(int) Constant 1
-              24:             TypePointer Function 6(float)
-              27:      9(int) Constant 1
-              28:     22(int) Constant 0
-              44:             TypePointer Function 8(fvec4)
-              54:             TypePointer Input 7(fvec2)
-         55(i.v):     54(ptr) Variable Input
-              57:             TypePointer Function 7(fvec2)
-              59:             TypePointer Input 8(fvec4)
- 60(i.fragCoord):     59(ptr) Variable Input
-              63:      9(int) Constant 2
-              64:             TypePointer Input 10(ivec2)
-        65(i.i2):     64(ptr) Variable Input
-              67:             TypePointer Function 10(ivec2)
-              69:             TypePointer Output 8(fvec4)
-70(@entryPointOutput):     69(ptr) Variable Output
-4(PixelShaderFunction):           2 Function None 3
-               5:             Label
-           53(i):     12(ptr) Variable Function
-       71(param):     12(ptr) Variable Function
-              56:    7(fvec2) Load 55(i.v)
-              58:     57(ptr) AccessChain 53(i) 21
-                              Store 58 56
-              61:    8(fvec4) Load 60(i.fragCoord)
-              62:     44(ptr) AccessChain 53(i) 27
-                              Store 62 61
-              66:   10(ivec2) Load 65(i.i2)
-              68:     67(ptr) AccessChain 53(i) 63
-                              Store 68 66
-              72: 11(InParam) Load 53(i)
-                              Store 71(param) 72
-              73:    8(fvec4) FunctionCall 19(@PixelShaderFunction(struct-InParam-vf2-vf4-vi21;) 71(param)
-                              Store 70(@entryPointOutput) 73
+                              Name 54_1  "PixelShaderFunction"
+                              Name 30_1  "InParam"
+                              MemberName 30_1(InParam) 0  "v"
+                              MemberName 30_1(InParam) 1  "fragCoord"
+                              MemberName 30_1(InParam) 2  "i2"
+                              Name 54_2  "fun(struct-InParam-vf2-vf4-vi21;"
+                              Name 55_1  "p"
+                              Name 54_3  "@PixelShaderFunction(struct-InParam-vf2-vf4-vi21;"
+                              Name 55_2  "i"
+                              Name 59_7  "local"
+                              Name 59_8  "ret1"
+                              Name 59_9  "param"
+                              Name 59_10  "ret2"
+                              Name 59_11  "param"
+                              Name 59_5  "i"
+                              Name 59_1  "i.v"
+                              Name 59_2  "i.fragCoord"
+                              Name 59_3  "i.i2"
+                              Name 59_4  "@entryPointOutput"
+                              Name 59_6  "param"
+                              Decorate 59_1(i.v) Location 0
+                              Decorate 59_2(i.fragCoord) BuiltIn FragCoord
+                              Decorate 59_3(i.i2) Flat
+                              Decorate 59_3(i.i2) Location 1
+                              Decorate 59_4(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            23_2:             TypeVector 22_1(float) 4
+            21_1:             TypeInt 32 1
+            23_3:             TypeVector 21_1(int) 2
+   30_1(InParam):             TypeStruct 23_1(fvec2) 23_2(fvec4) 23_3(ivec2)
+            32_1:             TypePointer Function 30_1(InParam)
+            33_2:             TypeFunction 22_1(float) 32_1(ptr)
+            33_3:             TypeFunction 23_2(fvec4) 32_1(ptr)
+            43_1:   21_1(int) Constant 0
+            21_2:             TypeInt 32 0
+         uint(1):   21_2(int) Constant 1
+            32_2:             TypePointer Function 22_1(float)
+            43_2:   21_1(int) Constant 1
+         uint(0):   21_2(int) Constant 0
+            32_3:             TypePointer Function 23_2(fvec4)
+            32_4:             TypePointer Input 23_1(fvec2)
+       59_1(i.v):   32_4(ptr) Variable Input
+            32_5:             TypePointer Function 23_1(fvec2)
+            32_6:             TypePointer Input 23_2(fvec4)
+59_2(i.fragCoord):   32_6(ptr) Variable Input
+            43_3:   21_1(int) Constant 2
+            32_7:             TypePointer Input 23_3(ivec2)
+      59_3(i.i2):   32_7(ptr) Variable Input
+            32_8:             TypePointer Function 23_3(ivec2)
+            32_9:             TypePointer Output 23_2(fvec4)
+59_4(@entryPointOutput):   32_9(ptr) Variable Output
+54_1(PixelShaderFunction):        19_1 Function None 33_1
+           248_1:             Label
+         59_5(i):   32_1(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec2) Load 59_1(i.v)
+            65_1:   32_5(ptr) AccessChain 59_5(i) 43_1
+                              Store 65_1 61_1
+            61_2: 23_2(fvec4) Load 59_2(i.fragCoord)
+            65_2:   32_3(ptr) AccessChain 59_5(i) 43_2
+                              Store 65_2 61_2
+            61_3: 23_3(ivec2) Load 59_3(i.i2)
+            65_3:   32_8(ptr) AccessChain 59_5(i) 43_3
+                              Store 65_3 61_3
+            61_4:30_1(InParam) Load 59_5(i)
+                              Store 59_6(param) 61_4
+            57_1: 23_2(fvec4) FunctionCall 54_3(@PixelShaderFunction(struct-InParam-vf2-vf4-vi21;) 59_6(param)
+                              Store 59_4(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-15(fun(struct-InParam-vf2-vf4-vi21;):    6(float) Function None 13
-           14(p):     12(ptr) FunctionParameter
-              16:             Label
-              25:     24(ptr) AccessChain 14(p) 21 23
-              26:    6(float) Load 25
-              29:     24(ptr) AccessChain 14(p) 27 28
-              30:    6(float) Load 29
-              31:    6(float) FAdd 26 30
-                              ReturnValue 31
+54_2(fun(struct-InParam-vf2-vf4-vi21;): 22_1(float) Function None 33_2
+         55_1(p):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            65_4:   32_2(ptr) AccessChain 55_1(p) 43_1 uint(1)
+            61_5: 22_1(float) Load 65_4
+            65_5:   32_2(ptr) AccessChain 55_1(p) 43_2 uint(0)
+            61_6: 22_1(float) Load 65_5
+           129_1: 22_1(float) FAdd 61_5 61_6
+                              ReturnValue 129_1
                               FunctionEnd
-19(@PixelShaderFunction(struct-InParam-vf2-vf4-vi21;):    8(fvec4) Function None 17
-           18(i):     12(ptr) FunctionParameter
-              20:             Label
-       34(local):     12(ptr) Variable Function
-        36(ret1):     24(ptr) Variable Function
-       37(param):     12(ptr) Variable Function
-        40(ret2):     24(ptr) Variable Function
-       41(param):     12(ptr) Variable Function
-              35: 11(InParam) Load 18(i)
-                              Store 34(local) 35
-              38: 11(InParam) Load 34(local)
-                              Store 37(param) 38
-              39:    6(float) FunctionCall 15(fun(struct-InParam-vf2-vf4-vi21;) 37(param)
-                              Store 36(ret1) 39
-              42: 11(InParam) Load 18(i)
-                              Store 41(param) 42
-              43:    6(float) FunctionCall 15(fun(struct-InParam-vf2-vf4-vi21;) 41(param)
-                              Store 40(ret2) 43
-              45:     44(ptr) AccessChain 34(local) 27
-              46:    8(fvec4) Load 45
-              47:    6(float) Load 36(ret1)
-              48:    8(fvec4) VectorTimesScalar 46 47
-              49:    6(float) Load 40(ret2)
-              50:    8(fvec4) VectorTimesScalar 48 49
-                              ReturnValue 50
+54_3(@PixelShaderFunction(struct-InParam-vf2-vf4-vi21;): 23_2(fvec4) Function None 33_3
+         55_2(i):   32_1(ptr) FunctionParameter
+           248_3:             Label
+     59_7(local):   32_1(ptr) Variable Function
+      59_8(ret1):   32_2(ptr) Variable Function
+     59_9(param):   32_1(ptr) Variable Function
+     59_10(ret2):   32_2(ptr) Variable Function
+    59_11(param):   32_1(ptr) Variable Function
+            61_7:30_1(InParam) Load 55_2(i)
+                              Store 59_7(local) 61_7
+            61_8:30_1(InParam) Load 59_7(local)
+                              Store 59_9(param) 61_8
+            57_2: 22_1(float) FunctionCall 54_2(fun(struct-InParam-vf2-vf4-vi21;) 59_9(param)
+                              Store 59_8(ret1) 57_2
+            61_9:30_1(InParam) Load 55_2(i)
+                              Store 59_11(param) 61_9
+            57_3: 22_1(float) FunctionCall 54_2(fun(struct-InParam-vf2-vf4-vi21;) 59_11(param)
+                              Store 59_10(ret2) 57_3
+            65_6:   32_3(ptr) AccessChain 59_7(local) 43_2
+           61_10: 23_2(fvec4) Load 65_6
+           61_11: 22_1(float) Load 59_8(ret1)
+           142_1: 23_2(fvec4) VectorTimesScalar 61_10 61_11
+           61_12: 22_1(float) Load 59_10(ret2)
+           142_2: 23_2(fvec4) VectorTimesScalar 142_1 61_12
+                              ReturnValue 142_2
                               FunctionEnd

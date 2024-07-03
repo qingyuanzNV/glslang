@@ -68,45 +68,45 @@ gl_FragCoord origin is upper left
 // Id's are bound by 30
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 28
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "@main("
-                              Name 12  "test"
-                              Name 28  "@entryPointOutput"
-                              Decorate 28(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypePointer Function 7(fvec4)
-              13:    6(float) Constant 0
-              14:    6(float) Constant 1065353216
-              15:    6(float) Constant 1073741824
-              16:    6(float) Constant 1077936128
-              17:    7(fvec4) ConstantComposite 13 14 15 16
-              18:             TypeInt 32 0
-              19:     18(int) Constant 3
-              20:             TypePointer Function 6(float)
-              27:             TypePointer Output 7(fvec4)
-28(@entryPointOutput):     27(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              29:    7(fvec4) FunctionCall 9(@main()
-                              Store 28(@entryPointOutput) 29
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 59_2  "test"
+                              Name 59_1  "@entryPointOutput"
+                              Decorate 59_1(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            32_1:             TypePointer Function 23_1(fvec4)
+            43_1: 22_1(float) Constant 0
+            43_2: 22_1(float) Constant 1065353216
+            43_3: 22_1(float) Constant 1073741824
+            43_4: 22_1(float) Constant 1077936128
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_2 43_3 43_4
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            32_2:             TypePointer Function 22_1(float)
+            32_3:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main()
+                              Store 59_1(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       9(@main():    7(fvec4) Function None 8
-              10:             Label
-        12(test):     11(ptr) Variable Function
-                              Store 12(test) 17
-              21:     20(ptr) AccessChain 12(test) 19
-              22:    6(float) Load 21
-              23:    6(float) ExtInst 1(GLSL.std.450) 66(Length) 22
-              24:    7(fvec4) CompositeConstruct 23 23 23 23
-                              ReturnValue 24
+    54_2(@main(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+      59_2(test):   32_1(ptr) Variable Function
+                              Store 59_2(test) 44_1
+            65_1:   32_2(ptr) AccessChain 59_2(test) uint(3)
+            61_1: 22_1(float) Load 65_1
+          1-66_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 66(Length) 61_1
+            80_1: 23_1(fvec4) CompositeConstruct 1-66_1 1-66_1 1-66_1 1-66_1
+                              ReturnValue 80_1
                               FunctionEnd

@@ -217,118 +217,118 @@ Validation failed
                               Capability Shader
                               Capability ClipDistance
                               Capability CullDistance
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 21 26 30 34 39 51 59 67
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "S"
-                              MemberName 8(S) 0  "clip0"
-                              MemberName 8(S) 1  "clip1"
-                              MemberName 8(S) 2  "cull0"
-                              MemberName 8(S) 3  "cull1"
-                              MemberName 8(S) 4  "ii"
-                              Name 12  "@main(struct-S-f1-f1-f1-f1-i11;"
-                              Name 11  "ins"
-                              Name 14  "s"
-                              Name 18  "ins"
-                              Name 21  "ins.clip0"
-                              Name 26  "ins.clip1"
-                              Name 30  "ins.cull0"
-                              Name 34  "ins.cull1"
-                              Name 39  "ins.ii"
-                              Name 43  "flattenTemp"
-                              Name 44  "param"
-                              Name 51  "@entryPointOutput.clip1"
-                              Name 59  "@entryPointOutput.cull1"
-                              Name 67  "@entryPointOutput.ii"
-                              Decorate 21(ins.clip0) Location 0
-                              Decorate 26(ins.clip1) Location 1
-                              Decorate 30(ins.cull0) Location 0
-                              Decorate 34(ins.cull1) Location 1
-                              Decorate 39(ins.ii) BuiltIn InstanceIndex
-                              Decorate 51(@entryPointOutput.clip1) BuiltIn ClipDistance
-                              Decorate 59(@entryPointOutput.cull1) BuiltIn CullDistance
-                              Decorate 67(@entryPointOutput.ii) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeInt 32 1
-            8(S):             TypeStruct 6(float) 6(float) 6(float) 6(float) 7(int)
-               9:             TypePointer Function 8(S)
-              10:             TypeFunction 8(S) 9(ptr)
-              19:      7(int) Constant 0
-              20:             TypePointer Input 6(float)
-   21(ins.clip0):     20(ptr) Variable Input
-              23:             TypePointer Function 6(float)
-              25:      7(int) Constant 1
-   26(ins.clip1):     20(ptr) Variable Input
-              29:      7(int) Constant 2
-   30(ins.cull0):     20(ptr) Variable Input
-              33:      7(int) Constant 3
-   34(ins.cull1):     20(ptr) Variable Input
-              37:      7(int) Constant 4
-              38:             TypePointer Input 7(int)
-      39(ins.ii):     38(ptr) Variable Input
-              41:             TypePointer Function 7(int)
-              47:             TypeInt 32 0
-              48:     47(int) Constant 2
-              49:             TypeArray 6(float) 48
-              50:             TypePointer Output 49
-51(@entryPointOutput.clip1):     50(ptr) Variable Output
-              54:             TypePointer Output 6(float)
-59(@entryPointOutput.cull1):     50(ptr) Variable Output
-              66:             TypePointer Output 7(int)
-67(@entryPointOutput.ii):     66(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-         18(ins):      9(ptr) Variable Function
- 43(flattenTemp):      9(ptr) Variable Function
-       44(param):      9(ptr) Variable Function
-              22:    6(float) Load 21(ins.clip0)
-              24:     23(ptr) AccessChain 18(ins) 19
-                              Store 24 22
-              27:    6(float) Load 26(ins.clip1)
-              28:     23(ptr) AccessChain 18(ins) 25
-                              Store 28 27
-              31:    6(float) Load 30(ins.cull0)
-              32:     23(ptr) AccessChain 18(ins) 29
-                              Store 32 31
-              35:    6(float) Load 34(ins.cull1)
-              36:     23(ptr) AccessChain 18(ins) 33
-                              Store 36 35
-              40:      7(int) Load 39(ins.ii)
-              42:     41(ptr) AccessChain 18(ins) 37
-                              Store 42 40
-              45:        8(S) Load 18(ins)
-                              Store 44(param) 45
-              46:        8(S) FunctionCall 12(@main(struct-S-f1-f1-f1-f1-i11;) 44(param)
-                              Store 43(flattenTemp) 46
-              52:     23(ptr) AccessChain 43(flattenTemp) 19
-              53:    6(float) Load 52
-              55:     54(ptr) AccessChain 51(@entryPointOutput.clip1) 19
-                              Store 55 53
-              56:     23(ptr) AccessChain 43(flattenTemp) 25
-              57:    6(float) Load 56
-              58:     54(ptr) AccessChain 51(@entryPointOutput.clip1) 25
-                              Store 58 57
-              60:     23(ptr) AccessChain 43(flattenTemp) 29
-              61:    6(float) Load 60
-              62:     54(ptr) AccessChain 59(@entryPointOutput.cull1) 19
-                              Store 62 61
-              63:     23(ptr) AccessChain 43(flattenTemp) 33
-              64:    6(float) Load 63
-              65:     54(ptr) AccessChain 59(@entryPointOutput.cull1) 25
-                              Store 65 64
-              68:     41(ptr) AccessChain 43(flattenTemp) 37
-              69:      7(int) Load 68
-                              Store 67(@entryPointOutput.ii) 69
+                              Name 54_1  "main"
+                              Name 30_1  "S"
+                              MemberName 30_1(S) 0  "clip0"
+                              MemberName 30_1(S) 1  "clip1"
+                              MemberName 30_1(S) 2  "cull0"
+                              MemberName 30_1(S) 3  "cull1"
+                              MemberName 30_1(S) 4  "ii"
+                              Name 54_2  "@main(struct-S-f1-f1-f1-f1-i11;"
+                              Name 55_1  "ins"
+                              Name 59_12  "s"
+                              Name 59_9  "ins"
+                              Name 59_1  "ins.clip0"
+                              Name 59_2  "ins.clip1"
+                              Name 59_3  "ins.cull0"
+                              Name 59_4  "ins.cull1"
+                              Name 59_5  "ins.ii"
+                              Name 59_10  "flattenTemp"
+                              Name 59_11  "param"
+                              Name 59_6  "@entryPointOutput.clip1"
+                              Name 59_7  "@entryPointOutput.cull1"
+                              Name 59_8  "@entryPointOutput.ii"
+                              Decorate 59_1(ins.clip0) Location 0
+                              Decorate 59_2(ins.clip1) Location 1
+                              Decorate 59_3(ins.cull0) Location 0
+                              Decorate 59_4(ins.cull1) Location 1
+                              Decorate 59_5(ins.ii) BuiltIn InstanceIndex
+                              Decorate 59_6(@entryPointOutput.clip1) BuiltIn ClipDistance
+                              Decorate 59_7(@entryPointOutput.cull1) BuiltIn CullDistance
+                              Decorate 59_8(@entryPointOutput.ii) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            21_1:             TypeInt 32 1
+         30_1(S):             TypeStruct 22_1(float) 22_1(float) 22_1(float) 22_1(float) 21_1(int)
+            32_1:             TypePointer Function 30_1(S)
+            33_2:             TypeFunction 30_1(S) 32_1(ptr)
+            43_1:   21_1(int) Constant 0
+            32_2:             TypePointer Input 22_1(float)
+ 59_1(ins.clip0):   32_2(ptr) Variable Input
+            32_3:             TypePointer Function 22_1(float)
+            43_2:   21_1(int) Constant 1
+ 59_2(ins.clip1):   32_2(ptr) Variable Input
+            43_3:   21_1(int) Constant 2
+ 59_3(ins.cull0):   32_2(ptr) Variable Input
+            43_4:   21_1(int) Constant 3
+ 59_4(ins.cull1):   32_2(ptr) Variable Input
+            43_5:   21_1(int) Constant 4
+            32_4:             TypePointer Input 21_1(int)
+    59_5(ins.ii):   32_4(ptr) Variable Input
+            32_5:             TypePointer Function 21_1(int)
+            21_2:             TypeInt 32 0
+         uint(2):   21_2(int) Constant 2
+            28_1:             TypeArray 22_1(float) uint(2)
+            32_6:             TypePointer Output 28_1
+59_6(@entryPointOutput.clip1):   32_6(ptr) Variable Output
+            32_7:             TypePointer Output 22_1(float)
+59_7(@entryPointOutput.cull1):   32_6(ptr) Variable Output
+            32_8:             TypePointer Output 21_1(int)
+59_8(@entryPointOutput.ii):   32_8(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_9(ins):   32_1(ptr) Variable Function
+59_10(flattenTemp):   32_1(ptr) Variable Function
+    59_11(param):   32_1(ptr) Variable Function
+            61_1: 22_1(float) Load 59_1(ins.clip0)
+            65_1:   32_3(ptr) AccessChain 59_9(ins) 43_1
+                              Store 65_1 61_1
+            61_2: 22_1(float) Load 59_2(ins.clip1)
+            65_2:   32_3(ptr) AccessChain 59_9(ins) 43_2
+                              Store 65_2 61_2
+            61_3: 22_1(float) Load 59_3(ins.cull0)
+            65_3:   32_3(ptr) AccessChain 59_9(ins) 43_3
+                              Store 65_3 61_3
+            61_4: 22_1(float) Load 59_4(ins.cull1)
+            65_4:   32_3(ptr) AccessChain 59_9(ins) 43_4
+                              Store 65_4 61_4
+            61_5:   21_1(int) Load 59_5(ins.ii)
+            65_5:   32_5(ptr) AccessChain 59_9(ins) 43_5
+                              Store 65_5 61_5
+            61_6:     30_1(S) Load 59_9(ins)
+                              Store 59_11(param) 61_6
+            57_1:     30_1(S) FunctionCall 54_2(@main(struct-S-f1-f1-f1-f1-i11;) 59_11(param)
+                              Store 59_10(flattenTemp) 57_1
+            65_6:   32_3(ptr) AccessChain 59_10(flattenTemp) 43_1
+            61_7: 22_1(float) Load 65_6
+            65_7:   32_7(ptr) AccessChain 59_6(@entryPointOutput.clip1) 43_1
+                              Store 65_7 61_7
+            65_8:   32_3(ptr) AccessChain 59_10(flattenTemp) 43_2
+            61_8: 22_1(float) Load 65_8
+            65_9:   32_7(ptr) AccessChain 59_6(@entryPointOutput.clip1) 43_2
+                              Store 65_9 61_8
+           65_10:   32_3(ptr) AccessChain 59_10(flattenTemp) 43_3
+            61_9: 22_1(float) Load 65_10
+           65_11:   32_7(ptr) AccessChain 59_7(@entryPointOutput.cull1) 43_1
+                              Store 65_11 61_9
+           65_12:   32_3(ptr) AccessChain 59_10(flattenTemp) 43_4
+           61_10: 22_1(float) Load 65_12
+           65_13:   32_7(ptr) AccessChain 59_7(@entryPointOutput.cull1) 43_2
+                              Store 65_13 61_10
+           65_14:   32_5(ptr) AccessChain 59_10(flattenTemp) 43_5
+           61_11:   21_1(int) Load 65_14
+                              Store 59_8(@entryPointOutput.ii) 61_11
                               Return
                               FunctionEnd
-12(@main(struct-S-f1-f1-f1-f1-i11;):        8(S) Function None 10
-         11(ins):      9(ptr) FunctionParameter
-              13:             Label
-           14(s):      9(ptr) Variable Function
-              15:        8(S) Load 14(s)
-                              ReturnValue 15
+54_2(@main(struct-S-f1-f1-f1-f1-i11;):     30_1(S) Function None 33_2
+       55_1(ins):   32_1(ptr) FunctionParameter
+           248_2:             Label
+        59_12(s):   32_1(ptr) Variable Function
+           61_12:     30_1(S) Load 59_12(s)
+                              ReturnValue 61_12
                               FunctionEnd

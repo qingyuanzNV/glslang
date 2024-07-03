@@ -218,158 +218,158 @@ using depth_any
 // Id's are bound by 92
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 68 78 82 88
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 DepthReplacing
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 DepthReplacing
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 13  "MyFunc(f1;f1;f1;f1;"
-                              Name 9  "x"
-                              Name 10  "y"
-                              Name 11  "z"
-                              Name 12  "w"
-                              Name 19  "PS_OUTPUT"
-                              MemberName 19(PS_OUTPUT) 0  "Color"
-                              MemberName 19(PS_OUTPUT) 1  "Depth"
-                              Name 23  "@main(vf4;i1;"
-                              Name 21  "inpos"
-                              Name 22  "sampleMask"
-                              Name 31  "x"
-                              Name 33  "z"
-                              Name 35  "y"
-                              Name 36  "param"
-                              Name 38  "param"
-                              Name 39  "param"
-                              Name 41  "param"
-                              Name 52  "psout"
-                              Name 66  "inpos"
-                              Name 68  "inpos"
-                              Name 70  "flattenTemp"
-                              Name 71  "sampleMask"
-                              Name 72  "param"
-                              Name 74  "param"
-                              Name 78  "@entryPointOutput.Color"
-                              Name 82  "@entryPointOutput.Depth"
-                              Name 88  "sampleMask"
-                              Decorate 68(inpos) BuiltIn FragCoord
-                              Decorate 68(inpos) NoPerspective
-                              Decorate 78(@entryPointOutput.Color) Location 0
-                              Decorate 82(@entryPointOutput.Depth) BuiltIn FragDepth
-                              Decorate 88(sampleMask) BuiltIn SampleMask
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               8:             TypeFunction 2 7(ptr) 7(ptr) 7(ptr) 7(ptr)
-              15:             TypeVector 6(float) 4
-              16:             TypePointer Function 15(fvec4)
-              17:             TypeInt 32 1
-              18:             TypePointer Function 17(int)
-   19(PS_OUTPUT):             TypeStruct 15(fvec4) 6(float)
-              20:             TypeFunction 19(PS_OUTPUT) 16(ptr) 18(ptr)
-              27:    6(float) Constant 3212836864
-              28:    6(float) Constant 1065353216
-              32:    6(float) Constant 1088421888
-              34:    6(float) Constant 1077936128
-              42:             TypeInt 32 0
-              43:     42(int) Constant 3
-              51:             TypePointer Function 19(PS_OUTPUT)
-              53:     17(int) Constant 0
-              59:     17(int) Constant 1
-              67:             TypePointer Input 15(fvec4)
-       68(inpos):     67(ptr) Variable Input
-              77:             TypePointer Output 15(fvec4)
-78(@entryPointOutput.Color):     77(ptr) Variable Output
-              81:             TypePointer Output 6(float)
-82(@entryPointOutput.Depth):     81(ptr) Variable Output
-              85:     42(int) Constant 1
-              86:             TypeArray 17(int) 85
-              87:             TypePointer Output 86
-  88(sampleMask):     87(ptr) Variable Output
-              90:             TypePointer Output 17(int)
-         4(main):           2 Function None 3
-               5:             Label
-       66(inpos):     16(ptr) Variable Function
- 70(flattenTemp):     51(ptr) Variable Function
-  71(sampleMask):     18(ptr) Variable Function
-       72(param):     16(ptr) Variable Function
-       74(param):     18(ptr) Variable Function
-              69:   15(fvec4) Load 68(inpos)
-                              Store 66(inpos) 69
-              73:   15(fvec4) Load 66(inpos)
-                              Store 72(param) 73
-              75:19(PS_OUTPUT) FunctionCall 23(@main(vf4;i1;) 72(param) 74(param)
-              76:     17(int) Load 74(param)
-                              Store 71(sampleMask) 76
-                              Store 70(flattenTemp) 75
-              79:     16(ptr) AccessChain 70(flattenTemp) 53
-              80:   15(fvec4) Load 79
-                              Store 78(@entryPointOutput.Color) 80
-              83:      7(ptr) AccessChain 70(flattenTemp) 59
-              84:    6(float) Load 83
-                              Store 82(@entryPointOutput.Depth) 84
-              89:     17(int) Load 71(sampleMask)
-              91:     90(ptr) AccessChain 88(sampleMask) 53
-                              Store 91 89
+                              Name 54_1  "main"
+                              Name 54_2  "MyFunc(f1;f1;f1;f1;"
+                              Name 55_1  "x"
+                              Name 55_2  "y"
+                              Name 55_3  "z"
+                              Name 55_4  "w"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              MemberName 30_1(PS_OUTPUT) 1  "Depth"
+                              Name 54_3  "@main(vf4;i1;"
+                              Name 55_5  "inpos"
+                              Name 55_6  "sampleMask"
+                              Name 59_10  "x"
+                              Name 59_11  "z"
+                              Name 59_12  "y"
+                              Name 59_13  "param"
+                              Name 59_14  "param"
+                              Name 59_15  "param"
+                              Name 59_16  "param"
+                              Name 59_17  "psout"
+                              Name 59_5  "inpos"
+                              Name 59_1  "inpos"
+                              Name 59_6  "flattenTemp"
+                              Name 59_7  "sampleMask"
+                              Name 59_8  "param"
+                              Name 59_9  "param"
+                              Name 59_2  "@entryPointOutput.Color"
+                              Name 59_3  "@entryPointOutput.Depth"
+                              Name 59_4  "sampleMask"
+                              Decorate 59_1(inpos) BuiltIn FragCoord
+                              Decorate 59_1(inpos) NoPerspective
+                              Decorate 59_2(@entryPointOutput.Color) Location 0
+                              Decorate 59_3(@entryPointOutput.Depth) BuiltIn FragDepth
+                              Decorate 59_4(sampleMask) BuiltIn SampleMask
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            33_2:             TypeFunction 19_1 32_1(ptr) 32_1(ptr) 32_1(ptr) 32_1(ptr)
+            23_1:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Function 23_1(fvec4)
+            21_1:             TypeInt 32 1
+            32_3:             TypePointer Function 21_1(int)
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4) 22_1(float)
+            33_3:             TypeFunction 30_1(PS_OUTPUT) 32_2(ptr) 32_3(ptr)
+            43_1: 22_1(float) Constant 3212836864
+            43_2: 22_1(float) Constant 1065353216
+            43_3: 22_1(float) Constant 1088421888
+            43_4: 22_1(float) Constant 1077936128
+            21_2:             TypeInt 32 0
+         uint(3):   21_2(int) Constant 3
+            32_4:             TypePointer Function 30_1(PS_OUTPUT)
+            43_5:   21_1(int) Constant 0
+            43_6:   21_1(int) Constant 1
+            32_5:             TypePointer Input 23_1(fvec4)
+     59_1(inpos):   32_5(ptr) Variable Input
+            32_6:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput.Color):   32_6(ptr) Variable Output
+            32_7:             TypePointer Output 22_1(float)
+59_3(@entryPointOutput.Depth):   32_7(ptr) Variable Output
+         uint(1):   21_2(int) Constant 1
+            28_1:             TypeArray 21_1(int) uint(1)
+            32_8:             TypePointer Output 28_1
+59_4(sampleMask):   32_8(ptr) Variable Output
+            32_9:             TypePointer Output 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_5(inpos):   32_2(ptr) Variable Function
+59_6(flattenTemp):   32_4(ptr) Variable Function
+59_7(sampleMask):   32_3(ptr) Variable Function
+     59_8(param):   32_2(ptr) Variable Function
+     59_9(param):   32_3(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(inpos)
+                              Store 59_5(inpos) 61_1
+            61_2: 23_1(fvec4) Load 59_5(inpos)
+                              Store 59_8(param) 61_2
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_3(@main(vf4;i1;) 59_8(param) 59_9(param)
+            61_3:   21_1(int) Load 59_9(param)
+                              Store 59_7(sampleMask) 61_3
+                              Store 59_6(flattenTemp) 57_1
+            65_1:   32_2(ptr) AccessChain 59_6(flattenTemp) 43_5
+            61_4: 23_1(fvec4) Load 65_1
+                              Store 59_2(@entryPointOutput.Color) 61_4
+            65_2:   32_1(ptr) AccessChain 59_6(flattenTemp) 43_6
+            61_5: 22_1(float) Load 65_2
+                              Store 59_3(@entryPointOutput.Depth) 61_5
+            61_6:   21_1(int) Load 59_7(sampleMask)
+            65_3:   32_9(ptr) AccessChain 59_4(sampleMask) 43_5
+                              Store 65_3 61_6
                               Return
                               FunctionEnd
-13(MyFunc(f1;f1;f1;f1;):           2 Function None 8
-            9(x):      7(ptr) FunctionParameter
-           10(y):      7(ptr) FunctionParameter
-           11(z):      7(ptr) FunctionParameter
-           12(w):      7(ptr) FunctionParameter
-              14:             Label
-              25:    6(float) Load 9(x)
-                              Store 10(y) 25
-              26:    6(float) Load 10(y)
-                              Store 11(z) 26
-                              Store 9(x) 27
-              29:    6(float) Load 12(w)
-              30:    6(float) FMul 29 28
-                              Store 12(w) 30
+54_2(MyFunc(f1;f1;f1;f1;):        19_1 Function None 33_2
+         55_1(x):   32_1(ptr) FunctionParameter
+         55_2(y):   32_1(ptr) FunctionParameter
+         55_3(z):   32_1(ptr) FunctionParameter
+         55_4(w):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            61_7: 22_1(float) Load 55_1(x)
+                              Store 55_2(y) 61_7
+            61_8: 22_1(float) Load 55_2(y)
+                              Store 55_3(z) 61_8
+                              Store 55_1(x) 43_1
+            61_9: 22_1(float) Load 55_4(w)
+           133_1: 22_1(float) FMul 61_9 43_2
+                              Store 55_4(w) 133_1
                               Return
                               FunctionEnd
-23(@main(vf4;i1;):19(PS_OUTPUT) Function None 20
-       21(inpos):     16(ptr) FunctionParameter
-  22(sampleMask):     18(ptr) FunctionParameter
-              24:             Label
-           31(x):      7(ptr) Variable Function
-           33(z):      7(ptr) Variable Function
-           35(y):      7(ptr) Variable Function
-       36(param):      7(ptr) Variable Function
-       38(param):      7(ptr) Variable Function
-       39(param):      7(ptr) Variable Function
-       41(param):      7(ptr) Variable Function
-       52(psout):     51(ptr) Variable Function
-                              Store 31(x) 32
-                              Store 33(z) 34
-              37:    6(float) Load 31(x)
-                              Store 36(param) 37
-              40:    6(float) Load 33(z)
-                              Store 39(param) 40
-              44:      7(ptr) AccessChain 21(inpos) 43
-              45:    6(float) Load 44
-                              Store 41(param) 45
-              46:           2 FunctionCall 13(MyFunc(f1;f1;f1;f1;) 36(param) 38(param) 39(param) 41(param)
-              47:    6(float) Load 38(param)
-                              Store 35(y) 47
-              48:    6(float) Load 39(param)
-                              Store 33(z) 48
-              49:    6(float) Load 41(param)
-              50:      7(ptr) AccessChain 21(inpos) 43
-                              Store 50 49
-              54:    6(float) Load 31(x)
-              55:    6(float) Load 35(y)
-              56:    6(float) Load 33(z)
-              57:   15(fvec4) CompositeConstruct 54 55 56 28
-              58:     16(ptr) AccessChain 52(psout) 53
-                              Store 58 57
-              60:      7(ptr) AccessChain 21(inpos) 43
-              61:    6(float) Load 60
-              62:      7(ptr) AccessChain 52(psout) 59
-                              Store 62 61
-              63:19(PS_OUTPUT) Load 52(psout)
-                              ReturnValue 63
+54_3(@main(vf4;i1;):30_1(PS_OUTPUT) Function None 33_3
+     55_5(inpos):   32_2(ptr) FunctionParameter
+55_6(sampleMask):   32_3(ptr) FunctionParameter
+           248_3:             Label
+        59_10(x):   32_1(ptr) Variable Function
+        59_11(z):   32_1(ptr) Variable Function
+        59_12(y):   32_1(ptr) Variable Function
+    59_13(param):   32_1(ptr) Variable Function
+    59_14(param):   32_1(ptr) Variable Function
+    59_15(param):   32_1(ptr) Variable Function
+    59_16(param):   32_1(ptr) Variable Function
+    59_17(psout):   32_4(ptr) Variable Function
+                              Store 59_10(x) 43_3
+                              Store 59_11(z) 43_4
+           61_10: 22_1(float) Load 59_10(x)
+                              Store 59_13(param) 61_10
+           61_11: 22_1(float) Load 59_11(z)
+                              Store 59_15(param) 61_11
+            65_4:   32_1(ptr) AccessChain 55_5(inpos) uint(3)
+           61_12: 22_1(float) Load 65_4
+                              Store 59_16(param) 61_12
+            57_2:        19_1 FunctionCall 54_2(MyFunc(f1;f1;f1;f1;) 59_13(param) 59_14(param) 59_15(param) 59_16(param)
+           61_13: 22_1(float) Load 59_14(param)
+                              Store 59_12(y) 61_13
+           61_14: 22_1(float) Load 59_15(param)
+                              Store 59_11(z) 61_14
+           61_15: 22_1(float) Load 59_16(param)
+            65_5:   32_1(ptr) AccessChain 55_5(inpos) uint(3)
+                              Store 65_5 61_15
+           61_16: 22_1(float) Load 59_10(x)
+           61_17: 22_1(float) Load 59_12(y)
+           61_18: 22_1(float) Load 59_11(z)
+            80_1: 23_1(fvec4) CompositeConstruct 61_16 61_17 61_18 43_2
+            65_6:   32_2(ptr) AccessChain 59_17(psout) 43_5
+                              Store 65_6 80_1
+            65_7:   32_1(ptr) AccessChain 55_5(inpos) uint(3)
+           61_19: 22_1(float) Load 65_7
+            65_8:   32_1(ptr) AccessChain 59_17(psout) 43_6
+                              Store 65_8 61_19
+           61_20:30_1(PS_OUTPUT) Load 59_17(psout)
+                              ReturnValue 61_20
                               FunctionEnd

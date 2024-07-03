@@ -6,76 +6,76 @@ spv.tpipBoxFilter.frag
                               Capability Shader
                               Capability TextureBoxFilterQCOM
                               Extension  "SPV_QCOM_image_processing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 15 27
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_QCOM_image_processing"
-                              Name 4  "main"
-                              Name 9  "boxSize"
-                              Name 15  "fragColor"
-                              Name 18  "tex2D_src1"
-                              Name 22  "samp"
-                              Name 27  "v_texcoord"
-                              Name 33  "tex_samp"
-                              Name 41  "tex2DArray_weights"
-                              Name 42  "tex2D_src2"
-                              Decorate 15(fragColor) Location 0
-                              Decorate 18(tex2D_src1) Binding 1
-                              Decorate 18(tex2D_src1) DescriptorSet 0
-                              Decorate 22(samp) Binding 3
-                              Decorate 22(samp) DescriptorSet 0
-                              Decorate 27(v_texcoord) Location 0
-                              Decorate 33(tex_samp) Binding 4
-                              Decorate 33(tex_samp) DescriptorSet 0
-                              Decorate 41(tex2DArray_weights) Binding 0
-                              Decorate 41(tex2DArray_weights) DescriptorSet 0
-                              Decorate 42(tex2D_src2) Binding 2
-                              Decorate 42(tex2D_src2) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypePointer Function 7(fvec2)
-              10:    6(float) Constant 1075838976
-              11:    6(float) Constant 1083179008
-              12:    7(fvec2) ConstantComposite 10 11
-              13:             TypeVector 6(float) 4
-              14:             TypePointer Output 13(fvec4)
-   15(fragColor):     14(ptr) Variable Output
-              16:             TypeImage 6(float) 2D sampled format:Unknown
-              17:             TypePointer UniformConstant 16
-  18(tex2D_src1):     17(ptr) Variable UniformConstant
-              20:             TypeSampler
-              21:             TypePointer UniformConstant 20
-        22(samp):     21(ptr) Variable UniformConstant
-              24:             TypeSampledImage 16
-              26:             TypePointer Input 13(fvec4)
-  27(v_texcoord):     26(ptr) Variable Input
-              32:             TypePointer UniformConstant 24
-    33(tex_samp):     32(ptr) Variable UniformConstant
-              39:             TypeImage 6(float) 2D array sampled format:Unknown
-              40:             TypePointer UniformConstant 39
-41(tex2DArray_weights):     40(ptr) Variable UniformConstant
-  42(tex2D_src2):     17(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-      9(boxSize):      8(ptr) Variable Function
-                              Store 9(boxSize) 12
-              19:          16 Load 18(tex2D_src1)
-              23:          20 Load 22(samp)
-              25:          24 SampledImage 19 23
-              28:   13(fvec4) Load 27(v_texcoord)
-              29:    7(fvec2) VectorShuffle 28 28 0 1
-              30:    7(fvec2) Load 9(boxSize)
-              31:   13(fvec4) ImageBoxFilterQCOM 25 29 30
-                              Store 15(fragColor) 31
-              34:          24 Load 33(tex_samp)
-              35:   13(fvec4) Load 27(v_texcoord)
-              36:    7(fvec2) VectorShuffle 35 35 0 1
-              37:    7(fvec2) Load 9(boxSize)
-              38:   13(fvec4) ImageBoxFilterQCOM 34 36 37
-                              Store 15(fragColor) 38
+                              Name 54_1  "main"
+                              Name 59_8  "boxSize"
+                              Name 59_1  "fragColor"
+                              Name 59_2  "tex2D_src1"
+                              Name 59_3  "samp"
+                              Name 59_4  "v_texcoord"
+                              Name 59_5  "tex_samp"
+                              Name 59_6  "tex2DArray_weights"
+                              Name 59_7  "tex2D_src2"
+                              Decorate 59_1(fragColor) Location 0
+                              Decorate 59_2(tex2D_src1) Binding 1
+                              Decorate 59_2(tex2D_src1) DescriptorSet 0
+                              Decorate 59_3(samp) Binding 3
+                              Decorate 59_3(samp) DescriptorSet 0
+                              Decorate 59_4(v_texcoord) Location 0
+                              Decorate 59_5(tex_samp) Binding 4
+                              Decorate 59_5(tex_samp) DescriptorSet 0
+                              Decorate 59_6(tex2DArray_weights) Binding 0
+                              Decorate 59_6(tex2DArray_weights) DescriptorSet 0
+                              Decorate 59_7(tex2D_src2) Binding 2
+                              Decorate 59_7(tex2D_src2) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            32_1:             TypePointer Function 23_1(fvec2)
+            43_1: 22_1(float) Constant 1075838976
+            43_2: 22_1(float) Constant 1083179008
+            44_1: 23_1(fvec2) ConstantComposite 43_1 43_2
+            23_2:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Output 23_2(fvec4)
+ 59_1(fragColor):   32_2(ptr) Variable Output
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            32_3:             TypePointer UniformConstant 25_1
+59_2(tex2D_src1):   32_3(ptr) Variable UniformConstant
+            26_1:             TypeSampler
+            32_4:             TypePointer UniformConstant 26_1
+      59_3(samp):   32_4(ptr) Variable UniformConstant
+            27_1:             TypeSampledImage 25_1
+            32_5:             TypePointer Input 23_2(fvec4)
+59_4(v_texcoord):   32_5(ptr) Variable Input
+            32_6:             TypePointer UniformConstant 27_1
+  59_5(tex_samp):   32_6(ptr) Variable UniformConstant
+            25_2:             TypeImage 22_1(float) 2D array sampled format:Unknown
+            32_7:             TypePointer UniformConstant 25_2
+59_6(tex2DArray_weights):   32_7(ptr) Variable UniformConstant
+59_7(tex2D_src2):   32_3(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+   59_8(boxSize):   32_1(ptr) Variable Function
+                              Store 59_8(boxSize) 44_1
+            61_1:        25_1 Load 59_2(tex2D_src1)
+            61_2:        26_1 Load 59_3(samp)
+            86_1:        27_1 SampledImage 61_1 61_2
+            61_3: 23_2(fvec4) Load 59_4(v_texcoord)
+            79_1: 23_1(fvec2) VectorShuffle 61_3 61_3 0 1
+            61_4: 23_1(fvec2) Load 59_8(boxSize)
+          4481_1: 23_2(fvec4) ImageBoxFilterQCOM 86_1 79_1 61_4
+                              Store 59_1(fragColor) 4481_1
+            61_5:        27_1 Load 59_5(tex_samp)
+            61_6: 23_2(fvec4) Load 59_4(v_texcoord)
+            79_2: 23_1(fvec2) VectorShuffle 61_6 61_6 0 1
+            61_7: 23_1(fvec2) Load 59_8(boxSize)
+          4481_2: 23_2(fvec4) ImageBoxFilterQCOM 61_5 79_2 61_7
+                              Store 59_1(fragColor) 4481_2
                               Return
                               FunctionEnd

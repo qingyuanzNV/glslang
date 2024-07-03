@@ -5,53 +5,53 @@ spv.drawParams.vert
 
                               Capability Shader
                               Capability DrawParameters
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 10 13 16 21
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4
                               Source GLSL 450
                               SourceExtension  "GL_ARB_shader_draw_parameters"
-                              Name 4  "main"
-                              Name 8  "a"
-                              Name 10  "gl_BaseVertexARB"
-                              Name 12  "b"
-                              Name 13  "gl_BaseInstanceARB"
-                              Name 15  "c"
-                              Name 16  "gl_DrawIDARB"
-                              Name 21  "pos"
-                              Decorate 10(gl_BaseVertexARB) BuiltIn BaseVertex
-                              Decorate 13(gl_BaseInstanceARB) BuiltIn BaseInstance
-                              Decorate 16(gl_DrawIDARB) BuiltIn DrawIndex
-                              Decorate 21(pos) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:             TypePointer Input 6(int)
-10(gl_BaseVertexARB):      9(ptr) Variable Input
-13(gl_BaseInstanceARB):      9(ptr) Variable Input
-16(gl_DrawIDARB):      9(ptr) Variable Input
-              18:             TypeFloat 32
-              19:             TypeVector 18(float) 3
-              20:             TypePointer Output 19(fvec3)
-         21(pos):     20(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-            8(a):      7(ptr) Variable Function
-           12(b):      7(ptr) Variable Function
-           15(c):      7(ptr) Variable Function
-              11:      6(int) Load 10(gl_BaseVertexARB)
-                              Store 8(a) 11
-              14:      6(int) Load 13(gl_BaseInstanceARB)
-                              Store 12(b) 14
-              17:      6(int) Load 16(gl_DrawIDARB)
-                              Store 15(c) 17
-              22:      6(int) Load 8(a)
-              23:   18(float) ConvertSToF 22
-              24:      6(int) Load 12(b)
-              25:   18(float) ConvertSToF 24
-              26:      6(int) Load 15(c)
-              27:   18(float) ConvertSToF 26
-              28:   19(fvec3) CompositeConstruct 23 25 27
-                              Store 21(pos) 28
+                              Name 54_1  "main"
+                              Name 59_5  "a"
+                              Name 59_1  "gl_BaseVertexARB"
+                              Name 59_6  "b"
+                              Name 59_2  "gl_BaseInstanceARB"
+                              Name 59_7  "c"
+                              Name 59_3  "gl_DrawIDARB"
+                              Name 59_4  "pos"
+                              Decorate 59_1(gl_BaseVertexARB) BuiltIn BaseVertex
+                              Decorate 59_2(gl_BaseInstanceARB) BuiltIn BaseInstance
+                              Decorate 59_3(gl_DrawIDARB) BuiltIn DrawIndex
+                              Decorate 59_4(pos) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            32_2:             TypePointer Input 21_1(int)
+59_1(gl_BaseVertexARB):   32_2(ptr) Variable Input
+59_2(gl_BaseInstanceARB):   32_2(ptr) Variable Input
+59_3(gl_DrawIDARB):   32_2(ptr) Variable Input
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            32_3:             TypePointer Output 23_1(fvec3)
+       59_4(pos):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_5(a):   32_1(ptr) Variable Function
+         59_6(b):   32_1(ptr) Variable Function
+         59_7(c):   32_1(ptr) Variable Function
+            61_1:   21_1(int) Load 59_1(gl_BaseVertexARB)
+                              Store 59_5(a) 61_1
+            61_2:   21_1(int) Load 59_2(gl_BaseInstanceARB)
+                              Store 59_6(b) 61_2
+            61_3:   21_1(int) Load 59_3(gl_DrawIDARB)
+                              Store 59_7(c) 61_3
+            61_4:   21_1(int) Load 59_5(a)
+           111_1: 22_1(float) ConvertSToF 61_4
+            61_5:   21_1(int) Load 59_6(b)
+           111_2: 22_1(float) ConvertSToF 61_5
+            61_6:   21_1(int) Load 59_7(c)
+           111_3: 22_1(float) ConvertSToF 61_6
+            80_1: 23_1(fvec3) CompositeConstruct 111_1 111_2 111_3
+                              Store 59_4(pos) 80_1
                               Return
                               FunctionEnd

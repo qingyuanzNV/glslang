@@ -5,206 +5,206 @@ spv.320.meshShaderUserDefined.mesh
 
                               Capability MeshShadingNV
                               Extension  "SPV_NV_mesh_shader"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint MeshNV 4  "main" 12 19 37 106
-                              ExecutionMode 4 LocalSize 32 1 1
-                              ExecutionMode 4 OutputVertices 81
-                              ExecutionMode 4 OutputPrimitivesNV 32
-                              ExecutionMode 4 OutputTrianglesNV
+                              EntryPoint MeshNV 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 LocalSize 32 1 1
+                              ExecutionMode 54_1 OutputVertices 81
+                              ExecutionMode 54_1 OutputPrimitivesNV 32
+                              ExecutionMode 54_1 OutputTrianglesNV
                               Source ESSL 320
                               SourceExtension  "GL_NV_mesh_shader"
-                              Name 4  "main"
-                              Name 8  "iid"
-                              Name 12  "gl_LocalInvocationID"
-                              Name 18  "gid"
-                              Name 19  "gl_WorkGroupID"
-                              Name 33  "myblock"
-                              MemberName 33(myblock) 0  "f"
-                              MemberName 33(myblock) 1  "fArr"
-                              MemberName 33(myblock) 2  "pos"
-                              MemberName 33(myblock) 3  "posArr"
-                              MemberName 33(myblock) 4  "m"
-                              MemberName 33(myblock) 5  "mArr"
-                              Name 37  "blk"
-                              Name 102  "myblock2"
-                              MemberName 102(myblock2) 0  "f"
-                              MemberName 102(myblock2) 1  "pos"
-                              MemberName 102(myblock2) 2  "m"
-                              Name 106  "blk2"
-                              Decorate 12(gl_LocalInvocationID) BuiltIn LocalInvocationId
-                              Decorate 19(gl_WorkGroupID) BuiltIn WorkgroupId
-                              Decorate 33(myblock) Block
-                              MemberDecorate 33(myblock) 0 PerPrimitiveNV
-                              MemberDecorate 33(myblock) 1 PerPrimitiveNV
-                              MemberDecorate 33(myblock) 2 PerPrimitiveNV
-                              MemberDecorate 33(myblock) 3 PerPrimitiveNV
-                              MemberDecorate 33(myblock) 4 PerPrimitiveNV
-                              MemberDecorate 33(myblock) 5 PerPrimitiveNV
-                              Decorate 37(blk) Location 0
-                              Decorate 102(myblock2) Block
-                              Decorate 106(blk2) Location 20
-                              Decorate 142 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:             TypeInt 32 0
-              10:             TypeVector 9(int) 3
-              11:             TypePointer Input 10(ivec3)
-12(gl_LocalInvocationID):     11(ptr) Variable Input
-              13:      9(int) Constant 0
-              14:             TypePointer Input 9(int)
-19(gl_WorkGroupID):     11(ptr) Variable Input
-              23:             TypeFloat 32
-              24:      9(int) Constant 4
-              25:             TypeArray 23(float) 24
-              26:             TypeVector 23(float) 3
-              27:             TypeVector 23(float) 4
-              28:             TypeArray 27(fvec4) 24
-              29:             TypeMatrix 27(fvec4) 4
-              30:             TypeMatrix 26(fvec3) 3
-              31:      9(int) Constant 2
-              32:             TypeArray 30 31
-     33(myblock):             TypeStruct 23(float) 25 26(fvec3) 28 29 32
-              34:      9(int) Constant 32
-              35:             TypeArray 33(myblock) 34
-              36:             TypePointer Output 35
-         37(blk):     36(ptr) Variable Output
-              39:      6(int) Constant 0
-              40:   23(float) Constant 1093664768
-              41:             TypePointer Output 23(float)
-              44:      6(int) Constant 1
-              52:      6(int) Constant 2
-              54:   23(float) Constant 1096810496
-              55:   23(float) Constant 1097859072
-              56:   23(float) Constant 1095761920
-              57:   26(fvec3) ConstantComposite 54 55 56
-              58:             TypePointer Output 26(fvec3)
-              64:      6(int) Constant 3
-              69:      9(int) Constant 1
-              74:      9(int) Constant 3
-              78:      6(int) Constant 4
-              80:   23(float) Constant 1098907648
-              81:   27(fvec4) ConstantComposite 56 54 55 80
-              82:             TypePointer Output 27(fvec4)
-              87:      6(int) Constant 5
-              96:   23(float) Constant 1099431936
-              97:   23(float) Constant 1099956224
-              98:   23(float) Constant 1100480512
-              99:   26(fvec3) ConstantComposite 96 97 98
-             101:      9(int) Constant 264
-   102(myblock2):             TypeStruct 23(float) 27(fvec4) 29
-             103:      9(int) Constant 81
-             104:             TypeArray 102(myblock2) 103
-             105:             TypePointer Output 104
-       106(blk2):    105(ptr) Variable Output
-             112:   23(float) Constant 1101004800
-             116:   23(float) Constant 1101529088
-             117:   23(float) Constant 1102053376
-             118:   23(float) Constant 1102577664
-             119:   23(float) Constant 1103101952
-             120:   27(fvec4) ConstantComposite 116 117 118 119
-             132:   23(float) Constant 1105723392
-             142:   10(ivec3) ConstantComposite 34 69 69
-         4(main):           2 Function None 3
-               5:             Label
-          8(iid):      7(ptr) Variable Function
-         18(gid):      7(ptr) Variable Function
-              15:     14(ptr) AccessChain 12(gl_LocalInvocationID) 13
-              16:      9(int) Load 15
-              17:      6(int) Bitcast 16
-                              Store 8(iid) 17
-              20:     14(ptr) AccessChain 19(gl_WorkGroupID) 13
-              21:      9(int) Load 20
-              22:      6(int) Bitcast 21
-                              Store 18(gid) 22
-              38:      6(int) Load 8(iid)
-              42:     41(ptr) AccessChain 37(blk) 38 39
-                              Store 42 40
-              43:      6(int) Load 8(iid)
-              45:      6(int) IAdd 43 44
-              46:      6(int) Load 18(gid)
-              47:      6(int) Load 8(iid)
-              48:     41(ptr) AccessChain 37(blk) 47 39
-              49:   23(float) Load 48
-              50:     41(ptr) AccessChain 37(blk) 45 44 46
-                              Store 50 49
-              51:      6(int) Load 8(iid)
-              53:      6(int) SDiv 51 52
-              59:     58(ptr) AccessChain 37(blk) 53 52
-              60:   26(fvec3) Load 59
-              61:   26(fvec3) VectorShuffle 60 57 5 3 4
-                              Store 59 61
-              62:      6(int) Load 8(iid)
-              63:      6(int) IMul 62 52
-              65:      6(int) Load 8(iid)
-              66:      6(int) SDiv 65 52
-              67:     58(ptr) AccessChain 37(blk) 66 52
-              68:   26(fvec3) Load 67
-              70:     41(ptr) AccessChain 37(blk) 63 64 44 69
-              71:   23(float) CompositeExtract 68 0
-                              Store 70 71
-              72:     41(ptr) AccessChain 37(blk) 63 64 44 31
-              73:   23(float) CompositeExtract 68 1
-                              Store 72 73
-              75:     41(ptr) AccessChain 37(blk) 63 64 44 74
-              76:   23(float) CompositeExtract 68 2
-                              Store 75 76
-              77:      6(int) Load 8(iid)
-              79:      6(int) SDiv 77 78
-              83:     82(ptr) AccessChain 37(blk) 79 78 52
-              84:   27(fvec4) Load 83
-              85:   27(fvec4) VectorShuffle 84 81 7 6 5 4
-                              Store 83 85
-              86:      6(int) Load 8(iid)
-              88:      6(int) Load 8(iid)
-              89:      6(int) SDiv 88 78
-              90:     41(ptr) AccessChain 37(blk) 89 78 52 74
-              91:   23(float) Load 90
-              92:     41(ptr) AccessChain 37(blk) 86 87 39 44 69
-                              Store 92 91
-              93:      6(int) Load 8(iid)
-              94:      6(int) IMul 93 78
-              95:      6(int) Load 18(gid)
-             100:     58(ptr) AccessChain 37(blk) 94 87 44 95
-                              Store 100 99
-                              MemoryBarrier 69 101
-                              ControlBarrier 31 31 101
-             107:      6(int) Load 8(iid)
-             108:      6(int) Load 8(iid)
-             109:      6(int) ISub 108 44
-             110:     41(ptr) AccessChain 106(blk2) 109 39
-             111:   23(float) Load 110
-             113:   23(float) FAdd 111 112
-             114:     41(ptr) AccessChain 106(blk2) 107 39
-                              Store 114 113
-             115:      6(int) Load 8(iid)
-             121:     82(ptr) AccessChain 106(blk2) 115 44
-                              Store 121 120
-             122:      6(int) Load 8(iid)
-             123:      6(int) IAdd 122 44
-             124:      6(int) Load 18(gid)
-             125:      6(int) Load 8(iid)
-             126:     82(ptr) AccessChain 106(blk2) 125 44
-             127:   27(fvec4) Load 126
-             128:     82(ptr) AccessChain 106(blk2) 123 52 124
-                              Store 128 127
-             129:      6(int) Load 8(iid)
-             130:      6(int) IAdd 129 44
-             131:      6(int) Load 18(gid)
-             133:     41(ptr) AccessChain 106(blk2) 130 52 131 31
-                              Store 133 132
-             134:      6(int) Load 8(iid)
-             135:      6(int) IAdd 134 52
-             136:      6(int) Load 8(iid)
-             137:      6(int) IAdd 136 44
-             138:      6(int) Load 18(gid)
-             139:     82(ptr) AccessChain 106(blk2) 137 52 138
-             140:   27(fvec4) Load 139
-             141:     82(ptr) AccessChain 106(blk2) 135 52 64
-                              Store 141 140
-                              MemoryBarrier 69 101
-                              ControlBarrier 31 31 101
+                              Name 54_1  "main"
+                              Name 59_5  "iid"
+                              Name 59_1  "gl_LocalInvocationID"
+                              Name 59_6  "gid"
+                              Name 59_2  "gl_WorkGroupID"
+                              Name 30_1  "myblock"
+                              MemberName 30_1(myblock) 0  "f"
+                              MemberName 30_1(myblock) 1  "fArr"
+                              MemberName 30_1(myblock) 2  "pos"
+                              MemberName 30_1(myblock) 3  "posArr"
+                              MemberName 30_1(myblock) 4  "m"
+                              MemberName 30_1(myblock) 5  "mArr"
+                              Name 59_3  "blk"
+                              Name 30_2  "myblock2"
+                              MemberName 30_2(myblock2) 0  "f"
+                              MemberName 30_2(myblock2) 1  "pos"
+                              MemberName 30_2(myblock2) 2  "m"
+                              Name 59_4  "blk2"
+                              Decorate 59_1(gl_LocalInvocationID) BuiltIn LocalInvocationId
+                              Decorate 59_2(gl_WorkGroupID) BuiltIn WorkgroupId
+                              Decorate 30_1(myblock) Block
+                              MemberDecorate 30_1(myblock) 0 PerPrimitiveNV
+                              MemberDecorate 30_1(myblock) 1 PerPrimitiveNV
+                              MemberDecorate 30_1(myblock) 2 PerPrimitiveNV
+                              MemberDecorate 30_1(myblock) 3 PerPrimitiveNV
+                              MemberDecorate 30_1(myblock) 4 PerPrimitiveNV
+                              MemberDecorate 30_1(myblock) 5 PerPrimitiveNV
+                              Decorate 59_3(blk) Location 0
+                              Decorate 30_2(myblock2) Block
+                              Decorate 59_4(blk2) Location 20
+                              Decorate 44_5 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            21_2:             TypeInt 32 0
+            23_1:             TypeVector 21_2(int) 3
+            32_2:             TypePointer Input 23_1(ivec3)
+59_1(gl_LocalInvocationID):   32_2(ptr) Variable Input
+         uint(0):   21_2(int) Constant 0
+            32_3:             TypePointer Input 21_2(int)
+59_2(gl_WorkGroupID):   32_2(ptr) Variable Input
+            22_1:             TypeFloat 32
+         uint(4):   21_2(int) Constant 4
+            28_1:             TypeArray 22_1(float) uint(4)
+            23_2:             TypeVector 22_1(float) 3
+            23_3:             TypeVector 22_1(float) 4
+            28_2:             TypeArray 23_3(fvec4) uint(4)
+            24_1:             TypeMatrix 23_3(fvec4) 4
+            24_2:             TypeMatrix 23_2(fvec3) 3
+         uint(2):   21_2(int) Constant 2
+            28_3:             TypeArray 24_2 uint(2)
+   30_1(myblock):             TypeStruct 22_1(float) 28_1 23_2(fvec3) 28_2 24_1 28_3
+        uint(32):   21_2(int) Constant 32
+            28_4:             TypeArray 30_1(myblock) uint(32)
+            32_4:             TypePointer Output 28_4
+       59_3(blk):   32_4(ptr) Variable Output
+            43_1:   21_1(int) Constant 0
+            43_2: 22_1(float) Constant 1093664768
+            32_5:             TypePointer Output 22_1(float)
+            43_3:   21_1(int) Constant 1
+            43_4:   21_1(int) Constant 2
+            43_5: 22_1(float) Constant 1096810496
+            43_6: 22_1(float) Constant 1097859072
+            43_7: 22_1(float) Constant 1095761920
+            44_1: 23_2(fvec3) ConstantComposite 43_5 43_6 43_7
+            32_6:             TypePointer Output 23_2(fvec3)
+            43_8:   21_1(int) Constant 3
+         uint(1):   21_2(int) Constant 1
+         uint(3):   21_2(int) Constant 3
+            43_9:   21_1(int) Constant 4
+           43_10: 22_1(float) Constant 1098907648
+            44_2: 23_3(fvec4) ConstantComposite 43_7 43_5 43_6 43_10
+            32_7:             TypePointer Output 23_3(fvec4)
+           43_11:   21_1(int) Constant 5
+           43_12: 22_1(float) Constant 1099431936
+           43_13: 22_1(float) Constant 1099956224
+           43_14: 22_1(float) Constant 1100480512
+            44_3: 23_2(fvec3) ConstantComposite 43_12 43_13 43_14
+       uint(264):   21_2(int) Constant 264
+  30_2(myblock2):             TypeStruct 22_1(float) 23_3(fvec4) 24_1
+        uint(81):   21_2(int) Constant 81
+            28_5:             TypeArray 30_2(myblock2) uint(81)
+            32_8:             TypePointer Output 28_5
+      59_4(blk2):   32_8(ptr) Variable Output
+           43_15: 22_1(float) Constant 1101004800
+           43_16: 22_1(float) Constant 1101529088
+           43_17: 22_1(float) Constant 1102053376
+           43_18: 22_1(float) Constant 1102577664
+           43_19: 22_1(float) Constant 1103101952
+            44_4: 23_3(fvec4) ConstantComposite 43_16 43_17 43_18 43_19
+           43_20: 22_1(float) Constant 1105723392
+            44_5: 23_1(ivec3) ConstantComposite uint(32) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_5(iid):   32_1(ptr) Variable Function
+       59_6(gid):   32_1(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(gl_LocalInvocationID) uint(0)
+            61_1:   21_2(int) Load 65_1
+           124_1:   21_1(int) Bitcast 61_1
+                              Store 59_5(iid) 124_1
+            65_2:   32_3(ptr) AccessChain 59_2(gl_WorkGroupID) uint(0)
+            61_2:   21_2(int) Load 65_2
+           124_2:   21_1(int) Bitcast 61_2
+                              Store 59_6(gid) 124_2
+            61_3:   21_1(int) Load 59_5(iid)
+            65_3:   32_5(ptr) AccessChain 59_3(blk) 61_3 43_1
+                              Store 65_3 43_2
+            61_4:   21_1(int) Load 59_5(iid)
+           128_1:   21_1(int) IAdd 61_4 43_3
+            61_5:   21_1(int) Load 59_6(gid)
+            61_6:   21_1(int) Load 59_5(iid)
+            65_4:   32_5(ptr) AccessChain 59_3(blk) 61_6 43_1
+            61_7: 22_1(float) Load 65_4
+            65_5:   32_5(ptr) AccessChain 59_3(blk) 128_1 43_3 61_5
+                              Store 65_5 61_7
+            61_8:   21_1(int) Load 59_5(iid)
+           135_1:   21_1(int) SDiv 61_8 43_4
+            65_6:   32_6(ptr) AccessChain 59_3(blk) 135_1 43_4
+            61_9: 23_2(fvec3) Load 65_6
+            79_1: 23_2(fvec3) VectorShuffle 61_9 44_1 5 3 4
+                              Store 65_6 79_1
+           61_10:   21_1(int) Load 59_5(iid)
+           132_1:   21_1(int) IMul 61_10 43_4
+           61_11:   21_1(int) Load 59_5(iid)
+           135_2:   21_1(int) SDiv 61_11 43_4
+            65_7:   32_6(ptr) AccessChain 59_3(blk) 135_2 43_4
+           61_12: 23_2(fvec3) Load 65_7
+            65_8:   32_5(ptr) AccessChain 59_3(blk) 132_1 43_8 43_3 uint(1)
+            81_1: 22_1(float) CompositeExtract 61_12 0
+                              Store 65_8 81_1
+            65_9:   32_5(ptr) AccessChain 59_3(blk) 132_1 43_8 43_3 uint(2)
+            81_2: 22_1(float) CompositeExtract 61_12 1
+                              Store 65_9 81_2
+           65_10:   32_5(ptr) AccessChain 59_3(blk) 132_1 43_8 43_3 uint(3)
+            81_3: 22_1(float) CompositeExtract 61_12 2
+                              Store 65_10 81_3
+           61_13:   21_1(int) Load 59_5(iid)
+           135_3:   21_1(int) SDiv 61_13 43_9
+           65_11:   32_7(ptr) AccessChain 59_3(blk) 135_3 43_9 43_4
+           61_14: 23_3(fvec4) Load 65_11
+            79_2: 23_3(fvec4) VectorShuffle 61_14 44_2 7 6 5 4
+                              Store 65_11 79_2
+           61_15:   21_1(int) Load 59_5(iid)
+           61_16:   21_1(int) Load 59_5(iid)
+           135_4:   21_1(int) SDiv 61_16 43_9
+           65_12:   32_5(ptr) AccessChain 59_3(blk) 135_4 43_9 43_4 uint(3)
+           61_17: 22_1(float) Load 65_12
+           65_13:   32_5(ptr) AccessChain 59_3(blk) 61_15 43_11 43_1 43_3 uint(1)
+                              Store 65_13 61_17
+           61_18:   21_1(int) Load 59_5(iid)
+           132_2:   21_1(int) IMul 61_18 43_9
+           61_19:   21_1(int) Load 59_6(gid)
+           65_14:   32_6(ptr) AccessChain 59_3(blk) 132_2 43_11 43_3 61_19
+                              Store 65_14 44_3
+                              MemoryBarrier uint(1) uint(264)
+                              ControlBarrier uint(2) uint(2) uint(264)
+           61_20:   21_1(int) Load 59_5(iid)
+           61_21:   21_1(int) Load 59_5(iid)
+           130_1:   21_1(int) ISub 61_21 43_3
+           65_15:   32_5(ptr) AccessChain 59_4(blk2) 130_1 43_1
+           61_22: 22_1(float) Load 65_15
+           129_1: 22_1(float) FAdd 61_22 43_15
+           65_16:   32_5(ptr) AccessChain 59_4(blk2) 61_20 43_1
+                              Store 65_16 129_1
+           61_23:   21_1(int) Load 59_5(iid)
+           65_17:   32_7(ptr) AccessChain 59_4(blk2) 61_23 43_3
+                              Store 65_17 44_4
+           61_24:   21_1(int) Load 59_5(iid)
+           128_2:   21_1(int) IAdd 61_24 43_3
+           61_25:   21_1(int) Load 59_6(gid)
+           61_26:   21_1(int) Load 59_5(iid)
+           65_18:   32_7(ptr) AccessChain 59_4(blk2) 61_26 43_3
+           61_27: 23_3(fvec4) Load 65_18
+           65_19:   32_7(ptr) AccessChain 59_4(blk2) 128_2 43_4 61_25
+                              Store 65_19 61_27
+           61_28:   21_1(int) Load 59_5(iid)
+           128_3:   21_1(int) IAdd 61_28 43_3
+           61_29:   21_1(int) Load 59_6(gid)
+           65_20:   32_5(ptr) AccessChain 59_4(blk2) 128_3 43_4 61_29 uint(2)
+                              Store 65_20 43_20
+           61_30:   21_1(int) Load 59_5(iid)
+           128_4:   21_1(int) IAdd 61_30 43_4
+           61_31:   21_1(int) Load 59_5(iid)
+           128_5:   21_1(int) IAdd 61_31 43_3
+           61_32:   21_1(int) Load 59_6(gid)
+           65_21:   32_7(ptr) AccessChain 59_4(blk2) 128_5 43_4 61_32
+           61_33: 23_3(fvec4) Load 65_21
+           65_22:   32_7(ptr) AccessChain 59_4(blk2) 128_4 43_4 43_8
+                              Store 65_22 61_33
+                              MemoryBarrier uint(1) uint(264)
+                              ControlBarrier uint(2) uint(2) uint(264)
                               Return
                               FunctionEnd

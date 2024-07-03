@@ -328,164 +328,164 @@ vertex spacing = equal_spacing
 // Id's are bound by 104
 
                               Capability Tessellation
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationControl 4  "main" 41 60 63 81 87
-                              ExecutionMode 4 OutputVertices 4
-                              ExecutionMode 4 Isolines
-                              ExecutionMode 4 SpacingEqual
+                              EntryPoint TessellationControl 54_1  "main" 59_1 59_2 59_3 59_4 59_5
+                              ExecutionMode 54_1 OutputVertices 4
+                              ExecutionMode 54_1 Isolines
+                              ExecutionMode 54_1 SpacingEqual
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "VS_OUT"
-                              MemberName 8(VS_OUT) 0  "cpoint"
-                              Name 14  "HS_OUT"
-                              MemberName 14(HS_OUT) 0  "cpoint"
-                              Name 18  "@main(struct-VS_OUT-vf31[4];u1;"
-                              Name 16  "ip"
-                              Name 17  "m_cpid"
-                              Name 22  "HS_CONSTANT_OUT"
-                              MemberName 22(HS_CONSTANT_OUT) 0  "edges"
-                              Name 25  "PCF(u1;"
-                              Name 24  "pid"
-                              Name 28  "output"
-                              Name 38  "ip"
-                              Name 41  "ip.cpoint"
-                              Name 58  "m_cpid"
-                              Name 60  "m_cpid"
-                              Name 63  "@entryPointOutput.cpoint"
-                              Name 65  "param"
-                              Name 67  "param"
-                              Name 80  "@patchConstantResult"
-                              Name 81  "pid"
-                              Name 82  "param"
-                              Name 87  "@patchConstantOutput.edges"
-                              Name 96  "output"
-                              Decorate 41(ip.cpoint) Location 0
-                              Decorate 60(m_cpid) BuiltIn InvocationId
-                              Decorate 63(@entryPointOutput.cpoint) Location 0
-                              Decorate 81(pid) BuiltIn PrimitiveId
-                              Decorate 87(@patchConstantOutput.edges) BuiltIn TessLevelOuter
-                              Decorate 87(@patchConstantOutput.edges) Patch
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 3
-       8(VS_OUT):             TypeStruct 7(fvec3)
-               9:             TypeInt 32 0
-              10:      9(int) Constant 4
-              11:             TypeArray 8(VS_OUT) 10
-              12:             TypePointer Function 11
-              13:             TypePointer Function 9(int)
-      14(HS_OUT):             TypeStruct 7(fvec3)
-              15:             TypeFunction 14(HS_OUT) 12(ptr) 13(ptr)
-              20:      9(int) Constant 2
-              21:             TypeArray 6(float) 20
-22(HS_CONSTANT_OUT):             TypeStruct 21
-              23:             TypeFunction 22(HS_CONSTANT_OUT) 13(ptr)
-              27:             TypePointer Function 14(HS_OUT)
-              29:             TypeInt 32 1
-              30:     29(int) Constant 0
-              31:             TypePointer Function 7(fvec3)
-              39:             TypeArray 7(fvec3) 10
-              40:             TypePointer Input 39
-   41(ip.cpoint):     40(ptr) Variable Input
-              42:             TypePointer Input 7(fvec3)
-              46:     29(int) Constant 1
-              50:     29(int) Constant 2
-              54:     29(int) Constant 3
-              59:             TypePointer Input 9(int)
-      60(m_cpid):     59(ptr) Variable Input
-              62:             TypePointer Output 39
-63(@entryPointOutput.cpoint):     62(ptr) Variable Output
-              71:             TypePointer Output 7(fvec3)
-              73:      9(int) Constant 0
-              75:             TypeBool
-              79:             TypePointer Function 22(HS_CONSTANT_OUT)
-         81(pid):     59(ptr) Variable Input
-              85:             TypeArray 6(float) 10
-              86:             TypePointer Output 85
-87(@patchConstantOutput.edges):     86(ptr) Variable Output
-              88:             TypePointer Function 6(float)
-              91:             TypePointer Output 6(float)
-              97:    6(float) Constant 1073741824
-              99:    6(float) Constant 1090519040
-         4(main):           2 Function None 3
-               5:             Label
-          38(ip):     12(ptr) Variable Function
-      58(m_cpid):     13(ptr) Variable Function
-       65(param):     12(ptr) Variable Function
-       67(param):     13(ptr) Variable Function
-80(@patchConstantResult):     79(ptr) Variable Function
-       82(param):     13(ptr) Variable Function
-              43:     42(ptr) AccessChain 41(ip.cpoint) 30
-              44:    7(fvec3) Load 43
-              45:     31(ptr) AccessChain 38(ip) 30 30
-                              Store 45 44
-              47:     42(ptr) AccessChain 41(ip.cpoint) 46
-              48:    7(fvec3) Load 47
-              49:     31(ptr) AccessChain 38(ip) 46 30
-                              Store 49 48
-              51:     42(ptr) AccessChain 41(ip.cpoint) 50
-              52:    7(fvec3) Load 51
-              53:     31(ptr) AccessChain 38(ip) 50 30
-                              Store 53 52
-              55:     42(ptr) AccessChain 41(ip.cpoint) 54
-              56:    7(fvec3) Load 55
-              57:     31(ptr) AccessChain 38(ip) 54 30
-                              Store 57 56
-              61:      9(int) Load 60(m_cpid)
-                              Store 58(m_cpid) 61
-              64:      9(int) Load 60(m_cpid)
-              66:          11 Load 38(ip)
-                              Store 65(param) 66
-              68:      9(int) Load 58(m_cpid)
-                              Store 67(param) 68
-              69:  14(HS_OUT) FunctionCall 18(@main(struct-VS_OUT-vf31[4];u1;) 65(param) 67(param)
-              70:    7(fvec3) CompositeExtract 69 0
-              72:     71(ptr) AccessChain 63(@entryPointOutput.cpoint) 64
-                              Store 72 70
-                              ControlBarrier 20 10 73
-              74:      9(int) Load 60(m_cpid)
-              76:    75(bool) IEqual 74 30
-                              SelectionMerge 78 None
-                              BranchConditional 76 77 78
-              77:               Label
-              83:      9(int)   Load 81(pid)
-                                Store 82(param) 83
-              84:22(HS_CONSTANT_OUT)   FunctionCall 25(PCF(u1;) 82(param)
-                                Store 80(@patchConstantResult) 84
-              89:     88(ptr)   AccessChain 80(@patchConstantResult) 30 30
-              90:    6(float)   Load 89
-              92:     91(ptr)   AccessChain 87(@patchConstantOutput.edges) 30
-                                Store 92 90
-              93:     88(ptr)   AccessChain 80(@patchConstantResult) 30 46
-              94:    6(float)   Load 93
-              95:     91(ptr)   AccessChain 87(@patchConstantOutput.edges) 46
-                                Store 95 94
-                                Branch 78
-              78:             Label
+                              Name 54_1  "main"
+                              Name 30_1  "VS_OUT"
+                              MemberName 30_1(VS_OUT) 0  "cpoint"
+                              Name 30_2  "HS_OUT"
+                              MemberName 30_2(HS_OUT) 0  "cpoint"
+                              Name 54_2  "@main(struct-VS_OUT-vf31[4];u1;"
+                              Name 55_1  "ip"
+                              Name 55_2  "m_cpid"
+                              Name 30_3  "HS_CONSTANT_OUT"
+                              MemberName 30_3(HS_CONSTANT_OUT) 0  "edges"
+                              Name 54_3  "PCF(u1;"
+                              Name 55_3  "pid"
+                              Name 59_12  "output"
+                              Name 59_6  "ip"
+                              Name 59_1  "ip.cpoint"
+                              Name 59_7  "m_cpid"
+                              Name 59_2  "m_cpid"
+                              Name 59_3  "@entryPointOutput.cpoint"
+                              Name 59_8  "param"
+                              Name 59_9  "param"
+                              Name 59_10  "@patchConstantResult"
+                              Name 59_4  "pid"
+                              Name 59_11  "param"
+                              Name 59_5  "@patchConstantOutput.edges"
+                              Name 59_13  "output"
+                              Decorate 59_1(ip.cpoint) Location 0
+                              Decorate 59_2(m_cpid) BuiltIn InvocationId
+                              Decorate 59_3(@entryPointOutput.cpoint) Location 0
+                              Decorate 59_4(pid) BuiltIn PrimitiveId
+                              Decorate 59_5(@patchConstantOutput.edges) BuiltIn TessLevelOuter
+                              Decorate 59_5(@patchConstantOutput.edges) Patch
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+    30_1(VS_OUT):             TypeStruct 23_1(fvec3)
+            21_1:             TypeInt 32 0
+         uint(4):   21_1(int) Constant 4
+            28_1:             TypeArray 30_1(VS_OUT) uint(4)
+            32_1:             TypePointer Function 28_1
+            32_2:             TypePointer Function 21_1(int)
+    30_2(HS_OUT):             TypeStruct 23_1(fvec3)
+            33_2:             TypeFunction 30_2(HS_OUT) 32_1(ptr) 32_2(ptr)
+         uint(2):   21_1(int) Constant 2
+            28_2:             TypeArray 22_1(float) uint(2)
+30_3(HS_CONSTANT_OUT):             TypeStruct 28_2
+            33_3:             TypeFunction 30_3(HS_CONSTANT_OUT) 32_2(ptr)
+            32_3:             TypePointer Function 30_2(HS_OUT)
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_4:             TypePointer Function 23_1(fvec3)
+            28_3:             TypeArray 23_1(fvec3) uint(4)
+            32_5:             TypePointer Input 28_3
+ 59_1(ip.cpoint):   32_5(ptr) Variable Input
+            32_6:             TypePointer Input 23_1(fvec3)
+            43_2:   21_2(int) Constant 1
+            43_3:   21_2(int) Constant 2
+            43_4:   21_2(int) Constant 3
+            32_7:             TypePointer Input 21_1(int)
+    59_2(m_cpid):   32_7(ptr) Variable Input
+            32_8:             TypePointer Output 28_3
+59_3(@entryPointOutput.cpoint):   32_8(ptr) Variable Output
+            32_9:             TypePointer Output 23_1(fvec3)
+         uint(0):   21_1(int) Constant 0
+            20_1:             TypeBool
+           32_10:             TypePointer Function 30_3(HS_CONSTANT_OUT)
+       59_4(pid):   32_7(ptr) Variable Input
+            28_4:             TypeArray 22_1(float) uint(4)
+           32_11:             TypePointer Output 28_4
+59_5(@patchConstantOutput.edges):  32_11(ptr) Variable Output
+           32_12:             TypePointer Function 22_1(float)
+           32_13:             TypePointer Output 22_1(float)
+            43_5: 22_1(float) Constant 1073741824
+            43_6: 22_1(float) Constant 1090519040
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_6(ip):   32_1(ptr) Variable Function
+    59_7(m_cpid):   32_2(ptr) Variable Function
+     59_8(param):   32_1(ptr) Variable Function
+     59_9(param):   32_2(ptr) Variable Function
+59_10(@patchConstantResult):  32_10(ptr) Variable Function
+    59_11(param):   32_2(ptr) Variable Function
+            65_1:   32_6(ptr) AccessChain 59_1(ip.cpoint) 43_1
+            61_1: 23_1(fvec3) Load 65_1
+            65_2:   32_4(ptr) AccessChain 59_6(ip) 43_1 43_1
+                              Store 65_2 61_1
+            65_3:   32_6(ptr) AccessChain 59_1(ip.cpoint) 43_2
+            61_2: 23_1(fvec3) Load 65_3
+            65_4:   32_4(ptr) AccessChain 59_6(ip) 43_2 43_1
+                              Store 65_4 61_2
+            65_5:   32_6(ptr) AccessChain 59_1(ip.cpoint) 43_3
+            61_3: 23_1(fvec3) Load 65_5
+            65_6:   32_4(ptr) AccessChain 59_6(ip) 43_3 43_1
+                              Store 65_6 61_3
+            65_7:   32_6(ptr) AccessChain 59_1(ip.cpoint) 43_4
+            61_4: 23_1(fvec3) Load 65_7
+            65_8:   32_4(ptr) AccessChain 59_6(ip) 43_4 43_1
+                              Store 65_8 61_4
+            61_5:   21_1(int) Load 59_2(m_cpid)
+                              Store 59_7(m_cpid) 61_5
+            61_6:   21_1(int) Load 59_2(m_cpid)
+            61_7:        28_1 Load 59_6(ip)
+                              Store 59_8(param) 61_7
+            61_8:   21_1(int) Load 59_7(m_cpid)
+                              Store 59_9(param) 61_8
+            57_1:30_2(HS_OUT) FunctionCall 54_2(@main(struct-VS_OUT-vf31[4];u1;) 59_8(param) 59_9(param)
+            81_1: 23_1(fvec3) CompositeExtract 57_1 0
+            65_9:   32_9(ptr) AccessChain 59_3(@entryPointOutput.cpoint) 61_6
+                              Store 65_9 81_1
+                              ControlBarrier uint(2) uint(4) uint(0)
+            61_9:   21_1(int) Load 59_2(m_cpid)
+           170_1:  20_1(bool) IEqual 61_9 43_1
+                              SelectionMerge 248_3 None
+                              BranchConditional 170_1 248_2 248_3
+           248_2:               Label
+           61_10:   21_1(int)   Load 59_4(pid)
+                                Store 59_11(param) 61_10
+            57_2:30_3(HS_CONSTANT_OUT)   FunctionCall 54_3(PCF(u1;) 59_11(param)
+                                Store 59_10(@patchConstantResult) 57_2
+           65_10:  32_12(ptr)   AccessChain 59_10(@patchConstantResult) 43_1 43_1
+           61_11: 22_1(float)   Load 65_10
+           65_11:  32_13(ptr)   AccessChain 59_5(@patchConstantOutput.edges) 43_1
+                                Store 65_11 61_11
+           65_12:  32_12(ptr)   AccessChain 59_10(@patchConstantResult) 43_1 43_2
+           61_12: 22_1(float)   Load 65_12
+           65_13:  32_13(ptr)   AccessChain 59_5(@patchConstantOutput.edges) 43_2
+                                Store 65_13 61_12
+                                Branch 248_3
+           248_3:             Label
                               Return
                               FunctionEnd
-18(@main(struct-VS_OUT-vf31[4];u1;):  14(HS_OUT) Function None 15
-          16(ip):     12(ptr) FunctionParameter
-      17(m_cpid):     13(ptr) FunctionParameter
-              19:             Label
-      28(output):     27(ptr) Variable Function
-              32:     31(ptr) AccessChain 16(ip) 30 30
-              33:    7(fvec3) Load 32
-              34:     31(ptr) AccessChain 28(output) 30
-                              Store 34 33
-              35:  14(HS_OUT) Load 28(output)
-                              ReturnValue 35
+54_2(@main(struct-VS_OUT-vf31[4];u1;):30_2(HS_OUT) Function None 33_2
+        55_1(ip):   32_1(ptr) FunctionParameter
+    55_2(m_cpid):   32_2(ptr) FunctionParameter
+           248_4:             Label
+   59_12(output):   32_3(ptr) Variable Function
+           65_14:   32_4(ptr) AccessChain 55_1(ip) 43_1 43_1
+           61_13: 23_1(fvec3) Load 65_14
+           65_15:   32_4(ptr) AccessChain 59_12(output) 43_1
+                              Store 65_15 61_13
+           61_14:30_2(HS_OUT) Load 59_12(output)
+                              ReturnValue 61_14
                               FunctionEnd
-     25(PCF(u1;):22(HS_CONSTANT_OUT) Function None 23
-         24(pid):     13(ptr) FunctionParameter
-              26:             Label
-      96(output):     79(ptr) Variable Function
-              98:     88(ptr) AccessChain 96(output) 30 30
-                              Store 98 97
-             100:     88(ptr) AccessChain 96(output) 30 46
-                              Store 100 99
-             101:22(HS_CONSTANT_OUT) Load 96(output)
-                              ReturnValue 101
+   54_3(PCF(u1;):30_3(HS_CONSTANT_OUT) Function None 33_3
+       55_3(pid):   32_2(ptr) FunctionParameter
+           248_5:             Label
+   59_13(output):  32_10(ptr) Variable Function
+           65_16:  32_12(ptr) AccessChain 59_13(output) 43_1 43_1
+                              Store 65_16 43_5
+           65_17:  32_12(ptr) AccessChain 59_13(output) 43_1 43_2
+                              Store 65_17 43_6
+           61_15:30_3(HS_CONSTANT_OUT) Load 59_13(output)
+                              ReturnValue 61_15
                               FunctionEnd

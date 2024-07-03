@@ -4,238 +4,238 @@ spv.shortCircuit.frag
 // Id's are bound by 147
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 12 24 34 113 140 142
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_4 59_6 59_7 59_8
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 400
-                              Name 4  "main"
-                              Name 8  "foo("
-                              Name 12  "of1"
-                              Name 24  "of4"
-                              Name 27  "ub"
-                              Name 34  "ui"
-                              Name 44  "uba"
-                              Name 113  "uf"
-                              Name 140  "uiv4"
-                              Name 142  "uv4"
-                              Name 145  "ub41"
-                              Name 146  "ub42"
-                              Decorate 12(of1) Location 0
-                              Decorate 24(of4) Location 1
-                              Decorate 34(ui) Flat
-                              Decorate 34(ui) Location 3
-                              Decorate 113(uf) Location 2
-                              Decorate 140(uiv4) Flat
-                              Decorate 140(uiv4) Location 0
-                              Decorate 142(uv4) Location 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeBool
-               7:             TypeFunction 6(bool)
-              10:             TypeFloat 32
-              11:             TypePointer Output 10(float)
-         12(of1):     11(ptr) Variable Output
-              14:   10(float) Constant 1065353216
-              17:   10(float) Constant 1092616192
-              21:   10(float) Constant 0
-              22:             TypeVector 10(float) 4
-              23:             TypePointer Output 22(fvec4)
-         24(of4):     23(ptr) Variable Output
-              25:   22(fvec4) ConstantComposite 21 21 21 21
-              26:             TypePointer Private 6(bool)
-          27(ub):     26(ptr) Variable Private
-              32:             TypeInt 32 1
-              33:             TypePointer Input 32(int)
-          34(ui):     33(ptr) Variable Input
-              36:     32(int) Constant 2
-         44(uba):     26(ptr) Variable Private
-             112:             TypePointer Input 10(float)
-         113(uf):    112(ptr) Variable Input
-             116:   10(float) Constant 1082130432
-             138:             TypeVector 32(int) 4
-             139:             TypePointer Input 138(ivec4)
-       140(uiv4):    139(ptr) Variable Input
-             141:             TypePointer Input 22(fvec4)
-        142(uv4):    141(ptr) Variable Input
-             143:             TypeVector 6(bool) 4
-             144:             TypePointer Private 143(bvec4)
-       145(ub41):    144(ptr) Variable Private
-       146(ub42):    144(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-                              Store 12(of1) 21
-                              Store 24(of4) 25
-              28:     6(bool) Load 27(ub)
-              29:     6(bool) LogicalNot 28
-                              SelectionMerge 31 None
-                              BranchConditional 29 30 31
-              30:               Label
-              35:     32(int)   Load 34(ui)
-              37:     6(bool)   SGreaterThan 35 36
-                                Branch 31
-              31:             Label
-              38:     6(bool) Phi 28 5 37 30
-                              SelectionMerge 40 None
-                              BranchConditional 38 39 40
-              39:               Label
-              41:   10(float)   Load 12(of1)
-              42:   10(float)   FAdd 41 14
-                                Store 12(of1) 42
-                                Branch 40
-              40:             Label
-              43:     6(bool) Load 27(ub)
-              45:     6(bool) Load 44(uba)
-              46:     6(bool) LogicalNot 45
-              47:     6(bool) LogicalAnd 43 46
-                              SelectionMerge 49 None
-                              BranchConditional 47 48 49
-              48:               Label
-              50:   10(float)   Load 12(of1)
-              51:   10(float)   FAdd 50 14
-                                Store 12(of1) 51
-                                Branch 49
-              49:             Label
-              52:     6(bool) Load 27(ub)
-              53:     6(bool) LogicalNot 52
-                              SelectionMerge 55 None
-                              BranchConditional 53 54 55
-              54:               Label
-              56:     6(bool)   FunctionCall 8(foo()
-                                Branch 55
-              55:             Label
-              57:     6(bool) Phi 52 49 56 54
-                              SelectionMerge 59 None
-                              BranchConditional 57 58 59
-              58:               Label
-              60:   10(float)   Load 12(of1)
-              61:   10(float)   FAdd 60 14
-                                Store 12(of1) 61
-                                Branch 59
-              59:             Label
-              62:     6(bool) Load 27(ub)
-                              SelectionMerge 64 None
-                              BranchConditional 62 63 64
-              63:               Label
-              65:     6(bool)   FunctionCall 8(foo()
-                                Branch 64
-              64:             Label
-              66:     6(bool) Phi 62 59 65 63
-                              SelectionMerge 68 None
-                              BranchConditional 66 67 68
-              67:               Label
-              69:   10(float)   Load 12(of1)
-              70:   10(float)   FAdd 69 14
-                                Store 12(of1) 70
-                                Branch 68
-              68:             Label
-              71:     6(bool) FunctionCall 8(foo()
-              72:     6(bool) Load 27(ub)
-              73:     6(bool) LogicalOr 71 72
-                              SelectionMerge 75 None
-                              BranchConditional 73 74 75
-              74:               Label
-              76:   10(float)   Load 12(of1)
-              77:   10(float)   FAdd 76 14
-                                Store 12(of1) 77
-                                Branch 75
-              75:             Label
-              78:     6(bool) FunctionCall 8(foo()
-              79:     6(bool) Load 27(ub)
-              80:     6(bool) LogicalAnd 78 79
-                              SelectionMerge 82 None
-                              BranchConditional 80 81 82
-              81:               Label
-              83:   10(float)   Load 12(of1)
-              84:   10(float)   FAdd 83 14
-                                Store 12(of1) 84
-                                Branch 82
-              82:             Label
-              85:     6(bool) Load 27(ub)
-              86:     6(bool) LogicalNot 85
-                              SelectionMerge 88 None
-                              BranchConditional 86 87 88
-              87:               Label
-              89:   10(float)   Load 12(of1)
-              90:   10(float)   FAdd 89 14
-                                Store 12(of1) 90
-              91:     6(bool)   FOrdGreaterThan 90 14
-                                Branch 88
-              88:             Label
-              92:     6(bool) Phi 85 82 91 87
-                              SelectionMerge 94 None
-                              BranchConditional 92 93 94
-              93:               Label
-              95:   22(fvec4)   Load 24(of4)
-              96:   22(fvec4)   CompositeConstruct 14 14 14 14
-              97:   22(fvec4)   FAdd 95 96
-                                Store 24(of4) 97
-                                Branch 94
-              94:             Label
-              98:   10(float) Load 12(of1)
-              99:   10(float) FAdd 98 14
-                              Store 12(of1) 99
-             100:     6(bool) FOrdGreaterThan 99 14
-             101:     6(bool) Load 27(ub)
-             102:     6(bool) LogicalOr 100 101
-                              SelectionMerge 104 None
-                              BranchConditional 102 103 104
-             103:               Label
-             105:   22(fvec4)   Load 24(of4)
-             106:   22(fvec4)   CompositeConstruct 14 14 14 14
-             107:   22(fvec4)   FAdd 105 106
-                                Store 24(of4) 107
-                                Branch 104
-             104:             Label
-             108:     6(bool) Load 27(ub)
-             109:     6(bool) LogicalNot 108
-                              SelectionMerge 111 None
-                              BranchConditional 109 110 111
-             110:               Label
-             114:   10(float)   Load 113(uf)
-             115:   10(float)   ExtInst 1(GLSL.std.450) 13(Sin) 114
-             117:   10(float)   FMul 115 116
-             118:   10(float)   Load 12(of1)
-             119:     6(bool)   FOrdGreaterThan 117 118
-                                Branch 111
-             111:             Label
-             120:     6(bool) Phi 108 104 119 110
-                              SelectionMerge 122 None
-                              BranchConditional 120 121 122
-             121:               Label
-             123:   10(float)   Load 12(of1)
-             124:   10(float)   FAdd 123 14
-                                Store 12(of1) 124
-                                Branch 122
-             122:             Label
-             125:     6(bool) Load 27(ub)
-                              SelectionMerge 127 None
-                              BranchConditional 125 126 127
-             126:               Label
-             128:   10(float)   Load 113(uf)
-             129:   10(float)   ExtInst 1(GLSL.std.450) 13(Sin) 128
-             130:   10(float)   FMul 129 116
-             131:   10(float)   Load 12(of1)
-             132:     6(bool)   FOrdGreaterThan 130 131
-                                Branch 127
-             127:             Label
-             133:     6(bool) Phi 125 122 132 126
-                              SelectionMerge 135 None
-                              BranchConditional 133 134 135
-             134:               Label
-             136:   10(float)   Load 12(of1)
-             137:   10(float)   FAdd 136 14
-                                Store 12(of1) 137
-                                Branch 135
-             135:             Label
+                              Name 54_1  "main"
+                              Name 54_2  "foo("
+                              Name 59_1  "of1"
+                              Name 59_2  "of4"
+                              Name 59_3  "ub"
+                              Name 59_4  "ui"
+                              Name 59_5  "uba"
+                              Name 59_6  "uf"
+                              Name 59_7  "uiv4"
+                              Name 59_8  "uv4"
+                              Name 59_9  "ub41"
+                              Name 59_10  "ub42"
+                              Decorate 59_1(of1) Location 0
+                              Decorate 59_2(of4) Location 1
+                              Decorate 59_4(ui) Flat
+                              Decorate 59_4(ui) Location 3
+                              Decorate 59_6(uf) Location 2
+                              Decorate 59_7(uiv4) Flat
+                              Decorate 59_7(uiv4) Location 0
+                              Decorate 59_8(uv4) Location 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            20_1:             TypeBool
+            33_2:             TypeFunction 20_1(bool)
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Output 22_1(float)
+       59_1(of1):   32_1(ptr) Variable Output
+            43_1: 22_1(float) Constant 1065353216
+            43_2: 22_1(float) Constant 1092616192
+            43_3: 22_1(float) Constant 0
+            23_1:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Output 23_1(fvec4)
+       59_2(of4):   32_2(ptr) Variable Output
+            44_1: 23_1(fvec4) ConstantComposite 43_3 43_3 43_3 43_3
+            32_3:             TypePointer Private 20_1(bool)
+        59_3(ub):   32_3(ptr) Variable Private
+            21_1:             TypeInt 32 1
+            32_4:             TypePointer Input 21_1(int)
+        59_4(ui):   32_4(ptr) Variable Input
+            43_4:   21_1(int) Constant 2
+       59_5(uba):   32_3(ptr) Variable Private
+            32_5:             TypePointer Input 22_1(float)
+        59_6(uf):   32_5(ptr) Variable Input
+            43_5: 22_1(float) Constant 1082130432
+            23_2:             TypeVector 21_1(int) 4
+            32_6:             TypePointer Input 23_2(ivec4)
+      59_7(uiv4):   32_6(ptr) Variable Input
+            32_7:             TypePointer Input 23_1(fvec4)
+       59_8(uv4):   32_7(ptr) Variable Input
+            23_3:             TypeVector 20_1(bool) 4
+            32_8:             TypePointer Private 23_3(bvec4)
+      59_9(ub41):   32_8(ptr) Variable Private
+     59_10(ub42):   32_8(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+                              Store 59_1(of1) 43_3
+                              Store 59_2(of4) 44_1
+            61_1:  20_1(bool) Load 59_3(ub)
+           168_1:  20_1(bool) LogicalNot 61_1
+                              SelectionMerge 248_3 None
+                              BranchConditional 168_1 248_2 248_3
+           248_2:               Label
+            61_2:   21_1(int)   Load 59_4(ui)
+           173_1:  20_1(bool)   SGreaterThan 61_2 43_4
+                                Branch 248_3
+           248_3:             Label
+           245_1:  20_1(bool) Phi 61_1 248_1 173_1 248_2
+                              SelectionMerge 248_5 None
+                              BranchConditional 245_1 248_4 248_5
+           248_4:               Label
+            61_3: 22_1(float)   Load 59_1(of1)
+           129_1: 22_1(float)   FAdd 61_3 43_1
+                                Store 59_1(of1) 129_1
+                                Branch 248_5
+           248_5:             Label
+            61_4:  20_1(bool) Load 59_3(ub)
+            61_5:  20_1(bool) Load 59_5(uba)
+           168_2:  20_1(bool) LogicalNot 61_5
+           167_1:  20_1(bool) LogicalAnd 61_4 168_2
+                              SelectionMerge 248_7 None
+                              BranchConditional 167_1 248_6 248_7
+           248_6:               Label
+            61_6: 22_1(float)   Load 59_1(of1)
+           129_2: 22_1(float)   FAdd 61_6 43_1
+                                Store 59_1(of1) 129_2
+                                Branch 248_7
+           248_7:             Label
+            61_7:  20_1(bool) Load 59_3(ub)
+           168_3:  20_1(bool) LogicalNot 61_7
+                              SelectionMerge 248_9 None
+                              BranchConditional 168_3 248_8 248_9
+           248_8:               Label
+            57_1:  20_1(bool)   FunctionCall 54_2(foo()
+                                Branch 248_9
+           248_9:             Label
+           245_2:  20_1(bool) Phi 61_7 248_7 57_1 248_8
+                              SelectionMerge 248_11 None
+                              BranchConditional 245_2 248_10 248_11
+          248_10:               Label
+            61_8: 22_1(float)   Load 59_1(of1)
+           129_3: 22_1(float)   FAdd 61_8 43_1
+                                Store 59_1(of1) 129_3
+                                Branch 248_11
+          248_11:             Label
+            61_9:  20_1(bool) Load 59_3(ub)
+                              SelectionMerge 248_13 None
+                              BranchConditional 61_9 248_12 248_13
+          248_12:               Label
+            57_2:  20_1(bool)   FunctionCall 54_2(foo()
+                                Branch 248_13
+          248_13:             Label
+           245_3:  20_1(bool) Phi 61_9 248_11 57_2 248_12
+                              SelectionMerge 248_15 None
+                              BranchConditional 245_3 248_14 248_15
+          248_14:               Label
+           61_10: 22_1(float)   Load 59_1(of1)
+           129_4: 22_1(float)   FAdd 61_10 43_1
+                                Store 59_1(of1) 129_4
+                                Branch 248_15
+          248_15:             Label
+            57_3:  20_1(bool) FunctionCall 54_2(foo()
+           61_11:  20_1(bool) Load 59_3(ub)
+           166_1:  20_1(bool) LogicalOr 57_3 61_11
+                              SelectionMerge 248_17 None
+                              BranchConditional 166_1 248_16 248_17
+          248_16:               Label
+           61_12: 22_1(float)   Load 59_1(of1)
+           129_5: 22_1(float)   FAdd 61_12 43_1
+                                Store 59_1(of1) 129_5
+                                Branch 248_17
+          248_17:             Label
+            57_4:  20_1(bool) FunctionCall 54_2(foo()
+           61_13:  20_1(bool) Load 59_3(ub)
+           167_2:  20_1(bool) LogicalAnd 57_4 61_13
+                              SelectionMerge 248_19 None
+                              BranchConditional 167_2 248_18 248_19
+          248_18:               Label
+           61_14: 22_1(float)   Load 59_1(of1)
+           129_6: 22_1(float)   FAdd 61_14 43_1
+                                Store 59_1(of1) 129_6
+                                Branch 248_19
+          248_19:             Label
+           61_15:  20_1(bool) Load 59_3(ub)
+           168_4:  20_1(bool) LogicalNot 61_15
+                              SelectionMerge 248_21 None
+                              BranchConditional 168_4 248_20 248_21
+          248_20:               Label
+           61_16: 22_1(float)   Load 59_1(of1)
+           129_7: 22_1(float)   FAdd 61_16 43_1
+                                Store 59_1(of1) 129_7
+           186_1:  20_1(bool)   FOrdGreaterThan 129_7 43_1
+                                Branch 248_21
+          248_21:             Label
+           245_4:  20_1(bool) Phi 61_15 248_19 186_1 248_20
+                              SelectionMerge 248_23 None
+                              BranchConditional 245_4 248_22 248_23
+          248_22:               Label
+           61_17: 23_1(fvec4)   Load 59_2(of4)
+            80_1: 23_1(fvec4)   CompositeConstruct 43_1 43_1 43_1 43_1
+           129_8: 23_1(fvec4)   FAdd 61_17 80_1
+                                Store 59_2(of4) 129_8
+                                Branch 248_23
+          248_23:             Label
+           61_18: 22_1(float) Load 59_1(of1)
+           129_9: 22_1(float) FAdd 61_18 43_1
+                              Store 59_1(of1) 129_9
+           186_2:  20_1(bool) FOrdGreaterThan 129_9 43_1
+           61_19:  20_1(bool) Load 59_3(ub)
+           166_2:  20_1(bool) LogicalOr 186_2 61_19
+                              SelectionMerge 248_25 None
+                              BranchConditional 166_2 248_24 248_25
+          248_24:               Label
+           61_20: 23_1(fvec4)   Load 59_2(of4)
+            80_2: 23_1(fvec4)   CompositeConstruct 43_1 43_1 43_1 43_1
+          129_10: 23_1(fvec4)   FAdd 61_20 80_2
+                                Store 59_2(of4) 129_10
+                                Branch 248_25
+          248_25:             Label
+           61_21:  20_1(bool) Load 59_3(ub)
+           168_5:  20_1(bool) LogicalNot 61_21
+                              SelectionMerge 248_27 None
+                              BranchConditional 168_5 248_26 248_27
+          248_26:               Label
+           61_22: 22_1(float)   Load 59_6(uf)
+          1-13_1: 22_1(float)   ExtInst 11_1(GLSL.std.450) 13(Sin) 61_22
+           133_1: 22_1(float)   FMul 1-13_1 43_5
+           61_23: 22_1(float)   Load 59_1(of1)
+           186_3:  20_1(bool)   FOrdGreaterThan 133_1 61_23
+                                Branch 248_27
+          248_27:             Label
+           245_5:  20_1(bool) Phi 61_21 248_25 186_3 248_26
+                              SelectionMerge 248_29 None
+                              BranchConditional 245_5 248_28 248_29
+          248_28:               Label
+           61_24: 22_1(float)   Load 59_1(of1)
+          129_11: 22_1(float)   FAdd 61_24 43_1
+                                Store 59_1(of1) 129_11
+                                Branch 248_29
+          248_29:             Label
+           61_25:  20_1(bool) Load 59_3(ub)
+                              SelectionMerge 248_31 None
+                              BranchConditional 61_25 248_30 248_31
+          248_30:               Label
+           61_26: 22_1(float)   Load 59_6(uf)
+          1-13_2: 22_1(float)   ExtInst 11_1(GLSL.std.450) 13(Sin) 61_26
+           133_2: 22_1(float)   FMul 1-13_2 43_5
+           61_27: 22_1(float)   Load 59_1(of1)
+           186_4:  20_1(bool)   FOrdGreaterThan 133_2 61_27
+                                Branch 248_31
+          248_31:             Label
+           245_6:  20_1(bool) Phi 61_25 248_29 186_4 248_30
+                              SelectionMerge 248_33 None
+                              BranchConditional 245_6 248_32 248_33
+          248_32:               Label
+           61_28: 22_1(float)   Load 59_1(of1)
+          129_12: 22_1(float)   FAdd 61_28 43_1
+                                Store 59_1(of1) 129_12
+                                Branch 248_33
+          248_33:             Label
                               Return
                               FunctionEnd
-         8(foo():     6(bool) Function None 7
-               9:             Label
-              13:   10(float) Load 12(of1)
-              15:   10(float) FAdd 13 14
-                              Store 12(of1) 15
-              16:   10(float) Load 12(of1)
-              18:     6(bool) FOrdGreaterThan 16 17
-                              ReturnValue 18
+      54_2(foo():  20_1(bool) Function None 33_2
+          248_34:             Label
+           61_29: 22_1(float) Load 59_1(of1)
+          129_13: 22_1(float) FAdd 61_29 43_1
+                              Store 59_1(of1) 129_13
+           61_30: 22_1(float) Load 59_1(of1)
+           186_5:  20_1(bool) FOrdGreaterThan 61_30 43_2
+                              ReturnValue 186_5
                               FunctionEnd

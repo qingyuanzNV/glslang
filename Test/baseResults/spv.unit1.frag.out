@@ -197,104 +197,104 @@ gl_FragCoord origin is upper left
 // Id's are bound by 69
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 25 37 57
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_3 59_4 59_5
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 460
-                              Name 4  "main"
-                              Name 8  "foo("
-                              Name 10  "bar("
-                              Name 13  "h3"
-                              Name 15  "f"
-                              Name 18  "g"
-                              Name 25  "gl_FragCoord"
-                              Name 33  "h2"
-                              Name 37  "cin"
-                              Name 40  "g2"
-                              Name 53  "g3"
-                              Name 57  "cout"
-                              Name 67  "a1"
-                              Name 68  "a2"
-                              Decorate 25(gl_FragCoord) BuiltIn FragCoord
-                              Decorate 37(cin) Location 0
-                              Decorate 57(cout) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeFunction 6(float)
-              12:             TypePointer Private 6(float)
-          13(h3):     12(ptr) Variable Private
-              14:    6(float) Constant 1077936128
-           15(f):     12(ptr) Variable Private
-              16:    6(float) Constant 1092616192
-              17:             TypePointer Function 6(float)
-              23:             TypeVector 6(float) 4
-              24:             TypePointer Input 23(fvec4)
-25(gl_FragCoord):     24(ptr) Variable Input
-              26:             TypeInt 32 0
-              27:     26(int) Constant 1
-              28:             TypePointer Input 6(float)
-              34:    6(float) Constant 1073741824
-         37(cin):     28(ptr) Variable Input
-              56:             TypePointer Output 6(float)
-        57(cout):     56(ptr) Variable Output
-          67(a1):     12(ptr) Variable Private
-          68(a2):     12(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-           18(g):     17(ptr) Variable Function
-                              Store 13(h3) 14
-                              Store 15(f) 16
-              19:    6(float) FunctionCall 8(foo()
-                              Store 18(g) 19
-              20:    6(float) Load 18(g)
-              21:    6(float) Load 15(f)
-              22:    6(float) FAdd 21 20
-                              Store 15(f) 22
-              29:     28(ptr) AccessChain 25(gl_FragCoord) 27
-              30:    6(float) Load 29
-              31:    6(float) Load 15(f)
-              32:    6(float) FAdd 31 30
-                              Store 15(f) 32
+                              Name 54_1  "main"
+                              Name 54_2  "foo("
+                              Name 54_3  "bar("
+                              Name 59_1  "h3"
+                              Name 59_2  "f"
+                              Name 59_8  "g"
+                              Name 59_3  "gl_FragCoord"
+                              Name 59_9  "h2"
+                              Name 59_4  "cin"
+                              Name 59_10  "g2"
+                              Name 59_11  "g3"
+                              Name 59_5  "cout"
+                              Name 59_6  "a1"
+                              Name 59_7  "a2"
+                              Decorate 59_3(gl_FragCoord) BuiltIn FragCoord
+                              Decorate 59_4(cin) Location 0
+                              Decorate 59_5(cout) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            33_2:             TypeFunction 22_1(float)
+            32_1:             TypePointer Private 22_1(float)
+        59_1(h3):   32_1(ptr) Variable Private
+            43_1: 22_1(float) Constant 1077936128
+         59_2(f):   32_1(ptr) Variable Private
+            43_2: 22_1(float) Constant 1092616192
+            32_2:             TypePointer Function 22_1(float)
+            23_1:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Input 23_1(fvec4)
+59_3(gl_FragCoord):   32_3(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(1):   21_1(int) Constant 1
+            32_4:             TypePointer Input 22_1(float)
+            43_3: 22_1(float) Constant 1073741824
+       59_4(cin):   32_4(ptr) Variable Input
+            32_5:             TypePointer Output 22_1(float)
+      59_5(cout):   32_5(ptr) Variable Output
+        59_6(a1):   32_1(ptr) Variable Private
+        59_7(a2):   32_1(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_8(g):   32_2(ptr) Variable Function
+                              Store 59_1(h3) 43_1
+                              Store 59_2(f) 43_2
+            57_1: 22_1(float) FunctionCall 54_2(foo()
+                              Store 59_8(g) 57_1
+            61_1: 22_1(float) Load 59_8(g)
+            61_2: 22_1(float) Load 59_2(f)
+           129_1: 22_1(float) FAdd 61_2 61_1
+                              Store 59_2(f) 129_1
+            65_1:   32_4(ptr) AccessChain 59_3(gl_FragCoord) uint(1)
+            61_3: 22_1(float) Load 65_1
+            61_4: 22_1(float) Load 59_2(f)
+           129_2: 22_1(float) FAdd 61_4 61_3
+                              Store 59_2(f) 129_2
                               Return
                               FunctionEnd
-         8(foo():    6(float) Function None 7
-               9:             Label
-          33(h2):     17(ptr) Variable Function
-          40(g2):     17(ptr) Variable Function
-              35:    6(float) Load 15(f)
-              36:    6(float) FMul 34 35
-              38:    6(float) Load 37(cin)
-              39:    6(float) FAdd 36 38
-                              Store 33(h2) 39
-              41:    6(float) FunctionCall 10(bar()
-                              Store 40(g2) 41
-              42:    6(float) Load 33(h2)
-              43:    6(float) Load 40(g2)
-              44:    6(float) FAdd 42 43
-              45:     28(ptr) AccessChain 25(gl_FragCoord) 27
-              46:    6(float) Load 45
-              47:    6(float) FAdd 44 46
-                              ReturnValue 47
+      54_2(foo(): 22_1(float) Function None 33_2
+           248_2:             Label
+        59_9(h2):   32_2(ptr) Variable Function
+       59_10(g2):   32_2(ptr) Variable Function
+            61_5: 22_1(float) Load 59_2(f)
+           133_1: 22_1(float) FMul 43_3 61_5
+            61_6: 22_1(float) Load 59_4(cin)
+           129_3: 22_1(float) FAdd 133_1 61_6
+                              Store 59_9(h2) 129_3
+            57_2: 22_1(float) FunctionCall 54_3(bar()
+                              Store 59_10(g2) 57_2
+            61_7: 22_1(float) Load 59_9(h2)
+            61_8: 22_1(float) Load 59_10(g2)
+           129_4: 22_1(float) FAdd 61_7 61_8
+            65_2:   32_4(ptr) AccessChain 59_3(gl_FragCoord) uint(1)
+            61_9: 22_1(float) Load 65_2
+           129_5: 22_1(float) FAdd 129_4 61_9
+                              ReturnValue 129_5
                               FunctionEnd
-        10(bar():    6(float) Function None 7
-              11:             Label
-          53(g3):     17(ptr) Variable Function
-              50:    6(float) Load 15(f)
-              51:    6(float) Load 13(h3)
-              52:    6(float) FMul 51 50
-                              Store 13(h3) 52
-              54:    6(float) Load 13(h3)
-              55:    6(float) FMul 34 54
-                              Store 53(g3) 55
-              58:    6(float) Load 53(g3)
-                              Store 57(cout) 58
-              59:    6(float) Load 13(h3)
-              60:    6(float) Load 53(g3)
-              61:    6(float) FAdd 59 60
-              62:     28(ptr) AccessChain 25(gl_FragCoord) 27
-              63:    6(float) Load 62
-              64:    6(float) FAdd 61 63
-                              ReturnValue 64
+      54_3(bar(): 22_1(float) Function None 33_2
+           248_3:             Label
+       59_11(g3):   32_2(ptr) Variable Function
+           61_10: 22_1(float) Load 59_2(f)
+           61_11: 22_1(float) Load 59_1(h3)
+           133_2: 22_1(float) FMul 61_11 61_10
+                              Store 59_1(h3) 133_2
+           61_12: 22_1(float) Load 59_1(h3)
+           133_3: 22_1(float) FMul 43_3 61_12
+                              Store 59_11(g3) 133_3
+           61_13: 22_1(float) Load 59_11(g3)
+                              Store 59_5(cout) 61_13
+           61_14: 22_1(float) Load 59_1(h3)
+           61_15: 22_1(float) Load 59_11(g3)
+           129_6: 22_1(float) FAdd 61_14 61_15
+            65_3:   32_4(ptr) AccessChain 59_3(gl_FragCoord) uint(1)
+           61_16: 22_1(float) Load 65_3
+           129_7: 22_1(float) FAdd 129_6 61_16
+                              ReturnValue 129_7
                               FunctionEnd

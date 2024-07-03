@@ -128,92 +128,92 @@ gl_FragCoord origin is upper left
 // Id's are bound by 56
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 53
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_OUTPUT"
-                              MemberName 8(PS_OUTPUT) 0  "Color"
-                              Name 10  "@main("
-                              Name 14  "$Global"
-                              MemberName 14($Global) 0  "ival"
-                              MemberName 14($Global) 1  "ival4"
-                              MemberName 14($Global) 2  "fval"
-                              MemberName 14($Global) 3  "fval4"
-                              Name 16  ""
-                              Name 44  "psout"
-                              Name 53  "@entryPointOutput.Color"
-                              Decorate 14($Global) Block
-                              MemberDecorate 14($Global) 0 Offset 0
-                              MemberDecorate 14($Global) 1 Offset 16
-                              MemberDecorate 14($Global) 2 Offset 32
-                              MemberDecorate 14($Global) 3 Offset 48
-                              Decorate 16 Binding 0
-                              Decorate 16 DescriptorSet 0
-                              Decorate 53(@entryPointOutput.Color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(PS_OUTPUT):             TypeStruct 7(fvec4)
-               9:             TypeFunction 8(PS_OUTPUT)
-              12:             TypeInt 32 1
-              13:             TypeVector 12(int) 4
-     14($Global):             TypeStruct 12(int) 13(ivec4) 6(float) 7(fvec4)
-              15:             TypePointer Uniform 14($Global)
-              16:     15(ptr) Variable Uniform
-              17:     12(int) Constant 0
-              18:             TypePointer Uniform 12(int)
-              21:             TypeBool
-              22:             TypeInt 32 0
-              23:     22(int) Constant 0
-              25:     12(int) Constant 2
-              26:             TypePointer Uniform 6(float)
-              29:    6(float) Constant 0
-              43:             TypePointer Function 8(PS_OUTPUT)
-              45:    6(float) Constant 1065353216
-              46:    7(fvec4) ConstantComposite 45 45 45 45
-              47:             TypePointer Function 7(fvec4)
-              52:             TypePointer Output 7(fvec4)
-53(@entryPointOutput.Color):     52(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              54:8(PS_OUTPUT) FunctionCall 10(@main()
-              55:    7(fvec4) CompositeExtract 54 0
-                              Store 53(@entryPointOutput.Color) 55
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              Name 54_2  "@main("
+                              Name 30_2  "$Global"
+                              MemberName 30_2($Global) 0  "ival"
+                              MemberName 30_2($Global) 1  "ival4"
+                              MemberName 30_2($Global) 2  "fval"
+                              MemberName 30_2($Global) 3  "fval4"
+                              Name 59_1  ""
+                              Name 59_3  "psout"
+                              Name 59_2  "@entryPointOutput.Color"
+                              Decorate 30_2($Global) Block
+                              MemberDecorate 30_2($Global) 0 Offset 0
+                              MemberDecorate 30_2($Global) 1 Offset 16
+                              MemberDecorate 30_2($Global) 2 Offset 32
+                              MemberDecorate 30_2($Global) 3 Offset 48
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(@entryPointOutput.Color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            21_1:             TypeInt 32 1
+            23_2:             TypeVector 21_1(int) 4
+   30_2($Global):             TypeStruct 21_1(int) 23_2(ivec4) 22_1(float) 23_1(fvec4)
+            32_1:             TypePointer Uniform 30_2($Global)
+            59_1:   32_1(ptr) Variable Uniform
+            43_1:   21_1(int) Constant 0
+            32_2:             TypePointer Uniform 21_1(int)
+            20_1:             TypeBool
+            21_2:             TypeInt 32 0
+         uint(0):   21_2(int) Constant 0
+            43_2:   21_1(int) Constant 2
+            32_3:             TypePointer Uniform 22_1(float)
+            43_3: 22_1(float) Constant 0
+            32_4:             TypePointer Function 30_1(PS_OUTPUT)
+            43_4: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_4 43_4 43_4 43_4
+            32_5:             TypePointer Function 23_1(fvec4)
+            32_6:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput.Color):   32_6(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_2(@main()
+            81_1: 23_1(fvec4) CompositeExtract 57_1 0
+                              Store 59_2(@entryPointOutput.Color) 81_1
                               Return
                               FunctionEnd
-      10(@main():8(PS_OUTPUT) Function None 9
-              11:             Label
-       44(psout):     43(ptr) Variable Function
-              19:     18(ptr) AccessChain 16 17
-              20:     12(int) Load 19
-              24:    21(bool) INotEqual 20 23
-              27:     26(ptr) AccessChain 16 25
-              28:    6(float) Load 27
-              30:    21(bool) FUnordNotEqual 28 29
-              31:    21(bool) LogicalAnd 24 30
-                              SelectionMerge 33 None
-                              BranchConditional 31 32 33
-              32:               Label
-                                Branch 33
-              33:             Label
-              34:     18(ptr) AccessChain 16 17
-              35:     12(int) Load 34
-              36:    21(bool) INotEqual 35 23
-              37:     26(ptr) AccessChain 16 25
-              38:    6(float) Load 37
-              39:    21(bool) FUnordNotEqual 38 29
-              40:    21(bool) LogicalOr 36 39
-                              SelectionMerge 42 None
-                              BranchConditional 40 41 42
-              41:               Label
-                                Branch 42
-              42:             Label
-              48:     47(ptr) AccessChain 44(psout) 17
-                              Store 48 46
-              49:8(PS_OUTPUT) Load 44(psout)
-                              ReturnValue 49
+    54_2(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_2:             Label
+     59_3(psout):   32_4(ptr) Variable Function
+            65_1:   32_2(ptr) AccessChain 59_1 43_1
+            61_1:   21_1(int) Load 65_1
+           171_1:  20_1(bool) INotEqual 61_1 uint(0)
+            65_2:   32_3(ptr) AccessChain 59_1 43_2
+            61_2: 22_1(float) Load 65_2
+           183_1:  20_1(bool) FUnordNotEqual 61_2 43_3
+           167_1:  20_1(bool) LogicalAnd 171_1 183_1
+                              SelectionMerge 248_4 None
+                              BranchConditional 167_1 248_3 248_4
+           248_3:               Label
+                                Branch 248_4
+           248_4:             Label
+            65_3:   32_2(ptr) AccessChain 59_1 43_1
+            61_3:   21_1(int) Load 65_3
+           171_2:  20_1(bool) INotEqual 61_3 uint(0)
+            65_4:   32_3(ptr) AccessChain 59_1 43_2
+            61_4: 22_1(float) Load 65_4
+           183_2:  20_1(bool) FUnordNotEqual 61_4 43_3
+           166_1:  20_1(bool) LogicalOr 171_2 183_2
+                              SelectionMerge 248_6 None
+                              BranchConditional 166_1 248_5 248_6
+           248_5:               Label
+                                Branch 248_6
+           248_6:             Label
+            65_5:   32_5(ptr) AccessChain 59_3(psout) 43_1
+                              Store 65_5 44_1
+            61_5:30_1(PS_OUTPUT) Load 59_3(psout)
+                              ReturnValue 61_5
                               FunctionEnd

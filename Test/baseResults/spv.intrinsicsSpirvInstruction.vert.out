@@ -8,53 +8,53 @@ spv.intrinsicsSpirvInstruction.vert
                               Capability ShaderClockKHR
                               Extension  "SPV_AMD_shader_trinary_minmax"
                               Extension  "SPV_KHR_shader_clock"
-               1:             ExtInstImport  "GLSL.std.450"
-              30:             ExtInstImport  "SPV_AMD_shader_trinary_minmax"
+            11_1:             ExtInstImport  "GLSL.std.450"
+            11_2:             ExtInstImport  "SPV_AMD_shader_trinary_minmax"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 9 15 20 23
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4
                               Source GLSL 450
                               SourceExtension  "GL_ARB_gpu_shader_int64"
                               SourceExtension  "GL_EXT_spirv_intrinsics"
-                              Name 4  "main"
-                              Name 9  "uvec2Out"
-                              Name 15  "u64Out"
-                              Name 20  "vec2Out"
-                              Name 23  "vec3In"
-                              Decorate 9(uvec2Out) Location 0
-                              Decorate 15(u64Out) Location 1
-                              Decorate 20(vec2Out) Location 2
-                              Decorate 23(vec3In) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 2
-               8:             TypePointer Output 7(ivec2)
-     9(uvec2Out):      8(ptr) Variable Output
-              10:             TypeInt 32 1
-              11:     10(int) Constant 1
-              13:             TypeInt 64 0
-              14:             TypePointer Output 13(int64_t)
-      15(u64Out):     14(ptr) Variable Output
-              17:             TypeFloat 32
-              18:             TypeVector 17(float) 2
-              19:             TypePointer Output 18(fvec2)
-     20(vec2Out):     19(ptr) Variable Output
-              21:             TypeVector 17(float) 3
-              22:             TypePointer Input 21(fvec3)
-      23(vec3In):     22(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              12:    7(ivec2) ReadClockKHR 11
-                              Store 9(uvec2Out) 12
-              16: 13(int64_t) ReadClockKHR 11
-                              Store 15(u64Out) 16
-              24:   21(fvec3) Load 23(vec3In)
-              25:   18(fvec2) VectorShuffle 24 24 0 1
-              26:   21(fvec3) Load 23(vec3In)
-              27:   18(fvec2) VectorShuffle 26 26 1 2
-              28:   21(fvec3) Load 23(vec3In)
-              29:   18(fvec2) VectorShuffle 28 28 2 0
-              31:   18(fvec2) ExtInst 30(SPV_AMD_shader_trinary_minmax) 1(FMin3AMD) 25 27 29
-                              Store 20(vec2Out) 31
+                              Name 54_1  "main"
+                              Name 59_1  "uvec2Out"
+                              Name 59_2  "u64Out"
+                              Name 59_3  "vec2Out"
+                              Name 59_4  "vec3In"
+                              Decorate 59_1(uvec2Out) Location 0
+                              Decorate 59_2(u64Out) Location 1
+                              Decorate 59_3(vec2Out) Location 2
+                              Decorate 59_4(vec3In) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 2
+            32_1:             TypePointer Output 23_1(ivec2)
+  59_1(uvec2Out):   32_1(ptr) Variable Output
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 1
+            21_3:             TypeInt 64 0
+            32_2:             TypePointer Output 21_3(int64_t)
+    59_2(u64Out):   32_2(ptr) Variable Output
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 2
+            32_3:             TypePointer Output 23_2(fvec2)
+   59_3(vec2Out):   32_3(ptr) Variable Output
+            23_3:             TypeVector 22_1(float) 3
+            32_4:             TypePointer Input 23_3(fvec3)
+    59_4(vec3In):   32_4(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+          5056_1: 23_1(ivec2) ReadClockKHR 43_1
+                              Store 59_1(uvec2Out) 5056_1
+          5056_2:21_3(int64_t) ReadClockKHR 43_1
+                              Store 59_2(u64Out) 5056_2
+            61_1: 23_3(fvec3) Load 59_4(vec3In)
+            79_1: 23_2(fvec2) VectorShuffle 61_1 61_1 0 1
+            61_2: 23_3(fvec3) Load 59_4(vec3In)
+            79_2: 23_2(fvec2) VectorShuffle 61_2 61_2 1 2
+            61_3: 23_3(fvec3) Load 59_4(vec3In)
+            79_3: 23_2(fvec2) VectorShuffle 61_3 61_3 2 0
+          30-1_1: 23_2(fvec2) ExtInst 11_2(SPV_AMD_shader_trinary_minmax) 1(FMin3AMD) 79_1 79_2 79_3
+                              Store 59_3(vec2Out) 30-1_1
                               Return
                               FunctionEnd

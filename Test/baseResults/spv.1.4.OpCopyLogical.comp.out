@@ -4,147 +4,147 @@ spv.1.4.OpCopyLogical.comp
 // Id's are bound by 65
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 19 27 35 51 60
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_1 59_2 59_3 59_4 59_5
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 12  "MyStruct"
-                              MemberName 12(MyStruct) 0  "foo"
-                              MemberName 12(MyStruct) 1  "sb"
-                              Name 14  "t"
-                              Name 16  "MyStruct"
-                              MemberName 16(MyStruct) 0  "foo"
-                              MemberName 16(MyStruct) 1  "sb"
-                              Name 17  "SSBO0"
-                              MemberName 17(SSBO0) 0  "a"
-                              Name 19  "inBuf"
-                              Name 25  "SSBO1"
-                              MemberName 25(SSBO1) 0  "b"
-                              Name 27  "outBuf"
-                              Name 32  "MyStruct"
-                              MemberName 32(MyStruct) 0  "foo"
-                              MemberName 32(MyStruct) 1  "sb"
-                              Name 33  "UBO"
-                              MemberName 33(UBO) 0  "c"
-                              Name 35  "uBuf"
-                              Name 44  "Nested"
-                              MemberName 44(Nested) 0  "f"
-                              MemberName 44(Nested) 1  "S"
-                              Name 46  "n"
-                              Name 48  "Nested"
-                              MemberName 48(Nested) 0  "f"
-                              MemberName 48(Nested) 1  "S"
-                              Name 49  "UBON"
-                              MemberName 49(UBON) 0  "N1"
-                              Name 51  "uBufN"
-                              Name 57  "Nested"
-                              MemberName 57(Nested) 0  "f"
-                              MemberName 57(Nested) 1  "S"
-                              Name 58  "SSBO1N"
-                              MemberName 58(SSBO1N) 0  "N2"
-                              Name 60  "outBufN"
-                              Decorate 15 ArrayStride 8
-                              MemberDecorate 16(MyStruct) 0 Offset 0
-                              MemberDecorate 16(MyStruct) 1 Offset 16
-                              Decorate 17(SSBO0) Block
-                              MemberDecorate 17(SSBO0) 0 Offset 0
-                              Decorate 19(inBuf) Binding 0
-                              Decorate 19(inBuf) DescriptorSet 0
-                              Decorate 25(SSBO1) Block
-                              MemberDecorate 25(SSBO1) 0 Offset 0
-                              Decorate 27(outBuf) Binding 1
-                              Decorate 27(outBuf) DescriptorSet 0
-                              Decorate 31 ArrayStride 16
-                              MemberDecorate 32(MyStruct) 0 Offset 0
-                              MemberDecorate 32(MyStruct) 1 Offset 32
-                              Decorate 33(UBO) Block
-                              MemberDecorate 33(UBO) 0 Offset 0
-                              Decorate 35(uBuf) Binding 2
-                              Decorate 35(uBuf) DescriptorSet 0
-                              Decorate 47 ArrayStride 48
-                              MemberDecorate 48(Nested) 0 Offset 0
-                              MemberDecorate 48(Nested) 1 Offset 16
-                              Decorate 49(UBON) Block
-                              MemberDecorate 49(UBON) 0 Offset 0
-                              Decorate 51(uBufN) Binding 2
-                              Decorate 51(uBufN) DescriptorSet 0
-                              Decorate 56 ArrayStride 24
-                              MemberDecorate 57(Nested) 0 Offset 0
-                              MemberDecorate 57(Nested) 1 Offset 8
-                              Decorate 58(SSBO1N) Block
-                              MemberDecorate 58(SSBO1N) 0 Offset 0
-                              Decorate 60(outBufN) Binding 1
-                              Decorate 60(outBufN) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypeInt 32 0
-               9:      8(int) Constant 2
-              10:             TypeArray 7(fvec2) 9
-              11:             TypeInt 32 1
-    12(MyStruct):             TypeStruct 10 11(int)
-              13:             TypePointer Function 12(MyStruct)
-              15:             TypeArray 7(fvec2) 9
-    16(MyStruct):             TypeStruct 15 11(int)
-       17(SSBO0):             TypeStruct 16(MyStruct)
-              18:             TypePointer StorageBuffer 17(SSBO0)
-       19(inBuf):     18(ptr) Variable StorageBuffer
-              20:     11(int) Constant 0
-              21:             TypePointer StorageBuffer 16(MyStruct)
-       25(SSBO1):             TypeStruct 16(MyStruct)
-              26:             TypePointer StorageBuffer 25(SSBO1)
-      27(outBuf):     26(ptr) Variable StorageBuffer
-              31:             TypeArray 7(fvec2) 9
-    32(MyStruct):             TypeStruct 31 11(int)
-         33(UBO):             TypeStruct 32(MyStruct)
-              34:             TypePointer Uniform 33(UBO)
-        35(uBuf):     34(ptr) Variable Uniform
-              36:             TypePointer Uniform 32(MyStruct)
-              43:             TypeArray 12(MyStruct) 9
-      44(Nested):             TypeStruct 6(float) 43
-              45:             TypePointer Function 44(Nested)
-              47:             TypeArray 32(MyStruct) 9
-      48(Nested):             TypeStruct 6(float) 47
-        49(UBON):             TypeStruct 48(Nested)
-              50:             TypePointer Uniform 49(UBON)
-       51(uBufN):     50(ptr) Variable Uniform
-              52:             TypePointer Uniform 48(Nested)
-              56:             TypeArray 16(MyStruct) 9
-      57(Nested):             TypeStruct 6(float) 56
-      58(SSBO1N):             TypeStruct 57(Nested)
-              59:             TypePointer StorageBuffer 58(SSBO1N)
-     60(outBufN):     59(ptr) Variable StorageBuffer
-              62:             TypePointer StorageBuffer 57(Nested)
-         4(main):           2 Function None 3
-               5:             Label
-           14(t):     13(ptr) Variable Function
-           46(n):     45(ptr) Variable Function
-              22:     21(ptr) AccessChain 19(inBuf) 20
-              23:16(MyStruct) Load 22
-              24:12(MyStruct) CopyLogical 23
-                              Store 14(t) 24
-              28:12(MyStruct) Load 14(t)
-              29:     21(ptr) AccessChain 27(outBuf) 20
-              30:16(MyStruct) CopyLogical 28
-                              Store 29 30
-              37:     36(ptr) AccessChain 35(uBuf) 20
-              38:32(MyStruct) Load 37
-              39:12(MyStruct) CopyLogical 38
-                              Store 14(t) 39
-              40:12(MyStruct) Load 14(t)
-              41:     21(ptr) AccessChain 27(outBuf) 20
-              42:16(MyStruct) CopyLogical 40
-                              Store 41 42
-              53:     52(ptr) AccessChain 51(uBufN) 20
-              54:  48(Nested) Load 53
-              55:  44(Nested) CopyLogical 54
-                              Store 46(n) 55
-              61:  44(Nested) Load 46(n)
-              63:     62(ptr) AccessChain 60(outBufN) 20
-              64:  57(Nested) CopyLogical 61
-                              Store 63 64
+                              Name 54_1  "main"
+                              Name 30_1  "MyStruct"
+                              MemberName 30_1(MyStruct) 0  "foo"
+                              MemberName 30_1(MyStruct) 1  "sb"
+                              Name 59_6  "t"
+                              Name 30_2  "MyStruct"
+                              MemberName 30_2(MyStruct) 0  "foo"
+                              MemberName 30_2(MyStruct) 1  "sb"
+                              Name 30_3  "SSBO0"
+                              MemberName 30_3(SSBO0) 0  "a"
+                              Name 59_1  "inBuf"
+                              Name 30_4  "SSBO1"
+                              MemberName 30_4(SSBO1) 0  "b"
+                              Name 59_2  "outBuf"
+                              Name 30_5  "MyStruct"
+                              MemberName 30_5(MyStruct) 0  "foo"
+                              MemberName 30_5(MyStruct) 1  "sb"
+                              Name 30_6  "UBO"
+                              MemberName 30_6(UBO) 0  "c"
+                              Name 59_3  "uBuf"
+                              Name 30_7  "Nested"
+                              MemberName 30_7(Nested) 0  "f"
+                              MemberName 30_7(Nested) 1  "S"
+                              Name 59_7  "n"
+                              Name 30_8  "Nested"
+                              MemberName 30_8(Nested) 0  "f"
+                              MemberName 30_8(Nested) 1  "S"
+                              Name 30_9  "UBON"
+                              MemberName 30_9(UBON) 0  "N1"
+                              Name 59_4  "uBufN"
+                              Name 30_10  "Nested"
+                              MemberName 30_10(Nested) 0  "f"
+                              MemberName 30_10(Nested) 1  "S"
+                              Name 30_11  "SSBO1N"
+                              MemberName 30_11(SSBO1N) 0  "N2"
+                              Name 59_5  "outBufN"
+                              Decorate 28_2 ArrayStride 8
+                              MemberDecorate 30_2(MyStruct) 0 Offset 0
+                              MemberDecorate 30_2(MyStruct) 1 Offset 16
+                              Decorate 30_3(SSBO0) Block
+                              MemberDecorate 30_3(SSBO0) 0 Offset 0
+                              Decorate 59_1(inBuf) Binding 0
+                              Decorate 59_1(inBuf) DescriptorSet 0
+                              Decorate 30_4(SSBO1) Block
+                              MemberDecorate 30_4(SSBO1) 0 Offset 0
+                              Decorate 59_2(outBuf) Binding 1
+                              Decorate 59_2(outBuf) DescriptorSet 0
+                              Decorate 28_3 ArrayStride 16
+                              MemberDecorate 30_5(MyStruct) 0 Offset 0
+                              MemberDecorate 30_5(MyStruct) 1 Offset 32
+                              Decorate 30_6(UBO) Block
+                              MemberDecorate 30_6(UBO) 0 Offset 0
+                              Decorate 59_3(uBuf) Binding 2
+                              Decorate 59_3(uBuf) DescriptorSet 0
+                              Decorate 28_5 ArrayStride 48
+                              MemberDecorate 30_8(Nested) 0 Offset 0
+                              MemberDecorate 30_8(Nested) 1 Offset 16
+                              Decorate 30_9(UBON) Block
+                              MemberDecorate 30_9(UBON) 0 Offset 0
+                              Decorate 59_4(uBufN) Binding 2
+                              Decorate 59_4(uBufN) DescriptorSet 0
+                              Decorate 28_6 ArrayStride 24
+                              MemberDecorate 30_10(Nested) 0 Offset 0
+                              MemberDecorate 30_10(Nested) 1 Offset 8
+                              Decorate 30_11(SSBO1N) Block
+                              MemberDecorate 30_11(SSBO1N) 0 Offset 0
+                              Decorate 59_5(outBufN) Binding 1
+                              Decorate 59_5(outBufN) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            21_1:             TypeInt 32 0
+         uint(2):   21_1(int) Constant 2
+            28_1:             TypeArray 23_1(fvec2) uint(2)
+            21_2:             TypeInt 32 1
+  30_1(MyStruct):             TypeStruct 28_1 21_2(int)
+            32_1:             TypePointer Function 30_1(MyStruct)
+            28_2:             TypeArray 23_1(fvec2) uint(2)
+  30_2(MyStruct):             TypeStruct 28_2 21_2(int)
+     30_3(SSBO0):             TypeStruct 30_2(MyStruct)
+            32_2:             TypePointer StorageBuffer 30_3(SSBO0)
+     59_1(inBuf):   32_2(ptr) Variable StorageBuffer
+            43_1:   21_2(int) Constant 0
+            32_3:             TypePointer StorageBuffer 30_2(MyStruct)
+     30_4(SSBO1):             TypeStruct 30_2(MyStruct)
+            32_4:             TypePointer StorageBuffer 30_4(SSBO1)
+    59_2(outBuf):   32_4(ptr) Variable StorageBuffer
+            28_3:             TypeArray 23_1(fvec2) uint(2)
+  30_5(MyStruct):             TypeStruct 28_3 21_2(int)
+       30_6(UBO):             TypeStruct 30_5(MyStruct)
+            32_5:             TypePointer Uniform 30_6(UBO)
+      59_3(uBuf):   32_5(ptr) Variable Uniform
+            32_6:             TypePointer Uniform 30_5(MyStruct)
+            28_4:             TypeArray 30_1(MyStruct) uint(2)
+    30_7(Nested):             TypeStruct 22_1(float) 28_4
+            32_7:             TypePointer Function 30_7(Nested)
+            28_5:             TypeArray 30_5(MyStruct) uint(2)
+    30_8(Nested):             TypeStruct 22_1(float) 28_5
+      30_9(UBON):             TypeStruct 30_8(Nested)
+            32_8:             TypePointer Uniform 30_9(UBON)
+     59_4(uBufN):   32_8(ptr) Variable Uniform
+            32_9:             TypePointer Uniform 30_8(Nested)
+            28_6:             TypeArray 30_2(MyStruct) uint(2)
+   30_10(Nested):             TypeStruct 22_1(float) 28_6
+   30_11(SSBO1N):             TypeStruct 30_10(Nested)
+           32_10:             TypePointer StorageBuffer 30_11(SSBO1N)
+   59_5(outBufN):  32_10(ptr) Variable StorageBuffer
+           32_11:             TypePointer StorageBuffer 30_10(Nested)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_6(t):   32_1(ptr) Variable Function
+         59_7(n):   32_7(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(inBuf) 43_1
+            61_1:30_2(MyStruct) Load 65_1
+           400_1:30_1(MyStruct) CopyLogical 61_1
+                              Store 59_6(t) 400_1
+            61_2:30_1(MyStruct) Load 59_6(t)
+            65_2:   32_3(ptr) AccessChain 59_2(outBuf) 43_1
+           400_2:30_2(MyStruct) CopyLogical 61_2
+                              Store 65_2 400_2
+            65_3:   32_6(ptr) AccessChain 59_3(uBuf) 43_1
+            61_3:30_5(MyStruct) Load 65_3
+           400_3:30_1(MyStruct) CopyLogical 61_3
+                              Store 59_6(t) 400_3
+            61_4:30_1(MyStruct) Load 59_6(t)
+            65_4:   32_3(ptr) AccessChain 59_2(outBuf) 43_1
+           400_4:30_2(MyStruct) CopyLogical 61_4
+                              Store 65_4 400_4
+            65_5:   32_9(ptr) AccessChain 59_4(uBufN) 43_1
+            61_5:30_8(Nested) Load 65_5
+           400_5:30_7(Nested) CopyLogical 61_5
+                              Store 59_7(n) 400_5
+            61_6:30_7(Nested) Load 59_7(n)
+            65_6:  32_11(ptr) AccessChain 59_5(outBufN) 43_1
+           400_6:30_10(Nested) CopyLogical 61_6
+                              Store 65_6 400_6
                               Return
                               FunctionEnd

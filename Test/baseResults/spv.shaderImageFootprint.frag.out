@@ -7,847 +7,847 @@ spv.shaderImageFootprint.frag
                               Capability MinLod
                               Capability ImageFootprintNV
                               Extension  "SPV_NV_shader_image_footprint"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 21 24 76 125 225 275 277 387
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_3 59_4 59_5 59_6 59_7 59_8 59_9 59_12
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_NV_shader_texture_footprint"
-                              Name 4  "main"
-                              Name 8  "result2D"
-                              MemberName 8(result2D) 0  "ret2D"
-                              MemberName 8(result2D) 1  "anchor2D"
-                              MemberName 8(result2D) 2  "offset2D"
-                              MemberName 8(result2D) 3  "mask2D"
-                              MemberName 8(result2D) 4  "lod2D"
-                              MemberName 8(result2D) 5  "granularity2D"
-                              Name 10  ""
-                              Name 17  "sample2D"
-                              Name 21  "P2"
-                              Name 24  "granularity"
-                              Name 28  "gl_TextureFootprint2DNV"
-                              MemberName 28(gl_TextureFootprint2DNV) 0  "anchor"
-                              MemberName 28(gl_TextureFootprint2DNV) 1  "offset"
-                              MemberName 28(gl_TextureFootprint2DNV) 2  "mask"
-                              MemberName 28(gl_TextureFootprint2DNV) 3  "lod"
-                              MemberName 28(gl_TextureFootprint2DNV) 4  "granularity"
-                              Name 30  "fp2D"
-                              Name 31  "ResType"
-                              Name 76  "bias"
-                              Name 78  "ResType"
-                              Name 125  "lodClamp"
-                              Name 128  "ResType"
-                              Name 178  "ResType"
-                              Name 225  "lod"
-                              Name 228  "ResType"
-                              Name 275  "dx"
-                              Name 277  "dy"
-                              Name 280  "ResType"
-                              Name 331  "ResType"
-                              Name 377  "result3D"
-                              MemberName 377(result3D) 0  "ret3D"
-                              MemberName 377(result3D) 1  "anchor3D"
-                              MemberName 377(result3D) 2  "offset3D"
-                              MemberName 377(result3D) 3  "mask3D"
-                              MemberName 377(result3D) 4  "lod3D"
-                              MemberName 377(result3D) 5  "granularity3D"
-                              Name 379  ""
-                              Name 383  "sample3D"
-                              Name 387  "P3"
-                              Name 390  "gl_TextureFootprint3DNV"
-                              MemberName 390(gl_TextureFootprint3DNV) 0  "anchor"
-                              MemberName 390(gl_TextureFootprint3DNV) 1  "offset"
-                              MemberName 390(gl_TextureFootprint3DNV) 2  "mask"
-                              MemberName 390(gl_TextureFootprint3DNV) 3  "lod"
-                              MemberName 390(gl_TextureFootprint3DNV) 4  "granularity"
-                              Name 392  "fp3D"
-                              Name 393  "ResType"
-                              Name 429  "ResType"
-                              Name 478  "ResType"
-                              Name 528  "ResType"
-                              Name 577  "ResType"
-                              Decorate 8(result2D) BufferBlock
-                              MemberDecorate 8(result2D) 0 Offset 0
-                              MemberDecorate 8(result2D) 1 Offset 8
-                              MemberDecorate 8(result2D) 2 Offset 16
-                              MemberDecorate 8(result2D) 3 Offset 24
-                              MemberDecorate 8(result2D) 4 Offset 32
-                              MemberDecorate 8(result2D) 5 Offset 36
-                              Decorate 10 Binding 2
-                              Decorate 10 DescriptorSet 0
-                              Decorate 17(sample2D) Binding 0
-                              Decorate 17(sample2D) DescriptorSet 0
-                              Decorate 21(P2) Location 0
-                              Decorate 24(granularity) Flat
-                              Decorate 24(granularity) Location 3
-                              Decorate 76(bias) Location 9
-                              Decorate 125(lodClamp) Location 4
-                              Decorate 225(lod) Location 5
-                              Decorate 275(dx) Location 6
-                              Decorate 277(dy) Location 8
-                              Decorate 377(result3D) BufferBlock
-                              MemberDecorate 377(result3D) 0 Offset 0
-                              MemberDecorate 377(result3D) 1 Offset 16
-                              MemberDecorate 377(result3D) 2 Offset 32
-                              MemberDecorate 377(result3D) 3 Offset 48
-                              MemberDecorate 377(result3D) 4 Offset 56
-                              MemberDecorate 377(result3D) 5 Offset 60
-                              Decorate 379 Binding 3
-                              Decorate 379 DescriptorSet 0
-                              Decorate 383(sample3D) Binding 1
-                              Decorate 383(sample3D) DescriptorSet 0
-                              Decorate 387(P3) Location 2
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 2
-     8(result2D):             TypeStruct 6(int) 7(ivec2) 7(ivec2) 7(ivec2) 6(int) 6(int)
-               9:             TypePointer Uniform 8(result2D)
-              10:      9(ptr) Variable Uniform
-              11:             TypeInt 32 1
-              12:     11(int) Constant 0
-              13:             TypeFloat 32
-              14:             TypeImage 13(float) 2D sampled format:Unknown
-              15:             TypeSampledImage 14
-              16:             TypePointer UniformConstant 15
-    17(sample2D):     16(ptr) Variable UniformConstant
-              19:             TypeVector 13(float) 2
-              20:             TypePointer Input 19(fvec2)
-          21(P2):     20(ptr) Variable Input
-              23:             TypePointer Input 11(int)
- 24(granularity):     23(ptr) Variable Input
-              26:             TypeBool
-              27:    26(bool) ConstantTrue
-28(gl_TextureFootprint2DNV):             TypeStruct 7(ivec2) 7(ivec2) 7(ivec2) 6(int) 6(int)
-              29:             TypePointer Function 28(gl_TextureFootprint2DNV)
-     31(ResType):             TypeStruct 26(bool) 7(ivec2) 7(ivec2) 7(ivec2) 6(int) 6(int)
-              34:             TypePointer Function 7(ivec2)
-              36:     11(int) Constant 1
-              39:     11(int) Constant 2
-              42:     11(int) Constant 3
-              44:             TypePointer Function 6(int)
-              46:     11(int) Constant 4
-              50:      6(int) Constant 1
-              51:      6(int) Constant 0
-              53:             TypePointer Uniform 6(int)
-              57:             TypePointer Uniform 7(ivec2)
-              68:     11(int) Constant 5
-              75:             TypePointer Input 13(float)
-        76(bias):     75(ptr) Variable Input
-     78(ResType):             TypeStruct 26(bool) 7(ivec2) 7(ivec2) 7(ivec2) 6(int) 6(int)
-   125(lodClamp):     75(ptr) Variable Input
-    128(ResType):             TypeStruct 26(bool) 7(ivec2) 7(ivec2) 7(ivec2) 6(int) 6(int)
-    178(ResType):             TypeStruct 26(bool) 7(ivec2) 7(ivec2) 7(ivec2) 6(int) 6(int)
-        225(lod):     75(ptr) Variable Input
-    228(ResType):             TypeStruct 26(bool) 7(ivec2) 7(ivec2) 7(ivec2) 6(int) 6(int)
-         275(dx):     20(ptr) Variable Input
-         277(dy):     20(ptr) Variable Input
-    280(ResType):             TypeStruct 26(bool) 7(ivec2) 7(ivec2) 7(ivec2) 6(int) 6(int)
-    331(ResType):             TypeStruct 26(bool) 7(ivec2) 7(ivec2) 7(ivec2) 6(int) 6(int)
-             376:             TypeVector 6(int) 3
-   377(result3D):             TypeStruct 6(int) 376(ivec3) 376(ivec3) 7(ivec2) 6(int) 6(int)
-             378:             TypePointer Uniform 377(result3D)
-             379:    378(ptr) Variable Uniform
-             380:             TypeImage 13(float) 3D sampled format:Unknown
-             381:             TypeSampledImage 380
-             382:             TypePointer UniformConstant 381
-   383(sample3D):    382(ptr) Variable UniformConstant
-             385:             TypeVector 13(float) 3
-             386:             TypePointer Input 385(fvec3)
-         387(P3):    386(ptr) Variable Input
-390(gl_TextureFootprint3DNV):             TypeStruct 376(ivec3) 376(ivec3) 7(ivec2) 6(int) 6(int)
-             391:             TypePointer Function 390(gl_TextureFootprint3DNV)
-    393(ResType):             TypeStruct 26(bool) 376(ivec3) 376(ivec3) 7(ivec2) 6(int) 6(int)
-             396:             TypePointer Function 376(ivec3)
-             411:             TypePointer Uniform 376(ivec3)
-    429(ResType):             TypeStruct 26(bool) 376(ivec3) 376(ivec3) 7(ivec2) 6(int) 6(int)
-    478(ResType):             TypeStruct 26(bool) 376(ivec3) 376(ivec3) 7(ivec2) 6(int) 6(int)
-    528(ResType):             TypeStruct 26(bool) 376(ivec3) 376(ivec3) 7(ivec2) 6(int) 6(int)
-    577(ResType):             TypeStruct 26(bool) 376(ivec3) 376(ivec3) 7(ivec2) 6(int) 6(int)
-         4(main):           2 Function None 3
-               5:             Label
-        30(fp2D):     29(ptr) Variable Function
-       392(fp3D):    391(ptr) Variable Function
-              18:          15 Load 17(sample2D)
-              22:   19(fvec2) Load 21(P2)
-              25:     11(int) Load 24(granularity)
-              32: 31(ResType) ImageSampleFootprintNV 18 22 25 27
-              33:    7(ivec2) CompositeExtract 32 1
-              35:     34(ptr) AccessChain 30(fp2D) 12
-                              Store 35 33
-              37:    7(ivec2) CompositeExtract 32 2
-              38:     34(ptr) AccessChain 30(fp2D) 36
-                              Store 38 37
-              40:    7(ivec2) CompositeExtract 32 3
-              41:     34(ptr) AccessChain 30(fp2D) 39
-                              Store 41 40
-              43:      6(int) CompositeExtract 32 4
-              45:     44(ptr) AccessChain 30(fp2D) 42
-                              Store 45 43
-              47:      6(int) CompositeExtract 32 5
-              48:     44(ptr) AccessChain 30(fp2D) 46
-                              Store 48 47
-              49:    26(bool) CompositeExtract 32 0
-              52:      6(int) Select 49 50 51
-              54:     53(ptr) AccessChain 10 12
-                              Store 54 52
-              55:     34(ptr) AccessChain 30(fp2D) 12
-              56:    7(ivec2) Load 55
-              58:     57(ptr) AccessChain 10 36
-                              Store 58 56
-              59:     34(ptr) AccessChain 30(fp2D) 36
-              60:    7(ivec2) Load 59
-              61:     57(ptr) AccessChain 10 39
-                              Store 61 60
-              62:     34(ptr) AccessChain 30(fp2D) 39
-              63:    7(ivec2) Load 62
-              64:     57(ptr) AccessChain 10 42
-                              Store 64 63
-              65:     44(ptr) AccessChain 30(fp2D) 42
-              66:      6(int) Load 65
-              67:     53(ptr) AccessChain 10 46
-                              Store 67 66
-              69:     44(ptr) AccessChain 30(fp2D) 46
-              70:      6(int) Load 69
-              71:     53(ptr) AccessChain 10 68
-                              Store 71 70
-              72:          15 Load 17(sample2D)
-              73:   19(fvec2) Load 21(P2)
-              74:     11(int) Load 24(granularity)
-              77:   13(float) Load 76(bias)
-              79: 78(ResType) ImageSampleFootprintNV 72 73 74 27 Bias 77
-              80:    7(ivec2) CompositeExtract 79 1
-              81:     34(ptr) AccessChain 30(fp2D) 12
-                              Store 81 80
-              82:    7(ivec2) CompositeExtract 79 2
-              83:     34(ptr) AccessChain 30(fp2D) 36
-                              Store 83 82
-              84:    7(ivec2) CompositeExtract 79 3
-              85:     34(ptr) AccessChain 30(fp2D) 39
-                              Store 85 84
-              86:      6(int) CompositeExtract 79 4
-              87:     44(ptr) AccessChain 30(fp2D) 42
-                              Store 87 86
-              88:      6(int) CompositeExtract 79 5
-              89:     44(ptr) AccessChain 30(fp2D) 46
-                              Store 89 88
-              90:    26(bool) CompositeExtract 79 0
-              91:      6(int) Select 90 50 51
-              92:     53(ptr) AccessChain 10 12
-                              Store 92 91
-              93:     34(ptr) AccessChain 30(fp2D) 12
-              94:    7(ivec2) Load 93
-              95:     57(ptr) AccessChain 10 36
-              96:    7(ivec2) Load 95
-              97:    7(ivec2) IAdd 96 94
-              98:     57(ptr) AccessChain 10 36
-                              Store 98 97
-              99:     34(ptr) AccessChain 30(fp2D) 36
-             100:    7(ivec2) Load 99
-             101:     57(ptr) AccessChain 10 39
-             102:    7(ivec2) Load 101
-             103:    7(ivec2) IAdd 102 100
-             104:     57(ptr) AccessChain 10 39
-                              Store 104 103
-             105:     34(ptr) AccessChain 30(fp2D) 39
-             106:    7(ivec2) Load 105
-             107:     57(ptr) AccessChain 10 42
-             108:    7(ivec2) Load 107
-             109:    7(ivec2) IAdd 108 106
-             110:     57(ptr) AccessChain 10 42
-                              Store 110 109
-             111:     44(ptr) AccessChain 30(fp2D) 42
-             112:      6(int) Load 111
-             113:     53(ptr) AccessChain 10 46
-             114:      6(int) Load 113
-             115:      6(int) IAdd 114 112
-             116:     53(ptr) AccessChain 10 46
-                              Store 116 115
-             117:     44(ptr) AccessChain 30(fp2D) 46
-             118:      6(int) Load 117
-             119:     53(ptr) AccessChain 10 68
-             120:      6(int) Load 119
-             121:      6(int) IAdd 120 118
-             122:     53(ptr) AccessChain 10 68
-                              Store 122 121
-             123:          15 Load 17(sample2D)
-             124:   19(fvec2) Load 21(P2)
-             126:   13(float) Load 125(lodClamp)
-             127:     11(int) Load 24(granularity)
-             129:128(ResType) ImageSampleFootprintNV 123 124 127 27 MinLod 126
-             130:    7(ivec2) CompositeExtract 129 1
-             131:     34(ptr) AccessChain 30(fp2D) 12
-                              Store 131 130
-             132:    7(ivec2) CompositeExtract 129 2
-             133:     34(ptr) AccessChain 30(fp2D) 36
-                              Store 133 132
-             134:    7(ivec2) CompositeExtract 129 3
-             135:     34(ptr) AccessChain 30(fp2D) 39
-                              Store 135 134
-             136:      6(int) CompositeExtract 129 4
-             137:     44(ptr) AccessChain 30(fp2D) 42
-                              Store 137 136
-             138:      6(int) CompositeExtract 129 5
-             139:     44(ptr) AccessChain 30(fp2D) 46
-                              Store 139 138
-             140:    26(bool) CompositeExtract 129 0
-             141:      6(int) Select 140 50 51
-             142:     53(ptr) AccessChain 10 12
-                              Store 142 141
-             143:     34(ptr) AccessChain 30(fp2D) 12
-             144:    7(ivec2) Load 143
-             145:     57(ptr) AccessChain 10 36
-             146:    7(ivec2) Load 145
-             147:    7(ivec2) IAdd 146 144
-             148:     57(ptr) AccessChain 10 36
-                              Store 148 147
-             149:     34(ptr) AccessChain 30(fp2D) 36
-             150:    7(ivec2) Load 149
-             151:     57(ptr) AccessChain 10 39
-             152:    7(ivec2) Load 151
-             153:    7(ivec2) IAdd 152 150
-             154:     57(ptr) AccessChain 10 39
-                              Store 154 153
-             155:     34(ptr) AccessChain 30(fp2D) 39
-             156:    7(ivec2) Load 155
-             157:     57(ptr) AccessChain 10 42
-             158:    7(ivec2) Load 157
-             159:    7(ivec2) IAdd 158 156
-             160:     57(ptr) AccessChain 10 42
-                              Store 160 159
-             161:     44(ptr) AccessChain 30(fp2D) 42
-             162:      6(int) Load 161
-             163:     53(ptr) AccessChain 10 46
-             164:      6(int) Load 163
-             165:      6(int) IAdd 164 162
-             166:     53(ptr) AccessChain 10 46
-                              Store 166 165
-             167:     44(ptr) AccessChain 30(fp2D) 46
-             168:      6(int) Load 167
-             169:     53(ptr) AccessChain 10 68
-             170:      6(int) Load 169
-             171:      6(int) IAdd 170 168
-             172:     53(ptr) AccessChain 10 68
-                              Store 172 171
-             173:          15 Load 17(sample2D)
-             174:   19(fvec2) Load 21(P2)
-             175:   13(float) Load 125(lodClamp)
-             176:     11(int) Load 24(granularity)
-             177:   13(float) Load 76(bias)
-             179:178(ResType) ImageSampleFootprintNV 173 174 176 27 Bias MinLod 177 175
-             180:    7(ivec2) CompositeExtract 179 1
-             181:     34(ptr) AccessChain 30(fp2D) 12
-                              Store 181 180
-             182:    7(ivec2) CompositeExtract 179 2
-             183:     34(ptr) AccessChain 30(fp2D) 36
-                              Store 183 182
-             184:    7(ivec2) CompositeExtract 179 3
-             185:     34(ptr) AccessChain 30(fp2D) 39
-                              Store 185 184
-             186:      6(int) CompositeExtract 179 4
-             187:     44(ptr) AccessChain 30(fp2D) 42
-                              Store 187 186
-             188:      6(int) CompositeExtract 179 5
-             189:     44(ptr) AccessChain 30(fp2D) 46
-                              Store 189 188
-             190:    26(bool) CompositeExtract 179 0
-             191:      6(int) Select 190 50 51
-             192:     53(ptr) AccessChain 10 12
-                              Store 192 191
-             193:     34(ptr) AccessChain 30(fp2D) 12
-             194:    7(ivec2) Load 193
-             195:     57(ptr) AccessChain 10 36
-             196:    7(ivec2) Load 195
-             197:    7(ivec2) IAdd 196 194
-             198:     57(ptr) AccessChain 10 36
-                              Store 198 197
-             199:     34(ptr) AccessChain 30(fp2D) 36
-             200:    7(ivec2) Load 199
-             201:     57(ptr) AccessChain 10 39
-             202:    7(ivec2) Load 201
-             203:    7(ivec2) IAdd 202 200
-             204:     57(ptr) AccessChain 10 39
-                              Store 204 203
-             205:     34(ptr) AccessChain 30(fp2D) 39
-             206:    7(ivec2) Load 205
-             207:     57(ptr) AccessChain 10 42
-             208:    7(ivec2) Load 207
-             209:    7(ivec2) IAdd 208 206
-             210:     57(ptr) AccessChain 10 42
-                              Store 210 209
-             211:     44(ptr) AccessChain 30(fp2D) 42
-             212:      6(int) Load 211
-             213:     53(ptr) AccessChain 10 46
-             214:      6(int) Load 213
-             215:      6(int) IAdd 214 212
-             216:     53(ptr) AccessChain 10 46
-                              Store 216 215
-             217:     44(ptr) AccessChain 30(fp2D) 46
-             218:      6(int) Load 217
-             219:     53(ptr) AccessChain 10 68
-             220:      6(int) Load 219
-             221:      6(int) IAdd 220 218
-             222:     53(ptr) AccessChain 10 68
-                              Store 222 221
-             223:          15 Load 17(sample2D)
-             224:   19(fvec2) Load 21(P2)
-             226:   13(float) Load 225(lod)
-             227:     11(int) Load 24(granularity)
-             229:228(ResType) ImageSampleFootprintNV 223 224 227 27 Lod 226
-             230:    7(ivec2) CompositeExtract 229 1
-             231:     34(ptr) AccessChain 30(fp2D) 12
-                              Store 231 230
-             232:    7(ivec2) CompositeExtract 229 2
-             233:     34(ptr) AccessChain 30(fp2D) 36
-                              Store 233 232
-             234:    7(ivec2) CompositeExtract 229 3
-             235:     34(ptr) AccessChain 30(fp2D) 39
-                              Store 235 234
-             236:      6(int) CompositeExtract 229 4
-             237:     44(ptr) AccessChain 30(fp2D) 42
-                              Store 237 236
-             238:      6(int) CompositeExtract 229 5
-             239:     44(ptr) AccessChain 30(fp2D) 46
-                              Store 239 238
-             240:    26(bool) CompositeExtract 229 0
-             241:      6(int) Select 240 50 51
-             242:     53(ptr) AccessChain 10 12
-                              Store 242 241
-             243:     34(ptr) AccessChain 30(fp2D) 12
-             244:    7(ivec2) Load 243
-             245:     57(ptr) AccessChain 10 36
-             246:    7(ivec2) Load 245
-             247:    7(ivec2) IAdd 246 244
-             248:     57(ptr) AccessChain 10 36
-                              Store 248 247
-             249:     34(ptr) AccessChain 30(fp2D) 36
-             250:    7(ivec2) Load 249
-             251:     57(ptr) AccessChain 10 39
-             252:    7(ivec2) Load 251
-             253:    7(ivec2) IAdd 252 250
-             254:     57(ptr) AccessChain 10 39
-                              Store 254 253
-             255:     34(ptr) AccessChain 30(fp2D) 39
-             256:    7(ivec2) Load 255
-             257:     57(ptr) AccessChain 10 42
-             258:    7(ivec2) Load 257
-             259:    7(ivec2) IAdd 258 256
-             260:     57(ptr) AccessChain 10 42
-                              Store 260 259
-             261:     44(ptr) AccessChain 30(fp2D) 42
-             262:      6(int) Load 261
-             263:     53(ptr) AccessChain 10 46
-             264:      6(int) Load 263
-             265:      6(int) IAdd 264 262
-             266:     53(ptr) AccessChain 10 46
-                              Store 266 265
-             267:     44(ptr) AccessChain 30(fp2D) 46
-             268:      6(int) Load 267
-             269:     53(ptr) AccessChain 10 68
-             270:      6(int) Load 269
-             271:      6(int) IAdd 270 268
-             272:     53(ptr) AccessChain 10 68
-                              Store 272 271
-             273:          15 Load 17(sample2D)
-             274:   19(fvec2) Load 21(P2)
-             276:   19(fvec2) Load 275(dx)
-             278:   19(fvec2) Load 277(dy)
-             279:     11(int) Load 24(granularity)
-             281:280(ResType) ImageSampleFootprintNV 273 274 279 27 Grad 276 278
-             282:    7(ivec2) CompositeExtract 281 1
-             283:     34(ptr) AccessChain 30(fp2D) 12
-                              Store 283 282
-             284:    7(ivec2) CompositeExtract 281 2
-             285:     34(ptr) AccessChain 30(fp2D) 36
-                              Store 285 284
-             286:    7(ivec2) CompositeExtract 281 3
-             287:     34(ptr) AccessChain 30(fp2D) 39
-                              Store 287 286
-             288:      6(int) CompositeExtract 281 4
-             289:     44(ptr) AccessChain 30(fp2D) 42
-                              Store 289 288
-             290:      6(int) CompositeExtract 281 5
-             291:     44(ptr) AccessChain 30(fp2D) 46
-                              Store 291 290
-             292:    26(bool) CompositeExtract 281 0
-             293:      6(int) Select 292 50 51
-             294:     53(ptr) AccessChain 10 12
-                              Store 294 293
-             295:     34(ptr) AccessChain 30(fp2D) 12
-             296:    7(ivec2) Load 295
-             297:     57(ptr) AccessChain 10 36
-             298:    7(ivec2) Load 297
-             299:    7(ivec2) IAdd 298 296
-             300:     57(ptr) AccessChain 10 36
-                              Store 300 299
-             301:     34(ptr) AccessChain 30(fp2D) 36
-             302:    7(ivec2) Load 301
-             303:     57(ptr) AccessChain 10 39
-             304:    7(ivec2) Load 303
-             305:    7(ivec2) IAdd 304 302
-             306:     57(ptr) AccessChain 10 39
-                              Store 306 305
-             307:     34(ptr) AccessChain 30(fp2D) 39
-             308:    7(ivec2) Load 307
-             309:     57(ptr) AccessChain 10 42
-             310:    7(ivec2) Load 309
-             311:    7(ivec2) IAdd 310 308
-             312:     57(ptr) AccessChain 10 42
-                              Store 312 311
-             313:     44(ptr) AccessChain 30(fp2D) 42
-             314:      6(int) Load 313
-             315:     53(ptr) AccessChain 10 46
-             316:      6(int) Load 315
-             317:      6(int) IAdd 316 314
-             318:     53(ptr) AccessChain 10 46
-                              Store 318 317
-             319:     44(ptr) AccessChain 30(fp2D) 46
-             320:      6(int) Load 319
-             321:     53(ptr) AccessChain 10 68
-             322:      6(int) Load 321
-             323:      6(int) IAdd 322 320
-             324:     53(ptr) AccessChain 10 68
-                              Store 324 323
-             325:          15 Load 17(sample2D)
-             326:   19(fvec2) Load 21(P2)
-             327:   19(fvec2) Load 275(dx)
-             328:   19(fvec2) Load 277(dy)
-             329:   13(float) Load 125(lodClamp)
-             330:     11(int) Load 24(granularity)
-             332:331(ResType) ImageSampleFootprintNV 325 326 330 27 Grad MinLod 327 328 329
-             333:    7(ivec2) CompositeExtract 332 1
-             334:     34(ptr) AccessChain 30(fp2D) 12
-                              Store 334 333
-             335:    7(ivec2) CompositeExtract 332 2
-             336:     34(ptr) AccessChain 30(fp2D) 36
-                              Store 336 335
-             337:    7(ivec2) CompositeExtract 332 3
-             338:     34(ptr) AccessChain 30(fp2D) 39
-                              Store 338 337
-             339:      6(int) CompositeExtract 332 4
-             340:     44(ptr) AccessChain 30(fp2D) 42
-                              Store 340 339
-             341:      6(int) CompositeExtract 332 5
-             342:     44(ptr) AccessChain 30(fp2D) 46
-                              Store 342 341
-             343:    26(bool) CompositeExtract 332 0
-             344:      6(int) Select 343 50 51
-             345:     53(ptr) AccessChain 10 12
-                              Store 345 344
-             346:     34(ptr) AccessChain 30(fp2D) 12
-             347:    7(ivec2) Load 346
-             348:     57(ptr) AccessChain 10 36
-             349:    7(ivec2) Load 348
-             350:    7(ivec2) IAdd 349 347
-             351:     57(ptr) AccessChain 10 36
-                              Store 351 350
-             352:     34(ptr) AccessChain 30(fp2D) 36
-             353:    7(ivec2) Load 352
-             354:     57(ptr) AccessChain 10 39
-             355:    7(ivec2) Load 354
-             356:    7(ivec2) IAdd 355 353
-             357:     57(ptr) AccessChain 10 39
-                              Store 357 356
-             358:     34(ptr) AccessChain 30(fp2D) 39
-             359:    7(ivec2) Load 358
-             360:     57(ptr) AccessChain 10 42
-             361:    7(ivec2) Load 360
-             362:    7(ivec2) IAdd 361 359
-             363:     57(ptr) AccessChain 10 42
-                              Store 363 362
-             364:     44(ptr) AccessChain 30(fp2D) 42
-             365:      6(int) Load 364
-             366:     53(ptr) AccessChain 10 46
-             367:      6(int) Load 366
-             368:      6(int) IAdd 367 365
-             369:     53(ptr) AccessChain 10 46
-                              Store 369 368
-             370:     44(ptr) AccessChain 30(fp2D) 46
-             371:      6(int) Load 370
-             372:     53(ptr) AccessChain 10 68
-             373:      6(int) Load 372
-             374:      6(int) IAdd 373 371
-             375:     53(ptr) AccessChain 10 68
-                              Store 375 374
-             384:         381 Load 383(sample3D)
-             388:  385(fvec3) Load 387(P3)
-             389:     11(int) Load 24(granularity)
-             394:393(ResType) ImageSampleFootprintNV 384 388 389 27
-             395:  376(ivec3) CompositeExtract 394 1
-             397:    396(ptr) AccessChain 392(fp3D) 12
-                              Store 397 395
-             398:  376(ivec3) CompositeExtract 394 2
-             399:    396(ptr) AccessChain 392(fp3D) 36
-                              Store 399 398
-             400:    7(ivec2) CompositeExtract 394 3
-             401:     34(ptr) AccessChain 392(fp3D) 39
-                              Store 401 400
-             402:      6(int) CompositeExtract 394 4
-             403:     44(ptr) AccessChain 392(fp3D) 42
-                              Store 403 402
-             404:      6(int) CompositeExtract 394 5
-             405:     44(ptr) AccessChain 392(fp3D) 46
-                              Store 405 404
-             406:    26(bool) CompositeExtract 394 0
-             407:      6(int) Select 406 50 51
-             408:     53(ptr) AccessChain 379 12
-                              Store 408 407
-             409:    396(ptr) AccessChain 392(fp3D) 12
-             410:  376(ivec3) Load 409
-             412:    411(ptr) AccessChain 379 36
-                              Store 412 410
-             413:    396(ptr) AccessChain 392(fp3D) 36
-             414:  376(ivec3) Load 413
-             415:    411(ptr) AccessChain 379 39
-                              Store 415 414
-             416:     34(ptr) AccessChain 392(fp3D) 39
-             417:    7(ivec2) Load 416
-             418:     57(ptr) AccessChain 379 42
-                              Store 418 417
-             419:     44(ptr) AccessChain 392(fp3D) 42
-             420:      6(int) Load 419
-             421:     53(ptr) AccessChain 379 46
-                              Store 421 420
-             422:     44(ptr) AccessChain 392(fp3D) 46
-             423:      6(int) Load 422
-             424:     53(ptr) AccessChain 379 68
-                              Store 424 423
-             425:         381 Load 383(sample3D)
-             426:  385(fvec3) Load 387(P3)
-             427:     11(int) Load 24(granularity)
-             428:   13(float) Load 76(bias)
-             430:429(ResType) ImageSampleFootprintNV 425 426 427 27 Bias 428
-             431:  376(ivec3) CompositeExtract 430 1
-             432:    396(ptr) AccessChain 392(fp3D) 12
-                              Store 432 431
-             433:  376(ivec3) CompositeExtract 430 2
-             434:    396(ptr) AccessChain 392(fp3D) 36
-                              Store 434 433
-             435:    7(ivec2) CompositeExtract 430 3
-             436:     34(ptr) AccessChain 392(fp3D) 39
-                              Store 436 435
-             437:      6(int) CompositeExtract 430 4
-             438:     44(ptr) AccessChain 392(fp3D) 42
-                              Store 438 437
-             439:      6(int) CompositeExtract 430 5
-             440:     44(ptr) AccessChain 392(fp3D) 46
-                              Store 440 439
-             441:    26(bool) CompositeExtract 430 0
-             442:      6(int) Select 441 50 51
-             443:     53(ptr) AccessChain 379 12
-                              Store 443 442
-             444:    396(ptr) AccessChain 392(fp3D) 12
-             445:  376(ivec3) Load 444
-             446:    411(ptr) AccessChain 379 36
-             447:  376(ivec3) Load 446
-             448:  376(ivec3) IAdd 447 445
-             449:    411(ptr) AccessChain 379 36
-                              Store 449 448
-             450:    396(ptr) AccessChain 392(fp3D) 36
-             451:  376(ivec3) Load 450
-             452:    411(ptr) AccessChain 379 39
-             453:  376(ivec3) Load 452
-             454:  376(ivec3) IAdd 453 451
-             455:    411(ptr) AccessChain 379 39
-                              Store 455 454
-             456:     34(ptr) AccessChain 392(fp3D) 39
-             457:    7(ivec2) Load 456
-             458:     57(ptr) AccessChain 379 42
-             459:    7(ivec2) Load 458
-             460:    7(ivec2) IAdd 459 457
-             461:     57(ptr) AccessChain 379 42
-                              Store 461 460
-             462:     44(ptr) AccessChain 392(fp3D) 42
-             463:      6(int) Load 462
-             464:     53(ptr) AccessChain 379 46
-             465:      6(int) Load 464
-             466:      6(int) IAdd 465 463
-             467:     53(ptr) AccessChain 379 46
-                              Store 467 466
-             468:     44(ptr) AccessChain 392(fp3D) 46
-             469:      6(int) Load 468
-             470:     53(ptr) AccessChain 379 68
-             471:      6(int) Load 470
-             472:      6(int) IAdd 471 469
-             473:     53(ptr) AccessChain 379 68
-                              Store 473 472
-             474:         381 Load 383(sample3D)
-             475:  385(fvec3) Load 387(P3)
-             476:   13(float) Load 125(lodClamp)
-             477:     11(int) Load 24(granularity)
-             479:478(ResType) ImageSampleFootprintNV 474 475 477 27 MinLod 476
-             480:  376(ivec3) CompositeExtract 479 1
-             481:    396(ptr) AccessChain 392(fp3D) 12
-                              Store 481 480
-             482:  376(ivec3) CompositeExtract 479 2
-             483:    396(ptr) AccessChain 392(fp3D) 36
-                              Store 483 482
-             484:    7(ivec2) CompositeExtract 479 3
-             485:     34(ptr) AccessChain 392(fp3D) 39
-                              Store 485 484
-             486:      6(int) CompositeExtract 479 4
-             487:     44(ptr) AccessChain 392(fp3D) 42
-                              Store 487 486
-             488:      6(int) CompositeExtract 479 5
-             489:     44(ptr) AccessChain 392(fp3D) 46
-                              Store 489 488
-             490:    26(bool) CompositeExtract 479 0
-             491:      6(int) Select 490 50 51
-             492:     53(ptr) AccessChain 379 12
-                              Store 492 491
-             493:    396(ptr) AccessChain 392(fp3D) 12
-             494:  376(ivec3) Load 493
-             495:    411(ptr) AccessChain 379 36
-             496:  376(ivec3) Load 495
-             497:  376(ivec3) IAdd 496 494
-             498:    411(ptr) AccessChain 379 36
-                              Store 498 497
-             499:    396(ptr) AccessChain 392(fp3D) 36
-             500:  376(ivec3) Load 499
-             501:    411(ptr) AccessChain 379 39
-             502:  376(ivec3) Load 501
-             503:  376(ivec3) IAdd 502 500
-             504:    411(ptr) AccessChain 379 39
-                              Store 504 503
-             505:     34(ptr) AccessChain 392(fp3D) 39
-             506:    7(ivec2) Load 505
-             507:     57(ptr) AccessChain 379 42
-             508:    7(ivec2) Load 507
-             509:    7(ivec2) IAdd 508 506
-             510:     57(ptr) AccessChain 379 42
-                              Store 510 509
-             511:     44(ptr) AccessChain 392(fp3D) 42
-             512:      6(int) Load 511
-             513:     53(ptr) AccessChain 379 46
-             514:      6(int) Load 513
-             515:      6(int) IAdd 514 512
-             516:     53(ptr) AccessChain 379 46
-                              Store 516 515
-             517:     44(ptr) AccessChain 392(fp3D) 46
-             518:      6(int) Load 517
-             519:     53(ptr) AccessChain 379 68
-             520:      6(int) Load 519
-             521:      6(int) IAdd 520 518
-             522:     53(ptr) AccessChain 379 68
-                              Store 522 521
-             523:         381 Load 383(sample3D)
-             524:  385(fvec3) Load 387(P3)
-             525:   13(float) Load 125(lodClamp)
-             526:     11(int) Load 24(granularity)
-             527:   13(float) Load 76(bias)
-             529:528(ResType) ImageSampleFootprintNV 523 524 526 27 Bias MinLod 527 525
-             530:  376(ivec3) CompositeExtract 529 1
-             531:    396(ptr) AccessChain 392(fp3D) 12
-                              Store 531 530
-             532:  376(ivec3) CompositeExtract 529 2
-             533:    396(ptr) AccessChain 392(fp3D) 36
-                              Store 533 532
-             534:    7(ivec2) CompositeExtract 529 3
-             535:     34(ptr) AccessChain 392(fp3D) 39
-                              Store 535 534
-             536:      6(int) CompositeExtract 529 4
-             537:     44(ptr) AccessChain 392(fp3D) 42
-                              Store 537 536
-             538:      6(int) CompositeExtract 529 5
-             539:     44(ptr) AccessChain 392(fp3D) 46
-                              Store 539 538
-             540:    26(bool) CompositeExtract 529 0
-             541:      6(int) Select 540 50 51
-             542:     53(ptr) AccessChain 379 12
-                              Store 542 541
-             543:    396(ptr) AccessChain 392(fp3D) 12
-             544:  376(ivec3) Load 543
-             545:    411(ptr) AccessChain 379 36
-             546:  376(ivec3) Load 545
-             547:  376(ivec3) IAdd 546 544
-             548:    411(ptr) AccessChain 379 36
-                              Store 548 547
-             549:    396(ptr) AccessChain 392(fp3D) 36
-             550:  376(ivec3) Load 549
-             551:    411(ptr) AccessChain 379 39
-             552:  376(ivec3) Load 551
-             553:  376(ivec3) IAdd 552 550
-             554:    411(ptr) AccessChain 379 39
-                              Store 554 553
-             555:     34(ptr) AccessChain 392(fp3D) 39
-             556:    7(ivec2) Load 555
-             557:     57(ptr) AccessChain 379 42
-             558:    7(ivec2) Load 557
-             559:    7(ivec2) IAdd 558 556
-             560:     57(ptr) AccessChain 379 42
-                              Store 560 559
-             561:     44(ptr) AccessChain 392(fp3D) 42
-             562:      6(int) Load 561
-             563:     53(ptr) AccessChain 379 46
-             564:      6(int) Load 563
-             565:      6(int) IAdd 564 562
-             566:     53(ptr) AccessChain 379 46
-                              Store 566 565
-             567:     44(ptr) AccessChain 392(fp3D) 46
-             568:      6(int) Load 567
-             569:     53(ptr) AccessChain 379 68
-             570:      6(int) Load 569
-             571:      6(int) IAdd 570 568
-             572:     53(ptr) AccessChain 379 68
-                              Store 572 571
-             573:         381 Load 383(sample3D)
-             574:  385(fvec3) Load 387(P3)
-             575:   13(float) Load 225(lod)
-             576:     11(int) Load 24(granularity)
-             578:577(ResType) ImageSampleFootprintNV 573 574 576 27 Lod 575
-             579:  376(ivec3) CompositeExtract 578 1
-             580:    396(ptr) AccessChain 392(fp3D) 12
-                              Store 580 579
-             581:  376(ivec3) CompositeExtract 578 2
-             582:    396(ptr) AccessChain 392(fp3D) 36
-                              Store 582 581
-             583:    7(ivec2) CompositeExtract 578 3
-             584:     34(ptr) AccessChain 392(fp3D) 39
-                              Store 584 583
-             585:      6(int) CompositeExtract 578 4
-             586:     44(ptr) AccessChain 392(fp3D) 42
-                              Store 586 585
-             587:      6(int) CompositeExtract 578 5
-             588:     44(ptr) AccessChain 392(fp3D) 46
-                              Store 588 587
-             589:    26(bool) CompositeExtract 578 0
-             590:      6(int) Select 589 50 51
-             591:     53(ptr) AccessChain 379 12
-                              Store 591 590
-             592:    396(ptr) AccessChain 392(fp3D) 12
-             593:  376(ivec3) Load 592
-             594:    411(ptr) AccessChain 379 36
-             595:  376(ivec3) Load 594
-             596:  376(ivec3) IAdd 595 593
-             597:    411(ptr) AccessChain 379 36
-                              Store 597 596
-             598:    396(ptr) AccessChain 392(fp3D) 36
-             599:  376(ivec3) Load 598
-             600:    411(ptr) AccessChain 379 39
-             601:  376(ivec3) Load 600
-             602:  376(ivec3) IAdd 601 599
-             603:    411(ptr) AccessChain 379 39
-                              Store 603 602
-             604:     34(ptr) AccessChain 392(fp3D) 39
-             605:    7(ivec2) Load 604
-             606:     57(ptr) AccessChain 379 42
-             607:    7(ivec2) Load 606
-             608:    7(ivec2) IAdd 607 605
-             609:     57(ptr) AccessChain 379 42
-                              Store 609 608
-             610:     44(ptr) AccessChain 392(fp3D) 42
-             611:      6(int) Load 610
-             612:     53(ptr) AccessChain 379 46
-             613:      6(int) Load 612
-             614:      6(int) IAdd 613 611
-             615:     53(ptr) AccessChain 379 46
-                              Store 615 614
-             616:     44(ptr) AccessChain 392(fp3D) 46
-             617:      6(int) Load 616
-             618:     53(ptr) AccessChain 379 68
-             619:      6(int) Load 618
-             620:      6(int) IAdd 619 617
-             621:     53(ptr) AccessChain 379 68
-                              Store 621 620
+                              Name 54_1  "main"
+                              Name 30_1  "result2D"
+                              MemberName 30_1(result2D) 0  "ret2D"
+                              MemberName 30_1(result2D) 1  "anchor2D"
+                              MemberName 30_1(result2D) 2  "offset2D"
+                              MemberName 30_1(result2D) 3  "mask2D"
+                              MemberName 30_1(result2D) 4  "lod2D"
+                              MemberName 30_1(result2D) 5  "granularity2D"
+                              Name 59_1  ""
+                              Name 59_2  "sample2D"
+                              Name 59_3  "P2"
+                              Name 59_4  "granularity"
+                              Name 30_2  "gl_TextureFootprint2DNV"
+                              MemberName 30_2(gl_TextureFootprint2DNV) 0  "anchor"
+                              MemberName 30_2(gl_TextureFootprint2DNV) 1  "offset"
+                              MemberName 30_2(gl_TextureFootprint2DNV) 2  "mask"
+                              MemberName 30_2(gl_TextureFootprint2DNV) 3  "lod"
+                              MemberName 30_2(gl_TextureFootprint2DNV) 4  "granularity"
+                              Name 59_13  "fp2D"
+                              Name 30_3  "ResType"
+                              Name 59_5  "bias"
+                              Name 30_4  "ResType"
+                              Name 59_6  "lodClamp"
+                              Name 30_5  "ResType"
+                              Name 30_6  "ResType"
+                              Name 59_7  "lod"
+                              Name 30_7  "ResType"
+                              Name 59_8  "dx"
+                              Name 59_9  "dy"
+                              Name 30_8  "ResType"
+                              Name 30_9  "ResType"
+                              Name 30_10  "result3D"
+                              MemberName 30_10(result3D) 0  "ret3D"
+                              MemberName 30_10(result3D) 1  "anchor3D"
+                              MemberName 30_10(result3D) 2  "offset3D"
+                              MemberName 30_10(result3D) 3  "mask3D"
+                              MemberName 30_10(result3D) 4  "lod3D"
+                              MemberName 30_10(result3D) 5  "granularity3D"
+                              Name 59_10  ""
+                              Name 59_11  "sample3D"
+                              Name 59_12  "P3"
+                              Name 30_11  "gl_TextureFootprint3DNV"
+                              MemberName 30_11(gl_TextureFootprint3DNV) 0  "anchor"
+                              MemberName 30_11(gl_TextureFootprint3DNV) 1  "offset"
+                              MemberName 30_11(gl_TextureFootprint3DNV) 2  "mask"
+                              MemberName 30_11(gl_TextureFootprint3DNV) 3  "lod"
+                              MemberName 30_11(gl_TextureFootprint3DNV) 4  "granularity"
+                              Name 59_14  "fp3D"
+                              Name 30_12  "ResType"
+                              Name 30_13  "ResType"
+                              Name 30_14  "ResType"
+                              Name 30_15  "ResType"
+                              Name 30_16  "ResType"
+                              Decorate 30_1(result2D) BufferBlock
+                              MemberDecorate 30_1(result2D) 0 Offset 0
+                              MemberDecorate 30_1(result2D) 1 Offset 8
+                              MemberDecorate 30_1(result2D) 2 Offset 16
+                              MemberDecorate 30_1(result2D) 3 Offset 24
+                              MemberDecorate 30_1(result2D) 4 Offset 32
+                              MemberDecorate 30_1(result2D) 5 Offset 36
+                              Decorate 59_1 Binding 2
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(sample2D) Binding 0
+                              Decorate 59_2(sample2D) DescriptorSet 0
+                              Decorate 59_3(P2) Location 0
+                              Decorate 59_4(granularity) Flat
+                              Decorate 59_4(granularity) Location 3
+                              Decorate 59_5(bias) Location 9
+                              Decorate 59_6(lodClamp) Location 4
+                              Decorate 59_7(lod) Location 5
+                              Decorate 59_8(dx) Location 6
+                              Decorate 59_9(dy) Location 8
+                              Decorate 30_10(result3D) BufferBlock
+                              MemberDecorate 30_10(result3D) 0 Offset 0
+                              MemberDecorate 30_10(result3D) 1 Offset 16
+                              MemberDecorate 30_10(result3D) 2 Offset 32
+                              MemberDecorate 30_10(result3D) 3 Offset 48
+                              MemberDecorate 30_10(result3D) 4 Offset 56
+                              MemberDecorate 30_10(result3D) 5 Offset 60
+                              Decorate 59_10 Binding 3
+                              Decorate 59_10 DescriptorSet 0
+                              Decorate 59_11(sample3D) Binding 1
+                              Decorate 59_11(sample3D) DescriptorSet 0
+                              Decorate 59_12(P3) Location 2
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 2
+  30_1(result2D):             TypeStruct 21_1(int) 23_1(ivec2) 23_1(ivec2) 23_1(ivec2) 21_1(int) 21_1(int)
+            32_1:             TypePointer Uniform 30_1(result2D)
+            59_1:   32_1(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            22_1:             TypeFloat 32
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_2:             TypePointer UniformConstant 27_1
+  59_2(sample2D):   32_2(ptr) Variable UniformConstant
+            23_2:             TypeVector 22_1(float) 2
+            32_3:             TypePointer Input 23_2(fvec2)
+        59_3(P2):   32_3(ptr) Variable Input
+            32_4:             TypePointer Input 21_2(int)
+59_4(granularity):   32_4(ptr) Variable Input
+            20_1:             TypeBool
+            41_1:  20_1(bool) ConstantTrue
+30_2(gl_TextureFootprint2DNV):             TypeStruct 23_1(ivec2) 23_1(ivec2) 23_1(ivec2) 21_1(int) 21_1(int)
+            32_5:             TypePointer Function 30_2(gl_TextureFootprint2DNV)
+   30_3(ResType):             TypeStruct 20_1(bool) 23_1(ivec2) 23_1(ivec2) 23_1(ivec2) 21_1(int) 21_1(int)
+            32_6:             TypePointer Function 23_1(ivec2)
+            43_2:   21_2(int) Constant 1
+            43_3:   21_2(int) Constant 2
+            43_4:   21_2(int) Constant 3
+            32_7:             TypePointer Function 21_1(int)
+            43_5:   21_2(int) Constant 4
+         uint(1):   21_1(int) Constant 1
+         uint(0):   21_1(int) Constant 0
+            32_8:             TypePointer Uniform 21_1(int)
+            32_9:             TypePointer Uniform 23_1(ivec2)
+            43_6:   21_2(int) Constant 5
+           32_10:             TypePointer Input 22_1(float)
+      59_5(bias):  32_10(ptr) Variable Input
+   30_4(ResType):             TypeStruct 20_1(bool) 23_1(ivec2) 23_1(ivec2) 23_1(ivec2) 21_1(int) 21_1(int)
+  59_6(lodClamp):  32_10(ptr) Variable Input
+   30_5(ResType):             TypeStruct 20_1(bool) 23_1(ivec2) 23_1(ivec2) 23_1(ivec2) 21_1(int) 21_1(int)
+   30_6(ResType):             TypeStruct 20_1(bool) 23_1(ivec2) 23_1(ivec2) 23_1(ivec2) 21_1(int) 21_1(int)
+       59_7(lod):  32_10(ptr) Variable Input
+   30_7(ResType):             TypeStruct 20_1(bool) 23_1(ivec2) 23_1(ivec2) 23_1(ivec2) 21_1(int) 21_1(int)
+        59_8(dx):   32_3(ptr) Variable Input
+        59_9(dy):   32_3(ptr) Variable Input
+   30_8(ResType):             TypeStruct 20_1(bool) 23_1(ivec2) 23_1(ivec2) 23_1(ivec2) 21_1(int) 21_1(int)
+   30_9(ResType):             TypeStruct 20_1(bool) 23_1(ivec2) 23_1(ivec2) 23_1(ivec2) 21_1(int) 21_1(int)
+            23_3:             TypeVector 21_1(int) 3
+ 30_10(result3D):             TypeStruct 21_1(int) 23_3(ivec3) 23_3(ivec3) 23_1(ivec2) 21_1(int) 21_1(int)
+           32_11:             TypePointer Uniform 30_10(result3D)
+           59_10:  32_11(ptr) Variable Uniform
+            25_2:             TypeImage 22_1(float) 3D sampled format:Unknown
+            27_2:             TypeSampledImage 25_2
+           32_12:             TypePointer UniformConstant 27_2
+ 59_11(sample3D):  32_12(ptr) Variable UniformConstant
+            23_4:             TypeVector 22_1(float) 3
+           32_13:             TypePointer Input 23_4(fvec3)
+       59_12(P3):  32_13(ptr) Variable Input
+30_11(gl_TextureFootprint3DNV):             TypeStruct 23_3(ivec3) 23_3(ivec3) 23_1(ivec2) 21_1(int) 21_1(int)
+           32_14:             TypePointer Function 30_11(gl_TextureFootprint3DNV)
+  30_12(ResType):             TypeStruct 20_1(bool) 23_3(ivec3) 23_3(ivec3) 23_1(ivec2) 21_1(int) 21_1(int)
+           32_15:             TypePointer Function 23_3(ivec3)
+           32_16:             TypePointer Uniform 23_3(ivec3)
+  30_13(ResType):             TypeStruct 20_1(bool) 23_3(ivec3) 23_3(ivec3) 23_1(ivec2) 21_1(int) 21_1(int)
+  30_14(ResType):             TypeStruct 20_1(bool) 23_3(ivec3) 23_3(ivec3) 23_1(ivec2) 21_1(int) 21_1(int)
+  30_15(ResType):             TypeStruct 20_1(bool) 23_3(ivec3) 23_3(ivec3) 23_1(ivec2) 21_1(int) 21_1(int)
+  30_16(ResType):             TypeStruct 20_1(bool) 23_3(ivec3) 23_3(ivec3) 23_1(ivec2) 21_1(int) 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_13(fp2D):   32_5(ptr) Variable Function
+     59_14(fp3D):  32_14(ptr) Variable Function
+            61_1:        27_1 Load 59_2(sample2D)
+            61_2: 23_2(fvec2) Load 59_3(P2)
+            61_3:   21_2(int) Load 59_4(granularity)
+          5283_1:30_3(ResType) ImageSampleFootprintNV 61_1 61_2 61_3 41_1
+            81_1: 23_1(ivec2) CompositeExtract 5283_1 1
+            65_1:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+                              Store 65_1 81_1
+            81_2: 23_1(ivec2) CompositeExtract 5283_1 2
+            65_2:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+                              Store 65_2 81_2
+            81_3: 23_1(ivec2) CompositeExtract 5283_1 3
+            65_3:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+                              Store 65_3 81_3
+            81_4:   21_1(int) CompositeExtract 5283_1 4
+            65_4:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+                              Store 65_4 81_4
+            81_5:   21_1(int) CompositeExtract 5283_1 5
+            65_5:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+                              Store 65_5 81_5
+            81_6:  20_1(bool) CompositeExtract 5283_1 0
+           169_1:   21_1(int) Select 81_6 uint(1) uint(0)
+            65_6:   32_8(ptr) AccessChain 59_1 43_1
+                              Store 65_6 169_1
+            65_7:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+            61_4: 23_1(ivec2) Load 65_7
+            65_8:   32_9(ptr) AccessChain 59_1 43_2
+                              Store 65_8 61_4
+            65_9:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+            61_5: 23_1(ivec2) Load 65_9
+           65_10:   32_9(ptr) AccessChain 59_1 43_3
+                              Store 65_10 61_5
+           65_11:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+            61_6: 23_1(ivec2) Load 65_11
+           65_12:   32_9(ptr) AccessChain 59_1 43_4
+                              Store 65_12 61_6
+           65_13:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+            61_7:   21_1(int) Load 65_13
+           65_14:   32_8(ptr) AccessChain 59_1 43_5
+                              Store 65_14 61_7
+           65_15:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+            61_8:   21_1(int) Load 65_15
+           65_16:   32_8(ptr) AccessChain 59_1 43_6
+                              Store 65_16 61_8
+            61_9:        27_1 Load 59_2(sample2D)
+           61_10: 23_2(fvec2) Load 59_3(P2)
+           61_11:   21_2(int) Load 59_4(granularity)
+           61_12: 22_1(float) Load 59_5(bias)
+          5283_2:30_4(ResType) ImageSampleFootprintNV 61_9 61_10 61_11 41_1 Bias 61_12
+            81_7: 23_1(ivec2) CompositeExtract 5283_2 1
+           65_17:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+                              Store 65_17 81_7
+            81_8: 23_1(ivec2) CompositeExtract 5283_2 2
+           65_18:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+                              Store 65_18 81_8
+            81_9: 23_1(ivec2) CompositeExtract 5283_2 3
+           65_19:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+                              Store 65_19 81_9
+           81_10:   21_1(int) CompositeExtract 5283_2 4
+           65_20:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+                              Store 65_20 81_10
+           81_11:   21_1(int) CompositeExtract 5283_2 5
+           65_21:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+                              Store 65_21 81_11
+           81_12:  20_1(bool) CompositeExtract 5283_2 0
+           169_2:   21_1(int) Select 81_12 uint(1) uint(0)
+           65_22:   32_8(ptr) AccessChain 59_1 43_1
+                              Store 65_22 169_2
+           65_23:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+           61_13: 23_1(ivec2) Load 65_23
+           65_24:   32_9(ptr) AccessChain 59_1 43_2
+           61_14: 23_1(ivec2) Load 65_24
+           128_1: 23_1(ivec2) IAdd 61_14 61_13
+           65_25:   32_9(ptr) AccessChain 59_1 43_2
+                              Store 65_25 128_1
+           65_26:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+           61_15: 23_1(ivec2) Load 65_26
+           65_27:   32_9(ptr) AccessChain 59_1 43_3
+           61_16: 23_1(ivec2) Load 65_27
+           128_2: 23_1(ivec2) IAdd 61_16 61_15
+           65_28:   32_9(ptr) AccessChain 59_1 43_3
+                              Store 65_28 128_2
+           65_29:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+           61_17: 23_1(ivec2) Load 65_29
+           65_30:   32_9(ptr) AccessChain 59_1 43_4
+           61_18: 23_1(ivec2) Load 65_30
+           128_3: 23_1(ivec2) IAdd 61_18 61_17
+           65_31:   32_9(ptr) AccessChain 59_1 43_4
+                              Store 65_31 128_3
+           65_32:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+           61_19:   21_1(int) Load 65_32
+           65_33:   32_8(ptr) AccessChain 59_1 43_5
+           61_20:   21_1(int) Load 65_33
+           128_4:   21_1(int) IAdd 61_20 61_19
+           65_34:   32_8(ptr) AccessChain 59_1 43_5
+                              Store 65_34 128_4
+           65_35:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+           61_21:   21_1(int) Load 65_35
+           65_36:   32_8(ptr) AccessChain 59_1 43_6
+           61_22:   21_1(int) Load 65_36
+           128_5:   21_1(int) IAdd 61_22 61_21
+           65_37:   32_8(ptr) AccessChain 59_1 43_6
+                              Store 65_37 128_5
+           61_23:        27_1 Load 59_2(sample2D)
+           61_24: 23_2(fvec2) Load 59_3(P2)
+           61_25: 22_1(float) Load 59_6(lodClamp)
+           61_26:   21_2(int) Load 59_4(granularity)
+          5283_3:30_5(ResType) ImageSampleFootprintNV 61_23 61_24 61_26 41_1 MinLod 61_25
+           81_13: 23_1(ivec2) CompositeExtract 5283_3 1
+           65_38:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+                              Store 65_38 81_13
+           81_14: 23_1(ivec2) CompositeExtract 5283_3 2
+           65_39:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+                              Store 65_39 81_14
+           81_15: 23_1(ivec2) CompositeExtract 5283_3 3
+           65_40:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+                              Store 65_40 81_15
+           81_16:   21_1(int) CompositeExtract 5283_3 4
+           65_41:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+                              Store 65_41 81_16
+           81_17:   21_1(int) CompositeExtract 5283_3 5
+           65_42:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+                              Store 65_42 81_17
+           81_18:  20_1(bool) CompositeExtract 5283_3 0
+           169_3:   21_1(int) Select 81_18 uint(1) uint(0)
+           65_43:   32_8(ptr) AccessChain 59_1 43_1
+                              Store 65_43 169_3
+           65_44:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+           61_27: 23_1(ivec2) Load 65_44
+           65_45:   32_9(ptr) AccessChain 59_1 43_2
+           61_28: 23_1(ivec2) Load 65_45
+           128_6: 23_1(ivec2) IAdd 61_28 61_27
+           65_46:   32_9(ptr) AccessChain 59_1 43_2
+                              Store 65_46 128_6
+           65_47:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+           61_29: 23_1(ivec2) Load 65_47
+           65_48:   32_9(ptr) AccessChain 59_1 43_3
+           61_30: 23_1(ivec2) Load 65_48
+           128_7: 23_1(ivec2) IAdd 61_30 61_29
+           65_49:   32_9(ptr) AccessChain 59_1 43_3
+                              Store 65_49 128_7
+           65_50:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+           61_31: 23_1(ivec2) Load 65_50
+           65_51:   32_9(ptr) AccessChain 59_1 43_4
+           61_32: 23_1(ivec2) Load 65_51
+           128_8: 23_1(ivec2) IAdd 61_32 61_31
+           65_52:   32_9(ptr) AccessChain 59_1 43_4
+                              Store 65_52 128_8
+           65_53:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+           61_33:   21_1(int) Load 65_53
+           65_54:   32_8(ptr) AccessChain 59_1 43_5
+           61_34:   21_1(int) Load 65_54
+           128_9:   21_1(int) IAdd 61_34 61_33
+           65_55:   32_8(ptr) AccessChain 59_1 43_5
+                              Store 65_55 128_9
+           65_56:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+           61_35:   21_1(int) Load 65_56
+           65_57:   32_8(ptr) AccessChain 59_1 43_6
+           61_36:   21_1(int) Load 65_57
+          128_10:   21_1(int) IAdd 61_36 61_35
+           65_58:   32_8(ptr) AccessChain 59_1 43_6
+                              Store 65_58 128_10
+           61_37:        27_1 Load 59_2(sample2D)
+           61_38: 23_2(fvec2) Load 59_3(P2)
+           61_39: 22_1(float) Load 59_6(lodClamp)
+           61_40:   21_2(int) Load 59_4(granularity)
+           61_41: 22_1(float) Load 59_5(bias)
+          5283_4:30_6(ResType) ImageSampleFootprintNV 61_37 61_38 61_40 41_1 Bias MinLod 61_41 61_39
+           81_19: 23_1(ivec2) CompositeExtract 5283_4 1
+           65_59:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+                              Store 65_59 81_19
+           81_20: 23_1(ivec2) CompositeExtract 5283_4 2
+           65_60:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+                              Store 65_60 81_20
+           81_21: 23_1(ivec2) CompositeExtract 5283_4 3
+           65_61:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+                              Store 65_61 81_21
+           81_22:   21_1(int) CompositeExtract 5283_4 4
+           65_62:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+                              Store 65_62 81_22
+           81_23:   21_1(int) CompositeExtract 5283_4 5
+           65_63:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+                              Store 65_63 81_23
+           81_24:  20_1(bool) CompositeExtract 5283_4 0
+           169_4:   21_1(int) Select 81_24 uint(1) uint(0)
+           65_64:   32_8(ptr) AccessChain 59_1 43_1
+                              Store 65_64 169_4
+           65_65:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+           61_42: 23_1(ivec2) Load 65_65
+           65_66:   32_9(ptr) AccessChain 59_1 43_2
+           61_43: 23_1(ivec2) Load 65_66
+          128_11: 23_1(ivec2) IAdd 61_43 61_42
+           65_67:   32_9(ptr) AccessChain 59_1 43_2
+                              Store 65_67 128_11
+           65_68:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+           61_44: 23_1(ivec2) Load 65_68
+           65_69:   32_9(ptr) AccessChain 59_1 43_3
+           61_45: 23_1(ivec2) Load 65_69
+          128_12: 23_1(ivec2) IAdd 61_45 61_44
+           65_70:   32_9(ptr) AccessChain 59_1 43_3
+                              Store 65_70 128_12
+           65_71:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+           61_46: 23_1(ivec2) Load 65_71
+           65_72:   32_9(ptr) AccessChain 59_1 43_4
+           61_47: 23_1(ivec2) Load 65_72
+          128_13: 23_1(ivec2) IAdd 61_47 61_46
+           65_73:   32_9(ptr) AccessChain 59_1 43_4
+                              Store 65_73 128_13
+           65_74:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+           61_48:   21_1(int) Load 65_74
+           65_75:   32_8(ptr) AccessChain 59_1 43_5
+           61_49:   21_1(int) Load 65_75
+          128_14:   21_1(int) IAdd 61_49 61_48
+           65_76:   32_8(ptr) AccessChain 59_1 43_5
+                              Store 65_76 128_14
+           65_77:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+           61_50:   21_1(int) Load 65_77
+           65_78:   32_8(ptr) AccessChain 59_1 43_6
+           61_51:   21_1(int) Load 65_78
+          128_15:   21_1(int) IAdd 61_51 61_50
+           65_79:   32_8(ptr) AccessChain 59_1 43_6
+                              Store 65_79 128_15
+           61_52:        27_1 Load 59_2(sample2D)
+           61_53: 23_2(fvec2) Load 59_3(P2)
+           61_54: 22_1(float) Load 59_7(lod)
+           61_55:   21_2(int) Load 59_4(granularity)
+          5283_5:30_7(ResType) ImageSampleFootprintNV 61_52 61_53 61_55 41_1 Lod 61_54
+           81_25: 23_1(ivec2) CompositeExtract 5283_5 1
+           65_80:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+                              Store 65_80 81_25
+           81_26: 23_1(ivec2) CompositeExtract 5283_5 2
+           65_81:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+                              Store 65_81 81_26
+           81_27: 23_1(ivec2) CompositeExtract 5283_5 3
+           65_82:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+                              Store 65_82 81_27
+           81_28:   21_1(int) CompositeExtract 5283_5 4
+           65_83:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+                              Store 65_83 81_28
+           81_29:   21_1(int) CompositeExtract 5283_5 5
+           65_84:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+                              Store 65_84 81_29
+           81_30:  20_1(bool) CompositeExtract 5283_5 0
+           169_5:   21_1(int) Select 81_30 uint(1) uint(0)
+           65_85:   32_8(ptr) AccessChain 59_1 43_1
+                              Store 65_85 169_5
+           65_86:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+           61_56: 23_1(ivec2) Load 65_86
+           65_87:   32_9(ptr) AccessChain 59_1 43_2
+           61_57: 23_1(ivec2) Load 65_87
+          128_16: 23_1(ivec2) IAdd 61_57 61_56
+           65_88:   32_9(ptr) AccessChain 59_1 43_2
+                              Store 65_88 128_16
+           65_89:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+           61_58: 23_1(ivec2) Load 65_89
+           65_90:   32_9(ptr) AccessChain 59_1 43_3
+           61_59: 23_1(ivec2) Load 65_90
+          128_17: 23_1(ivec2) IAdd 61_59 61_58
+           65_91:   32_9(ptr) AccessChain 59_1 43_3
+                              Store 65_91 128_17
+           65_92:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+           61_60: 23_1(ivec2) Load 65_92
+           65_93:   32_9(ptr) AccessChain 59_1 43_4
+           61_61: 23_1(ivec2) Load 65_93
+          128_18: 23_1(ivec2) IAdd 61_61 61_60
+           65_94:   32_9(ptr) AccessChain 59_1 43_4
+                              Store 65_94 128_18
+           65_95:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+           61_62:   21_1(int) Load 65_95
+           65_96:   32_8(ptr) AccessChain 59_1 43_5
+           61_63:   21_1(int) Load 65_96
+          128_19:   21_1(int) IAdd 61_63 61_62
+           65_97:   32_8(ptr) AccessChain 59_1 43_5
+                              Store 65_97 128_19
+           65_98:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+           61_64:   21_1(int) Load 65_98
+           65_99:   32_8(ptr) AccessChain 59_1 43_6
+           61_65:   21_1(int) Load 65_99
+          128_20:   21_1(int) IAdd 61_65 61_64
+          65_100:   32_8(ptr) AccessChain 59_1 43_6
+                              Store 65_100 128_20
+           61_66:        27_1 Load 59_2(sample2D)
+           61_67: 23_2(fvec2) Load 59_3(P2)
+           61_68: 23_2(fvec2) Load 59_8(dx)
+           61_69: 23_2(fvec2) Load 59_9(dy)
+           61_70:   21_2(int) Load 59_4(granularity)
+          5283_6:30_8(ResType) ImageSampleFootprintNV 61_66 61_67 61_70 41_1 Grad 61_68 61_69
+           81_31: 23_1(ivec2) CompositeExtract 5283_6 1
+          65_101:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+                              Store 65_101 81_31
+           81_32: 23_1(ivec2) CompositeExtract 5283_6 2
+          65_102:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+                              Store 65_102 81_32
+           81_33: 23_1(ivec2) CompositeExtract 5283_6 3
+          65_103:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+                              Store 65_103 81_33
+           81_34:   21_1(int) CompositeExtract 5283_6 4
+          65_104:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+                              Store 65_104 81_34
+           81_35:   21_1(int) CompositeExtract 5283_6 5
+          65_105:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+                              Store 65_105 81_35
+           81_36:  20_1(bool) CompositeExtract 5283_6 0
+           169_6:   21_1(int) Select 81_36 uint(1) uint(0)
+          65_106:   32_8(ptr) AccessChain 59_1 43_1
+                              Store 65_106 169_6
+          65_107:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+           61_71: 23_1(ivec2) Load 65_107
+          65_108:   32_9(ptr) AccessChain 59_1 43_2
+           61_72: 23_1(ivec2) Load 65_108
+          128_21: 23_1(ivec2) IAdd 61_72 61_71
+          65_109:   32_9(ptr) AccessChain 59_1 43_2
+                              Store 65_109 128_21
+          65_110:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+           61_73: 23_1(ivec2) Load 65_110
+          65_111:   32_9(ptr) AccessChain 59_1 43_3
+           61_74: 23_1(ivec2) Load 65_111
+          128_22: 23_1(ivec2) IAdd 61_74 61_73
+          65_112:   32_9(ptr) AccessChain 59_1 43_3
+                              Store 65_112 128_22
+          65_113:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+           61_75: 23_1(ivec2) Load 65_113
+          65_114:   32_9(ptr) AccessChain 59_1 43_4
+           61_76: 23_1(ivec2) Load 65_114
+          128_23: 23_1(ivec2) IAdd 61_76 61_75
+          65_115:   32_9(ptr) AccessChain 59_1 43_4
+                              Store 65_115 128_23
+          65_116:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+           61_77:   21_1(int) Load 65_116
+          65_117:   32_8(ptr) AccessChain 59_1 43_5
+           61_78:   21_1(int) Load 65_117
+          128_24:   21_1(int) IAdd 61_78 61_77
+          65_118:   32_8(ptr) AccessChain 59_1 43_5
+                              Store 65_118 128_24
+          65_119:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+           61_79:   21_1(int) Load 65_119
+          65_120:   32_8(ptr) AccessChain 59_1 43_6
+           61_80:   21_1(int) Load 65_120
+          128_25:   21_1(int) IAdd 61_80 61_79
+          65_121:   32_8(ptr) AccessChain 59_1 43_6
+                              Store 65_121 128_25
+           61_81:        27_1 Load 59_2(sample2D)
+           61_82: 23_2(fvec2) Load 59_3(P2)
+           61_83: 23_2(fvec2) Load 59_8(dx)
+           61_84: 23_2(fvec2) Load 59_9(dy)
+           61_85: 22_1(float) Load 59_6(lodClamp)
+           61_86:   21_2(int) Load 59_4(granularity)
+          5283_7:30_9(ResType) ImageSampleFootprintNV 61_81 61_82 61_86 41_1 Grad MinLod 61_83 61_84 61_85
+           81_37: 23_1(ivec2) CompositeExtract 5283_7 1
+          65_122:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+                              Store 65_122 81_37
+           81_38: 23_1(ivec2) CompositeExtract 5283_7 2
+          65_123:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+                              Store 65_123 81_38
+           81_39: 23_1(ivec2) CompositeExtract 5283_7 3
+          65_124:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+                              Store 65_124 81_39
+           81_40:   21_1(int) CompositeExtract 5283_7 4
+          65_125:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+                              Store 65_125 81_40
+           81_41:   21_1(int) CompositeExtract 5283_7 5
+          65_126:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+                              Store 65_126 81_41
+           81_42:  20_1(bool) CompositeExtract 5283_7 0
+           169_7:   21_1(int) Select 81_42 uint(1) uint(0)
+          65_127:   32_8(ptr) AccessChain 59_1 43_1
+                              Store 65_127 169_7
+          65_128:   32_6(ptr) AccessChain 59_13(fp2D) 43_1
+           61_87: 23_1(ivec2) Load 65_128
+          65_129:   32_9(ptr) AccessChain 59_1 43_2
+           61_88: 23_1(ivec2) Load 65_129
+          128_26: 23_1(ivec2) IAdd 61_88 61_87
+          65_130:   32_9(ptr) AccessChain 59_1 43_2
+                              Store 65_130 128_26
+          65_131:   32_6(ptr) AccessChain 59_13(fp2D) 43_2
+           61_89: 23_1(ivec2) Load 65_131
+          65_132:   32_9(ptr) AccessChain 59_1 43_3
+           61_90: 23_1(ivec2) Load 65_132
+          128_27: 23_1(ivec2) IAdd 61_90 61_89
+          65_133:   32_9(ptr) AccessChain 59_1 43_3
+                              Store 65_133 128_27
+          65_134:   32_6(ptr) AccessChain 59_13(fp2D) 43_3
+           61_91: 23_1(ivec2) Load 65_134
+          65_135:   32_9(ptr) AccessChain 59_1 43_4
+           61_92: 23_1(ivec2) Load 65_135
+          128_28: 23_1(ivec2) IAdd 61_92 61_91
+          65_136:   32_9(ptr) AccessChain 59_1 43_4
+                              Store 65_136 128_28
+          65_137:   32_7(ptr) AccessChain 59_13(fp2D) 43_4
+           61_93:   21_1(int) Load 65_137
+          65_138:   32_8(ptr) AccessChain 59_1 43_5
+           61_94:   21_1(int) Load 65_138
+          128_29:   21_1(int) IAdd 61_94 61_93
+          65_139:   32_8(ptr) AccessChain 59_1 43_5
+                              Store 65_139 128_29
+          65_140:   32_7(ptr) AccessChain 59_13(fp2D) 43_5
+           61_95:   21_1(int) Load 65_140
+          65_141:   32_8(ptr) AccessChain 59_1 43_6
+           61_96:   21_1(int) Load 65_141
+          128_30:   21_1(int) IAdd 61_96 61_95
+          65_142:   32_8(ptr) AccessChain 59_1 43_6
+                              Store 65_142 128_30
+           61_97:        27_2 Load 59_11(sample3D)
+           61_98: 23_4(fvec3) Load 59_12(P3)
+           61_99:   21_2(int) Load 59_4(granularity)
+          5283_8:30_12(ResType) ImageSampleFootprintNV 61_97 61_98 61_99 41_1
+           81_43: 23_3(ivec3) CompositeExtract 5283_8 1
+          65_143:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+                              Store 65_143 81_43
+           81_44: 23_3(ivec3) CompositeExtract 5283_8 2
+          65_144:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+                              Store 65_144 81_44
+           81_45: 23_1(ivec2) CompositeExtract 5283_8 3
+          65_145:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+                              Store 65_145 81_45
+           81_46:   21_1(int) CompositeExtract 5283_8 4
+          65_146:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+                              Store 65_146 81_46
+           81_47:   21_1(int) CompositeExtract 5283_8 5
+          65_147:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+                              Store 65_147 81_47
+           81_48:  20_1(bool) CompositeExtract 5283_8 0
+           169_8:   21_1(int) Select 81_48 uint(1) uint(0)
+          65_148:   32_8(ptr) AccessChain 59_10 43_1
+                              Store 65_148 169_8
+          65_149:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+          61_100: 23_3(ivec3) Load 65_149
+          65_150:  32_16(ptr) AccessChain 59_10 43_2
+                              Store 65_150 61_100
+          65_151:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+          61_101: 23_3(ivec3) Load 65_151
+          65_152:  32_16(ptr) AccessChain 59_10 43_3
+                              Store 65_152 61_101
+          65_153:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+          61_102: 23_1(ivec2) Load 65_153
+          65_154:   32_9(ptr) AccessChain 59_10 43_4
+                              Store 65_154 61_102
+          65_155:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+          61_103:   21_1(int) Load 65_155
+          65_156:   32_8(ptr) AccessChain 59_10 43_5
+                              Store 65_156 61_103
+          65_157:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+          61_104:   21_1(int) Load 65_157
+          65_158:   32_8(ptr) AccessChain 59_10 43_6
+                              Store 65_158 61_104
+          61_105:        27_2 Load 59_11(sample3D)
+          61_106: 23_4(fvec3) Load 59_12(P3)
+          61_107:   21_2(int) Load 59_4(granularity)
+          61_108: 22_1(float) Load 59_5(bias)
+          5283_9:30_13(ResType) ImageSampleFootprintNV 61_105 61_106 61_107 41_1 Bias 61_108
+           81_49: 23_3(ivec3) CompositeExtract 5283_9 1
+          65_159:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+                              Store 65_159 81_49
+           81_50: 23_3(ivec3) CompositeExtract 5283_9 2
+          65_160:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+                              Store 65_160 81_50
+           81_51: 23_1(ivec2) CompositeExtract 5283_9 3
+          65_161:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+                              Store 65_161 81_51
+           81_52:   21_1(int) CompositeExtract 5283_9 4
+          65_162:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+                              Store 65_162 81_52
+           81_53:   21_1(int) CompositeExtract 5283_9 5
+          65_163:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+                              Store 65_163 81_53
+           81_54:  20_1(bool) CompositeExtract 5283_9 0
+           169_9:   21_1(int) Select 81_54 uint(1) uint(0)
+          65_164:   32_8(ptr) AccessChain 59_10 43_1
+                              Store 65_164 169_9
+          65_165:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+          61_109: 23_3(ivec3) Load 65_165
+          65_166:  32_16(ptr) AccessChain 59_10 43_2
+          61_110: 23_3(ivec3) Load 65_166
+          128_31: 23_3(ivec3) IAdd 61_110 61_109
+          65_167:  32_16(ptr) AccessChain 59_10 43_2
+                              Store 65_167 128_31
+          65_168:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+          61_111: 23_3(ivec3) Load 65_168
+          65_169:  32_16(ptr) AccessChain 59_10 43_3
+          61_112: 23_3(ivec3) Load 65_169
+          128_32: 23_3(ivec3) IAdd 61_112 61_111
+          65_170:  32_16(ptr) AccessChain 59_10 43_3
+                              Store 65_170 128_32
+          65_171:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+          61_113: 23_1(ivec2) Load 65_171
+          65_172:   32_9(ptr) AccessChain 59_10 43_4
+          61_114: 23_1(ivec2) Load 65_172
+          128_33: 23_1(ivec2) IAdd 61_114 61_113
+          65_173:   32_9(ptr) AccessChain 59_10 43_4
+                              Store 65_173 128_33
+          65_174:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+          61_115:   21_1(int) Load 65_174
+          65_175:   32_8(ptr) AccessChain 59_10 43_5
+          61_116:   21_1(int) Load 65_175
+          128_34:   21_1(int) IAdd 61_116 61_115
+          65_176:   32_8(ptr) AccessChain 59_10 43_5
+                              Store 65_176 128_34
+          65_177:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+          61_117:   21_1(int) Load 65_177
+          65_178:   32_8(ptr) AccessChain 59_10 43_6
+          61_118:   21_1(int) Load 65_178
+          128_35:   21_1(int) IAdd 61_118 61_117
+          65_179:   32_8(ptr) AccessChain 59_10 43_6
+                              Store 65_179 128_35
+          61_119:        27_2 Load 59_11(sample3D)
+          61_120: 23_4(fvec3) Load 59_12(P3)
+          61_121: 22_1(float) Load 59_6(lodClamp)
+          61_122:   21_2(int) Load 59_4(granularity)
+         5283_10:30_14(ResType) ImageSampleFootprintNV 61_119 61_120 61_122 41_1 MinLod 61_121
+           81_55: 23_3(ivec3) CompositeExtract 5283_10 1
+          65_180:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+                              Store 65_180 81_55
+           81_56: 23_3(ivec3) CompositeExtract 5283_10 2
+          65_181:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+                              Store 65_181 81_56
+           81_57: 23_1(ivec2) CompositeExtract 5283_10 3
+          65_182:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+                              Store 65_182 81_57
+           81_58:   21_1(int) CompositeExtract 5283_10 4
+          65_183:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+                              Store 65_183 81_58
+           81_59:   21_1(int) CompositeExtract 5283_10 5
+          65_184:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+                              Store 65_184 81_59
+           81_60:  20_1(bool) CompositeExtract 5283_10 0
+          169_10:   21_1(int) Select 81_60 uint(1) uint(0)
+          65_185:   32_8(ptr) AccessChain 59_10 43_1
+                              Store 65_185 169_10
+          65_186:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+          61_123: 23_3(ivec3) Load 65_186
+          65_187:  32_16(ptr) AccessChain 59_10 43_2
+          61_124: 23_3(ivec3) Load 65_187
+          128_36: 23_3(ivec3) IAdd 61_124 61_123
+          65_188:  32_16(ptr) AccessChain 59_10 43_2
+                              Store 65_188 128_36
+          65_189:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+          61_125: 23_3(ivec3) Load 65_189
+          65_190:  32_16(ptr) AccessChain 59_10 43_3
+          61_126: 23_3(ivec3) Load 65_190
+          128_37: 23_3(ivec3) IAdd 61_126 61_125
+          65_191:  32_16(ptr) AccessChain 59_10 43_3
+                              Store 65_191 128_37
+          65_192:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+          61_127: 23_1(ivec2) Load 65_192
+          65_193:   32_9(ptr) AccessChain 59_10 43_4
+          61_128: 23_1(ivec2) Load 65_193
+          128_38: 23_1(ivec2) IAdd 61_128 61_127
+          65_194:   32_9(ptr) AccessChain 59_10 43_4
+                              Store 65_194 128_38
+          65_195:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+          61_129:   21_1(int) Load 65_195
+          65_196:   32_8(ptr) AccessChain 59_10 43_5
+          61_130:   21_1(int) Load 65_196
+          128_39:   21_1(int) IAdd 61_130 61_129
+          65_197:   32_8(ptr) AccessChain 59_10 43_5
+                              Store 65_197 128_39
+          65_198:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+          61_131:   21_1(int) Load 65_198
+          65_199:   32_8(ptr) AccessChain 59_10 43_6
+          61_132:   21_1(int) Load 65_199
+          128_40:   21_1(int) IAdd 61_132 61_131
+          65_200:   32_8(ptr) AccessChain 59_10 43_6
+                              Store 65_200 128_40
+          61_133:        27_2 Load 59_11(sample3D)
+          61_134: 23_4(fvec3) Load 59_12(P3)
+          61_135: 22_1(float) Load 59_6(lodClamp)
+          61_136:   21_2(int) Load 59_4(granularity)
+          61_137: 22_1(float) Load 59_5(bias)
+         5283_11:30_15(ResType) ImageSampleFootprintNV 61_133 61_134 61_136 41_1 Bias MinLod 61_137 61_135
+           81_61: 23_3(ivec3) CompositeExtract 5283_11 1
+          65_201:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+                              Store 65_201 81_61
+           81_62: 23_3(ivec3) CompositeExtract 5283_11 2
+          65_202:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+                              Store 65_202 81_62
+           81_63: 23_1(ivec2) CompositeExtract 5283_11 3
+          65_203:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+                              Store 65_203 81_63
+           81_64:   21_1(int) CompositeExtract 5283_11 4
+          65_204:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+                              Store 65_204 81_64
+           81_65:   21_1(int) CompositeExtract 5283_11 5
+          65_205:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+                              Store 65_205 81_65
+           81_66:  20_1(bool) CompositeExtract 5283_11 0
+          169_11:   21_1(int) Select 81_66 uint(1) uint(0)
+          65_206:   32_8(ptr) AccessChain 59_10 43_1
+                              Store 65_206 169_11
+          65_207:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+          61_138: 23_3(ivec3) Load 65_207
+          65_208:  32_16(ptr) AccessChain 59_10 43_2
+          61_139: 23_3(ivec3) Load 65_208
+          128_41: 23_3(ivec3) IAdd 61_139 61_138
+          65_209:  32_16(ptr) AccessChain 59_10 43_2
+                              Store 65_209 128_41
+          65_210:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+          61_140: 23_3(ivec3) Load 65_210
+          65_211:  32_16(ptr) AccessChain 59_10 43_3
+          61_141: 23_3(ivec3) Load 65_211
+          128_42: 23_3(ivec3) IAdd 61_141 61_140
+          65_212:  32_16(ptr) AccessChain 59_10 43_3
+                              Store 65_212 128_42
+          65_213:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+          61_142: 23_1(ivec2) Load 65_213
+          65_214:   32_9(ptr) AccessChain 59_10 43_4
+          61_143: 23_1(ivec2) Load 65_214
+          128_43: 23_1(ivec2) IAdd 61_143 61_142
+          65_215:   32_9(ptr) AccessChain 59_10 43_4
+                              Store 65_215 128_43
+          65_216:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+          61_144:   21_1(int) Load 65_216
+          65_217:   32_8(ptr) AccessChain 59_10 43_5
+          61_145:   21_1(int) Load 65_217
+          128_44:   21_1(int) IAdd 61_145 61_144
+          65_218:   32_8(ptr) AccessChain 59_10 43_5
+                              Store 65_218 128_44
+          65_219:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+          61_146:   21_1(int) Load 65_219
+          65_220:   32_8(ptr) AccessChain 59_10 43_6
+          61_147:   21_1(int) Load 65_220
+          128_45:   21_1(int) IAdd 61_147 61_146
+          65_221:   32_8(ptr) AccessChain 59_10 43_6
+                              Store 65_221 128_45
+          61_148:        27_2 Load 59_11(sample3D)
+          61_149: 23_4(fvec3) Load 59_12(P3)
+          61_150: 22_1(float) Load 59_7(lod)
+          61_151:   21_2(int) Load 59_4(granularity)
+         5283_12:30_16(ResType) ImageSampleFootprintNV 61_148 61_149 61_151 41_1 Lod 61_150
+           81_67: 23_3(ivec3) CompositeExtract 5283_12 1
+          65_222:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+                              Store 65_222 81_67
+           81_68: 23_3(ivec3) CompositeExtract 5283_12 2
+          65_223:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+                              Store 65_223 81_68
+           81_69: 23_1(ivec2) CompositeExtract 5283_12 3
+          65_224:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+                              Store 65_224 81_69
+           81_70:   21_1(int) CompositeExtract 5283_12 4
+          65_225:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+                              Store 65_225 81_70
+           81_71:   21_1(int) CompositeExtract 5283_12 5
+          65_226:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+                              Store 65_226 81_71
+           81_72:  20_1(bool) CompositeExtract 5283_12 0
+          169_12:   21_1(int) Select 81_72 uint(1) uint(0)
+          65_227:   32_8(ptr) AccessChain 59_10 43_1
+                              Store 65_227 169_12
+          65_228:  32_15(ptr) AccessChain 59_14(fp3D) 43_1
+          61_152: 23_3(ivec3) Load 65_228
+          65_229:  32_16(ptr) AccessChain 59_10 43_2
+          61_153: 23_3(ivec3) Load 65_229
+          128_46: 23_3(ivec3) IAdd 61_153 61_152
+          65_230:  32_16(ptr) AccessChain 59_10 43_2
+                              Store 65_230 128_46
+          65_231:  32_15(ptr) AccessChain 59_14(fp3D) 43_2
+          61_154: 23_3(ivec3) Load 65_231
+          65_232:  32_16(ptr) AccessChain 59_10 43_3
+          61_155: 23_3(ivec3) Load 65_232
+          128_47: 23_3(ivec3) IAdd 61_155 61_154
+          65_233:  32_16(ptr) AccessChain 59_10 43_3
+                              Store 65_233 128_47
+          65_234:   32_6(ptr) AccessChain 59_14(fp3D) 43_3
+          61_156: 23_1(ivec2) Load 65_234
+          65_235:   32_9(ptr) AccessChain 59_10 43_4
+          61_157: 23_1(ivec2) Load 65_235
+          128_48: 23_1(ivec2) IAdd 61_157 61_156
+          65_236:   32_9(ptr) AccessChain 59_10 43_4
+                              Store 65_236 128_48
+          65_237:   32_7(ptr) AccessChain 59_14(fp3D) 43_4
+          61_158:   21_1(int) Load 65_237
+          65_238:   32_8(ptr) AccessChain 59_10 43_5
+          61_159:   21_1(int) Load 65_238
+          128_49:   21_1(int) IAdd 61_159 61_158
+          65_239:   32_8(ptr) AccessChain 59_10 43_5
+                              Store 65_239 128_49
+          65_240:   32_7(ptr) AccessChain 59_14(fp3D) 43_5
+          61_160:   21_1(int) Load 65_240
+          65_241:   32_8(ptr) AccessChain 59_10 43_6
+          61_161:   21_1(int) Load 65_241
+          128_50:   21_1(int) IAdd 61_161 61_160
+          65_242:   32_8(ptr) AccessChain 59_10 43_6
+                              Store 65_242 128_50
                               Return
                               FunctionEnd

@@ -4,42 +4,42 @@ spv.constStruct.vert
 // Id's are bound by 23
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main"
+                              EntryPoint Vertex 54_1  "main"
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "T"
-                              MemberName 9(T) 0  "m"
-                              Name 10  "U"
-                              MemberName 10(U) 0  "m"
-                              Name 11  "S"
-                              MemberName 11(S) 0  "t"
-                              MemberName 11(S) 1  "u"
-                              Name 13  "s1"
-                              Name 22  "s2"
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypeMatrix 7(fvec2) 2
-            9(T):             TypeStruct 8
-           10(U):             TypeStruct 8
-           11(S):             TypeStruct 9(T) 10(U)
-              12:             TypePointer Function 11(S)
-              14:    6(float) Constant 1065353216
-              15:    6(float) Constant 0
-              16:    7(fvec2) ConstantComposite 14 15
-              17:    7(fvec2) ConstantComposite 15 14
-              18:           8 ConstantComposite 16 17
-              19:        9(T) ConstantComposite 18
-              20:       10(U) ConstantComposite 18
-              21:       11(S) ConstantComposite 19 20
-         4(main):           2 Function None 3
-               5:             Label
-          13(s1):     12(ptr) Variable Function
-          22(s2):     12(ptr) Variable Function
-                              Store 13(s1) 21
-                              Store 22(s2) 21
+                              Name 54_1  "main"
+                              Name 30_1  "T"
+                              MemberName 30_1(T) 0  "m"
+                              Name 30_2  "U"
+                              MemberName 30_2(U) 0  "m"
+                              Name 30_3  "S"
+                              MemberName 30_3(S) 0  "t"
+                              MemberName 30_3(S) 1  "u"
+                              Name 59_1  "s1"
+                              Name 59_2  "s2"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            24_1:             TypeMatrix 23_1(fvec2) 2
+         30_1(T):             TypeStruct 24_1
+         30_2(U):             TypeStruct 24_1
+         30_3(S):             TypeStruct 30_1(T) 30_2(U)
+            32_1:             TypePointer Function 30_3(S)
+            43_1: 22_1(float) Constant 1065353216
+            43_2: 22_1(float) Constant 0
+            44_1: 23_1(fvec2) ConstantComposite 43_1 43_2
+            44_2: 23_1(fvec2) ConstantComposite 43_2 43_1
+            44_3:        24_1 ConstantComposite 44_1 44_2
+            44_4:     30_1(T) ConstantComposite 44_3
+            44_5:     30_2(U) ConstantComposite 44_3
+            44_6:     30_3(S) ConstantComposite 44_4 44_5
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_1(s1):   32_1(ptr) Variable Function
+        59_2(s2):   32_1(ptr) Variable Function
+                              Store 59_1(s1) 44_6
+                              Store 59_2(s2) 44_6
                               Return
                               FunctionEnd

@@ -5,158 +5,158 @@ spv.1.4.image.frag
 
                               Capability Shader
                               Capability StorageImageMultisample
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 26 30 40 52 64 77 89 100 103
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8 59_9
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "v"
-                              Name 15  "iv"
-                              Name 21  "uv"
-                              Name 26  "i2D"
-                              Name 30  "ic2D"
-                              Name 40  "ii2D"
-                              Name 52  "ui2D"
-                              Name 64  "i2DMS"
-                              Name 77  "ii2DMS"
-                              Name 89  "ui2DMS"
-                              Name 100  "fragData"
-                              Name 103  "value"
-                              Decorate 26(i2D) Binding 1
-                              Decorate 26(i2D) DescriptorSet 0
-                              Decorate 30(ic2D) Flat
-                              Decorate 30(ic2D) Location 0
-                              Decorate 40(ii2D) Binding 12
-                              Decorate 40(ii2D) DescriptorSet 0
-                              Decorate 52(ui2D) Binding 12
-                              Decorate 52(ui2D) DescriptorSet 0
-                              Decorate 64(i2DMS) Binding 9
-                              Decorate 64(i2DMS) DescriptorSet 0
-                              Decorate 77(ii2DMS) Binding 13
-                              Decorate 77(ii2DMS) DescriptorSet 0
-                              Decorate 89(ui2DMS) Binding 13
-                              Decorate 89(ui2DMS) DescriptorSet 0
-                              Decorate 100(fragData) Location 0
-                              Decorate 103(value) Flat
-                              Decorate 103(value) Location 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-              10:    6(float) Constant 0
-              11:    7(fvec4) ConstantComposite 10 10 10 10
-              12:             TypeInt 32 1
-              13:             TypeVector 12(int) 4
-              14:             TypePointer Function 13(ivec4)
-              16:     12(int) Constant 0
-              17:   13(ivec4) ConstantComposite 16 16 16 16
-              18:             TypeInt 32 0
-              19:             TypeVector 18(int) 4
-              20:             TypePointer Function 19(ivec4)
-              22:     18(int) Constant 0
-              23:   19(ivec4) ConstantComposite 22 22 22 22
-              24:             TypeImage 6(float) 2D nonsampled format:Rgba32f
-              25:             TypePointer UniformConstant 24
-         26(i2D):     25(ptr) Variable UniformConstant
-              28:             TypeVector 12(int) 2
-              29:             TypePointer Input 28(ivec2)
-        30(ic2D):     29(ptr) Variable Input
-              38:             TypeImage 12(int) 2D nonsampled format:R32i
-              39:             TypePointer UniformConstant 38
-        40(ii2D):     39(ptr) Variable UniformConstant
-              50:             TypeImage 18(int) 2D nonsampled format:R32ui
-              51:             TypePointer UniformConstant 50
-        52(ui2D):     51(ptr) Variable UniformConstant
-              62:             TypeImage 6(float) 2D multi-sampled nonsampled format:Rgba32f
-              63:             TypePointer UniformConstant 62
-       64(i2DMS):     63(ptr) Variable UniformConstant
-              67:     12(int) Constant 1
-              73:     12(int) Constant 2
-              75:             TypeImage 12(int) 2D multi-sampled nonsampled format:R32i
-              76:             TypePointer UniformConstant 75
-      77(ii2DMS):     76(ptr) Variable UniformConstant
-              87:             TypeImage 18(int) 2D multi-sampled nonsampled format:R32ui
-              88:             TypePointer UniformConstant 87
-      89(ui2DMS):     88(ptr) Variable UniformConstant
-              99:             TypePointer Output 7(fvec4)
-   100(fragData):     99(ptr) Variable Output
-             102:             TypePointer Input 18(int)
-      103(value):    102(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-            9(v):      8(ptr) Variable Function
-          15(iv):     14(ptr) Variable Function
-          21(uv):     20(ptr) Variable Function
-                              Store 9(v) 11
-                              Store 15(iv) 17
-                              Store 21(uv) 23
-              27:          24 Load 26(i2D)
-              31:   28(ivec2) Load 30(ic2D)
-              32:    7(fvec4) ImageRead 27 31
-              33:    7(fvec4) Load 9(v)
-              34:    7(fvec4) FAdd 33 32
-                              Store 9(v) 34
-              35:          24 Load 26(i2D)
-              36:   28(ivec2) Load 30(ic2D)
-              37:    7(fvec4) Load 9(v)
-                              ImageWrite 35 36 37
-              41:          38 Load 40(ii2D)
-              42:   28(ivec2) Load 30(ic2D)
-              43:   13(ivec4) ImageRead 41 42 SignExtend 
-              44:    7(fvec4) ConvertSToF 43
-              45:    7(fvec4) Load 9(v)
-              46:    7(fvec4) FAdd 45 44
-                              Store 9(v) 46
-              47:          38 Load 40(ii2D)
-              48:   28(ivec2) Load 30(ic2D)
-              49:   13(ivec4) Load 15(iv)
-                              ImageWrite 47 48 49 SignExtend 
-              53:          50 Load 52(ui2D)
-              54:   28(ivec2) Load 30(ic2D)
-              55:   19(ivec4) ImageRead 53 54 ZeroExtend 
-              56:    7(fvec4) ConvertUToF 55
-              57:    7(fvec4) Load 9(v)
-              58:    7(fvec4) FAdd 57 56
-                              Store 9(v) 58
-              59:          50 Load 52(ui2D)
-              60:   28(ivec2) Load 30(ic2D)
-              61:   19(ivec4) Load 21(uv)
-                              ImageWrite 59 60 61 ZeroExtend 
-              65:          62 Load 64(i2DMS)
-              66:   28(ivec2) Load 30(ic2D)
-              68:    7(fvec4) ImageRead 65 66 Sample 67
-              69:    7(fvec4) Load 9(v)
-              70:    7(fvec4) FAdd 69 68
-                              Store 9(v) 70
-              71:          62 Load 64(i2DMS)
-              72:   28(ivec2) Load 30(ic2D)
-              74:    7(fvec4) Load 9(v)
-                              ImageWrite 71 72 74 Sample 73
-              78:          75 Load 77(ii2DMS)
-              79:   28(ivec2) Load 30(ic2D)
-              80:   13(ivec4) ImageRead 78 79 Sample SignExtend 67
-              81:    7(fvec4) ConvertSToF 80
-              82:    7(fvec4) Load 9(v)
-              83:    7(fvec4) FAdd 82 81
-                              Store 9(v) 83
-              84:          75 Load 77(ii2DMS)
-              85:   28(ivec2) Load 30(ic2D)
-              86:   13(ivec4) Load 15(iv)
-                              ImageWrite 84 85 86 Sample SignExtend 73
-              90:          87 Load 89(ui2DMS)
-              91:   28(ivec2) Load 30(ic2D)
-              92:   19(ivec4) ImageRead 90 91 Sample ZeroExtend 67
-              93:    7(fvec4) ConvertUToF 92
-              94:    7(fvec4) Load 9(v)
-              95:    7(fvec4) FAdd 94 93
-                              Store 9(v) 95
-              96:          87 Load 89(ui2DMS)
-              97:   28(ivec2) Load 30(ic2D)
-              98:   19(ivec4) Load 21(uv)
-                              ImageWrite 96 97 98 Sample ZeroExtend 73
-             101:    7(fvec4) Load 9(v)
-                              Store 100(fragData) 101
+                              Name 54_1  "main"
+                              Name 59_10  "v"
+                              Name 59_11  "iv"
+                              Name 59_12  "uv"
+                              Name 59_1  "i2D"
+                              Name 59_2  "ic2D"
+                              Name 59_3  "ii2D"
+                              Name 59_4  "ui2D"
+                              Name 59_5  "i2DMS"
+                              Name 59_6  "ii2DMS"
+                              Name 59_7  "ui2DMS"
+                              Name 59_8  "fragData"
+                              Name 59_9  "value"
+                              Decorate 59_1(i2D) Binding 1
+                              Decorate 59_1(i2D) DescriptorSet 0
+                              Decorate 59_2(ic2D) Flat
+                              Decorate 59_2(ic2D) Location 0
+                              Decorate 59_3(ii2D) Binding 12
+                              Decorate 59_3(ii2D) DescriptorSet 0
+                              Decorate 59_4(ui2D) Binding 12
+                              Decorate 59_4(ui2D) DescriptorSet 0
+                              Decorate 59_5(i2DMS) Binding 9
+                              Decorate 59_5(i2DMS) DescriptorSet 0
+                              Decorate 59_6(ii2DMS) Binding 13
+                              Decorate 59_6(ii2DMS) DescriptorSet 0
+                              Decorate 59_7(ui2DMS) Binding 13
+                              Decorate 59_7(ui2DMS) DescriptorSet 0
+                              Decorate 59_8(fragData) Location 0
+                              Decorate 59_9(value) Flat
+                              Decorate 59_9(value) Location 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            21_1:             TypeInt 32 1
+            23_2:             TypeVector 21_1(int) 4
+            32_2:             TypePointer Function 23_2(ivec4)
+            43_2:   21_1(int) Constant 0
+            44_2: 23_2(ivec4) ConstantComposite 43_2 43_2 43_2 43_2
+            21_2:             TypeInt 32 0
+            23_3:             TypeVector 21_2(int) 4
+            32_3:             TypePointer Function 23_3(ivec4)
+         uint(0):   21_2(int) Constant 0
+            44_3: 23_3(ivec4) ConstantComposite uint(0) uint(0) uint(0) uint(0)
+            25_1:             TypeImage 22_1(float) 2D nonsampled format:Rgba32f
+            32_4:             TypePointer UniformConstant 25_1
+       59_1(i2D):   32_4(ptr) Variable UniformConstant
+            23_4:             TypeVector 21_1(int) 2
+            32_5:             TypePointer Input 23_4(ivec2)
+      59_2(ic2D):   32_5(ptr) Variable Input
+            25_2:             TypeImage 21_1(int) 2D nonsampled format:R32i
+            32_6:             TypePointer UniformConstant 25_2
+      59_3(ii2D):   32_6(ptr) Variable UniformConstant
+            25_3:             TypeImage 21_2(int) 2D nonsampled format:R32ui
+            32_7:             TypePointer UniformConstant 25_3
+      59_4(ui2D):   32_7(ptr) Variable UniformConstant
+            25_4:             TypeImage 22_1(float) 2D multi-sampled nonsampled format:Rgba32f
+            32_8:             TypePointer UniformConstant 25_4
+     59_5(i2DMS):   32_8(ptr) Variable UniformConstant
+            43_3:   21_1(int) Constant 1
+            43_4:   21_1(int) Constant 2
+            25_5:             TypeImage 21_1(int) 2D multi-sampled nonsampled format:R32i
+            32_9:             TypePointer UniformConstant 25_5
+    59_6(ii2DMS):   32_9(ptr) Variable UniformConstant
+            25_6:             TypeImage 21_2(int) 2D multi-sampled nonsampled format:R32ui
+           32_10:             TypePointer UniformConstant 25_6
+    59_7(ui2DMS):  32_10(ptr) Variable UniformConstant
+           32_11:             TypePointer Output 23_1(fvec4)
+  59_8(fragData):  32_11(ptr) Variable Output
+           32_12:             TypePointer Input 21_2(int)
+     59_9(value):  32_12(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_10(v):   32_1(ptr) Variable Function
+       59_11(iv):   32_2(ptr) Variable Function
+       59_12(uv):   32_3(ptr) Variable Function
+                              Store 59_10(v) 44_1
+                              Store 59_11(iv) 44_2
+                              Store 59_12(uv) 44_3
+            61_1:        25_1 Load 59_1(i2D)
+            61_2: 23_4(ivec2) Load 59_2(ic2D)
+            98_1: 23_1(fvec4) ImageRead 61_1 61_2
+            61_3: 23_1(fvec4) Load 59_10(v)
+           129_1: 23_1(fvec4) FAdd 61_3 98_1
+                              Store 59_10(v) 129_1
+            61_4:        25_1 Load 59_1(i2D)
+            61_5: 23_4(ivec2) Load 59_2(ic2D)
+            61_6: 23_1(fvec4) Load 59_10(v)
+                              ImageWrite 61_4 61_5 61_6
+            61_7:        25_2 Load 59_3(ii2D)
+            61_8: 23_4(ivec2) Load 59_2(ic2D)
+            98_2: 23_2(ivec4) ImageRead 61_7 61_8 SignExtend 
+           111_1: 23_1(fvec4) ConvertSToF 98_2
+            61_9: 23_1(fvec4) Load 59_10(v)
+           129_2: 23_1(fvec4) FAdd 61_9 111_1
+                              Store 59_10(v) 129_2
+           61_10:        25_2 Load 59_3(ii2D)
+           61_11: 23_4(ivec2) Load 59_2(ic2D)
+           61_12: 23_2(ivec4) Load 59_11(iv)
+                              ImageWrite 61_10 61_11 61_12 SignExtend 
+           61_13:        25_3 Load 59_4(ui2D)
+           61_14: 23_4(ivec2) Load 59_2(ic2D)
+            98_3: 23_3(ivec4) ImageRead 61_13 61_14 ZeroExtend 
+           112_1: 23_1(fvec4) ConvertUToF 98_3
+           61_15: 23_1(fvec4) Load 59_10(v)
+           129_3: 23_1(fvec4) FAdd 61_15 112_1
+                              Store 59_10(v) 129_3
+           61_16:        25_3 Load 59_4(ui2D)
+           61_17: 23_4(ivec2) Load 59_2(ic2D)
+           61_18: 23_3(ivec4) Load 59_12(uv)
+                              ImageWrite 61_16 61_17 61_18 ZeroExtend 
+           61_19:        25_4 Load 59_5(i2DMS)
+           61_20: 23_4(ivec2) Load 59_2(ic2D)
+            98_4: 23_1(fvec4) ImageRead 61_19 61_20 Sample 43_3
+           61_21: 23_1(fvec4) Load 59_10(v)
+           129_4: 23_1(fvec4) FAdd 61_21 98_4
+                              Store 59_10(v) 129_4
+           61_22:        25_4 Load 59_5(i2DMS)
+           61_23: 23_4(ivec2) Load 59_2(ic2D)
+           61_24: 23_1(fvec4) Load 59_10(v)
+                              ImageWrite 61_22 61_23 61_24 Sample 43_4
+           61_25:        25_5 Load 59_6(ii2DMS)
+           61_26: 23_4(ivec2) Load 59_2(ic2D)
+            98_5: 23_2(ivec4) ImageRead 61_25 61_26 Sample SignExtend 43_3
+           111_2: 23_1(fvec4) ConvertSToF 98_5
+           61_27: 23_1(fvec4) Load 59_10(v)
+           129_5: 23_1(fvec4) FAdd 61_27 111_2
+                              Store 59_10(v) 129_5
+           61_28:        25_5 Load 59_6(ii2DMS)
+           61_29: 23_4(ivec2) Load 59_2(ic2D)
+           61_30: 23_2(ivec4) Load 59_11(iv)
+                              ImageWrite 61_28 61_29 61_30 Sample SignExtend 43_4
+           61_31:        25_6 Load 59_7(ui2DMS)
+           61_32: 23_4(ivec2) Load 59_2(ic2D)
+            98_6: 23_3(ivec4) ImageRead 61_31 61_32 Sample ZeroExtend 43_3
+           112_2: 23_1(fvec4) ConvertUToF 98_6
+           61_33: 23_1(fvec4) Load 59_10(v)
+           129_6: 23_1(fvec4) FAdd 61_33 112_2
+                              Store 59_10(v) 129_6
+           61_34:        25_6 Load 59_7(ui2DMS)
+           61_35: 23_4(ivec2) Load 59_2(ic2D)
+           61_36: 23_3(ivec4) Load 59_12(uv)
+                              ImageWrite 61_34 61_35 61_36 Sample ZeroExtend 43_4
+           61_37: 23_1(fvec4) Load 59_10(v)
+                              Store 59_8(fragData) 61_37
                               Return
                               FunctionEnd

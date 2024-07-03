@@ -7,209 +7,209 @@ spv.nv.hitobject-allops.rchit
                               Capability ShaderInvocationReorderNV
                               Extension  "SPV_KHR_ray_tracing"
                               Extension  "SPV_NV_shader_invocation_reorder"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint ClosestHitKHR 4  "main" 9 14 22 25 36 42 48 52 53 64
+                              EntryPoint ClosestHitKHR 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8 59_9 59_10
                               Source GLSL 460
                               SourceExtension  "GL_EXT_ray_tracing"
                               SourceExtension  "GL_NV_ray_tracing_motion_blur"
                               SourceExtension  "GL_NV_shader_invocation_reorder"
-                              Name 4  "main"
-                              Name 9  "attr"
-                              Name 12  "hBlock"
-                              MemberName 12(hBlock) 0  "attrval"
-                              Name 14  ""
-                              Name 22  "hObj"
-                              Name 25  "as"
-                              Name 36  "payload"
-                              Name 40  "pBlock"
-                              MemberName 40(pBlock) 0  "val1"
-                              MemberName 40(pBlock) 1  "val2"
-                              Name 42  ""
-                              Name 48  "hObjHit"
-                              Name 52  "hObjNop"
-                              Name 53  "hObjMiss"
-                              Name 62  "block"
-                              MemberName 62(block) 0  "op"
-                              Name 64  ""
-                              Name 79  "tmin"
-                              Name 81  "tmax"
-                              Name 84  "orig"
-                              Name 86  "dir"
-                              Name 88  "oorig"
-                              Name 90  "odir"
-                              Name 94  "otw"
-                              Name 96  "wto"
-                              Name 99  "cid"
-                              Name 101  "iid"
-                              Name 103  "pid"
-                              Name 105  "gid"
-                              Name 108  "hkind"
-                              Name 112  "handle"
-                              Name 114  "rid"
-                              Decorate 12(hBlock) Block
-                              Decorate 25(as) Binding 0
-                              Decorate 25(as) DescriptorSet 0
-                              Decorate 40(pBlock) Block
-                              Decorate 62(block) Block
-                              MemberDecorate 62(block) 0 Offset 0
-                              Decorate 64 Binding 1
-                              Decorate 64 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypePointer HitObjectAttributeNV 7(fvec2)
-         9(attr):      8(ptr) Variable HitObjectAttributeNV
-              10:    6(float) Constant 1065353216
-              11:    7(fvec2) ConstantComposite 10 10
-      12(hBlock):             TypeStruct 6(float)
-              13:             TypePointer HitObjectAttributeNV 12(hBlock)
-              14:     13(ptr) Variable HitObjectAttributeNV
-              15:             TypeInt 32 1
-              16:     15(int) Constant 0
-              17:    6(float) Constant 1073741824
-              18:             TypePointer HitObjectAttributeNV 6(float)
-              20:             TypeHitObjectNV
-              21:             TypePointer Private 20
-        22(hObj):     21(ptr) Variable Private
-              23:             TypeAccelerationStructureKHR
-              24:             TypePointer UniformConstant 23
-          25(as):     24(ptr) Variable UniformConstant
-              27:             TypeInt 32 0
-              28:     27(int) Constant 1
-              29:             TypeVector 6(float) 3
-              30:    6(float) Constant 1056964608
-              31:   29(fvec3) ConstantComposite 30 30 30
-              32:   29(fvec3) ConstantComposite 10 10 10
-              33:     15(int) Constant 1
-              34:             TypeVector 6(float) 4
-              35:             TypePointer RayPayloadKHR 34(fvec4)
-     36(payload):     35(ptr) Variable RayPayloadKHR
-              38:    6(float) Constant 1092616192
-              39:     15(int) Constant 2
-      40(pBlock):             TypeStruct 7(fvec2) 7(fvec2)
-              41:             TypePointer RayPayloadKHR 40(pBlock)
-              42:     41(ptr) Variable RayPayloadKHR
-              44:     27(int) Constant 2
-              45:   29(fvec3) ConstantComposite 17 17 17
-              47:    6(float) Constant 1082130432
-     48(hObjHit):     21(ptr) Variable Private
-              50:     15(int) Constant 3
-     52(hObjNop):     21(ptr) Variable Private
-    53(hObjMiss):     21(ptr) Variable Private
-              54:    6(float) Constant 1069547520
-              55:   29(fvec3) ConstantComposite 54 54 54
-              56:    6(float) Constant 1084227584
-              57:    6(float) Constant 1090519040
-              58:             TypeBool
-       62(block):             TypeStruct 6(float)
-              63:             TypePointer StorageBuffer 62(block)
-              64:     63(ptr) Variable StorageBuffer
-              65:             TypePointer StorageBuffer 6(float)
-              76:    6(float) Constant 1077936128
-              78:             TypePointer Function 6(float)
-              83:             TypePointer Function 29(fvec3)
-              92:             TypeMatrix 29(fvec3) 4
-              93:             TypePointer Function 92
-              98:             TypePointer Function 15(int)
-             107:             TypePointer Function 27(int)
-             110:             TypeVector 27(int) 2
-             111:             TypePointer Function 110(ivec2)
-         4(main):           2 Function None 3
-               5:             Label
-        79(tmin):     78(ptr) Variable Function
-        81(tmax):     78(ptr) Variable Function
-        84(orig):     83(ptr) Variable Function
-         86(dir):     83(ptr) Variable Function
-       88(oorig):     83(ptr) Variable Function
-        90(odir):     83(ptr) Variable Function
-         94(otw):     93(ptr) Variable Function
-         96(wto):     93(ptr) Variable Function
-         99(cid):     98(ptr) Variable Function
-        101(iid):     98(ptr) Variable Function
-        103(pid):     98(ptr) Variable Function
-        105(gid):     98(ptr) Variable Function
-      108(hkind):    107(ptr) Variable Function
-     112(handle):    111(ptr) Variable Function
-        114(rid):    107(ptr) Variable Function
-                              Store 9(attr) 11
-              19:     18(ptr) AccessChain 14 16
-                              Store 19 17
-              26:          23 Load 25(as)
-                              HitObjectTraceRayNV 22(hObj) 26 28 28 28 28 28 31 30 32 10 36(payload)
-              37:          23 Load 25(as)
-                              HitObjectTraceRayMotionNV 22(hObj) 37 28 28 28 28 28 31 30 32 10 38 42
-              43:          23 Load 25(as)
-                              HitObjectRecordHitNV 22(hObj) 43 33 33 33 44 44 44 32 10 45 17 9(attr)
-              46:          23 Load 25(as)
-                              HitObjectRecordHitMotionNV 22(hObj) 46 33 33 33 44 44 44 32 10 45 17 47 9(attr)
-              49:          23 Load 25(as)
-                              HitObjectRecordHitWithIndexNV 48(hObjHit) 49 33 33 33 44 44 32 10 45 17 14
-              51:          23 Load 25(as)
-                              HitObjectRecordHitWithIndexMotionNV 48(hObjHit) 51 33 33 33 44 44 32 10 45 17 47 14
-                              HitObjectRecordEmptyNV 52(hObjNop)
-                              HitObjectRecordMissNV 53(hObjMiss) 28 31 17 55 56
-                              HitObjectRecordMissMotionNV 53(hObjMiss) 28 31 17 55 56 57
-                              HitObjectExecuteShaderNV 48(hObjHit) 42
-              59:    58(bool) HitObjectIsHitNV 22(hObj)
-                              SelectionMerge 61 None
-                              BranchConditional 59 60 67
-              60:               Label
-              66:     65(ptr)   AccessChain 64 16
-                                Store 66 10
-                                Branch 61
-              67:               Label
-              68:    58(bool)   HitObjectIsMissNV 22(hObj)
-                                SelectionMerge 70 None
-                                BranchConditional 68 69 72
-              69:                 Label
-              71:     65(ptr)     AccessChain 64 16
-                                  Store 71 17
-                                  Branch 70
-              72:                 Label
-              73:    58(bool)     HitObjectIsEmptyNV 22(hObj)
-                                  SelectionMerge 75 None
-                                  BranchConditional 73 74 75
-              74:                   Label
-              77:     65(ptr)       AccessChain 64 16
-                                    Store 77 76
-                                    Branch 75
-              75:                 Label
-                                  Branch 70
-              70:               Label
-                                Branch 61
-              61:             Label
-              80:    6(float) HitObjectGetRayTMinNV 48(hObjHit)
-                              Store 79(tmin) 80
-              82:    6(float) HitObjectGetRayTMaxNV 48(hObjHit)
-                              Store 81(tmax) 82
-              85:   29(fvec3) HitObjectGetWorldRayOriginNV 48(hObjHit)
-                              Store 84(orig) 85
-              87:   29(fvec3) HitObjectGetWorldRayDirectionNV 48(hObjHit)
-                              Store 86(dir) 87
-              89:   29(fvec3) HitObjectGetObjectRayOriginNV 48(hObjHit)
-                              Store 88(oorig) 89
-              91:   29(fvec3) HitObjectGetObjectRayDirectionNV 48(hObjHit)
-                              Store 90(odir) 91
-              95:          92 HitObjectGetObjectToWorldNV 48(hObjHit)
-                              Store 94(otw) 95
-              97:          92 HitObjectGetWorldToObjectNV 48(hObjHit)
-                              Store 96(wto) 97
-             100:     15(int) HitObjectGetInstanceCustomIndexNV 53(hObjMiss)
-                              Store 99(cid) 100
-             102:     15(int) HitObjectGetInstanceIdNV 52(hObjNop)
-                              Store 101(iid) 102
-             104:     15(int) HitObjectGetPrimitiveIndexNV 22(hObj)
-                              Store 103(pid) 104
-             106:     15(int) HitObjectGetGeometryIndexNV 22(hObj)
-                              Store 105(gid) 106
-             109:     27(int) HitObjectGetFrontFaceNV 22(hObj)
-                              Store 108(hkind) 109
-                              HitObjectGetAttributesNV 22(hObj) 9(attr)
-             113:  110(ivec2) HitObjectGetShaderRecordBufferHandleNV 22(hObj)
-                              Store 112(handle) 113
-             115:     27(int) HitObjectGetShaderBindingTableRecordIndexNV 22(hObj)
-                              Store 114(rid) 115
+                              Name 54_1  "main"
+                              Name 59_1  "attr"
+                              Name 30_1  "hBlock"
+                              MemberName 30_1(hBlock) 0  "attrval"
+                              Name 59_2  ""
+                              Name 59_3  "hObj"
+                              Name 59_4  "as"
+                              Name 59_5  "payload"
+                              Name 30_2  "pBlock"
+                              MemberName 30_2(pBlock) 0  "val1"
+                              MemberName 30_2(pBlock) 1  "val2"
+                              Name 59_6  ""
+                              Name 59_7  "hObjHit"
+                              Name 59_8  "hObjNop"
+                              Name 59_9  "hObjMiss"
+                              Name 30_3  "block"
+                              MemberName 30_3(block) 0  "op"
+                              Name 59_10  ""
+                              Name 59_11  "tmin"
+                              Name 59_12  "tmax"
+                              Name 59_13  "orig"
+                              Name 59_14  "dir"
+                              Name 59_15  "oorig"
+                              Name 59_16  "odir"
+                              Name 59_17  "otw"
+                              Name 59_18  "wto"
+                              Name 59_19  "cid"
+                              Name 59_20  "iid"
+                              Name 59_21  "pid"
+                              Name 59_22  "gid"
+                              Name 59_23  "hkind"
+                              Name 59_24  "handle"
+                              Name 59_25  "rid"
+                              Decorate 30_1(hBlock) Block
+                              Decorate 59_4(as) Binding 0
+                              Decorate 59_4(as) DescriptorSet 0
+                              Decorate 30_2(pBlock) Block
+                              Decorate 30_3(block) Block
+                              MemberDecorate 30_3(block) 0 Offset 0
+                              Decorate 59_10 Binding 1
+                              Decorate 59_10 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            32_1:             TypePointer HitObjectAttributeNV 23_1(fvec2)
+      59_1(attr):   32_1(ptr) Variable HitObjectAttributeNV
+            43_1: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec2) ConstantComposite 43_1 43_1
+    30_1(hBlock):             TypeStruct 22_1(float)
+            32_2:             TypePointer HitObjectAttributeNV 30_1(hBlock)
+            59_2:   32_2(ptr) Variable HitObjectAttributeNV
+            21_1:             TypeInt 32 1
+            43_2:   21_1(int) Constant 0
+            43_3: 22_1(float) Constant 1073741824
+            32_3:             TypePointer HitObjectAttributeNV 22_1(float)
+          5281_1:             TypeHitObjectNV
+            32_4:             TypePointer Private 5281_1
+      59_3(hObj):   32_4(ptr) Variable Private
+          5341_1:             TypeAccelerationStructureKHR
+            32_5:             TypePointer UniformConstant 5341_1
+        59_4(as):   32_5(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 0
+         uint(1):   21_2(int) Constant 1
+            23_2:             TypeVector 22_1(float) 3
+            43_4: 22_1(float) Constant 1056964608
+            44_2: 23_2(fvec3) ConstantComposite 43_4 43_4 43_4
+            44_3: 23_2(fvec3) ConstantComposite 43_1 43_1 43_1
+            43_5:   21_1(int) Constant 1
+            23_3:             TypeVector 22_1(float) 4
+            32_6:             TypePointer RayPayloadKHR 23_3(fvec4)
+   59_5(payload):   32_6(ptr) Variable RayPayloadKHR
+            43_6: 22_1(float) Constant 1092616192
+            43_7:   21_1(int) Constant 2
+    30_2(pBlock):             TypeStruct 23_1(fvec2) 23_1(fvec2)
+            32_7:             TypePointer RayPayloadKHR 30_2(pBlock)
+            59_6:   32_7(ptr) Variable RayPayloadKHR
+         uint(2):   21_2(int) Constant 2
+            44_4: 23_2(fvec3) ConstantComposite 43_3 43_3 43_3
+            43_8: 22_1(float) Constant 1082130432
+   59_7(hObjHit):   32_4(ptr) Variable Private
+            43_9:   21_1(int) Constant 3
+   59_8(hObjNop):   32_4(ptr) Variable Private
+  59_9(hObjMiss):   32_4(ptr) Variable Private
+           43_10: 22_1(float) Constant 1069547520
+            44_5: 23_2(fvec3) ConstantComposite 43_10 43_10 43_10
+           43_11: 22_1(float) Constant 1084227584
+           43_12: 22_1(float) Constant 1090519040
+            20_1:             TypeBool
+     30_3(block):             TypeStruct 22_1(float)
+            32_8:             TypePointer StorageBuffer 30_3(block)
+           59_10:   32_8(ptr) Variable StorageBuffer
+            32_9:             TypePointer StorageBuffer 22_1(float)
+           43_13: 22_1(float) Constant 1077936128
+           32_10:             TypePointer Function 22_1(float)
+           32_11:             TypePointer Function 23_2(fvec3)
+            24_1:             TypeMatrix 23_2(fvec3) 4
+           32_12:             TypePointer Function 24_1
+           32_13:             TypePointer Function 21_1(int)
+           32_14:             TypePointer Function 21_2(int)
+            23_4:             TypeVector 21_2(int) 2
+           32_15:             TypePointer Function 23_4(ivec2)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_11(tmin):  32_10(ptr) Variable Function
+     59_12(tmax):  32_10(ptr) Variable Function
+     59_13(orig):  32_11(ptr) Variable Function
+      59_14(dir):  32_11(ptr) Variable Function
+    59_15(oorig):  32_11(ptr) Variable Function
+     59_16(odir):  32_11(ptr) Variable Function
+      59_17(otw):  32_12(ptr) Variable Function
+      59_18(wto):  32_12(ptr) Variable Function
+      59_19(cid):  32_13(ptr) Variable Function
+      59_20(iid):  32_13(ptr) Variable Function
+      59_21(pid):  32_13(ptr) Variable Function
+      59_22(gid):  32_13(ptr) Variable Function
+    59_23(hkind):  32_14(ptr) Variable Function
+   59_24(handle):  32_15(ptr) Variable Function
+      59_25(rid):  32_14(ptr) Variable Function
+                              Store 59_1(attr) 44_1
+            65_1:   32_3(ptr) AccessChain 59_2 43_2
+                              Store 65_1 43_3
+            61_1:      5341_1 Load 59_4(as)
+                              HitObjectTraceRayNV 59_3(hObj) 61_1 uint(1) uint(1) uint(1) uint(1) uint(1) 44_2 43_4 44_3 43_1 59_5(payload)
+            61_2:      5341_1 Load 59_4(as)
+                              HitObjectTraceRayMotionNV 59_3(hObj) 61_2 uint(1) uint(1) uint(1) uint(1) uint(1) 44_2 43_4 44_3 43_1 43_6 59_6
+            61_3:      5341_1 Load 59_4(as)
+                              HitObjectRecordHitNV 59_3(hObj) 61_3 43_5 43_5 43_5 uint(2) uint(2) uint(2) 44_3 43_1 44_4 43_3 59_1(attr)
+            61_4:      5341_1 Load 59_4(as)
+                              HitObjectRecordHitMotionNV 59_3(hObj) 61_4 43_5 43_5 43_5 uint(2) uint(2) uint(2) 44_3 43_1 44_4 43_3 43_8 59_1(attr)
+            61_5:      5341_1 Load 59_4(as)
+                              HitObjectRecordHitWithIndexNV 59_7(hObjHit) 61_5 43_5 43_5 43_5 uint(2) uint(2) 44_3 43_1 44_4 43_3 59_2
+            61_6:      5341_1 Load 59_4(as)
+                              HitObjectRecordHitWithIndexMotionNV 59_7(hObjHit) 61_6 43_5 43_5 43_5 uint(2) uint(2) 44_3 43_1 44_4 43_3 43_8 59_2
+                              HitObjectRecordEmptyNV 59_8(hObjNop)
+                              HitObjectRecordMissNV 59_9(hObjMiss) uint(1) 44_2 43_3 44_5 43_11
+                              HitObjectRecordMissMotionNV 59_9(hObjMiss) uint(1) 44_2 43_3 44_5 43_11 43_12
+                              HitObjectExecuteShaderNV 59_7(hObjHit) 59_6
+          5277_1:  20_1(bool) HitObjectIsHitNV 59_3(hObj)
+                              SelectionMerge 248_9 None
+                              BranchConditional 5277_1 248_2 248_3
+           248_2:               Label
+            65_2:   32_9(ptr)   AccessChain 59_10 43_2
+                                Store 65_2 43_1
+                                Branch 248_9
+           248_3:               Label
+          5278_1:  20_1(bool)   HitObjectIsMissNV 59_3(hObj)
+                                SelectionMerge 248_8 None
+                                BranchConditional 5278_1 248_4 248_5
+           248_4:                 Label
+            65_3:   32_9(ptr)     AccessChain 59_10 43_2
+                                  Store 65_3 43_3
+                                  Branch 248_8
+           248_5:                 Label
+          5276_1:  20_1(bool)     HitObjectIsEmptyNV 59_3(hObj)
+                                  SelectionMerge 248_7 None
+                                  BranchConditional 5276_1 248_6 248_7
+           248_6:                   Label
+            65_4:   32_9(ptr)       AccessChain 59_10 43_2
+                                    Store 65_4 43_13
+                                    Branch 248_7
+           248_7:                 Label
+                                  Branch 248_8
+           248_8:               Label
+                                Branch 248_9
+           248_9:             Label
+          5275_1: 22_1(float) HitObjectGetRayTMinNV 59_7(hObjHit)
+                              Store 59_11(tmin) 5275_1
+          5274_1: 22_1(float) HitObjectGetRayTMaxNV 59_7(hObjHit)
+                              Store 59_12(tmax) 5274_1
+          5273_1: 23_2(fvec3) HitObjectGetWorldRayOriginNV 59_7(hObjHit)
+                              Store 59_13(orig) 5273_1
+          5272_1: 23_2(fvec3) HitObjectGetWorldRayDirectionNV 59_7(hObjHit)
+                              Store 59_14(dir) 5272_1
+          5255_1: 23_2(fvec3) HitObjectGetObjectRayOriginNV 59_7(hObjHit)
+                              Store 59_15(oorig) 5255_1
+          5254_1: 23_2(fvec3) HitObjectGetObjectRayDirectionNV 59_7(hObjHit)
+                              Store 59_16(odir) 5254_1
+          5253_1:        24_1 HitObjectGetObjectToWorldNV 59_7(hObjHit)
+                              Store 59_17(otw) 5253_1
+          5252_1:        24_1 HitObjectGetWorldToObjectNV 59_7(hObjHit)
+                              Store 59_18(wto) 5252_1
+          5271_1:   21_1(int) HitObjectGetInstanceCustomIndexNV 59_9(hObjMiss)
+                              Store 59_19(cid) 5271_1
+          5270_1:   21_1(int) HitObjectGetInstanceIdNV 59_8(hObjNop)
+                              Store 59_20(iid) 5270_1
+          5268_1:   21_1(int) HitObjectGetPrimitiveIndexNV 59_3(hObj)
+                              Store 59_21(pid) 5268_1
+          5269_1:   21_1(int) HitObjectGetGeometryIndexNV 59_3(hObj)
+                              Store 59_22(gid) 5269_1
+          5267_1:   21_2(int) HitObjectGetFrontFaceNV 59_3(hObj)
+                              Store 59_23(hkind) 5267_1
+                              HitObjectGetAttributesNV 59_3(hObj) 59_1(attr)
+          5257_1: 23_4(ivec2) HitObjectGetShaderRecordBufferHandleNV 59_3(hObj)
+                              Store 59_24(handle) 5257_1
+          5258_1:   21_2(int) HitObjectGetShaderBindingTableRecordIndexNV 59_3(hObj)
+                              Store 59_25(rid) 5258_1
                               Return
                               FunctionEnd

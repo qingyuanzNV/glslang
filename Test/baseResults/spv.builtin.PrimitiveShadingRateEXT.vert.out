@@ -6,48 +6,48 @@ spv.builtin.PrimitiveShadingRateEXT.vert
                               Capability Shader
                               Capability FragmentShadingRateKHR
                               Extension  "SPV_KHR_fragment_shading_rate"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 8 16
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2
                               Source GLSL 450
                               SourceExtension  "GL_EXT_fragment_shading_rate"
-                              Name 4  "main"
-                              Name 8  "id"
-                              Name 16  "gl_PrimitiveShadingRateEXT"
-                              Decorate 8(id) Location 0
-                              Decorate 16(gl_PrimitiveShadingRateEXT) BuiltIn PrimitiveShadingRateKHR
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Input 6(int)
-           8(id):      7(ptr) Variable Input
-              15:             TypePointer Output 6(int)
-16(gl_PrimitiveShadingRateEXT):     15(ptr) Variable Output
-              17:      6(int) Constant 5
-              19:      6(int) Constant 9
-              21:      6(int) Constant 6
-              23:      6(int) Constant 10
-         4(main):           2 Function None 3
-               5:             Label
-               9:      6(int) Load 8(id)
-                              SelectionMerge 14 None
-                              Switch 9 14 
-                                     case 0: 10
-                                     case 1: 11
-                                     case 2: 12
-                                     case 3: 13
-              10:               Label
-                                Store 16(gl_PrimitiveShadingRateEXT) 17
-                                Branch 14
-              11:               Label
-                                Store 16(gl_PrimitiveShadingRateEXT) 19
-                                Branch 14
-              12:               Label
-                                Store 16(gl_PrimitiveShadingRateEXT) 21
-                                Branch 14
-              13:               Label
-                                Store 16(gl_PrimitiveShadingRateEXT) 23
-                                Branch 14
-              14:             Label
+                              Name 54_1  "main"
+                              Name 59_1  "id"
+                              Name 59_2  "gl_PrimitiveShadingRateEXT"
+                              Decorate 59_1(id) Location 0
+                              Decorate 59_2(gl_PrimitiveShadingRateEXT) BuiltIn PrimitiveShadingRateKHR
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Input 21_1(int)
+        59_1(id):   32_1(ptr) Variable Input
+            32_2:             TypePointer Output 21_1(int)
+59_2(gl_PrimitiveShadingRateEXT):   32_2(ptr) Variable Output
+            43_1:   21_1(int) Constant 5
+            43_2:   21_1(int) Constant 9
+            43_3:   21_1(int) Constant 6
+            43_4:   21_1(int) Constant 10
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_1(id)
+                              SelectionMerge 248_6 None
+                              Switch 61_1 248_6 
+                                     case 0: 248_2
+                                     case 1: 248_3
+                                     case 2: 248_4
+                                     case 3: 248_5
+           248_2:               Label
+                                Store 59_2(gl_PrimitiveShadingRateEXT) 43_1
+                                Branch 248_6
+           248_3:               Label
+                                Store 59_2(gl_PrimitiveShadingRateEXT) 43_2
+                                Branch 248_6
+           248_4:               Label
+                                Store 59_2(gl_PrimitiveShadingRateEXT) 43_3
+                                Branch 248_6
+           248_5:               Label
+                                Store 59_2(gl_PrimitiveShadingRateEXT) 43_4
+                                Branch 248_6
+           248_6:             Label
                               Return
                               FunctionEnd

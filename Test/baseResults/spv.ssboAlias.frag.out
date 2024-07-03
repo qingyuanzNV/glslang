@@ -4,83 +4,83 @@ spv.ssboAlias.frag
 // Id's are bound by 44
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 41
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_5
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "@main("
-                              Name 13  "Buf1"
-                              MemberName 13(Buf1) 0  "@data"
-                              Name 15  "Buf1"
-                              Name 18  "Buf1@count"
-                              MemberName 18(Buf1@count) 0  "@count"
-                              Name 20  "Buf1@count"
-                              Name 28  "Buf2"
-                              Name 29  "Buf2@count"
-                              Name 41  "@entryPointOutput"
-                              Name 43  "Buf3"
-                              Decorate 12 ArrayStride 4
-                              Decorate 13(Buf1) BufferBlock
-                              MemberDecorate 13(Buf1) 0 Offset 0
-                              Decorate 15(Buf1) Binding 84
-                              Decorate 15(Buf1) DescriptorSet 0
-                              Decorate 18(Buf1@count) BufferBlock
-                              MemberDecorate 18(Buf1@count) 0 Offset 0
-                              Decorate 20(Buf1@count) Binding 83
-                              Decorate 20(Buf1@count) DescriptorSet 0
-                              Decorate 28(Buf2) Binding 85
-                              Decorate 28(Buf2) DescriptorSet 0
-                              Decorate 29(Buf2@count) Binding 86
-                              Decorate 29(Buf2@count) DescriptorSet 0
-                              Decorate 41(@entryPointOutput) Location 0
-                              Decorate 43(Buf3) Binding 84
-                              Decorate 43(Buf3) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypeInt 32 0
-              12:             TypeRuntimeArray 11(int)
-        13(Buf1):             TypeStruct 12
-              14:             TypePointer Uniform 13(Buf1)
-        15(Buf1):     14(ptr) Variable Uniform
-              16:             TypeInt 32 1
-              17:     16(int) Constant 0
-  18(Buf1@count):             TypeStruct 11(int)
-              19:             TypePointer Uniform 18(Buf1@count)
-  20(Buf1@count):     19(ptr) Variable Uniform
-              21:             TypePointer Uniform 11(int)
-              23:     11(int) Constant 1
-              24:     11(int) Constant 0
-              26:     11(int) Constant 10
-        28(Buf2):     14(ptr) Variable Uniform
-  29(Buf2@count):     19(ptr) Variable Uniform
-              32:     11(int) Constant 20
-              34:    6(float) Constant 1065353216
-              35:    6(float) Constant 1077936128
-              36:    6(float) Constant 1084227584
-              37:    7(fvec4) ConstantComposite 34 35 36 34
-              40:             TypePointer Output 7(fvec4)
-41(@entryPointOutput):     40(ptr) Variable Output
-        43(Buf3):     14(ptr) Variable Uniform
-         4(main):           2 Function None 3
-               5:             Label
-              42:    7(fvec4) FunctionCall 9(@main()
-                              Store 41(@entryPointOutput) 42
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 30_1  "Buf1"
+                              MemberName 30_1(Buf1) 0  "@data"
+                              Name 59_1  "Buf1"
+                              Name 30_2  "Buf1@count"
+                              MemberName 30_2(Buf1@count) 0  "@count"
+                              Name 59_2  "Buf1@count"
+                              Name 59_3  "Buf2"
+                              Name 59_4  "Buf2@count"
+                              Name 59_5  "@entryPointOutput"
+                              Name 59_6  "Buf3"
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_1(Buf1) BufferBlock
+                              MemberDecorate 30_1(Buf1) 0 Offset 0
+                              Decorate 59_1(Buf1) Binding 84
+                              Decorate 59_1(Buf1) DescriptorSet 0
+                              Decorate 30_2(Buf1@count) BufferBlock
+                              MemberDecorate 30_2(Buf1@count) 0 Offset 0
+                              Decorate 59_2(Buf1@count) Binding 83
+                              Decorate 59_2(Buf1@count) DescriptorSet 0
+                              Decorate 59_3(Buf2) Binding 85
+                              Decorate 59_3(Buf2) DescriptorSet 0
+                              Decorate 59_4(Buf2@count) Binding 86
+                              Decorate 59_4(Buf2@count) DescriptorSet 0
+                              Decorate 59_5(@entryPointOutput) Location 0
+                              Decorate 59_6(Buf3) Binding 84
+                              Decorate 59_6(Buf3) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            21_1:             TypeInt 32 0
+            29_1:             TypeRuntimeArray 21_1(int)
+      30_1(Buf1):             TypeStruct 29_1
+            32_1:             TypePointer Uniform 30_1(Buf1)
+      59_1(Buf1):   32_1(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+30_2(Buf1@count):             TypeStruct 21_1(int)
+            32_2:             TypePointer Uniform 30_2(Buf1@count)
+59_2(Buf1@count):   32_2(ptr) Variable Uniform
+            32_3:             TypePointer Uniform 21_1(int)
+         uint(1):   21_1(int) Constant 1
+         uint(0):   21_1(int) Constant 0
+        uint(10):   21_1(int) Constant 10
+      59_3(Buf2):   32_1(ptr) Variable Uniform
+59_4(Buf2@count):   32_2(ptr) Variable Uniform
+        uint(20):   21_1(int) Constant 20
+            43_2: 22_1(float) Constant 1065353216
+            43_3: 22_1(float) Constant 1077936128
+            43_4: 22_1(float) Constant 1084227584
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_3 43_4 43_2
+            32_4:             TypePointer Output 23_1(fvec4)
+59_5(@entryPointOutput):   32_4(ptr) Variable Output
+      59_6(Buf3):   32_1(ptr) Variable Uniform
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main()
+                              Store 59_5(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       9(@main():    7(fvec4) Function None 8
-              10:             Label
-              22:     21(ptr) AccessChain 20(Buf1@count) 17
-              25:     11(int) AtomicIAdd 22 23 24 23
-              27:     21(ptr) AccessChain 15(Buf1) 17 25
-                              Store 27 26
-              30:     21(ptr) AccessChain 29(Buf2@count) 17
-              31:     11(int) AtomicIAdd 30 23 24 23
-              33:     21(ptr) AccessChain 28(Buf2) 17 31
-                              Store 33 32
-                              ReturnValue 37
+    54_2(@main(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+            65_1:   32_3(ptr) AccessChain 59_2(Buf1@count) 43_1
+           234_1:   21_1(int) AtomicIAdd 65_1 uint(1) uint(0) uint(1)
+            65_2:   32_3(ptr) AccessChain 59_1(Buf1) 43_1 234_1
+                              Store 65_2 uint(10)
+            65_3:   32_3(ptr) AccessChain 59_4(Buf2@count) 43_1
+           234_2:   21_1(int) AtomicIAdd 65_3 uint(1) uint(0) uint(1)
+            65_4:   32_3(ptr) AccessChain 59_3(Buf2) 43_1 234_2
+                              Store 65_4 uint(20)
+                              ReturnValue 44_1
                               FunctionEnd

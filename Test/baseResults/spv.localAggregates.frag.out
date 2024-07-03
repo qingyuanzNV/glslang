@@ -4,219 +4,219 @@ spv.localAggregates.frag
 // Id's are bound by 136
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 15 40 90 98 108 134 135
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_7 59_8
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 400
-                              Name 4  "main"
-                              Name 8  "s1"
-                              MemberName 8(s1) 0  "i"
-                              MemberName 8(s1) 1  "f"
-                              Name 10  "s2"
-                              MemberName 10(s2) 0  "i"
-                              MemberName 10(s2) 1  "f"
-                              MemberName 10(s2) 2  "s1_1"
-                              MemberName 10(s2) 3  "bleh"
-                              Name 12  "locals2"
-                              Name 13  "s3"
-                              MemberName 13(s3) 0  "s2_1"
-                              MemberName 13(s3) 1  "i"
-                              MemberName 13(s3) 2  "f"
-                              MemberName 13(s3) 3  "s1_1"
-                              Name 15  "foo3"
-                              Name 36  "localFArray"
-                              Name 40  "coord"
-                              Name 49  "localIArray"
-                              Name 68  "x"
-                              Name 70  "localArray"
-                              Name 75  "i"
-                              Name 84  "a"
-                              Name 90  "condition"
-                              Name 98  "color"
-                              Name 108  "gl_FragColor"
-                              Name 128  "samp2D"
-                              Name 134  "foo"
-                              Name 135  "foo2"
-                              Decorate 15(foo3) Flat
-                              Decorate 15(foo3) Location 9
-                              Decorate 40(coord) Location 0
-                              Decorate 90(condition) Flat
-                              Decorate 90(condition) Location 18
-                              Decorate 98(color) Location 1
-                              Decorate 108(gl_FragColor) Location 0
-                              Decorate 128(samp2D) Binding 0
-                              Decorate 128(samp2D) DescriptorSet 0
-                              Decorate 134(foo) Flat
-                              Decorate 134(foo) Location 2
-                              Decorate 135(foo2) Flat
-                              Decorate 135(foo2) Location 4
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeFloat 32
-           8(s1):             TypeStruct 6(int) 7(float)
-               9:             TypeVector 7(float) 4
-          10(s2):             TypeStruct 6(int) 7(float) 8(s1) 9(fvec4)
-              11:             TypePointer Function 10(s2)
-          13(s3):             TypeStruct 10(s2) 6(int) 7(float) 8(s1)
-              14:             TypePointer Input 13(s3)
-        15(foo3):     14(ptr) Variable Input
-              16:      6(int) Constant 0
-              17:             TypePointer Input 10(s2)
-              20:             TypePointer Input 6(int)
-              23:             TypeBool
-              27:      6(int) Constant 2
-              28:      6(int) Constant 1
-              29:    7(float) Constant 1065353216
-              30:             TypePointer Function 7(float)
-              32:             TypeInt 32 0
-              33:     32(int) Constant 16
-              34:             TypeArray 7(float) 33
-              35:             TypePointer Function 34
-              37:      6(int) Constant 4
-              38:             TypeVector 7(float) 2
-              39:             TypePointer Input 38(fvec2)
-       40(coord):     39(ptr) Variable Input
-              41:     32(int) Constant 0
-              42:             TypePointer Input 7(float)
-              46:     32(int) Constant 8
-              47:             TypeArray 6(int) 46
-              48:             TypePointer Function 47
-              52:             TypePointer Function 6(int)
-              69:      6(int) Constant 5
-              82:      6(int) Constant 16
-              86:    7(float) Constant 0
-   90(condition):     20(ptr) Variable Input
-              96:      6(int) Constant 3
-              97:             TypePointer Input 9(fvec4)
-       98(color):     97(ptr) Variable Input
-             100:             TypePointer Function 9(fvec4)
-             102:     32(int) Constant 1
-             105:     32(int) Constant 2
-             107:             TypePointer Output 9(fvec4)
-108(gl_FragColor):    107(ptr) Variable Output
-             125:             TypeImage 7(float) 2D sampled format:Unknown
-             126:             TypeSampledImage 125
-             127:             TypePointer UniformConstant 126
-     128(samp2D):    127(ptr) Variable UniformConstant
-             133:             TypePointer Input 8(s1)
-        134(foo):    133(ptr) Variable Input
-       135(foo2):     17(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-     12(locals2):     11(ptr) Variable Function
- 36(localFArray):     35(ptr) Variable Function
- 49(localIArray):     48(ptr) Variable Function
-           68(x):     52(ptr) Variable Function
-  70(localArray):     35(ptr) Variable Function
-           75(i):     52(ptr) Variable Function
-           84(a):     35(ptr) Variable Function
-              18:     17(ptr) AccessChain 15(foo3) 16
-              19:      10(s2) Load 18
-                              Store 12(locals2) 19
-              21:     20(ptr) AccessChain 15(foo3) 16 16
-              22:      6(int) Load 21
-              24:    23(bool) SGreaterThan 22 16
-                              SelectionMerge 26 None
-                              BranchConditional 24 25 54
-              25:               Label
-              31:     30(ptr)   AccessChain 12(locals2) 27 28
-                                Store 31 29
-              43:     42(ptr)   AccessChain 40(coord) 41
-              44:    7(float)   Load 43
-              45:     30(ptr)   AccessChain 36(localFArray) 37
-                                Store 45 44
-              50:     20(ptr)   AccessChain 15(foo3) 16 16
-              51:      6(int)   Load 50
-              53:     52(ptr)   AccessChain 49(localIArray) 27
-                                Store 53 51
-                                Branch 26
-              54:               Label
-              55:     42(ptr)   AccessChain 40(coord) 41
-              56:    7(float)   Load 55
-              57:     30(ptr)   AccessChain 12(locals2) 27 28
-                                Store 57 56
-              58:     30(ptr)   AccessChain 36(localFArray) 37
-                                Store 58 29
-              59:     52(ptr)   AccessChain 49(localIArray) 27
-                                Store 59 16
-                                Branch 26
-              26:             Label
-              60:     52(ptr) AccessChain 49(localIArray) 27
-              61:      6(int) Load 60
-              62:    23(bool) IEqual 61 16
-                              SelectionMerge 64 None
-                              BranchConditional 62 63 64
-              63:               Label
-              65:     30(ptr)   AccessChain 36(localFArray) 37
-              66:    7(float)   Load 65
-              67:    7(float)   FAdd 66 29
-                                Store 65 67
-                                Branch 64
-              64:             Label
-                              Store 68(x) 69
-              71:      6(int) Load 68(x)
-              72:     42(ptr) AccessChain 40(coord) 41
-              73:    7(float) Load 72
-              74:     30(ptr) AccessChain 70(localArray) 71
-                              Store 74 73
-                              Store 75(i) 16
-                              Branch 76
-              76:             Label
-                              LoopMerge 78 79 None
-                              Branch 80
-              80:             Label
-              81:      6(int) Load 75(i)
-              83:    23(bool) SLessThan 81 82
-                              BranchConditional 83 77 78
-              77:               Label
-              85:      6(int)   Load 75(i)
-              87:     30(ptr)   AccessChain 84(a) 85
-                                Store 87 86
-                                Branch 79
-              79:               Label
-              88:      6(int)   Load 75(i)
-              89:      6(int)   IAdd 88 28
-                                Store 75(i) 89
-                                Branch 76
-              78:             Label
-              91:      6(int) Load 90(condition)
-              92:    23(bool) IEqual 91 28
-                              SelectionMerge 94 None
-                              BranchConditional 92 93 94
-              93:               Label
-              95:          34   Load 70(localArray)
-                                Store 84(a) 95
-                                Branch 94
-              94:             Label
-              99:    9(fvec4) Load 98(color)
-             101:    100(ptr) AccessChain 12(locals2) 96
-                              Store 101 99
-             103:     42(ptr) AccessChain 40(coord) 102
-             104:    7(float) Load 103
-             106:     30(ptr) AccessChain 12(locals2) 96 105
-                              Store 106 104
-             109:    100(ptr) AccessChain 12(locals2) 96
-             110:    9(fvec4) Load 109
-             111:     30(ptr) AccessChain 36(localFArray) 37
-             112:    7(float) Load 111
-             113:     30(ptr) AccessChain 12(locals2) 27 28
-             114:    7(float) Load 113
-             115:    7(float) FAdd 112 114
-             116:      6(int) Load 68(x)
-             117:     30(ptr) AccessChain 70(localArray) 116
-             118:    7(float) Load 117
-             119:    7(float) FAdd 115 118
-             120:      6(int) Load 68(x)
-             121:     30(ptr) AccessChain 84(a) 120
-             122:    7(float) Load 121
-             123:    7(float) FAdd 119 122
-             124:    9(fvec4) VectorTimesScalar 110 123
-             129:         126 Load 128(samp2D)
-             130:   38(fvec2) Load 40(coord)
-             131:    9(fvec4) ImageSampleImplicitLod 129 130
-             132:    9(fvec4) FMul 124 131
-                              Store 108(gl_FragColor) 132
+                              Name 54_1  "main"
+                              Name 30_1  "s1"
+                              MemberName 30_1(s1) 0  "i"
+                              MemberName 30_1(s1) 1  "f"
+                              Name 30_2  "s2"
+                              MemberName 30_2(s2) 0  "i"
+                              MemberName 30_2(s2) 1  "f"
+                              MemberName 30_2(s2) 2  "s1_1"
+                              MemberName 30_2(s2) 3  "bleh"
+                              Name 59_9  "locals2"
+                              Name 30_3  "s3"
+                              MemberName 30_3(s3) 0  "s2_1"
+                              MemberName 30_3(s3) 1  "i"
+                              MemberName 30_3(s3) 2  "f"
+                              MemberName 30_3(s3) 3  "s1_1"
+                              Name 59_1  "foo3"
+                              Name 59_10  "localFArray"
+                              Name 59_2  "coord"
+                              Name 59_11  "localIArray"
+                              Name 59_12  "x"
+                              Name 59_13  "localArray"
+                              Name 59_14  "i"
+                              Name 59_15  "a"
+                              Name 59_3  "condition"
+                              Name 59_4  "color"
+                              Name 59_5  "gl_FragColor"
+                              Name 59_6  "samp2D"
+                              Name 59_7  "foo"
+                              Name 59_8  "foo2"
+                              Decorate 59_1(foo3) Flat
+                              Decorate 59_1(foo3) Location 9
+                              Decorate 59_2(coord) Location 0
+                              Decorate 59_3(condition) Flat
+                              Decorate 59_3(condition) Location 18
+                              Decorate 59_4(color) Location 1
+                              Decorate 59_5(gl_FragColor) Location 0
+                              Decorate 59_6(samp2D) Binding 0
+                              Decorate 59_6(samp2D) DescriptorSet 0
+                              Decorate 59_7(foo) Flat
+                              Decorate 59_7(foo) Location 2
+                              Decorate 59_8(foo2) Flat
+                              Decorate 59_8(foo2) Location 4
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            22_1:             TypeFloat 32
+        30_1(s1):             TypeStruct 21_1(int) 22_1(float)
+            23_1:             TypeVector 22_1(float) 4
+        30_2(s2):             TypeStruct 21_1(int) 22_1(float) 30_1(s1) 23_1(fvec4)
+            32_1:             TypePointer Function 30_2(s2)
+        30_3(s3):             TypeStruct 30_2(s2) 21_1(int) 22_1(float) 30_1(s1)
+            32_2:             TypePointer Input 30_3(s3)
+      59_1(foo3):   32_2(ptr) Variable Input
+            43_1:   21_1(int) Constant 0
+            32_3:             TypePointer Input 30_2(s2)
+            32_4:             TypePointer Input 21_1(int)
+            20_1:             TypeBool
+            43_2:   21_1(int) Constant 2
+            43_3:   21_1(int) Constant 1
+            43_4: 22_1(float) Constant 1065353216
+            32_5:             TypePointer Function 22_1(float)
+            21_2:             TypeInt 32 0
+        uint(16):   21_2(int) Constant 16
+            28_1:             TypeArray 22_1(float) uint(16)
+            32_6:             TypePointer Function 28_1
+            43_5:   21_1(int) Constant 4
+            23_2:             TypeVector 22_1(float) 2
+            32_7:             TypePointer Input 23_2(fvec2)
+     59_2(coord):   32_7(ptr) Variable Input
+         uint(0):   21_2(int) Constant 0
+            32_8:             TypePointer Input 22_1(float)
+         uint(8):   21_2(int) Constant 8
+            28_2:             TypeArray 21_1(int) uint(8)
+            32_9:             TypePointer Function 28_2
+           32_10:             TypePointer Function 21_1(int)
+            43_6:   21_1(int) Constant 5
+            43_7:   21_1(int) Constant 16
+            43_8: 22_1(float) Constant 0
+ 59_3(condition):   32_4(ptr) Variable Input
+            43_9:   21_1(int) Constant 3
+           32_11:             TypePointer Input 23_1(fvec4)
+     59_4(color):  32_11(ptr) Variable Input
+           32_12:             TypePointer Function 23_1(fvec4)
+         uint(1):   21_2(int) Constant 1
+         uint(2):   21_2(int) Constant 2
+           32_13:             TypePointer Output 23_1(fvec4)
+59_5(gl_FragColor):  32_13(ptr) Variable Output
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+           32_14:             TypePointer UniformConstant 27_1
+    59_6(samp2D):  32_14(ptr) Variable UniformConstant
+           32_15:             TypePointer Input 30_1(s1)
+       59_7(foo):  32_15(ptr) Variable Input
+      59_8(foo2):   32_3(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+   59_9(locals2):   32_1(ptr) Variable Function
+59_10(localFArray):   32_6(ptr) Variable Function
+59_11(localIArray):   32_9(ptr) Variable Function
+        59_12(x):  32_10(ptr) Variable Function
+59_13(localArray):   32_6(ptr) Variable Function
+        59_14(i):  32_10(ptr) Variable Function
+        59_15(a):   32_6(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(foo3) 43_1
+            61_1:    30_2(s2) Load 65_1
+                              Store 59_9(locals2) 61_1
+            65_2:   32_4(ptr) AccessChain 59_1(foo3) 43_1 43_1
+            61_2:   21_1(int) Load 65_2
+           173_1:  20_1(bool) SGreaterThan 61_2 43_1
+                              SelectionMerge 248_4 None
+                              BranchConditional 173_1 248_2 248_3
+           248_2:               Label
+            65_3:   32_5(ptr)   AccessChain 59_9(locals2) 43_2 43_3
+                                Store 65_3 43_4
+            65_4:   32_8(ptr)   AccessChain 59_2(coord) uint(0)
+            61_3: 22_1(float)   Load 65_4
+            65_5:   32_5(ptr)   AccessChain 59_10(localFArray) 43_5
+                                Store 65_5 61_3
+            65_6:   32_4(ptr)   AccessChain 59_1(foo3) 43_1 43_1
+            61_4:   21_1(int)   Load 65_6
+            65_7:  32_10(ptr)   AccessChain 59_11(localIArray) 43_2
+                                Store 65_7 61_4
+                                Branch 248_4
+           248_3:               Label
+            65_8:   32_8(ptr)   AccessChain 59_2(coord) uint(0)
+            61_5: 22_1(float)   Load 65_8
+            65_9:   32_5(ptr)   AccessChain 59_9(locals2) 43_2 43_3
+                                Store 65_9 61_5
+           65_10:   32_5(ptr)   AccessChain 59_10(localFArray) 43_5
+                                Store 65_10 43_4
+           65_11:  32_10(ptr)   AccessChain 59_11(localIArray) 43_2
+                                Store 65_11 43_1
+                                Branch 248_4
+           248_4:             Label
+           65_12:  32_10(ptr) AccessChain 59_11(localIArray) 43_2
+            61_6:   21_1(int) Load 65_12
+           170_1:  20_1(bool) IEqual 61_6 43_1
+                              SelectionMerge 248_6 None
+                              BranchConditional 170_1 248_5 248_6
+           248_5:               Label
+           65_13:   32_5(ptr)   AccessChain 59_10(localFArray) 43_5
+            61_7: 22_1(float)   Load 65_13
+           129_1: 22_1(float)   FAdd 61_7 43_4
+                                Store 65_13 129_1
+                                Branch 248_6
+           248_6:             Label
+                              Store 59_12(x) 43_6
+            61_8:   21_1(int) Load 59_12(x)
+           65_14:   32_8(ptr) AccessChain 59_2(coord) uint(0)
+            61_9: 22_1(float) Load 65_14
+           65_15:   32_5(ptr) AccessChain 59_13(localArray) 61_8
+                              Store 65_15 61_9
+                              Store 59_14(i) 43_1
+                              Branch 248_7
+           248_7:             Label
+                              LoopMerge 248_11 248_10 None
+                              Branch 248_8
+           248_8:             Label
+           61_10:   21_1(int) Load 59_14(i)
+           177_1:  20_1(bool) SLessThan 61_10 43_7
+                              BranchConditional 177_1 248_9 248_11
+           248_9:               Label
+           61_11:   21_1(int)   Load 59_14(i)
+           65_16:   32_5(ptr)   AccessChain 59_15(a) 61_11
+                                Store 65_16 43_8
+                                Branch 248_10
+          248_10:               Label
+           61_12:   21_1(int)   Load 59_14(i)
+           128_1:   21_1(int)   IAdd 61_12 43_3
+                                Store 59_14(i) 128_1
+                                Branch 248_7
+          248_11:             Label
+           61_13:   21_1(int) Load 59_3(condition)
+           170_2:  20_1(bool) IEqual 61_13 43_3
+                              SelectionMerge 248_13 None
+                              BranchConditional 170_2 248_12 248_13
+          248_12:               Label
+           61_14:        28_1   Load 59_13(localArray)
+                                Store 59_15(a) 61_14
+                                Branch 248_13
+          248_13:             Label
+           61_15: 23_1(fvec4) Load 59_4(color)
+           65_17:  32_12(ptr) AccessChain 59_9(locals2) 43_9
+                              Store 65_17 61_15
+           65_18:   32_8(ptr) AccessChain 59_2(coord) uint(1)
+           61_16: 22_1(float) Load 65_18
+           65_19:   32_5(ptr) AccessChain 59_9(locals2) 43_9 uint(2)
+                              Store 65_19 61_16
+           65_20:  32_12(ptr) AccessChain 59_9(locals2) 43_9
+           61_17: 23_1(fvec4) Load 65_20
+           65_21:   32_5(ptr) AccessChain 59_10(localFArray) 43_5
+           61_18: 22_1(float) Load 65_21
+           65_22:   32_5(ptr) AccessChain 59_9(locals2) 43_2 43_3
+           61_19: 22_1(float) Load 65_22
+           129_2: 22_1(float) FAdd 61_18 61_19
+           61_20:   21_1(int) Load 59_12(x)
+           65_23:   32_5(ptr) AccessChain 59_13(localArray) 61_20
+           61_21: 22_1(float) Load 65_23
+           129_3: 22_1(float) FAdd 129_2 61_21
+           61_22:   21_1(int) Load 59_12(x)
+           65_24:   32_5(ptr) AccessChain 59_15(a) 61_22
+           61_23: 22_1(float) Load 65_24
+           129_4: 22_1(float) FAdd 129_3 61_23
+           142_1: 23_1(fvec4) VectorTimesScalar 61_17 129_4
+           61_24:        27_1 Load 59_6(samp2D)
+           61_25: 23_2(fvec2) Load 59_2(coord)
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 61_24 61_25
+           133_1: 23_1(fvec4) FMul 142_1 87_1
+                              Store 59_5(gl_FragColor) 133_1
                               Return
                               FunctionEnd

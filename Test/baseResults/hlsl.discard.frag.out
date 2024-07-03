@@ -112,80 +112,80 @@ gl_FragCoord origin is upper left
 // Id's are bound by 50
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "PixelShaderFunction" 45
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "PixelShaderFunction" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "PixelShaderFunction"
-                              Name 10  "foo(f1;"
-                              Name 9  "f"
-                              Name 16  "@PixelShaderFunction(vf4;"
-                              Name 15  "input"
-                              Name 25  "param"
-                              Name 39  "f"
-                              Name 43  "input"
-                              Name 45  "input"
-                              Name 47  "param"
-                              Decorate 45(input) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               8:             TypeFunction 2 7(ptr)
-              12:             TypeVector 6(float) 4
-              13:             TypePointer Function 12(fvec4)
-              14:             TypeFunction 2 13(ptr)
-              19:    6(float) Constant 1065353216
-              20:             TypeBool
-              26:             TypeInt 32 0
-              27:     26(int) Constant 2
-              31:     26(int) Constant 0
-              34:    6(float) Constant 0
-              44:             TypePointer Input 12(fvec4)
-       45(input):     44(ptr) Variable Input
-4(PixelShaderFunction):           2 Function None 3
-               5:             Label
-       43(input):     13(ptr) Variable Function
-       47(param):     13(ptr) Variable Function
-              46:   12(fvec4) Load 45(input)
-                              Store 43(input) 46
-              48:   12(fvec4) Load 43(input)
-                              Store 47(param) 48
-              49:           2 FunctionCall 16(@PixelShaderFunction(vf4;) 47(param)
+                              Name 54_1  "PixelShaderFunction"
+                              Name 54_2  "foo(f1;"
+                              Name 55_1  "f"
+                              Name 54_3  "@PixelShaderFunction(vf4;"
+                              Name 55_2  "input"
+                              Name 59_4  "param"
+                              Name 59_5  "f"
+                              Name 59_2  "input"
+                              Name 59_1  "input"
+                              Name 59_3  "param"
+                              Decorate 59_1(input) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            23_1:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Function 23_1(fvec4)
+            33_3:             TypeFunction 19_1 32_2(ptr)
+            43_1: 22_1(float) Constant 1065353216
+            20_1:             TypeBool
+            21_1:             TypeInt 32 0
+         uint(2):   21_1(int) Constant 2
+         uint(0):   21_1(int) Constant 0
+            43_2: 22_1(float) Constant 0
+            32_3:             TypePointer Input 23_1(fvec4)
+     59_1(input):   32_3(ptr) Variable Input
+54_1(PixelShaderFunction):        19_1 Function None 33_1
+           248_1:             Label
+     59_2(input):   32_2(ptr) Variable Function
+     59_3(param):   32_2(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(input)
+                              Store 59_2(input) 61_1
+            61_2: 23_1(fvec4) Load 59_2(input)
+                              Store 59_3(param) 61_2
+            57_1:        19_1 FunctionCall 54_3(@PixelShaderFunction(vf4;) 59_3(param)
                               Return
                               FunctionEnd
-     10(foo(f1;):           2 Function None 8
-            9(f):      7(ptr) FunctionParameter
-              11:             Label
-              18:    6(float) Load 9(f)
-              21:    20(bool) FOrdLessThan 18 19
-                              SelectionMerge 23 None
-                              BranchConditional 21 22 23
-              22:               Label
+   54_2(foo(f1;):        19_1 Function None 33_2
+         55_1(f):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            61_3: 22_1(float) Load 55_1(f)
+           184_1:  20_1(bool) FOrdLessThan 61_3 43_1
+                              SelectionMerge 248_4 None
+                              BranchConditional 184_1 248_3 248_4
+           248_3:               Label
                                 Kill
-              23:             Label
+           248_4:             Label
                               Return
                               FunctionEnd
-16(@PixelShaderFunction(vf4;):           2 Function None 14
-       15(input):     13(ptr) FunctionParameter
-              17:             Label
-       25(param):      7(ptr) Variable Function
-           39(f):      7(ptr) Variable Function
-              28:      7(ptr) AccessChain 15(input) 27
-              29:    6(float) Load 28
-                              Store 25(param) 29
-              30:           2 FunctionCall 10(foo(f1;) 25(param)
-              32:      7(ptr) AccessChain 15(input) 31
-              33:    6(float) Load 32
-              35:    20(bool) FUnordNotEqual 33 34
-                              SelectionMerge 37 None
-                              BranchConditional 35 36 37
-              36:               Label
+54_3(@PixelShaderFunction(vf4;):        19_1 Function None 33_3
+     55_2(input):   32_2(ptr) FunctionParameter
+           248_5:             Label
+     59_4(param):   32_1(ptr) Variable Function
+         59_5(f):   32_1(ptr) Variable Function
+            65_1:   32_1(ptr) AccessChain 55_2(input) uint(2)
+            61_4: 22_1(float) Load 65_1
+                              Store 59_4(param) 61_4
+            57_2:        19_1 FunctionCall 54_2(foo(f1;) 59_4(param)
+            65_2:   32_1(ptr) AccessChain 55_2(input) uint(0)
+            61_5: 22_1(float) Load 65_2
+           183_1:  20_1(bool) FUnordNotEqual 61_5 43_2
+                              SelectionMerge 248_7 None
+                              BranchConditional 183_1 248_6 248_7
+           248_6:               Label
                                 Kill
-              37:             Label
-              40:      7(ptr) AccessChain 15(input) 31
-              41:    6(float) Load 40
-                              Store 39(f) 41
+           248_7:             Label
+            65_3:   32_1(ptr) AccessChain 55_2(input) uint(0)
+            61_6: 22_1(float) Load 65_3
+                              Store 59_5(f) 61_6
                               Kill
                               FunctionEnd

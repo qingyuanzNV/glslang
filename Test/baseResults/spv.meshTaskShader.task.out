@@ -6,191 +6,191 @@ spv.meshTaskShader.task
                               Capability StorageImageWriteWithoutFormat
                               Capability MeshShadingNV
                               Extension  "SPV_NV_mesh_shader"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TaskNV 4  "main" 11 17 24 25 90 113
-                              ExecutionMode 4 LocalSize 32 1 1
+                              EntryPoint TaskNV 54_1  "main" 59_1 59_2 59_3 59_4 59_8 59_9
+                              ExecutionMode 54_1 LocalSize 32 1 1
                               Source GLSL 450
                               SourceExtension  "GL_NV_mesh_shader"
-                              Name 4  "main"
-                              Name 8  "iid"
-                              Name 11  "gl_LocalInvocationID"
-                              Name 16  "gid"
-                              Name 17  "gl_WorkGroupID"
-                              Name 20  "viewID"
-                              Name 24  "gl_MeshViewIndicesNV"
-                              Name 25  "gl_MeshViewCountNV"
-                              Name 30  "i"
-                              Name 44  "mem"
-                              Name 47  "block0"
-                              MemberName 47(block0) 0  "uni_value"
-                              Name 49  ""
-                              Name 65  "uni_image"
-                              Name 88  "Task"
-                              MemberName 88(Task) 0  "dummy"
-                              MemberName 88(Task) 1  "submesh"
-                              MemberName 88(Task) 2  "viewID"
-                              Name 90  "mytask"
-                              Name 113  "gl_TaskCountNV"
-                              Decorate 11(gl_LocalInvocationID) BuiltIn LocalInvocationId
-                              Decorate 17(gl_WorkGroupID) BuiltIn WorkgroupId
-                              Decorate 24(gl_MeshViewIndicesNV) BuiltIn MeshViewIndicesNV
-                              Decorate 25(gl_MeshViewCountNV) BuiltIn MeshViewCountNV
-                              Decorate 47(block0) Block
-                              MemberDecorate 47(block0) 0 Offset 0
-                              Decorate 49 Binding 1
-                              Decorate 49 DescriptorSet 0
-                              Decorate 65(uni_image) NonReadable
-                              Decorate 65(uni_image) Binding 0
-                              Decorate 65(uni_image) DescriptorSet 0
-                              Decorate 87 ArrayStride 8
-                              Decorate 88(Task) Block
-                              MemberDecorate 88(Task) 0 Offset 0
-                              MemberDecorate 88(Task) 0 PerTaskNV
-                              MemberDecorate 88(Task) 1 Offset 8
-                              MemberDecorate 88(Task) 1 PerTaskNV
-                              MemberDecorate 88(Task) 2 Offset 32
-                              MemberDecorate 88(Task) 2 PerTaskNV
-                              Decorate 90(mytask) Location 0
-                              Decorate 113(gl_TaskCountNV) BuiltIn TaskCountNV
-                              Decorate 115 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               9:             TypeVector 6(int) 3
-              10:             TypePointer Input 9(ivec3)
-11(gl_LocalInvocationID):     10(ptr) Variable Input
-              12:      6(int) Constant 0
-              13:             TypePointer Input 6(int)
-17(gl_WorkGroupID):     10(ptr) Variable Input
-              21:      6(int) Constant 4
-              22:             TypeArray 6(int) 21
-              23:             TypePointer Input 22
-24(gl_MeshViewIndicesNV):     23(ptr) Variable Input
-25(gl_MeshViewCountNV):     13(ptr) Variable Input
-              37:      6(int) Constant 10
-              38:             TypeBool
-              40:             TypeFloat 32
-              41:             TypeVector 40(float) 4
-              42:             TypeArray 41(fvec4) 37
-              43:             TypePointer Workgroup 42
-         44(mem):     43(ptr) Variable Workgroup
-      47(block0):             TypeStruct 6(int)
-              48:             TypePointer Uniform 47(block0)
-              49:     48(ptr) Variable Uniform
-              50:             TypeInt 32 1
-              51:     50(int) Constant 0
-              52:             TypePointer Uniform 6(int)
-              58:             TypePointer Workgroup 41(fvec4)
-              61:     50(int) Constant 1
-              63:             TypeImage 40(float) 2D nonsampled format:Unknown
-              64:             TypePointer UniformConstant 63
-   65(uni_image):     64(ptr) Variable UniformConstant
-              69:             TypeVector 50(int) 2
-              79:      6(int) Constant 1
-              83:      6(int) Constant 264
-              84:      6(int) Constant 2
-              85:             TypeVector 40(float) 2
-              86:      6(int) Constant 3
-              87:             TypeArray 85(fvec2) 86
-        88(Task):             TypeStruct 85(fvec2) 87 6(int)
-              89:             TypePointer Output 88(Task)
-      90(mytask):     89(ptr) Variable Output
-              91:   40(float) Constant 1106247680
-              92:   40(float) Constant 1106771968
-              93:   85(fvec2) ConstantComposite 91 92
-              94:             TypePointer Output 85(fvec2)
-              96:   40(float) Constant 1107296256
-              97:   40(float) Constant 1107558400
-              98:   85(fvec2) ConstantComposite 96 97
-             100:   40(float) Constant 1107820544
-             101:   40(float) Constant 1108082688
-             102:   85(fvec2) ConstantComposite 100 101
-             104:     50(int) Constant 2
-             111:             TypePointer Output 6(int)
-113(gl_TaskCountNV):    111(ptr) Variable Output
-             114:      6(int) Constant 32
-             115:    9(ivec3) ConstantComposite 114 79 79
-         4(main):           2 Function None 3
-               5:             Label
-          8(iid):      7(ptr) Variable Function
-         16(gid):      7(ptr) Variable Function
-      20(viewID):      7(ptr) Variable Function
-           30(i):      7(ptr) Variable Function
-              14:     13(ptr) AccessChain 11(gl_LocalInvocationID) 12
-              15:      6(int) Load 14
-                              Store 8(iid) 15
-              18:     13(ptr) AccessChain 17(gl_WorkGroupID) 12
-              19:      6(int) Load 18
-                              Store 16(gid) 19
-              26:      6(int) Load 25(gl_MeshViewCountNV)
-              27:      6(int) UMod 26 21
-              28:     13(ptr) AccessChain 24(gl_MeshViewIndicesNV) 27
-              29:      6(int) Load 28
-                              Store 20(viewID) 29
-                              Store 30(i) 12
-                              Branch 31
-              31:             Label
-                              LoopMerge 33 34 None
-                              Branch 35
-              35:             Label
-              36:      6(int) Load 30(i)
-              39:    38(bool) ULessThan 36 37
-                              BranchConditional 39 32 33
-              32:               Label
-              45:      6(int)   Load 30(i)
-              46:      6(int)   Load 30(i)
-              53:     52(ptr)   AccessChain 49 51
-              54:      6(int)   Load 53
-              55:      6(int)   IAdd 46 54
-              56:   40(float)   ConvertUToF 55
-              57:   41(fvec4)   CompositeConstruct 56 56 56 56
-              59:     58(ptr)   AccessChain 44(mem) 45
-                                Store 59 57
-                                Branch 34
-              34:               Label
-              60:      6(int)   Load 30(i)
-              62:      6(int)   IAdd 60 61
-                                Store 30(i) 62
-                                Branch 31
-              33:             Label
-              66:          63 Load 65(uni_image)
-              67:      6(int) Load 8(iid)
-              68:     50(int) Bitcast 67
-              70:   69(ivec2) CompositeConstruct 68 68
-              71:      6(int) Load 16(gid)
-              72:     58(ptr) AccessChain 44(mem) 71
-              73:   41(fvec4) Load 72
-                              ImageWrite 66 70 73
-              74:          63 Load 65(uni_image)
-              75:      6(int) Load 8(iid)
-              76:     50(int) Bitcast 75
-              77:   69(ivec2) CompositeConstruct 76 76
-              78:      6(int) Load 16(gid)
-              80:      6(int) IAdd 78 79
-              81:     58(ptr) AccessChain 44(mem) 80
-              82:   41(fvec4) Load 81
-                              ImageWrite 74 77 82
-                              MemoryBarrier 79 83
-                              ControlBarrier 84 84 83
-              95:     94(ptr) AccessChain 90(mytask) 51
-                              Store 95 93
-              99:     94(ptr) AccessChain 90(mytask) 61 51
-                              Store 99 98
-             103:     94(ptr) AccessChain 90(mytask) 61 61
-                              Store 103 102
-             105:      6(int) Load 16(gid)
-             106:      6(int) UMod 105 84
-             107:     94(ptr) AccessChain 90(mytask) 61 106
-             108:   85(fvec2) Load 107
-             109:     94(ptr) AccessChain 90(mytask) 61 104
-                              Store 109 108
-             110:      6(int) Load 20(viewID)
-             112:    111(ptr) AccessChain 90(mytask) 104
-                              Store 112 110
-                              MemoryBarrier 79 83
-                              ControlBarrier 84 84 83
-                              Store 113(gl_TaskCountNV) 86
+                              Name 54_1  "main"
+                              Name 59_10  "iid"
+                              Name 59_1  "gl_LocalInvocationID"
+                              Name 59_11  "gid"
+                              Name 59_2  "gl_WorkGroupID"
+                              Name 59_12  "viewID"
+                              Name 59_3  "gl_MeshViewIndicesNV"
+                              Name 59_4  "gl_MeshViewCountNV"
+                              Name 59_13  "i"
+                              Name 59_5  "mem"
+                              Name 30_1  "block0"
+                              MemberName 30_1(block0) 0  "uni_value"
+                              Name 59_6  ""
+                              Name 59_7  "uni_image"
+                              Name 30_2  "Task"
+                              MemberName 30_2(Task) 0  "dummy"
+                              MemberName 30_2(Task) 1  "submesh"
+                              MemberName 30_2(Task) 2  "viewID"
+                              Name 59_8  "mytask"
+                              Name 59_9  "gl_TaskCountNV"
+                              Decorate 59_1(gl_LocalInvocationID) BuiltIn LocalInvocationId
+                              Decorate 59_2(gl_WorkGroupID) BuiltIn WorkgroupId
+                              Decorate 59_3(gl_MeshViewIndicesNV) BuiltIn MeshViewIndicesNV
+                              Decorate 59_4(gl_MeshViewCountNV) BuiltIn MeshViewCountNV
+                              Decorate 30_1(block0) Block
+                              MemberDecorate 30_1(block0) 0 Offset 0
+                              Decorate 59_6 Binding 1
+                              Decorate 59_6 DescriptorSet 0
+                              Decorate 59_7(uni_image) NonReadable
+                              Decorate 59_7(uni_image) Binding 0
+                              Decorate 59_7(uni_image) DescriptorSet 0
+                              Decorate 28_3 ArrayStride 8
+                              Decorate 30_2(Task) Block
+                              MemberDecorate 30_2(Task) 0 Offset 0
+                              MemberDecorate 30_2(Task) 0 PerTaskNV
+                              MemberDecorate 30_2(Task) 1 Offset 8
+                              MemberDecorate 30_2(Task) 1 PerTaskNV
+                              MemberDecorate 30_2(Task) 2 Offset 32
+                              MemberDecorate 30_2(Task) 2 PerTaskNV
+                              Decorate 59_8(mytask) Location 0
+                              Decorate 59_9(gl_TaskCountNV) BuiltIn TaskCountNV
+                              Decorate 44_4 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            23_1:             TypeVector 21_1(int) 3
+            32_2:             TypePointer Input 23_1(ivec3)
+59_1(gl_LocalInvocationID):   32_2(ptr) Variable Input
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Input 21_1(int)
+59_2(gl_WorkGroupID):   32_2(ptr) Variable Input
+         uint(4):   21_1(int) Constant 4
+            28_1:             TypeArray 21_1(int) uint(4)
+            32_4:             TypePointer Input 28_1
+59_3(gl_MeshViewIndicesNV):   32_4(ptr) Variable Input
+59_4(gl_MeshViewCountNV):   32_3(ptr) Variable Input
+        uint(10):   21_1(int) Constant 10
+            20_1:             TypeBool
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 4
+            28_2:             TypeArray 23_2(fvec4) uint(10)
+            32_5:             TypePointer Workgroup 28_2
+       59_5(mem):   32_5(ptr) Variable Workgroup
+    30_1(block0):             TypeStruct 21_1(int)
+            32_6:             TypePointer Uniform 30_1(block0)
+            59_6:   32_6(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_7:             TypePointer Uniform 21_1(int)
+            32_8:             TypePointer Workgroup 23_2(fvec4)
+            43_2:   21_2(int) Constant 1
+            25_1:             TypeImage 22_1(float) 2D nonsampled format:Unknown
+            32_9:             TypePointer UniformConstant 25_1
+ 59_7(uni_image):   32_9(ptr) Variable UniformConstant
+            23_3:             TypeVector 21_2(int) 2
+         uint(1):   21_1(int) Constant 1
+       uint(264):   21_1(int) Constant 264
+         uint(2):   21_1(int) Constant 2
+            23_4:             TypeVector 22_1(float) 2
+         uint(3):   21_1(int) Constant 3
+            28_3:             TypeArray 23_4(fvec2) uint(3)
+      30_2(Task):             TypeStruct 23_4(fvec2) 28_3 21_1(int)
+           32_10:             TypePointer Output 30_2(Task)
+    59_8(mytask):  32_10(ptr) Variable Output
+            43_3: 22_1(float) Constant 1106247680
+            43_4: 22_1(float) Constant 1106771968
+            44_1: 23_4(fvec2) ConstantComposite 43_3 43_4
+           32_11:             TypePointer Output 23_4(fvec2)
+            43_5: 22_1(float) Constant 1107296256
+            43_6: 22_1(float) Constant 1107558400
+            44_2: 23_4(fvec2) ConstantComposite 43_5 43_6
+            43_7: 22_1(float) Constant 1107820544
+            43_8: 22_1(float) Constant 1108082688
+            44_3: 23_4(fvec2) ConstantComposite 43_7 43_8
+            43_9:   21_2(int) Constant 2
+           32_12:             TypePointer Output 21_1(int)
+59_9(gl_TaskCountNV):  32_12(ptr) Variable Output
+        uint(32):   21_1(int) Constant 32
+            44_4: 23_1(ivec3) ConstantComposite uint(32) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+      59_10(iid):   32_1(ptr) Variable Function
+      59_11(gid):   32_1(ptr) Variable Function
+   59_12(viewID):   32_1(ptr) Variable Function
+        59_13(i):   32_1(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(gl_LocalInvocationID) uint(0)
+            61_1:   21_1(int) Load 65_1
+                              Store 59_10(iid) 61_1
+            65_2:   32_3(ptr) AccessChain 59_2(gl_WorkGroupID) uint(0)
+            61_2:   21_1(int) Load 65_2
+                              Store 59_11(gid) 61_2
+            61_3:   21_1(int) Load 59_4(gl_MeshViewCountNV)
+           137_1:   21_1(int) UMod 61_3 uint(4)
+            65_3:   32_3(ptr) AccessChain 59_3(gl_MeshViewIndicesNV) 137_1
+            61_4:   21_1(int) Load 65_3
+                              Store 59_12(viewID) 61_4
+                              Store 59_13(i) uint(0)
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 None
+                              Branch 248_3
+           248_3:             Label
+            61_5:   21_1(int) Load 59_13(i)
+           176_1:  20_1(bool) ULessThan 61_5 uint(10)
+                              BranchConditional 176_1 248_4 248_6
+           248_4:               Label
+            61_6:   21_1(int)   Load 59_13(i)
+            61_7:   21_1(int)   Load 59_13(i)
+            65_4:   32_7(ptr)   AccessChain 59_6 43_1
+            61_8:   21_1(int)   Load 65_4
+           128_1:   21_1(int)   IAdd 61_7 61_8
+           112_1: 22_1(float)   ConvertUToF 128_1
+            80_1: 23_2(fvec4)   CompositeConstruct 112_1 112_1 112_1 112_1
+            65_5:   32_8(ptr)   AccessChain 59_5(mem) 61_6
+                                Store 65_5 80_1
+                                Branch 248_5
+           248_5:               Label
+            61_9:   21_1(int)   Load 59_13(i)
+           128_2:   21_1(int)   IAdd 61_9 43_2
+                                Store 59_13(i) 128_2
+                                Branch 248_2
+           248_6:             Label
+           61_10:        25_1 Load 59_7(uni_image)
+           61_11:   21_1(int) Load 59_10(iid)
+           124_1:   21_2(int) Bitcast 61_11
+            80_2: 23_3(ivec2) CompositeConstruct 124_1 124_1
+           61_12:   21_1(int) Load 59_11(gid)
+            65_6:   32_8(ptr) AccessChain 59_5(mem) 61_12
+           61_13: 23_2(fvec4) Load 65_6
+                              ImageWrite 61_10 80_2 61_13
+           61_14:        25_1 Load 59_7(uni_image)
+           61_15:   21_1(int) Load 59_10(iid)
+           124_2:   21_2(int) Bitcast 61_15
+            80_3: 23_3(ivec2) CompositeConstruct 124_2 124_2
+           61_16:   21_1(int) Load 59_11(gid)
+           128_3:   21_1(int) IAdd 61_16 uint(1)
+            65_7:   32_8(ptr) AccessChain 59_5(mem) 128_3
+           61_17: 23_2(fvec4) Load 65_7
+                              ImageWrite 61_14 80_3 61_17
+                              MemoryBarrier uint(1) uint(264)
+                              ControlBarrier uint(2) uint(2) uint(264)
+            65_8:  32_11(ptr) AccessChain 59_8(mytask) 43_1
+                              Store 65_8 44_1
+            65_9:  32_11(ptr) AccessChain 59_8(mytask) 43_2 43_1
+                              Store 65_9 44_2
+           65_10:  32_11(ptr) AccessChain 59_8(mytask) 43_2 43_2
+                              Store 65_10 44_3
+           61_18:   21_1(int) Load 59_11(gid)
+           137_2:   21_1(int) UMod 61_18 uint(2)
+           65_11:  32_11(ptr) AccessChain 59_8(mytask) 43_2 137_2
+           61_19: 23_4(fvec2) Load 65_11
+           65_12:  32_11(ptr) AccessChain 59_8(mytask) 43_2 43_9
+                              Store 65_12 61_19
+           61_20:   21_1(int) Load 59_12(viewID)
+           65_13:  32_12(ptr) AccessChain 59_8(mytask) 43_9
+                              Store 65_13 61_20
+                              MemoryBarrier uint(1) uint(264)
+                              ControlBarrier uint(2) uint(2) uint(264)
+                              Store 59_9(gl_TaskCountNV) uint(3)
                               Return
                               FunctionEnd

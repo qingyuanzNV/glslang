@@ -7,103 +7,103 @@ WARNING: 0:15: 'max_iterations' : expected a single integer argument
 // Id's are bound by 54
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 53
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_control_flow_attributes"
-                              Name 4  "main"
-                              Name 8  "i"
-                              Name 32  "i"
-                              Name 42  "i"
-                              Name 53  "cond"
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:      6(int) Constant 0
-              16:      6(int) Constant 8
-              17:             TypeBool
-              20:      6(int) Constant 1
-              27:    17(bool) ConstantTrue
-              52:             TypePointer Private 17(bool)
-        53(cond):     52(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-            8(i):      7(ptr) Variable Function
-           32(i):      7(ptr) Variable Function
-           42(i):      7(ptr) Variable Function
-                              Store 8(i) 9
-                              Branch 10
-              10:             Label
-                              LoopMerge 12 13 MinIterations MaxIterations  3 7
-                              Branch 14
-              14:             Label
-              15:      6(int) Load 8(i)
-              18:    17(bool) SLessThan 15 16
-                              BranchConditional 18 11 12
-              11:               Label
-                                Branch 13
-              13:               Label
-              19:      6(int)   Load 8(i)
-              21:      6(int)   IAdd 19 20
-                                Store 8(i) 21
-                                Branch 10
-              12:             Label
-                              Branch 22
-              22:             Label
-                              LoopMerge 24 25 IterationMultiple  2
-                              Branch 26
-              26:             Label
-                              BranchConditional 27 23 24
-              23:               Label
-                                Branch 25
-              25:               Label
-                                Branch 22
-              24:             Label
-                              Branch 28
-              28:             Label
-                              LoopMerge 30 31 PeelCount  5
-                              Branch 29
-              29:             Label
-                              Branch 31
-              31:             Label
-                              BranchConditional 27 28 30
-              30:             Label
-                              Store 32(i) 9
-                              Branch 33
-              33:             Label
-                              LoopMerge 35 36 PartialCount  4
-                              Branch 37
-              37:             Label
-              38:      6(int) Load 32(i)
-              39:    17(bool) SLessThan 38 16
-                              BranchConditional 39 34 35
-              34:               Label
-                                Branch 36
-              36:               Label
-              40:      6(int)   Load 32(i)
-              41:      6(int)   IAdd 40 20
-                                Store 32(i) 41
-                                Branch 33
-              35:             Label
-                              Store 42(i) 9
-                              Branch 43
-              43:             Label
-                              LoopMerge 45 46 None
-                              Branch 47
-              47:             Label
-              48:      6(int) Load 42(i)
-              49:    17(bool) SLessThan 48 16
-                              BranchConditional 49 44 45
-              44:               Label
-                                Branch 46
-              46:               Label
-              50:      6(int)   Load 42(i)
-              51:      6(int)   IAdd 50 20
-                                Store 42(i) 51
-                                Branch 43
-              45:             Label
+                              Name 54_1  "main"
+                              Name 59_2  "i"
+                              Name 59_3  "i"
+                              Name 59_4  "i"
+                              Name 59_1  "cond"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 8
+            20_1:             TypeBool
+            43_3:   21_1(int) Constant 1
+            41_1:  20_1(bool) ConstantTrue
+            32_2:             TypePointer Private 20_1(bool)
+      59_1(cond):   32_2(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_2(i):   32_1(ptr) Variable Function
+         59_3(i):   32_1(ptr) Variable Function
+         59_4(i):   32_1(ptr) Variable Function
+                              Store 59_2(i) 43_1
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 MinIterations MaxIterations  3 7
+                              Branch 248_3
+           248_3:             Label
+            61_1:   21_1(int) Load 59_2(i)
+           177_1:  20_1(bool) SLessThan 61_1 43_2
+                              BranchConditional 177_1 248_4 248_6
+           248_4:               Label
+                                Branch 248_5
+           248_5:               Label
+            61_2:   21_1(int)   Load 59_2(i)
+           128_1:   21_1(int)   IAdd 61_2 43_3
+                                Store 59_2(i) 128_1
+                                Branch 248_2
+           248_6:             Label
+                              Branch 248_7
+           248_7:             Label
+                              LoopMerge 248_11 248_10 IterationMultiple  2
+                              Branch 248_8
+           248_8:             Label
+                              BranchConditional 41_1 248_9 248_11
+           248_9:               Label
+                                Branch 248_10
+          248_10:               Label
+                                Branch 248_7
+          248_11:             Label
+                              Branch 248_12
+          248_12:             Label
+                              LoopMerge 248_15 248_14 PeelCount  5
+                              Branch 248_13
+          248_13:             Label
+                              Branch 248_14
+          248_14:             Label
+                              BranchConditional 41_1 248_12 248_15
+          248_15:             Label
+                              Store 59_3(i) 43_1
+                              Branch 248_16
+          248_16:             Label
+                              LoopMerge 248_20 248_19 PartialCount  4
+                              Branch 248_17
+          248_17:             Label
+            61_3:   21_1(int) Load 59_3(i)
+           177_2:  20_1(bool) SLessThan 61_3 43_2
+                              BranchConditional 177_2 248_18 248_20
+          248_18:               Label
+                                Branch 248_19
+          248_19:               Label
+            61_4:   21_1(int)   Load 59_3(i)
+           128_2:   21_1(int)   IAdd 61_4 43_3
+                                Store 59_3(i) 128_2
+                                Branch 248_16
+          248_20:             Label
+                              Store 59_4(i) 43_1
+                              Branch 248_21
+          248_21:             Label
+                              LoopMerge 248_25 248_24 None
+                              Branch 248_22
+          248_22:             Label
+            61_5:   21_1(int) Load 59_4(i)
+           177_3:  20_1(bool) SLessThan 61_5 43_2
+                              BranchConditional 177_3 248_23 248_25
+          248_23:               Label
+                                Branch 248_24
+          248_24:               Label
+            61_6:   21_1(int)   Load 59_4(i)
+           128_3:   21_1(int)   IAdd 61_6 43_3
+                                Store 59_4(i) 128_3
+                                Branch 248_21
+          248_25:             Label
                               Return
                               FunctionEnd

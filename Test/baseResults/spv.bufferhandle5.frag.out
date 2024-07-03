@@ -6,47 +6,47 @@ spv.bufferhandle5.frag
                               Capability Shader
                               Capability PhysicalStorageBufferAddressesEXT
                               Extension  "SPV_KHR_physical_storage_buffer"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_buffer_reference"
-                              Name 4  "main"
-                              Name 8  "t4"
-                              MemberName 8(t4) 0  "j"
-                              MemberName 8(t4) 1  "k"
-                              Name 9  "t3"
-                              MemberName 9(t3) 0  "h"
-                              Name 11  "x"
-                              Decorate 8(t4) Block
-                              MemberDecorate 8(t4) 0 Offset 0
-                              MemberDecorate 8(t4) 1 Offset 8
-                              Decorate 9(t3) Block
-                              MemberDecorate 9(t3) 0 Offset 0
-                              Decorate 11(x) Binding 2
-                              Decorate 11(x) DescriptorSet 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-                              TypeForwardPointer 7 PhysicalStorageBufferEXT
-           8(t4):             TypeStruct 6(int) 7
-           9(t3):             TypeStruct 6(int)
-               7:             TypePointer PhysicalStorageBufferEXT 9(t3)
-              10:             TypePointer Uniform 8(t4)
-           11(x):     10(ptr) Variable Uniform
-              12:      6(int) Constant 1
-              13:             TypePointer Uniform 7(ptr)
-              16:      6(int) Constant 0
-              17:             TypePointer Uniform 6(int)
-              20:             TypePointer PhysicalStorageBufferEXT 6(int)
-         4(main):           2 Function None 3
-               5:             Label
-              14:     13(ptr) AccessChain 11(x) 12
-              15:      7(ptr) Load 14
-              18:     17(ptr) AccessChain 11(x) 16
-              19:      6(int) Load 18
-              21:     20(ptr) AccessChain 15 16
-                              Store 21 19 Aligned 16
+                              Name 54_1  "main"
+                              Name 30_1  "t4"
+                              MemberName 30_1(t4) 0  "j"
+                              MemberName 30_1(t4) 1  "k"
+                              Name 30_2  "t3"
+                              MemberName 30_2(t3) 0  "h"
+                              Name 59_1  "x"
+                              Decorate 30_1(t4) Block
+                              MemberDecorate 30_1(t4) 0 Offset 0
+                              MemberDecorate 30_1(t4) 1 Offset 8
+                              Decorate 30_2(t3) Block
+                              MemberDecorate 30_2(t3) 0 Offset 0
+                              Decorate 59_1(x) Binding 2
+                              Decorate 59_1(x) DescriptorSet 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+                              TypeForwardPointer 32_1 PhysicalStorageBufferEXT
+        30_1(t4):             TypeStruct 21_1(int) 32_1
+        30_2(t3):             TypeStruct 21_1(int)
+            32_1:             TypePointer PhysicalStorageBufferEXT 30_2(t3)
+            32_2:             TypePointer Uniform 30_1(t4)
+         59_1(x):   32_2(ptr) Variable Uniform
+            43_1:   21_1(int) Constant 1
+            32_3:             TypePointer Uniform 32_1(ptr)
+            43_2:   21_1(int) Constant 0
+            32_4:             TypePointer Uniform 21_1(int)
+            32_5:             TypePointer PhysicalStorageBufferEXT 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_1(x) 43_1
+            61_1:   32_1(ptr) Load 65_1
+            65_2:   32_4(ptr) AccessChain 59_1(x) 43_2
+            61_2:   21_1(int) Load 65_2
+            65_3:   32_5(ptr) AccessChain 61_1 43_2
+                              Store 65_3 61_2 Aligned 16
                               Return
                               FunctionEnd

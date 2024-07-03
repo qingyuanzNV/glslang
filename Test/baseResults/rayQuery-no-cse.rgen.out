@@ -7,167 +7,167 @@ rayQuery-no-cse.rgen
                               Capability RayTracingNV
                               Extension  "SPV_KHR_ray_query"
                               Extension  "SPV_NV_ray_tracing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint RayGenerationKHR 4  "main" 23 28
+                              EntryPoint RayGenerationKHR 54_1  "main" 59_1 59_2
                               Source GLSL 460
                               SourceExtension  "GL_EXT_ray_query"
                               SourceExtension  "GL_NV_ray_tracing"
-                              Name 4  "main"
-                              Name 8  "launchIndex("
-                              Name 14  "Ray"
-                              MemberName 14(Ray) 0  "pos"
-                              MemberName 14(Ray) 1  "tmin"
-                              MemberName 14(Ray) 2  "dir"
-                              MemberName 14(Ray) 3  "tmax"
-                              Name 19  "doInitialize(rq1;struct-Ray-vf3-f1-vf3-f11;"
-                              Name 17  "rayQuery"
-                              Name 18  "ray"
-                              Name 23  "gl_LaunchIDNV"
-                              Name 28  "gl_LaunchSizeNV"
-                              Name 50  "rtas"
-                              Name 69  "index"
-                              Name 71  "ray"
-                              Name 72  "Ray"
-                              MemberName 72(Ray) 0  "pos"
-                              MemberName 72(Ray) 1  "tmin"
-                              MemberName 72(Ray) 2  "dir"
-                              MemberName 72(Ray) 3  "tmax"
-                              Name 74  "Rays"
-                              MemberName 74(Rays) 0  "rays"
-                              Name 76  ""
-                              Name 89  "rayQuery1"
-                              Name 90  "param"
-                              Name 103  "rayQuery2"
-                              Name 104  "param"
-                              Decorate 23(gl_LaunchIDNV) BuiltIn LaunchIdKHR
-                              Decorate 28(gl_LaunchSizeNV) BuiltIn LaunchSizeKHR
-                              Decorate 50(rtas) Binding 0
-                              Decorate 50(rtas) DescriptorSet 0
-                              MemberDecorate 72(Ray) 0 Offset 0
-                              MemberDecorate 72(Ray) 1 Offset 12
-                              MemberDecorate 72(Ray) 2 Offset 16
-                              MemberDecorate 72(Ray) 3 Offset 28
-                              Decorate 73 ArrayStride 32
-                              Decorate 74(Rays) BufferBlock
-                              MemberDecorate 74(Rays) 0 Offset 0
-                              Decorate 76 Binding 2
-                              Decorate 76 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeFunction 6(int)
-              10:             TypeRayQueryKHR
-              11:             TypePointer Private 10
-              12:             TypeFloat 32
-              13:             TypeVector 12(float) 3
-         14(Ray):             TypeStruct 13(fvec3) 12(float) 13(fvec3) 12(float)
-              15:             TypePointer Function 14(Ray)
-              16:             TypeFunction 2 11(ptr) 15(ptr)
-              21:             TypeVector 6(int) 3
-              22:             TypePointer Input 21(ivec3)
-23(gl_LaunchIDNV):     22(ptr) Variable Input
-              24:      6(int) Constant 2
-              25:             TypePointer Input 6(int)
-28(gl_LaunchSizeNV):     22(ptr) Variable Input
-              29:      6(int) Constant 0
-              33:      6(int) Constant 1
-              48:             TypeAccelerationStructureKHR
-              49:             TypePointer UniformConstant 48
-        50(rtas):     49(ptr) Variable UniformConstant
-              52:      6(int) Constant 16
-              53:             TypeInt 32 1
-              54:     53(int) Constant 0
-              55:             TypePointer Function 13(fvec3)
-              58:     53(int) Constant 1
-              59:             TypePointer Function 12(float)
-              62:     53(int) Constant 2
-              65:     53(int) Constant 3
-              68:             TypePointer Function 6(int)
-         72(Ray):             TypeStruct 13(fvec3) 12(float) 13(fvec3) 12(float)
-              73:             TypeRuntimeArray 72(Ray)
-        74(Rays):             TypeStruct 73
-              75:             TypePointer Uniform 74(Rays)
-              76:     75(ptr) Variable Uniform
-              78:             TypePointer Uniform 72(Ray)
-   89(rayQuery1):     11(ptr) Variable Private
-              94:      6(int) Constant 32
-  103(rayQuery2):     11(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-       69(index):     68(ptr) Variable Function
-         71(ray):     15(ptr) Variable Function
-       90(param):     15(ptr) Variable Function
-      104(param):     15(ptr) Variable Function
-              70:      6(int) FunctionCall 8(launchIndex()
-                              Store 69(index) 70
-              77:      6(int) Load 69(index)
-              79:     78(ptr) AccessChain 76 54 77
-              80:     72(Ray) Load 79
-              81:   13(fvec3) CompositeExtract 80 0
-              82:     55(ptr) AccessChain 71(ray) 54
-                              Store 82 81
-              83:   12(float) CompositeExtract 80 1
-              84:     59(ptr) AccessChain 71(ray) 58
-                              Store 84 83
-              85:   13(fvec3) CompositeExtract 80 2
-              86:     55(ptr) AccessChain 71(ray) 62
-                              Store 86 85
-              87:   12(float) CompositeExtract 80 3
-              88:     59(ptr) AccessChain 71(ray) 65
-                              Store 88 87
-              91:     14(Ray) Load 71(ray)
-                              Store 90(param) 91
-              92:           2 FunctionCall 19(doInitialize(rq1;struct-Ray-vf3-f1-vf3-f11;) 89(rayQuery1) 90(param)
-              93:          48 Load 50(rtas)
-              95:     55(ptr) AccessChain 71(ray) 54
-              96:   13(fvec3) Load 95
-              97:     59(ptr) AccessChain 71(ray) 58
-              98:   12(float) Load 97
-              99:     55(ptr) AccessChain 71(ray) 62
-             100:   13(fvec3) Load 99
-             101:     59(ptr) AccessChain 71(ray) 65
-             102:   12(float) Load 101
-                              RayQueryInitializeKHR 89(rayQuery1) 93 33 94 96 98 100 102
-             105:     14(Ray) Load 71(ray)
-                              Store 104(param) 105
-             106:           2 FunctionCall 19(doInitialize(rq1;struct-Ray-vf3-f1-vf3-f11;) 103(rayQuery2) 104(param)
+                              Name 54_1  "main"
+                              Name 54_2  "launchIndex("
+                              Name 30_1  "Ray"
+                              MemberName 30_1(Ray) 0  "pos"
+                              MemberName 30_1(Ray) 1  "tmin"
+                              MemberName 30_1(Ray) 2  "dir"
+                              MemberName 30_1(Ray) 3  "tmax"
+                              Name 54_3  "doInitialize(rq1;struct-Ray-vf3-f1-vf3-f11;"
+                              Name 55_1  "rayQuery"
+                              Name 55_2  "ray"
+                              Name 59_1  "gl_LaunchIDNV"
+                              Name 59_2  "gl_LaunchSizeNV"
+                              Name 59_3  "rtas"
+                              Name 59_7  "index"
+                              Name 59_8  "ray"
+                              Name 30_2  "Ray"
+                              MemberName 30_2(Ray) 0  "pos"
+                              MemberName 30_2(Ray) 1  "tmin"
+                              MemberName 30_2(Ray) 2  "dir"
+                              MemberName 30_2(Ray) 3  "tmax"
+                              Name 30_3  "Rays"
+                              MemberName 30_3(Rays) 0  "rays"
+                              Name 59_4  ""
+                              Name 59_5  "rayQuery1"
+                              Name 59_9  "param"
+                              Name 59_6  "rayQuery2"
+                              Name 59_10  "param"
+                              Decorate 59_1(gl_LaunchIDNV) BuiltIn LaunchIdKHR
+                              Decorate 59_2(gl_LaunchSizeNV) BuiltIn LaunchSizeKHR
+                              Decorate 59_3(rtas) Binding 0
+                              Decorate 59_3(rtas) DescriptorSet 0
+                              MemberDecorate 30_2(Ray) 0 Offset 0
+                              MemberDecorate 30_2(Ray) 1 Offset 12
+                              MemberDecorate 30_2(Ray) 2 Offset 16
+                              MemberDecorate 30_2(Ray) 3 Offset 28
+                              Decorate 29_1 ArrayStride 32
+                              Decorate 30_3(Rays) BufferBlock
+                              MemberDecorate 30_3(Rays) 0 Offset 0
+                              Decorate 59_4 Binding 2
+                              Decorate 59_4 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            33_2:             TypeFunction 21_1(int)
+          4472_1:             TypeRayQueryKHR
+            32_1:             TypePointer Private 4472_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+       30_1(Ray):             TypeStruct 23_1(fvec3) 22_1(float) 23_1(fvec3) 22_1(float)
+            32_2:             TypePointer Function 30_1(Ray)
+            33_3:             TypeFunction 19_1 32_1(ptr) 32_2(ptr)
+            23_2:             TypeVector 21_1(int) 3
+            32_3:             TypePointer Input 23_2(ivec3)
+59_1(gl_LaunchIDNV):   32_3(ptr) Variable Input
+         uint(2):   21_1(int) Constant 2
+            32_4:             TypePointer Input 21_1(int)
+59_2(gl_LaunchSizeNV):   32_3(ptr) Variable Input
+         uint(0):   21_1(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+          5341_1:             TypeAccelerationStructureKHR
+            32_5:             TypePointer UniformConstant 5341_1
+      59_3(rtas):   32_5(ptr) Variable UniformConstant
+        uint(16):   21_1(int) Constant 16
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_6:             TypePointer Function 23_1(fvec3)
+            43_2:   21_2(int) Constant 1
+            32_7:             TypePointer Function 22_1(float)
+            43_3:   21_2(int) Constant 2
+            43_4:   21_2(int) Constant 3
+            32_8:             TypePointer Function 21_1(int)
+       30_2(Ray):             TypeStruct 23_1(fvec3) 22_1(float) 23_1(fvec3) 22_1(float)
+            29_1:             TypeRuntimeArray 30_2(Ray)
+      30_3(Rays):             TypeStruct 29_1
+            32_9:             TypePointer Uniform 30_3(Rays)
+            59_4:   32_9(ptr) Variable Uniform
+           32_10:             TypePointer Uniform 30_2(Ray)
+ 59_5(rayQuery1):   32_1(ptr) Variable Private
+        uint(32):   21_1(int) Constant 32
+ 59_6(rayQuery2):   32_1(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_7(index):   32_8(ptr) Variable Function
+       59_8(ray):   32_2(ptr) Variable Function
+     59_9(param):   32_2(ptr) Variable Function
+    59_10(param):   32_2(ptr) Variable Function
+            57_1:   21_1(int) FunctionCall 54_2(launchIndex()
+                              Store 59_7(index) 57_1
+            61_1:   21_1(int) Load 59_7(index)
+            65_1:  32_10(ptr) AccessChain 59_4 43_1 61_1
+            61_2:   30_2(Ray) Load 65_1
+            81_1: 23_1(fvec3) CompositeExtract 61_2 0
+            65_2:   32_6(ptr) AccessChain 59_8(ray) 43_1
+                              Store 65_2 81_1
+            81_2: 22_1(float) CompositeExtract 61_2 1
+            65_3:   32_7(ptr) AccessChain 59_8(ray) 43_2
+                              Store 65_3 81_2
+            81_3: 23_1(fvec3) CompositeExtract 61_2 2
+            65_4:   32_6(ptr) AccessChain 59_8(ray) 43_3
+                              Store 65_4 81_3
+            81_4: 22_1(float) CompositeExtract 61_2 3
+            65_5:   32_7(ptr) AccessChain 59_8(ray) 43_4
+                              Store 65_5 81_4
+            61_3:   30_1(Ray) Load 59_8(ray)
+                              Store 59_9(param) 61_3
+            57_2:        19_1 FunctionCall 54_3(doInitialize(rq1;struct-Ray-vf3-f1-vf3-f11;) 59_5(rayQuery1) 59_9(param)
+            61_4:      5341_1 Load 59_3(rtas)
+            65_6:   32_6(ptr) AccessChain 59_8(ray) 43_1
+            61_5: 23_1(fvec3) Load 65_6
+            65_7:   32_7(ptr) AccessChain 59_8(ray) 43_2
+            61_6: 22_1(float) Load 65_7
+            65_8:   32_6(ptr) AccessChain 59_8(ray) 43_3
+            61_7: 23_1(fvec3) Load 65_8
+            65_9:   32_7(ptr) AccessChain 59_8(ray) 43_4
+            61_8: 22_1(float) Load 65_9
+                              RayQueryInitializeKHR 59_5(rayQuery1) 61_4 uint(1) uint(32) 61_5 61_6 61_7 61_8
+            61_9:   30_1(Ray) Load 59_8(ray)
+                              Store 59_10(param) 61_9
+            57_3:        19_1 FunctionCall 54_3(doInitialize(rq1;struct-Ray-vf3-f1-vf3-f11;) 59_6(rayQuery2) 59_10(param)
                               Return
                               FunctionEnd
- 8(launchIndex():      6(int) Function None 7
-               9:             Label
-              26:     25(ptr) AccessChain 23(gl_LaunchIDNV) 24
-              27:      6(int) Load 26
-              30:     25(ptr) AccessChain 28(gl_LaunchSizeNV) 29
-              31:      6(int) Load 30
-              32:      6(int) IMul 27 31
-              34:     25(ptr) AccessChain 28(gl_LaunchSizeNV) 33
-              35:      6(int) Load 34
-              36:      6(int) IMul 32 35
-              37:     25(ptr) AccessChain 23(gl_LaunchIDNV) 33
-              38:      6(int) Load 37
-              39:     25(ptr) AccessChain 28(gl_LaunchSizeNV) 29
-              40:      6(int) Load 39
-              41:      6(int) IMul 38 40
-              42:      6(int) IAdd 36 41
-              43:     25(ptr) AccessChain 23(gl_LaunchIDNV) 29
-              44:      6(int) Load 43
-              45:      6(int) IAdd 42 44
-                              ReturnValue 45
+54_2(launchIndex():   21_1(int) Function None 33_2
+           248_2:             Label
+           65_10:   32_4(ptr) AccessChain 59_1(gl_LaunchIDNV) uint(2)
+           61_10:   21_1(int) Load 65_10
+           65_11:   32_4(ptr) AccessChain 59_2(gl_LaunchSizeNV) uint(0)
+           61_11:   21_1(int) Load 65_11
+           132_1:   21_1(int) IMul 61_10 61_11
+           65_12:   32_4(ptr) AccessChain 59_2(gl_LaunchSizeNV) uint(1)
+           61_12:   21_1(int) Load 65_12
+           132_2:   21_1(int) IMul 132_1 61_12
+           65_13:   32_4(ptr) AccessChain 59_1(gl_LaunchIDNV) uint(1)
+           61_13:   21_1(int) Load 65_13
+           65_14:   32_4(ptr) AccessChain 59_2(gl_LaunchSizeNV) uint(0)
+           61_14:   21_1(int) Load 65_14
+           132_3:   21_1(int) IMul 61_13 61_14
+           128_1:   21_1(int) IAdd 132_2 132_3
+           65_15:   32_4(ptr) AccessChain 59_1(gl_LaunchIDNV) uint(0)
+           61_15:   21_1(int) Load 65_15
+           128_2:   21_1(int) IAdd 128_1 61_15
+                              ReturnValue 128_2
                               FunctionEnd
-19(doInitialize(rq1;struct-Ray-vf3-f1-vf3-f11;):           2 Function None 16
-    17(rayQuery):     11(ptr) FunctionParameter
-         18(ray):     15(ptr) FunctionParameter
-              20:             Label
-              51:          48 Load 50(rtas)
-              56:     55(ptr) AccessChain 18(ray) 54
-              57:   13(fvec3) Load 56
-              60:     59(ptr) AccessChain 18(ray) 58
-              61:   12(float) Load 60
-              63:     55(ptr) AccessChain 18(ray) 62
-              64:   13(fvec3) Load 63
-              66:     59(ptr) AccessChain 18(ray) 65
-              67:   12(float) Load 66
-                              RayQueryInitializeKHR 17(rayQuery) 51 29 52 57 61 64 67
+54_3(doInitialize(rq1;struct-Ray-vf3-f1-vf3-f11;):        19_1 Function None 33_3
+  55_1(rayQuery):   32_1(ptr) FunctionParameter
+       55_2(ray):   32_2(ptr) FunctionParameter
+           248_3:             Label
+           61_16:      5341_1 Load 59_3(rtas)
+           65_16:   32_6(ptr) AccessChain 55_2(ray) 43_1
+           61_17: 23_1(fvec3) Load 65_16
+           65_17:   32_7(ptr) AccessChain 55_2(ray) 43_2
+           61_18: 22_1(float) Load 65_17
+           65_18:   32_6(ptr) AccessChain 55_2(ray) 43_3
+           61_19: 23_1(fvec3) Load 65_18
+           65_19:   32_7(ptr) AccessChain 55_2(ray) 43_4
+           61_20: 22_1(float) Load 65_19
+                              RayQueryInitializeKHR 55_1(rayQuery) 61_16 uint(0) uint(16) 61_17 61_18 61_19 61_20
                               Return
                               FunctionEnd

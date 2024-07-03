@@ -100,97 +100,97 @@ gl_FragCoord origin is upper left
 // Id's are bound by 52
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "PixelShaderFunction" 45 48
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "PixelShaderFunction" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "PixelShaderFunction"
-                              Name 11  "@PixelShaderFunction(vf4;"
-                              Name 10  "input"
-                              Name 43  "input"
-                              Name 45  "input"
-                              Name 48  "@entryPointOutput"
-                              Name 49  "param"
-                              Decorate 45(input) Location 0
-                              Decorate 48(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeFunction 7(fvec4) 8(ptr)
-              20:             TypeBool
-              21:             TypeVector 20(bool) 4
-              31:    20(bool) ConstantFalse
-              44:             TypePointer Input 7(fvec4)
-       45(input):     44(ptr) Variable Input
-              47:             TypePointer Output 7(fvec4)
-48(@entryPointOutput):     47(ptr) Variable Output
-4(PixelShaderFunction):           2 Function None 3
-               5:             Label
-       43(input):      8(ptr) Variable Function
-       49(param):      8(ptr) Variable Function
-              46:    7(fvec4) Load 45(input)
-                              Store 43(input) 46
-              50:    7(fvec4) Load 43(input)
-                              Store 49(param) 50
-              51:    7(fvec4) FunctionCall 11(@PixelShaderFunction(vf4;) 49(param)
-                              Store 48(@entryPointOutput) 51
+                              Name 54_1  "PixelShaderFunction"
+                              Name 54_2  "@PixelShaderFunction(vf4;"
+                              Name 55_1  "input"
+                              Name 59_3  "input"
+                              Name 59_1  "input"
+                              Name 59_2  "@entryPointOutput"
+                              Name 59_4  "param"
+                              Decorate 59_1(input) Location 0
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            20_1:             TypeBool
+            23_2:             TypeVector 20_1(bool) 4
+            42_1:  20_1(bool) ConstantFalse
+            32_2:             TypePointer Input 23_1(fvec4)
+     59_1(input):   32_2(ptr) Variable Input
+            32_3:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput):   32_3(ptr) Variable Output
+54_1(PixelShaderFunction):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(input):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(input)
+                              Store 59_3(input) 61_1
+            61_2: 23_1(fvec4) Load 59_3(input)
+                              Store 59_4(param) 61_2
+            57_1: 23_1(fvec4) FunctionCall 54_2(@PixelShaderFunction(vf4;) 59_4(param)
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-11(@PixelShaderFunction(vf4;):    7(fvec4) Function None 9
-       10(input):      8(ptr) FunctionParameter
-              12:             Label
-                              Branch 13
-              13:             Label
-                              LoopMerge 15 16 None
-                              Branch 17
-              17:             Label
-              18:    7(fvec4) Load 10(input)
-              19:    7(fvec4) Load 10(input)
-              22:   21(bvec4) FUnordNotEqual 18 19
-              23:    20(bool) Any 22
-                              BranchConditional 23 14 15
-              14:               Label
-              24:    7(fvec4)   Load 10(input)
-                                ReturnValue 24
-              16:               Label
-                                Branch 13
-              15:             Label
-                              Branch 26
-              26:             Label
-                              LoopMerge 28 29 None
-                              Branch 30
-              30:             Label
-                              BranchConditional 31 27 28
-              27:               Label
-                                Branch 29
-              29:               Label
-                                Branch 26
-              28:             Label
-                              Branch 32
-              32:             Label
-                              LoopMerge 34 35 Unroll 
-                              Branch 36
-              36:             Label
-                              BranchConditional 31 33 34
-              33:               Label
-                                Branch 35
-              35:               Label
-                                Branch 32
-              34:             Label
-                              Branch 37
-              37:             Label
-                              LoopMerge 39 40 None
-                              Branch 41
-              41:             Label
-                              BranchConditional 31 38 39
-              38:               Label
-                                Branch 40
-              40:               Label
-                                Branch 37
-              39:             Label
-              42:    7(fvec4) Undef
-                              ReturnValue 42
+54_2(@PixelShaderFunction(vf4;): 23_1(fvec4) Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+           248_2:             Label
+                              Branch 248_3
+           248_3:             Label
+                              LoopMerge 248_7 248_6 None
+                              Branch 248_4
+           248_4:             Label
+            61_3: 23_1(fvec4) Load 55_1(input)
+            61_4: 23_1(fvec4) Load 55_1(input)
+           183_1: 23_2(bvec4) FUnordNotEqual 61_3 61_4
+           154_1:  20_1(bool) Any 183_1
+                              BranchConditional 154_1 248_5 248_7
+           248_5:               Label
+            61_5: 23_1(fvec4)   Load 55_1(input)
+                                ReturnValue 61_5
+           248_6:               Label
+                                Branch 248_3
+           248_7:             Label
+                              Branch 248_8
+           248_8:             Label
+                              LoopMerge 248_12 248_11 None
+                              Branch 248_9
+           248_9:             Label
+                              BranchConditional 42_1 248_10 248_12
+          248_10:               Label
+                                Branch 248_11
+          248_11:               Label
+                                Branch 248_8
+          248_12:             Label
+                              Branch 248_13
+          248_13:             Label
+                              LoopMerge 248_17 248_16 Unroll 
+                              Branch 248_14
+          248_14:             Label
+                              BranchConditional 42_1 248_15 248_17
+          248_15:               Label
+                                Branch 248_16
+          248_16:               Label
+                                Branch 248_13
+          248_17:             Label
+                              Branch 248_18
+          248_18:             Label
+                              LoopMerge 248_22 248_21 None
+                              Branch 248_19
+          248_19:             Label
+                              BranchConditional 42_1 248_20 248_22
+          248_20:               Label
+                                Branch 248_21
+          248_21:               Label
+                                Branch 248_18
+          248_22:             Label
+             1_1: 23_1(fvec4) Undef
+                              ReturnValue 1_1
                               FunctionEnd

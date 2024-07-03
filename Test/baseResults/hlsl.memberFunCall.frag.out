@@ -156,109 +156,109 @@ gl_FragCoord origin is upper left
 // Id's are bound by 73
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 71
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 10  "method3(f1;"
-                              Name 9  "a"
-                              Name 12  "myContext"
-                              MemberName 12(myContext) 0  "f"
-                              Name 16  "myContext::method1("
-                              Name 15  "@this"
-                              Name 19  "myContext::method2("
-                              Name 18  "@this"
-                              Name 24  "myContext::method3(f1;"
-                              Name 22  "@this"
-                              Name 23  "a"
-                              Name 30  "myContext::method4(f1;f1;"
-                              Name 27  "@this"
-                              Name 28  "a"
-                              Name 29  "b"
-                              Name 34  "@main("
-                              Name 42  "param"
-                              Name 46  "param"
-                              Name 48  "param"
-                              Name 63  "context"
-                              Name 71  "@entryPointOutput"
-                              Decorate 71(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               8:             TypeFunction 6(float) 7(ptr)
-   12(myContext):             TypeStruct 6(float)
-              13:             TypePointer Function 12(myContext)
-              14:             TypeFunction 6(float) 13(ptr)
-              21:             TypeFunction 6(float) 13(ptr) 7(ptr)
-              26:             TypeFunction 6(float) 13(ptr) 7(ptr) 7(ptr)
-              32:             TypeVector 6(float) 4
-              33:             TypeFunction 32(fvec4)
-              36:    6(float) Constant 1065353216
-              56:             TypeInt 32 1
-              57:     56(int) Constant 0
-              64:    6(float) Constant 1077936128
-              70:             TypePointer Output 32(fvec4)
-71(@entryPointOutput):     70(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              72:   32(fvec4) FunctionCall 34(@main()
-                              Store 71(@entryPointOutput) 72
+                              Name 54_1  "main"
+                              Name 54_2  "method3(f1;"
+                              Name 55_1  "a"
+                              Name 30_1  "myContext"
+                              MemberName 30_1(myContext) 0  "f"
+                              Name 54_3  "myContext::method1("
+                              Name 55_2  "@this"
+                              Name 54_4  "myContext::method2("
+                              Name 55_3  "@this"
+                              Name 54_5  "myContext::method3(f1;"
+                              Name 55_4  "@this"
+                              Name 55_5  "a"
+                              Name 54_6  "myContext::method4(f1;f1;"
+                              Name 55_6  "@this"
+                              Name 55_7  "a"
+                              Name 55_8  "b"
+                              Name 54_7  "@main("
+                              Name 59_2  "param"
+                              Name 59_3  "param"
+                              Name 59_4  "param"
+                              Name 59_5  "context"
+                              Name 59_1  "@entryPointOutput"
+                              Decorate 59_1(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            33_2:             TypeFunction 22_1(float) 32_1(ptr)
+ 30_1(myContext):             TypeStruct 22_1(float)
+            32_2:             TypePointer Function 30_1(myContext)
+            33_3:             TypeFunction 22_1(float) 32_2(ptr)
+            33_4:             TypeFunction 22_1(float) 32_2(ptr) 32_1(ptr)
+            33_5:             TypeFunction 22_1(float) 32_2(ptr) 32_1(ptr) 32_1(ptr)
+            23_1:             TypeVector 22_1(float) 4
+            33_6:             TypeFunction 23_1(fvec4)
+            43_1: 22_1(float) Constant 1065353216
+            21_1:             TypeInt 32 1
+            43_2:   21_1(int) Constant 0
+            43_3: 22_1(float) Constant 1077936128
+            32_3:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 23_1(fvec4) FunctionCall 54_7(@main()
+                              Store 59_1(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
- 10(method3(f1;):    6(float) Function None 8
-            9(a):      7(ptr) FunctionParameter
-              11:             Label
-                              ReturnValue 36
+54_2(method3(f1;): 22_1(float) Function None 33_2
+         55_1(a):   32_1(ptr) FunctionParameter
+           248_2:             Label
+                              ReturnValue 43_1
                               FunctionEnd
-16(myContext::method1():    6(float) Function None 14
-       15(@this):     13(ptr) FunctionParameter
-              17:             Label
-              39:    6(float) FunctionCall 19(myContext::method2() 15(@this)
-                              ReturnValue 39
+54_3(myContext::method1(): 22_1(float) Function None 33_3
+     55_2(@this):   32_2(ptr) FunctionParameter
+           248_3:             Label
+            57_2: 22_1(float) FunctionCall 54_4(myContext::method2() 55_2(@this)
+                              ReturnValue 57_2
                               FunctionEnd
-19(myContext::method2():    6(float) Function None 14
-       18(@this):     13(ptr) FunctionParameter
-              20:             Label
-       42(param):      7(ptr) Variable Function
-                              Store 42(param) 36
-              43:    6(float) FunctionCall 24(myContext::method3(f1;) 18(@this) 42(param)
-                              ReturnValue 43
+54_4(myContext::method2(): 22_1(float) Function None 33_3
+     55_3(@this):   32_2(ptr) FunctionParameter
+           248_4:             Label
+     59_2(param):   32_1(ptr) Variable Function
+                              Store 59_2(param) 43_1
+            57_3: 22_1(float) FunctionCall 54_5(myContext::method3(f1;) 55_3(@this) 59_2(param)
+                              ReturnValue 57_3
                               FunctionEnd
-24(myContext::method3(f1;):    6(float) Function None 21
-       22(@this):     13(ptr) FunctionParameter
-           23(a):      7(ptr) FunctionParameter
-              25:             Label
-       46(param):      7(ptr) Variable Function
-       48(param):      7(ptr) Variable Function
-              47:    6(float) Load 23(a)
-                              Store 46(param) 47
-              49:    6(float) Load 23(a)
-                              Store 48(param) 49
-              50:    6(float) FunctionCall 30(myContext::method4(f1;f1;) 22(@this) 46(param) 48(param)
-                              ReturnValue 50
+54_5(myContext::method3(f1;): 22_1(float) Function None 33_4
+     55_4(@this):   32_2(ptr) FunctionParameter
+         55_5(a):   32_1(ptr) FunctionParameter
+           248_5:             Label
+     59_3(param):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1: 22_1(float) Load 55_5(a)
+                              Store 59_3(param) 61_1
+            61_2: 22_1(float) Load 55_5(a)
+                              Store 59_4(param) 61_2
+            57_4: 22_1(float) FunctionCall 54_6(myContext::method4(f1;f1;) 55_4(@this) 59_3(param) 59_4(param)
+                              ReturnValue 57_4
                               FunctionEnd
-30(myContext::method4(f1;f1;):    6(float) Function None 26
-       27(@this):     13(ptr) FunctionParameter
-           28(a):      7(ptr) FunctionParameter
-           29(b):      7(ptr) FunctionParameter
-              31:             Label
-              53:    6(float) Load 28(a)
-              54:    6(float) Load 29(b)
-              55:    6(float) FAdd 53 54
-              58:      7(ptr) AccessChain 27(@this) 57
-              59:    6(float) Load 58
-              60:    6(float) FAdd 55 59
-                              ReturnValue 60
+54_6(myContext::method4(f1;f1;): 22_1(float) Function None 33_5
+     55_6(@this):   32_2(ptr) FunctionParameter
+         55_7(a):   32_1(ptr) FunctionParameter
+         55_8(b):   32_1(ptr) FunctionParameter
+           248_6:             Label
+            61_3: 22_1(float) Load 55_7(a)
+            61_4: 22_1(float) Load 55_8(b)
+           129_1: 22_1(float) FAdd 61_3 61_4
+            65_1:   32_1(ptr) AccessChain 55_6(@this) 43_2
+            61_5: 22_1(float) Load 65_1
+           129_2: 22_1(float) FAdd 129_1 61_5
+                              ReturnValue 129_2
                               FunctionEnd
-      34(@main():   32(fvec4) Function None 33
-              35:             Label
-     63(context):     13(ptr) Variable Function
-              65:      7(ptr) AccessChain 63(context) 57
-                              Store 65 64
-              66:    6(float) FunctionCall 16(myContext::method1() 63(context)
-              67:   32(fvec4) CompositeConstruct 66 66 66 66
-                              ReturnValue 67
+    54_7(@main(): 23_1(fvec4) Function None 33_6
+           248_7:             Label
+   59_5(context):   32_2(ptr) Variable Function
+            65_2:   32_1(ptr) AccessChain 59_5(context) 43_2
+                              Store 65_2 43_3
+            57_5: 22_1(float) FunctionCall 54_3(myContext::method1() 59_5(context)
+            80_1: 23_1(fvec4) CompositeConstruct 57_5 57_5 57_5 57_5
+                              ReturnValue 80_1
                               FunctionEnd

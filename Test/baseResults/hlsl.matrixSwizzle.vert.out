@@ -681,172 +681,172 @@ Validation failed
 // Id's are bound by 118
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "ShaderFunction" 81
+                              EntryPoint Vertex 54_1  "ShaderFunction" 59_1
                               Source HLSL 500
-                              Name 4  "ShaderFunction"
-                              Name 10  "@ShaderFunction(f1;"
-                              Name 9  "inf"
-                              Name 19  "createMat3x3(vf3;vf3;vf3;"
-                              Name 16  "a"
-                              Name 17  "b"
-                              Name 18  "c"
-                              Name 24  "m"
-                              Name 42  "f3"
-                              Name 55  "intermVec"
-                              Name 67  "intermVec"
-                              Name 79  "inf"
-                              Name 81  "inf"
-                              Name 83  "param"
-                              Name 87  "m"
-                              Decorate 81(inf) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               8:             TypeFunction 2 7(ptr)
-              12:             TypeVector 6(float) 3
-              13:             TypePointer Function 12(fvec3)
-              14:             TypeMatrix 12(fvec3) 3
-              15:             TypeFunction 14 13(ptr) 13(ptr) 13(ptr)
-              21:             TypeVector 6(float) 4
-              22:             TypeMatrix 21(fvec4) 3
-              23:             TypePointer Function 22
-              25:             TypeInt 32 1
-              26:     25(int) Constant 2
-              27:    6(float) Constant 1065353216
-              28:             TypeInt 32 0
-              29:     28(int) Constant 3
-              31:    6(float) Constant 1073741824
-              34:     25(int) Constant 0
-              35:    6(float) Constant 1077936128
-              36:   21(fvec4) ConstantComposite 35 35 35 35
-              37:             TypePointer Function 21(fvec4)
-              39:     25(int) Constant 1
-              43:     28(int) Constant 0
-              47:     28(int) Constant 1
-              51:     28(int) Constant 2
-              56:    6(float) Constant 1084227584
-              57:   12(fvec3) ConstantComposite 56 56 56
-              80:             TypePointer Input 6(float)
-         81(inf):     80(ptr) Variable Input
-              86:             TypePointer Function 14
-4(ShaderFunction):           2 Function None 3
-               5:             Label
-         79(inf):      7(ptr) Variable Function
-       83(param):      7(ptr) Variable Function
-              82:    6(float) Load 81(inf)
-                              Store 79(inf) 82
-              84:    6(float) Load 79(inf)
-                              Store 83(param) 84
-              85:           2 FunctionCall 10(@ShaderFunction(f1;) 83(param)
+                              Name 54_1  "ShaderFunction"
+                              Name 54_2  "@ShaderFunction(f1;"
+                              Name 55_1  "inf"
+                              Name 54_3  "createMat3x3(vf3;vf3;vf3;"
+                              Name 55_2  "a"
+                              Name 55_3  "b"
+                              Name 55_4  "c"
+                              Name 59_4  "m"
+                              Name 59_5  "f3"
+                              Name 59_6  "intermVec"
+                              Name 59_7  "intermVec"
+                              Name 59_2  "inf"
+                              Name 59_1  "inf"
+                              Name 59_3  "param"
+                              Name 59_8  "m"
+                              Decorate 59_1(inf) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            23_1:             TypeVector 22_1(float) 3
+            32_2:             TypePointer Function 23_1(fvec3)
+            24_1:             TypeMatrix 23_1(fvec3) 3
+            33_3:             TypeFunction 24_1 32_2(ptr) 32_2(ptr) 32_2(ptr)
+            23_2:             TypeVector 22_1(float) 4
+            24_2:             TypeMatrix 23_2(fvec4) 3
+            32_3:             TypePointer Function 24_2
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 2
+            43_2: 22_1(float) Constant 1065353216
+            21_2:             TypeInt 32 0
+         uint(3):   21_2(int) Constant 3
+            43_3: 22_1(float) Constant 1073741824
+            43_4:   21_1(int) Constant 0
+            43_5: 22_1(float) Constant 1077936128
+            44_1: 23_2(fvec4) ConstantComposite 43_5 43_5 43_5 43_5
+            32_4:             TypePointer Function 23_2(fvec4)
+            43_6:   21_1(int) Constant 1
+         uint(0):   21_2(int) Constant 0
+         uint(1):   21_2(int) Constant 1
+         uint(2):   21_2(int) Constant 2
+            43_7: 22_1(float) Constant 1084227584
+            44_2: 23_1(fvec3) ConstantComposite 43_7 43_7 43_7
+            32_5:             TypePointer Input 22_1(float)
+       59_1(inf):   32_5(ptr) Variable Input
+            32_6:             TypePointer Function 24_1
+54_1(ShaderFunction):        19_1 Function None 33_1
+           248_1:             Label
+       59_2(inf):   32_1(ptr) Variable Function
+     59_3(param):   32_1(ptr) Variable Function
+            61_1: 22_1(float) Load 59_1(inf)
+                              Store 59_2(inf) 61_1
+            61_2: 22_1(float) Load 59_2(inf)
+                              Store 59_3(param) 61_2
+            57_1:        19_1 FunctionCall 54_2(@ShaderFunction(f1;) 59_3(param)
                               Return
                               FunctionEnd
-10(@ShaderFunction(f1;):           2 Function None 8
-          9(inf):      7(ptr) FunctionParameter
-              11:             Label
-           24(m):     23(ptr) Variable Function
-          42(f3):     13(ptr) Variable Function
-   55(intermVec):     13(ptr) Variable Function
-   67(intermVec):     13(ptr) Variable Function
-              30:      7(ptr) AccessChain 24(m) 26 29
-                              Store 30 27
-              32:      7(ptr) AccessChain 24(m) 26 29
-                              Store 32 31
-              33:      7(ptr) AccessChain 24(m) 26 29
-                              Store 33 31
-              38:     37(ptr) AccessChain 24(m) 34
-                              Store 38 36
-              40:     37(ptr) AccessChain 24(m) 39
-                              Store 40 36
-              41:     37(ptr) AccessChain 24(m) 39
-                              Store 41 36
-              44:      7(ptr) AccessChain 42(f3) 43
-              45:    6(float) Load 44
-              46:      7(ptr) AccessChain 24(m) 34 43
-                              Store 46 45
-              48:      7(ptr) AccessChain 42(f3) 47
-              49:    6(float) Load 48
-              50:      7(ptr) AccessChain 24(m) 39 47
-                              Store 50 49
-              52:      7(ptr) AccessChain 42(f3) 51
-              53:    6(float) Load 52
-              54:      7(ptr) AccessChain 24(m) 39 51
-                              Store 54 53
-                              Store 55(intermVec) 57
-              58:      7(ptr) AccessChain 55(intermVec) 43
-              59:    6(float) Load 58
-              60:      7(ptr) AccessChain 24(m) 39 43
-                              Store 60 59
-              61:      7(ptr) AccessChain 55(intermVec) 47
-              62:    6(float) Load 61
-              63:      7(ptr) AccessChain 24(m) 34 47
-                              Store 63 62
-              64:      7(ptr) AccessChain 55(intermVec) 51
-              65:    6(float) Load 64
-              66:      7(ptr) AccessChain 24(m) 26 43
-                              Store 66 65
-              68:   12(fvec3) Load 42(f3)
-              69:   12(fvec3) VectorTimesScalar 68 31
-                              Store 67(intermVec) 69
-              70:      7(ptr) AccessChain 67(intermVec) 43
-              71:    6(float) Load 70
-              72:      7(ptr) AccessChain 24(m) 34 43
-                              Store 72 71
-              73:      7(ptr) AccessChain 67(intermVec) 47
-              74:    6(float) Load 73
-              75:      7(ptr) AccessChain 24(m) 34 47
-                              Store 75 74
-              76:      7(ptr) AccessChain 67(intermVec) 51
-              77:    6(float) Load 76
-              78:      7(ptr) AccessChain 24(m) 39 43
-                              Store 78 77
-                              Store 42(f3) 34
+54_2(@ShaderFunction(f1;):        19_1 Function None 33_2
+       55_1(inf):   32_1(ptr) FunctionParameter
+           248_2:             Label
+         59_4(m):   32_3(ptr) Variable Function
+        59_5(f3):   32_2(ptr) Variable Function
+ 59_6(intermVec):   32_2(ptr) Variable Function
+ 59_7(intermVec):   32_2(ptr) Variable Function
+            65_1:   32_1(ptr) AccessChain 59_4(m) 43_1 uint(3)
+                              Store 65_1 43_2
+            65_2:   32_1(ptr) AccessChain 59_4(m) 43_1 uint(3)
+                              Store 65_2 43_3
+            65_3:   32_1(ptr) AccessChain 59_4(m) 43_1 uint(3)
+                              Store 65_3 43_3
+            65_4:   32_4(ptr) AccessChain 59_4(m) 43_4
+                              Store 65_4 44_1
+            65_5:   32_4(ptr) AccessChain 59_4(m) 43_6
+                              Store 65_5 44_1
+            65_6:   32_4(ptr) AccessChain 59_4(m) 43_6
+                              Store 65_6 44_1
+            65_7:   32_1(ptr) AccessChain 59_5(f3) uint(0)
+            61_3: 22_1(float) Load 65_7
+            65_8:   32_1(ptr) AccessChain 59_4(m) 43_4 uint(0)
+                              Store 65_8 61_3
+            65_9:   32_1(ptr) AccessChain 59_5(f3) uint(1)
+            61_4: 22_1(float) Load 65_9
+           65_10:   32_1(ptr) AccessChain 59_4(m) 43_6 uint(1)
+                              Store 65_10 61_4
+           65_11:   32_1(ptr) AccessChain 59_5(f3) uint(2)
+            61_5: 22_1(float) Load 65_11
+           65_12:   32_1(ptr) AccessChain 59_4(m) 43_6 uint(2)
+                              Store 65_12 61_5
+                              Store 59_6(intermVec) 44_2
+           65_13:   32_1(ptr) AccessChain 59_6(intermVec) uint(0)
+            61_6: 22_1(float) Load 65_13
+           65_14:   32_1(ptr) AccessChain 59_4(m) 43_6 uint(0)
+                              Store 65_14 61_6
+           65_15:   32_1(ptr) AccessChain 59_6(intermVec) uint(1)
+            61_7: 22_1(float) Load 65_15
+           65_16:   32_1(ptr) AccessChain 59_4(m) 43_4 uint(1)
+                              Store 65_16 61_7
+           65_17:   32_1(ptr) AccessChain 59_6(intermVec) uint(2)
+            61_8: 22_1(float) Load 65_17
+           65_18:   32_1(ptr) AccessChain 59_4(m) 43_1 uint(0)
+                              Store 65_18 61_8
+            61_9: 23_1(fvec3) Load 59_5(f3)
+           142_1: 23_1(fvec3) VectorTimesScalar 61_9 43_3
+                              Store 59_7(intermVec) 142_1
+           65_19:   32_1(ptr) AccessChain 59_7(intermVec) uint(0)
+           61_10: 22_1(float) Load 65_19
+           65_20:   32_1(ptr) AccessChain 59_4(m) 43_4 uint(0)
+                              Store 65_20 61_10
+           65_21:   32_1(ptr) AccessChain 59_7(intermVec) uint(1)
+           61_11: 22_1(float) Load 65_21
+           65_22:   32_1(ptr) AccessChain 59_4(m) 43_4 uint(1)
+                              Store 65_22 61_11
+           65_23:   32_1(ptr) AccessChain 59_7(intermVec) uint(2)
+           61_12: 22_1(float) Load 65_23
+           65_24:   32_1(ptr) AccessChain 59_4(m) 43_6 uint(0)
+                              Store 65_24 61_12
+                              Store 59_5(f3) 43_4
                               Return
                               FunctionEnd
-19(createMat3x3(vf3;vf3;vf3;):          14 Function None 15
-           16(a):     13(ptr) FunctionParameter
-           17(b):     13(ptr) FunctionParameter
-           18(c):     13(ptr) FunctionParameter
-              20:             Label
-           87(m):     86(ptr) Variable Function
-              88:      7(ptr) AccessChain 16(a) 43
-              89:    6(float) Load 88
-              90:      7(ptr) AccessChain 87(m) 34 43
-                              Store 90 89
-              91:      7(ptr) AccessChain 16(a) 47
-              92:    6(float) Load 91
-              93:      7(ptr) AccessChain 87(m) 39 43
-                              Store 93 92
-              94:      7(ptr) AccessChain 16(a) 51
-              95:    6(float) Load 94
-              96:      7(ptr) AccessChain 87(m) 26 43
-                              Store 96 95
-              97:      7(ptr) AccessChain 17(b) 43
-              98:    6(float) Load 97
-              99:      7(ptr) AccessChain 87(m) 34 47
-                              Store 99 98
-             100:      7(ptr) AccessChain 17(b) 47
-             101:    6(float) Load 100
-             102:      7(ptr) AccessChain 87(m) 39 47
-                              Store 102 101
-             103:      7(ptr) AccessChain 17(b) 51
-             104:    6(float) Load 103
-             105:      7(ptr) AccessChain 87(m) 26 47
-                              Store 105 104
-             106:      7(ptr) AccessChain 18(c) 43
-             107:    6(float) Load 106
-             108:      7(ptr) AccessChain 87(m) 34 51
-                              Store 108 107
-             109:      7(ptr) AccessChain 18(c) 47
-             110:    6(float) Load 109
-             111:      7(ptr) AccessChain 87(m) 39 51
-                              Store 111 110
-             112:      7(ptr) AccessChain 18(c) 51
-             113:    6(float) Load 112
-             114:      7(ptr) AccessChain 87(m) 26 51
-                              Store 114 113
-             115:          14 Load 87(m)
-                              ReturnValue 115
+54_3(createMat3x3(vf3;vf3;vf3;):        24_1 Function None 33_3
+         55_2(a):   32_2(ptr) FunctionParameter
+         55_3(b):   32_2(ptr) FunctionParameter
+         55_4(c):   32_2(ptr) FunctionParameter
+           248_3:             Label
+         59_8(m):   32_6(ptr) Variable Function
+           65_25:   32_1(ptr) AccessChain 55_2(a) uint(0)
+           61_13: 22_1(float) Load 65_25
+           65_26:   32_1(ptr) AccessChain 59_8(m) 43_4 uint(0)
+                              Store 65_26 61_13
+           65_27:   32_1(ptr) AccessChain 55_2(a) uint(1)
+           61_14: 22_1(float) Load 65_27
+           65_28:   32_1(ptr) AccessChain 59_8(m) 43_6 uint(0)
+                              Store 65_28 61_14
+           65_29:   32_1(ptr) AccessChain 55_2(a) uint(2)
+           61_15: 22_1(float) Load 65_29
+           65_30:   32_1(ptr) AccessChain 59_8(m) 43_1 uint(0)
+                              Store 65_30 61_15
+           65_31:   32_1(ptr) AccessChain 55_3(b) uint(0)
+           61_16: 22_1(float) Load 65_31
+           65_32:   32_1(ptr) AccessChain 59_8(m) 43_4 uint(1)
+                              Store 65_32 61_16
+           65_33:   32_1(ptr) AccessChain 55_3(b) uint(1)
+           61_17: 22_1(float) Load 65_33
+           65_34:   32_1(ptr) AccessChain 59_8(m) 43_6 uint(1)
+                              Store 65_34 61_17
+           65_35:   32_1(ptr) AccessChain 55_3(b) uint(2)
+           61_18: 22_1(float) Load 65_35
+           65_36:   32_1(ptr) AccessChain 59_8(m) 43_1 uint(1)
+                              Store 65_36 61_18
+           65_37:   32_1(ptr) AccessChain 55_4(c) uint(0)
+           61_19: 22_1(float) Load 65_37
+           65_38:   32_1(ptr) AccessChain 59_8(m) 43_4 uint(2)
+                              Store 65_38 61_19
+           65_39:   32_1(ptr) AccessChain 55_4(c) uint(1)
+           61_20: 22_1(float) Load 65_39
+           65_40:   32_1(ptr) AccessChain 59_8(m) 43_6 uint(2)
+                              Store 65_40 61_20
+           65_41:   32_1(ptr) AccessChain 55_4(c) uint(2)
+           61_21: 22_1(float) Load 65_41
+           65_42:   32_1(ptr) AccessChain 59_8(m) 43_1 uint(2)
+                              Store 65_42 61_21
+           61_22:        24_1 Load 59_8(m)
+                              ReturnValue 61_22
                               FunctionEnd

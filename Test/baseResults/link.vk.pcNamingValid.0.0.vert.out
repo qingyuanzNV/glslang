@@ -113,95 +113,95 @@ Shader version: 450
 // Id's are bound by 53
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 14 31 48
+                              EntryPoint Vertex 54_1  "main" 59_1 59_3 59_4
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "getColor2("
-                              Name 11  "getWorld("
-                              Name 14  "oColor"
-                              Name 16  "PCBlock"
-                              MemberName 16(PCBlock) 0  "uWorld"
-                              MemberName 16(PCBlock) 1  "uProj"
-                              MemberName 16(PCBlock) 2  "color1"
-                              MemberName 16(PCBlock) 3  "color2"
-                              Name 18  "a"
-                              Name 29  "gl_PerVertex"
-                              MemberName 29(gl_PerVertex) 0  "gl_Position"
-                              MemberName 29(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 29(gl_PerVertex) 2  "gl_ClipDistance"
-                              MemberName 29(gl_PerVertex) 3  "gl_CullDistance"
-                              Name 31  ""
-                              Name 48  "P"
-                              Decorate 14(oColor) Location 0
-                              Decorate 16(PCBlock) Block
-                              MemberDecorate 16(PCBlock) 0 ColMajor
-                              MemberDecorate 16(PCBlock) 0 MatrixStride 16
-                              MemberDecorate 16(PCBlock) 0 Offset 0
-                              MemberDecorate 16(PCBlock) 1 ColMajor
-                              MemberDecorate 16(PCBlock) 1 MatrixStride 16
-                              MemberDecorate 16(PCBlock) 1 Offset 64
-                              MemberDecorate 16(PCBlock) 2 Offset 128
-                              MemberDecorate 16(PCBlock) 3 Offset 144
-                              Decorate 29(gl_PerVertex) Block
-                              MemberDecorate 29(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 29(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 29(gl_PerVertex) 2 BuiltIn ClipDistance
-                              MemberDecorate 29(gl_PerVertex) 3 BuiltIn CullDistance
-                              Decorate 48(P) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              13:             TypePointer Output 7(fvec4)
-      14(oColor):     13(ptr) Variable Output
-              15:             TypeMatrix 7(fvec4) 4
-     16(PCBlock):             TypeStruct 15 15 7(fvec4) 7(fvec4)
-              17:             TypePointer PushConstant 16(PCBlock)
-           18(a):     17(ptr) Variable PushConstant
-              19:             TypeInt 32 1
-              20:     19(int) Constant 2
-              21:             TypePointer PushConstant 7(fvec4)
-              26:             TypeInt 32 0
-              27:     26(int) Constant 1
-              28:             TypeArray 6(float) 27
-29(gl_PerVertex):             TypeStruct 7(fvec4) 6(float) 28 28
-              30:             TypePointer Output 29(gl_PerVertex)
-              31:     30(ptr) Variable Output
-              32:     19(int) Constant 0
-              33:     19(int) Constant 1
-              34:             TypePointer PushConstant 15
-              40:     19(int) Constant 3
-              47:             TypePointer Input 7(fvec4)
-           48(P):     47(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              22:     21(ptr) AccessChain 18(a) 20
-              23:    7(fvec4) Load 22
-              24:    7(fvec4) FunctionCall 9(getColor2()
-              25:    7(fvec4) FMul 23 24
-                              Store 14(oColor) 25
-              35:     34(ptr) AccessChain 18(a) 33
-              36:          15 Load 35
-              37:    7(fvec4) FunctionCall 11(getWorld()
-              38:    7(fvec4) MatrixTimesVector 36 37
-              39:     13(ptr) AccessChain 31 32
-                              Store 39 38
+                              Name 54_1  "main"
+                              Name 54_2  "getColor2("
+                              Name 54_3  "getWorld("
+                              Name 59_1  "oColor"
+                              Name 30_1  "PCBlock"
+                              MemberName 30_1(PCBlock) 0  "uWorld"
+                              MemberName 30_1(PCBlock) 1  "uProj"
+                              MemberName 30_1(PCBlock) 2  "color1"
+                              MemberName 30_1(PCBlock) 3  "color2"
+                              Name 59_2  "a"
+                              Name 30_2  "gl_PerVertex"
+                              MemberName 30_2(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_2(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_2(gl_PerVertex) 2  "gl_ClipDistance"
+                              MemberName 30_2(gl_PerVertex) 3  "gl_CullDistance"
+                              Name 59_3  ""
+                              Name 59_4  "P"
+                              Decorate 59_1(oColor) Location 0
+                              Decorate 30_1(PCBlock) Block
+                              MemberDecorate 30_1(PCBlock) 0 ColMajor
+                              MemberDecorate 30_1(PCBlock) 0 MatrixStride 16
+                              MemberDecorate 30_1(PCBlock) 0 Offset 0
+                              MemberDecorate 30_1(PCBlock) 1 ColMajor
+                              MemberDecorate 30_1(PCBlock) 1 MatrixStride 16
+                              MemberDecorate 30_1(PCBlock) 1 Offset 64
+                              MemberDecorate 30_1(PCBlock) 2 Offset 128
+                              MemberDecorate 30_1(PCBlock) 3 Offset 144
+                              Decorate 30_2(gl_PerVertex) Block
+                              MemberDecorate 30_2(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_2(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_2(gl_PerVertex) 2 BuiltIn ClipDistance
+                              MemberDecorate 30_2(gl_PerVertex) 3 BuiltIn CullDistance
+                              Decorate 59_4(P) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            32_1:             TypePointer Output 23_1(fvec4)
+    59_1(oColor):   32_1(ptr) Variable Output
+            24_1:             TypeMatrix 23_1(fvec4) 4
+   30_1(PCBlock):             TypeStruct 24_1 24_1 23_1(fvec4) 23_1(fvec4)
+            32_2:             TypePointer PushConstant 30_1(PCBlock)
+         59_2(a):   32_2(ptr) Variable PushConstant
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 2
+            32_3:             TypePointer PushConstant 23_1(fvec4)
+            21_2:             TypeInt 32 0
+         uint(1):   21_2(int) Constant 1
+            28_1:             TypeArray 22_1(float) uint(1)
+30_2(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float) 28_1 28_1
+            32_4:             TypePointer Output 30_2(gl_PerVertex)
+            59_3:   32_4(ptr) Variable Output
+            43_2:   21_1(int) Constant 0
+            43_3:   21_1(int) Constant 1
+            32_5:             TypePointer PushConstant 24_1
+            43_4:   21_1(int) Constant 3
+            32_6:             TypePointer Input 23_1(fvec4)
+         59_4(P):   32_6(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2(a) 43_1
+            61_1: 23_1(fvec4) Load 65_1
+            57_1: 23_1(fvec4) FunctionCall 54_2(getColor2()
+           133_1: 23_1(fvec4) FMul 61_1 57_1
+                              Store 59_1(oColor) 133_1
+            65_2:   32_5(ptr) AccessChain 59_2(a) 43_3
+            61_2:        24_1 Load 65_2
+            57_2: 23_1(fvec4) FunctionCall 54_3(getWorld()
+           145_1: 23_1(fvec4) MatrixTimesVector 61_2 57_2
+            65_3:   32_1(ptr) AccessChain 59_3 43_2
+                              Store 65_3 145_1
                               Return
                               FunctionEnd
-   9(getColor2():    7(fvec4) Function None 8
-              10:             Label
-              41:     21(ptr) AccessChain 18(a) 40
-              42:    7(fvec4) Load 41
-                              ReturnValue 42
+54_2(getColor2(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+            65_4:   32_3(ptr) AccessChain 59_2(a) 43_4
+            61_3: 23_1(fvec4) Load 65_4
+                              ReturnValue 61_3
                               FunctionEnd
-   11(getWorld():    7(fvec4) Function None 8
-              12:             Label
-              45:     34(ptr) AccessChain 18(a) 32
-              46:          15 Load 45
-              49:    7(fvec4) Load 48(P)
-              50:    7(fvec4) MatrixTimesVector 46 49
-                              ReturnValue 50
+ 54_3(getWorld(): 23_1(fvec4) Function None 33_2
+           248_3:             Label
+            65_5:   32_5(ptr) AccessChain 59_2(a) 43_2
+            61_4:        24_1 Load 65_5
+            61_5: 23_1(fvec4) Load 59_4(P)
+           145_2: 23_1(fvec4) MatrixTimesVector 61_4 61_5
+                              ReturnValue 145_2
                               FunctionEnd

@@ -4,78 +4,78 @@ spv.register.autoassign-2.frag
 // Id's are bound by 47
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 44
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_OUTPUT"
-                              MemberName 8(PS_OUTPUT) 0  "Color"
-                              Name 12  "@main(struct-PS_OUTPUT-vf41;"
-                              Name 11  "psout"
-                              Name 18  "g_tScene[0]"
-                              Name 22  "g_tSamp"
-                              Name 31  "g_tScene[1]"
-                              Name 39  "psout"
-                              Name 40  "param"
-                              Name 44  "psout.Color"
-                              Decorate 18(g_tScene[0]) Binding 10
-                              Decorate 18(g_tScene[0]) DescriptorSet 0
-                              Decorate 22(g_tSamp) Binding 5
-                              Decorate 22(g_tSamp) DescriptorSet 0
-                              Decorate 31(g_tScene[1]) Binding 11
-                              Decorate 31(g_tScene[1]) DescriptorSet 0
-                              Decorate 44(psout.Color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(PS_OUTPUT):             TypeStruct 7(fvec4)
-               9:             TypePointer Function 8(PS_OUTPUT)
-              10:             TypeFunction 2 9(ptr)
-              14:             TypeInt 32 1
-              15:     14(int) Constant 0
-              16:             TypeImage 6(float) 2D sampled format:Unknown
-              17:             TypePointer UniformConstant 16
- 18(g_tScene[0]):     17(ptr) Variable UniformConstant
-              20:             TypeSampler
-              21:             TypePointer UniformConstant 20
-     22(g_tSamp):     21(ptr) Variable UniformConstant
-              24:             TypeSampledImage 16
-              26:             TypeVector 6(float) 2
-              27:    6(float) Constant 1050253722
-              28:    6(float) Constant 1053609165
-              29:   26(fvec2) ConstantComposite 27 28
- 31(g_tScene[1]):     17(ptr) Variable UniformConstant
-              37:             TypePointer Function 7(fvec4)
-              43:             TypePointer Output 7(fvec4)
- 44(psout.Color):     43(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-       39(psout):      9(ptr) Variable Function
-       40(param):      9(ptr) Variable Function
-              41:           2 FunctionCall 12(@main(struct-PS_OUTPUT-vf41;) 40(param)
-              42:8(PS_OUTPUT) Load 40(param)
-                              Store 39(psout) 42
-              45:     37(ptr) AccessChain 39(psout) 15
-              46:    7(fvec4) Load 45
-                              Store 44(psout.Color) 46
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              Name 54_2  "@main(struct-PS_OUTPUT-vf41;"
+                              Name 55_1  "psout"
+                              Name 59_1  "g_tScene[0]"
+                              Name 59_2  "g_tSamp"
+                              Name 59_3  "g_tScene[1]"
+                              Name 59_5  "psout"
+                              Name 59_6  "param"
+                              Name 59_4  "psout.Color"
+                              Decorate 59_1(g_tScene[0]) Binding 10
+                              Decorate 59_1(g_tScene[0]) DescriptorSet 0
+                              Decorate 59_2(g_tSamp) Binding 5
+                              Decorate 59_2(g_tSamp) DescriptorSet 0
+                              Decorate 59_3(g_tScene[1]) Binding 11
+                              Decorate 59_3(g_tScene[1]) DescriptorSet 0
+                              Decorate 59_4(psout.Color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4)
+            32_1:             TypePointer Function 30_1(PS_OUTPUT)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            32_2:             TypePointer UniformConstant 25_1
+59_1(g_tScene[0]):   32_2(ptr) Variable UniformConstant
+            26_1:             TypeSampler
+            32_3:             TypePointer UniformConstant 26_1
+   59_2(g_tSamp):   32_3(ptr) Variable UniformConstant
+            27_1:             TypeSampledImage 25_1
+            23_2:             TypeVector 22_1(float) 2
+            43_2: 22_1(float) Constant 1050253722
+            43_3: 22_1(float) Constant 1053609165
+            44_1: 23_2(fvec2) ConstantComposite 43_2 43_3
+59_3(g_tScene[1]):   32_2(ptr) Variable UniformConstant
+            32_4:             TypePointer Function 23_1(fvec4)
+            32_5:             TypePointer Output 23_1(fvec4)
+59_4(psout.Color):   32_5(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_5(psout):   32_1(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+            57_1:        19_1 FunctionCall 54_2(@main(struct-PS_OUTPUT-vf41;) 59_6(param)
+            61_1:30_1(PS_OUTPUT) Load 59_6(param)
+                              Store 59_5(psout) 61_1
+            65_1:   32_4(ptr) AccessChain 59_5(psout) 43_1
+            61_2: 23_1(fvec4) Load 65_1
+                              Store 59_4(psout.Color) 61_2
                               Return
                               FunctionEnd
-12(@main(struct-PS_OUTPUT-vf41;):           2 Function None 10
-       11(psout):      9(ptr) FunctionParameter
-              13:             Label
-              19:          16 Load 18(g_tScene[0])
-              23:          20 Load 22(g_tSamp)
-              25:          24 SampledImage 19 23
-              30:    7(fvec4) ImageSampleImplicitLod 25 29
-              32:          16 Load 31(g_tScene[1])
-              33:          20 Load 22(g_tSamp)
-              34:          24 SampledImage 32 33
-              35:    7(fvec4) ImageSampleImplicitLod 34 29
-              36:    7(fvec4) FAdd 30 35
-              38:     37(ptr) AccessChain 11(psout) 15
-                              Store 38 36
+54_2(@main(struct-PS_OUTPUT-vf41;):        19_1 Function None 33_2
+     55_1(psout):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            61_3:        25_1 Load 59_1(g_tScene[0])
+            61_4:        26_1 Load 59_2(g_tSamp)
+            86_1:        27_1 SampledImage 61_3 61_4
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 86_1 44_1
+            61_5:        25_1 Load 59_3(g_tScene[1])
+            61_6:        26_1 Load 59_2(g_tSamp)
+            86_2:        27_1 SampledImage 61_5 61_6
+            87_2: 23_1(fvec4) ImageSampleImplicitLod 86_2 44_1
+           129_1: 23_1(fvec4) FAdd 87_1 87_2
+            65_2:   32_4(ptr) AccessChain 55_1(psout) 43_1
+                              Store 65_2 129_1
                               Return
                               FunctionEnd

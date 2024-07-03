@@ -5,140 +5,140 @@ spv.ext.World3x4.rahit
 
                               Capability RayTracingKHR
                               Extension  "SPV_KHR_ray_tracing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint AnyHitKHR 4  "main" 43 60 78 87 89
+                              EntryPoint AnyHitKHR 54_1  "main" 59_1 59_2 59_3 59_4 59_5
                               Source GLSL 460
                               SourceExtension  "GL_EXT_ray_tracing"
-                              Name 4  "main"
-                              Name 8  "k"
-                              Name 12  "ndx"
-                              Name 14  "col"
-                              Name 25  "row"
-                              Name 39  "p"
-                              Name 43  "gl_LaunchIDEXT"
-                              Name 53  "r"
-                              Name 60  "gl_WorldToObject3x4EXT"
-                              Name 66  "indexable"
-                              Name 72  "c"
-                              Name 78  "result"
-                              Name 87  "attribs"
-                              Name 89  "hitValue"
-                              Decorate 43(gl_LaunchIDEXT) BuiltIn LaunchIdKHR
-                              Decorate 60(gl_WorldToObject3x4EXT) BuiltIn WorldToObjectKHR
-                              Decorate 78(result) Binding 0
-                              Decorate 78(result) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               9:    6(float) Constant 1233125376
-              10:             TypeInt 32 1
-              11:             TypePointer Function 10(int)
-              13:     10(int) Constant 4294967295
-              15:     10(int) Constant 0
-              22:     10(int) Constant 3
-              23:             TypeBool
-              32:     10(int) Constant 4
-              35:     10(int) Constant 1
-              37:             TypeVector 10(int) 3
-              38:             TypePointer Function 37(ivec3)
-              40:             TypeInt 32 0
-              41:             TypeVector 40(int) 3
-              42:             TypePointer Input 41(ivec3)
-43(gl_LaunchIDEXT):     42(ptr) Variable Input
-              44:             TypeVector 40(int) 2
-              47:             TypeVector 10(int) 2
-              55:             TypeVector 6(float) 3
-              56:             TypeMatrix 55(fvec3) 4
-              57:             TypeVector 6(float) 4
-              58:             TypeMatrix 57(fvec4) 3
-              59:             TypePointer Input 56
-60(gl_WorldToObject3x4EXT):     59(ptr) Variable Input
-              65:             TypePointer Function 58
-              70:             TypeVector 10(int) 4
-              71:             TypePointer Function 70(ivec4)
-              76:             TypeImage 10(int) 3D nonsampled format:R32i
-              77:             TypePointer UniformConstant 76
-      78(result):     77(ptr) Variable UniformConstant
-              86:             TypePointer HitAttributeKHR 55(fvec3)
-     87(attribs):     86(ptr) Variable HitAttributeKHR
-              88:             TypePointer IncomingRayPayloadKHR 55(fvec3)
-    89(hitValue):     88(ptr) Variable IncomingRayPayloadKHR
-         4(main):           2 Function None 3
-               5:             Label
-            8(k):      7(ptr) Variable Function
-         12(ndx):     11(ptr) Variable Function
-         14(col):     11(ptr) Variable Function
-         25(row):     11(ptr) Variable Function
-           39(p):     38(ptr) Variable Function
-           53(r):      7(ptr) Variable Function
-   66(indexable):     65(ptr) Variable Function
-           72(c):     71(ptr) Variable Function
-                              Store 8(k) 9
-                              Store 12(ndx) 13
-                              Store 14(col) 15
-                              Branch 16
-              16:             Label
-                              LoopMerge 18 19 None
-                              Branch 20
-              20:             Label
-              21:     10(int) Load 14(col)
-              24:    23(bool) SLessThan 21 22
-                              BranchConditional 24 17 18
-              17:               Label
-                                Store 25(row) 15
-                                Branch 26
-              26:               Label
-                                LoopMerge 28 29 None
-                                Branch 30
-              30:               Label
-              31:     10(int)   Load 25(row)
-              33:    23(bool)   SLessThan 31 32
-                                BranchConditional 33 27 28
-              27:                 Label
-              34:     10(int)     Load 12(ndx)
-              36:     10(int)     IAdd 34 35
-                                  Store 12(ndx) 36
-              45:   41(ivec3)     Load 43(gl_LaunchIDEXT)
-              46:   44(ivec2)     VectorShuffle 45 45 0 1
-              48:   47(ivec2)     Bitcast 46
-              49:     10(int)     Load 12(ndx)
-              50:     10(int)     CompositeExtract 48 0
-              51:     10(int)     CompositeExtract 48 1
-              52:   37(ivec3)     CompositeConstruct 50 51 49
-                                  Store 39(p) 52
-              54:    6(float)     Load 8(k)
-              61:          56     Load 60(gl_WorldToObject3x4EXT)
-              62:          58     Transpose 61
-              63:     10(int)     Load 14(col)
-              64:     10(int)     Load 25(row)
-                                  Store 66(indexable) 62
-              67:      7(ptr)     AccessChain 66(indexable) 63 64
-              68:    6(float)     Load 67
-              69:    6(float)     FMul 54 68
-                                  Store 53(r) 69
-              73:    6(float)     Load 53(r)
-              74:     10(int)     ConvertFToS 73
-              75:   70(ivec4)     CompositeConstruct 74 15 15 35
-                                  Store 72(c) 75
-              79:          76     Load 78(result)
-              80:   37(ivec3)     Load 39(p)
-              81:   70(ivec4)     Load 72(c)
-                                  ImageWrite 79 80 81 SignExtend 
-                                  Branch 29
-              29:                 Label
-              82:     10(int)     Load 25(row)
-              83:     10(int)     IAdd 82 35
-                                  Store 25(row) 83
-                                  Branch 26
-              28:               Label
-                                Branch 19
-              19:               Label
-              84:     10(int)   Load 14(col)
-              85:     10(int)   IAdd 84 35
-                                Store 14(col) 85
-                                Branch 16
-              18:             Label
+                              Name 54_1  "main"
+                              Name 59_6  "k"
+                              Name 59_7  "ndx"
+                              Name 59_8  "col"
+                              Name 59_9  "row"
+                              Name 59_10  "p"
+                              Name 59_1  "gl_LaunchIDEXT"
+                              Name 59_11  "r"
+                              Name 59_2  "gl_WorldToObject3x4EXT"
+                              Name 59_12  "indexable"
+                              Name 59_13  "c"
+                              Name 59_3  "result"
+                              Name 59_4  "attribs"
+                              Name 59_5  "hitValue"
+                              Decorate 59_1(gl_LaunchIDEXT) BuiltIn LaunchIdKHR
+                              Decorate 59_2(gl_WorldToObject3x4EXT) BuiltIn WorldToObjectKHR
+                              Decorate 59_3(result) Binding 0
+                              Decorate 59_3(result) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            43_1: 22_1(float) Constant 1233125376
+            21_1:             TypeInt 32 1
+            32_2:             TypePointer Function 21_1(int)
+            43_2:   21_1(int) Constant 4294967295
+            43_3:   21_1(int) Constant 0
+            43_4:   21_1(int) Constant 3
+            20_1:             TypeBool
+            43_5:   21_1(int) Constant 4
+            43_6:   21_1(int) Constant 1
+            23_1:             TypeVector 21_1(int) 3
+            32_3:             TypePointer Function 23_1(ivec3)
+            21_2:             TypeInt 32 0
+            23_2:             TypeVector 21_2(int) 3
+            32_4:             TypePointer Input 23_2(ivec3)
+59_1(gl_LaunchIDEXT):   32_4(ptr) Variable Input
+            23_3:             TypeVector 21_2(int) 2
+            23_4:             TypeVector 21_1(int) 2
+            23_5:             TypeVector 22_1(float) 3
+            24_1:             TypeMatrix 23_5(fvec3) 4
+            23_6:             TypeVector 22_1(float) 4
+            24_2:             TypeMatrix 23_6(fvec4) 3
+            32_5:             TypePointer Input 24_1
+59_2(gl_WorldToObject3x4EXT):   32_5(ptr) Variable Input
+            32_6:             TypePointer Function 24_2
+            23_7:             TypeVector 21_1(int) 4
+            32_7:             TypePointer Function 23_7(ivec4)
+            25_1:             TypeImage 21_1(int) 3D nonsampled format:R32i
+            32_8:             TypePointer UniformConstant 25_1
+    59_3(result):   32_8(ptr) Variable UniformConstant
+            32_9:             TypePointer HitAttributeKHR 23_5(fvec3)
+   59_4(attribs):   32_9(ptr) Variable HitAttributeKHR
+           32_10:             TypePointer IncomingRayPayloadKHR 23_5(fvec3)
+  59_5(hitValue):  32_10(ptr) Variable IncomingRayPayloadKHR
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_6(k):   32_1(ptr) Variable Function
+       59_7(ndx):   32_2(ptr) Variable Function
+       59_8(col):   32_2(ptr) Variable Function
+       59_9(row):   32_2(ptr) Variable Function
+        59_10(p):   32_3(ptr) Variable Function
+        59_11(r):   32_1(ptr) Variable Function
+59_12(indexable):   32_6(ptr) Variable Function
+        59_13(c):   32_7(ptr) Variable Function
+                              Store 59_6(k) 43_1
+                              Store 59_7(ndx) 43_2
+                              Store 59_8(col) 43_3
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_11 248_10 None
+                              Branch 248_3
+           248_3:             Label
+            61_1:   21_1(int) Load 59_8(col)
+           177_1:  20_1(bool) SLessThan 61_1 43_4
+                              BranchConditional 177_1 248_4 248_11
+           248_4:               Label
+                                Store 59_9(row) 43_3
+                                Branch 248_5
+           248_5:               Label
+                                LoopMerge 248_9 248_8 None
+                                Branch 248_6
+           248_6:               Label
+            61_2:   21_1(int)   Load 59_9(row)
+           177_2:  20_1(bool)   SLessThan 61_2 43_5
+                                BranchConditional 177_2 248_7 248_9
+           248_7:                 Label
+            61_3:   21_1(int)     Load 59_7(ndx)
+           128_1:   21_1(int)     IAdd 61_3 43_6
+                                  Store 59_7(ndx) 128_1
+            61_4: 23_2(ivec3)     Load 59_1(gl_LaunchIDEXT)
+            79_1: 23_3(ivec2)     VectorShuffle 61_4 61_4 0 1
+           124_1: 23_4(ivec2)     Bitcast 79_1
+            61_5:   21_1(int)     Load 59_7(ndx)
+            81_1:   21_1(int)     CompositeExtract 124_1 0
+            81_2:   21_1(int)     CompositeExtract 124_1 1
+            80_1: 23_1(ivec3)     CompositeConstruct 81_1 81_2 61_5
+                                  Store 59_10(p) 80_1
+            61_6: 22_1(float)     Load 59_6(k)
+            61_7:        24_1     Load 59_2(gl_WorldToObject3x4EXT)
+            84_1:        24_2     Transpose 61_7
+            61_8:   21_1(int)     Load 59_8(col)
+            61_9:   21_1(int)     Load 59_9(row)
+                                  Store 59_12(indexable) 84_1
+            65_1:   32_1(ptr)     AccessChain 59_12(indexable) 61_8 61_9
+           61_10: 22_1(float)     Load 65_1
+           133_1: 22_1(float)     FMul 61_6 61_10
+                                  Store 59_11(r) 133_1
+           61_11: 22_1(float)     Load 59_11(r)
+           110_1:   21_1(int)     ConvertFToS 61_11
+            80_2: 23_7(ivec4)     CompositeConstruct 110_1 43_3 43_3 43_6
+                                  Store 59_13(c) 80_2
+           61_12:        25_1     Load 59_3(result)
+           61_13: 23_1(ivec3)     Load 59_10(p)
+           61_14: 23_7(ivec4)     Load 59_13(c)
+                                  ImageWrite 61_12 61_13 61_14 SignExtend 
+                                  Branch 248_8
+           248_8:                 Label
+           61_15:   21_1(int)     Load 59_9(row)
+           128_2:   21_1(int)     IAdd 61_15 43_6
+                                  Store 59_9(row) 128_2
+                                  Branch 248_5
+           248_9:               Label
+                                Branch 248_10
+          248_10:               Label
+           61_16:   21_1(int)   Load 59_8(col)
+           128_3:   21_1(int)   IAdd 61_16 43_6
+                                Store 59_8(col) 128_3
+                                Branch 248_2
+          248_11:             Label
                               Return
                               FunctionEnd

@@ -196,114 +196,114 @@ output primitive = triangle_strip
 // Id's are bound by 67
 
                               Capability Geometry
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Geometry 4  "main" 40 49
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 Invocations 1
-                              ExecutionMode 4 OutputTriangleStrip
-                              ExecutionMode 4 OutputVertices 3
+                              EntryPoint Geometry 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 Invocations 1
+                              ExecutionMode 54_1 OutputTriangleStrip
+                              ExecutionMode 54_1 OutputVertices 3
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_IN"
-                              MemberName 8(PS_IN) 0  "pos"
-                              Name 13  "GS_OUT"
-                              MemberName 13(GS_OUT) 0  "pos"
-                              Name 18  "@main(struct-PS_IN-vf41[3];struct-GS_OUT-vf41;"
-                              Name 16  "i"
-                              Name 17  "ts"
-                              Name 22  "x"
-                              Name 33  "o"
-                              Name 40  "ts.pos"
-                              Name 46  "i"
-                              Name 49  "i.pos"
-                              Name 61  "ts"
-                              Name 62  "param"
-                              Name 64  "param"
-                              Decorate 40(ts.pos) BuiltIn Position
-                              Decorate 49(i.pos) BuiltIn Position
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-        8(PS_IN):             TypeStruct 7(fvec4)
-               9:             TypeInt 32 0
-              10:      9(int) Constant 3
-              11:             TypeArray 8(PS_IN) 10
-              12:             TypePointer Function 11
-      13(GS_OUT):             TypeStruct 7(fvec4)
-              14:             TypePointer Function 13(GS_OUT)
-              15:             TypeFunction 2 12(ptr) 14(ptr)
-              20:             TypeInt 32 1
-              21:             TypePointer Function 20(int)
-              23:     20(int) Constant 0
-              30:     20(int) Constant 3
-              31:             TypeBool
-              35:             TypePointer Function 7(fvec4)
-              39:             TypePointer Output 7(fvec4)
-      40(ts.pos):     39(ptr) Variable Output
-              44:     20(int) Constant 1
-              47:             TypeArray 7(fvec4) 10
-              48:             TypePointer Input 47
-       49(i.pos):     48(ptr) Variable Input
-              50:             TypePointer Input 7(fvec4)
-              57:     20(int) Constant 2
-         4(main):           2 Function None 3
-               5:             Label
-           46(i):     12(ptr) Variable Function
-          61(ts):     14(ptr) Variable Function
-       62(param):     12(ptr) Variable Function
-       64(param):     14(ptr) Variable Function
-              51:     50(ptr) AccessChain 49(i.pos) 23
-              52:    7(fvec4) Load 51
-              53:     35(ptr) AccessChain 46(i) 23 23
-                              Store 53 52
-              54:     50(ptr) AccessChain 49(i.pos) 44
-              55:    7(fvec4) Load 54
-              56:     35(ptr) AccessChain 46(i) 44 23
-                              Store 56 55
-              58:     50(ptr) AccessChain 49(i.pos) 57
-              59:    7(fvec4) Load 58
-              60:     35(ptr) AccessChain 46(i) 57 23
-                              Store 60 59
-              63:          11 Load 46(i)
-                              Store 62(param) 63
-              65:           2 FunctionCall 18(@main(struct-PS_IN-vf41[3];struct-GS_OUT-vf41;) 62(param) 64(param)
-              66:  13(GS_OUT) Load 64(param)
-                              Store 61(ts) 66
+                              Name 54_1  "main"
+                              Name 30_1  "PS_IN"
+                              MemberName 30_1(PS_IN) 0  "pos"
+                              Name 30_2  "GS_OUT"
+                              MemberName 30_2(GS_OUT) 0  "pos"
+                              Name 54_2  "@main(struct-PS_IN-vf41[3];struct-GS_OUT-vf41;"
+                              Name 55_1  "i"
+                              Name 55_2  "ts"
+                              Name 59_7  "x"
+                              Name 59_8  "o"
+                              Name 59_1  "ts.pos"
+                              Name 59_3  "i"
+                              Name 59_2  "i.pos"
+                              Name 59_4  "ts"
+                              Name 59_5  "param"
+                              Name 59_6  "param"
+                              Decorate 59_1(ts.pos) BuiltIn Position
+                              Decorate 59_2(i.pos) BuiltIn Position
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+     30_1(PS_IN):             TypeStruct 23_1(fvec4)
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 30_1(PS_IN) uint(3)
+            32_1:             TypePointer Function 28_1
+    30_2(GS_OUT):             TypeStruct 23_1(fvec4)
+            32_2:             TypePointer Function 30_2(GS_OUT)
+            33_2:             TypeFunction 19_1 32_1(ptr) 32_2(ptr)
+            21_2:             TypeInt 32 1
+            32_3:             TypePointer Function 21_2(int)
+            43_1:   21_2(int) Constant 0
+            43_2:   21_2(int) Constant 3
+            20_1:             TypeBool
+            32_4:             TypePointer Function 23_1(fvec4)
+            32_5:             TypePointer Output 23_1(fvec4)
+    59_1(ts.pos):   32_5(ptr) Variable Output
+            43_3:   21_2(int) Constant 1
+            28_2:             TypeArray 23_1(fvec4) uint(3)
+            32_6:             TypePointer Input 28_2
+     59_2(i.pos):   32_6(ptr) Variable Input
+            32_7:             TypePointer Input 23_1(fvec4)
+            43_4:   21_2(int) Constant 2
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_3(i):   32_1(ptr) Variable Function
+        59_4(ts):   32_2(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+     59_6(param):   32_2(ptr) Variable Function
+            65_1:   32_7(ptr) AccessChain 59_2(i.pos) 43_1
+            61_1: 23_1(fvec4) Load 65_1
+            65_2:   32_4(ptr) AccessChain 59_3(i) 43_1 43_1
+                              Store 65_2 61_1
+            65_3:   32_7(ptr) AccessChain 59_2(i.pos) 43_3
+            61_2: 23_1(fvec4) Load 65_3
+            65_4:   32_4(ptr) AccessChain 59_3(i) 43_3 43_1
+                              Store 65_4 61_2
+            65_5:   32_7(ptr) AccessChain 59_2(i.pos) 43_4
+            61_3: 23_1(fvec4) Load 65_5
+            65_6:   32_4(ptr) AccessChain 59_3(i) 43_4 43_1
+                              Store 65_6 61_3
+            61_4:        28_1 Load 59_3(i)
+                              Store 59_5(param) 61_4
+            57_1:        19_1 FunctionCall 54_2(@main(struct-PS_IN-vf41[3];struct-GS_OUT-vf41;) 59_5(param) 59_6(param)
+            61_5:30_2(GS_OUT) Load 59_6(param)
+                              Store 59_4(ts) 61_5
                               Return
                               FunctionEnd
-18(@main(struct-PS_IN-vf41[3];struct-GS_OUT-vf41;):           2 Function None 15
-           16(i):     12(ptr) FunctionParameter
-          17(ts):     14(ptr) FunctionParameter
-              19:             Label
-           22(x):     21(ptr) Variable Function
-           33(o):     14(ptr) Variable Function
-                              Store 22(x) 23
-                              Branch 24
-              24:             Label
-                              LoopMerge 26 27 None
-                              Branch 28
-              28:             Label
-              29:     20(int) Load 22(x)
-              32:    31(bool) SLessThan 29 30
-                              BranchConditional 32 25 26
-              25:               Label
-              34:     20(int)   Load 22(x)
-              36:     35(ptr)   AccessChain 16(i) 34 23
-              37:    7(fvec4)   Load 36
-              38:     35(ptr)   AccessChain 33(o) 23
-                                Store 38 37
-              41:     35(ptr)   AccessChain 33(o) 23
-              42:    7(fvec4)   Load 41
-                                Store 40(ts.pos) 42
+54_2(@main(struct-PS_IN-vf41[3];struct-GS_OUT-vf41;):        19_1 Function None 33_2
+         55_1(i):   32_1(ptr) FunctionParameter
+        55_2(ts):   32_2(ptr) FunctionParameter
+           248_2:             Label
+         59_7(x):   32_3(ptr) Variable Function
+         59_8(o):   32_2(ptr) Variable Function
+                              Store 59_7(x) 43_1
+                              Branch 248_3
+           248_3:             Label
+                              LoopMerge 248_7 248_6 None
+                              Branch 248_4
+           248_4:             Label
+            61_6:   21_2(int) Load 59_7(x)
+           177_1:  20_1(bool) SLessThan 61_6 43_2
+                              BranchConditional 177_1 248_5 248_7
+           248_5:               Label
+            61_7:   21_2(int)   Load 59_7(x)
+            65_7:   32_4(ptr)   AccessChain 55_1(i) 61_7 43_1
+            61_8: 23_1(fvec4)   Load 65_7
+            65_8:   32_4(ptr)   AccessChain 59_8(o) 43_1
+                                Store 65_8 61_8
+            65_9:   32_4(ptr)   AccessChain 59_8(o) 43_1
+            61_9: 23_1(fvec4)   Load 65_9
+                                Store 59_1(ts.pos) 61_9
                                 EmitVertex
-                                Branch 27
-              27:               Label
-              43:     20(int)   Load 22(x)
-              45:     20(int)   IAdd 43 44
-                                Store 22(x) 45
-                                Branch 24
-              26:             Label
+                                Branch 248_6
+           248_6:               Label
+           61_10:   21_2(int)   Load 59_7(x)
+           128_1:   21_2(int)   IAdd 61_10 43_3
+                                Store 59_7(x) 128_1
+                                Branch 248_3
+           248_7:             Label
                               Return
                               FunctionEnd

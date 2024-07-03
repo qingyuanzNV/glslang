@@ -72,50 +72,50 @@ gl_FragCoord origin is upper left
                               Capability Shader
                               Capability MultiView
                               Extension  "SPV_KHR_multiview"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 22 25
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 12  "@main(u1;"
-                              Name 11  "ViewIndex"
-                              Name 20  "ViewIndex"
-                              Name 22  "ViewIndex"
-                              Name 25  "@entryPointOutput"
-                              Name 26  "param"
-                              Decorate 22(ViewIndex) BuiltIn ViewIndex
-                              Decorate 22(ViewIndex) Flat
-                              Decorate 25(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               8:             TypeFloat 32
-               9:             TypeVector 8(float) 4
-              10:             TypeFunction 9(fvec4) 7(ptr)
-              16:    8(float) Constant 0
-              21:             TypePointer Input 6(int)
-   22(ViewIndex):     21(ptr) Variable Input
-              24:             TypePointer Output 9(fvec4)
-25(@entryPointOutput):     24(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-   20(ViewIndex):      7(ptr) Variable Function
-       26(param):      7(ptr) Variable Function
-              23:      6(int) Load 22(ViewIndex)
-                              Store 20(ViewIndex) 23
-              27:      6(int) Load 20(ViewIndex)
-                              Store 26(param) 27
-              28:    9(fvec4) FunctionCall 12(@main(u1;) 26(param)
-                              Store 25(@entryPointOutput) 28
+                              Name 54_1  "main"
+                              Name 54_2  "@main(u1;"
+                              Name 55_1  "ViewIndex"
+                              Name 59_3  "ViewIndex"
+                              Name 59_1  "ViewIndex"
+                              Name 59_2  "@entryPointOutput"
+                              Name 59_4  "param"
+                              Decorate 59_1(ViewIndex) BuiltIn ViewIndex
+                              Decorate 59_1(ViewIndex) Flat
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            43_1: 22_1(float) Constant 0
+            32_2:             TypePointer Input 21_1(int)
+ 59_1(ViewIndex):   32_2(ptr) Variable Input
+            32_3:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+ 59_3(ViewIndex):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1:   21_1(int) Load 59_1(ViewIndex)
+                              Store 59_3(ViewIndex) 61_1
+            61_2:   21_1(int) Load 59_3(ViewIndex)
+                              Store 59_4(param) 61_2
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main(u1;) 59_4(param)
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-   12(@main(u1;):    9(fvec4) Function None 10
-   11(ViewIndex):      7(ptr) FunctionParameter
-              13:             Label
-              14:      6(int) Load 11(ViewIndex)
-              15:    8(float) ConvertUToF 14
-              17:    9(fvec4) CompositeConstruct 15 16 16 16
-                              ReturnValue 17
+ 54_2(@main(u1;): 23_1(fvec4) Function None 33_2
+ 55_1(ViewIndex):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            61_3:   21_1(int) Load 55_1(ViewIndex)
+           112_1: 22_1(float) ConvertUToF 61_3
+            80_1: 23_1(fvec4) CompositeConstruct 112_1 43_1 43_1 43_1
+                              ReturnValue 80_1
                               FunctionEnd

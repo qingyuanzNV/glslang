@@ -4,33 +4,33 @@ spv.depthOut.frag
 // Id's are bound by 15
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 8 10 14
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 DepthReplacing
-                              ExecutionMode 4 DepthGreater
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 DepthReplacing
+                              ExecutionMode 54_1 DepthGreater
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 8  "gl_FragDepth"
-                              Name 10  "Depth"
-                              Name 14  "Color"
-                              Decorate 8(gl_FragDepth) BuiltIn FragDepth
-                              Decorate 10(Depth) Location 1
-                              Decorate 14(Color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Output 6(float)
- 8(gl_FragDepth):      7(ptr) Variable Output
-               9:             TypePointer Input 6(float)
-       10(Depth):      9(ptr) Variable Input
-              12:             TypeVector 6(float) 4
-              13:             TypePointer Input 12(fvec4)
-       14(Color):     13(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              11:    6(float) Load 10(Depth)
-                              Store 8(gl_FragDepth) 11
+                              Name 54_1  "main"
+                              Name 59_1  "gl_FragDepth"
+                              Name 59_2  "Depth"
+                              Name 59_3  "Color"
+                              Decorate 59_1(gl_FragDepth) BuiltIn FragDepth
+                              Decorate 59_2(Depth) Location 1
+                              Decorate 59_3(Color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Output 22_1(float)
+59_1(gl_FragDepth):   32_1(ptr) Variable Output
+            32_2:             TypePointer Input 22_1(float)
+     59_2(Depth):   32_2(ptr) Variable Input
+            23_1:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Input 23_1(fvec4)
+     59_3(Color):   32_3(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1: 22_1(float) Load 59_2(Depth)
+                              Store 59_1(gl_FragDepth) 61_1
                               Return
                               FunctionEnd

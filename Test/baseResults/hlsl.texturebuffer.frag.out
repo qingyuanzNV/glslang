@@ -74,81 +74,81 @@ gl_FragCoord origin is upper left
 // Id's are bound by 39
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 32 35
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 11  "@main(vf4;"
-                              Name 10  "pos"
-                              Name 15  "TextureBuffer_var"
-                              MemberName 15(TextureBuffer_var) 0  "f"
-                              MemberName 15(TextureBuffer_var) 1  "i"
-                              Name 17  "TextureBuffer_var"
-                              Name 22  "tbuf2"
-                              MemberName 22(tbuf2) 0  "f2"
-                              MemberName 22(tbuf2) 1  "i2"
-                              Name 24  ""
-                              Name 30  "pos"
-                              Name 32  "pos"
-                              Name 35  "@entryPointOutput"
-                              Name 36  "param"
-                              Decorate 15(TextureBuffer_var) BufferBlock
-                              MemberDecorate 15(TextureBuffer_var) 0 NonWritable
-                              MemberDecorate 15(TextureBuffer_var) 0 Offset 0
-                              MemberDecorate 15(TextureBuffer_var) 1 NonWritable
-                              MemberDecorate 15(TextureBuffer_var) 1 Offset 16
-                              Decorate 17(TextureBuffer_var) Binding 0
-                              Decorate 17(TextureBuffer_var) DescriptorSet 0
-                              Decorate 22(tbuf2) BufferBlock
-                              MemberDecorate 22(tbuf2) 0 NonWritable
-                              MemberDecorate 22(tbuf2) 0 Offset 0
-                              MemberDecorate 22(tbuf2) 1 NonWritable
-                              MemberDecorate 22(tbuf2) 1 Offset 16
-                              Decorate 24 Binding 1
-                              Decorate 24 DescriptorSet 0
-                              Decorate 32(pos) BuiltIn FragCoord
-                              Decorate 35(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeFunction 7(fvec4) 8(ptr)
-              13:             TypeInt 32 1
-              14:             TypeVector 13(int) 4
-15(TextureBuffer_var):             TypeStruct 7(fvec4) 14(ivec4)
-              16:             TypePointer Uniform 15(TextureBuffer_var)
-17(TextureBuffer_var):     16(ptr) Variable Uniform
-              18:     13(int) Constant 0
-              19:             TypePointer Uniform 7(fvec4)
-       22(tbuf2):             TypeStruct 7(fvec4) 14(ivec4)
-              23:             TypePointer Uniform 22(tbuf2)
-              24:     23(ptr) Variable Uniform
-              31:             TypePointer Input 7(fvec4)
-         32(pos):     31(ptr) Variable Input
-              34:             TypePointer Output 7(fvec4)
-35(@entryPointOutput):     34(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-         30(pos):      8(ptr) Variable Function
-       36(param):      8(ptr) Variable Function
-              33:    7(fvec4) Load 32(pos)
-                              Store 30(pos) 33
-              37:    7(fvec4) Load 30(pos)
-                              Store 36(param) 37
-              38:    7(fvec4) FunctionCall 11(@main(vf4;) 36(param)
-                              Store 35(@entryPointOutput) 38
+                              Name 54_1  "main"
+                              Name 54_2  "@main(vf4;"
+                              Name 55_1  "pos"
+                              Name 30_1  "TextureBuffer_var"
+                              MemberName 30_1(TextureBuffer_var) 0  "f"
+                              MemberName 30_1(TextureBuffer_var) 1  "i"
+                              Name 59_1  "TextureBuffer_var"
+                              Name 30_2  "tbuf2"
+                              MemberName 30_2(tbuf2) 0  "f2"
+                              MemberName 30_2(tbuf2) 1  "i2"
+                              Name 59_2  ""
+                              Name 59_5  "pos"
+                              Name 59_3  "pos"
+                              Name 59_4  "@entryPointOutput"
+                              Name 59_6  "param"
+                              Decorate 30_1(TextureBuffer_var) BufferBlock
+                              MemberDecorate 30_1(TextureBuffer_var) 0 NonWritable
+                              MemberDecorate 30_1(TextureBuffer_var) 0 Offset 0
+                              MemberDecorate 30_1(TextureBuffer_var) 1 NonWritable
+                              MemberDecorate 30_1(TextureBuffer_var) 1 Offset 16
+                              Decorate 59_1(TextureBuffer_var) Binding 0
+                              Decorate 59_1(TextureBuffer_var) DescriptorSet 0
+                              Decorate 30_2(tbuf2) BufferBlock
+                              MemberDecorate 30_2(tbuf2) 0 NonWritable
+                              MemberDecorate 30_2(tbuf2) 0 Offset 0
+                              MemberDecorate 30_2(tbuf2) 1 NonWritable
+                              MemberDecorate 30_2(tbuf2) 1 Offset 16
+                              Decorate 59_2 Binding 1
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 59_3(pos) BuiltIn FragCoord
+                              Decorate 59_4(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            21_1:             TypeInt 32 1
+            23_2:             TypeVector 21_1(int) 4
+30_1(TextureBuffer_var):             TypeStruct 23_1(fvec4) 23_2(ivec4)
+            32_2:             TypePointer Uniform 30_1(TextureBuffer_var)
+59_1(TextureBuffer_var):   32_2(ptr) Variable Uniform
+            43_1:   21_1(int) Constant 0
+            32_3:             TypePointer Uniform 23_1(fvec4)
+     30_2(tbuf2):             TypeStruct 23_1(fvec4) 23_2(ivec4)
+            32_4:             TypePointer Uniform 30_2(tbuf2)
+            59_2:   32_4(ptr) Variable Uniform
+            32_5:             TypePointer Input 23_1(fvec4)
+       59_3(pos):   32_5(ptr) Variable Input
+            32_6:             TypePointer Output 23_1(fvec4)
+59_4(@entryPointOutput):   32_6(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_5(pos):   32_1(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_3(pos)
+                              Store 59_5(pos) 61_1
+            61_2: 23_1(fvec4) Load 59_5(pos)
+                              Store 59_6(param) 61_2
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main(vf4;) 59_6(param)
+                              Store 59_4(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-  11(@main(vf4;):    7(fvec4) Function None 9
-         10(pos):      8(ptr) FunctionParameter
-              12:             Label
-              20:     19(ptr) AccessChain 17(TextureBuffer_var) 18
-              21:    7(fvec4) Load 20
-              25:     19(ptr) AccessChain 24 18
-              26:    7(fvec4) Load 25
-              27:    7(fvec4) FAdd 21 26
-                              ReturnValue 27
+54_2(@main(vf4;): 23_1(fvec4) Function None 33_2
+       55_1(pos):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            65_1:   32_3(ptr) AccessChain 59_1(TextureBuffer_var) 43_1
+            61_3: 23_1(fvec4) Load 65_1
+            65_2:   32_3(ptr) AccessChain 59_2 43_1
+            61_4: 23_1(fvec4) Load 65_2
+           129_1: 23_1(fvec4) FAdd 61_3 61_4
+                              ReturnValue 129_1
                               FunctionEnd

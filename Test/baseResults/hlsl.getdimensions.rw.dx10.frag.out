@@ -725,411 +725,411 @@ using depth_any
                               Capability Image1D
                               Capability ImageBuffer
                               Capability ImageQuery
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 216 220
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 DepthReplacing
+                              EntryPoint Fragment 54_1  "main" 59_19 59_20
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 DepthReplacing
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_OUTPUT"
-                              MemberName 8(PS_OUTPUT) 0  "Color"
-                              MemberName 8(PS_OUTPUT) 1  "Depth"
-                              Name 10  "@main("
-                              Name 14  "sizeQueryTemp"
-                              Name 17  "g_tTex1df4"
-                              Name 20  "WidthU"
-                              Name 22  "sizeQueryTemp"
-                              Name 26  "g_tTex1di4"
-                              Name 30  "sizeQueryTemp"
-                              Name 33  "g_tTex1du4"
-                              Name 37  "sizeQueryTemp"
-                              Name 40  "g_tBuffF"
-                              Name 44  "sizeQueryTemp"
-                              Name 47  "g_tBuffI"
-                              Name 51  "sizeQueryTemp"
-                              Name 54  "g_tBuffU"
-                              Name 60  "sizeQueryTemp"
-                              Name 63  "g_tTex1df4a"
-                              Name 69  "ElementsU"
-                              Name 73  "sizeQueryTemp"
-                              Name 76  "g_tTex1di4a"
-                              Name 83  "sizeQueryTemp"
-                              Name 86  "g_tTex1du4a"
-                              Name 93  "sizeQueryTemp"
-                              Name 96  "g_tTex2df4"
-                              Name 101  "HeightU"
-                              Name 104  "sizeQueryTemp"
-                              Name 107  "g_tTex2di4"
-                              Name 114  "sizeQueryTemp"
-                              Name 117  "g_tTex2du4"
-                              Name 126  "sizeQueryTemp"
-                              Name 129  "g_tTex2df4a"
-                              Name 139  "sizeQueryTemp"
-                              Name 142  "g_tTex2di4a"
-                              Name 151  "sizeQueryTemp"
-                              Name 154  "g_tTex2du4a"
-                              Name 163  "sizeQueryTemp"
-                              Name 166  "g_tTex3df4"
-                              Name 173  "DepthU"
-                              Name 176  "sizeQueryTemp"
-                              Name 179  "g_tTex3di4"
-                              Name 188  "sizeQueryTemp"
-                              Name 191  "g_tTex3du4"
-                              Name 201  "psout"
-                              Name 213  "flattenTemp"
-                              Name 216  "@entryPointOutput.Color"
-                              Name 220  "@entryPointOutput.Depth"
-                              Name 225  "g_sSamp"
-                              Name 229  "$Global"
-                              MemberName 229($Global) 0  "c1"
-                              MemberName 229($Global) 1  "c2"
-                              MemberName 229($Global) 2  "c3"
-                              MemberName 229($Global) 3  "c4"
-                              MemberName 229($Global) 4  "o1"
-                              MemberName 229($Global) 5  "o2"
-                              MemberName 229($Global) 6  "o3"
-                              MemberName 229($Global) 7  "o4"
-                              Name 231  ""
-                              Decorate 17(g_tTex1df4) Binding 0
-                              Decorate 17(g_tTex1df4) DescriptorSet 0
-                              Decorate 26(g_tTex1di4) Binding 1
-                              Decorate 26(g_tTex1di4) DescriptorSet 0
-                              Decorate 33(g_tTex1du4) Binding 2
-                              Decorate 33(g_tTex1du4) DescriptorSet 0
-                              Decorate 40(g_tBuffF) Binding 15
-                              Decorate 40(g_tBuffF) DescriptorSet 0
-                              Decorate 47(g_tBuffI) Binding 16
-                              Decorate 47(g_tBuffI) DescriptorSet 0
-                              Decorate 54(g_tBuffU) Binding 17
-                              Decorate 54(g_tBuffU) DescriptorSet 0
-                              Decorate 63(g_tTex1df4a) Binding 9
-                              Decorate 63(g_tTex1df4a) DescriptorSet 0
-                              Decorate 76(g_tTex1di4a) Binding 10
-                              Decorate 76(g_tTex1di4a) DescriptorSet 0
-                              Decorate 86(g_tTex1du4a) Binding 11
-                              Decorate 86(g_tTex1du4a) DescriptorSet 0
-                              Decorate 96(g_tTex2df4) Binding 3
-                              Decorate 96(g_tTex2df4) DescriptorSet 0
-                              Decorate 107(g_tTex2di4) Binding 4
-                              Decorate 107(g_tTex2di4) DescriptorSet 0
-                              Decorate 117(g_tTex2du4) Binding 5
-                              Decorate 117(g_tTex2du4) DescriptorSet 0
-                              Decorate 129(g_tTex2df4a) Binding 12
-                              Decorate 129(g_tTex2df4a) DescriptorSet 0
-                              Decorate 142(g_tTex2di4a) Binding 13
-                              Decorate 142(g_tTex2di4a) DescriptorSet 0
-                              Decorate 154(g_tTex2du4a) Binding 14
-                              Decorate 154(g_tTex2du4a) DescriptorSet 0
-                              Decorate 166(g_tTex3df4) Binding 6
-                              Decorate 166(g_tTex3df4) DescriptorSet 0
-                              Decorate 179(g_tTex3di4) Binding 7
-                              Decorate 179(g_tTex3di4) DescriptorSet 0
-                              Decorate 191(g_tTex3du4) Binding 8
-                              Decorate 191(g_tTex3du4) DescriptorSet 0
-                              Decorate 216(@entryPointOutput.Color) Location 0
-                              Decorate 220(@entryPointOutput.Depth) BuiltIn FragDepth
-                              Decorate 225(g_sSamp) Binding 0
-                              Decorate 225(g_sSamp) DescriptorSet 0
-                              Decorate 229($Global) Block
-                              MemberDecorate 229($Global) 0 Offset 0
-                              MemberDecorate 229($Global) 1 Offset 8
-                              MemberDecorate 229($Global) 2 Offset 16
-                              MemberDecorate 229($Global) 3 Offset 32
-                              MemberDecorate 229($Global) 4 Offset 48
-                              MemberDecorate 229($Global) 5 Offset 56
-                              MemberDecorate 229($Global) 6 Offset 64
-                              MemberDecorate 229($Global) 7 Offset 80
-                              Decorate 231 Binding 0
-                              Decorate 231 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(PS_OUTPUT):             TypeStruct 7(fvec4) 6(float)
-               9:             TypeFunction 8(PS_OUTPUT)
-              12:             TypeInt 32 0
-              13:             TypePointer Function 12(int)
-              15:             TypeImage 6(float) 1D nonsampled format:Rgba32f
-              16:             TypePointer UniformConstant 15
-  17(g_tTex1df4):     16(ptr) Variable UniformConstant
-              23:             TypeInt 32 1
-              24:             TypeImage 23(int) 1D nonsampled format:Rgba32i
-              25:             TypePointer UniformConstant 24
-  26(g_tTex1di4):     25(ptr) Variable UniformConstant
-              31:             TypeImage 12(int) 1D nonsampled format:Rgba32ui
-              32:             TypePointer UniformConstant 31
-  33(g_tTex1du4):     32(ptr) Variable UniformConstant
-              38:             TypeImage 6(float) Buffer nonsampled format:Rgba32f
-              39:             TypePointer UniformConstant 38
-    40(g_tBuffF):     39(ptr) Variable UniformConstant
-              45:             TypeImage 23(int) Buffer nonsampled format:Rgba32i
-              46:             TypePointer UniformConstant 45
-    47(g_tBuffI):     46(ptr) Variable UniformConstant
-              52:             TypeImage 12(int) Buffer nonsampled format:Rgba32ui
-              53:             TypePointer UniformConstant 52
-    54(g_tBuffU):     53(ptr) Variable UniformConstant
-              58:             TypeVector 12(int) 2
-              59:             TypePointer Function 58(ivec2)
-              61:             TypeImage 6(float) 1D array nonsampled format:Rgba32f
-              62:             TypePointer UniformConstant 61
- 63(g_tTex1df4a):     62(ptr) Variable UniformConstant
-              66:     12(int) Constant 0
-              70:     12(int) Constant 1
-              74:             TypeImage 23(int) 1D array nonsampled format:Rgba32i
-              75:             TypePointer UniformConstant 74
- 76(g_tTex1di4a):     75(ptr) Variable UniformConstant
-              84:             TypeImage 12(int) 1D array nonsampled format:Rgba32ui
-              85:             TypePointer UniformConstant 84
- 86(g_tTex1du4a):     85(ptr) Variable UniformConstant
-              94:             TypeImage 6(float) 2D nonsampled format:Rgba32f
-              95:             TypePointer UniformConstant 94
-  96(g_tTex2df4):     95(ptr) Variable UniformConstant
-             105:             TypeImage 23(int) 2D nonsampled format:Rgba32i
-             106:             TypePointer UniformConstant 105
- 107(g_tTex2di4):    106(ptr) Variable UniformConstant
-             115:             TypeImage 12(int) 2D nonsampled format:Rgba32ui
-             116:             TypePointer UniformConstant 115
- 117(g_tTex2du4):    116(ptr) Variable UniformConstant
-             124:             TypeVector 12(int) 3
-             125:             TypePointer Function 124(ivec3)
-             127:             TypeImage 6(float) 2D array nonsampled format:Rgba32f
-             128:             TypePointer UniformConstant 127
-129(g_tTex2df4a):    128(ptr) Variable UniformConstant
-             136:     12(int) Constant 2
-             140:             TypeImage 23(int) 2D array nonsampled format:Rgba32i
-             141:             TypePointer UniformConstant 140
-142(g_tTex2di4a):    141(ptr) Variable UniformConstant
-             152:             TypeImage 12(int) 2D array nonsampled format:Rgba32ui
-             153:             TypePointer UniformConstant 152
-154(g_tTex2du4a):    153(ptr) Variable UniformConstant
-             164:             TypeImage 6(float) 3D nonsampled format:Rgba32f
-             165:             TypePointer UniformConstant 164
- 166(g_tTex3df4):    165(ptr) Variable UniformConstant
-             177:             TypeImage 23(int) 3D nonsampled format:Rgba32i
-             178:             TypePointer UniformConstant 177
- 179(g_tTex3di4):    178(ptr) Variable UniformConstant
-             189:             TypeImage 12(int) 3D nonsampled format:Rgba32ui
-             190:             TypePointer UniformConstant 189
- 191(g_tTex3du4):    190(ptr) Variable UniformConstant
-             200:             TypePointer Function 8(PS_OUTPUT)
-             202:     23(int) Constant 0
-             203:    6(float) Constant 1065353216
-             204:    7(fvec4) ConstantComposite 203 203 203 203
-             205:             TypePointer Function 7(fvec4)
-             207:     23(int) Constant 1
-             208:             TypePointer Function 6(float)
-             215:             TypePointer Output 7(fvec4)
-216(@entryPointOutput.Color):    215(ptr) Variable Output
-             219:             TypePointer Output 6(float)
-220(@entryPointOutput.Depth):    219(ptr) Variable Output
-             223:             TypeSampler
-             224:             TypePointer UniformConstant 223
-    225(g_sSamp):    224(ptr) Variable UniformConstant
-             226:             TypeVector 23(int) 2
-             227:             TypeVector 23(int) 3
-             228:             TypeVector 23(int) 4
-    229($Global):             TypeStruct 23(int) 226(ivec2) 227(ivec3) 228(ivec4) 23(int) 226(ivec2) 227(ivec3) 228(ivec4)
-             230:             TypePointer Uniform 229($Global)
-             231:    230(ptr) Variable Uniform
-         4(main):           2 Function None 3
-               5:             Label
-213(flattenTemp):    200(ptr) Variable Function
-             214:8(PS_OUTPUT) FunctionCall 10(@main()
-                              Store 213(flattenTemp) 214
-             217:    205(ptr) AccessChain 213(flattenTemp) 202
-             218:    7(fvec4) Load 217
-                              Store 216(@entryPointOutput.Color) 218
-             221:    208(ptr) AccessChain 213(flattenTemp) 207
-             222:    6(float) Load 221
-                              Store 220(@entryPointOutput.Depth) 222
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              MemberName 30_1(PS_OUTPUT) 1  "Depth"
+                              Name 54_2  "@main("
+                              Name 59_24  "sizeQueryTemp"
+                              Name 59_1  "g_tTex1df4"
+                              Name 59_25  "WidthU"
+                              Name 59_26  "sizeQueryTemp"
+                              Name 59_2  "g_tTex1di4"
+                              Name 59_27  "sizeQueryTemp"
+                              Name 59_3  "g_tTex1du4"
+                              Name 59_28  "sizeQueryTemp"
+                              Name 59_4  "g_tBuffF"
+                              Name 59_29  "sizeQueryTemp"
+                              Name 59_5  "g_tBuffI"
+                              Name 59_30  "sizeQueryTemp"
+                              Name 59_6  "g_tBuffU"
+                              Name 59_31  "sizeQueryTemp"
+                              Name 59_7  "g_tTex1df4a"
+                              Name 59_32  "ElementsU"
+                              Name 59_33  "sizeQueryTemp"
+                              Name 59_8  "g_tTex1di4a"
+                              Name 59_34  "sizeQueryTemp"
+                              Name 59_9  "g_tTex1du4a"
+                              Name 59_35  "sizeQueryTemp"
+                              Name 59_10  "g_tTex2df4"
+                              Name 59_36  "HeightU"
+                              Name 59_37  "sizeQueryTemp"
+                              Name 59_11  "g_tTex2di4"
+                              Name 59_38  "sizeQueryTemp"
+                              Name 59_12  "g_tTex2du4"
+                              Name 59_39  "sizeQueryTemp"
+                              Name 59_13  "g_tTex2df4a"
+                              Name 59_40  "sizeQueryTemp"
+                              Name 59_14  "g_tTex2di4a"
+                              Name 59_41  "sizeQueryTemp"
+                              Name 59_15  "g_tTex2du4a"
+                              Name 59_42  "sizeQueryTemp"
+                              Name 59_16  "g_tTex3df4"
+                              Name 59_43  "DepthU"
+                              Name 59_44  "sizeQueryTemp"
+                              Name 59_17  "g_tTex3di4"
+                              Name 59_45  "sizeQueryTemp"
+                              Name 59_18  "g_tTex3du4"
+                              Name 59_46  "psout"
+                              Name 59_23  "flattenTemp"
+                              Name 59_19  "@entryPointOutput.Color"
+                              Name 59_20  "@entryPointOutput.Depth"
+                              Name 59_21  "g_sSamp"
+                              Name 30_2  "$Global"
+                              MemberName 30_2($Global) 0  "c1"
+                              MemberName 30_2($Global) 1  "c2"
+                              MemberName 30_2($Global) 2  "c3"
+                              MemberName 30_2($Global) 3  "c4"
+                              MemberName 30_2($Global) 4  "o1"
+                              MemberName 30_2($Global) 5  "o2"
+                              MemberName 30_2($Global) 6  "o3"
+                              MemberName 30_2($Global) 7  "o4"
+                              Name 59_22  ""
+                              Decorate 59_1(g_tTex1df4) Binding 0
+                              Decorate 59_1(g_tTex1df4) DescriptorSet 0
+                              Decorate 59_2(g_tTex1di4) Binding 1
+                              Decorate 59_2(g_tTex1di4) DescriptorSet 0
+                              Decorate 59_3(g_tTex1du4) Binding 2
+                              Decorate 59_3(g_tTex1du4) DescriptorSet 0
+                              Decorate 59_4(g_tBuffF) Binding 15
+                              Decorate 59_4(g_tBuffF) DescriptorSet 0
+                              Decorate 59_5(g_tBuffI) Binding 16
+                              Decorate 59_5(g_tBuffI) DescriptorSet 0
+                              Decorate 59_6(g_tBuffU) Binding 17
+                              Decorate 59_6(g_tBuffU) DescriptorSet 0
+                              Decorate 59_7(g_tTex1df4a) Binding 9
+                              Decorate 59_7(g_tTex1df4a) DescriptorSet 0
+                              Decorate 59_8(g_tTex1di4a) Binding 10
+                              Decorate 59_8(g_tTex1di4a) DescriptorSet 0
+                              Decorate 59_9(g_tTex1du4a) Binding 11
+                              Decorate 59_9(g_tTex1du4a) DescriptorSet 0
+                              Decorate 59_10(g_tTex2df4) Binding 3
+                              Decorate 59_10(g_tTex2df4) DescriptorSet 0
+                              Decorate 59_11(g_tTex2di4) Binding 4
+                              Decorate 59_11(g_tTex2di4) DescriptorSet 0
+                              Decorate 59_12(g_tTex2du4) Binding 5
+                              Decorate 59_12(g_tTex2du4) DescriptorSet 0
+                              Decorate 59_13(g_tTex2df4a) Binding 12
+                              Decorate 59_13(g_tTex2df4a) DescriptorSet 0
+                              Decorate 59_14(g_tTex2di4a) Binding 13
+                              Decorate 59_14(g_tTex2di4a) DescriptorSet 0
+                              Decorate 59_15(g_tTex2du4a) Binding 14
+                              Decorate 59_15(g_tTex2du4a) DescriptorSet 0
+                              Decorate 59_16(g_tTex3df4) Binding 6
+                              Decorate 59_16(g_tTex3df4) DescriptorSet 0
+                              Decorate 59_17(g_tTex3di4) Binding 7
+                              Decorate 59_17(g_tTex3di4) DescriptorSet 0
+                              Decorate 59_18(g_tTex3du4) Binding 8
+                              Decorate 59_18(g_tTex3du4) DescriptorSet 0
+                              Decorate 59_19(@entryPointOutput.Color) Location 0
+                              Decorate 59_20(@entryPointOutput.Depth) BuiltIn FragDepth
+                              Decorate 59_21(g_sSamp) Binding 0
+                              Decorate 59_21(g_sSamp) DescriptorSet 0
+                              Decorate 30_2($Global) Block
+                              MemberDecorate 30_2($Global) 0 Offset 0
+                              MemberDecorate 30_2($Global) 1 Offset 8
+                              MemberDecorate 30_2($Global) 2 Offset 16
+                              MemberDecorate 30_2($Global) 3 Offset 32
+                              MemberDecorate 30_2($Global) 4 Offset 48
+                              MemberDecorate 30_2($Global) 5 Offset 56
+                              MemberDecorate 30_2($Global) 6 Offset 64
+                              MemberDecorate 30_2($Global) 7 Offset 80
+                              Decorate 59_22 Binding 0
+                              Decorate 59_22 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4) 22_1(float)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            25_1:             TypeImage 22_1(float) 1D nonsampled format:Rgba32f
+            32_2:             TypePointer UniformConstant 25_1
+59_1(g_tTex1df4):   32_2(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 1
+            25_2:             TypeImage 21_2(int) 1D nonsampled format:Rgba32i
+            32_3:             TypePointer UniformConstant 25_2
+59_2(g_tTex1di4):   32_3(ptr) Variable UniformConstant
+            25_3:             TypeImage 21_1(int) 1D nonsampled format:Rgba32ui
+            32_4:             TypePointer UniformConstant 25_3
+59_3(g_tTex1du4):   32_4(ptr) Variable UniformConstant
+            25_4:             TypeImage 22_1(float) Buffer nonsampled format:Rgba32f
+            32_5:             TypePointer UniformConstant 25_4
+  59_4(g_tBuffF):   32_5(ptr) Variable UniformConstant
+            25_5:             TypeImage 21_2(int) Buffer nonsampled format:Rgba32i
+            32_6:             TypePointer UniformConstant 25_5
+  59_5(g_tBuffI):   32_6(ptr) Variable UniformConstant
+            25_6:             TypeImage 21_1(int) Buffer nonsampled format:Rgba32ui
+            32_7:             TypePointer UniformConstant 25_6
+  59_6(g_tBuffU):   32_7(ptr) Variable UniformConstant
+            23_2:             TypeVector 21_1(int) 2
+            32_8:             TypePointer Function 23_2(ivec2)
+            25_7:             TypeImage 22_1(float) 1D array nonsampled format:Rgba32f
+            32_9:             TypePointer UniformConstant 25_7
+59_7(g_tTex1df4a):   32_9(ptr) Variable UniformConstant
+         uint(0):   21_1(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+            25_8:             TypeImage 21_2(int) 1D array nonsampled format:Rgba32i
+           32_10:             TypePointer UniformConstant 25_8
+59_8(g_tTex1di4a):  32_10(ptr) Variable UniformConstant
+            25_9:             TypeImage 21_1(int) 1D array nonsampled format:Rgba32ui
+           32_11:             TypePointer UniformConstant 25_9
+59_9(g_tTex1du4a):  32_11(ptr) Variable UniformConstant
+           25_10:             TypeImage 22_1(float) 2D nonsampled format:Rgba32f
+           32_12:             TypePointer UniformConstant 25_10
+59_10(g_tTex2df4):  32_12(ptr) Variable UniformConstant
+           25_11:             TypeImage 21_2(int) 2D nonsampled format:Rgba32i
+           32_13:             TypePointer UniformConstant 25_11
+59_11(g_tTex2di4):  32_13(ptr) Variable UniformConstant
+           25_12:             TypeImage 21_1(int) 2D nonsampled format:Rgba32ui
+           32_14:             TypePointer UniformConstant 25_12
+59_12(g_tTex2du4):  32_14(ptr) Variable UniformConstant
+            23_3:             TypeVector 21_1(int) 3
+           32_15:             TypePointer Function 23_3(ivec3)
+           25_13:             TypeImage 22_1(float) 2D array nonsampled format:Rgba32f
+           32_16:             TypePointer UniformConstant 25_13
+59_13(g_tTex2df4a):  32_16(ptr) Variable UniformConstant
+         uint(2):   21_1(int) Constant 2
+           25_14:             TypeImage 21_2(int) 2D array nonsampled format:Rgba32i
+           32_17:             TypePointer UniformConstant 25_14
+59_14(g_tTex2di4a):  32_17(ptr) Variable UniformConstant
+           25_15:             TypeImage 21_1(int) 2D array nonsampled format:Rgba32ui
+           32_18:             TypePointer UniformConstant 25_15
+59_15(g_tTex2du4a):  32_18(ptr) Variable UniformConstant
+           25_16:             TypeImage 22_1(float) 3D nonsampled format:Rgba32f
+           32_19:             TypePointer UniformConstant 25_16
+59_16(g_tTex3df4):  32_19(ptr) Variable UniformConstant
+           25_17:             TypeImage 21_2(int) 3D nonsampled format:Rgba32i
+           32_20:             TypePointer UniformConstant 25_17
+59_17(g_tTex3di4):  32_20(ptr) Variable UniformConstant
+           25_18:             TypeImage 21_1(int) 3D nonsampled format:Rgba32ui
+           32_21:             TypePointer UniformConstant 25_18
+59_18(g_tTex3du4):  32_21(ptr) Variable UniformConstant
+           32_22:             TypePointer Function 30_1(PS_OUTPUT)
+            43_1:   21_2(int) Constant 0
+            43_2: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+           32_23:             TypePointer Function 23_1(fvec4)
+            43_3:   21_2(int) Constant 1
+           32_24:             TypePointer Function 22_1(float)
+           32_25:             TypePointer Output 23_1(fvec4)
+59_19(@entryPointOutput.Color):  32_25(ptr) Variable Output
+           32_26:             TypePointer Output 22_1(float)
+59_20(@entryPointOutput.Depth):  32_26(ptr) Variable Output
+            26_1:             TypeSampler
+           32_27:             TypePointer UniformConstant 26_1
+  59_21(g_sSamp):  32_27(ptr) Variable UniformConstant
+            23_4:             TypeVector 21_2(int) 2
+            23_5:             TypeVector 21_2(int) 3
+            23_6:             TypeVector 21_2(int) 4
+   30_2($Global):             TypeStruct 21_2(int) 23_4(ivec2) 23_5(ivec3) 23_6(ivec4) 21_2(int) 23_4(ivec2) 23_5(ivec3) 23_6(ivec4)
+           32_28:             TypePointer Uniform 30_2($Global)
+           59_22:  32_28(ptr) Variable Uniform
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_23(flattenTemp):  32_22(ptr) Variable Function
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_2(@main()
+                              Store 59_23(flattenTemp) 57_1
+            65_1:  32_23(ptr) AccessChain 59_23(flattenTemp) 43_1
+            61_1: 23_1(fvec4) Load 65_1
+                              Store 59_19(@entryPointOutput.Color) 61_1
+            65_2:  32_24(ptr) AccessChain 59_23(flattenTemp) 43_3
+            61_2: 22_1(float) Load 65_2
+                              Store 59_20(@entryPointOutput.Depth) 61_2
                               Return
                               FunctionEnd
-      10(@main():8(PS_OUTPUT) Function None 9
-              11:             Label
-14(sizeQueryTemp):     13(ptr) Variable Function
-      20(WidthU):     13(ptr) Variable Function
-22(sizeQueryTemp):     13(ptr) Variable Function
-30(sizeQueryTemp):     13(ptr) Variable Function
-37(sizeQueryTemp):     13(ptr) Variable Function
-44(sizeQueryTemp):     13(ptr) Variable Function
-51(sizeQueryTemp):     13(ptr) Variable Function
-60(sizeQueryTemp):     59(ptr) Variable Function
-   69(ElementsU):     13(ptr) Variable Function
-73(sizeQueryTemp):     59(ptr) Variable Function
-83(sizeQueryTemp):     59(ptr) Variable Function
-93(sizeQueryTemp):     59(ptr) Variable Function
-    101(HeightU):     13(ptr) Variable Function
-104(sizeQueryTemp):     59(ptr) Variable Function
-114(sizeQueryTemp):     59(ptr) Variable Function
-126(sizeQueryTemp):    125(ptr) Variable Function
-139(sizeQueryTemp):    125(ptr) Variable Function
-151(sizeQueryTemp):    125(ptr) Variable Function
-163(sizeQueryTemp):    125(ptr) Variable Function
-     173(DepthU):     13(ptr) Variable Function
-176(sizeQueryTemp):    125(ptr) Variable Function
-188(sizeQueryTemp):    125(ptr) Variable Function
-      201(psout):    200(ptr) Variable Function
-              18:          15 Load 17(g_tTex1df4)
-              19:     12(int) ImageQuerySize 18
-                              Store 14(sizeQueryTemp) 19
-              21:     12(int) Load 14(sizeQueryTemp)
-                              Store 20(WidthU) 21
-              27:          24 Load 26(g_tTex1di4)
-              28:     12(int) ImageQuerySize 27
-                              Store 22(sizeQueryTemp) 28
-              29:     12(int) Load 22(sizeQueryTemp)
-                              Store 20(WidthU) 29
-              34:          31 Load 33(g_tTex1du4)
-              35:     12(int) ImageQuerySize 34
-                              Store 30(sizeQueryTemp) 35
-              36:     12(int) Load 30(sizeQueryTemp)
-                              Store 20(WidthU) 36
-              41:          38 Load 40(g_tBuffF)
-              42:     12(int) ImageQuerySize 41
-                              Store 37(sizeQueryTemp) 42
-              43:     12(int) Load 37(sizeQueryTemp)
-                              Store 20(WidthU) 43
-              48:          45 Load 47(g_tBuffI)
-              49:     12(int) ImageQuerySize 48
-                              Store 44(sizeQueryTemp) 49
-              50:     12(int) Load 44(sizeQueryTemp)
-                              Store 20(WidthU) 50
-              55:          52 Load 54(g_tBuffU)
-              56:     12(int) ImageQuerySize 55
-                              Store 51(sizeQueryTemp) 56
-              57:     12(int) Load 51(sizeQueryTemp)
-                              Store 20(WidthU) 57
-              64:          61 Load 63(g_tTex1df4a)
-              65:   58(ivec2) ImageQuerySize 64
-                              Store 60(sizeQueryTemp) 65
-              67:     13(ptr) AccessChain 60(sizeQueryTemp) 66
-              68:     12(int) Load 67
-                              Store 20(WidthU) 68
-              71:     13(ptr) AccessChain 60(sizeQueryTemp) 70
-              72:     12(int) Load 71
-                              Store 69(ElementsU) 72
-              77:          74 Load 76(g_tTex1di4a)
-              78:   58(ivec2) ImageQuerySize 77
-                              Store 73(sizeQueryTemp) 78
-              79:     13(ptr) AccessChain 73(sizeQueryTemp) 66
-              80:     12(int) Load 79
-                              Store 20(WidthU) 80
-              81:     13(ptr) AccessChain 73(sizeQueryTemp) 70
-              82:     12(int) Load 81
-                              Store 69(ElementsU) 82
-              87:          84 Load 86(g_tTex1du4a)
-              88:   58(ivec2) ImageQuerySize 87
-                              Store 83(sizeQueryTemp) 88
-              89:     13(ptr) AccessChain 83(sizeQueryTemp) 66
-              90:     12(int) Load 89
-                              Store 20(WidthU) 90
-              91:     13(ptr) AccessChain 83(sizeQueryTemp) 70
-              92:     12(int) Load 91
-                              Store 69(ElementsU) 92
-              97:          94 Load 96(g_tTex2df4)
-              98:   58(ivec2) ImageQuerySize 97
-                              Store 93(sizeQueryTemp) 98
-              99:     13(ptr) AccessChain 93(sizeQueryTemp) 66
-             100:     12(int) Load 99
-                              Store 20(WidthU) 100
-             102:     13(ptr) AccessChain 93(sizeQueryTemp) 70
-             103:     12(int) Load 102
-                              Store 101(HeightU) 103
-             108:         105 Load 107(g_tTex2di4)
-             109:   58(ivec2) ImageQuerySize 108
-                              Store 104(sizeQueryTemp) 109
-             110:     13(ptr) AccessChain 104(sizeQueryTemp) 66
-             111:     12(int) Load 110
-                              Store 20(WidthU) 111
-             112:     13(ptr) AccessChain 104(sizeQueryTemp) 70
-             113:     12(int) Load 112
-                              Store 101(HeightU) 113
-             118:         115 Load 117(g_tTex2du4)
-             119:   58(ivec2) ImageQuerySize 118
-                              Store 114(sizeQueryTemp) 119
-             120:     13(ptr) AccessChain 114(sizeQueryTemp) 66
-             121:     12(int) Load 120
-                              Store 20(WidthU) 121
-             122:     13(ptr) AccessChain 114(sizeQueryTemp) 70
-             123:     12(int) Load 122
-                              Store 101(HeightU) 123
-             130:         127 Load 129(g_tTex2df4a)
-             131:  124(ivec3) ImageQuerySize 130
-                              Store 126(sizeQueryTemp) 131
-             132:     13(ptr) AccessChain 126(sizeQueryTemp) 66
-             133:     12(int) Load 132
-                              Store 20(WidthU) 133
-             134:     13(ptr) AccessChain 126(sizeQueryTemp) 70
-             135:     12(int) Load 134
-                              Store 101(HeightU) 135
-             137:     13(ptr) AccessChain 126(sizeQueryTemp) 136
-             138:     12(int) Load 137
-                              Store 69(ElementsU) 138
-             143:         140 Load 142(g_tTex2di4a)
-             144:  124(ivec3) ImageQuerySize 143
-                              Store 139(sizeQueryTemp) 144
-             145:     13(ptr) AccessChain 139(sizeQueryTemp) 66
-             146:     12(int) Load 145
-                              Store 20(WidthU) 146
-             147:     13(ptr) AccessChain 139(sizeQueryTemp) 70
-             148:     12(int) Load 147
-                              Store 101(HeightU) 148
-             149:     13(ptr) AccessChain 139(sizeQueryTemp) 136
-             150:     12(int) Load 149
-                              Store 69(ElementsU) 150
-             155:         152 Load 154(g_tTex2du4a)
-             156:  124(ivec3) ImageQuerySize 155
-                              Store 151(sizeQueryTemp) 156
-             157:     13(ptr) AccessChain 151(sizeQueryTemp) 66
-             158:     12(int) Load 157
-                              Store 20(WidthU) 158
-             159:     13(ptr) AccessChain 151(sizeQueryTemp) 70
-             160:     12(int) Load 159
-                              Store 101(HeightU) 160
-             161:     13(ptr) AccessChain 151(sizeQueryTemp) 136
-             162:     12(int) Load 161
-                              Store 69(ElementsU) 162
-             167:         164 Load 166(g_tTex3df4)
-             168:  124(ivec3) ImageQuerySize 167
-                              Store 163(sizeQueryTemp) 168
-             169:     13(ptr) AccessChain 163(sizeQueryTemp) 66
-             170:     12(int) Load 169
-                              Store 20(WidthU) 170
-             171:     13(ptr) AccessChain 163(sizeQueryTemp) 70
-             172:     12(int) Load 171
-                              Store 101(HeightU) 172
-             174:     13(ptr) AccessChain 163(sizeQueryTemp) 136
-             175:     12(int) Load 174
-                              Store 173(DepthU) 175
-             180:         177 Load 179(g_tTex3di4)
-             181:  124(ivec3) ImageQuerySize 180
-                              Store 176(sizeQueryTemp) 181
-             182:     13(ptr) AccessChain 176(sizeQueryTemp) 66
-             183:     12(int) Load 182
-                              Store 20(WidthU) 183
-             184:     13(ptr) AccessChain 176(sizeQueryTemp) 70
-             185:     12(int) Load 184
-                              Store 101(HeightU) 185
-             186:     13(ptr) AccessChain 176(sizeQueryTemp) 136
-             187:     12(int) Load 186
-                              Store 173(DepthU) 187
-             192:         189 Load 191(g_tTex3du4)
-             193:  124(ivec3) ImageQuerySize 192
-                              Store 188(sizeQueryTemp) 193
-             194:     13(ptr) AccessChain 188(sizeQueryTemp) 66
-             195:     12(int) Load 194
-                              Store 20(WidthU) 195
-             196:     13(ptr) AccessChain 188(sizeQueryTemp) 70
-             197:     12(int) Load 196
-                              Store 101(HeightU) 197
-             198:     13(ptr) AccessChain 188(sizeQueryTemp) 136
-             199:     12(int) Load 198
-                              Store 173(DepthU) 199
-             206:    205(ptr) AccessChain 201(psout) 202
-                              Store 206 204
-             209:    208(ptr) AccessChain 201(psout) 207
-                              Store 209 203
-             210:8(PS_OUTPUT) Load 201(psout)
-                              ReturnValue 210
+    54_2(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_2:             Label
+59_24(sizeQueryTemp):   32_1(ptr) Variable Function
+   59_25(WidthU):   32_1(ptr) Variable Function
+59_26(sizeQueryTemp):   32_1(ptr) Variable Function
+59_27(sizeQueryTemp):   32_1(ptr) Variable Function
+59_28(sizeQueryTemp):   32_1(ptr) Variable Function
+59_29(sizeQueryTemp):   32_1(ptr) Variable Function
+59_30(sizeQueryTemp):   32_1(ptr) Variable Function
+59_31(sizeQueryTemp):   32_8(ptr) Variable Function
+59_32(ElementsU):   32_1(ptr) Variable Function
+59_33(sizeQueryTemp):   32_8(ptr) Variable Function
+59_34(sizeQueryTemp):   32_8(ptr) Variable Function
+59_35(sizeQueryTemp):   32_8(ptr) Variable Function
+  59_36(HeightU):   32_1(ptr) Variable Function
+59_37(sizeQueryTemp):   32_8(ptr) Variable Function
+59_38(sizeQueryTemp):   32_8(ptr) Variable Function
+59_39(sizeQueryTemp):  32_15(ptr) Variable Function
+59_40(sizeQueryTemp):  32_15(ptr) Variable Function
+59_41(sizeQueryTemp):  32_15(ptr) Variable Function
+59_42(sizeQueryTemp):  32_15(ptr) Variable Function
+   59_43(DepthU):   32_1(ptr) Variable Function
+59_44(sizeQueryTemp):  32_15(ptr) Variable Function
+59_45(sizeQueryTemp):  32_15(ptr) Variable Function
+    59_46(psout):  32_22(ptr) Variable Function
+            61_3:        25_1 Load 59_1(g_tTex1df4)
+           104_1:   21_1(int) ImageQuerySize 61_3
+                              Store 59_24(sizeQueryTemp) 104_1
+            61_4:   21_1(int) Load 59_24(sizeQueryTemp)
+                              Store 59_25(WidthU) 61_4
+            61_5:        25_2 Load 59_2(g_tTex1di4)
+           104_2:   21_1(int) ImageQuerySize 61_5
+                              Store 59_26(sizeQueryTemp) 104_2
+            61_6:   21_1(int) Load 59_26(sizeQueryTemp)
+                              Store 59_25(WidthU) 61_6
+            61_7:        25_3 Load 59_3(g_tTex1du4)
+           104_3:   21_1(int) ImageQuerySize 61_7
+                              Store 59_27(sizeQueryTemp) 104_3
+            61_8:   21_1(int) Load 59_27(sizeQueryTemp)
+                              Store 59_25(WidthU) 61_8
+            61_9:        25_4 Load 59_4(g_tBuffF)
+           104_4:   21_1(int) ImageQuerySize 61_9
+                              Store 59_28(sizeQueryTemp) 104_4
+           61_10:   21_1(int) Load 59_28(sizeQueryTemp)
+                              Store 59_25(WidthU) 61_10
+           61_11:        25_5 Load 59_5(g_tBuffI)
+           104_5:   21_1(int) ImageQuerySize 61_11
+                              Store 59_29(sizeQueryTemp) 104_5
+           61_12:   21_1(int) Load 59_29(sizeQueryTemp)
+                              Store 59_25(WidthU) 61_12
+           61_13:        25_6 Load 59_6(g_tBuffU)
+           104_6:   21_1(int) ImageQuerySize 61_13
+                              Store 59_30(sizeQueryTemp) 104_6
+           61_14:   21_1(int) Load 59_30(sizeQueryTemp)
+                              Store 59_25(WidthU) 61_14
+           61_15:        25_7 Load 59_7(g_tTex1df4a)
+           104_7: 23_2(ivec2) ImageQuerySize 61_15
+                              Store 59_31(sizeQueryTemp) 104_7
+            65_3:   32_1(ptr) AccessChain 59_31(sizeQueryTemp) uint(0)
+           61_16:   21_1(int) Load 65_3
+                              Store 59_25(WidthU) 61_16
+            65_4:   32_1(ptr) AccessChain 59_31(sizeQueryTemp) uint(1)
+           61_17:   21_1(int) Load 65_4
+                              Store 59_32(ElementsU) 61_17
+           61_18:        25_8 Load 59_8(g_tTex1di4a)
+           104_8: 23_2(ivec2) ImageQuerySize 61_18
+                              Store 59_33(sizeQueryTemp) 104_8
+            65_5:   32_1(ptr) AccessChain 59_33(sizeQueryTemp) uint(0)
+           61_19:   21_1(int) Load 65_5
+                              Store 59_25(WidthU) 61_19
+            65_6:   32_1(ptr) AccessChain 59_33(sizeQueryTemp) uint(1)
+           61_20:   21_1(int) Load 65_6
+                              Store 59_32(ElementsU) 61_20
+           61_21:        25_9 Load 59_9(g_tTex1du4a)
+           104_9: 23_2(ivec2) ImageQuerySize 61_21
+                              Store 59_34(sizeQueryTemp) 104_9
+            65_7:   32_1(ptr) AccessChain 59_34(sizeQueryTemp) uint(0)
+           61_22:   21_1(int) Load 65_7
+                              Store 59_25(WidthU) 61_22
+            65_8:   32_1(ptr) AccessChain 59_34(sizeQueryTemp) uint(1)
+           61_23:   21_1(int) Load 65_8
+                              Store 59_32(ElementsU) 61_23
+           61_24:       25_10 Load 59_10(g_tTex2df4)
+          104_10: 23_2(ivec2) ImageQuerySize 61_24
+                              Store 59_35(sizeQueryTemp) 104_10
+            65_9:   32_1(ptr) AccessChain 59_35(sizeQueryTemp) uint(0)
+           61_25:   21_1(int) Load 65_9
+                              Store 59_25(WidthU) 61_25
+           65_10:   32_1(ptr) AccessChain 59_35(sizeQueryTemp) uint(1)
+           61_26:   21_1(int) Load 65_10
+                              Store 59_36(HeightU) 61_26
+           61_27:       25_11 Load 59_11(g_tTex2di4)
+          104_11: 23_2(ivec2) ImageQuerySize 61_27
+                              Store 59_37(sizeQueryTemp) 104_11
+           65_11:   32_1(ptr) AccessChain 59_37(sizeQueryTemp) uint(0)
+           61_28:   21_1(int) Load 65_11
+                              Store 59_25(WidthU) 61_28
+           65_12:   32_1(ptr) AccessChain 59_37(sizeQueryTemp) uint(1)
+           61_29:   21_1(int) Load 65_12
+                              Store 59_36(HeightU) 61_29
+           61_30:       25_12 Load 59_12(g_tTex2du4)
+          104_12: 23_2(ivec2) ImageQuerySize 61_30
+                              Store 59_38(sizeQueryTemp) 104_12
+           65_13:   32_1(ptr) AccessChain 59_38(sizeQueryTemp) uint(0)
+           61_31:   21_1(int) Load 65_13
+                              Store 59_25(WidthU) 61_31
+           65_14:   32_1(ptr) AccessChain 59_38(sizeQueryTemp) uint(1)
+           61_32:   21_1(int) Load 65_14
+                              Store 59_36(HeightU) 61_32
+           61_33:       25_13 Load 59_13(g_tTex2df4a)
+          104_13: 23_3(ivec3) ImageQuerySize 61_33
+                              Store 59_39(sizeQueryTemp) 104_13
+           65_15:   32_1(ptr) AccessChain 59_39(sizeQueryTemp) uint(0)
+           61_34:   21_1(int) Load 65_15
+                              Store 59_25(WidthU) 61_34
+           65_16:   32_1(ptr) AccessChain 59_39(sizeQueryTemp) uint(1)
+           61_35:   21_1(int) Load 65_16
+                              Store 59_36(HeightU) 61_35
+           65_17:   32_1(ptr) AccessChain 59_39(sizeQueryTemp) uint(2)
+           61_36:   21_1(int) Load 65_17
+                              Store 59_32(ElementsU) 61_36
+           61_37:       25_14 Load 59_14(g_tTex2di4a)
+          104_14: 23_3(ivec3) ImageQuerySize 61_37
+                              Store 59_40(sizeQueryTemp) 104_14
+           65_18:   32_1(ptr) AccessChain 59_40(sizeQueryTemp) uint(0)
+           61_38:   21_1(int) Load 65_18
+                              Store 59_25(WidthU) 61_38
+           65_19:   32_1(ptr) AccessChain 59_40(sizeQueryTemp) uint(1)
+           61_39:   21_1(int) Load 65_19
+                              Store 59_36(HeightU) 61_39
+           65_20:   32_1(ptr) AccessChain 59_40(sizeQueryTemp) uint(2)
+           61_40:   21_1(int) Load 65_20
+                              Store 59_32(ElementsU) 61_40
+           61_41:       25_15 Load 59_15(g_tTex2du4a)
+          104_15: 23_3(ivec3) ImageQuerySize 61_41
+                              Store 59_41(sizeQueryTemp) 104_15
+           65_21:   32_1(ptr) AccessChain 59_41(sizeQueryTemp) uint(0)
+           61_42:   21_1(int) Load 65_21
+                              Store 59_25(WidthU) 61_42
+           65_22:   32_1(ptr) AccessChain 59_41(sizeQueryTemp) uint(1)
+           61_43:   21_1(int) Load 65_22
+                              Store 59_36(HeightU) 61_43
+           65_23:   32_1(ptr) AccessChain 59_41(sizeQueryTemp) uint(2)
+           61_44:   21_1(int) Load 65_23
+                              Store 59_32(ElementsU) 61_44
+           61_45:       25_16 Load 59_16(g_tTex3df4)
+          104_16: 23_3(ivec3) ImageQuerySize 61_45
+                              Store 59_42(sizeQueryTemp) 104_16
+           65_24:   32_1(ptr) AccessChain 59_42(sizeQueryTemp) uint(0)
+           61_46:   21_1(int) Load 65_24
+                              Store 59_25(WidthU) 61_46
+           65_25:   32_1(ptr) AccessChain 59_42(sizeQueryTemp) uint(1)
+           61_47:   21_1(int) Load 65_25
+                              Store 59_36(HeightU) 61_47
+           65_26:   32_1(ptr) AccessChain 59_42(sizeQueryTemp) uint(2)
+           61_48:   21_1(int) Load 65_26
+                              Store 59_43(DepthU) 61_48
+           61_49:       25_17 Load 59_17(g_tTex3di4)
+          104_17: 23_3(ivec3) ImageQuerySize 61_49
+                              Store 59_44(sizeQueryTemp) 104_17
+           65_27:   32_1(ptr) AccessChain 59_44(sizeQueryTemp) uint(0)
+           61_50:   21_1(int) Load 65_27
+                              Store 59_25(WidthU) 61_50
+           65_28:   32_1(ptr) AccessChain 59_44(sizeQueryTemp) uint(1)
+           61_51:   21_1(int) Load 65_28
+                              Store 59_36(HeightU) 61_51
+           65_29:   32_1(ptr) AccessChain 59_44(sizeQueryTemp) uint(2)
+           61_52:   21_1(int) Load 65_29
+                              Store 59_43(DepthU) 61_52
+           61_53:       25_18 Load 59_18(g_tTex3du4)
+          104_18: 23_3(ivec3) ImageQuerySize 61_53
+                              Store 59_45(sizeQueryTemp) 104_18
+           65_30:   32_1(ptr) AccessChain 59_45(sizeQueryTemp) uint(0)
+           61_54:   21_1(int) Load 65_30
+                              Store 59_25(WidthU) 61_54
+           65_31:   32_1(ptr) AccessChain 59_45(sizeQueryTemp) uint(1)
+           61_55:   21_1(int) Load 65_31
+                              Store 59_36(HeightU) 61_55
+           65_32:   32_1(ptr) AccessChain 59_45(sizeQueryTemp) uint(2)
+           61_56:   21_1(int) Load 65_32
+                              Store 59_43(DepthU) 61_56
+           65_33:  32_23(ptr) AccessChain 59_46(psout) 43_1
+                              Store 65_33 44_1
+           65_34:  32_24(ptr) AccessChain 59_46(psout) 43_3
+                              Store 65_34 43_2
+           61_57:30_1(PS_OUTPUT) Load 59_46(psout)
+                              ReturnValue 61_57
                               FunctionEnd

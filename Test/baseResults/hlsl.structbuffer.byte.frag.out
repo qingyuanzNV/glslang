@@ -328,152 +328,152 @@ gl_FragCoord origin is upper left
 // Id's are bound by 114
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 107 110
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 12  "@main(u1;"
-                              Name 11  "pos"
-                              Name 14  "size"
-                              Name 16  "sbuf"
-                              MemberName 16(sbuf) 0  "@data"
-                              Name 18  "sbuf"
-                              Name 30  "byteAddrTemp"
-                              Name 53  "byteAddrTemp"
-                              Name 78  "byteAddrTemp"
-                              Name 105  "pos"
-                              Name 107  "pos"
-                              Name 110  "@entryPointOutput"
-                              Name 111  "param"
-                              Decorate 15 ArrayStride 4
-                              Decorate 16(sbuf) BufferBlock
-                              MemberDecorate 16(sbuf) 0 NonWritable
-                              MemberDecorate 16(sbuf) 0 Offset 0
-                              Decorate 18(sbuf) Binding 0
-                              Decorate 18(sbuf) DescriptorSet 0
-                              Decorate 107(pos) Flat
-                              Decorate 107(pos) Location 0
-                              Decorate 110(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               8:             TypeFloat 32
-               9:             TypeVector 8(float) 4
-              10:             TypeFunction 9(fvec4) 7(ptr)
-              15:             TypeRuntimeArray 6(int)
-        16(sbuf):             TypeStruct 15
-              17:             TypePointer Uniform 16(sbuf)
-        18(sbuf):     17(ptr) Variable Uniform
-              20:             TypeInt 32 1
-              21:     20(int) Constant 0
-              23:     20(int) Constant 2
-              25:             TypePointer Uniform 6(int)
-              29:             TypePointer Function 20(int)
-              32:      6(int) Constant 4
-              39:     20(int) Constant 1
-              43:             TypeVector 6(int) 2
-              45:             TypeVector 8(float) 2
-              47:    8(float) Constant 0
-              55:      6(int) Constant 8
-              69:             TypeVector 6(int) 3
-              71:             TypeVector 8(float) 3
-              80:      6(int) Constant 12
-              95:     20(int) Constant 3
-              99:             TypeVector 6(int) 4
-             106:             TypePointer Input 6(int)
-        107(pos):    106(ptr) Variable Input
-             109:             TypePointer Output 9(fvec4)
-110(@entryPointOutput):    109(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-        105(pos):      7(ptr) Variable Function
-      111(param):      7(ptr) Variable Function
-             108:      6(int) Load 107(pos)
-                              Store 105(pos) 108
-             112:      6(int) Load 105(pos)
-                              Store 111(param) 112
-             113:    9(fvec4) FunctionCall 12(@main(u1;) 111(param)
-                              Store 110(@entryPointOutput) 113
+                              Name 54_1  "main"
+                              Name 54_2  "@main(u1;"
+                              Name 55_1  "pos"
+                              Name 59_6  "size"
+                              Name 30_1  "sbuf"
+                              MemberName 30_1(sbuf) 0  "@data"
+                              Name 59_1  "sbuf"
+                              Name 59_7  "byteAddrTemp"
+                              Name 59_8  "byteAddrTemp"
+                              Name 59_9  "byteAddrTemp"
+                              Name 59_4  "pos"
+                              Name 59_2  "pos"
+                              Name 59_3  "@entryPointOutput"
+                              Name 59_5  "param"
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_1(sbuf) BufferBlock
+                              MemberDecorate 30_1(sbuf) 0 NonWritable
+                              MemberDecorate 30_1(sbuf) 0 Offset 0
+                              Decorate 59_1(sbuf) Binding 0
+                              Decorate 59_1(sbuf) DescriptorSet 0
+                              Decorate 59_2(pos) Flat
+                              Decorate 59_2(pos) Location 0
+                              Decorate 59_3(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            29_1:             TypeRuntimeArray 21_1(int)
+      30_1(sbuf):             TypeStruct 29_1
+            32_2:             TypePointer Uniform 30_1(sbuf)
+      59_1(sbuf):   32_2(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            43_2:   21_2(int) Constant 2
+            32_3:             TypePointer Uniform 21_1(int)
+            32_4:             TypePointer Function 21_2(int)
+         uint(4):   21_1(int) Constant 4
+            43_3:   21_2(int) Constant 1
+            23_2:             TypeVector 21_1(int) 2
+            23_3:             TypeVector 22_1(float) 2
+            43_4: 22_1(float) Constant 0
+         uint(8):   21_1(int) Constant 8
+            23_4:             TypeVector 21_1(int) 3
+            23_5:             TypeVector 22_1(float) 3
+        uint(12):   21_1(int) Constant 12
+            43_5:   21_2(int) Constant 3
+            23_6:             TypeVector 21_1(int) 4
+            32_5:             TypePointer Input 21_1(int)
+       59_2(pos):   32_5(ptr) Variable Input
+            32_6:             TypePointer Output 23_1(fvec4)
+59_3(@entryPointOutput):   32_6(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_4(pos):   32_1(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+            61_1:   21_1(int) Load 59_2(pos)
+                              Store 59_4(pos) 61_1
+            61_2:   21_1(int) Load 59_4(pos)
+                              Store 59_5(param) 61_2
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main(u1;) 59_5(param)
+                              Store 59_3(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-   12(@main(u1;):    9(fvec4) Function None 10
-         11(pos):      7(ptr) FunctionParameter
-              13:             Label
-        14(size):      7(ptr) Variable Function
-30(byteAddrTemp):     29(ptr) Variable Function
-53(byteAddrTemp):     29(ptr) Variable Function
-78(byteAddrTemp):     29(ptr) Variable Function
-              19:      6(int) ArrayLength 18(sbuf) 0
-                              Store 14(size) 19
-              22:      6(int) Load 11(pos)
-              24:     20(int) ShiftRightLogical 22 23
-              26:     25(ptr) AccessChain 18(sbuf) 21 24
-              27:      6(int) Load 26
-              28:    8(float) ConvertUToF 27
-              31:      6(int) Load 11(pos)
-              33:      6(int) IAdd 31 32
-              34:     20(int) ShiftRightLogical 33 23
-                              Store 30(byteAddrTemp) 34
-              35:     20(int) Load 30(byteAddrTemp)
-              36:     25(ptr) AccessChain 18(sbuf) 21 35
-              37:      6(int) Load 36
-              38:     20(int) Load 30(byteAddrTemp)
-              40:     20(int) IAdd 38 39
-              41:     25(ptr) AccessChain 18(sbuf) 21 40
-              42:      6(int) Load 41
-              44:   43(ivec2) CompositeConstruct 37 42
-              46:   45(fvec2) ConvertUToF 44
-              48:    8(float) CompositeExtract 46 0
-              49:    8(float) CompositeExtract 46 1
-              50:    9(fvec4) CompositeConstruct 48 49 47 47
-              51:    9(fvec4) CompositeConstruct 28 28 28 28
-              52:    9(fvec4) FAdd 51 50
-              54:      6(int) Load 11(pos)
-              56:      6(int) IAdd 54 55
-              57:     20(int) ShiftRightLogical 56 23
-                              Store 53(byteAddrTemp) 57
-              58:     20(int) Load 53(byteAddrTemp)
-              59:     25(ptr) AccessChain 18(sbuf) 21 58
-              60:      6(int) Load 59
-              61:     20(int) Load 53(byteAddrTemp)
-              62:     20(int) IAdd 61 39
-              63:     25(ptr) AccessChain 18(sbuf) 21 62
-              64:      6(int) Load 63
-              65:     20(int) Load 53(byteAddrTemp)
-              66:     20(int) IAdd 65 23
-              67:     25(ptr) AccessChain 18(sbuf) 21 66
-              68:      6(int) Load 67
-              70:   69(ivec3) CompositeConstruct 60 64 68
-              72:   71(fvec3) ConvertUToF 70
-              73:    8(float) CompositeExtract 72 0
-              74:    8(float) CompositeExtract 72 1
-              75:    8(float) CompositeExtract 72 2
-              76:    9(fvec4) CompositeConstruct 73 74 75 47
-              77:    9(fvec4) FAdd 52 76
-              79:      6(int) Load 11(pos)
-              81:      6(int) IAdd 79 80
-              82:     20(int) ShiftRightLogical 81 23
-                              Store 78(byteAddrTemp) 82
-              83:     20(int) Load 78(byteAddrTemp)
-              84:     25(ptr) AccessChain 18(sbuf) 21 83
-              85:      6(int) Load 84
-              86:     20(int) Load 78(byteAddrTemp)
-              87:     20(int) IAdd 86 39
-              88:     25(ptr) AccessChain 18(sbuf) 21 87
-              89:      6(int) Load 88
-              90:     20(int) Load 78(byteAddrTemp)
-              91:     20(int) IAdd 90 23
-              92:     25(ptr) AccessChain 18(sbuf) 21 91
-              93:      6(int) Load 92
-              94:     20(int) Load 78(byteAddrTemp)
-              96:     20(int) IAdd 94 95
-              97:     25(ptr) AccessChain 18(sbuf) 21 96
-              98:      6(int) Load 97
-             100:   99(ivec4) CompositeConstruct 85 89 93 98
-             101:    9(fvec4) ConvertUToF 100
-             102:    9(fvec4) FAdd 77 101
-                              ReturnValue 102
+ 54_2(@main(u1;): 23_1(fvec4) Function None 33_2
+       55_1(pos):   32_1(ptr) FunctionParameter
+           248_2:             Label
+      59_6(size):   32_1(ptr) Variable Function
+59_7(byteAddrTemp):   32_4(ptr) Variable Function
+59_8(byteAddrTemp):   32_4(ptr) Variable Function
+59_9(byteAddrTemp):   32_4(ptr) Variable Function
+            68_1:   21_1(int) ArrayLength 59_1(sbuf) 0
+                              Store 59_6(size) 68_1
+            61_3:   21_1(int) Load 55_1(pos)
+           194_1:   21_2(int) ShiftRightLogical 61_3 43_2
+            65_1:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 194_1
+            61_4:   21_1(int) Load 65_1
+           112_1: 22_1(float) ConvertUToF 61_4
+            61_5:   21_1(int) Load 55_1(pos)
+           128_1:   21_1(int) IAdd 61_5 uint(4)
+           194_2:   21_2(int) ShiftRightLogical 128_1 43_2
+                              Store 59_7(byteAddrTemp) 194_2
+            61_6:   21_2(int) Load 59_7(byteAddrTemp)
+            65_2:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 61_6
+            61_7:   21_1(int) Load 65_2
+            61_8:   21_2(int) Load 59_7(byteAddrTemp)
+           128_2:   21_2(int) IAdd 61_8 43_3
+            65_3:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 128_2
+            61_9:   21_1(int) Load 65_3
+            80_1: 23_2(ivec2) CompositeConstruct 61_7 61_9
+           112_2: 23_3(fvec2) ConvertUToF 80_1
+            81_1: 22_1(float) CompositeExtract 112_2 0
+            81_2: 22_1(float) CompositeExtract 112_2 1
+            80_2: 23_1(fvec4) CompositeConstruct 81_1 81_2 43_4 43_4
+            80_3: 23_1(fvec4) CompositeConstruct 112_1 112_1 112_1 112_1
+           129_1: 23_1(fvec4) FAdd 80_3 80_2
+           61_10:   21_1(int) Load 55_1(pos)
+           128_3:   21_1(int) IAdd 61_10 uint(8)
+           194_3:   21_2(int) ShiftRightLogical 128_3 43_2
+                              Store 59_8(byteAddrTemp) 194_3
+           61_11:   21_2(int) Load 59_8(byteAddrTemp)
+            65_4:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 61_11
+           61_12:   21_1(int) Load 65_4
+           61_13:   21_2(int) Load 59_8(byteAddrTemp)
+           128_4:   21_2(int) IAdd 61_13 43_3
+            65_5:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 128_4
+           61_14:   21_1(int) Load 65_5
+           61_15:   21_2(int) Load 59_8(byteAddrTemp)
+           128_5:   21_2(int) IAdd 61_15 43_2
+            65_6:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 128_5
+           61_16:   21_1(int) Load 65_6
+            80_4: 23_4(ivec3) CompositeConstruct 61_12 61_14 61_16
+           112_3: 23_5(fvec3) ConvertUToF 80_4
+            81_3: 22_1(float) CompositeExtract 112_3 0
+            81_4: 22_1(float) CompositeExtract 112_3 1
+            81_5: 22_1(float) CompositeExtract 112_3 2
+            80_5: 23_1(fvec4) CompositeConstruct 81_3 81_4 81_5 43_4
+           129_2: 23_1(fvec4) FAdd 129_1 80_5
+           61_17:   21_1(int) Load 55_1(pos)
+           128_6:   21_1(int) IAdd 61_17 uint(12)
+           194_4:   21_2(int) ShiftRightLogical 128_6 43_2
+                              Store 59_9(byteAddrTemp) 194_4
+           61_18:   21_2(int) Load 59_9(byteAddrTemp)
+            65_7:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 61_18
+           61_19:   21_1(int) Load 65_7
+           61_20:   21_2(int) Load 59_9(byteAddrTemp)
+           128_7:   21_2(int) IAdd 61_20 43_3
+            65_8:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 128_7
+           61_21:   21_1(int) Load 65_8
+           61_22:   21_2(int) Load 59_9(byteAddrTemp)
+           128_8:   21_2(int) IAdd 61_22 43_2
+            65_9:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 128_8
+           61_23:   21_1(int) Load 65_9
+           61_24:   21_2(int) Load 59_9(byteAddrTemp)
+           128_9:   21_2(int) IAdd 61_24 43_5
+           65_10:   32_3(ptr) AccessChain 59_1(sbuf) 43_1 128_9
+           61_25:   21_1(int) Load 65_10
+            80_6: 23_6(ivec4) CompositeConstruct 61_19 61_21 61_23 61_25
+           112_4: 23_1(fvec4) ConvertUToF 80_6
+           129_3: 23_1(fvec4) FAdd 129_2 112_4
+                              ReturnValue 129_3
                               FunctionEnd

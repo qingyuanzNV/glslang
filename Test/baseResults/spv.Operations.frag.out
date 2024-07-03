@@ -4,783 +4,783 @@ spv.Operations.frag
 // Id's are bound by 591
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 11 22 220 296 314 547 588
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_4 59_5 59_6 59_8 59_9
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "v"
-                              Name 11  "uv4"
-                              Name 20  "i"
-                              Name 22  "ui"
-                              Name 155  "swizzleTemp"
-                              Name 189  "ub41"
-                              Name 196  "f"
-                              Name 220  "uf"
-                              Name 293  "u"
-                              Name 296  "uui"
-                              Name 314  "uuv4"
-                              Name 321  "msb"
-                              Name 323  "swizzleTemp"
-                              Name 324  "lsb"
-                              Name 325  "swizzleTemp"
-                              Name 326  "ResType"
-                              Name 367  "b"
-                              Name 404  "ub42"
-                              Name 547  "FragColor"
-                              Name 565  "m1"
-                              Name 572  "m2"
-                              Name 588  "uiv4"
-                              Name 590  "ub"
-                              Decorate 11(uv4) Location 1
-                              Decorate 22(ui) Flat
-                              Decorate 22(ui) Location 3
-                              Decorate 220(uf) Location 2
-                              Decorate 296(uui) Flat
-                              Decorate 296(uui) Location 5
-                              Decorate 314(uuv4) Flat
-                              Decorate 314(uuv4) Location 4
-                              Decorate 547(FragColor) Location 0
-                              Decorate 588(uiv4) Flat
-                              Decorate 588(uiv4) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-              10:             TypePointer Input 7(fvec4)
-         11(uv4):     10(ptr) Variable Input
-              18:             TypeInt 32 1
-              19:             TypePointer Function 18(int)
-              21:             TypePointer Input 18(int)
-          22(ui):     21(ptr) Variable Input
-             141:             TypeInt 32 0
-             142:    141(int) Constant 0
-             143:             TypePointer Function 6(float)
-             186:             TypeBool
-             187:             TypeVector 186(bool) 4
-             188:             TypePointer Private 187(bvec4)
-       189(ub41):    188(ptr) Variable Private
-             219:             TypePointer Input 6(float)
-         220(uf):    219(ptr) Variable Input
-             292:             TypePointer Function 141(int)
-             295:             TypePointer Input 141(int)
-        296(uui):    295(ptr) Variable Input
-             312:             TypeVector 141(int) 4
-             313:             TypePointer Input 312(ivec4)
-       314(uuv4):    313(ptr) Variable Input
-             315:             TypeVector 141(int) 3
-             320:             TypePointer Function 312(ivec4)
-             322:             TypePointer Function 315(ivec3)
-    326(ResType):             TypeStruct 315(ivec3) 315(ivec3)
-             333:    141(int) Constant 1
-             336:    141(int) Constant 2
-             366:             TypePointer Function 186(bool)
-       404(ub42):    188(ptr) Variable Private
-             460:     18(int) Constant 2
-             467:     18(int) Constant 1
-             497:             TypeVector 6(float) 3
-             516:    6(float) Constant 1073741824
-             523:    6(float) Constant 1065353216
-             528:     18(int) Constant 66
-             534:     18(int) Constant 17
-             546:             TypePointer Output 7(fvec4)
-  547(FragColor):    546(ptr) Variable Output
-             563:             TypeMatrix 7(fvec4) 4
-             564:             TypePointer Function 563
-             566:    6(float) Constant 0
-             567:    7(fvec4) ConstantComposite 523 566 566 566
-             568:    7(fvec4) ConstantComposite 566 523 566 566
-             569:    7(fvec4) ConstantComposite 566 566 523 566
-             570:    7(fvec4) ConstantComposite 566 566 566 523
-             571:         563 ConstantComposite 567 568 569 570
-             573:    7(fvec4) ConstantComposite 566 566 566 566
-             574:         563 ConstantComposite 573 573 573 573
-             586:             TypeVector 18(int) 4
-             587:             TypePointer Input 586(ivec4)
-       588(uiv4):    587(ptr) Variable Input
-             589:             TypePointer Private 186(bool)
-         590(ub):    589(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-            9(v):      8(ptr) Variable Function
-           20(i):     19(ptr) Variable Function
-155(swizzleTemp):      8(ptr) Variable Function
-          196(f):    143(ptr) Variable Function
-          293(u):    292(ptr) Variable Function
-        321(msb):    320(ptr) Variable Function
-323(swizzleTemp):    322(ptr) Variable Function
-        324(lsb):    320(ptr) Variable Function
-325(swizzleTemp):    322(ptr) Variable Function
-          367(b):    366(ptr) Variable Function
-             549:      8(ptr) Variable Function
-         565(m1):    564(ptr) Variable Function
-         572(m2):    564(ptr) Variable Function
-             576:    564(ptr) Variable Function
-              12:    7(fvec4) Load 11(uv4)
-              13:    7(fvec4) ExtInst 1(GLSL.std.450) 11(Radians) 12
-                              Store 9(v) 13
-              14:    7(fvec4) Load 9(v)
-              15:    7(fvec4) ExtInst 1(GLSL.std.450) 12(Degrees) 14
-              16:    7(fvec4) Load 9(v)
-              17:    7(fvec4) FAdd 16 15
-                              Store 9(v) 17
-              23:     18(int) Load 22(ui)
-              24:     18(int) Load 22(ui)
-              25:     18(int) IMul 23 24
-                              Store 20(i) 25
-              26:    7(fvec4) Load 9(v)
-              27:    7(fvec4) ExtInst 1(GLSL.std.450) 13(Sin) 26
-              28:    7(fvec4) Load 9(v)
-              29:    7(fvec4) FAdd 28 27
-                              Store 9(v) 29
-              30:    7(fvec4) Load 9(v)
-              31:    7(fvec4) ExtInst 1(GLSL.std.450) 14(Cos) 30
-              32:    7(fvec4) Load 9(v)
-              33:    7(fvec4) FAdd 32 31
-                              Store 9(v) 33
-              34:    7(fvec4) Load 9(v)
-              35:    7(fvec4) ExtInst 1(GLSL.std.450) 15(Tan) 34
-              36:    7(fvec4) Load 9(v)
-              37:    7(fvec4) FAdd 36 35
-                              Store 9(v) 37
-              38:    7(fvec4) Load 9(v)
-              39:    7(fvec4) ExtInst 1(GLSL.std.450) 16(Asin) 38
-              40:    7(fvec4) Load 9(v)
-              41:    7(fvec4) FAdd 40 39
-                              Store 9(v) 41
-              42:    7(fvec4) Load 9(v)
-              43:    7(fvec4) ExtInst 1(GLSL.std.450) 17(Acos) 42
-              44:    7(fvec4) Load 9(v)
-              45:    7(fvec4) FAdd 44 43
-                              Store 9(v) 45
-              46:    7(fvec4) Load 9(v)
-              47:    7(fvec4) ExtInst 1(GLSL.std.450) 18(Atan) 46
-              48:    7(fvec4) Load 9(v)
-              49:    7(fvec4) FAdd 48 47
-                              Store 9(v) 49
-              50:    7(fvec4) Load 9(v)
-              51:    7(fvec4) ExtInst 1(GLSL.std.450) 19(Sinh) 50
-              52:    7(fvec4) Load 9(v)
-              53:    7(fvec4) FAdd 52 51
-                              Store 9(v) 53
-              54:    7(fvec4) Load 9(v)
-              55:    7(fvec4) ExtInst 1(GLSL.std.450) 20(Cosh) 54
-              56:    7(fvec4) Load 9(v)
-              57:    7(fvec4) FAdd 56 55
-                              Store 9(v) 57
-              58:    7(fvec4) Load 9(v)
-              59:    7(fvec4) ExtInst 1(GLSL.std.450) 21(Tanh) 58
-              60:    7(fvec4) Load 9(v)
-              61:    7(fvec4) FAdd 60 59
-                              Store 9(v) 61
-              62:    7(fvec4) Load 9(v)
-              63:    7(fvec4) ExtInst 1(GLSL.std.450) 22(Asinh) 62
-              64:    7(fvec4) Load 9(v)
-              65:    7(fvec4) FAdd 64 63
-                              Store 9(v) 65
-              66:    7(fvec4) Load 9(v)
-              67:    7(fvec4) ExtInst 1(GLSL.std.450) 23(Acosh) 66
-              68:    7(fvec4) Load 9(v)
-              69:    7(fvec4) FAdd 68 67
-                              Store 9(v) 69
-              70:    7(fvec4) Load 9(v)
-              71:    7(fvec4) ExtInst 1(GLSL.std.450) 24(Atanh) 70
-              72:    7(fvec4) Load 9(v)
-              73:    7(fvec4) FAdd 72 71
-                              Store 9(v) 73
-              74:    7(fvec4) Load 9(v)
-              75:    7(fvec4) Load 9(v)
-              76:    7(fvec4) ExtInst 1(GLSL.std.450) 26(Pow) 74 75
-              77:    7(fvec4) Load 9(v)
-              78:    7(fvec4) FAdd 77 76
-                              Store 9(v) 78
-              79:    7(fvec4) Load 9(v)
-              80:    7(fvec4) ExtInst 1(GLSL.std.450) 27(Exp) 79
-              81:    7(fvec4) Load 9(v)
-              82:    7(fvec4) FAdd 81 80
-                              Store 9(v) 82
-              83:    7(fvec4) Load 9(v)
-              84:    7(fvec4) ExtInst 1(GLSL.std.450) 28(Log) 83
-              85:    7(fvec4) Load 9(v)
-              86:    7(fvec4) FAdd 85 84
-                              Store 9(v) 86
-              87:    7(fvec4) Load 9(v)
-              88:    7(fvec4) ExtInst 1(GLSL.std.450) 29(Exp2) 87
-              89:    7(fvec4) Load 9(v)
-              90:    7(fvec4) FAdd 89 88
-                              Store 9(v) 90
-              91:    7(fvec4) Load 9(v)
-              92:    7(fvec4) ExtInst 1(GLSL.std.450) 30(Log2) 91
-              93:    7(fvec4) Load 9(v)
-              94:    7(fvec4) FAdd 93 92
-                              Store 9(v) 94
-              95:    7(fvec4) Load 9(v)
-              96:    7(fvec4) ExtInst 1(GLSL.std.450) 31(Sqrt) 95
-              97:    7(fvec4) Load 9(v)
-              98:    7(fvec4) FAdd 97 96
-                              Store 9(v) 98
-              99:    7(fvec4) Load 9(v)
-             100:    7(fvec4) ExtInst 1(GLSL.std.450) 32(InverseSqrt) 99
-             101:    7(fvec4) Load 9(v)
-             102:    7(fvec4) FAdd 101 100
-                              Store 9(v) 102
-             103:    7(fvec4) Load 9(v)
-             104:    7(fvec4) ExtInst 1(GLSL.std.450) 4(FAbs) 103
-             105:    7(fvec4) Load 9(v)
-             106:    7(fvec4) FAdd 105 104
-                              Store 9(v) 106
-             107:    7(fvec4) Load 9(v)
-             108:    7(fvec4) ExtInst 1(GLSL.std.450) 6(FSign) 107
-             109:    7(fvec4) Load 9(v)
-             110:    7(fvec4) FAdd 109 108
-                              Store 9(v) 110
-             111:    7(fvec4) Load 9(v)
-             112:    7(fvec4) ExtInst 1(GLSL.std.450) 8(Floor) 111
-             113:    7(fvec4) Load 9(v)
-             114:    7(fvec4) FAdd 113 112
-                              Store 9(v) 114
-             115:    7(fvec4) Load 9(v)
-             116:    7(fvec4) ExtInst 1(GLSL.std.450) 3(Trunc) 115
-             117:    7(fvec4) Load 9(v)
-             118:    7(fvec4) FAdd 117 116
-                              Store 9(v) 118
-             119:    7(fvec4) Load 9(v)
-             120:    7(fvec4) ExtInst 1(GLSL.std.450) 1(Round) 119
-             121:    7(fvec4) Load 9(v)
-             122:    7(fvec4) FAdd 121 120
-                              Store 9(v) 122
-             123:    7(fvec4) Load 9(v)
-             124:    7(fvec4) ExtInst 1(GLSL.std.450) 2(RoundEven) 123
-             125:    7(fvec4) Load 9(v)
-             126:    7(fvec4) FAdd 125 124
-                              Store 9(v) 126
-             127:    7(fvec4) Load 9(v)
-             128:    7(fvec4) ExtInst 1(GLSL.std.450) 9(Ceil) 127
-             129:    7(fvec4) Load 9(v)
-             130:    7(fvec4) FAdd 129 128
-                              Store 9(v) 130
-             131:    7(fvec4) Load 9(v)
-             132:    7(fvec4) ExtInst 1(GLSL.std.450) 10(Fract) 131
-             133:    7(fvec4) Load 9(v)
-             134:    7(fvec4) FAdd 133 132
-                              Store 9(v) 134
-             135:    7(fvec4) Load 9(v)
-             136:    7(fvec4) Load 9(v)
-             137:    7(fvec4) FMod 135 136
-             138:    7(fvec4) Load 9(v)
-             139:    7(fvec4) FAdd 138 137
-                              Store 9(v) 139
-             140:    7(fvec4) Load 9(v)
-             144:    143(ptr) AccessChain 9(v) 142
-             145:    6(float) Load 144
-             146:    7(fvec4) CompositeConstruct 145 145 145 145
-             147:    7(fvec4) FMod 140 146
-             148:    7(fvec4) Load 9(v)
-             149:    7(fvec4) FAdd 148 147
-                              Store 9(v) 149
-             150:    7(fvec4) Load 9(v)
-             151:    7(fvec4) ExtInst 1(GLSL.std.450) 35(Modf) 150 9(v)
-             152:    7(fvec4) Load 9(v)
-             153:    7(fvec4) FAdd 152 151
-                              Store 9(v) 153
-             154:    7(fvec4) Load 9(v)
-             156:    7(fvec4) ExtInst 1(GLSL.std.450) 35(Modf) 154 155(swizzleTemp)
-             157:    7(fvec4) Load 155(swizzleTemp)
-             158:    7(fvec4) Load 9(v)
-             159:    7(fvec4) VectorShuffle 158 157 6 4 5 7
-                              Store 9(v) 159
-             160:    7(fvec4) Load 9(v)
-             161:    7(fvec4) FAdd 160 156
-                              Store 9(v) 161
-             162:    7(fvec4) Load 9(v)
-             163:    7(fvec4) Load 11(uv4)
-             164:    7(fvec4) ExtInst 1(GLSL.std.450) 37(FMin) 162 163
-             165:    7(fvec4) Load 9(v)
-             166:    7(fvec4) FAdd 165 164
-                              Store 9(v) 166
-             167:    7(fvec4) Load 9(v)
-             168:    7(fvec4) Load 11(uv4)
-             169:    7(fvec4) ExtInst 1(GLSL.std.450) 40(FMax) 167 168
-             170:    7(fvec4) Load 9(v)
-             171:    7(fvec4) FAdd 170 169
-                              Store 9(v) 171
-             172:    7(fvec4) Load 9(v)
-             173:    7(fvec4) Load 11(uv4)
-             174:    7(fvec4) Load 11(uv4)
-             175:    7(fvec4) ExtInst 1(GLSL.std.450) 43(FClamp) 172 173 174
-             176:    7(fvec4) Load 9(v)
-             177:    7(fvec4) FAdd 176 175
-                              Store 9(v) 177
-             178:    7(fvec4) Load 9(v)
-             179:    7(fvec4) Load 9(v)
-             180:    7(fvec4) Load 9(v)
-             181:    7(fvec4) ExtInst 1(GLSL.std.450) 46(FMix) 178 179 180
-             182:    7(fvec4) Load 9(v)
-             183:    7(fvec4) FAdd 182 181
-                              Store 9(v) 183
-             184:    7(fvec4) Load 9(v)
-             185:    7(fvec4) Load 9(v)
-             190:  187(bvec4) Load 189(ub41)
-             191:    7(fvec4) Select 190 185 184
-             192:    7(fvec4) Load 9(v)
-             193:    7(fvec4) FAdd 192 191
-                              Store 9(v) 193
-             194:    7(fvec4) Load 9(v)
-             195:    7(fvec4) Load 9(v)
-             197:    6(float) Load 196(f)
-             198:    7(fvec4) CompositeConstruct 197 197 197 197
-             199:    7(fvec4) ExtInst 1(GLSL.std.450) 46(FMix) 194 195 198
-             200:    7(fvec4) Load 9(v)
-             201:    7(fvec4) FAdd 200 199
-                              Store 9(v) 201
-             202:    7(fvec4) Load 9(v)
-             203:    7(fvec4) Load 11(uv4)
-             204:    7(fvec4) Load 9(v)
-             205:    7(fvec4) ExtInst 1(GLSL.std.450) 50(Fma) 202 203 204
-             206:    7(fvec4) Load 9(v)
-             207:    7(fvec4) FAdd 206 205
-                              Store 9(v) 207
-             208:    7(fvec4) Load 9(v)
-             209:    7(fvec4) Load 9(v)
-             210:    7(fvec4) ExtInst 1(GLSL.std.450) 48(Step) 208 209
-             211:    7(fvec4) Load 9(v)
-             212:    7(fvec4) FAdd 211 210
-                              Store 9(v) 212
-             213:    7(fvec4) Load 9(v)
-             214:    7(fvec4) Load 9(v)
-             215:    7(fvec4) Load 9(v)
-             216:    7(fvec4) ExtInst 1(GLSL.std.450) 49(SmoothStep) 213 214 215
-             217:    7(fvec4) Load 9(v)
-             218:    7(fvec4) FAdd 217 216
-                              Store 9(v) 218
-             221:    6(float) Load 220(uf)
-             222:    7(fvec4) Load 9(v)
-             223:    7(fvec4) CompositeConstruct 221 221 221 221
-             224:    7(fvec4) ExtInst 1(GLSL.std.450) 48(Step) 223 222
-             225:    7(fvec4) Load 9(v)
-             226:    7(fvec4) FAdd 225 224
-                              Store 9(v) 226
-             227:    6(float) Load 220(uf)
-             228:    6(float) Load 220(uf)
-             229:    7(fvec4) Load 9(v)
-             230:    7(fvec4) CompositeConstruct 227 227 227 227
-             231:    7(fvec4) CompositeConstruct 228 228 228 228
-             232:    7(fvec4) ExtInst 1(GLSL.std.450) 49(SmoothStep) 230 231 229
-             233:    7(fvec4) Load 9(v)
-             234:    7(fvec4) FAdd 233 232
-                              Store 9(v) 234
-             235:    7(fvec4) Load 9(v)
-             236:    7(fvec4) ExtInst 1(GLSL.std.450) 69(Normalize) 235
-             237:    7(fvec4) Load 9(v)
-             238:    7(fvec4) FAdd 237 236
-                              Store 9(v) 238
-             239:    7(fvec4) Load 9(v)
-             240:    7(fvec4) Load 9(v)
-             241:    7(fvec4) Load 9(v)
-             242:    7(fvec4) ExtInst 1(GLSL.std.450) 70(FaceForward) 239 240 241
-             243:    7(fvec4) Load 9(v)
-             244:    7(fvec4) FAdd 243 242
-                              Store 9(v) 244
-             245:    7(fvec4) Load 9(v)
-             246:    7(fvec4) Load 9(v)
-             247:    7(fvec4) ExtInst 1(GLSL.std.450) 71(Reflect) 245 246
-             248:    7(fvec4) Load 9(v)
-             249:    7(fvec4) FAdd 248 247
-                              Store 9(v) 249
-             250:    7(fvec4) Load 9(v)
-             251:    7(fvec4) Load 9(v)
-             252:    6(float) Load 220(uf)
-             253:    7(fvec4) ExtInst 1(GLSL.std.450) 72(Refract) 250 251 252
-             254:    7(fvec4) Load 9(v)
-             255:    7(fvec4) FAdd 254 253
-                              Store 9(v) 255
-             256:    7(fvec4) Load 9(v)
-             257:    7(fvec4) DPdx 256
-             258:    7(fvec4) Load 9(v)
-             259:    7(fvec4) FAdd 258 257
-                              Store 9(v) 259
-             260:    7(fvec4) Load 9(v)
-             261:    7(fvec4) DPdy 260
-             262:    7(fvec4) Load 9(v)
-             263:    7(fvec4) FAdd 262 261
-                              Store 9(v) 263
-             264:    7(fvec4) Load 9(v)
-             265:    7(fvec4) Fwidth 264
-             266:    7(fvec4) Load 9(v)
-             267:    7(fvec4) FAdd 266 265
-                              Store 9(v) 267
-             268:     18(int) Load 22(ui)
-             269:     18(int) ExtInst 1(GLSL.std.450) 5(SAbs) 268
-             270:     18(int) Load 20(i)
-             271:     18(int) IAdd 270 269
-                              Store 20(i) 271
-             272:     18(int) Load 20(i)
-             273:     18(int) ExtInst 1(GLSL.std.450) 7(SSign) 272
-             274:     18(int) Load 20(i)
-             275:     18(int) IAdd 274 273
-                              Store 20(i) 275
-             276:     18(int) Load 20(i)
-             277:     18(int) Load 22(ui)
-             278:     18(int) ExtInst 1(GLSL.std.450) 39(SMin) 276 277
-             279:     18(int) Load 20(i)
-             280:     18(int) IAdd 279 278
-                              Store 20(i) 280
-             281:     18(int) Load 20(i)
-             282:     18(int) Load 22(ui)
-             283:     18(int) ExtInst 1(GLSL.std.450) 42(SMax) 281 282
-             284:     18(int) Load 20(i)
-             285:     18(int) IAdd 284 283
-                              Store 20(i) 285
-             286:     18(int) Load 20(i)
-             287:     18(int) Load 22(ui)
-             288:     18(int) Load 22(ui)
-             289:     18(int) ExtInst 1(GLSL.std.450) 45(SClamp) 286 287 288
-             290:     18(int) Load 20(i)
-             291:     18(int) IAdd 290 289
-                              Store 20(i) 291
-             294:    141(int) Load 293(u)
-             297:    141(int) Load 296(uui)
-             298:    141(int) ExtInst 1(GLSL.std.450) 38(UMin) 294 297
-             299:    141(int) Load 293(u)
-             300:    141(int) IAdd 299 298
-                              Store 293(u) 300
-             301:    141(int) Load 293(u)
-             302:    141(int) Load 296(uui)
-             303:    141(int) ExtInst 1(GLSL.std.450) 41(UMax) 301 302
-             304:    141(int) Load 293(u)
-             305:    141(int) IAdd 304 303
-                              Store 293(u) 305
-             306:    141(int) Load 293(u)
-             307:    141(int) Load 296(uui)
-             308:    141(int) Load 296(uui)
-             309:    141(int) ExtInst 1(GLSL.std.450) 44(UClamp) 306 307 308
-             310:    141(int) Load 293(u)
-             311:    141(int) IAdd 310 309
-                              Store 293(u) 311
-             316:  312(ivec4) Load 314(uuv4)
-             317:  315(ivec3) VectorShuffle 316 316 0 1 2
-             318:  312(ivec4) Load 314(uuv4)
-             319:  315(ivec3) VectorShuffle 318 318 0 1 2
-             327:326(ResType) UMulExtended 317 319
-             328:  315(ivec3) CompositeExtract 327 0
-                              Store 325(swizzleTemp) 328
-             329:  315(ivec3) CompositeExtract 327 1
-                              Store 323(swizzleTemp) 329
-             330:  315(ivec3) Load 323(swizzleTemp)
-             331:    292(ptr) AccessChain 321(msb) 142
-             332:    141(int) CompositeExtract 330 0
-                              Store 331 332
-             334:    292(ptr) AccessChain 321(msb) 333
-             335:    141(int) CompositeExtract 330 1
-                              Store 334 335
-             337:    292(ptr) AccessChain 321(msb) 336
-             338:    141(int) CompositeExtract 330 2
-                              Store 337 338
-             339:  315(ivec3) Load 325(swizzleTemp)
-             340:    292(ptr) AccessChain 324(lsb) 142
-             341:    141(int) CompositeExtract 339 0
-                              Store 340 341
-             342:    292(ptr) AccessChain 324(lsb) 333
-             343:    141(int) CompositeExtract 339 1
-                              Store 342 343
-             344:    292(ptr) AccessChain 324(lsb) 336
-             345:    141(int) CompositeExtract 339 2
-                              Store 344 345
-             346:    292(ptr) AccessChain 321(msb) 142
-             347:    141(int) Load 346
-             348:    292(ptr) AccessChain 321(msb) 333
-             349:    141(int) Load 348
-             350:    141(int) IAdd 347 349
-             351:    292(ptr) AccessChain 321(msb) 336
-             352:    141(int) Load 351
-             353:    141(int) IAdd 350 352
-             354:    141(int) Load 293(u)
-             355:    141(int) IAdd 354 353
-                              Store 293(u) 355
-             356:    292(ptr) AccessChain 324(lsb) 142
-             357:    141(int) Load 356
-             358:    292(ptr) AccessChain 324(lsb) 333
-             359:    141(int) Load 358
-             360:    141(int) IAdd 357 359
-             361:    292(ptr) AccessChain 324(lsb) 336
-             362:    141(int) Load 361
-             363:    141(int) IAdd 360 362
-             364:    141(int) Load 293(u)
-             365:    141(int) IAdd 364 363
-                              Store 293(u) 365
-             368:    6(float) Load 220(uf)
-             369:   186(bool) IsNan 368
-                              Store 367(b) 369
-             370:    6(float) Load 196(f)
-             371:   186(bool) IsInf 370
-                              Store 367(b) 371
-             372:    7(fvec4) Load 9(v)
-             373:    7(fvec4) Load 11(uv4)
-             374:  187(bvec4) FOrdLessThan 372 373
-             375:   186(bool) Any 374
-                              Store 367(b) 375
-             376:   186(bool) Load 367(b)
-                              SelectionMerge 378 None
-                              BranchConditional 376 377 378
-             377:               Label
-             379:    7(fvec4)   Load 9(v)
-             380:    7(fvec4)   Load 11(uv4)
-             381:  187(bvec4)   FOrdLessThanEqual 379 380
-             382:   186(bool)   Any 381
-                                Branch 378
-             378:             Label
-             383:   186(bool) Phi 376 5 382 377
-                              Store 367(b) 383
-             384:   186(bool) Load 367(b)
-                              SelectionMerge 386 None
-                              BranchConditional 384 385 386
-             385:               Label
-             387:    7(fvec4)   Load 9(v)
-             388:    7(fvec4)   Load 11(uv4)
-             389:  187(bvec4)   FOrdGreaterThan 387 388
-             390:   186(bool)   Any 389
-                                Branch 386
-             386:             Label
-             391:   186(bool) Phi 384 378 390 385
-                              Store 367(b) 391
-             392:   186(bool) Load 367(b)
-                              SelectionMerge 394 None
-                              BranchConditional 392 393 394
-             393:               Label
-             395:    7(fvec4)   Load 9(v)
-             396:    7(fvec4)   Load 11(uv4)
-             397:  187(bvec4)   FOrdGreaterThanEqual 395 396
-             398:   186(bool)   Any 397
-                                Branch 394
-             394:             Label
-             399:   186(bool) Phi 392 386 398 393
-                              Store 367(b) 399
-             400:   186(bool) Load 367(b)
-                              SelectionMerge 402 None
-                              BranchConditional 400 401 402
-             401:               Label
-             403:  187(bvec4)   Load 189(ub41)
-             405:  187(bvec4)   Load 404(ub42)
-             406:  187(bvec4)   LogicalEqual 403 405
-             407:   186(bool)   Any 406
-                                Branch 402
-             402:             Label
-             408:   186(bool) Phi 400 394 407 401
-                              Store 367(b) 408
-             409:   186(bool) Load 367(b)
-                              SelectionMerge 411 None
-                              BranchConditional 409 410 411
-             410:               Label
-             412:  187(bvec4)   Load 189(ub41)
-             413:  187(bvec4)   Load 404(ub42)
-             414:  187(bvec4)   LogicalNotEqual 412 413
-             415:   186(bool)   Any 414
-                                Branch 411
-             411:             Label
-             416:   186(bool) Phi 409 402 415 410
-                              Store 367(b) 416
-             417:   186(bool) Load 367(b)
-             418:  187(bvec4) Load 189(ub41)
-             419:   186(bool) Any 418
-             420:   186(bool) LogicalAnd 417 419
-                              Store 367(b) 420
-             421:   186(bool) Load 367(b)
-             422:  187(bvec4) Load 189(ub41)
-             423:   186(bool) All 422
-             424:   186(bool) LogicalAnd 421 423
-                              Store 367(b) 424
-             425:   186(bool) Load 367(b)
-                              SelectionMerge 427 None
-                              BranchConditional 425 426 427
-             426:               Label
-             428:  187(bvec4)   Load 189(ub41)
-             429:  187(bvec4)   LogicalNot 428
-             430:   186(bool)   Any 429
-                                Branch 427
-             427:             Label
-             431:   186(bool) Phi 425 411 430 426
-                              Store 367(b) 431
-             432:     18(int) Load 20(i)
-             433:     18(int) Load 22(ui)
-             434:     18(int) IAdd 432 433
-             435:     18(int) Load 20(i)
-             436:     18(int) IMul 434 435
-             437:     18(int) Load 22(ui)
-             438:     18(int) ISub 436 437
-             439:     18(int) Load 20(i)
-             440:     18(int) SDiv 438 439
-                              Store 20(i) 440
-             441:     18(int) Load 20(i)
-             442:     18(int) Load 22(ui)
-             443:     18(int) SMod 441 442
-                              Store 20(i) 443
-             444:     18(int) Load 20(i)
-             445:     18(int) Load 22(ui)
-             446:   186(bool) IEqual 444 445
-             447:   186(bool) LogicalNot 446
-                              SelectionMerge 449 None
-                              BranchConditional 447 448 449
-             448:               Label
-             450:     18(int)   Load 20(i)
-             451:     18(int)   Load 22(ui)
-             452:   186(bool)   INotEqual 450 451
-                                SelectionMerge 454 None
-                                BranchConditional 452 453 454
-             453:                 Label
-             455:     18(int)     Load 20(i)
-             456:     18(int)     Load 22(ui)
-             457:   186(bool)     IEqual 455 456
-                                  Branch 454
-             454:               Label
-             458:   186(bool)   Phi 452 448 457 453
-             459:     18(int)   Load 20(i)
-             461:   186(bool)   INotEqual 459 460
-             462:   186(bool)   LogicalNotEqual 458 461
-                                Branch 449
-             449:             Label
-             463:   186(bool) Phi 446 427 462 454
-                              SelectionMerge 465 None
-                              BranchConditional 463 464 465
-             464:               Label
-             466:     18(int)   Load 20(i)
-             468:     18(int)   IAdd 466 467
-                                Store 20(i) 468
-                                Branch 465
-             465:             Label
-             469:    6(float) Load 220(uf)
-             470:    6(float) Load 220(uf)
-             471:    6(float) FAdd 469 470
-             472:    6(float) Load 220(uf)
-             473:    6(float) FMul 471 472
-             474:    6(float) Load 220(uf)
-             475:    6(float) FSub 473 474
-             476:    6(float) Load 220(uf)
-             477:    6(float) FDiv 475 476
-                              Store 196(f) 477
-             478:    7(fvec4) Load 9(v)
-             479:    6(float) ExtInst 1(GLSL.std.450) 66(Length) 478
-             480:    6(float) Load 196(f)
-             481:    6(float) FAdd 480 479
-                              Store 196(f) 481
-             482:    7(fvec4) Load 9(v)
-             483:    7(fvec4) Load 9(v)
-             484:    6(float) ExtInst 1(GLSL.std.450) 67(Distance) 482 483
-             485:    6(float) Load 196(f)
-             486:    6(float) FAdd 485 484
-                              Store 196(f) 486
-             487:    7(fvec4) Load 9(v)
-             488:    7(fvec4) Load 9(v)
-             489:    6(float) Dot 487 488
-             490:    6(float) Load 196(f)
-             491:    6(float) FAdd 490 489
-                              Store 196(f) 491
-             492:    6(float) Load 196(f)
-             493:    6(float) Load 220(uf)
-             494:    6(float) FMul 492 493
-             495:    6(float) Load 196(f)
-             496:    6(float) FAdd 495 494
-                              Store 196(f) 496
-             498:    7(fvec4) Load 9(v)
-             499:  497(fvec3) VectorShuffle 498 498 0 1 2
-             500:    7(fvec4) Load 9(v)
-             501:  497(fvec3) VectorShuffle 500 500 0 1 2
-             502:  497(fvec3) ExtInst 1(GLSL.std.450) 68(Cross) 499 501
-             503:    6(float) CompositeExtract 502 0
-             504:    6(float) Load 196(f)
-             505:    6(float) FAdd 504 503
-                              Store 196(f) 505
-             506:    6(float) Load 196(f)
-             507:    6(float) Load 220(uf)
-             508:   186(bool) FOrdEqual 506 507
-             509:   186(bool) LogicalNot 508
-                              SelectionMerge 511 None
-                              BranchConditional 509 510 511
-             510:               Label
-             512:    6(float)   Load 196(f)
-             513:    6(float)   Load 220(uf)
-             514:   186(bool)   FUnordNotEqual 512 513
-             515:    6(float)   Load 196(f)
-             517:   186(bool)   FUnordNotEqual 515 516
-             518:   186(bool)   LogicalAnd 514 517
-                                Branch 511
-             511:             Label
-             519:   186(bool) Phi 508 465 518 510
-                              SelectionMerge 521 None
-                              BranchConditional 519 520 521
-             520:               Label
-             522:    6(float)   Load 196(f)
-             524:    6(float)   FAdd 522 523
-                                Store 196(f) 524
-                                Branch 521
-             521:             Label
-             525:     18(int) Load 22(ui)
-             526:     18(int) Load 20(i)
-             527:     18(int) BitwiseAnd 526 525
-                              Store 20(i) 527
-             529:     18(int) Load 20(i)
-             530:     18(int) BitwiseOr 529 528
-                              Store 20(i) 530
-             531:     18(int) Load 22(ui)
-             532:     18(int) Load 20(i)
-             533:     18(int) BitwiseXor 532 531
-                              Store 20(i) 533
-             535:     18(int) Load 20(i)
-             536:     18(int) SMod 535 534
-                              Store 20(i) 536
-             537:     18(int) Load 20(i)
-             538:     18(int) ShiftRightArithmetic 537 460
-                              Store 20(i) 538
-             539:     18(int) Load 22(ui)
-             540:     18(int) Load 20(i)
-             541:     18(int) ShiftLeftLogical 540 539
-                              Store 20(i) 541
-             542:     18(int) Load 20(i)
-             543:     18(int) Not 542
-                              Store 20(i) 543
-             544:   186(bool) Load 367(b)
-             545:   186(bool) LogicalNot 544
-                              Store 367(b) 545
-             548:   186(bool) Load 367(b)
-                              SelectionMerge 551 None
-                              BranchConditional 548 550 560
-             550:               Label
-             552:     18(int)   Load 20(i)
-             553:    6(float)   ConvertSToF 552
-             554:    7(fvec4)   CompositeConstruct 553 553 553 553
-             555:    6(float)   Load 196(f)
-             556:    7(fvec4)   CompositeConstruct 555 555 555 555
-             557:    7(fvec4)   FAdd 554 556
-             558:    7(fvec4)   Load 9(v)
-             559:    7(fvec4)   FAdd 557 558
-                                Store 549 559
-                                Branch 551
-             560:               Label
-             561:    7(fvec4)   Load 9(v)
-                                Store 549 561
-                                Branch 551
-             551:             Label
-             562:    7(fvec4) Load 549
-                              Store 547(FragColor) 562
-                              Store 565(m1) 571
-                              Store 572(m2) 574
-             575:   186(bool) Load 367(b)
-                              SelectionMerge 578 None
-                              BranchConditional 575 577 580
-             577:               Label
-             579:         563   Load 565(m1)
-                                Store 576 579
-                                Branch 578
-             580:               Label
-             581:         563   Load 572(m2)
-                                Store 576 581
-                                Branch 578
-             578:             Label
-             582:      8(ptr) AccessChain 576 467
-             583:    7(fvec4) Load 582
-             584:    7(fvec4) Load 547(FragColor)
-             585:    7(fvec4) FAdd 584 583
-                              Store 547(FragColor) 585
+                              Name 54_1  "main"
+                              Name 59_11  "v"
+                              Name 59_1  "uv4"
+                              Name 59_12  "i"
+                              Name 59_2  "ui"
+                              Name 59_13  "swizzleTemp"
+                              Name 59_3  "ub41"
+                              Name 59_14  "f"
+                              Name 59_4  "uf"
+                              Name 59_15  "u"
+                              Name 59_5  "uui"
+                              Name 59_6  "uuv4"
+                              Name 59_16  "msb"
+                              Name 59_17  "swizzleTemp"
+                              Name 59_18  "lsb"
+                              Name 59_19  "swizzleTemp"
+                              Name 30_1  "ResType"
+                              Name 59_20  "b"
+                              Name 59_7  "ub42"
+                              Name 59_8  "FragColor"
+                              Name 59_22  "m1"
+                              Name 59_23  "m2"
+                              Name 59_9  "uiv4"
+                              Name 59_10  "ub"
+                              Decorate 59_1(uv4) Location 1
+                              Decorate 59_2(ui) Flat
+                              Decorate 59_2(ui) Location 3
+                              Decorate 59_4(uf) Location 2
+                              Decorate 59_5(uui) Flat
+                              Decorate 59_5(uui) Location 5
+                              Decorate 59_6(uuv4) Flat
+                              Decorate 59_6(uuv4) Location 4
+                              Decorate 59_8(FragColor) Location 0
+                              Decorate 59_9(uiv4) Flat
+                              Decorate 59_9(uiv4) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            32_2:             TypePointer Input 23_1(fvec4)
+       59_1(uv4):   32_2(ptr) Variable Input
+            21_1:             TypeInt 32 1
+            32_3:             TypePointer Function 21_1(int)
+            32_4:             TypePointer Input 21_1(int)
+        59_2(ui):   32_4(ptr) Variable Input
+            21_2:             TypeInt 32 0
+         uint(0):   21_2(int) Constant 0
+            32_5:             TypePointer Function 22_1(float)
+            20_1:             TypeBool
+            23_2:             TypeVector 20_1(bool) 4
+            32_6:             TypePointer Private 23_2(bvec4)
+      59_3(ub41):   32_6(ptr) Variable Private
+            32_7:             TypePointer Input 22_1(float)
+        59_4(uf):   32_7(ptr) Variable Input
+            32_8:             TypePointer Function 21_2(int)
+            32_9:             TypePointer Input 21_2(int)
+       59_5(uui):   32_9(ptr) Variable Input
+            23_3:             TypeVector 21_2(int) 4
+           32_10:             TypePointer Input 23_3(ivec4)
+      59_6(uuv4):  32_10(ptr) Variable Input
+            23_4:             TypeVector 21_2(int) 3
+           32_11:             TypePointer Function 23_3(ivec4)
+           32_12:             TypePointer Function 23_4(ivec3)
+   30_1(ResType):             TypeStruct 23_4(ivec3) 23_4(ivec3)
+         uint(1):   21_2(int) Constant 1
+         uint(2):   21_2(int) Constant 2
+           32_13:             TypePointer Function 20_1(bool)
+      59_7(ub42):   32_6(ptr) Variable Private
+            43_1:   21_1(int) Constant 2
+            43_2:   21_1(int) Constant 1
+            23_5:             TypeVector 22_1(float) 3
+            43_3: 22_1(float) Constant 1073741824
+            43_4: 22_1(float) Constant 1065353216
+            43_5:   21_1(int) Constant 66
+            43_6:   21_1(int) Constant 17
+           32_14:             TypePointer Output 23_1(fvec4)
+ 59_8(FragColor):  32_14(ptr) Variable Output
+            24_1:             TypeMatrix 23_1(fvec4) 4
+           32_15:             TypePointer Function 24_1
+            43_7: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_4 43_7 43_7 43_7
+            44_2: 23_1(fvec4) ConstantComposite 43_7 43_4 43_7 43_7
+            44_3: 23_1(fvec4) ConstantComposite 43_7 43_7 43_4 43_7
+            44_4: 23_1(fvec4) ConstantComposite 43_7 43_7 43_7 43_4
+            44_5:        24_1 ConstantComposite 44_1 44_2 44_3 44_4
+            44_6: 23_1(fvec4) ConstantComposite 43_7 43_7 43_7 43_7
+            44_7:        24_1 ConstantComposite 44_6 44_6 44_6 44_6
+            23_6:             TypeVector 21_1(int) 4
+           32_16:             TypePointer Input 23_6(ivec4)
+      59_9(uiv4):  32_16(ptr) Variable Input
+           32_17:             TypePointer Private 20_1(bool)
+       59_10(ub):  32_17(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_11(v):   32_1(ptr) Variable Function
+        59_12(i):   32_3(ptr) Variable Function
+59_13(swizzleTemp):   32_1(ptr) Variable Function
+        59_14(f):   32_5(ptr) Variable Function
+        59_15(u):   32_8(ptr) Variable Function
+      59_16(msb):  32_11(ptr) Variable Function
+59_17(swizzleTemp):  32_12(ptr) Variable Function
+      59_18(lsb):  32_11(ptr) Variable Function
+59_19(swizzleTemp):  32_12(ptr) Variable Function
+        59_20(b):  32_13(ptr) Variable Function
+           59_21:   32_1(ptr) Variable Function
+       59_22(m1):  32_15(ptr) Variable Function
+       59_23(m2):  32_15(ptr) Variable Function
+           59_24:  32_15(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(uv4)
+          1-11_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 11(Radians) 61_1
+                              Store 59_11(v) 1-11_1
+            61_2: 23_1(fvec4) Load 59_11(v)
+          1-12_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 12(Degrees) 61_2
+            61_3: 23_1(fvec4) Load 59_11(v)
+           129_1: 23_1(fvec4) FAdd 61_3 1-12_1
+                              Store 59_11(v) 129_1
+            61_4:   21_1(int) Load 59_2(ui)
+            61_5:   21_1(int) Load 59_2(ui)
+           132_1:   21_1(int) IMul 61_4 61_5
+                              Store 59_12(i) 132_1
+            61_6: 23_1(fvec4) Load 59_11(v)
+          1-13_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 13(Sin) 61_6
+            61_7: 23_1(fvec4) Load 59_11(v)
+           129_2: 23_1(fvec4) FAdd 61_7 1-13_1
+                              Store 59_11(v) 129_2
+            61_8: 23_1(fvec4) Load 59_11(v)
+          1-14_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 14(Cos) 61_8
+            61_9: 23_1(fvec4) Load 59_11(v)
+           129_3: 23_1(fvec4) FAdd 61_9 1-14_1
+                              Store 59_11(v) 129_3
+           61_10: 23_1(fvec4) Load 59_11(v)
+          1-15_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 15(Tan) 61_10
+           61_11: 23_1(fvec4) Load 59_11(v)
+           129_4: 23_1(fvec4) FAdd 61_11 1-15_1
+                              Store 59_11(v) 129_4
+           61_12: 23_1(fvec4) Load 59_11(v)
+          1-16_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 16(Asin) 61_12
+           61_13: 23_1(fvec4) Load 59_11(v)
+           129_5: 23_1(fvec4) FAdd 61_13 1-16_1
+                              Store 59_11(v) 129_5
+           61_14: 23_1(fvec4) Load 59_11(v)
+          1-17_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 17(Acos) 61_14
+           61_15: 23_1(fvec4) Load 59_11(v)
+           129_6: 23_1(fvec4) FAdd 61_15 1-17_1
+                              Store 59_11(v) 129_6
+           61_16: 23_1(fvec4) Load 59_11(v)
+          1-18_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 18(Atan) 61_16
+           61_17: 23_1(fvec4) Load 59_11(v)
+           129_7: 23_1(fvec4) FAdd 61_17 1-18_1
+                              Store 59_11(v) 129_7
+           61_18: 23_1(fvec4) Load 59_11(v)
+          1-19_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 19(Sinh) 61_18
+           61_19: 23_1(fvec4) Load 59_11(v)
+           129_8: 23_1(fvec4) FAdd 61_19 1-19_1
+                              Store 59_11(v) 129_8
+           61_20: 23_1(fvec4) Load 59_11(v)
+          1-20_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 20(Cosh) 61_20
+           61_21: 23_1(fvec4) Load 59_11(v)
+           129_9: 23_1(fvec4) FAdd 61_21 1-20_1
+                              Store 59_11(v) 129_9
+           61_22: 23_1(fvec4) Load 59_11(v)
+          1-21_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 21(Tanh) 61_22
+           61_23: 23_1(fvec4) Load 59_11(v)
+          129_10: 23_1(fvec4) FAdd 61_23 1-21_1
+                              Store 59_11(v) 129_10
+           61_24: 23_1(fvec4) Load 59_11(v)
+          1-22_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 22(Asinh) 61_24
+           61_25: 23_1(fvec4) Load 59_11(v)
+          129_11: 23_1(fvec4) FAdd 61_25 1-22_1
+                              Store 59_11(v) 129_11
+           61_26: 23_1(fvec4) Load 59_11(v)
+          1-23_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 23(Acosh) 61_26
+           61_27: 23_1(fvec4) Load 59_11(v)
+          129_12: 23_1(fvec4) FAdd 61_27 1-23_1
+                              Store 59_11(v) 129_12
+           61_28: 23_1(fvec4) Load 59_11(v)
+          1-24_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 24(Atanh) 61_28
+           61_29: 23_1(fvec4) Load 59_11(v)
+          129_13: 23_1(fvec4) FAdd 61_29 1-24_1
+                              Store 59_11(v) 129_13
+           61_30: 23_1(fvec4) Load 59_11(v)
+           61_31: 23_1(fvec4) Load 59_11(v)
+          1-26_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 26(Pow) 61_30 61_31
+           61_32: 23_1(fvec4) Load 59_11(v)
+          129_14: 23_1(fvec4) FAdd 61_32 1-26_1
+                              Store 59_11(v) 129_14
+           61_33: 23_1(fvec4) Load 59_11(v)
+          1-27_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 27(Exp) 61_33
+           61_34: 23_1(fvec4) Load 59_11(v)
+          129_15: 23_1(fvec4) FAdd 61_34 1-27_1
+                              Store 59_11(v) 129_15
+           61_35: 23_1(fvec4) Load 59_11(v)
+          1-28_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 28(Log) 61_35
+           61_36: 23_1(fvec4) Load 59_11(v)
+          129_16: 23_1(fvec4) FAdd 61_36 1-28_1
+                              Store 59_11(v) 129_16
+           61_37: 23_1(fvec4) Load 59_11(v)
+          1-29_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 29(Exp2) 61_37
+           61_38: 23_1(fvec4) Load 59_11(v)
+          129_17: 23_1(fvec4) FAdd 61_38 1-29_1
+                              Store 59_11(v) 129_17
+           61_39: 23_1(fvec4) Load 59_11(v)
+          1-30_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 30(Log2) 61_39
+           61_40: 23_1(fvec4) Load 59_11(v)
+          129_18: 23_1(fvec4) FAdd 61_40 1-30_1
+                              Store 59_11(v) 129_18
+           61_41: 23_1(fvec4) Load 59_11(v)
+          1-31_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 31(Sqrt) 61_41
+           61_42: 23_1(fvec4) Load 59_11(v)
+          129_19: 23_1(fvec4) FAdd 61_42 1-31_1
+                              Store 59_11(v) 129_19
+           61_43: 23_1(fvec4) Load 59_11(v)
+          1-32_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 32(InverseSqrt) 61_43
+           61_44: 23_1(fvec4) Load 59_11(v)
+          129_20: 23_1(fvec4) FAdd 61_44 1-32_1
+                              Store 59_11(v) 129_20
+           61_45: 23_1(fvec4) Load 59_11(v)
+           1-4_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 4(FAbs) 61_45
+           61_46: 23_1(fvec4) Load 59_11(v)
+          129_21: 23_1(fvec4) FAdd 61_46 1-4_1
+                              Store 59_11(v) 129_21
+           61_47: 23_1(fvec4) Load 59_11(v)
+           1-6_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 6(FSign) 61_47
+           61_48: 23_1(fvec4) Load 59_11(v)
+          129_22: 23_1(fvec4) FAdd 61_48 1-6_1
+                              Store 59_11(v) 129_22
+           61_49: 23_1(fvec4) Load 59_11(v)
+           1-8_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 8(Floor) 61_49
+           61_50: 23_1(fvec4) Load 59_11(v)
+          129_23: 23_1(fvec4) FAdd 61_50 1-8_1
+                              Store 59_11(v) 129_23
+           61_51: 23_1(fvec4) Load 59_11(v)
+           1-3_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 3(Trunc) 61_51
+           61_52: 23_1(fvec4) Load 59_11(v)
+          129_24: 23_1(fvec4) FAdd 61_52 1-3_1
+                              Store 59_11(v) 129_24
+           61_53: 23_1(fvec4) Load 59_11(v)
+           1-1_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 1(Round) 61_53
+           61_54: 23_1(fvec4) Load 59_11(v)
+          129_25: 23_1(fvec4) FAdd 61_54 1-1_1
+                              Store 59_11(v) 129_25
+           61_55: 23_1(fvec4) Load 59_11(v)
+           1-2_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 2(RoundEven) 61_55
+           61_56: 23_1(fvec4) Load 59_11(v)
+          129_26: 23_1(fvec4) FAdd 61_56 1-2_1
+                              Store 59_11(v) 129_26
+           61_57: 23_1(fvec4) Load 59_11(v)
+           1-9_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 9(Ceil) 61_57
+           61_58: 23_1(fvec4) Load 59_11(v)
+          129_27: 23_1(fvec4) FAdd 61_58 1-9_1
+                              Store 59_11(v) 129_27
+           61_59: 23_1(fvec4) Load 59_11(v)
+          1-10_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 10(Fract) 61_59
+           61_60: 23_1(fvec4) Load 59_11(v)
+          129_28: 23_1(fvec4) FAdd 61_60 1-10_1
+                              Store 59_11(v) 129_28
+           61_61: 23_1(fvec4) Load 59_11(v)
+           61_62: 23_1(fvec4) Load 59_11(v)
+           141_1: 23_1(fvec4) FMod 61_61 61_62
+           61_63: 23_1(fvec4) Load 59_11(v)
+          129_29: 23_1(fvec4) FAdd 61_63 141_1
+                              Store 59_11(v) 129_29
+           61_64: 23_1(fvec4) Load 59_11(v)
+            65_1:   32_5(ptr) AccessChain 59_11(v) uint(0)
+           61_65: 22_1(float) Load 65_1
+            80_1: 23_1(fvec4) CompositeConstruct 61_65 61_65 61_65 61_65
+           141_2: 23_1(fvec4) FMod 61_64 80_1
+           61_66: 23_1(fvec4) Load 59_11(v)
+          129_30: 23_1(fvec4) FAdd 61_66 141_2
+                              Store 59_11(v) 129_30
+           61_67: 23_1(fvec4) Load 59_11(v)
+          1-35_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 35(Modf) 61_67 59_11(v)
+           61_68: 23_1(fvec4) Load 59_11(v)
+          129_31: 23_1(fvec4) FAdd 61_68 1-35_1
+                              Store 59_11(v) 129_31
+           61_69: 23_1(fvec4) Load 59_11(v)
+          1-35_2: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 35(Modf) 61_69 59_13(swizzleTemp)
+           61_70: 23_1(fvec4) Load 59_13(swizzleTemp)
+           61_71: 23_1(fvec4) Load 59_11(v)
+            79_1: 23_1(fvec4) VectorShuffle 61_71 61_70 6 4 5 7
+                              Store 59_11(v) 79_1
+           61_72: 23_1(fvec4) Load 59_11(v)
+          129_32: 23_1(fvec4) FAdd 61_72 1-35_2
+                              Store 59_11(v) 129_32
+           61_73: 23_1(fvec4) Load 59_11(v)
+           61_74: 23_1(fvec4) Load 59_1(uv4)
+          1-37_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 37(FMin) 61_73 61_74
+           61_75: 23_1(fvec4) Load 59_11(v)
+          129_33: 23_1(fvec4) FAdd 61_75 1-37_1
+                              Store 59_11(v) 129_33
+           61_76: 23_1(fvec4) Load 59_11(v)
+           61_77: 23_1(fvec4) Load 59_1(uv4)
+          1-40_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 40(FMax) 61_76 61_77
+           61_78: 23_1(fvec4) Load 59_11(v)
+          129_34: 23_1(fvec4) FAdd 61_78 1-40_1
+                              Store 59_11(v) 129_34
+           61_79: 23_1(fvec4) Load 59_11(v)
+           61_80: 23_1(fvec4) Load 59_1(uv4)
+           61_81: 23_1(fvec4) Load 59_1(uv4)
+          1-43_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 43(FClamp) 61_79 61_80 61_81
+           61_82: 23_1(fvec4) Load 59_11(v)
+          129_35: 23_1(fvec4) FAdd 61_82 1-43_1
+                              Store 59_11(v) 129_35
+           61_83: 23_1(fvec4) Load 59_11(v)
+           61_84: 23_1(fvec4) Load 59_11(v)
+           61_85: 23_1(fvec4) Load 59_11(v)
+          1-46_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 46(FMix) 61_83 61_84 61_85
+           61_86: 23_1(fvec4) Load 59_11(v)
+          129_36: 23_1(fvec4) FAdd 61_86 1-46_1
+                              Store 59_11(v) 129_36
+           61_87: 23_1(fvec4) Load 59_11(v)
+           61_88: 23_1(fvec4) Load 59_11(v)
+           61_89: 23_2(bvec4) Load 59_3(ub41)
+           169_1: 23_1(fvec4) Select 61_89 61_88 61_87
+           61_90: 23_1(fvec4) Load 59_11(v)
+          129_37: 23_1(fvec4) FAdd 61_90 169_1
+                              Store 59_11(v) 129_37
+           61_91: 23_1(fvec4) Load 59_11(v)
+           61_92: 23_1(fvec4) Load 59_11(v)
+           61_93: 22_1(float) Load 59_14(f)
+            80_2: 23_1(fvec4) CompositeConstruct 61_93 61_93 61_93 61_93
+          1-46_2: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 46(FMix) 61_91 61_92 80_2
+           61_94: 23_1(fvec4) Load 59_11(v)
+          129_38: 23_1(fvec4) FAdd 61_94 1-46_2
+                              Store 59_11(v) 129_38
+           61_95: 23_1(fvec4) Load 59_11(v)
+           61_96: 23_1(fvec4) Load 59_1(uv4)
+           61_97: 23_1(fvec4) Load 59_11(v)
+          1-50_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 50(Fma) 61_95 61_96 61_97
+           61_98: 23_1(fvec4) Load 59_11(v)
+          129_39: 23_1(fvec4) FAdd 61_98 1-50_1
+                              Store 59_11(v) 129_39
+           61_99: 23_1(fvec4) Load 59_11(v)
+          61_100: 23_1(fvec4) Load 59_11(v)
+          1-48_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 48(Step) 61_99 61_100
+          61_101: 23_1(fvec4) Load 59_11(v)
+          129_40: 23_1(fvec4) FAdd 61_101 1-48_1
+                              Store 59_11(v) 129_40
+          61_102: 23_1(fvec4) Load 59_11(v)
+          61_103: 23_1(fvec4) Load 59_11(v)
+          61_104: 23_1(fvec4) Load 59_11(v)
+          1-49_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 49(SmoothStep) 61_102 61_103 61_104
+          61_105: 23_1(fvec4) Load 59_11(v)
+          129_41: 23_1(fvec4) FAdd 61_105 1-49_1
+                              Store 59_11(v) 129_41
+          61_106: 22_1(float) Load 59_4(uf)
+          61_107: 23_1(fvec4) Load 59_11(v)
+            80_3: 23_1(fvec4) CompositeConstruct 61_106 61_106 61_106 61_106
+          1-48_2: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 48(Step) 80_3 61_107
+          61_108: 23_1(fvec4) Load 59_11(v)
+          129_42: 23_1(fvec4) FAdd 61_108 1-48_2
+                              Store 59_11(v) 129_42
+          61_109: 22_1(float) Load 59_4(uf)
+          61_110: 22_1(float) Load 59_4(uf)
+          61_111: 23_1(fvec4) Load 59_11(v)
+            80_4: 23_1(fvec4) CompositeConstruct 61_109 61_109 61_109 61_109
+            80_5: 23_1(fvec4) CompositeConstruct 61_110 61_110 61_110 61_110
+          1-49_2: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 49(SmoothStep) 80_4 80_5 61_111
+          61_112: 23_1(fvec4) Load 59_11(v)
+          129_43: 23_1(fvec4) FAdd 61_112 1-49_2
+                              Store 59_11(v) 129_43
+          61_113: 23_1(fvec4) Load 59_11(v)
+          1-69_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 69(Normalize) 61_113
+          61_114: 23_1(fvec4) Load 59_11(v)
+          129_44: 23_1(fvec4) FAdd 61_114 1-69_1
+                              Store 59_11(v) 129_44
+          61_115: 23_1(fvec4) Load 59_11(v)
+          61_116: 23_1(fvec4) Load 59_11(v)
+          61_117: 23_1(fvec4) Load 59_11(v)
+          1-70_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 70(FaceForward) 61_115 61_116 61_117
+          61_118: 23_1(fvec4) Load 59_11(v)
+          129_45: 23_1(fvec4) FAdd 61_118 1-70_1
+                              Store 59_11(v) 129_45
+          61_119: 23_1(fvec4) Load 59_11(v)
+          61_120: 23_1(fvec4) Load 59_11(v)
+          1-71_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 71(Reflect) 61_119 61_120
+          61_121: 23_1(fvec4) Load 59_11(v)
+          129_46: 23_1(fvec4) FAdd 61_121 1-71_1
+                              Store 59_11(v) 129_46
+          61_122: 23_1(fvec4) Load 59_11(v)
+          61_123: 23_1(fvec4) Load 59_11(v)
+          61_124: 22_1(float) Load 59_4(uf)
+          1-72_1: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 72(Refract) 61_122 61_123 61_124
+          61_125: 23_1(fvec4) Load 59_11(v)
+          129_47: 23_1(fvec4) FAdd 61_125 1-72_1
+                              Store 59_11(v) 129_47
+          61_126: 23_1(fvec4) Load 59_11(v)
+           207_1: 23_1(fvec4) DPdx 61_126
+          61_127: 23_1(fvec4) Load 59_11(v)
+          129_48: 23_1(fvec4) FAdd 61_127 207_1
+                              Store 59_11(v) 129_48
+          61_128: 23_1(fvec4) Load 59_11(v)
+           208_1: 23_1(fvec4) DPdy 61_128
+          61_129: 23_1(fvec4) Load 59_11(v)
+          129_49: 23_1(fvec4) FAdd 61_129 208_1
+                              Store 59_11(v) 129_49
+          61_130: 23_1(fvec4) Load 59_11(v)
+           209_1: 23_1(fvec4) Fwidth 61_130
+          61_131: 23_1(fvec4) Load 59_11(v)
+          129_50: 23_1(fvec4) FAdd 61_131 209_1
+                              Store 59_11(v) 129_50
+          61_132:   21_1(int) Load 59_2(ui)
+           1-5_1:   21_1(int) ExtInst 11_1(GLSL.std.450) 5(SAbs) 61_132
+          61_133:   21_1(int) Load 59_12(i)
+           128_1:   21_1(int) IAdd 61_133 1-5_1
+                              Store 59_12(i) 128_1
+          61_134:   21_1(int) Load 59_12(i)
+           1-7_1:   21_1(int) ExtInst 11_1(GLSL.std.450) 7(SSign) 61_134
+          61_135:   21_1(int) Load 59_12(i)
+           128_2:   21_1(int) IAdd 61_135 1-7_1
+                              Store 59_12(i) 128_2
+          61_136:   21_1(int) Load 59_12(i)
+          61_137:   21_1(int) Load 59_2(ui)
+          1-39_1:   21_1(int) ExtInst 11_1(GLSL.std.450) 39(SMin) 61_136 61_137
+          61_138:   21_1(int) Load 59_12(i)
+           128_3:   21_1(int) IAdd 61_138 1-39_1
+                              Store 59_12(i) 128_3
+          61_139:   21_1(int) Load 59_12(i)
+          61_140:   21_1(int) Load 59_2(ui)
+          1-42_1:   21_1(int) ExtInst 11_1(GLSL.std.450) 42(SMax) 61_139 61_140
+          61_141:   21_1(int) Load 59_12(i)
+           128_4:   21_1(int) IAdd 61_141 1-42_1
+                              Store 59_12(i) 128_4
+          61_142:   21_1(int) Load 59_12(i)
+          61_143:   21_1(int) Load 59_2(ui)
+          61_144:   21_1(int) Load 59_2(ui)
+          1-45_1:   21_1(int) ExtInst 11_1(GLSL.std.450) 45(SClamp) 61_142 61_143 61_144
+          61_145:   21_1(int) Load 59_12(i)
+           128_5:   21_1(int) IAdd 61_145 1-45_1
+                              Store 59_12(i) 128_5
+          61_146:   21_2(int) Load 59_15(u)
+          61_147:   21_2(int) Load 59_5(uui)
+          1-38_1:   21_2(int) ExtInst 11_1(GLSL.std.450) 38(UMin) 61_146 61_147
+          61_148:   21_2(int) Load 59_15(u)
+           128_6:   21_2(int) IAdd 61_148 1-38_1
+                              Store 59_15(u) 128_6
+          61_149:   21_2(int) Load 59_15(u)
+          61_150:   21_2(int) Load 59_5(uui)
+          1-41_1:   21_2(int) ExtInst 11_1(GLSL.std.450) 41(UMax) 61_149 61_150
+          61_151:   21_2(int) Load 59_15(u)
+           128_7:   21_2(int) IAdd 61_151 1-41_1
+                              Store 59_15(u) 128_7
+          61_152:   21_2(int) Load 59_15(u)
+          61_153:   21_2(int) Load 59_5(uui)
+          61_154:   21_2(int) Load 59_5(uui)
+          1-44_1:   21_2(int) ExtInst 11_1(GLSL.std.450) 44(UClamp) 61_152 61_153 61_154
+          61_155:   21_2(int) Load 59_15(u)
+           128_8:   21_2(int) IAdd 61_155 1-44_1
+                              Store 59_15(u) 128_8
+          61_156: 23_3(ivec4) Load 59_6(uuv4)
+            79_2: 23_4(ivec3) VectorShuffle 61_156 61_156 0 1 2
+          61_157: 23_3(ivec4) Load 59_6(uuv4)
+            79_3: 23_4(ivec3) VectorShuffle 61_157 61_157 0 1 2
+           151_1:30_1(ResType) UMulExtended 79_2 79_3
+            81_1: 23_4(ivec3) CompositeExtract 151_1 0
+                              Store 59_19(swizzleTemp) 81_1
+            81_2: 23_4(ivec3) CompositeExtract 151_1 1
+                              Store 59_17(swizzleTemp) 81_2
+          61_158: 23_4(ivec3) Load 59_17(swizzleTemp)
+            65_2:   32_8(ptr) AccessChain 59_16(msb) uint(0)
+            81_3:   21_2(int) CompositeExtract 61_158 0
+                              Store 65_2 81_3
+            65_3:   32_8(ptr) AccessChain 59_16(msb) uint(1)
+            81_4:   21_2(int) CompositeExtract 61_158 1
+                              Store 65_3 81_4
+            65_4:   32_8(ptr) AccessChain 59_16(msb) uint(2)
+            81_5:   21_2(int) CompositeExtract 61_158 2
+                              Store 65_4 81_5
+          61_159: 23_4(ivec3) Load 59_19(swizzleTemp)
+            65_5:   32_8(ptr) AccessChain 59_18(lsb) uint(0)
+            81_6:   21_2(int) CompositeExtract 61_159 0
+                              Store 65_5 81_6
+            65_6:   32_8(ptr) AccessChain 59_18(lsb) uint(1)
+            81_7:   21_2(int) CompositeExtract 61_159 1
+                              Store 65_6 81_7
+            65_7:   32_8(ptr) AccessChain 59_18(lsb) uint(2)
+            81_8:   21_2(int) CompositeExtract 61_159 2
+                              Store 65_7 81_8
+            65_8:   32_8(ptr) AccessChain 59_16(msb) uint(0)
+          61_160:   21_2(int) Load 65_8
+            65_9:   32_8(ptr) AccessChain 59_16(msb) uint(1)
+          61_161:   21_2(int) Load 65_9
+           128_9:   21_2(int) IAdd 61_160 61_161
+           65_10:   32_8(ptr) AccessChain 59_16(msb) uint(2)
+          61_162:   21_2(int) Load 65_10
+          128_10:   21_2(int) IAdd 128_9 61_162
+          61_163:   21_2(int) Load 59_15(u)
+          128_11:   21_2(int) IAdd 61_163 128_10
+                              Store 59_15(u) 128_11
+           65_11:   32_8(ptr) AccessChain 59_18(lsb) uint(0)
+          61_164:   21_2(int) Load 65_11
+           65_12:   32_8(ptr) AccessChain 59_18(lsb) uint(1)
+          61_165:   21_2(int) Load 65_12
+          128_12:   21_2(int) IAdd 61_164 61_165
+           65_13:   32_8(ptr) AccessChain 59_18(lsb) uint(2)
+          61_166:   21_2(int) Load 65_13
+          128_13:   21_2(int) IAdd 128_12 61_166
+          61_167:   21_2(int) Load 59_15(u)
+          128_14:   21_2(int) IAdd 61_167 128_13
+                              Store 59_15(u) 128_14
+          61_168: 22_1(float) Load 59_4(uf)
+           156_1:  20_1(bool) IsNan 61_168
+                              Store 59_20(b) 156_1
+          61_169: 22_1(float) Load 59_14(f)
+           157_1:  20_1(bool) IsInf 61_169
+                              Store 59_20(b) 157_1
+          61_170: 23_1(fvec4) Load 59_11(v)
+          61_171: 23_1(fvec4) Load 59_1(uv4)
+           184_1: 23_2(bvec4) FOrdLessThan 61_170 61_171
+           154_1:  20_1(bool) Any 184_1
+                              Store 59_20(b) 154_1
+          61_172:  20_1(bool) Load 59_20(b)
+                              SelectionMerge 248_3 None
+                              BranchConditional 61_172 248_2 248_3
+           248_2:               Label
+          61_173: 23_1(fvec4)   Load 59_11(v)
+          61_174: 23_1(fvec4)   Load 59_1(uv4)
+           188_1: 23_2(bvec4)   FOrdLessThanEqual 61_173 61_174
+           154_2:  20_1(bool)   Any 188_1
+                                Branch 248_3
+           248_3:             Label
+           245_1:  20_1(bool) Phi 61_172 248_1 154_2 248_2
+                              Store 59_20(b) 245_1
+          61_175:  20_1(bool) Load 59_20(b)
+                              SelectionMerge 248_5 None
+                              BranchConditional 61_175 248_4 248_5
+           248_4:               Label
+          61_176: 23_1(fvec4)   Load 59_11(v)
+          61_177: 23_1(fvec4)   Load 59_1(uv4)
+           186_1: 23_2(bvec4)   FOrdGreaterThan 61_176 61_177
+           154_3:  20_1(bool)   Any 186_1
+                                Branch 248_5
+           248_5:             Label
+           245_2:  20_1(bool) Phi 61_175 248_3 154_3 248_4
+                              Store 59_20(b) 245_2
+          61_178:  20_1(bool) Load 59_20(b)
+                              SelectionMerge 248_7 None
+                              BranchConditional 61_178 248_6 248_7
+           248_6:               Label
+          61_179: 23_1(fvec4)   Load 59_11(v)
+          61_180: 23_1(fvec4)   Load 59_1(uv4)
+           190_1: 23_2(bvec4)   FOrdGreaterThanEqual 61_179 61_180
+           154_4:  20_1(bool)   Any 190_1
+                                Branch 248_7
+           248_7:             Label
+           245_3:  20_1(bool) Phi 61_178 248_5 154_4 248_6
+                              Store 59_20(b) 245_3
+          61_181:  20_1(bool) Load 59_20(b)
+                              SelectionMerge 248_9 None
+                              BranchConditional 61_181 248_8 248_9
+           248_8:               Label
+          61_182: 23_2(bvec4)   Load 59_3(ub41)
+          61_183: 23_2(bvec4)   Load 59_7(ub42)
+           164_1: 23_2(bvec4)   LogicalEqual 61_182 61_183
+           154_5:  20_1(bool)   Any 164_1
+                                Branch 248_9
+           248_9:             Label
+           245_4:  20_1(bool) Phi 61_181 248_7 154_5 248_8
+                              Store 59_20(b) 245_4
+          61_184:  20_1(bool) Load 59_20(b)
+                              SelectionMerge 248_11 None
+                              BranchConditional 61_184 248_10 248_11
+          248_10:               Label
+          61_185: 23_2(bvec4)   Load 59_3(ub41)
+          61_186: 23_2(bvec4)   Load 59_7(ub42)
+           165_1: 23_2(bvec4)   LogicalNotEqual 61_185 61_186
+           154_6:  20_1(bool)   Any 165_1
+                                Branch 248_11
+          248_11:             Label
+           245_5:  20_1(bool) Phi 61_184 248_9 154_6 248_10
+                              Store 59_20(b) 245_5
+          61_187:  20_1(bool) Load 59_20(b)
+          61_188: 23_2(bvec4) Load 59_3(ub41)
+           154_7:  20_1(bool) Any 61_188
+           167_1:  20_1(bool) LogicalAnd 61_187 154_7
+                              Store 59_20(b) 167_1
+          61_189:  20_1(bool) Load 59_20(b)
+          61_190: 23_2(bvec4) Load 59_3(ub41)
+           155_1:  20_1(bool) All 61_190
+           167_2:  20_1(bool) LogicalAnd 61_189 155_1
+                              Store 59_20(b) 167_2
+          61_191:  20_1(bool) Load 59_20(b)
+                              SelectionMerge 248_13 None
+                              BranchConditional 61_191 248_12 248_13
+          248_12:               Label
+          61_192: 23_2(bvec4)   Load 59_3(ub41)
+           168_1: 23_2(bvec4)   LogicalNot 61_192
+           154_8:  20_1(bool)   Any 168_1
+                                Branch 248_13
+          248_13:             Label
+           245_6:  20_1(bool) Phi 61_191 248_11 154_8 248_12
+                              Store 59_20(b) 245_6
+          61_193:   21_1(int) Load 59_12(i)
+          61_194:   21_1(int) Load 59_2(ui)
+          128_15:   21_1(int) IAdd 61_193 61_194
+          61_195:   21_1(int) Load 59_12(i)
+           132_2:   21_1(int) IMul 128_15 61_195
+          61_196:   21_1(int) Load 59_2(ui)
+           130_1:   21_1(int) ISub 132_2 61_196
+          61_197:   21_1(int) Load 59_12(i)
+           135_1:   21_1(int) SDiv 130_1 61_197
+                              Store 59_12(i) 135_1
+          61_198:   21_1(int) Load 59_12(i)
+          61_199:   21_1(int) Load 59_2(ui)
+           139_1:   21_1(int) SMod 61_198 61_199
+                              Store 59_12(i) 139_1
+          61_200:   21_1(int) Load 59_12(i)
+          61_201:   21_1(int) Load 59_2(ui)
+           170_1:  20_1(bool) IEqual 61_200 61_201
+           168_2:  20_1(bool) LogicalNot 170_1
+                              SelectionMerge 248_17 None
+                              BranchConditional 168_2 248_14 248_17
+          248_14:               Label
+          61_202:   21_1(int)   Load 59_12(i)
+          61_203:   21_1(int)   Load 59_2(ui)
+           171_1:  20_1(bool)   INotEqual 61_202 61_203
+                                SelectionMerge 248_16 None
+                                BranchConditional 171_1 248_15 248_16
+          248_15:                 Label
+          61_204:   21_1(int)     Load 59_12(i)
+          61_205:   21_1(int)     Load 59_2(ui)
+           170_2:  20_1(bool)     IEqual 61_204 61_205
+                                  Branch 248_16
+          248_16:               Label
+           245_7:  20_1(bool)   Phi 171_1 248_14 170_2 248_15
+          61_206:   21_1(int)   Load 59_12(i)
+           171_2:  20_1(bool)   INotEqual 61_206 43_1
+           165_2:  20_1(bool)   LogicalNotEqual 245_7 171_2
+                                Branch 248_17
+          248_17:             Label
+           245_8:  20_1(bool) Phi 170_1 248_13 165_2 248_16
+                              SelectionMerge 248_19 None
+                              BranchConditional 245_8 248_18 248_19
+          248_18:               Label
+          61_207:   21_1(int)   Load 59_12(i)
+          128_16:   21_1(int)   IAdd 61_207 43_2
+                                Store 59_12(i) 128_16
+                                Branch 248_19
+          248_19:             Label
+          61_208: 22_1(float) Load 59_4(uf)
+          61_209: 22_1(float) Load 59_4(uf)
+          129_51: 22_1(float) FAdd 61_208 61_209
+          61_210: 22_1(float) Load 59_4(uf)
+           133_1: 22_1(float) FMul 129_51 61_210
+          61_211: 22_1(float) Load 59_4(uf)
+           131_1: 22_1(float) FSub 133_1 61_211
+          61_212: 22_1(float) Load 59_4(uf)
+           136_1: 22_1(float) FDiv 131_1 61_212
+                              Store 59_14(f) 136_1
+          61_213: 23_1(fvec4) Load 59_11(v)
+          1-66_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 66(Length) 61_213
+          61_214: 22_1(float) Load 59_14(f)
+          129_52: 22_1(float) FAdd 61_214 1-66_1
+                              Store 59_14(f) 129_52
+          61_215: 23_1(fvec4) Load 59_11(v)
+          61_216: 23_1(fvec4) Load 59_11(v)
+          1-67_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 67(Distance) 61_215 61_216
+          61_217: 22_1(float) Load 59_14(f)
+          129_53: 22_1(float) FAdd 61_217 1-67_1
+                              Store 59_14(f) 129_53
+          61_218: 23_1(fvec4) Load 59_11(v)
+          61_219: 23_1(fvec4) Load 59_11(v)
+           148_1: 22_1(float) Dot 61_218 61_219
+          61_220: 22_1(float) Load 59_14(f)
+          129_54: 22_1(float) FAdd 61_220 148_1
+                              Store 59_14(f) 129_54
+          61_221: 22_1(float) Load 59_14(f)
+          61_222: 22_1(float) Load 59_4(uf)
+           133_2: 22_1(float) FMul 61_221 61_222
+          61_223: 22_1(float) Load 59_14(f)
+          129_55: 22_1(float) FAdd 61_223 133_2
+                              Store 59_14(f) 129_55
+          61_224: 23_1(fvec4) Load 59_11(v)
+            79_4: 23_5(fvec3) VectorShuffle 61_224 61_224 0 1 2
+          61_225: 23_1(fvec4) Load 59_11(v)
+            79_5: 23_5(fvec3) VectorShuffle 61_225 61_225 0 1 2
+          1-68_1: 23_5(fvec3) ExtInst 11_1(GLSL.std.450) 68(Cross) 79_4 79_5
+            81_9: 22_1(float) CompositeExtract 1-68_1 0
+          61_226: 22_1(float) Load 59_14(f)
+          129_56: 22_1(float) FAdd 61_226 81_9
+                              Store 59_14(f) 129_56
+          61_227: 22_1(float) Load 59_14(f)
+          61_228: 22_1(float) Load 59_4(uf)
+           180_1:  20_1(bool) FOrdEqual 61_227 61_228
+           168_3:  20_1(bool) LogicalNot 180_1
+                              SelectionMerge 248_21 None
+                              BranchConditional 168_3 248_20 248_21
+          248_20:               Label
+          61_229: 22_1(float)   Load 59_14(f)
+          61_230: 22_1(float)   Load 59_4(uf)
+           183_1:  20_1(bool)   FUnordNotEqual 61_229 61_230
+          61_231: 22_1(float)   Load 59_14(f)
+           183_2:  20_1(bool)   FUnordNotEqual 61_231 43_3
+           167_3:  20_1(bool)   LogicalAnd 183_1 183_2
+                                Branch 248_21
+          248_21:             Label
+           245_9:  20_1(bool) Phi 180_1 248_19 167_3 248_20
+                              SelectionMerge 248_23 None
+                              BranchConditional 245_9 248_22 248_23
+          248_22:               Label
+          61_232: 22_1(float)   Load 59_14(f)
+          129_57: 22_1(float)   FAdd 61_232 43_4
+                                Store 59_14(f) 129_57
+                                Branch 248_23
+          248_23:             Label
+          61_233:   21_1(int) Load 59_2(ui)
+          61_234:   21_1(int) Load 59_12(i)
+           199_1:   21_1(int) BitwiseAnd 61_234 61_233
+                              Store 59_12(i) 199_1
+          61_235:   21_1(int) Load 59_12(i)
+           197_1:   21_1(int) BitwiseOr 61_235 43_5
+                              Store 59_12(i) 197_1
+          61_236:   21_1(int) Load 59_2(ui)
+          61_237:   21_1(int) Load 59_12(i)
+           198_1:   21_1(int) BitwiseXor 61_237 61_236
+                              Store 59_12(i) 198_1
+          61_238:   21_1(int) Load 59_12(i)
+           139_2:   21_1(int) SMod 61_238 43_6
+                              Store 59_12(i) 139_2
+          61_239:   21_1(int) Load 59_12(i)
+           195_1:   21_1(int) ShiftRightArithmetic 61_239 43_1
+                              Store 59_12(i) 195_1
+          61_240:   21_1(int) Load 59_2(ui)
+          61_241:   21_1(int) Load 59_12(i)
+           196_1:   21_1(int) ShiftLeftLogical 61_241 61_240
+                              Store 59_12(i) 196_1
+          61_242:   21_1(int) Load 59_12(i)
+           200_1:   21_1(int) Not 61_242
+                              Store 59_12(i) 200_1
+          61_243:  20_1(bool) Load 59_20(b)
+           168_4:  20_1(bool) LogicalNot 61_243
+                              Store 59_20(b) 168_4
+          61_244:  20_1(bool) Load 59_20(b)
+                              SelectionMerge 248_26 None
+                              BranchConditional 61_244 248_24 248_25
+          248_24:               Label
+          61_245:   21_1(int)   Load 59_12(i)
+           111_1: 22_1(float)   ConvertSToF 61_245
+            80_6: 23_1(fvec4)   CompositeConstruct 111_1 111_1 111_1 111_1
+          61_246: 22_1(float)   Load 59_14(f)
+            80_7: 23_1(fvec4)   CompositeConstruct 61_246 61_246 61_246 61_246
+          129_58: 23_1(fvec4)   FAdd 80_6 80_7
+          61_247: 23_1(fvec4)   Load 59_11(v)
+          129_59: 23_1(fvec4)   FAdd 129_58 61_247
+                                Store 59_21 129_59
+                                Branch 248_26
+          248_25:               Label
+          61_248: 23_1(fvec4)   Load 59_11(v)
+                                Store 59_21 61_248
+                                Branch 248_26
+          248_26:             Label
+          61_249: 23_1(fvec4) Load 59_21
+                              Store 59_8(FragColor) 61_249
+                              Store 59_22(m1) 44_5
+                              Store 59_23(m2) 44_7
+          61_250:  20_1(bool) Load 59_20(b)
+                              SelectionMerge 248_29 None
+                              BranchConditional 61_250 248_27 248_28
+          248_27:               Label
+          61_251:        24_1   Load 59_22(m1)
+                                Store 59_24 61_251
+                                Branch 248_29
+          248_28:               Label
+          61_252:        24_1   Load 59_23(m2)
+                                Store 59_24 61_252
+                                Branch 248_29
+          248_29:             Label
+           65_14:   32_1(ptr) AccessChain 59_24 43_2
+          61_253: 23_1(fvec4) Load 65_14
+          61_254: 23_1(fvec4) Load 59_8(FragColor)
+          129_60: 23_1(fvec4) FAdd 61_254 61_253
+                              Store 59_8(FragColor) 129_60
                               Return
                               FunctionEnd

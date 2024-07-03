@@ -7,569 +7,569 @@ spv.subgroupBallot.comp
                               Capability Float64
                               Capability GroupNonUniform
                               Capability GroupNonUniformBallot
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 10 12 21 23 26 29 32
-                              ExecutionMode 4 LocalSize 8 8 1
+                              EntryPoint GLCompute 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7
+                              ExecutionMode 54_1 LocalSize 8 8 1
                               Source GLSL 450
                               SourceExtension  "GL_KHR_shader_subgroup_ballot"
                               SourceExtension  "GL_KHR_shader_subgroup_basic"
-                              Name 4  "main"
-                              Name 8  "invocation"
-                              Name 10  "gl_SubgroupInvocationID"
-                              Name 12  "gl_SubgroupSize"
-                              Name 19  "relMask"
-                              Name 21  "gl_SubgroupEqMask"
-                              Name 23  "gl_SubgroupGeMask"
-                              Name 26  "gl_SubgroupGtMask"
-                              Name 29  "gl_SubgroupLeMask"
-                              Name 32  "gl_SubgroupLtMask"
-                              Name 35  "result"
-                              Name 46  "Buffers"
-                              MemberName 46(Buffers) 0  "f4"
-                              MemberName 46(Buffers) 1  "i4"
-                              MemberName 46(Buffers) 2  "u4"
-                              MemberName 46(Buffers) 3  "d4"
-                              Name 49  "data"
-                              Decorate 10(gl_SubgroupInvocationID) RelaxedPrecision
-                              Decorate 10(gl_SubgroupInvocationID) BuiltIn SubgroupLocalInvocationId
-                              Decorate 11 RelaxedPrecision
-                              Decorate 12(gl_SubgroupSize) RelaxedPrecision
-                              Decorate 12(gl_SubgroupSize) BuiltIn SubgroupSize
-                              Decorate 13 RelaxedPrecision
-                              Decorate 14 RelaxedPrecision
-                              Decorate 16 RelaxedPrecision
-                              Decorate 21(gl_SubgroupEqMask) BuiltIn SubgroupEqMaskKHR
-                              Decorate 23(gl_SubgroupGeMask) BuiltIn SubgroupGeMaskKHR
-                              Decorate 26(gl_SubgroupGtMask) BuiltIn SubgroupGtMaskKHR
-                              Decorate 29(gl_SubgroupLeMask) BuiltIn SubgroupLeMaskKHR
-                              Decorate 32(gl_SubgroupLtMask) BuiltIn SubgroupLtMaskKHR
-                              Decorate 46(Buffers) Block
-                              MemberDecorate 46(Buffers) 0 Offset 0
-                              MemberDecorate 46(Buffers) 1 Offset 16
-                              MemberDecorate 46(Buffers) 2 Offset 32
-                              MemberDecorate 46(Buffers) 3 Offset 64
-                              Decorate 49(data) Binding 0
-                              Decorate 49(data) DescriptorSet 0
-                              Decorate 436 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               9:             TypePointer Input 6(int)
-10(gl_SubgroupInvocationID):      9(ptr) Variable Input
-12(gl_SubgroupSize):      9(ptr) Variable Input
-              15:      6(int) Constant 4
-              17:             TypeVector 6(int) 4
-              18:             TypePointer Function 17(ivec4)
-              20:             TypePointer Input 17(ivec4)
-21(gl_SubgroupEqMask):     20(ptr) Variable Input
-23(gl_SubgroupGeMask):     20(ptr) Variable Input
-26(gl_SubgroupGtMask):     20(ptr) Variable Input
-29(gl_SubgroupLeMask):     20(ptr) Variable Input
-32(gl_SubgroupLtMask):     20(ptr) Variable Input
-              36:             TypeBool
-              37:    36(bool) ConstantTrue
-              38:      6(int) Constant 3
-              40:             TypeFloat 32
-              41:             TypeVector 40(float) 4
-              42:             TypeInt 32 1
-              43:             TypeVector 42(int) 4
-              44:             TypeFloat 64
-              45:             TypeVector 44(float64_t) 4
-     46(Buffers):             TypeStruct 41(fvec4) 43(ivec4) 17(ivec4) 45(f64vec4)
-              47:             TypeArray 46(Buffers) 15
-              48:             TypePointer StorageBuffer 47
-        49(data):     48(ptr) Variable StorageBuffer
-              51:     42(int) Constant 2
-              54:      6(int) Constant 0
-              55:             TypePointer StorageBuffer 6(int)
-              60:     42(int) Constant 1
-              61:     42(int) Constant 0
-              64:      6(int) Constant 1
-              72:      6(int) Constant 2
-              83:             TypeVector 36(bool) 4
-              88:             TypePointer StorageBuffer 17(ivec4)
-              96:             TypePointer StorageBuffer 40(float)
-             102:             TypeVector 40(float) 2
-             103:             TypePointer StorageBuffer 41(fvec4)
-             113:             TypeVector 40(float) 3
-             125:     42(int) Constant 3
-             131:             TypePointer StorageBuffer 42(int)
-             137:             TypeVector 42(int) 2
-             138:             TypePointer StorageBuffer 43(ivec4)
-             148:             TypeVector 42(int) 3
-             170:             TypeVector 6(int) 2
-             180:             TypeVector 6(int) 3
-             197:             TypePointer StorageBuffer 44(float64_t)
-             203:             TypeVector 44(float64_t) 2
-             204:             TypePointer StorageBuffer 45(f64vec4)
-             214:             TypeVector 44(float64_t) 3
-             241:  137(ivec2) ConstantComposite 61 61
-             242:             TypeVector 36(bool) 2
-             245:  137(ivec2) ConstantComposite 60 60
-             255:  148(ivec3) ConstantComposite 61 61 61
-             256:             TypeVector 36(bool) 3
-             259:  148(ivec3) ConstantComposite 60 60 60
-             270:   43(ivec4) ConstantComposite 61 61 61 61
-             273:   43(ivec4) ConstantComposite 60 60 60 60
-             435:      6(int) Constant 8
-             436:  180(ivec3) ConstantComposite 435 435 64
-         4(main):           2 Function None 3
-               5:             Label
-   8(invocation):      7(ptr) Variable Function
-     19(relMask):     18(ptr) Variable Function
-      35(result):     18(ptr) Variable Function
-              11:      6(int) Load 10(gl_SubgroupInvocationID)
-              13:      6(int) Load 12(gl_SubgroupSize)
-              14:      6(int) IAdd 11 13
-              16:      6(int) UMod 14 15
-                              Store 8(invocation) 16
-              22:   17(ivec4) Load 21(gl_SubgroupEqMask)
-              24:   17(ivec4) Load 23(gl_SubgroupGeMask)
-              25:   17(ivec4) IAdd 22 24
-              27:   17(ivec4) Load 26(gl_SubgroupGtMask)
-              28:   17(ivec4) IAdd 25 27
-              30:   17(ivec4) Load 29(gl_SubgroupLeMask)
-              31:   17(ivec4) IAdd 28 30
-              33:   17(ivec4) Load 32(gl_SubgroupLtMask)
-              34:   17(ivec4) IAdd 31 33
-                              Store 19(relMask) 34
-              39:   17(ivec4) GroupNonUniformBallot 38 37
-                              Store 35(result) 39
-              50:      6(int) Load 8(invocation)
-              52:   17(ivec4) Load 35(result)
-              53:      6(int) GroupNonUniformBallotBitCount 38 Reduce 52
-              56:     55(ptr) AccessChain 49(data) 50 51 54
-                              Store 56 53
-              57:      6(int) Load 8(invocation)
-              58:   17(ivec4) Load 35(result)
-              59:    36(bool) GroupNonUniformBallotBitExtract 38 58 54
-              62:     42(int) Select 59 60 61
-              63:      6(int) Bitcast 62
-              65:     55(ptr) AccessChain 49(data) 57 51 64
-                              Store 65 63
-              66:      6(int) Load 8(invocation)
-              67:   17(ivec4) Load 35(result)
-              68:      6(int) GroupNonUniformBallotBitCount 38 InclusiveScan 67
-              69:   17(ivec4) Load 35(result)
-              70:      6(int) GroupNonUniformBallotBitCount 38 ExclusiveScan 69
-              71:      6(int) IAdd 68 70
-              73:     55(ptr) AccessChain 49(data) 66 51 72
-                              Store 73 71
-              74:      6(int) Load 8(invocation)
-              75:   17(ivec4) Load 35(result)
-              76:      6(int) GroupNonUniformBallotFindLSB 38 75
-              77:   17(ivec4) Load 35(result)
-              78:      6(int) GroupNonUniformBallotFindMSB 38 77
-              79:      6(int) IAdd 76 78
-              80:     55(ptr) AccessChain 49(data) 74 51 38
-                              Store 80 79
-              81:   17(ivec4) Load 19(relMask)
-              82:   17(ivec4) Load 35(result)
-              84:   83(bvec4) IEqual 81 82
-              85:    36(bool) All 84
-                              SelectionMerge 87 None
-                              BranchConditional 85 86 87
-              86:               Label
-              89:     88(ptr)   AccessChain 49(data) 61 51
-              90:   17(ivec4)   Load 89
-              91:    36(bool)   GroupNonUniformInverseBallot 38 90
-                                Branch 87
-              87:             Label
-              92:    36(bool) Phi 85 5 91 86
-                              SelectionMerge 94 None
-                              BranchConditional 92 93 276
-              93:               Label
-              95:      6(int)   Load 8(invocation)
-              97:     96(ptr)   AccessChain 49(data) 61 61 54
-              98:   40(float)   Load 97
-              99:   40(float)   GroupNonUniformBroadcast 38 98 38
-             100:     96(ptr)   AccessChain 49(data) 95 61 54
-                                Store 100 99
-             101:      6(int)   Load 8(invocation)
-             104:    103(ptr)   AccessChain 49(data) 60 61
-             105:   41(fvec4)   Load 104
-             106:  102(fvec2)   VectorShuffle 105 105 0 1
-             107:  102(fvec2)   GroupNonUniformBroadcast 38 106 38
-             108:     96(ptr)   AccessChain 49(data) 101 61 54
-             109:   40(float)   CompositeExtract 107 0
-                                Store 108 109
-             110:     96(ptr)   AccessChain 49(data) 101 61 64
-             111:   40(float)   CompositeExtract 107 1
-                                Store 110 111
-             112:      6(int)   Load 8(invocation)
-             114:    103(ptr)   AccessChain 49(data) 51 61
-             115:   41(fvec4)   Load 114
-             116:  113(fvec3)   VectorShuffle 115 115 0 1 2
-             117:  113(fvec3)   GroupNonUniformBroadcast 38 116 38
-             118:     96(ptr)   AccessChain 49(data) 112 61 54
-             119:   40(float)   CompositeExtract 117 0
-                                Store 118 119
-             120:     96(ptr)   AccessChain 49(data) 112 61 64
-             121:   40(float)   CompositeExtract 117 1
-                                Store 120 121
-             122:     96(ptr)   AccessChain 49(data) 112 61 72
-             123:   40(float)   CompositeExtract 117 2
-                                Store 122 123
-             124:      6(int)   Load 8(invocation)
-             126:    103(ptr)   AccessChain 49(data) 125 61
-             127:   41(fvec4)   Load 126
-             128:   41(fvec4)   GroupNonUniformBroadcast 38 127 38
-             129:    103(ptr)   AccessChain 49(data) 124 61
-                                Store 129 128
-             130:      6(int)   Load 8(invocation)
-             132:    131(ptr)   AccessChain 49(data) 61 60 54
-             133:     42(int)   Load 132
-             134:     42(int)   GroupNonUniformBroadcast 38 133 72
-             135:    131(ptr)   AccessChain 49(data) 130 60 54
-                                Store 135 134
-             136:      6(int)   Load 8(invocation)
-             139:    138(ptr)   AccessChain 49(data) 60 60
-             140:   43(ivec4)   Load 139
-             141:  137(ivec2)   VectorShuffle 140 140 0 1
-             142:  137(ivec2)   GroupNonUniformBroadcast 38 141 72
-             143:    131(ptr)   AccessChain 49(data) 136 60 54
-             144:     42(int)   CompositeExtract 142 0
-                                Store 143 144
-             145:    131(ptr)   AccessChain 49(data) 136 60 64
-             146:     42(int)   CompositeExtract 142 1
-                                Store 145 146
-             147:      6(int)   Load 8(invocation)
-             149:    138(ptr)   AccessChain 49(data) 51 60
-             150:   43(ivec4)   Load 149
-             151:  148(ivec3)   VectorShuffle 150 150 0 1 2
-             152:  148(ivec3)   GroupNonUniformBroadcast 38 151 72
-             153:    131(ptr)   AccessChain 49(data) 147 60 54
-             154:     42(int)   CompositeExtract 152 0
-                                Store 153 154
-             155:    131(ptr)   AccessChain 49(data) 147 60 64
-             156:     42(int)   CompositeExtract 152 1
-                                Store 155 156
-             157:    131(ptr)   AccessChain 49(data) 147 60 72
-             158:     42(int)   CompositeExtract 152 2
-                                Store 157 158
-             159:      6(int)   Load 8(invocation)
-             160:    138(ptr)   AccessChain 49(data) 125 60
-             161:   43(ivec4)   Load 160
-             162:   43(ivec4)   GroupNonUniformBroadcast 38 161 72
-             163:    138(ptr)   AccessChain 49(data) 159 60
-                                Store 163 162
-             164:      6(int)   Load 8(invocation)
-             165:     55(ptr)   AccessChain 49(data) 61 51 54
-             166:      6(int)   Load 165
-             167:      6(int)   GroupNonUniformBroadcast 38 166 64
-             168:     55(ptr)   AccessChain 49(data) 164 51 54
-                                Store 168 167
-             169:      6(int)   Load 8(invocation)
-             171:     88(ptr)   AccessChain 49(data) 60 51
-             172:   17(ivec4)   Load 171
-             173:  170(ivec2)   VectorShuffle 172 172 0 1
-             174:  170(ivec2)   GroupNonUniformBroadcast 38 173 64
-             175:     55(ptr)   AccessChain 49(data) 169 51 54
-             176:      6(int)   CompositeExtract 174 0
-                                Store 175 176
-             177:     55(ptr)   AccessChain 49(data) 169 51 64
-             178:      6(int)   CompositeExtract 174 1
-                                Store 177 178
-             179:      6(int)   Load 8(invocation)
-             181:     88(ptr)   AccessChain 49(data) 51 51
-             182:   17(ivec4)   Load 181
-             183:  180(ivec3)   VectorShuffle 182 182 0 1 2
-             184:  180(ivec3)   GroupNonUniformBroadcast 38 183 64
-             185:     55(ptr)   AccessChain 49(data) 179 51 54
-             186:      6(int)   CompositeExtract 184 0
-                                Store 185 186
-             187:     55(ptr)   AccessChain 49(data) 179 51 64
-             188:      6(int)   CompositeExtract 184 1
-                                Store 187 188
-             189:     55(ptr)   AccessChain 49(data) 179 51 72
-             190:      6(int)   CompositeExtract 184 2
-                                Store 189 190
-             191:      6(int)   Load 8(invocation)
-             192:     88(ptr)   AccessChain 49(data) 125 51
-             193:   17(ivec4)   Load 192
-             194:   17(ivec4)   GroupNonUniformBroadcast 38 193 64
-             195:     88(ptr)   AccessChain 49(data) 191 51
-                                Store 195 194
-             196:      6(int)   Load 8(invocation)
-             198:    197(ptr)   AccessChain 49(data) 61 125 54
-             199:44(float64_t)   Load 198
-             200:44(float64_t)   GroupNonUniformBroadcast 38 199 54
-             201:    197(ptr)   AccessChain 49(data) 196 125 54
-                                Store 201 200
-             202:      6(int)   Load 8(invocation)
-             205:    204(ptr)   AccessChain 49(data) 60 125
-             206: 45(f64vec4)   Load 205
-             207:203(f64vec2)   VectorShuffle 206 206 0 1
-             208:203(f64vec2)   GroupNonUniformBroadcast 38 207 54
-             209:    197(ptr)   AccessChain 49(data) 202 125 54
-             210:44(float64_t)   CompositeExtract 208 0
-                                Store 209 210
-             211:    197(ptr)   AccessChain 49(data) 202 125 64
-             212:44(float64_t)   CompositeExtract 208 1
-                                Store 211 212
-             213:      6(int)   Load 8(invocation)
-             215:    204(ptr)   AccessChain 49(data) 51 125
-             216: 45(f64vec4)   Load 215
-             217:214(f64vec3)   VectorShuffle 216 216 0 1 2
-             218:214(f64vec3)   GroupNonUniformBroadcast 38 217 54
-             219:    197(ptr)   AccessChain 49(data) 213 125 54
-             220:44(float64_t)   CompositeExtract 218 0
-                                Store 219 220
-             221:    197(ptr)   AccessChain 49(data) 213 125 64
-             222:44(float64_t)   CompositeExtract 218 1
-                                Store 221 222
-             223:    197(ptr)   AccessChain 49(data) 213 125 72
-             224:44(float64_t)   CompositeExtract 218 2
-                                Store 223 224
-             225:      6(int)   Load 8(invocation)
-             226:    204(ptr)   AccessChain 49(data) 125 125
-             227: 45(f64vec4)   Load 226
-             228: 45(f64vec4)   GroupNonUniformBroadcast 38 227 54
-             229:    204(ptr)   AccessChain 49(data) 225 125
-                                Store 229 228
-             230:      6(int)   Load 8(invocation)
-             231:    131(ptr)   AccessChain 49(data) 61 60 54
-             232:     42(int)   Load 231
-             233:    36(bool)   SLessThan 232 61
-             234:    36(bool)   GroupNonUniformBroadcast 38 233 64
-             235:     42(int)   Select 234 60 61
-             236:    131(ptr)   AccessChain 49(data) 230 60 54
-                                Store 236 235
-             237:      6(int)   Load 8(invocation)
-             238:    138(ptr)   AccessChain 49(data) 60 60
-             239:   43(ivec4)   Load 238
-             240:  137(ivec2)   VectorShuffle 239 239 0 1
-             243:  242(bvec2)   SLessThan 240 241
-             244:  242(bvec2)   GroupNonUniformBroadcast 38 243 64
-             246:  137(ivec2)   Select 244 245 241
-             247:    131(ptr)   AccessChain 49(data) 237 60 54
-             248:     42(int)   CompositeExtract 246 0
-                                Store 247 248
-             249:    131(ptr)   AccessChain 49(data) 237 60 64
-             250:     42(int)   CompositeExtract 246 1
-                                Store 249 250
-             251:      6(int)   Load 8(invocation)
-             252:    138(ptr)   AccessChain 49(data) 60 60
-             253:   43(ivec4)   Load 252
-             254:  148(ivec3)   VectorShuffle 253 253 0 1 2
-             257:  256(bvec3)   SLessThan 254 255
-             258:  256(bvec3)   GroupNonUniformBroadcast 38 257 64
-             260:  148(ivec3)   Select 258 259 255
-             261:    131(ptr)   AccessChain 49(data) 251 60 54
-             262:     42(int)   CompositeExtract 260 0
-                                Store 261 262
-             263:    131(ptr)   AccessChain 49(data) 251 60 64
-             264:     42(int)   CompositeExtract 260 1
-                                Store 263 264
-             265:    131(ptr)   AccessChain 49(data) 251 60 72
-             266:     42(int)   CompositeExtract 260 2
-                                Store 265 266
-             267:      6(int)   Load 8(invocation)
-             268:    138(ptr)   AccessChain 49(data) 60 60
-             269:   43(ivec4)   Load 268
-             271:   83(bvec4)   SLessThan 269 270
-             272:   83(bvec4)   GroupNonUniformBroadcast 38 271 64
-             274:   43(ivec4)   Select 272 273 270
-             275:    138(ptr)   AccessChain 49(data) 267 60
-                                Store 275 274
-                                Branch 94
-             276:               Label
-             277:      6(int)   Load 8(invocation)
-             278:     96(ptr)   AccessChain 49(data) 61 61 54
-             279:   40(float)   Load 278
-             280:   40(float)   GroupNonUniformBroadcastFirst 38 279
-             281:     96(ptr)   AccessChain 49(data) 277 61 54
-                                Store 281 280
-             282:      6(int)   Load 8(invocation)
-             283:    103(ptr)   AccessChain 49(data) 60 61
-             284:   41(fvec4)   Load 283
-             285:  102(fvec2)   VectorShuffle 284 284 0 1
-             286:  102(fvec2)   GroupNonUniformBroadcastFirst 38 285
-             287:     96(ptr)   AccessChain 49(data) 282 61 54
-             288:   40(float)   CompositeExtract 286 0
-                                Store 287 288
-             289:     96(ptr)   AccessChain 49(data) 282 61 64
-             290:   40(float)   CompositeExtract 286 1
-                                Store 289 290
-             291:      6(int)   Load 8(invocation)
-             292:    103(ptr)   AccessChain 49(data) 51 61
-             293:   41(fvec4)   Load 292
-             294:  113(fvec3)   VectorShuffle 293 293 0 1 2
-             295:  113(fvec3)   GroupNonUniformBroadcastFirst 38 294
-             296:     96(ptr)   AccessChain 49(data) 291 61 54
-             297:   40(float)   CompositeExtract 295 0
-                                Store 296 297
-             298:     96(ptr)   AccessChain 49(data) 291 61 64
-             299:   40(float)   CompositeExtract 295 1
-                                Store 298 299
-             300:     96(ptr)   AccessChain 49(data) 291 61 72
-             301:   40(float)   CompositeExtract 295 2
-                                Store 300 301
-             302:      6(int)   Load 8(invocation)
-             303:    103(ptr)   AccessChain 49(data) 125 61
-             304:   41(fvec4)   Load 303
-             305:   41(fvec4)   GroupNonUniformBroadcastFirst 38 304
-             306:    103(ptr)   AccessChain 49(data) 302 61
-                                Store 306 305
-             307:      6(int)   Load 8(invocation)
-             308:    131(ptr)   AccessChain 49(data) 61 60 54
-             309:     42(int)   Load 308
-             310:     42(int)   GroupNonUniformBroadcastFirst 38 309
-             311:    131(ptr)   AccessChain 49(data) 307 60 54
-                                Store 311 310
-             312:      6(int)   Load 8(invocation)
-             313:    138(ptr)   AccessChain 49(data) 60 60
-             314:   43(ivec4)   Load 313
-             315:  137(ivec2)   VectorShuffle 314 314 0 1
-             316:  137(ivec2)   GroupNonUniformBroadcastFirst 38 315
-             317:    131(ptr)   AccessChain 49(data) 312 60 54
-             318:     42(int)   CompositeExtract 316 0
-                                Store 317 318
-             319:    131(ptr)   AccessChain 49(data) 312 60 64
-             320:     42(int)   CompositeExtract 316 1
-                                Store 319 320
-             321:      6(int)   Load 8(invocation)
-             322:    138(ptr)   AccessChain 49(data) 51 60
-             323:   43(ivec4)   Load 322
-             324:  148(ivec3)   VectorShuffle 323 323 0 1 2
-             325:  148(ivec3)   GroupNonUniformBroadcastFirst 38 324
-             326:    131(ptr)   AccessChain 49(data) 321 60 54
-             327:     42(int)   CompositeExtract 325 0
-                                Store 326 327
-             328:    131(ptr)   AccessChain 49(data) 321 60 64
-             329:     42(int)   CompositeExtract 325 1
-                                Store 328 329
-             330:    131(ptr)   AccessChain 49(data) 321 60 72
-             331:     42(int)   CompositeExtract 325 2
-                                Store 330 331
-             332:      6(int)   Load 8(invocation)
-             333:    138(ptr)   AccessChain 49(data) 125 60
-             334:   43(ivec4)   Load 333
-             335:   43(ivec4)   GroupNonUniformBroadcastFirst 38 334
-             336:    138(ptr)   AccessChain 49(data) 332 60
-                                Store 336 335
-             337:      6(int)   Load 8(invocation)
-             338:     55(ptr)   AccessChain 49(data) 61 51 54
-             339:      6(int)   Load 338
-             340:      6(int)   GroupNonUniformBroadcastFirst 38 339
-             341:     55(ptr)   AccessChain 49(data) 337 51 54
-                                Store 341 340
-             342:      6(int)   Load 8(invocation)
-             343:     88(ptr)   AccessChain 49(data) 60 51
-             344:   17(ivec4)   Load 343
-             345:  170(ivec2)   VectorShuffle 344 344 0 1
-             346:  170(ivec2)   GroupNonUniformBroadcastFirst 38 345
-             347:     55(ptr)   AccessChain 49(data) 342 51 54
-             348:      6(int)   CompositeExtract 346 0
-                                Store 347 348
-             349:     55(ptr)   AccessChain 49(data) 342 51 64
-             350:      6(int)   CompositeExtract 346 1
-                                Store 349 350
-             351:      6(int)   Load 8(invocation)
-             352:     88(ptr)   AccessChain 49(data) 51 51
-             353:   17(ivec4)   Load 352
-             354:  180(ivec3)   VectorShuffle 353 353 0 1 2
-             355:  180(ivec3)   GroupNonUniformBroadcastFirst 38 354
-             356:     55(ptr)   AccessChain 49(data) 351 51 54
-             357:      6(int)   CompositeExtract 355 0
-                                Store 356 357
-             358:     55(ptr)   AccessChain 49(data) 351 51 64
-             359:      6(int)   CompositeExtract 355 1
-                                Store 358 359
-             360:     55(ptr)   AccessChain 49(data) 351 51 72
-             361:      6(int)   CompositeExtract 355 2
-                                Store 360 361
-             362:      6(int)   Load 8(invocation)
-             363:     88(ptr)   AccessChain 49(data) 125 51
-             364:   17(ivec4)   Load 363
-             365:   17(ivec4)   GroupNonUniformBroadcastFirst 38 364
-             366:     88(ptr)   AccessChain 49(data) 362 51
-                                Store 366 365
-             367:      6(int)   Load 8(invocation)
-             368:    197(ptr)   AccessChain 49(data) 61 125 54
-             369:44(float64_t)   Load 368
-             370:44(float64_t)   GroupNonUniformBroadcastFirst 38 369
-             371:    197(ptr)   AccessChain 49(data) 367 125 54
-                                Store 371 370
-             372:      6(int)   Load 8(invocation)
-             373:    204(ptr)   AccessChain 49(data) 60 125
-             374: 45(f64vec4)   Load 373
-             375:203(f64vec2)   VectorShuffle 374 374 0 1
-             376:203(f64vec2)   GroupNonUniformBroadcastFirst 38 375
-             377:    197(ptr)   AccessChain 49(data) 372 125 54
-             378:44(float64_t)   CompositeExtract 376 0
-                                Store 377 378
-             379:    197(ptr)   AccessChain 49(data) 372 125 64
-             380:44(float64_t)   CompositeExtract 376 1
-                                Store 379 380
-             381:      6(int)   Load 8(invocation)
-             382:    204(ptr)   AccessChain 49(data) 51 125
-             383: 45(f64vec4)   Load 382
-             384:214(f64vec3)   VectorShuffle 383 383 0 1 2
-             385:214(f64vec3)   GroupNonUniformBroadcastFirst 38 384
-             386:    197(ptr)   AccessChain 49(data) 381 125 54
-             387:44(float64_t)   CompositeExtract 385 0
-                                Store 386 387
-             388:    197(ptr)   AccessChain 49(data) 381 125 64
-             389:44(float64_t)   CompositeExtract 385 1
-                                Store 388 389
-             390:    197(ptr)   AccessChain 49(data) 381 125 72
-             391:44(float64_t)   CompositeExtract 385 2
-                                Store 390 391
-             392:      6(int)   Load 8(invocation)
-             393:    204(ptr)   AccessChain 49(data) 125 125
-             394: 45(f64vec4)   Load 393
-             395: 45(f64vec4)   GroupNonUniformBroadcastFirst 38 394
-             396:    204(ptr)   AccessChain 49(data) 392 125
-                                Store 396 395
-             397:      6(int)   Load 8(invocation)
-             398:    131(ptr)   AccessChain 49(data) 61 60 54
-             399:     42(int)   Load 398
-             400:    36(bool)   SLessThan 399 61
-             401:    36(bool)   GroupNonUniformBroadcastFirst 38 400
-             402:     42(int)   Select 401 60 61
-             403:    131(ptr)   AccessChain 49(data) 397 60 54
-                                Store 403 402
-             404:      6(int)   Load 8(invocation)
-             405:    138(ptr)   AccessChain 49(data) 60 60
-             406:   43(ivec4)   Load 405
-             407:  137(ivec2)   VectorShuffle 406 406 0 1
-             408:  242(bvec2)   SLessThan 407 241
-             409:  242(bvec2)   GroupNonUniformBroadcastFirst 38 408
-             410:  137(ivec2)   Select 409 245 241
-             411:    131(ptr)   AccessChain 49(data) 404 60 54
-             412:     42(int)   CompositeExtract 410 0
-                                Store 411 412
-             413:    131(ptr)   AccessChain 49(data) 404 60 64
-             414:     42(int)   CompositeExtract 410 1
-                                Store 413 414
-             415:      6(int)   Load 8(invocation)
-             416:    138(ptr)   AccessChain 49(data) 60 60
-             417:   43(ivec4)   Load 416
-             418:  148(ivec3)   VectorShuffle 417 417 0 1 2
-             419:  256(bvec3)   SLessThan 418 255
-             420:  256(bvec3)   GroupNonUniformBroadcastFirst 38 419
-             421:  148(ivec3)   Select 420 259 255
-             422:    131(ptr)   AccessChain 49(data) 415 60 54
-             423:     42(int)   CompositeExtract 421 0
-                                Store 422 423
-             424:    131(ptr)   AccessChain 49(data) 415 60 64
-             425:     42(int)   CompositeExtract 421 1
-                                Store 424 425
-             426:    131(ptr)   AccessChain 49(data) 415 60 72
-             427:     42(int)   CompositeExtract 421 2
-                                Store 426 427
-             428:      6(int)   Load 8(invocation)
-             429:    138(ptr)   AccessChain 49(data) 60 60
-             430:   43(ivec4)   Load 429
-             431:   83(bvec4)   SLessThan 430 270
-             432:   83(bvec4)   GroupNonUniformBroadcastFirst 38 431
-             433:   43(ivec4)   Select 432 273 270
-             434:    138(ptr)   AccessChain 49(data) 428 60
-                                Store 434 433
-                                Branch 94
-              94:             Label
+                              Name 54_1  "main"
+                              Name 59_9  "invocation"
+                              Name 59_1  "gl_SubgroupInvocationID"
+                              Name 59_2  "gl_SubgroupSize"
+                              Name 59_10  "relMask"
+                              Name 59_3  "gl_SubgroupEqMask"
+                              Name 59_4  "gl_SubgroupGeMask"
+                              Name 59_5  "gl_SubgroupGtMask"
+                              Name 59_6  "gl_SubgroupLeMask"
+                              Name 59_7  "gl_SubgroupLtMask"
+                              Name 59_11  "result"
+                              Name 30_1  "Buffers"
+                              MemberName 30_1(Buffers) 0  "f4"
+                              MemberName 30_1(Buffers) 1  "i4"
+                              MemberName 30_1(Buffers) 2  "u4"
+                              MemberName 30_1(Buffers) 3  "d4"
+                              Name 59_8  "data"
+                              Decorate 59_1(gl_SubgroupInvocationID) RelaxedPrecision
+                              Decorate 59_1(gl_SubgroupInvocationID) BuiltIn SubgroupLocalInvocationId
+                              Decorate 61_1 RelaxedPrecision
+                              Decorate 59_2(gl_SubgroupSize) RelaxedPrecision
+                              Decorate 59_2(gl_SubgroupSize) BuiltIn SubgroupSize
+                              Decorate 61_2 RelaxedPrecision
+                              Decorate 128_1 RelaxedPrecision
+                              Decorate 137_1 RelaxedPrecision
+                              Decorate 59_3(gl_SubgroupEqMask) BuiltIn SubgroupEqMaskKHR
+                              Decorate 59_4(gl_SubgroupGeMask) BuiltIn SubgroupGeMaskKHR
+                              Decorate 59_5(gl_SubgroupGtMask) BuiltIn SubgroupGtMaskKHR
+                              Decorate 59_6(gl_SubgroupLeMask) BuiltIn SubgroupLeMaskKHR
+                              Decorate 59_7(gl_SubgroupLtMask) BuiltIn SubgroupLtMaskKHR
+                              Decorate 30_1(Buffers) Block
+                              MemberDecorate 30_1(Buffers) 0 Offset 0
+                              MemberDecorate 30_1(Buffers) 1 Offset 16
+                              MemberDecorate 30_1(Buffers) 2 Offset 32
+                              MemberDecorate 30_1(Buffers) 3 Offset 64
+                              Decorate 59_8(data) Binding 0
+                              Decorate 59_8(data) DescriptorSet 0
+                              Decorate 44_7 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            32_2:             TypePointer Input 21_1(int)
+59_1(gl_SubgroupInvocationID):   32_2(ptr) Variable Input
+59_2(gl_SubgroupSize):   32_2(ptr) Variable Input
+         uint(4):   21_1(int) Constant 4
+            23_1:             TypeVector 21_1(int) 4
+            32_3:             TypePointer Function 23_1(ivec4)
+            32_4:             TypePointer Input 23_1(ivec4)
+59_3(gl_SubgroupEqMask):   32_4(ptr) Variable Input
+59_4(gl_SubgroupGeMask):   32_4(ptr) Variable Input
+59_5(gl_SubgroupGtMask):   32_4(ptr) Variable Input
+59_6(gl_SubgroupLeMask):   32_4(ptr) Variable Input
+59_7(gl_SubgroupLtMask):   32_4(ptr) Variable Input
+            20_1:             TypeBool
+            41_1:  20_1(bool) ConstantTrue
+         uint(3):   21_1(int) Constant 3
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 4
+            21_2:             TypeInt 32 1
+            23_3:             TypeVector 21_2(int) 4
+            22_2:             TypeFloat 64
+            23_4:             TypeVector 22_2(float64_t) 4
+   30_1(Buffers):             TypeStruct 23_2(fvec4) 23_3(ivec4) 23_1(ivec4) 23_4(f64vec4)
+            28_1:             TypeArray 30_1(Buffers) uint(4)
+            32_5:             TypePointer StorageBuffer 28_1
+      59_8(data):   32_5(ptr) Variable StorageBuffer
+            43_1:   21_2(int) Constant 2
+         uint(0):   21_1(int) Constant 0
+            32_6:             TypePointer StorageBuffer 21_1(int)
+            43_2:   21_2(int) Constant 1
+            43_3:   21_2(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+            23_5:             TypeVector 20_1(bool) 4
+            32_7:             TypePointer StorageBuffer 23_1(ivec4)
+            32_8:             TypePointer StorageBuffer 22_1(float)
+            23_6:             TypeVector 22_1(float) 2
+            32_9:             TypePointer StorageBuffer 23_2(fvec4)
+            23_7:             TypeVector 22_1(float) 3
+            43_4:   21_2(int) Constant 3
+           32_10:             TypePointer StorageBuffer 21_2(int)
+            23_8:             TypeVector 21_2(int) 2
+           32_11:             TypePointer StorageBuffer 23_3(ivec4)
+            23_9:             TypeVector 21_2(int) 3
+           23_10:             TypeVector 21_1(int) 2
+           23_11:             TypeVector 21_1(int) 3
+           32_12:             TypePointer StorageBuffer 22_2(float64_t)
+           23_12:             TypeVector 22_2(float64_t) 2
+           32_13:             TypePointer StorageBuffer 23_4(f64vec4)
+           23_13:             TypeVector 22_2(float64_t) 3
+            44_1: 23_8(ivec2) ConstantComposite 43_3 43_3
+           23_14:             TypeVector 20_1(bool) 2
+            44_2: 23_8(ivec2) ConstantComposite 43_2 43_2
+            44_3: 23_9(ivec3) ConstantComposite 43_3 43_3 43_3
+           23_15:             TypeVector 20_1(bool) 3
+            44_4: 23_9(ivec3) ConstantComposite 43_2 43_2 43_2
+            44_5: 23_3(ivec4) ConstantComposite 43_3 43_3 43_3 43_3
+            44_6: 23_3(ivec4) ConstantComposite 43_2 43_2 43_2 43_2
+         uint(8):   21_1(int) Constant 8
+            44_7:23_11(ivec3) ConstantComposite uint(8) uint(8) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_9(invocation):   32_1(ptr) Variable Function
+  59_10(relMask):   32_3(ptr) Variable Function
+   59_11(result):   32_3(ptr) Variable Function
+            61_1:   21_1(int) Load 59_1(gl_SubgroupInvocationID)
+            61_2:   21_1(int) Load 59_2(gl_SubgroupSize)
+           128_1:   21_1(int) IAdd 61_1 61_2
+           137_1:   21_1(int) UMod 128_1 uint(4)
+                              Store 59_9(invocation) 137_1
+            61_3: 23_1(ivec4) Load 59_3(gl_SubgroupEqMask)
+            61_4: 23_1(ivec4) Load 59_4(gl_SubgroupGeMask)
+           128_2: 23_1(ivec4) IAdd 61_3 61_4
+            61_5: 23_1(ivec4) Load 59_5(gl_SubgroupGtMask)
+           128_3: 23_1(ivec4) IAdd 128_2 61_5
+            61_6: 23_1(ivec4) Load 59_6(gl_SubgroupLeMask)
+           128_4: 23_1(ivec4) IAdd 128_3 61_6
+            61_7: 23_1(ivec4) Load 59_7(gl_SubgroupLtMask)
+           128_5: 23_1(ivec4) IAdd 128_4 61_7
+                              Store 59_10(relMask) 128_5
+           339_1: 23_1(ivec4) GroupNonUniformBallot uint(3) 41_1
+                              Store 59_11(result) 339_1
+            61_8:   21_1(int) Load 59_9(invocation)
+            61_9: 23_1(ivec4) Load 59_11(result)
+           342_1:   21_1(int) GroupNonUniformBallotBitCount uint(3) Reduce 61_9
+            65_1:   32_6(ptr) AccessChain 59_8(data) 61_8 43_1 uint(0)
+                              Store 65_1 342_1
+           61_10:   21_1(int) Load 59_9(invocation)
+           61_11: 23_1(ivec4) Load 59_11(result)
+           341_1:  20_1(bool) GroupNonUniformBallotBitExtract uint(3) 61_11 uint(0)
+           169_1:   21_2(int) Select 341_1 43_2 43_3
+           124_1:   21_1(int) Bitcast 169_1
+            65_2:   32_6(ptr) AccessChain 59_8(data) 61_10 43_1 uint(1)
+                              Store 65_2 124_1
+           61_12:   21_1(int) Load 59_9(invocation)
+           61_13: 23_1(ivec4) Load 59_11(result)
+           342_2:   21_1(int) GroupNonUniformBallotBitCount uint(3) InclusiveScan 61_13
+           61_14: 23_1(ivec4) Load 59_11(result)
+           342_3:   21_1(int) GroupNonUniformBallotBitCount uint(3) ExclusiveScan 61_14
+           128_6:   21_1(int) IAdd 342_2 342_3
+            65_3:   32_6(ptr) AccessChain 59_8(data) 61_12 43_1 uint(2)
+                              Store 65_3 128_6
+           61_15:   21_1(int) Load 59_9(invocation)
+           61_16: 23_1(ivec4) Load 59_11(result)
+           343_1:   21_1(int) GroupNonUniformBallotFindLSB uint(3) 61_16
+           61_17: 23_1(ivec4) Load 59_11(result)
+           344_1:   21_1(int) GroupNonUniformBallotFindMSB uint(3) 61_17
+           128_7:   21_1(int) IAdd 343_1 344_1
+            65_4:   32_6(ptr) AccessChain 59_8(data) 61_15 43_1 uint(3)
+                              Store 65_4 128_7
+           61_18: 23_1(ivec4) Load 59_10(relMask)
+           61_19: 23_1(ivec4) Load 59_11(result)
+           170_1: 23_5(bvec4) IEqual 61_18 61_19
+           155_1:  20_1(bool) All 170_1
+                              SelectionMerge 248_3 None
+                              BranchConditional 155_1 248_2 248_3
+           248_2:               Label
+            65_5:   32_7(ptr)   AccessChain 59_8(data) 43_3 43_1
+           61_20: 23_1(ivec4)   Load 65_5
+           340_1:  20_1(bool)   GroupNonUniformInverseBallot uint(3) 61_20
+                                Branch 248_3
+           248_3:             Label
+           245_1:  20_1(bool) Phi 155_1 248_1 340_1 248_2
+                              SelectionMerge 248_6 None
+                              BranchConditional 245_1 248_4 248_5
+           248_4:               Label
+           61_21:   21_1(int)   Load 59_9(invocation)
+            65_6:   32_8(ptr)   AccessChain 59_8(data) 43_3 43_3 uint(0)
+           61_22: 22_1(float)   Load 65_6
+           337_1: 22_1(float)   GroupNonUniformBroadcast uint(3) 61_22 uint(3)
+            65_7:   32_8(ptr)   AccessChain 59_8(data) 61_21 43_3 uint(0)
+                                Store 65_7 337_1
+           61_23:   21_1(int)   Load 59_9(invocation)
+            65_8:   32_9(ptr)   AccessChain 59_8(data) 43_2 43_3
+           61_24: 23_2(fvec4)   Load 65_8
+            79_1: 23_6(fvec2)   VectorShuffle 61_24 61_24 0 1
+           337_2: 23_6(fvec2)   GroupNonUniformBroadcast uint(3) 79_1 uint(3)
+            65_9:   32_8(ptr)   AccessChain 59_8(data) 61_23 43_3 uint(0)
+            81_1: 22_1(float)   CompositeExtract 337_2 0
+                                Store 65_9 81_1
+           65_10:   32_8(ptr)   AccessChain 59_8(data) 61_23 43_3 uint(1)
+            81_2: 22_1(float)   CompositeExtract 337_2 1
+                                Store 65_10 81_2
+           61_25:   21_1(int)   Load 59_9(invocation)
+           65_11:   32_9(ptr)   AccessChain 59_8(data) 43_1 43_3
+           61_26: 23_2(fvec4)   Load 65_11
+            79_2: 23_7(fvec3)   VectorShuffle 61_26 61_26 0 1 2
+           337_3: 23_7(fvec3)   GroupNonUniformBroadcast uint(3) 79_2 uint(3)
+           65_12:   32_8(ptr)   AccessChain 59_8(data) 61_25 43_3 uint(0)
+            81_3: 22_1(float)   CompositeExtract 337_3 0
+                                Store 65_12 81_3
+           65_13:   32_8(ptr)   AccessChain 59_8(data) 61_25 43_3 uint(1)
+            81_4: 22_1(float)   CompositeExtract 337_3 1
+                                Store 65_13 81_4
+           65_14:   32_8(ptr)   AccessChain 59_8(data) 61_25 43_3 uint(2)
+            81_5: 22_1(float)   CompositeExtract 337_3 2
+                                Store 65_14 81_5
+           61_27:   21_1(int)   Load 59_9(invocation)
+           65_15:   32_9(ptr)   AccessChain 59_8(data) 43_4 43_3
+           61_28: 23_2(fvec4)   Load 65_15
+           337_4: 23_2(fvec4)   GroupNonUniformBroadcast uint(3) 61_28 uint(3)
+           65_16:   32_9(ptr)   AccessChain 59_8(data) 61_27 43_3
+                                Store 65_16 337_4
+           61_29:   21_1(int)   Load 59_9(invocation)
+           65_17:  32_10(ptr)   AccessChain 59_8(data) 43_3 43_2 uint(0)
+           61_30:   21_2(int)   Load 65_17
+           337_5:   21_2(int)   GroupNonUniformBroadcast uint(3) 61_30 uint(2)
+           65_18:  32_10(ptr)   AccessChain 59_8(data) 61_29 43_2 uint(0)
+                                Store 65_18 337_5
+           61_31:   21_1(int)   Load 59_9(invocation)
+           65_19:  32_11(ptr)   AccessChain 59_8(data) 43_2 43_2
+           61_32: 23_3(ivec4)   Load 65_19
+            79_3: 23_8(ivec2)   VectorShuffle 61_32 61_32 0 1
+           337_6: 23_8(ivec2)   GroupNonUniformBroadcast uint(3) 79_3 uint(2)
+           65_20:  32_10(ptr)   AccessChain 59_8(data) 61_31 43_2 uint(0)
+            81_6:   21_2(int)   CompositeExtract 337_6 0
+                                Store 65_20 81_6
+           65_21:  32_10(ptr)   AccessChain 59_8(data) 61_31 43_2 uint(1)
+            81_7:   21_2(int)   CompositeExtract 337_6 1
+                                Store 65_21 81_7
+           61_33:   21_1(int)   Load 59_9(invocation)
+           65_22:  32_11(ptr)   AccessChain 59_8(data) 43_1 43_2
+           61_34: 23_3(ivec4)   Load 65_22
+            79_4: 23_9(ivec3)   VectorShuffle 61_34 61_34 0 1 2
+           337_7: 23_9(ivec3)   GroupNonUniformBroadcast uint(3) 79_4 uint(2)
+           65_23:  32_10(ptr)   AccessChain 59_8(data) 61_33 43_2 uint(0)
+            81_8:   21_2(int)   CompositeExtract 337_7 0
+                                Store 65_23 81_8
+           65_24:  32_10(ptr)   AccessChain 59_8(data) 61_33 43_2 uint(1)
+            81_9:   21_2(int)   CompositeExtract 337_7 1
+                                Store 65_24 81_9
+           65_25:  32_10(ptr)   AccessChain 59_8(data) 61_33 43_2 uint(2)
+           81_10:   21_2(int)   CompositeExtract 337_7 2
+                                Store 65_25 81_10
+           61_35:   21_1(int)   Load 59_9(invocation)
+           65_26:  32_11(ptr)   AccessChain 59_8(data) 43_4 43_2
+           61_36: 23_3(ivec4)   Load 65_26
+           337_8: 23_3(ivec4)   GroupNonUniformBroadcast uint(3) 61_36 uint(2)
+           65_27:  32_11(ptr)   AccessChain 59_8(data) 61_35 43_2
+                                Store 65_27 337_8
+           61_37:   21_1(int)   Load 59_9(invocation)
+           65_28:   32_6(ptr)   AccessChain 59_8(data) 43_3 43_1 uint(0)
+           61_38:   21_1(int)   Load 65_28
+           337_9:   21_1(int)   GroupNonUniformBroadcast uint(3) 61_38 uint(1)
+           65_29:   32_6(ptr)   AccessChain 59_8(data) 61_37 43_1 uint(0)
+                                Store 65_29 337_9
+           61_39:   21_1(int)   Load 59_9(invocation)
+           65_30:   32_7(ptr)   AccessChain 59_8(data) 43_2 43_1
+           61_40: 23_1(ivec4)   Load 65_30
+            79_5:23_10(ivec2)   VectorShuffle 61_40 61_40 0 1
+          337_10:23_10(ivec2)   GroupNonUniformBroadcast uint(3) 79_5 uint(1)
+           65_31:   32_6(ptr)   AccessChain 59_8(data) 61_39 43_1 uint(0)
+           81_11:   21_1(int)   CompositeExtract 337_10 0
+                                Store 65_31 81_11
+           65_32:   32_6(ptr)   AccessChain 59_8(data) 61_39 43_1 uint(1)
+           81_12:   21_1(int)   CompositeExtract 337_10 1
+                                Store 65_32 81_12
+           61_41:   21_1(int)   Load 59_9(invocation)
+           65_33:   32_7(ptr)   AccessChain 59_8(data) 43_1 43_1
+           61_42: 23_1(ivec4)   Load 65_33
+            79_6:23_11(ivec3)   VectorShuffle 61_42 61_42 0 1 2
+          337_11:23_11(ivec3)   GroupNonUniformBroadcast uint(3) 79_6 uint(1)
+           65_34:   32_6(ptr)   AccessChain 59_8(data) 61_41 43_1 uint(0)
+           81_13:   21_1(int)   CompositeExtract 337_11 0
+                                Store 65_34 81_13
+           65_35:   32_6(ptr)   AccessChain 59_8(data) 61_41 43_1 uint(1)
+           81_14:   21_1(int)   CompositeExtract 337_11 1
+                                Store 65_35 81_14
+           65_36:   32_6(ptr)   AccessChain 59_8(data) 61_41 43_1 uint(2)
+           81_15:   21_1(int)   CompositeExtract 337_11 2
+                                Store 65_36 81_15
+           61_43:   21_1(int)   Load 59_9(invocation)
+           65_37:   32_7(ptr)   AccessChain 59_8(data) 43_4 43_1
+           61_44: 23_1(ivec4)   Load 65_37
+          337_12: 23_1(ivec4)   GroupNonUniformBroadcast uint(3) 61_44 uint(1)
+           65_38:   32_7(ptr)   AccessChain 59_8(data) 61_43 43_1
+                                Store 65_38 337_12
+           61_45:   21_1(int)   Load 59_9(invocation)
+           65_39:  32_12(ptr)   AccessChain 59_8(data) 43_3 43_4 uint(0)
+           61_46:22_2(float64_t)   Load 65_39
+          337_13:22_2(float64_t)   GroupNonUniformBroadcast uint(3) 61_46 uint(0)
+           65_40:  32_12(ptr)   AccessChain 59_8(data) 61_45 43_4 uint(0)
+                                Store 65_40 337_13
+           61_47:   21_1(int)   Load 59_9(invocation)
+           65_41:  32_13(ptr)   AccessChain 59_8(data) 43_2 43_4
+           61_48:23_4(f64vec4)   Load 65_41
+            79_7:23_12(f64vec2)   VectorShuffle 61_48 61_48 0 1
+          337_14:23_12(f64vec2)   GroupNonUniformBroadcast uint(3) 79_7 uint(0)
+           65_42:  32_12(ptr)   AccessChain 59_8(data) 61_47 43_4 uint(0)
+           81_16:22_2(float64_t)   CompositeExtract 337_14 0
+                                Store 65_42 81_16
+           65_43:  32_12(ptr)   AccessChain 59_8(data) 61_47 43_4 uint(1)
+           81_17:22_2(float64_t)   CompositeExtract 337_14 1
+                                Store 65_43 81_17
+           61_49:   21_1(int)   Load 59_9(invocation)
+           65_44:  32_13(ptr)   AccessChain 59_8(data) 43_1 43_4
+           61_50:23_4(f64vec4)   Load 65_44
+            79_8:23_13(f64vec3)   VectorShuffle 61_50 61_50 0 1 2
+          337_15:23_13(f64vec3)   GroupNonUniformBroadcast uint(3) 79_8 uint(0)
+           65_45:  32_12(ptr)   AccessChain 59_8(data) 61_49 43_4 uint(0)
+           81_18:22_2(float64_t)   CompositeExtract 337_15 0
+                                Store 65_45 81_18
+           65_46:  32_12(ptr)   AccessChain 59_8(data) 61_49 43_4 uint(1)
+           81_19:22_2(float64_t)   CompositeExtract 337_15 1
+                                Store 65_46 81_19
+           65_47:  32_12(ptr)   AccessChain 59_8(data) 61_49 43_4 uint(2)
+           81_20:22_2(float64_t)   CompositeExtract 337_15 2
+                                Store 65_47 81_20
+           61_51:   21_1(int)   Load 59_9(invocation)
+           65_48:  32_13(ptr)   AccessChain 59_8(data) 43_4 43_4
+           61_52:23_4(f64vec4)   Load 65_48
+          337_16:23_4(f64vec4)   GroupNonUniformBroadcast uint(3) 61_52 uint(0)
+           65_49:  32_13(ptr)   AccessChain 59_8(data) 61_51 43_4
+                                Store 65_49 337_16
+           61_53:   21_1(int)   Load 59_9(invocation)
+           65_50:  32_10(ptr)   AccessChain 59_8(data) 43_3 43_2 uint(0)
+           61_54:   21_2(int)   Load 65_50
+           177_1:  20_1(bool)   SLessThan 61_54 43_3
+          337_17:  20_1(bool)   GroupNonUniformBroadcast uint(3) 177_1 uint(1)
+           169_2:   21_2(int)   Select 337_17 43_2 43_3
+           65_51:  32_10(ptr)   AccessChain 59_8(data) 61_53 43_2 uint(0)
+                                Store 65_51 169_2
+           61_55:   21_1(int)   Load 59_9(invocation)
+           65_52:  32_11(ptr)   AccessChain 59_8(data) 43_2 43_2
+           61_56: 23_3(ivec4)   Load 65_52
+            79_9: 23_8(ivec2)   VectorShuffle 61_56 61_56 0 1
+           177_2:23_14(bvec2)   SLessThan 79_9 44_1
+          337_18:23_14(bvec2)   GroupNonUniformBroadcast uint(3) 177_2 uint(1)
+           169_3: 23_8(ivec2)   Select 337_18 44_2 44_1
+           65_53:  32_10(ptr)   AccessChain 59_8(data) 61_55 43_2 uint(0)
+           81_21:   21_2(int)   CompositeExtract 169_3 0
+                                Store 65_53 81_21
+           65_54:  32_10(ptr)   AccessChain 59_8(data) 61_55 43_2 uint(1)
+           81_22:   21_2(int)   CompositeExtract 169_3 1
+                                Store 65_54 81_22
+           61_57:   21_1(int)   Load 59_9(invocation)
+           65_55:  32_11(ptr)   AccessChain 59_8(data) 43_2 43_2
+           61_58: 23_3(ivec4)   Load 65_55
+           79_10: 23_9(ivec3)   VectorShuffle 61_58 61_58 0 1 2
+           177_3:23_15(bvec3)   SLessThan 79_10 44_3
+          337_19:23_15(bvec3)   GroupNonUniformBroadcast uint(3) 177_3 uint(1)
+           169_4: 23_9(ivec3)   Select 337_19 44_4 44_3
+           65_56:  32_10(ptr)   AccessChain 59_8(data) 61_57 43_2 uint(0)
+           81_23:   21_2(int)   CompositeExtract 169_4 0
+                                Store 65_56 81_23
+           65_57:  32_10(ptr)   AccessChain 59_8(data) 61_57 43_2 uint(1)
+           81_24:   21_2(int)   CompositeExtract 169_4 1
+                                Store 65_57 81_24
+           65_58:  32_10(ptr)   AccessChain 59_8(data) 61_57 43_2 uint(2)
+           81_25:   21_2(int)   CompositeExtract 169_4 2
+                                Store 65_58 81_25
+           61_59:   21_1(int)   Load 59_9(invocation)
+           65_59:  32_11(ptr)   AccessChain 59_8(data) 43_2 43_2
+           61_60: 23_3(ivec4)   Load 65_59
+           177_4: 23_5(bvec4)   SLessThan 61_60 44_5
+          337_20: 23_5(bvec4)   GroupNonUniformBroadcast uint(3) 177_4 uint(1)
+           169_5: 23_3(ivec4)   Select 337_20 44_6 44_5
+           65_60:  32_11(ptr)   AccessChain 59_8(data) 61_59 43_2
+                                Store 65_60 169_5
+                                Branch 248_6
+           248_5:               Label
+           61_61:   21_1(int)   Load 59_9(invocation)
+           65_61:   32_8(ptr)   AccessChain 59_8(data) 43_3 43_3 uint(0)
+           61_62: 22_1(float)   Load 65_61
+           338_1: 22_1(float)   GroupNonUniformBroadcastFirst uint(3) 61_62
+           65_62:   32_8(ptr)   AccessChain 59_8(data) 61_61 43_3 uint(0)
+                                Store 65_62 338_1
+           61_63:   21_1(int)   Load 59_9(invocation)
+           65_63:   32_9(ptr)   AccessChain 59_8(data) 43_2 43_3
+           61_64: 23_2(fvec4)   Load 65_63
+           79_11: 23_6(fvec2)   VectorShuffle 61_64 61_64 0 1
+           338_2: 23_6(fvec2)   GroupNonUniformBroadcastFirst uint(3) 79_11
+           65_64:   32_8(ptr)   AccessChain 59_8(data) 61_63 43_3 uint(0)
+           81_26: 22_1(float)   CompositeExtract 338_2 0
+                                Store 65_64 81_26
+           65_65:   32_8(ptr)   AccessChain 59_8(data) 61_63 43_3 uint(1)
+           81_27: 22_1(float)   CompositeExtract 338_2 1
+                                Store 65_65 81_27
+           61_65:   21_1(int)   Load 59_9(invocation)
+           65_66:   32_9(ptr)   AccessChain 59_8(data) 43_1 43_3
+           61_66: 23_2(fvec4)   Load 65_66
+           79_12: 23_7(fvec3)   VectorShuffle 61_66 61_66 0 1 2
+           338_3: 23_7(fvec3)   GroupNonUniformBroadcastFirst uint(3) 79_12
+           65_67:   32_8(ptr)   AccessChain 59_8(data) 61_65 43_3 uint(0)
+           81_28: 22_1(float)   CompositeExtract 338_3 0
+                                Store 65_67 81_28
+           65_68:   32_8(ptr)   AccessChain 59_8(data) 61_65 43_3 uint(1)
+           81_29: 22_1(float)   CompositeExtract 338_3 1
+                                Store 65_68 81_29
+           65_69:   32_8(ptr)   AccessChain 59_8(data) 61_65 43_3 uint(2)
+           81_30: 22_1(float)   CompositeExtract 338_3 2
+                                Store 65_69 81_30
+           61_67:   21_1(int)   Load 59_9(invocation)
+           65_70:   32_9(ptr)   AccessChain 59_8(data) 43_4 43_3
+           61_68: 23_2(fvec4)   Load 65_70
+           338_4: 23_2(fvec4)   GroupNonUniformBroadcastFirst uint(3) 61_68
+           65_71:   32_9(ptr)   AccessChain 59_8(data) 61_67 43_3
+                                Store 65_71 338_4
+           61_69:   21_1(int)   Load 59_9(invocation)
+           65_72:  32_10(ptr)   AccessChain 59_8(data) 43_3 43_2 uint(0)
+           61_70:   21_2(int)   Load 65_72
+           338_5:   21_2(int)   GroupNonUniformBroadcastFirst uint(3) 61_70
+           65_73:  32_10(ptr)   AccessChain 59_8(data) 61_69 43_2 uint(0)
+                                Store 65_73 338_5
+           61_71:   21_1(int)   Load 59_9(invocation)
+           65_74:  32_11(ptr)   AccessChain 59_8(data) 43_2 43_2
+           61_72: 23_3(ivec4)   Load 65_74
+           79_13: 23_8(ivec2)   VectorShuffle 61_72 61_72 0 1
+           338_6: 23_8(ivec2)   GroupNonUniformBroadcastFirst uint(3) 79_13
+           65_75:  32_10(ptr)   AccessChain 59_8(data) 61_71 43_2 uint(0)
+           81_31:   21_2(int)   CompositeExtract 338_6 0
+                                Store 65_75 81_31
+           65_76:  32_10(ptr)   AccessChain 59_8(data) 61_71 43_2 uint(1)
+           81_32:   21_2(int)   CompositeExtract 338_6 1
+                                Store 65_76 81_32
+           61_73:   21_1(int)   Load 59_9(invocation)
+           65_77:  32_11(ptr)   AccessChain 59_8(data) 43_1 43_2
+           61_74: 23_3(ivec4)   Load 65_77
+           79_14: 23_9(ivec3)   VectorShuffle 61_74 61_74 0 1 2
+           338_7: 23_9(ivec3)   GroupNonUniformBroadcastFirst uint(3) 79_14
+           65_78:  32_10(ptr)   AccessChain 59_8(data) 61_73 43_2 uint(0)
+           81_33:   21_2(int)   CompositeExtract 338_7 0
+                                Store 65_78 81_33
+           65_79:  32_10(ptr)   AccessChain 59_8(data) 61_73 43_2 uint(1)
+           81_34:   21_2(int)   CompositeExtract 338_7 1
+                                Store 65_79 81_34
+           65_80:  32_10(ptr)   AccessChain 59_8(data) 61_73 43_2 uint(2)
+           81_35:   21_2(int)   CompositeExtract 338_7 2
+                                Store 65_80 81_35
+           61_75:   21_1(int)   Load 59_9(invocation)
+           65_81:  32_11(ptr)   AccessChain 59_8(data) 43_4 43_2
+           61_76: 23_3(ivec4)   Load 65_81
+           338_8: 23_3(ivec4)   GroupNonUniformBroadcastFirst uint(3) 61_76
+           65_82:  32_11(ptr)   AccessChain 59_8(data) 61_75 43_2
+                                Store 65_82 338_8
+           61_77:   21_1(int)   Load 59_9(invocation)
+           65_83:   32_6(ptr)   AccessChain 59_8(data) 43_3 43_1 uint(0)
+           61_78:   21_1(int)   Load 65_83
+           338_9:   21_1(int)   GroupNonUniformBroadcastFirst uint(3) 61_78
+           65_84:   32_6(ptr)   AccessChain 59_8(data) 61_77 43_1 uint(0)
+                                Store 65_84 338_9
+           61_79:   21_1(int)   Load 59_9(invocation)
+           65_85:   32_7(ptr)   AccessChain 59_8(data) 43_2 43_1
+           61_80: 23_1(ivec4)   Load 65_85
+           79_15:23_10(ivec2)   VectorShuffle 61_80 61_80 0 1
+          338_10:23_10(ivec2)   GroupNonUniformBroadcastFirst uint(3) 79_15
+           65_86:   32_6(ptr)   AccessChain 59_8(data) 61_79 43_1 uint(0)
+           81_36:   21_1(int)   CompositeExtract 338_10 0
+                                Store 65_86 81_36
+           65_87:   32_6(ptr)   AccessChain 59_8(data) 61_79 43_1 uint(1)
+           81_37:   21_1(int)   CompositeExtract 338_10 1
+                                Store 65_87 81_37
+           61_81:   21_1(int)   Load 59_9(invocation)
+           65_88:   32_7(ptr)   AccessChain 59_8(data) 43_1 43_1
+           61_82: 23_1(ivec4)   Load 65_88
+           79_16:23_11(ivec3)   VectorShuffle 61_82 61_82 0 1 2
+          338_11:23_11(ivec3)   GroupNonUniformBroadcastFirst uint(3) 79_16
+           65_89:   32_6(ptr)   AccessChain 59_8(data) 61_81 43_1 uint(0)
+           81_38:   21_1(int)   CompositeExtract 338_11 0
+                                Store 65_89 81_38
+           65_90:   32_6(ptr)   AccessChain 59_8(data) 61_81 43_1 uint(1)
+           81_39:   21_1(int)   CompositeExtract 338_11 1
+                                Store 65_90 81_39
+           65_91:   32_6(ptr)   AccessChain 59_8(data) 61_81 43_1 uint(2)
+           81_40:   21_1(int)   CompositeExtract 338_11 2
+                                Store 65_91 81_40
+           61_83:   21_1(int)   Load 59_9(invocation)
+           65_92:   32_7(ptr)   AccessChain 59_8(data) 43_4 43_1
+           61_84: 23_1(ivec4)   Load 65_92
+          338_12: 23_1(ivec4)   GroupNonUniformBroadcastFirst uint(3) 61_84
+           65_93:   32_7(ptr)   AccessChain 59_8(data) 61_83 43_1
+                                Store 65_93 338_12
+           61_85:   21_1(int)   Load 59_9(invocation)
+           65_94:  32_12(ptr)   AccessChain 59_8(data) 43_3 43_4 uint(0)
+           61_86:22_2(float64_t)   Load 65_94
+          338_13:22_2(float64_t)   GroupNonUniformBroadcastFirst uint(3) 61_86
+           65_95:  32_12(ptr)   AccessChain 59_8(data) 61_85 43_4 uint(0)
+                                Store 65_95 338_13
+           61_87:   21_1(int)   Load 59_9(invocation)
+           65_96:  32_13(ptr)   AccessChain 59_8(data) 43_2 43_4
+           61_88:23_4(f64vec4)   Load 65_96
+           79_17:23_12(f64vec2)   VectorShuffle 61_88 61_88 0 1
+          338_14:23_12(f64vec2)   GroupNonUniformBroadcastFirst uint(3) 79_17
+           65_97:  32_12(ptr)   AccessChain 59_8(data) 61_87 43_4 uint(0)
+           81_41:22_2(float64_t)   CompositeExtract 338_14 0
+                                Store 65_97 81_41
+           65_98:  32_12(ptr)   AccessChain 59_8(data) 61_87 43_4 uint(1)
+           81_42:22_2(float64_t)   CompositeExtract 338_14 1
+                                Store 65_98 81_42
+           61_89:   21_1(int)   Load 59_9(invocation)
+           65_99:  32_13(ptr)   AccessChain 59_8(data) 43_1 43_4
+           61_90:23_4(f64vec4)   Load 65_99
+           79_18:23_13(f64vec3)   VectorShuffle 61_90 61_90 0 1 2
+          338_15:23_13(f64vec3)   GroupNonUniformBroadcastFirst uint(3) 79_18
+          65_100:  32_12(ptr)   AccessChain 59_8(data) 61_89 43_4 uint(0)
+           81_43:22_2(float64_t)   CompositeExtract 338_15 0
+                                Store 65_100 81_43
+          65_101:  32_12(ptr)   AccessChain 59_8(data) 61_89 43_4 uint(1)
+           81_44:22_2(float64_t)   CompositeExtract 338_15 1
+                                Store 65_101 81_44
+          65_102:  32_12(ptr)   AccessChain 59_8(data) 61_89 43_4 uint(2)
+           81_45:22_2(float64_t)   CompositeExtract 338_15 2
+                                Store 65_102 81_45
+           61_91:   21_1(int)   Load 59_9(invocation)
+          65_103:  32_13(ptr)   AccessChain 59_8(data) 43_4 43_4
+           61_92:23_4(f64vec4)   Load 65_103
+          338_16:23_4(f64vec4)   GroupNonUniformBroadcastFirst uint(3) 61_92
+          65_104:  32_13(ptr)   AccessChain 59_8(data) 61_91 43_4
+                                Store 65_104 338_16
+           61_93:   21_1(int)   Load 59_9(invocation)
+          65_105:  32_10(ptr)   AccessChain 59_8(data) 43_3 43_2 uint(0)
+           61_94:   21_2(int)   Load 65_105
+           177_5:  20_1(bool)   SLessThan 61_94 43_3
+          338_17:  20_1(bool)   GroupNonUniformBroadcastFirst uint(3) 177_5
+           169_6:   21_2(int)   Select 338_17 43_2 43_3
+          65_106:  32_10(ptr)   AccessChain 59_8(data) 61_93 43_2 uint(0)
+                                Store 65_106 169_6
+           61_95:   21_1(int)   Load 59_9(invocation)
+          65_107:  32_11(ptr)   AccessChain 59_8(data) 43_2 43_2
+           61_96: 23_3(ivec4)   Load 65_107
+           79_19: 23_8(ivec2)   VectorShuffle 61_96 61_96 0 1
+           177_6:23_14(bvec2)   SLessThan 79_19 44_1
+          338_18:23_14(bvec2)   GroupNonUniformBroadcastFirst uint(3) 177_6
+           169_7: 23_8(ivec2)   Select 338_18 44_2 44_1
+          65_108:  32_10(ptr)   AccessChain 59_8(data) 61_95 43_2 uint(0)
+           81_46:   21_2(int)   CompositeExtract 169_7 0
+                                Store 65_108 81_46
+          65_109:  32_10(ptr)   AccessChain 59_8(data) 61_95 43_2 uint(1)
+           81_47:   21_2(int)   CompositeExtract 169_7 1
+                                Store 65_109 81_47
+           61_97:   21_1(int)   Load 59_9(invocation)
+          65_110:  32_11(ptr)   AccessChain 59_8(data) 43_2 43_2
+           61_98: 23_3(ivec4)   Load 65_110
+           79_20: 23_9(ivec3)   VectorShuffle 61_98 61_98 0 1 2
+           177_7:23_15(bvec3)   SLessThan 79_20 44_3
+          338_19:23_15(bvec3)   GroupNonUniformBroadcastFirst uint(3) 177_7
+           169_8: 23_9(ivec3)   Select 338_19 44_4 44_3
+          65_111:  32_10(ptr)   AccessChain 59_8(data) 61_97 43_2 uint(0)
+           81_48:   21_2(int)   CompositeExtract 169_8 0
+                                Store 65_111 81_48
+          65_112:  32_10(ptr)   AccessChain 59_8(data) 61_97 43_2 uint(1)
+           81_49:   21_2(int)   CompositeExtract 169_8 1
+                                Store 65_112 81_49
+          65_113:  32_10(ptr)   AccessChain 59_8(data) 61_97 43_2 uint(2)
+           81_50:   21_2(int)   CompositeExtract 169_8 2
+                                Store 65_113 81_50
+           61_99:   21_1(int)   Load 59_9(invocation)
+          65_114:  32_11(ptr)   AccessChain 59_8(data) 43_2 43_2
+          61_100: 23_3(ivec4)   Load 65_114
+           177_8: 23_5(bvec4)   SLessThan 61_100 44_5
+          338_20: 23_5(bvec4)   GroupNonUniformBroadcastFirst uint(3) 177_8
+           169_9: 23_3(ivec4)   Select 338_20 44_6 44_5
+          65_115:  32_11(ptr)   AccessChain 59_8(data) 61_99 43_2
+                                Store 65_115 169_9
+                                Branch 248_6
+           248_6:             Label
                               Return
                               FunctionEnd

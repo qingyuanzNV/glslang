@@ -68,65 +68,65 @@ local_size = (1, 1, 1)
 // Id's are bound by 38
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 19 23
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 11  "@main(i1;i1;"
-                              Name 9  "dti"
-                              Name 10  "gti"
-                              Name 16  "dti"
-                              Name 19  "dti"
-                              Name 22  "gti"
-                              Name 23  "gti"
-                              Name 26  "param"
-                              Name 28  "param"
-                              Name 37  "a"
-                              Decorate 19(dti) BuiltIn GlobalInvocationId
-                              Decorate 23(gti) BuiltIn LocalInvocationId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               8:             TypeFunction 2 7(ptr) 7(ptr)
-              17:             TypeVector 6(int) 3
-              18:             TypePointer Input 17(ivec3)
-         19(dti):     18(ptr) Variable Input
-         23(gti):     18(ptr) Variable Input
-              31:             TypeFloat 32
-              32:             TypeVector 31(float) 4
-              33:             TypeInt 32 0
-              34:     33(int) Constant 100
-              35:             TypeArray 32(fvec4) 34
-              36:             TypePointer Workgroup 35
-           37(a):     36(ptr) Variable Workgroup
-         4(main):           2 Function None 3
-               5:             Label
-         16(dti):      7(ptr) Variable Function
-         22(gti):      7(ptr) Variable Function
-       26(param):      7(ptr) Variable Function
-       28(param):      7(ptr) Variable Function
-              20:   17(ivec3) Load 19(dti)
-              21:      6(int) CompositeExtract 20 0
-                              Store 16(dti) 21
-              24:   17(ivec3) Load 23(gti)
-              25:      6(int) CompositeExtract 24 0
-                              Store 22(gti) 25
-              27:      6(int) Load 16(dti)
-                              Store 26(param) 27
-              29:      6(int) Load 22(gti)
-                              Store 28(param) 29
-              30:           2 FunctionCall 11(@main(i1;i1;) 26(param) 28(param)
+                              Name 54_1  "main"
+                              Name 54_2  "@main(i1;i1;"
+                              Name 55_1  "dti"
+                              Name 55_2  "gti"
+                              Name 59_4  "dti"
+                              Name 59_1  "dti"
+                              Name 59_5  "gti"
+                              Name 59_2  "gti"
+                              Name 59_6  "param"
+                              Name 59_7  "param"
+                              Name 59_3  "a"
+                              Decorate 59_1(dti) BuiltIn GlobalInvocationId
+                              Decorate 59_2(gti) BuiltIn LocalInvocationId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            33_2:             TypeFunction 19_1 32_1(ptr) 32_1(ptr)
+            23_1:             TypeVector 21_1(int) 3
+            32_2:             TypePointer Input 23_1(ivec3)
+       59_1(dti):   32_2(ptr) Variable Input
+       59_2(gti):   32_2(ptr) Variable Input
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 4
+            21_2:             TypeInt 32 0
+       uint(100):   21_2(int) Constant 100
+            28_1:             TypeArray 23_2(fvec4) uint(100)
+            32_3:             TypePointer Workgroup 28_1
+         59_3(a):   32_3(ptr) Variable Workgroup
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_4(dti):   32_1(ptr) Variable Function
+       59_5(gti):   32_1(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+     59_7(param):   32_1(ptr) Variable Function
+            61_1: 23_1(ivec3) Load 59_1(dti)
+            81_1:   21_1(int) CompositeExtract 61_1 0
+                              Store 59_4(dti) 81_1
+            61_2: 23_1(ivec3) Load 59_2(gti)
+            81_2:   21_1(int) CompositeExtract 61_2 0
+                              Store 59_5(gti) 81_2
+            61_3:   21_1(int) Load 59_4(dti)
+                              Store 59_6(param) 61_3
+            61_4:   21_1(int) Load 59_5(gti)
+                              Store 59_7(param) 61_4
+            57_1:        19_1 FunctionCall 54_2(@main(i1;i1;) 59_6(param) 59_7(param)
                               Return
                               FunctionEnd
-11(@main(i1;i1;):           2 Function None 8
-          9(dti):      7(ptr) FunctionParameter
-         10(gti):      7(ptr) FunctionParameter
-              12:             Label
-              13:      6(int) Load 9(dti)
-              14:      6(int) Load 10(gti)
-              15:      6(int) ISub 13 14
+54_2(@main(i1;i1;):        19_1 Function None 33_2
+       55_1(dti):   32_1(ptr) FunctionParameter
+       55_2(gti):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            61_5:   21_1(int) Load 55_1(dti)
+            61_6:   21_1(int) Load 55_2(gti)
+           130_1:   21_1(int) ISub 61_5 61_6
                               Return
                               FunctionEnd

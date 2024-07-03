@@ -4,125 +4,125 @@ spv.discard-dce.frag
 // Id's are bound by 84
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 21 59
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 9  "white"
-                              Name 12  "black"
-                              Name 15  "color"
-                              Name 18  "x"
-                              Name 21  "tex_coord"
-                              Name 30  "y"
-                              Name 36  "radius"
-                              Name 59  "gl_FragColor"
-                              Decorate 21(tex_coord) Location 0
-                              Decorate 59(gl_FragColor) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-              10:    6(float) Constant 1065353216
-              11:    7(fvec4) ConstantComposite 10 10 10 10
-              13:    6(float) Constant 1045220557
-              14:    7(fvec4) ConstantComposite 13 13 13 13
-              17:             TypePointer Function 6(float)
-              19:             TypeVector 6(float) 2
-              20:             TypePointer Input 19(fvec2)
-   21(tex_coord):     20(ptr) Variable Input
-              22:             TypeInt 32 0
-              23:     22(int) Constant 0
-              24:             TypePointer Input 6(float)
-              27:    6(float) Constant 1073741824
-              31:     22(int) Constant 1
-              46:             TypeBool
-              51:    6(float) Constant 1066192077
-              58:             TypePointer Output 7(fvec4)
-59(gl_FragColor):     58(ptr) Variable Output
-              62:    6(float) Constant 1067030938
-              71:    6(float) Constant 1061158912
-              76:    6(float) Constant 1098907648
-         4(main):           2 Function None 3
-               5:             Label
-        9(white):      8(ptr) Variable Function
-       12(black):      8(ptr) Variable Function
-       15(color):      8(ptr) Variable Function
-           18(x):     17(ptr) Variable Function
-           30(y):     17(ptr) Variable Function
-      36(radius):     17(ptr) Variable Function
-                              Store 9(white) 11
-                              Store 12(black) 14
-              16:    7(fvec4) Load 9(white)
-                              Store 15(color) 16
-              25:     24(ptr) AccessChain 21(tex_coord) 23
-              26:    6(float) Load 25
-              28:    6(float) FMul 26 27
-              29:    6(float) FSub 28 10
-                              Store 18(x) 29
-              32:     24(ptr) AccessChain 21(tex_coord) 31
-              33:    6(float) Load 32
-              34:    6(float) FMul 33 27
-              35:    6(float) FSub 34 10
-                              Store 30(y) 35
-              37:    6(float) Load 18(x)
-              38:    6(float) Load 18(x)
-              39:    6(float) FMul 37 38
-              40:    6(float) Load 30(y)
-              41:    6(float) Load 30(y)
-              42:    6(float) FMul 40 41
-              43:    6(float) FAdd 39 42
-              44:    6(float) ExtInst 1(GLSL.std.450) 31(Sqrt) 43
-                              Store 36(radius) 44
-              45:    6(float) Load 36(radius)
-              47:    46(bool) FOrdGreaterThan 45 10
-                              SelectionMerge 49 None
-                              BranchConditional 47 48 49
-              48:               Label
-              50:    6(float)   Load 36(radius)
-              52:    46(bool)   FOrdGreaterThan 50 51
-                                SelectionMerge 54 None
-                                BranchConditional 52 53 54
-              53:                 Label
-              55:    7(fvec4)     Load 15(color)
-              56:    7(fvec4)     CompositeConstruct 10 10 10 10
-              57:    7(fvec4)     FAdd 55 56
-                                  Store 15(color) 57
-                                  Branch 54
-              54:               Label
-              60:    7(fvec4)   Load 15(color)
-                                Store 59(gl_FragColor) 60
-              61:    6(float)   Load 36(radius)
-              63:    46(bool)   FOrdGreaterThan 61 62
-                                SelectionMerge 65 None
-                                BranchConditional 63 64 65
-              64:                 Label
-              66:    7(fvec4)     Load 15(color)
-              67:    7(fvec4)     CompositeConstruct 10 10 10 10
-              68:    7(fvec4)     FAdd 66 67
-                                  Store 15(color) 68
-                                  Branch 65
-              65:               Label
+                              Name 54_1  "main"
+                              Name 59_3  "white"
+                              Name 59_4  "black"
+                              Name 59_5  "color"
+                              Name 59_6  "x"
+                              Name 59_1  "tex_coord"
+                              Name 59_7  "y"
+                              Name 59_8  "radius"
+                              Name 59_2  "gl_FragColor"
+                              Decorate 59_1(tex_coord) Location 0
+                              Decorate 59_2(gl_FragColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            43_1: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            43_2: 22_1(float) Constant 1045220557
+            44_2: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+            32_2:             TypePointer Function 22_1(float)
+            23_2:             TypeVector 22_1(float) 2
+            32_3:             TypePointer Input 23_2(fvec2)
+ 59_1(tex_coord):   32_3(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+            32_4:             TypePointer Input 22_1(float)
+            43_3: 22_1(float) Constant 1073741824
+         uint(1):   21_1(int) Constant 1
+            20_1:             TypeBool
+            43_4: 22_1(float) Constant 1066192077
+            32_5:             TypePointer Output 23_1(fvec4)
+59_2(gl_FragColor):   32_5(ptr) Variable Output
+            43_5: 22_1(float) Constant 1067030938
+            43_6: 22_1(float) Constant 1061158912
+            43_7: 22_1(float) Constant 1098907648
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(white):   32_1(ptr) Variable Function
+     59_4(black):   32_1(ptr) Variable Function
+     59_5(color):   32_1(ptr) Variable Function
+         59_6(x):   32_2(ptr) Variable Function
+         59_7(y):   32_2(ptr) Variable Function
+    59_8(radius):   32_2(ptr) Variable Function
+                              Store 59_3(white) 44_1
+                              Store 59_4(black) 44_2
+            61_1: 23_1(fvec4) Load 59_3(white)
+                              Store 59_5(color) 61_1
+            65_1:   32_4(ptr) AccessChain 59_1(tex_coord) uint(0)
+            61_2: 22_1(float) Load 65_1
+           133_1: 22_1(float) FMul 61_2 43_3
+           131_1: 22_1(float) FSub 133_1 43_1
+                              Store 59_6(x) 131_1
+            65_2:   32_4(ptr) AccessChain 59_1(tex_coord) uint(1)
+            61_3: 22_1(float) Load 65_2
+           133_2: 22_1(float) FMul 61_3 43_3
+           131_2: 22_1(float) FSub 133_2 43_1
+                              Store 59_7(y) 131_2
+            61_4: 22_1(float) Load 59_6(x)
+            61_5: 22_1(float) Load 59_6(x)
+           133_3: 22_1(float) FMul 61_4 61_5
+            61_6: 22_1(float) Load 59_7(y)
+            61_7: 22_1(float) Load 59_7(y)
+           133_4: 22_1(float) FMul 61_6 61_7
+           129_1: 22_1(float) FAdd 133_3 133_4
+          1-31_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 31(Sqrt) 129_1
+                              Store 59_8(radius) 1-31_1
+            61_8: 22_1(float) Load 59_8(radius)
+           186_1:  20_1(bool) FOrdGreaterThan 61_8 43_1
+                              SelectionMerge 248_7 None
+                              BranchConditional 186_1 248_2 248_7
+           248_2:               Label
+            61_9: 22_1(float)   Load 59_8(radius)
+           186_2:  20_1(bool)   FOrdGreaterThan 61_9 43_4
+                                SelectionMerge 248_4 None
+                                BranchConditional 186_2 248_3 248_4
+           248_3:                 Label
+           61_10: 23_1(fvec4)     Load 59_5(color)
+            80_1: 23_1(fvec4)     CompositeConstruct 43_1 43_1 43_1 43_1
+           129_2: 23_1(fvec4)     FAdd 61_10 80_1
+                                  Store 59_5(color) 129_2
+                                  Branch 248_4
+           248_4:               Label
+           61_11: 23_1(fvec4)   Load 59_5(color)
+                                Store 59_2(gl_FragColor) 61_11
+           61_12: 22_1(float)   Load 59_8(radius)
+           186_3:  20_1(bool)   FOrdGreaterThan 61_12 43_5
+                                SelectionMerge 248_6 None
+                                BranchConditional 186_3 248_5 248_6
+           248_5:                 Label
+           61_13: 23_1(fvec4)     Load 59_5(color)
+            80_2: 23_1(fvec4)     CompositeConstruct 43_1 43_1 43_1 43_1
+           129_3: 23_1(fvec4)     FAdd 61_13 80_2
+                                  Store 59_5(color) 129_3
+                                  Branch 248_6
+           248_6:               Label
                                 Kill
-              49:             Label
-              70:    6(float) Load 36(radius)
-              72:    46(bool) FOrdGreaterThanEqual 70 71
-                              SelectionMerge 74 None
-                              BranchConditional 72 73 74
-              73:               Label
-              75:    6(float)   Load 36(radius)
-              77:    6(float)   ExtInst 1(GLSL.std.450) 26(Pow) 75 76
-              78:    6(float)   FDiv 77 27
-              79:    6(float)   ExtInst 1(GLSL.std.450) 4(FAbs) 78
-              80:    7(fvec4)   Load 15(color)
-              81:    7(fvec4)   CompositeConstruct 79 79 79 79
-              82:    7(fvec4)   FSub 80 81
-                                Store 15(color) 82
-                                Branch 74
-              74:             Label
-              83:    7(fvec4) Load 15(color)
-                              Store 59(gl_FragColor) 83
+           248_7:             Label
+           61_14: 22_1(float) Load 59_8(radius)
+           190_1:  20_1(bool) FOrdGreaterThanEqual 61_14 43_6
+                              SelectionMerge 248_9 None
+                              BranchConditional 190_1 248_8 248_9
+           248_8:               Label
+           61_15: 22_1(float)   Load 59_8(radius)
+          1-26_1: 22_1(float)   ExtInst 11_1(GLSL.std.450) 26(Pow) 61_15 43_7
+           136_1: 22_1(float)   FDiv 1-26_1 43_3
+           1-4_1: 22_1(float)   ExtInst 11_1(GLSL.std.450) 4(FAbs) 136_1
+           61_16: 23_1(fvec4)   Load 59_5(color)
+            80_3: 23_1(fvec4)   CompositeConstruct 1-4_1 1-4_1 1-4_1 1-4_1
+           131_3: 23_1(fvec4)   FSub 61_16 80_3
+                                Store 59_5(color) 131_3
+                                Branch 248_9
+           248_9:             Label
+           61_17: 23_1(fvec4) Load 59_5(color)
+                              Store 59_2(gl_FragColor) 61_17
                               Return
                               FunctionEnd

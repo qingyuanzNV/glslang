@@ -8,120 +8,120 @@ spv.420.geom
                               Capability ImageGatherExtended
                               Capability GeometryStreams
                               Capability MultiViewport
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Geometry 4  "main" 14 23 28 33 46
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 Invocations 4
-                              ExecutionMode 4 OutputLineStrip
-                              ExecutionMode 4 OutputVertices 127
+                              EntryPoint Geometry 54_1  "main" 59_1 59_2 59_3 59_4 59_6
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 Invocations 4
+                              ExecutionMode 54_1 OutputLineStrip
+                              ExecutionMode 54_1 OutputVertices 127
                               Source GLSL 420
-                              Name 4  "main"
-                              Name 8  "p"
-                              Name 9  "gl_PerVertex"
-                              MemberName 9(gl_PerVertex) 0  "gl_PointSize"
-                              Name 14  "gl_in"
-                              Name 21  "gl_PerVertex"
-                              MemberName 21(gl_PerVertex) 0  "gl_PointSize"
-                              Name 23  ""
-                              Name 28  "gl_ViewportIndex"
-                              Name 31  "id"
-                              Name 33  "gl_InvocationID"
-                              Name 37  "v"
-                              Name 41  "s2D"
-                              Name 46  "coord"
-                              Name 64  "i"
-                              Name 67  "indexable"
-                              Decorate 9(gl_PerVertex) Block
-                              MemberDecorate 9(gl_PerVertex) 0 BuiltIn PointSize
-                              Decorate 21(gl_PerVertex) Block
-                              MemberDecorate 21(gl_PerVertex) 0 BuiltIn PointSize
-                              Decorate 23 Stream 0
-                              Decorate 28(gl_ViewportIndex) BuiltIn ViewportIndex
-                              Decorate 28(gl_ViewportIndex) Stream 0
-                              Decorate 33(gl_InvocationID) BuiltIn InvocationId
-                              Decorate 41(s2D) Binding 0
-                              Decorate 41(s2D) DescriptorSet 0
-                              Decorate 46(coord) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
- 9(gl_PerVertex):             TypeStruct 6(float)
-              10:             TypeInt 32 0
-              11:     10(int) Constant 3
-              12:             TypeArray 9(gl_PerVertex) 11
-              13:             TypePointer Input 12
-       14(gl_in):     13(ptr) Variable Input
-              15:             TypeInt 32 1
-              16:     15(int) Constant 1
-              17:     15(int) Constant 0
-              18:             TypePointer Input 6(float)
-21(gl_PerVertex):             TypeStruct 6(float)
-              22:             TypePointer Output 21(gl_PerVertex)
-              23:     22(ptr) Variable Output
-              25:             TypePointer Output 6(float)
-              27:             TypePointer Output 15(int)
-28(gl_ViewportIndex):     27(ptr) Variable Output
-              29:     15(int) Constant 7
-              30:             TypePointer Function 15(int)
-              32:             TypePointer Input 15(int)
-33(gl_InvocationID):     32(ptr) Variable Input
-              35:             TypeVector 6(float) 4
-              36:             TypePointer Function 35(fvec4)
-              38:             TypeImage 6(float) 2D sampled format:Unknown
-              39:             TypeSampledImage 38
-              40:             TypePointer UniformConstant 39
-         41(s2D):     40(ptr) Variable UniformConstant
-              43:             TypeVector 6(float) 2
-              44:             TypeArray 43(fvec2) 11
-              45:             TypePointer Input 44
-       46(coord):     45(ptr) Variable Input
-              47:             TypePointer Input 43(fvec2)
-              50:             TypeVector 15(int) 2
-              51:     10(int) Constant 5
-              52:             TypeArray 50(ivec2) 51
-              53:   50(ivec2) ConstantComposite 17 16
-              54:     15(int) Constant 4294967294
-              55:   50(ivec2) ConstantComposite 16 54
-              56:     15(int) Constant 3
-              57:   50(ivec2) ConstantComposite 17 56
-              58:     15(int) Constant 4294967293
-              59:   50(ivec2) ConstantComposite 58 17
-              60:     15(int) Constant 2
-              61:   50(ivec2) ConstantComposite 60 16
-              62:          52 ConstantComposite 53 55 57 59 61
-              63:             TypePointer Private 15(int)
-           64(i):     63(ptr) Variable Private
-              66:             TypePointer Function 52
-              68:             TypePointer Function 50(ivec2)
-         4(main):           2 Function None 3
-               5:             Label
-            8(p):      7(ptr) Variable Function
-          31(id):     30(ptr) Variable Function
-           37(v):     36(ptr) Variable Function
-   67(indexable):     66(ptr) Variable Function
-              19:     18(ptr) AccessChain 14(gl_in) 16 17
-              20:    6(float) Load 19
-                              Store 8(p) 20
-              24:    6(float) Load 8(p)
-              26:     25(ptr) AccessChain 23 17
-                              Store 26 24
-                              Store 28(gl_ViewportIndex) 29
-                              EmitStreamVertex 16
-                              EndStreamPrimitive 17
+                              Name 54_1  "main"
+                              Name 59_8  "p"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_PointSize"
+                              Name 59_1  "gl_in"
+                              Name 30_2  "gl_PerVertex"
+                              MemberName 30_2(gl_PerVertex) 0  "gl_PointSize"
+                              Name 59_2  ""
+                              Name 59_3  "gl_ViewportIndex"
+                              Name 59_9  "id"
+                              Name 59_4  "gl_InvocationID"
+                              Name 59_10  "v"
+                              Name 59_5  "s2D"
+                              Name 59_6  "coord"
+                              Name 59_7  "i"
+                              Name 59_11  "indexable"
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn PointSize
+                              Decorate 30_2(gl_PerVertex) Block
+                              MemberDecorate 30_2(gl_PerVertex) 0 BuiltIn PointSize
+                              Decorate 59_2 Stream 0
+                              Decorate 59_3(gl_ViewportIndex) BuiltIn ViewportIndex
+                              Decorate 59_3(gl_ViewportIndex) Stream 0
+                              Decorate 59_4(gl_InvocationID) BuiltIn InvocationId
+                              Decorate 59_5(s2D) Binding 0
+                              Decorate 59_5(s2D) DescriptorSet 0
+                              Decorate 59_6(coord) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+30_1(gl_PerVertex):             TypeStruct 22_1(float)
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 30_1(gl_PerVertex) uint(3)
+            32_2:             TypePointer Input 28_1
+     59_1(gl_in):   32_2(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 1
+            43_2:   21_2(int) Constant 0
+            32_3:             TypePointer Input 22_1(float)
+30_2(gl_PerVertex):             TypeStruct 22_1(float)
+            32_4:             TypePointer Output 30_2(gl_PerVertex)
+            59_2:   32_4(ptr) Variable Output
+            32_5:             TypePointer Output 22_1(float)
+            32_6:             TypePointer Output 21_2(int)
+59_3(gl_ViewportIndex):   32_6(ptr) Variable Output
+            43_3:   21_2(int) Constant 7
+            32_7:             TypePointer Function 21_2(int)
+            32_8:             TypePointer Input 21_2(int)
+59_4(gl_InvocationID):   32_8(ptr) Variable Input
+            23_1:             TypeVector 22_1(float) 4
+            32_9:             TypePointer Function 23_1(fvec4)
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+           32_10:             TypePointer UniformConstant 27_1
+       59_5(s2D):  32_10(ptr) Variable UniformConstant
+            23_2:             TypeVector 22_1(float) 2
+            28_2:             TypeArray 23_2(fvec2) uint(3)
+           32_11:             TypePointer Input 28_2
+     59_6(coord):  32_11(ptr) Variable Input
+           32_12:             TypePointer Input 23_2(fvec2)
+            23_3:             TypeVector 21_2(int) 2
+         uint(5):   21_1(int) Constant 5
+            28_3:             TypeArray 23_3(ivec2) uint(5)
+            44_1: 23_3(ivec2) ConstantComposite 43_2 43_1
+            43_4:   21_2(int) Constant 4294967294
+            44_2: 23_3(ivec2) ConstantComposite 43_1 43_4
+            43_5:   21_2(int) Constant 3
+            44_3: 23_3(ivec2) ConstantComposite 43_2 43_5
+            43_6:   21_2(int) Constant 4294967293
+            44_4: 23_3(ivec2) ConstantComposite 43_6 43_2
+            43_7:   21_2(int) Constant 2
+            44_5: 23_3(ivec2) ConstantComposite 43_7 43_1
+            44_6:        28_3 ConstantComposite 44_1 44_2 44_3 44_4 44_5
+           32_13:             TypePointer Private 21_2(int)
+         59_7(i):  32_13(ptr) Variable Private
+           32_14:             TypePointer Function 28_3
+           32_15:             TypePointer Function 23_3(ivec2)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_8(p):   32_1(ptr) Variable Function
+        59_9(id):   32_7(ptr) Variable Function
+        59_10(v):   32_9(ptr) Variable Function
+59_11(indexable):  32_14(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(gl_in) 43_1 43_2
+            61_1: 22_1(float) Load 65_1
+                              Store 59_8(p) 61_1
+            61_2: 22_1(float) Load 59_8(p)
+            65_2:   32_5(ptr) AccessChain 59_2 43_2
+                              Store 65_2 61_2
+                              Store 59_3(gl_ViewportIndex) 43_3
+                              EmitStreamVertex 43_1
+                              EndStreamPrimitive 43_2
                               EmitVertex
                               EndPrimitive
-              34:     15(int) Load 33(gl_InvocationID)
-                              Store 31(id) 34
-              42:          39 Load 41(s2D)
-              48:     47(ptr) AccessChain 46(coord) 17
-              49:   43(fvec2) Load 48
-              65:     15(int) Load 64(i)
-                              Store 67(indexable) 62
-              69:     68(ptr) AccessChain 67(indexable) 65
-              70:   50(ivec2) Load 69
-              71:   35(fvec4) ImageGather 42 49 17 Offset 70
-                              Store 37(v) 71
+            61_3:   21_2(int) Load 59_4(gl_InvocationID)
+                              Store 59_9(id) 61_3
+            61_4:        27_1 Load 59_5(s2D)
+            65_3:  32_12(ptr) AccessChain 59_6(coord) 43_2
+            61_5: 23_2(fvec2) Load 65_3
+            61_6:   21_2(int) Load 59_7(i)
+                              Store 59_11(indexable) 44_6
+            65_4:  32_15(ptr) AccessChain 59_11(indexable) 61_6
+            61_7: 23_3(ivec2) Load 65_4
+            96_1: 23_1(fvec4) ImageGather 61_4 61_5 43_2 Offset 61_7
+                              Store 59_10(v) 96_1
                               Return
                               FunctionEnd

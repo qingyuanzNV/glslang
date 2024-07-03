@@ -53,47 +53,47 @@ Validation failed
 // Id's are bound by 27
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main"
+                              EntryPoint Vertex 54_1  "main"
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 6  "vs_in"
-                              Name 8  "vs_out"
-                              Name 11  "@main(struct-vs_in1;"
-                              Name 10  "i"
-                              Name 14  "o"
-                              Name 18  "i"
-                              Name 20  "i"
-                              Name 23  "@entryPointOutput"
-                              Name 24  "param"
-               2:             TypeVoid
-               3:             TypeFunction 2
-        6(vs_in):             TypeStruct
-               7:             TypePointer Function 6(vs_in)
-       8(vs_out):             TypeStruct
-               9:             TypeFunction 8(vs_out) 7(ptr)
-              13:             TypePointer Function 8(vs_out)
-              19:             TypePointer Input 6(vs_in)
-           20(i):     19(ptr) Variable Input
-              22:             TypePointer Output 8(vs_out)
-23(@entryPointOutput):     22(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-           18(i):      7(ptr) Variable Function
-       24(param):      7(ptr) Variable Function
-              21:    6(vs_in) Load 20(i)
-                              Store 18(i) 21
-              25:    6(vs_in) Load 18(i)
-                              Store 24(param) 25
-              26:   8(vs_out) FunctionCall 11(@main(struct-vs_in1;) 24(param)
-                              Store 23(@entryPointOutput) 26
+                              Name 54_1  "main"
+                              Name 30_1  "vs_in"
+                              Name 30_2  "vs_out"
+                              Name 54_2  "@main(struct-vs_in1;"
+                              Name 55_1  "i"
+                              Name 59_5  "o"
+                              Name 59_3  "i"
+                              Name 59_1  "i"
+                              Name 59_2  "@entryPointOutput"
+                              Name 59_4  "param"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+     30_1(vs_in):             TypeStruct
+            32_1:             TypePointer Function 30_1(vs_in)
+    30_2(vs_out):             TypeStruct
+            33_2:             TypeFunction 30_2(vs_out) 32_1(ptr)
+            32_2:             TypePointer Function 30_2(vs_out)
+            32_3:             TypePointer Input 30_1(vs_in)
+         59_1(i):   32_3(ptr) Variable Input
+            32_4:             TypePointer Output 30_2(vs_out)
+59_2(@entryPointOutput):   32_4(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_3(i):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1: 30_1(vs_in) Load 59_1(i)
+                              Store 59_3(i) 61_1
+            61_2: 30_1(vs_in) Load 59_3(i)
+                              Store 59_4(param) 61_2
+            57_1:30_2(vs_out) FunctionCall 54_2(@main(struct-vs_in1;) 59_4(param)
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-11(@main(struct-vs_in1;):   8(vs_out) Function None 9
-           10(i):      7(ptr) FunctionParameter
-              12:             Label
-           14(o):     13(ptr) Variable Function
-              15:   8(vs_out) Load 14(o)
-                              ReturnValue 15
+54_2(@main(struct-vs_in1;):30_2(vs_out) Function None 33_2
+         55_1(i):   32_1(ptr) FunctionParameter
+           248_2:             Label
+         59_5(o):   32_2(ptr) Variable Function
+            61_3:30_2(vs_out) Load 59_5(o)
+                              ReturnValue 61_3
                               FunctionEnd

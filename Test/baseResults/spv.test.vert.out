@@ -6,44 +6,44 @@ WARNING: 0:5: attribute deprecated in version 130; may be removed in future rele
 // Id's are bound by 24
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 9 11 15 18 21
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4 59_5
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 9  "uv"
-                              Name 11  "uv_in"
-                              Name 15  "gl_Position"
-                              Name 18  "transform"
-                              Name 21  "position"
-                              Decorate 9(uv) Location 0
-                              Decorate 11(uv_in) Location 5
-                              Decorate 15(gl_Position) BuiltIn Position
-                              Decorate 18(transform) Location 0
-                              Decorate 21(position) Location 4
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypePointer Output 7(fvec2)
-           9(uv):      8(ptr) Variable Output
-              10:             TypePointer Input 7(fvec2)
-       11(uv_in):     10(ptr) Variable Input
-              13:             TypeVector 6(float) 4
-              14:             TypePointer Output 13(fvec4)
- 15(gl_Position):     14(ptr) Variable Output
-              16:             TypeMatrix 13(fvec4) 4
-              17:             TypePointer Input 16
-   18(transform):     17(ptr) Variable Input
-              20:             TypePointer Input 13(fvec4)
-    21(position):     20(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              12:    7(fvec2) Load 11(uv_in)
-                              Store 9(uv) 12
-              19:          16 Load 18(transform)
-              22:   13(fvec4) Load 21(position)
-              23:   13(fvec4) MatrixTimesVector 19 22
-                              Store 15(gl_Position) 23
+                              Name 54_1  "main"
+                              Name 59_1  "uv"
+                              Name 59_2  "uv_in"
+                              Name 59_3  "gl_Position"
+                              Name 59_4  "transform"
+                              Name 59_5  "position"
+                              Decorate 59_1(uv) Location 0
+                              Decorate 59_2(uv_in) Location 5
+                              Decorate 59_3(gl_Position) BuiltIn Position
+                              Decorate 59_4(transform) Location 0
+                              Decorate 59_5(position) Location 4
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            32_1:             TypePointer Output 23_1(fvec2)
+        59_1(uv):   32_1(ptr) Variable Output
+            32_2:             TypePointer Input 23_1(fvec2)
+     59_2(uv_in):   32_2(ptr) Variable Input
+            23_2:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Output 23_2(fvec4)
+59_3(gl_Position):   32_3(ptr) Variable Output
+            24_1:             TypeMatrix 23_2(fvec4) 4
+            32_4:             TypePointer Input 24_1
+ 59_4(transform):   32_4(ptr) Variable Input
+            32_5:             TypePointer Input 23_2(fvec4)
+  59_5(position):   32_5(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1: 23_1(fvec2) Load 59_2(uv_in)
+                              Store 59_1(uv) 61_1
+            61_2:        24_1 Load 59_4(transform)
+            61_3: 23_2(fvec4) Load 59_5(position)
+           145_1: 23_2(fvec4) MatrixTimesVector 61_2 61_3
+                              Store 59_3(gl_Position) 145_1
                               Return
                               FunctionEnd

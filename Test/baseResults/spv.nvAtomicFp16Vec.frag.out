@@ -12,677 +12,677 @@ spv.nvAtomicFp16Vec.frag
                               Capability AtomicFloat16VectorNV
                               Extension  "SPV_KHR_16bit_storage"
                               Extension  "SPV_NV_shader_atomic_fp16_vector"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 430
                               SourceExtension  "GL_EXT_shader_explicit_arithmetic_types_float16"
                               SourceExtension  "GL_NV_shader_atomic_fp16_vector"
-                              Name 4  "main"
-                              Name 9  "Buffer"
-                              MemberName 9(Buffer) 0  "dataf16v2"
-                              MemberName 9(Buffer) 1  "dataf16v4"
-                              MemberName 9(Buffer) 2  "resf16v2"
-                              MemberName 9(Buffer) 3  "resf16v4"
-                              Name 11  "buf"
-                              Name 68  "constVec2"
-                              Name 74  "fimage1D"
-                              Name 85  "fimage1DArray"
-                              Name 97  "fimage2D"
-                              Name 107  "fimage2DArray"
-                              Name 119  "fimageCube"
-                              Name 129  "fimageCubeArray"
-                              Name 139  "fimage3D"
-                              Name 295  "constVec4"
-                              Name 299  "fimage1Dv4"
-                              Name 310  "fimage1DArrayv4"
-                              Name 320  "fimage2Dv4"
-                              Name 330  "fimage2DArrayv4"
-                              Name 340  "fimageCubev4"
-                              Name 350  "fimageCubeArrayv4"
-                              Name 360  "fimage3Dv4"
-                              Decorate 9(Buffer) BufferBlock
-                              MemberDecorate 9(Buffer) 0 Offset 0
-                              MemberDecorate 9(Buffer) 1 Offset 8
-                              MemberDecorate 9(Buffer) 2 Offset 16
-                              MemberDecorate 9(Buffer) 3 Offset 24
-                              Decorate 11(buf) Binding 0
-                              Decorate 11(buf) DescriptorSet 0
-                              Decorate 74(fimage1D) Volatile
-                              Decorate 74(fimage1D) Coherent
-                              Decorate 74(fimage1D) Binding 0
-                              Decorate 74(fimage1D) DescriptorSet 0
-                              Decorate 85(fimage1DArray) Volatile
-                              Decorate 85(fimage1DArray) Coherent
-                              Decorate 85(fimage1DArray) Binding 1
-                              Decorate 85(fimage1DArray) DescriptorSet 0
-                              Decorate 97(fimage2D) Volatile
-                              Decorate 97(fimage2D) Coherent
-                              Decorate 97(fimage2D) Binding 2
-                              Decorate 97(fimage2D) DescriptorSet 0
-                              Decorate 107(fimage2DArray) Volatile
-                              Decorate 107(fimage2DArray) Coherent
-                              Decorate 107(fimage2DArray) Binding 3
-                              Decorate 107(fimage2DArray) DescriptorSet 0
-                              Decorate 119(fimageCube) Volatile
-                              Decorate 119(fimageCube) Coherent
-                              Decorate 119(fimageCube) Binding 5
-                              Decorate 119(fimageCube) DescriptorSet 0
-                              Decorate 129(fimageCubeArray) Volatile
-                              Decorate 129(fimageCubeArray) Coherent
-                              Decorate 129(fimageCubeArray) Binding 6
-                              Decorate 129(fimageCubeArray) DescriptorSet 0
-                              Decorate 139(fimage3D) Volatile
-                              Decorate 139(fimage3D) Coherent
-                              Decorate 139(fimage3D) Binding 9
-                              Decorate 139(fimage3D) DescriptorSet 0
-                              Decorate 299(fimage1Dv4) Volatile
-                              Decorate 299(fimage1Dv4) Coherent
-                              Decorate 299(fimage1Dv4) Binding 10
-                              Decorate 299(fimage1Dv4) DescriptorSet 0
-                              Decorate 310(fimage1DArrayv4) Volatile
-                              Decorate 310(fimage1DArrayv4) Coherent
-                              Decorate 310(fimage1DArrayv4) Binding 11
-                              Decorate 310(fimage1DArrayv4) DescriptorSet 0
-                              Decorate 320(fimage2Dv4) Volatile
-                              Decorate 320(fimage2Dv4) Coherent
-                              Decorate 320(fimage2Dv4) Binding 12
-                              Decorate 320(fimage2Dv4) DescriptorSet 0
-                              Decorate 330(fimage2DArrayv4) Volatile
-                              Decorate 330(fimage2DArrayv4) Coherent
-                              Decorate 330(fimage2DArrayv4) Binding 13
-                              Decorate 330(fimage2DArrayv4) DescriptorSet 0
-                              Decorate 340(fimageCubev4) Volatile
-                              Decorate 340(fimageCubev4) Coherent
-                              Decorate 340(fimageCubev4) Binding 15
-                              Decorate 340(fimageCubev4) DescriptorSet 0
-                              Decorate 350(fimageCubeArrayv4) Volatile
-                              Decorate 350(fimageCubeArrayv4) Coherent
-                              Decorate 350(fimageCubeArrayv4) Binding 16
-                              Decorate 350(fimageCubeArrayv4) DescriptorSet 0
-                              Decorate 360(fimage3Dv4) Volatile
-                              Decorate 360(fimage3Dv4) Coherent
-                              Decorate 360(fimage3Dv4) Binding 19
-                              Decorate 360(fimage3Dv4) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 16
-               7:             TypeVector 6(float16_t) 2
-               8:             TypeVector 6(float16_t) 4
-       9(Buffer):             TypeStruct 7(f16vec2) 8(f16vec4) 7(f16vec2) 8(f16vec4)
-              10:             TypePointer Uniform 9(Buffer)
-         11(buf):     10(ptr) Variable Uniform
-              12:             TypeInt 32 1
-              13:     12(int) Constant 2
-              14:     12(int) Constant 0
-              15:             TypePointer Uniform 7(f16vec2)
-              17:6(float16_t) Constant 16896
-              18:  7(f16vec2) ConstantComposite 17 17
-              19:             TypeInt 32 0
-              20:     19(int) Constant 1
-              21:     19(int) Constant 0
-              42:     12(int) Constant 3
-              43:     12(int) Constant 1
-              44:             TypePointer Uniform 8(f16vec4)
-              46:  8(f16vec4) ConstantComposite 17 17 17 17
-              67:             TypePointer Function 7(f16vec2)
-              69:6(float16_t) Constant 16384
-              70:  7(f16vec2) ConstantComposite 69 69
-              71:             TypeFloat 32
-              72:             TypeImage 71(float) 1D nonsampled format:Rg16f
-              73:             TypePointer UniformConstant 72
-    74(fimage1D):     73(ptr) Variable UniformConstant
-              76:             TypePointer Image 7(f16vec2)
-              83:             TypeImage 71(float) 1D array nonsampled format:Rg16f
-              84:             TypePointer UniformConstant 83
-85(fimage1DArray):     84(ptr) Variable UniformConstant
-              86:             TypeVector 12(int) 2
-              87:   86(ivec2) ConstantComposite 14 14
-              95:             TypeImage 71(float) 2D nonsampled format:Rg16f
-              96:             TypePointer UniformConstant 95
-    97(fimage2D):     96(ptr) Variable UniformConstant
-             105:             TypeImage 71(float) 2D array nonsampled format:Rg16f
-             106:             TypePointer UniformConstant 105
-107(fimage2DArray):    106(ptr) Variable UniformConstant
-             108:             TypeVector 12(int) 3
-             109:  108(ivec3) ConstantComposite 14 14 14
-             117:             TypeImage 71(float) Cube nonsampled format:Rg16f
-             118:             TypePointer UniformConstant 117
- 119(fimageCube):    118(ptr) Variable UniformConstant
-             127:             TypeImage 71(float) Cube array nonsampled format:Rg16f
-             128:             TypePointer UniformConstant 127
-129(fimageCubeArray):    128(ptr) Variable UniformConstant
-             137:             TypeImage 71(float) 3D nonsampled format:Rg16f
-             138:             TypePointer UniformConstant 137
-   139(fimage3D):    138(ptr) Variable UniformConstant
-             294:             TypePointer Function 8(f16vec4)
-             296:  8(f16vec4) ConstantComposite 69 69 69 69
-             297:             TypeImage 71(float) 1D nonsampled format:Rgba16f
-             298:             TypePointer UniformConstant 297
- 299(fimage1Dv4):    298(ptr) Variable UniformConstant
-             301:             TypePointer Image 8(f16vec4)
-             308:             TypeImage 71(float) 1D array nonsampled format:Rgba16f
-             309:             TypePointer UniformConstant 308
-310(fimage1DArrayv4):    309(ptr) Variable UniformConstant
-             318:             TypeImage 71(float) 2D nonsampled format:Rgba16f
-             319:             TypePointer UniformConstant 318
- 320(fimage2Dv4):    319(ptr) Variable UniformConstant
-             328:             TypeImage 71(float) 2D array nonsampled format:Rgba16f
-             329:             TypePointer UniformConstant 328
-330(fimage2DArrayv4):    329(ptr) Variable UniformConstant
-             338:             TypeImage 71(float) Cube nonsampled format:Rgba16f
-             339:             TypePointer UniformConstant 338
-340(fimageCubev4):    339(ptr) Variable UniformConstant
-             348:             TypeImage 71(float) Cube array nonsampled format:Rgba16f
-             349:             TypePointer UniformConstant 348
-350(fimageCubeArrayv4):    349(ptr) Variable UniformConstant
-             358:             TypeImage 71(float) 3D nonsampled format:Rgba16f
-             359:             TypePointer UniformConstant 358
- 360(fimage3Dv4):    359(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-   68(constVec2):     67(ptr) Variable Function
-  295(constVec4):    294(ptr) Variable Function
-              16:     15(ptr) AccessChain 11(buf) 14
-              22:  7(f16vec2) AtomicFAddEXT 16 20 21 18
-              23:     15(ptr) AccessChain 11(buf) 13
-                              Store 23 22
-              24:     15(ptr) AccessChain 11(buf) 14
-              25:  7(f16vec2) AtomicFMinEXT 24 20 21 18
-              26:     15(ptr) AccessChain 11(buf) 13
-              27:  7(f16vec2) Load 26
-              28:  7(f16vec2) FAdd 27 25
-              29:     15(ptr) AccessChain 11(buf) 13
-                              Store 29 28
-              30:     15(ptr) AccessChain 11(buf) 14
-              31:  7(f16vec2) AtomicFMaxEXT 30 20 21 18
-              32:     15(ptr) AccessChain 11(buf) 13
-              33:  7(f16vec2) Load 32
-              34:  7(f16vec2) FAdd 33 31
-              35:     15(ptr) AccessChain 11(buf) 13
-                              Store 35 34
-              36:     15(ptr) AccessChain 11(buf) 14
-              37:  7(f16vec2) AtomicExchange 36 20 21 18
-              38:     15(ptr) AccessChain 11(buf) 13
-              39:  7(f16vec2) Load 38
-              40:  7(f16vec2) FAdd 39 37
-              41:     15(ptr) AccessChain 11(buf) 13
-                              Store 41 40
-              45:     44(ptr) AccessChain 11(buf) 43
-              47:  8(f16vec4) AtomicFAddEXT 45 20 21 46
-              48:     44(ptr) AccessChain 11(buf) 42
-                              Store 48 47
-              49:     44(ptr) AccessChain 11(buf) 43
-              50:  8(f16vec4) AtomicFMinEXT 49 20 21 46
-              51:     44(ptr) AccessChain 11(buf) 42
-              52:  8(f16vec4) Load 51
-              53:  8(f16vec4) FAdd 52 50
-              54:     44(ptr) AccessChain 11(buf) 42
-                              Store 54 53
-              55:     44(ptr) AccessChain 11(buf) 43
-              56:  8(f16vec4) AtomicFMaxEXT 55 20 21 46
-              57:     44(ptr) AccessChain 11(buf) 42
-              58:  8(f16vec4) Load 57
-              59:  8(f16vec4) FAdd 58 56
-              60:     44(ptr) AccessChain 11(buf) 42
-                              Store 60 59
-              61:     44(ptr) AccessChain 11(buf) 43
-              62:  8(f16vec4) AtomicExchange 61 20 21 46
-              63:     44(ptr) AccessChain 11(buf) 42
-              64:  8(f16vec4) Load 63
-              65:  8(f16vec4) FAdd 64 62
-              66:     44(ptr) AccessChain 11(buf) 42
-                              Store 66 65
-                              Store 68(constVec2) 70
-              75:  7(f16vec2) Load 68(constVec2)
-              77:     76(ptr) ImageTexelPointer 74(fimage1D) 14 21
-              78:  7(f16vec2) AtomicFAddEXT 77 20 21 75
-              79:     15(ptr) AccessChain 11(buf) 13
-              80:  7(f16vec2) Load 79
-              81:  7(f16vec2) FAdd 80 78
-              82:     15(ptr) AccessChain 11(buf) 13
-                              Store 82 81
-              88:  7(f16vec2) Load 68(constVec2)
-              89:     76(ptr) ImageTexelPointer 85(fimage1DArray) 87 21
-              90:  7(f16vec2) AtomicFAddEXT 89 20 21 88
-              91:     15(ptr) AccessChain 11(buf) 13
-              92:  7(f16vec2) Load 91
-              93:  7(f16vec2) FAdd 92 90
-              94:     15(ptr) AccessChain 11(buf) 13
-                              Store 94 93
-              98:  7(f16vec2) Load 68(constVec2)
-              99:     76(ptr) ImageTexelPointer 97(fimage2D) 87 21
-             100:  7(f16vec2) AtomicFAddEXT 99 20 21 98
-             101:     15(ptr) AccessChain 11(buf) 13
-             102:  7(f16vec2) Load 101
-             103:  7(f16vec2) FAdd 102 100
-             104:     15(ptr) AccessChain 11(buf) 13
-                              Store 104 103
-             110:  7(f16vec2) Load 68(constVec2)
-             111:     76(ptr) ImageTexelPointer 107(fimage2DArray) 109 21
-             112:  7(f16vec2) AtomicFAddEXT 111 20 21 110
-             113:     15(ptr) AccessChain 11(buf) 13
-             114:  7(f16vec2) Load 113
-             115:  7(f16vec2) FAdd 114 112
-             116:     15(ptr) AccessChain 11(buf) 13
-                              Store 116 115
-             120:  7(f16vec2) Load 68(constVec2)
-             121:     76(ptr) ImageTexelPointer 119(fimageCube) 109 21
-             122:  7(f16vec2) AtomicFAddEXT 121 20 21 120
-             123:     15(ptr) AccessChain 11(buf) 13
-             124:  7(f16vec2) Load 123
-             125:  7(f16vec2) FAdd 124 122
-             126:     15(ptr) AccessChain 11(buf) 13
-                              Store 126 125
-             130:  7(f16vec2) Load 68(constVec2)
-             131:     76(ptr) ImageTexelPointer 129(fimageCubeArray) 109 21
-             132:  7(f16vec2) AtomicFAddEXT 131 20 21 130
-             133:     15(ptr) AccessChain 11(buf) 13
-             134:  7(f16vec2) Load 133
-             135:  7(f16vec2) FAdd 134 132
-             136:     15(ptr) AccessChain 11(buf) 13
-                              Store 136 135
-             140:  7(f16vec2) Load 68(constVec2)
-             141:     76(ptr) ImageTexelPointer 139(fimage3D) 109 21
-             142:  7(f16vec2) AtomicFAddEXT 141 20 21 140
-             143:     15(ptr) AccessChain 11(buf) 13
-             144:  7(f16vec2) Load 143
-             145:  7(f16vec2) FAdd 144 142
-             146:     15(ptr) AccessChain 11(buf) 13
-                              Store 146 145
-             147:  7(f16vec2) Load 68(constVec2)
-             148:     76(ptr) ImageTexelPointer 74(fimage1D) 14 21
-             149:  7(f16vec2) AtomicFMinEXT 148 20 21 147
-             150:     15(ptr) AccessChain 11(buf) 13
-             151:  7(f16vec2) Load 150
-             152:  7(f16vec2) FAdd 151 149
-             153:     15(ptr) AccessChain 11(buf) 13
-                              Store 153 152
-             154:  7(f16vec2) Load 68(constVec2)
-             155:     76(ptr) ImageTexelPointer 85(fimage1DArray) 87 21
-             156:  7(f16vec2) AtomicFMinEXT 155 20 21 154
-             157:     15(ptr) AccessChain 11(buf) 13
-             158:  7(f16vec2) Load 157
-             159:  7(f16vec2) FAdd 158 156
-             160:     15(ptr) AccessChain 11(buf) 13
-                              Store 160 159
-             161:  7(f16vec2) Load 68(constVec2)
-             162:     76(ptr) ImageTexelPointer 97(fimage2D) 87 21
-             163:  7(f16vec2) AtomicFMinEXT 162 20 21 161
-             164:     15(ptr) AccessChain 11(buf) 13
-             165:  7(f16vec2) Load 164
-             166:  7(f16vec2) FAdd 165 163
-             167:     15(ptr) AccessChain 11(buf) 13
-                              Store 167 166
-             168:  7(f16vec2) Load 68(constVec2)
-             169:     76(ptr) ImageTexelPointer 107(fimage2DArray) 109 21
-             170:  7(f16vec2) AtomicFMinEXT 169 20 21 168
-             171:     15(ptr) AccessChain 11(buf) 13
-             172:  7(f16vec2) Load 171
-             173:  7(f16vec2) FAdd 172 170
-             174:     15(ptr) AccessChain 11(buf) 13
-                              Store 174 173
-             175:  7(f16vec2) Load 68(constVec2)
-             176:     76(ptr) ImageTexelPointer 119(fimageCube) 109 21
-             177:  7(f16vec2) AtomicFMinEXT 176 20 21 175
-             178:     15(ptr) AccessChain 11(buf) 13
-             179:  7(f16vec2) Load 178
-             180:  7(f16vec2) FAdd 179 177
-             181:     15(ptr) AccessChain 11(buf) 13
-                              Store 181 180
-             182:  7(f16vec2) Load 68(constVec2)
-             183:     76(ptr) ImageTexelPointer 129(fimageCubeArray) 109 21
-             184:  7(f16vec2) AtomicFMinEXT 183 20 21 182
-             185:     15(ptr) AccessChain 11(buf) 13
-             186:  7(f16vec2) Load 185
-             187:  7(f16vec2) FAdd 186 184
-             188:     15(ptr) AccessChain 11(buf) 13
-                              Store 188 187
-             189:  7(f16vec2) Load 68(constVec2)
-             190:     76(ptr) ImageTexelPointer 139(fimage3D) 109 21
-             191:  7(f16vec2) AtomicFMinEXT 190 20 21 189
-             192:     15(ptr) AccessChain 11(buf) 13
-             193:  7(f16vec2) Load 192
-             194:  7(f16vec2) FAdd 193 191
-             195:     15(ptr) AccessChain 11(buf) 13
-                              Store 195 194
-             196:  7(f16vec2) Load 68(constVec2)
-             197:     76(ptr) ImageTexelPointer 74(fimage1D) 14 21
-             198:  7(f16vec2) AtomicFMaxEXT 197 20 21 196
-             199:     15(ptr) AccessChain 11(buf) 13
-             200:  7(f16vec2) Load 199
-             201:  7(f16vec2) FAdd 200 198
-             202:     15(ptr) AccessChain 11(buf) 13
-                              Store 202 201
-             203:  7(f16vec2) Load 68(constVec2)
-             204:     76(ptr) ImageTexelPointer 85(fimage1DArray) 87 21
-             205:  7(f16vec2) AtomicFMaxEXT 204 20 21 203
-             206:     15(ptr) AccessChain 11(buf) 13
-             207:  7(f16vec2) Load 206
-             208:  7(f16vec2) FAdd 207 205
-             209:     15(ptr) AccessChain 11(buf) 13
-                              Store 209 208
-             210:  7(f16vec2) Load 68(constVec2)
-             211:     76(ptr) ImageTexelPointer 97(fimage2D) 87 21
-             212:  7(f16vec2) AtomicFMaxEXT 211 20 21 210
-             213:     15(ptr) AccessChain 11(buf) 13
-             214:  7(f16vec2) Load 213
-             215:  7(f16vec2) FAdd 214 212
-             216:     15(ptr) AccessChain 11(buf) 13
-                              Store 216 215
-             217:  7(f16vec2) Load 68(constVec2)
-             218:     76(ptr) ImageTexelPointer 107(fimage2DArray) 109 21
-             219:  7(f16vec2) AtomicFMaxEXT 218 20 21 217
-             220:     15(ptr) AccessChain 11(buf) 13
-             221:  7(f16vec2) Load 220
-             222:  7(f16vec2) FAdd 221 219
-             223:     15(ptr) AccessChain 11(buf) 13
-                              Store 223 222
-             224:  7(f16vec2) Load 68(constVec2)
-             225:     76(ptr) ImageTexelPointer 119(fimageCube) 109 21
-             226:  7(f16vec2) AtomicFMaxEXT 225 20 21 224
-             227:     15(ptr) AccessChain 11(buf) 13
-             228:  7(f16vec2) Load 227
-             229:  7(f16vec2) FAdd 228 226
-             230:     15(ptr) AccessChain 11(buf) 13
-                              Store 230 229
-             231:  7(f16vec2) Load 68(constVec2)
-             232:     76(ptr) ImageTexelPointer 129(fimageCubeArray) 109 21
-             233:  7(f16vec2) AtomicFMaxEXT 232 20 21 231
-             234:     15(ptr) AccessChain 11(buf) 13
-             235:  7(f16vec2) Load 234
-             236:  7(f16vec2) FAdd 235 233
-             237:     15(ptr) AccessChain 11(buf) 13
-                              Store 237 236
-             238:  7(f16vec2) Load 68(constVec2)
-             239:     76(ptr) ImageTexelPointer 139(fimage3D) 109 21
-             240:  7(f16vec2) AtomicFMaxEXT 239 20 21 238
-             241:     15(ptr) AccessChain 11(buf) 13
-             242:  7(f16vec2) Load 241
-             243:  7(f16vec2) FAdd 242 240
-             244:     15(ptr) AccessChain 11(buf) 13
-                              Store 244 243
-             245:  7(f16vec2) Load 68(constVec2)
-             246:     76(ptr) ImageTexelPointer 74(fimage1D) 14 21
-             247:  7(f16vec2) AtomicExchange 246 20 21 245
-             248:     15(ptr) AccessChain 11(buf) 13
-             249:  7(f16vec2) Load 248
-             250:  7(f16vec2) FAdd 249 247
-             251:     15(ptr) AccessChain 11(buf) 13
-                              Store 251 250
-             252:  7(f16vec2) Load 68(constVec2)
-             253:     76(ptr) ImageTexelPointer 85(fimage1DArray) 87 21
-             254:  7(f16vec2) AtomicExchange 253 20 21 252
-             255:     15(ptr) AccessChain 11(buf) 13
-             256:  7(f16vec2) Load 255
-             257:  7(f16vec2) FAdd 256 254
-             258:     15(ptr) AccessChain 11(buf) 13
-                              Store 258 257
-             259:  7(f16vec2) Load 68(constVec2)
-             260:     76(ptr) ImageTexelPointer 97(fimage2D) 87 21
-             261:  7(f16vec2) AtomicExchange 260 20 21 259
-             262:     15(ptr) AccessChain 11(buf) 13
-             263:  7(f16vec2) Load 262
-             264:  7(f16vec2) FAdd 263 261
-             265:     15(ptr) AccessChain 11(buf) 13
-                              Store 265 264
-             266:  7(f16vec2) Load 68(constVec2)
-             267:     76(ptr) ImageTexelPointer 107(fimage2DArray) 109 21
-             268:  7(f16vec2) AtomicExchange 267 20 21 266
-             269:     15(ptr) AccessChain 11(buf) 13
-             270:  7(f16vec2) Load 269
-             271:  7(f16vec2) FAdd 270 268
-             272:     15(ptr) AccessChain 11(buf) 13
-                              Store 272 271
-             273:  7(f16vec2) Load 68(constVec2)
-             274:     76(ptr) ImageTexelPointer 119(fimageCube) 109 21
-             275:  7(f16vec2) AtomicExchange 274 20 21 273
-             276:     15(ptr) AccessChain 11(buf) 13
-             277:  7(f16vec2) Load 276
-             278:  7(f16vec2) FAdd 277 275
-             279:     15(ptr) AccessChain 11(buf) 13
-                              Store 279 278
-             280:  7(f16vec2) Load 68(constVec2)
-             281:     76(ptr) ImageTexelPointer 129(fimageCubeArray) 109 21
-             282:  7(f16vec2) AtomicExchange 281 20 21 280
-             283:     15(ptr) AccessChain 11(buf) 13
-             284:  7(f16vec2) Load 283
-             285:  7(f16vec2) FAdd 284 282
-             286:     15(ptr) AccessChain 11(buf) 13
-                              Store 286 285
-             287:  7(f16vec2) Load 68(constVec2)
-             288:     76(ptr) ImageTexelPointer 139(fimage3D) 109 21
-             289:  7(f16vec2) AtomicExchange 288 20 21 287
-             290:     15(ptr) AccessChain 11(buf) 13
-             291:  7(f16vec2) Load 290
-             292:  7(f16vec2) FAdd 291 289
-             293:     15(ptr) AccessChain 11(buf) 13
-                              Store 293 292
-                              Store 295(constVec4) 296
-             300:  8(f16vec4) Load 295(constVec4)
-             302:    301(ptr) ImageTexelPointer 299(fimage1Dv4) 14 21
-             303:  8(f16vec4) AtomicFAddEXT 302 20 21 300
-             304:     44(ptr) AccessChain 11(buf) 42
-             305:  8(f16vec4) Load 304
-             306:  8(f16vec4) FAdd 305 303
-             307:     44(ptr) AccessChain 11(buf) 42
-                              Store 307 306
-             311:  8(f16vec4) Load 295(constVec4)
-             312:    301(ptr) ImageTexelPointer 310(fimage1DArrayv4) 87 21
-             313:  8(f16vec4) AtomicFAddEXT 312 20 21 311
-             314:     44(ptr) AccessChain 11(buf) 42
-             315:  8(f16vec4) Load 314
-             316:  8(f16vec4) FAdd 315 313
-             317:     44(ptr) AccessChain 11(buf) 42
-                              Store 317 316
-             321:  8(f16vec4) Load 295(constVec4)
-             322:    301(ptr) ImageTexelPointer 320(fimage2Dv4) 87 21
-             323:  8(f16vec4) AtomicFAddEXT 322 20 21 321
-             324:     44(ptr) AccessChain 11(buf) 42
-             325:  8(f16vec4) Load 324
-             326:  8(f16vec4) FAdd 325 323
-             327:     44(ptr) AccessChain 11(buf) 42
-                              Store 327 326
-             331:  8(f16vec4) Load 295(constVec4)
-             332:    301(ptr) ImageTexelPointer 330(fimage2DArrayv4) 109 21
-             333:  8(f16vec4) AtomicFAddEXT 332 20 21 331
-             334:     44(ptr) AccessChain 11(buf) 42
-             335:  8(f16vec4) Load 334
-             336:  8(f16vec4) FAdd 335 333
-             337:     44(ptr) AccessChain 11(buf) 42
-                              Store 337 336
-             341:  8(f16vec4) Load 295(constVec4)
-             342:    301(ptr) ImageTexelPointer 340(fimageCubev4) 109 21
-             343:  8(f16vec4) AtomicFAddEXT 342 20 21 341
-             344:     44(ptr) AccessChain 11(buf) 42
-             345:  8(f16vec4) Load 344
-             346:  8(f16vec4) FAdd 345 343
-             347:     44(ptr) AccessChain 11(buf) 42
-                              Store 347 346
-             351:  8(f16vec4) Load 295(constVec4)
-             352:    301(ptr) ImageTexelPointer 350(fimageCubeArrayv4) 109 21
-             353:  8(f16vec4) AtomicFAddEXT 352 20 21 351
-             354:     44(ptr) AccessChain 11(buf) 42
-             355:  8(f16vec4) Load 354
-             356:  8(f16vec4) FAdd 355 353
-             357:     44(ptr) AccessChain 11(buf) 42
-                              Store 357 356
-             361:  8(f16vec4) Load 295(constVec4)
-             362:    301(ptr) ImageTexelPointer 360(fimage3Dv4) 109 21
-             363:  8(f16vec4) AtomicFAddEXT 362 20 21 361
-             364:     44(ptr) AccessChain 11(buf) 42
-             365:  8(f16vec4) Load 364
-             366:  8(f16vec4) FAdd 365 363
-             367:     44(ptr) AccessChain 11(buf) 42
-                              Store 367 366
-             368:  8(f16vec4) Load 295(constVec4)
-             369:    301(ptr) ImageTexelPointer 299(fimage1Dv4) 14 21
-             370:  8(f16vec4) AtomicFMinEXT 369 20 21 368
-             371:     44(ptr) AccessChain 11(buf) 42
-             372:  8(f16vec4) Load 371
-             373:  8(f16vec4) FAdd 372 370
-             374:     44(ptr) AccessChain 11(buf) 42
-                              Store 374 373
-             375:  8(f16vec4) Load 295(constVec4)
-             376:    301(ptr) ImageTexelPointer 310(fimage1DArrayv4) 87 21
-             377:  8(f16vec4) AtomicFMinEXT 376 20 21 375
-             378:     44(ptr) AccessChain 11(buf) 42
-             379:  8(f16vec4) Load 378
-             380:  8(f16vec4) FAdd 379 377
-             381:     44(ptr) AccessChain 11(buf) 42
-                              Store 381 380
-             382:  8(f16vec4) Load 295(constVec4)
-             383:    301(ptr) ImageTexelPointer 320(fimage2Dv4) 87 21
-             384:  8(f16vec4) AtomicFMinEXT 383 20 21 382
-             385:     44(ptr) AccessChain 11(buf) 42
-             386:  8(f16vec4) Load 385
-             387:  8(f16vec4) FAdd 386 384
-             388:     44(ptr) AccessChain 11(buf) 42
-                              Store 388 387
-             389:  8(f16vec4) Load 295(constVec4)
-             390:    301(ptr) ImageTexelPointer 330(fimage2DArrayv4) 109 21
-             391:  8(f16vec4) AtomicFMinEXT 390 20 21 389
-             392:     44(ptr) AccessChain 11(buf) 42
-             393:  8(f16vec4) Load 392
-             394:  8(f16vec4) FAdd 393 391
-             395:     44(ptr) AccessChain 11(buf) 42
-                              Store 395 394
-             396:  8(f16vec4) Load 295(constVec4)
-             397:    301(ptr) ImageTexelPointer 340(fimageCubev4) 109 21
-             398:  8(f16vec4) AtomicFMinEXT 397 20 21 396
-             399:     44(ptr) AccessChain 11(buf) 42
-             400:  8(f16vec4) Load 399
-             401:  8(f16vec4) FAdd 400 398
-             402:     44(ptr) AccessChain 11(buf) 42
-                              Store 402 401
-             403:  8(f16vec4) Load 295(constVec4)
-             404:    301(ptr) ImageTexelPointer 350(fimageCubeArrayv4) 109 21
-             405:  8(f16vec4) AtomicFMinEXT 404 20 21 403
-             406:     44(ptr) AccessChain 11(buf) 42
-             407:  8(f16vec4) Load 406
-             408:  8(f16vec4) FAdd 407 405
-             409:     44(ptr) AccessChain 11(buf) 42
-                              Store 409 408
-             410:  8(f16vec4) Load 295(constVec4)
-             411:    301(ptr) ImageTexelPointer 360(fimage3Dv4) 109 21
-             412:  8(f16vec4) AtomicFMinEXT 411 20 21 410
-             413:     44(ptr) AccessChain 11(buf) 42
-             414:  8(f16vec4) Load 413
-             415:  8(f16vec4) FAdd 414 412
-             416:     44(ptr) AccessChain 11(buf) 42
-                              Store 416 415
-             417:  8(f16vec4) Load 295(constVec4)
-             418:    301(ptr) ImageTexelPointer 299(fimage1Dv4) 14 21
-             419:  8(f16vec4) AtomicFMaxEXT 418 20 21 417
-             420:     44(ptr) AccessChain 11(buf) 42
-             421:  8(f16vec4) Load 420
-             422:  8(f16vec4) FAdd 421 419
-             423:     44(ptr) AccessChain 11(buf) 42
-                              Store 423 422
-             424:  8(f16vec4) Load 295(constVec4)
-             425:    301(ptr) ImageTexelPointer 310(fimage1DArrayv4) 87 21
-             426:  8(f16vec4) AtomicFMaxEXT 425 20 21 424
-             427:     44(ptr) AccessChain 11(buf) 42
-             428:  8(f16vec4) Load 427
-             429:  8(f16vec4) FAdd 428 426
-             430:     44(ptr) AccessChain 11(buf) 42
-                              Store 430 429
-             431:  8(f16vec4) Load 295(constVec4)
-             432:    301(ptr) ImageTexelPointer 320(fimage2Dv4) 87 21
-             433:  8(f16vec4) AtomicFMaxEXT 432 20 21 431
-             434:     44(ptr) AccessChain 11(buf) 42
-             435:  8(f16vec4) Load 434
-             436:  8(f16vec4) FAdd 435 433
-             437:     44(ptr) AccessChain 11(buf) 42
-                              Store 437 436
-             438:  8(f16vec4) Load 295(constVec4)
-             439:    301(ptr) ImageTexelPointer 330(fimage2DArrayv4) 109 21
-             440:  8(f16vec4) AtomicFMaxEXT 439 20 21 438
-             441:     44(ptr) AccessChain 11(buf) 42
-             442:  8(f16vec4) Load 441
-             443:  8(f16vec4) FAdd 442 440
-             444:     44(ptr) AccessChain 11(buf) 42
-                              Store 444 443
-             445:  8(f16vec4) Load 295(constVec4)
-             446:    301(ptr) ImageTexelPointer 340(fimageCubev4) 109 21
-             447:  8(f16vec4) AtomicFMaxEXT 446 20 21 445
-             448:     44(ptr) AccessChain 11(buf) 42
-             449:  8(f16vec4) Load 448
-             450:  8(f16vec4) FAdd 449 447
-             451:     44(ptr) AccessChain 11(buf) 42
-                              Store 451 450
-             452:  8(f16vec4) Load 295(constVec4)
-             453:    301(ptr) ImageTexelPointer 350(fimageCubeArrayv4) 109 21
-             454:  8(f16vec4) AtomicFMaxEXT 453 20 21 452
-             455:     44(ptr) AccessChain 11(buf) 42
-             456:  8(f16vec4) Load 455
-             457:  8(f16vec4) FAdd 456 454
-             458:     44(ptr) AccessChain 11(buf) 42
-                              Store 458 457
-             459:  8(f16vec4) Load 295(constVec4)
-             460:    301(ptr) ImageTexelPointer 360(fimage3Dv4) 109 21
-             461:  8(f16vec4) AtomicFMaxEXT 460 20 21 459
-             462:     44(ptr) AccessChain 11(buf) 42
-             463:  8(f16vec4) Load 462
-             464:  8(f16vec4) FAdd 463 461
-             465:     44(ptr) AccessChain 11(buf) 42
-                              Store 465 464
-             466:  8(f16vec4) Load 295(constVec4)
-             467:    301(ptr) ImageTexelPointer 299(fimage1Dv4) 14 21
-             468:  8(f16vec4) AtomicExchange 467 20 21 466
-             469:     44(ptr) AccessChain 11(buf) 42
-             470:  8(f16vec4) Load 469
-             471:  8(f16vec4) FAdd 470 468
-             472:     44(ptr) AccessChain 11(buf) 42
-                              Store 472 471
-             473:  8(f16vec4) Load 295(constVec4)
-             474:    301(ptr) ImageTexelPointer 310(fimage1DArrayv4) 87 21
-             475:  8(f16vec4) AtomicExchange 474 20 21 473
-             476:     44(ptr) AccessChain 11(buf) 42
-             477:  8(f16vec4) Load 476
-             478:  8(f16vec4) FAdd 477 475
-             479:     44(ptr) AccessChain 11(buf) 42
-                              Store 479 478
-             480:  8(f16vec4) Load 295(constVec4)
-             481:    301(ptr) ImageTexelPointer 320(fimage2Dv4) 87 21
-             482:  8(f16vec4) AtomicExchange 481 20 21 480
-             483:     44(ptr) AccessChain 11(buf) 42
-             484:  8(f16vec4) Load 483
-             485:  8(f16vec4) FAdd 484 482
-             486:     44(ptr) AccessChain 11(buf) 42
-                              Store 486 485
-             487:  8(f16vec4) Load 295(constVec4)
-             488:    301(ptr) ImageTexelPointer 330(fimage2DArrayv4) 109 21
-             489:  8(f16vec4) AtomicExchange 488 20 21 487
-             490:     44(ptr) AccessChain 11(buf) 42
-             491:  8(f16vec4) Load 490
-             492:  8(f16vec4) FAdd 491 489
-             493:     44(ptr) AccessChain 11(buf) 42
-                              Store 493 492
-             494:  8(f16vec4) Load 295(constVec4)
-             495:    301(ptr) ImageTexelPointer 340(fimageCubev4) 109 21
-             496:  8(f16vec4) AtomicExchange 495 20 21 494
-             497:     44(ptr) AccessChain 11(buf) 42
-             498:  8(f16vec4) Load 497
-             499:  8(f16vec4) FAdd 498 496
-             500:     44(ptr) AccessChain 11(buf) 42
-                              Store 500 499
-             501:  8(f16vec4) Load 295(constVec4)
-             502:    301(ptr) ImageTexelPointer 350(fimageCubeArrayv4) 109 21
-             503:  8(f16vec4) AtomicExchange 502 20 21 501
-             504:     44(ptr) AccessChain 11(buf) 42
-             505:  8(f16vec4) Load 504
-             506:  8(f16vec4) FAdd 505 503
-             507:     44(ptr) AccessChain 11(buf) 42
-                              Store 507 506
-             508:  8(f16vec4) Load 295(constVec4)
-             509:    301(ptr) ImageTexelPointer 360(fimage3Dv4) 109 21
-             510:  8(f16vec4) AtomicExchange 509 20 21 508
-             511:     44(ptr) AccessChain 11(buf) 42
-             512:  8(f16vec4) Load 511
-             513:  8(f16vec4) FAdd 512 510
-             514:     44(ptr) AccessChain 11(buf) 42
-                              Store 514 513
+                              Name 54_1  "main"
+                              Name 30_1  "Buffer"
+                              MemberName 30_1(Buffer) 0  "dataf16v2"
+                              MemberName 30_1(Buffer) 1  "dataf16v4"
+                              MemberName 30_1(Buffer) 2  "resf16v2"
+                              MemberName 30_1(Buffer) 3  "resf16v4"
+                              Name 59_1  "buf"
+                              Name 59_16  "constVec2"
+                              Name 59_2  "fimage1D"
+                              Name 59_3  "fimage1DArray"
+                              Name 59_4  "fimage2D"
+                              Name 59_5  "fimage2DArray"
+                              Name 59_6  "fimageCube"
+                              Name 59_7  "fimageCubeArray"
+                              Name 59_8  "fimage3D"
+                              Name 59_17  "constVec4"
+                              Name 59_9  "fimage1Dv4"
+                              Name 59_10  "fimage1DArrayv4"
+                              Name 59_11  "fimage2Dv4"
+                              Name 59_12  "fimage2DArrayv4"
+                              Name 59_13  "fimageCubev4"
+                              Name 59_14  "fimageCubeArrayv4"
+                              Name 59_15  "fimage3Dv4"
+                              Decorate 30_1(Buffer) BufferBlock
+                              MemberDecorate 30_1(Buffer) 0 Offset 0
+                              MemberDecorate 30_1(Buffer) 1 Offset 8
+                              MemberDecorate 30_1(Buffer) 2 Offset 16
+                              MemberDecorate 30_1(Buffer) 3 Offset 24
+                              Decorate 59_1(buf) Binding 0
+                              Decorate 59_1(buf) DescriptorSet 0
+                              Decorate 59_2(fimage1D) Volatile
+                              Decorate 59_2(fimage1D) Coherent
+                              Decorate 59_2(fimage1D) Binding 0
+                              Decorate 59_2(fimage1D) DescriptorSet 0
+                              Decorate 59_3(fimage1DArray) Volatile
+                              Decorate 59_3(fimage1DArray) Coherent
+                              Decorate 59_3(fimage1DArray) Binding 1
+                              Decorate 59_3(fimage1DArray) DescriptorSet 0
+                              Decorate 59_4(fimage2D) Volatile
+                              Decorate 59_4(fimage2D) Coherent
+                              Decorate 59_4(fimage2D) Binding 2
+                              Decorate 59_4(fimage2D) DescriptorSet 0
+                              Decorate 59_5(fimage2DArray) Volatile
+                              Decorate 59_5(fimage2DArray) Coherent
+                              Decorate 59_5(fimage2DArray) Binding 3
+                              Decorate 59_5(fimage2DArray) DescriptorSet 0
+                              Decorate 59_6(fimageCube) Volatile
+                              Decorate 59_6(fimageCube) Coherent
+                              Decorate 59_6(fimageCube) Binding 5
+                              Decorate 59_6(fimageCube) DescriptorSet 0
+                              Decorate 59_7(fimageCubeArray) Volatile
+                              Decorate 59_7(fimageCubeArray) Coherent
+                              Decorate 59_7(fimageCubeArray) Binding 6
+                              Decorate 59_7(fimageCubeArray) DescriptorSet 0
+                              Decorate 59_8(fimage3D) Volatile
+                              Decorate 59_8(fimage3D) Coherent
+                              Decorate 59_8(fimage3D) Binding 9
+                              Decorate 59_8(fimage3D) DescriptorSet 0
+                              Decorate 59_9(fimage1Dv4) Volatile
+                              Decorate 59_9(fimage1Dv4) Coherent
+                              Decorate 59_9(fimage1Dv4) Binding 10
+                              Decorate 59_9(fimage1Dv4) DescriptorSet 0
+                              Decorate 59_10(fimage1DArrayv4) Volatile
+                              Decorate 59_10(fimage1DArrayv4) Coherent
+                              Decorate 59_10(fimage1DArrayv4) Binding 11
+                              Decorate 59_10(fimage1DArrayv4) DescriptorSet 0
+                              Decorate 59_11(fimage2Dv4) Volatile
+                              Decorate 59_11(fimage2Dv4) Coherent
+                              Decorate 59_11(fimage2Dv4) Binding 12
+                              Decorate 59_11(fimage2Dv4) DescriptorSet 0
+                              Decorate 59_12(fimage2DArrayv4) Volatile
+                              Decorate 59_12(fimage2DArrayv4) Coherent
+                              Decorate 59_12(fimage2DArrayv4) Binding 13
+                              Decorate 59_12(fimage2DArrayv4) DescriptorSet 0
+                              Decorate 59_13(fimageCubev4) Volatile
+                              Decorate 59_13(fimageCubev4) Coherent
+                              Decorate 59_13(fimageCubev4) Binding 15
+                              Decorate 59_13(fimageCubev4) DescriptorSet 0
+                              Decorate 59_14(fimageCubeArrayv4) Volatile
+                              Decorate 59_14(fimageCubeArrayv4) Coherent
+                              Decorate 59_14(fimageCubeArrayv4) Binding 16
+                              Decorate 59_14(fimageCubeArrayv4) DescriptorSet 0
+                              Decorate 59_15(fimage3Dv4) Volatile
+                              Decorate 59_15(fimage3Dv4) Coherent
+                              Decorate 59_15(fimage3Dv4) Binding 19
+                              Decorate 59_15(fimage3Dv4) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 16
+            23_1:             TypeVector 22_1(float16_t) 2
+            23_2:             TypeVector 22_1(float16_t) 4
+    30_1(Buffer):             TypeStruct 23_1(f16vec2) 23_2(f16vec4) 23_1(f16vec2) 23_2(f16vec4)
+            32_1:             TypePointer Uniform 30_1(Buffer)
+       59_1(buf):   32_1(ptr) Variable Uniform
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 2
+            43_2:   21_1(int) Constant 0
+            32_2:             TypePointer Uniform 23_1(f16vec2)
+            43_3:22_1(float16_t) Constant 16896
+            44_1:23_1(f16vec2) ConstantComposite 43_3 43_3
+            21_2:             TypeInt 32 0
+         uint(1):   21_2(int) Constant 1
+         uint(0):   21_2(int) Constant 0
+            43_4:   21_1(int) Constant 3
+            43_5:   21_1(int) Constant 1
+            32_3:             TypePointer Uniform 23_2(f16vec4)
+            44_2:23_2(f16vec4) ConstantComposite 43_3 43_3 43_3 43_3
+            32_4:             TypePointer Function 23_1(f16vec2)
+            43_6:22_1(float16_t) Constant 16384
+            44_3:23_1(f16vec2) ConstantComposite 43_6 43_6
+            22_2:             TypeFloat 32
+            25_1:             TypeImage 22_2(float) 1D nonsampled format:Rg16f
+            32_5:             TypePointer UniformConstant 25_1
+  59_2(fimage1D):   32_5(ptr) Variable UniformConstant
+            32_6:             TypePointer Image 23_1(f16vec2)
+            25_2:             TypeImage 22_2(float) 1D array nonsampled format:Rg16f
+            32_7:             TypePointer UniformConstant 25_2
+59_3(fimage1DArray):   32_7(ptr) Variable UniformConstant
+            23_3:             TypeVector 21_1(int) 2
+            44_4: 23_3(ivec2) ConstantComposite 43_2 43_2
+            25_3:             TypeImage 22_2(float) 2D nonsampled format:Rg16f
+            32_8:             TypePointer UniformConstant 25_3
+  59_4(fimage2D):   32_8(ptr) Variable UniformConstant
+            25_4:             TypeImage 22_2(float) 2D array nonsampled format:Rg16f
+            32_9:             TypePointer UniformConstant 25_4
+59_5(fimage2DArray):   32_9(ptr) Variable UniformConstant
+            23_4:             TypeVector 21_1(int) 3
+            44_5: 23_4(ivec3) ConstantComposite 43_2 43_2 43_2
+            25_5:             TypeImage 22_2(float) Cube nonsampled format:Rg16f
+           32_10:             TypePointer UniformConstant 25_5
+59_6(fimageCube):  32_10(ptr) Variable UniformConstant
+            25_6:             TypeImage 22_2(float) Cube array nonsampled format:Rg16f
+           32_11:             TypePointer UniformConstant 25_6
+59_7(fimageCubeArray):  32_11(ptr) Variable UniformConstant
+            25_7:             TypeImage 22_2(float) 3D nonsampled format:Rg16f
+           32_12:             TypePointer UniformConstant 25_7
+  59_8(fimage3D):  32_12(ptr) Variable UniformConstant
+           32_13:             TypePointer Function 23_2(f16vec4)
+            44_6:23_2(f16vec4) ConstantComposite 43_6 43_6 43_6 43_6
+            25_8:             TypeImage 22_2(float) 1D nonsampled format:Rgba16f
+           32_14:             TypePointer UniformConstant 25_8
+59_9(fimage1Dv4):  32_14(ptr) Variable UniformConstant
+           32_15:             TypePointer Image 23_2(f16vec4)
+            25_9:             TypeImage 22_2(float) 1D array nonsampled format:Rgba16f
+           32_16:             TypePointer UniformConstant 25_9
+59_10(fimage1DArrayv4):  32_16(ptr) Variable UniformConstant
+           25_10:             TypeImage 22_2(float) 2D nonsampled format:Rgba16f
+           32_17:             TypePointer UniformConstant 25_10
+59_11(fimage2Dv4):  32_17(ptr) Variable UniformConstant
+           25_11:             TypeImage 22_2(float) 2D array nonsampled format:Rgba16f
+           32_18:             TypePointer UniformConstant 25_11
+59_12(fimage2DArrayv4):  32_18(ptr) Variable UniformConstant
+           25_12:             TypeImage 22_2(float) Cube nonsampled format:Rgba16f
+           32_19:             TypePointer UniformConstant 25_12
+59_13(fimageCubev4):  32_19(ptr) Variable UniformConstant
+           25_13:             TypeImage 22_2(float) Cube array nonsampled format:Rgba16f
+           32_20:             TypePointer UniformConstant 25_13
+59_14(fimageCubeArrayv4):  32_20(ptr) Variable UniformConstant
+           25_14:             TypeImage 22_2(float) 3D nonsampled format:Rgba16f
+           32_21:             TypePointer UniformConstant 25_14
+59_15(fimage3Dv4):  32_21(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_16(constVec2):   32_4(ptr) Variable Function
+59_17(constVec4):  32_13(ptr) Variable Function
+            65_1:   32_2(ptr) AccessChain 59_1(buf) 43_2
+          6035_1:23_1(f16vec2) AtomicFAddEXT 65_1 uint(1) uint(0) 44_1
+            65_2:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_2 6035_1
+            65_3:   32_2(ptr) AccessChain 59_1(buf) 43_2
+          5614_1:23_1(f16vec2) AtomicFMinEXT 65_3 uint(1) uint(0) 44_1
+            65_4:   32_2(ptr) AccessChain 59_1(buf) 43_1
+            61_1:23_1(f16vec2) Load 65_4
+           129_1:23_1(f16vec2) FAdd 61_1 5614_1
+            65_5:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_5 129_1
+            65_6:   32_2(ptr) AccessChain 59_1(buf) 43_2
+          5615_1:23_1(f16vec2) AtomicFMaxEXT 65_6 uint(1) uint(0) 44_1
+            65_7:   32_2(ptr) AccessChain 59_1(buf) 43_1
+            61_2:23_1(f16vec2) Load 65_7
+           129_2:23_1(f16vec2) FAdd 61_2 5615_1
+            65_8:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_8 129_2
+            65_9:   32_2(ptr) AccessChain 59_1(buf) 43_2
+           229_1:23_1(f16vec2) AtomicExchange 65_9 uint(1) uint(0) 44_1
+           65_10:   32_2(ptr) AccessChain 59_1(buf) 43_1
+            61_3:23_1(f16vec2) Load 65_10
+           129_3:23_1(f16vec2) FAdd 61_3 229_1
+           65_11:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_11 129_3
+           65_12:   32_3(ptr) AccessChain 59_1(buf) 43_5
+          6035_2:23_2(f16vec4) AtomicFAddEXT 65_12 uint(1) uint(0) 44_2
+           65_13:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_13 6035_2
+           65_14:   32_3(ptr) AccessChain 59_1(buf) 43_5
+          5614_2:23_2(f16vec4) AtomicFMinEXT 65_14 uint(1) uint(0) 44_2
+           65_15:   32_3(ptr) AccessChain 59_1(buf) 43_4
+            61_4:23_2(f16vec4) Load 65_15
+           129_4:23_2(f16vec4) FAdd 61_4 5614_2
+           65_16:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_16 129_4
+           65_17:   32_3(ptr) AccessChain 59_1(buf) 43_5
+          5615_2:23_2(f16vec4) AtomicFMaxEXT 65_17 uint(1) uint(0) 44_2
+           65_18:   32_3(ptr) AccessChain 59_1(buf) 43_4
+            61_5:23_2(f16vec4) Load 65_18
+           129_5:23_2(f16vec4) FAdd 61_5 5615_2
+           65_19:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_19 129_5
+           65_20:   32_3(ptr) AccessChain 59_1(buf) 43_5
+           229_2:23_2(f16vec4) AtomicExchange 65_20 uint(1) uint(0) 44_2
+           65_21:   32_3(ptr) AccessChain 59_1(buf) 43_4
+            61_6:23_2(f16vec4) Load 65_21
+           129_6:23_2(f16vec4) FAdd 61_6 229_2
+           65_22:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_22 129_6
+                              Store 59_16(constVec2) 44_3
+            61_7:23_1(f16vec2) Load 59_16(constVec2)
+            60_1:   32_6(ptr) ImageTexelPointer 59_2(fimage1D) 43_2 uint(0)
+          6035_3:23_1(f16vec2) AtomicFAddEXT 60_1 uint(1) uint(0) 61_7
+           65_23:   32_2(ptr) AccessChain 59_1(buf) 43_1
+            61_8:23_1(f16vec2) Load 65_23
+           129_7:23_1(f16vec2) FAdd 61_8 6035_3
+           65_24:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_24 129_7
+            61_9:23_1(f16vec2) Load 59_16(constVec2)
+            60_2:   32_6(ptr) ImageTexelPointer 59_3(fimage1DArray) 44_4 uint(0)
+          6035_4:23_1(f16vec2) AtomicFAddEXT 60_2 uint(1) uint(0) 61_9
+           65_25:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_10:23_1(f16vec2) Load 65_25
+           129_8:23_1(f16vec2) FAdd 61_10 6035_4
+           65_26:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_26 129_8
+           61_11:23_1(f16vec2) Load 59_16(constVec2)
+            60_3:   32_6(ptr) ImageTexelPointer 59_4(fimage2D) 44_4 uint(0)
+          6035_5:23_1(f16vec2) AtomicFAddEXT 60_3 uint(1) uint(0) 61_11
+           65_27:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_12:23_1(f16vec2) Load 65_27
+           129_9:23_1(f16vec2) FAdd 61_12 6035_5
+           65_28:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_28 129_9
+           61_13:23_1(f16vec2) Load 59_16(constVec2)
+            60_4:   32_6(ptr) ImageTexelPointer 59_5(fimage2DArray) 44_5 uint(0)
+          6035_6:23_1(f16vec2) AtomicFAddEXT 60_4 uint(1) uint(0) 61_13
+           65_29:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_14:23_1(f16vec2) Load 65_29
+          129_10:23_1(f16vec2) FAdd 61_14 6035_6
+           65_30:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_30 129_10
+           61_15:23_1(f16vec2) Load 59_16(constVec2)
+            60_5:   32_6(ptr) ImageTexelPointer 59_6(fimageCube) 44_5 uint(0)
+          6035_7:23_1(f16vec2) AtomicFAddEXT 60_5 uint(1) uint(0) 61_15
+           65_31:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_16:23_1(f16vec2) Load 65_31
+          129_11:23_1(f16vec2) FAdd 61_16 6035_7
+           65_32:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_32 129_11
+           61_17:23_1(f16vec2) Load 59_16(constVec2)
+            60_6:   32_6(ptr) ImageTexelPointer 59_7(fimageCubeArray) 44_5 uint(0)
+          6035_8:23_1(f16vec2) AtomicFAddEXT 60_6 uint(1) uint(0) 61_17
+           65_33:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_18:23_1(f16vec2) Load 65_33
+          129_12:23_1(f16vec2) FAdd 61_18 6035_8
+           65_34:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_34 129_12
+           61_19:23_1(f16vec2) Load 59_16(constVec2)
+            60_7:   32_6(ptr) ImageTexelPointer 59_8(fimage3D) 44_5 uint(0)
+          6035_9:23_1(f16vec2) AtomicFAddEXT 60_7 uint(1) uint(0) 61_19
+           65_35:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_20:23_1(f16vec2) Load 65_35
+          129_13:23_1(f16vec2) FAdd 61_20 6035_9
+           65_36:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_36 129_13
+           61_21:23_1(f16vec2) Load 59_16(constVec2)
+            60_8:   32_6(ptr) ImageTexelPointer 59_2(fimage1D) 43_2 uint(0)
+          5614_3:23_1(f16vec2) AtomicFMinEXT 60_8 uint(1) uint(0) 61_21
+           65_37:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_22:23_1(f16vec2) Load 65_37
+          129_14:23_1(f16vec2) FAdd 61_22 5614_3
+           65_38:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_38 129_14
+           61_23:23_1(f16vec2) Load 59_16(constVec2)
+            60_9:   32_6(ptr) ImageTexelPointer 59_3(fimage1DArray) 44_4 uint(0)
+          5614_4:23_1(f16vec2) AtomicFMinEXT 60_9 uint(1) uint(0) 61_23
+           65_39:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_24:23_1(f16vec2) Load 65_39
+          129_15:23_1(f16vec2) FAdd 61_24 5614_4
+           65_40:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_40 129_15
+           61_25:23_1(f16vec2) Load 59_16(constVec2)
+           60_10:   32_6(ptr) ImageTexelPointer 59_4(fimage2D) 44_4 uint(0)
+          5614_5:23_1(f16vec2) AtomicFMinEXT 60_10 uint(1) uint(0) 61_25
+           65_41:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_26:23_1(f16vec2) Load 65_41
+          129_16:23_1(f16vec2) FAdd 61_26 5614_5
+           65_42:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_42 129_16
+           61_27:23_1(f16vec2) Load 59_16(constVec2)
+           60_11:   32_6(ptr) ImageTexelPointer 59_5(fimage2DArray) 44_5 uint(0)
+          5614_6:23_1(f16vec2) AtomicFMinEXT 60_11 uint(1) uint(0) 61_27
+           65_43:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_28:23_1(f16vec2) Load 65_43
+          129_17:23_1(f16vec2) FAdd 61_28 5614_6
+           65_44:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_44 129_17
+           61_29:23_1(f16vec2) Load 59_16(constVec2)
+           60_12:   32_6(ptr) ImageTexelPointer 59_6(fimageCube) 44_5 uint(0)
+          5614_7:23_1(f16vec2) AtomicFMinEXT 60_12 uint(1) uint(0) 61_29
+           65_45:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_30:23_1(f16vec2) Load 65_45
+          129_18:23_1(f16vec2) FAdd 61_30 5614_7
+           65_46:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_46 129_18
+           61_31:23_1(f16vec2) Load 59_16(constVec2)
+           60_13:   32_6(ptr) ImageTexelPointer 59_7(fimageCubeArray) 44_5 uint(0)
+          5614_8:23_1(f16vec2) AtomicFMinEXT 60_13 uint(1) uint(0) 61_31
+           65_47:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_32:23_1(f16vec2) Load 65_47
+          129_19:23_1(f16vec2) FAdd 61_32 5614_8
+           65_48:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_48 129_19
+           61_33:23_1(f16vec2) Load 59_16(constVec2)
+           60_14:   32_6(ptr) ImageTexelPointer 59_8(fimage3D) 44_5 uint(0)
+          5614_9:23_1(f16vec2) AtomicFMinEXT 60_14 uint(1) uint(0) 61_33
+           65_49:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_34:23_1(f16vec2) Load 65_49
+          129_20:23_1(f16vec2) FAdd 61_34 5614_9
+           65_50:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_50 129_20
+           61_35:23_1(f16vec2) Load 59_16(constVec2)
+           60_15:   32_6(ptr) ImageTexelPointer 59_2(fimage1D) 43_2 uint(0)
+          5615_3:23_1(f16vec2) AtomicFMaxEXT 60_15 uint(1) uint(0) 61_35
+           65_51:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_36:23_1(f16vec2) Load 65_51
+          129_21:23_1(f16vec2) FAdd 61_36 5615_3
+           65_52:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_52 129_21
+           61_37:23_1(f16vec2) Load 59_16(constVec2)
+           60_16:   32_6(ptr) ImageTexelPointer 59_3(fimage1DArray) 44_4 uint(0)
+          5615_4:23_1(f16vec2) AtomicFMaxEXT 60_16 uint(1) uint(0) 61_37
+           65_53:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_38:23_1(f16vec2) Load 65_53
+          129_22:23_1(f16vec2) FAdd 61_38 5615_4
+           65_54:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_54 129_22
+           61_39:23_1(f16vec2) Load 59_16(constVec2)
+           60_17:   32_6(ptr) ImageTexelPointer 59_4(fimage2D) 44_4 uint(0)
+          5615_5:23_1(f16vec2) AtomicFMaxEXT 60_17 uint(1) uint(0) 61_39
+           65_55:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_40:23_1(f16vec2) Load 65_55
+          129_23:23_1(f16vec2) FAdd 61_40 5615_5
+           65_56:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_56 129_23
+           61_41:23_1(f16vec2) Load 59_16(constVec2)
+           60_18:   32_6(ptr) ImageTexelPointer 59_5(fimage2DArray) 44_5 uint(0)
+          5615_6:23_1(f16vec2) AtomicFMaxEXT 60_18 uint(1) uint(0) 61_41
+           65_57:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_42:23_1(f16vec2) Load 65_57
+          129_24:23_1(f16vec2) FAdd 61_42 5615_6
+           65_58:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_58 129_24
+           61_43:23_1(f16vec2) Load 59_16(constVec2)
+           60_19:   32_6(ptr) ImageTexelPointer 59_6(fimageCube) 44_5 uint(0)
+          5615_7:23_1(f16vec2) AtomicFMaxEXT 60_19 uint(1) uint(0) 61_43
+           65_59:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_44:23_1(f16vec2) Load 65_59
+          129_25:23_1(f16vec2) FAdd 61_44 5615_7
+           65_60:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_60 129_25
+           61_45:23_1(f16vec2) Load 59_16(constVec2)
+           60_20:   32_6(ptr) ImageTexelPointer 59_7(fimageCubeArray) 44_5 uint(0)
+          5615_8:23_1(f16vec2) AtomicFMaxEXT 60_20 uint(1) uint(0) 61_45
+           65_61:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_46:23_1(f16vec2) Load 65_61
+          129_26:23_1(f16vec2) FAdd 61_46 5615_8
+           65_62:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_62 129_26
+           61_47:23_1(f16vec2) Load 59_16(constVec2)
+           60_21:   32_6(ptr) ImageTexelPointer 59_8(fimage3D) 44_5 uint(0)
+          5615_9:23_1(f16vec2) AtomicFMaxEXT 60_21 uint(1) uint(0) 61_47
+           65_63:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_48:23_1(f16vec2) Load 65_63
+          129_27:23_1(f16vec2) FAdd 61_48 5615_9
+           65_64:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_64 129_27
+           61_49:23_1(f16vec2) Load 59_16(constVec2)
+           60_22:   32_6(ptr) ImageTexelPointer 59_2(fimage1D) 43_2 uint(0)
+           229_3:23_1(f16vec2) AtomicExchange 60_22 uint(1) uint(0) 61_49
+           65_65:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_50:23_1(f16vec2) Load 65_65
+          129_28:23_1(f16vec2) FAdd 61_50 229_3
+           65_66:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_66 129_28
+           61_51:23_1(f16vec2) Load 59_16(constVec2)
+           60_23:   32_6(ptr) ImageTexelPointer 59_3(fimage1DArray) 44_4 uint(0)
+           229_4:23_1(f16vec2) AtomicExchange 60_23 uint(1) uint(0) 61_51
+           65_67:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_52:23_1(f16vec2) Load 65_67
+          129_29:23_1(f16vec2) FAdd 61_52 229_4
+           65_68:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_68 129_29
+           61_53:23_1(f16vec2) Load 59_16(constVec2)
+           60_24:   32_6(ptr) ImageTexelPointer 59_4(fimage2D) 44_4 uint(0)
+           229_5:23_1(f16vec2) AtomicExchange 60_24 uint(1) uint(0) 61_53
+           65_69:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_54:23_1(f16vec2) Load 65_69
+          129_30:23_1(f16vec2) FAdd 61_54 229_5
+           65_70:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_70 129_30
+           61_55:23_1(f16vec2) Load 59_16(constVec2)
+           60_25:   32_6(ptr) ImageTexelPointer 59_5(fimage2DArray) 44_5 uint(0)
+           229_6:23_1(f16vec2) AtomicExchange 60_25 uint(1) uint(0) 61_55
+           65_71:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_56:23_1(f16vec2) Load 65_71
+          129_31:23_1(f16vec2) FAdd 61_56 229_6
+           65_72:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_72 129_31
+           61_57:23_1(f16vec2) Load 59_16(constVec2)
+           60_26:   32_6(ptr) ImageTexelPointer 59_6(fimageCube) 44_5 uint(0)
+           229_7:23_1(f16vec2) AtomicExchange 60_26 uint(1) uint(0) 61_57
+           65_73:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_58:23_1(f16vec2) Load 65_73
+          129_32:23_1(f16vec2) FAdd 61_58 229_7
+           65_74:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_74 129_32
+           61_59:23_1(f16vec2) Load 59_16(constVec2)
+           60_27:   32_6(ptr) ImageTexelPointer 59_7(fimageCubeArray) 44_5 uint(0)
+           229_8:23_1(f16vec2) AtomicExchange 60_27 uint(1) uint(0) 61_59
+           65_75:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_60:23_1(f16vec2) Load 65_75
+          129_33:23_1(f16vec2) FAdd 61_60 229_8
+           65_76:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_76 129_33
+           61_61:23_1(f16vec2) Load 59_16(constVec2)
+           60_28:   32_6(ptr) ImageTexelPointer 59_8(fimage3D) 44_5 uint(0)
+           229_9:23_1(f16vec2) AtomicExchange 60_28 uint(1) uint(0) 61_61
+           65_77:   32_2(ptr) AccessChain 59_1(buf) 43_1
+           61_62:23_1(f16vec2) Load 65_77
+          129_34:23_1(f16vec2) FAdd 61_62 229_9
+           65_78:   32_2(ptr) AccessChain 59_1(buf) 43_1
+                              Store 65_78 129_34
+                              Store 59_17(constVec4) 44_6
+           61_63:23_2(f16vec4) Load 59_17(constVec4)
+           60_29:  32_15(ptr) ImageTexelPointer 59_9(fimage1Dv4) 43_2 uint(0)
+         6035_10:23_2(f16vec4) AtomicFAddEXT 60_29 uint(1) uint(0) 61_63
+           65_79:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_64:23_2(f16vec4) Load 65_79
+          129_35:23_2(f16vec4) FAdd 61_64 6035_10
+           65_80:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_80 129_35
+           61_65:23_2(f16vec4) Load 59_17(constVec4)
+           60_30:  32_15(ptr) ImageTexelPointer 59_10(fimage1DArrayv4) 44_4 uint(0)
+         6035_11:23_2(f16vec4) AtomicFAddEXT 60_30 uint(1) uint(0) 61_65
+           65_81:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_66:23_2(f16vec4) Load 65_81
+          129_36:23_2(f16vec4) FAdd 61_66 6035_11
+           65_82:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_82 129_36
+           61_67:23_2(f16vec4) Load 59_17(constVec4)
+           60_31:  32_15(ptr) ImageTexelPointer 59_11(fimage2Dv4) 44_4 uint(0)
+         6035_12:23_2(f16vec4) AtomicFAddEXT 60_31 uint(1) uint(0) 61_67
+           65_83:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_68:23_2(f16vec4) Load 65_83
+          129_37:23_2(f16vec4) FAdd 61_68 6035_12
+           65_84:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_84 129_37
+           61_69:23_2(f16vec4) Load 59_17(constVec4)
+           60_32:  32_15(ptr) ImageTexelPointer 59_12(fimage2DArrayv4) 44_5 uint(0)
+         6035_13:23_2(f16vec4) AtomicFAddEXT 60_32 uint(1) uint(0) 61_69
+           65_85:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_70:23_2(f16vec4) Load 65_85
+          129_38:23_2(f16vec4) FAdd 61_70 6035_13
+           65_86:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_86 129_38
+           61_71:23_2(f16vec4) Load 59_17(constVec4)
+           60_33:  32_15(ptr) ImageTexelPointer 59_13(fimageCubev4) 44_5 uint(0)
+         6035_14:23_2(f16vec4) AtomicFAddEXT 60_33 uint(1) uint(0) 61_71
+           65_87:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_72:23_2(f16vec4) Load 65_87
+          129_39:23_2(f16vec4) FAdd 61_72 6035_14
+           65_88:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_88 129_39
+           61_73:23_2(f16vec4) Load 59_17(constVec4)
+           60_34:  32_15(ptr) ImageTexelPointer 59_14(fimageCubeArrayv4) 44_5 uint(0)
+         6035_15:23_2(f16vec4) AtomicFAddEXT 60_34 uint(1) uint(0) 61_73
+           65_89:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_74:23_2(f16vec4) Load 65_89
+          129_40:23_2(f16vec4) FAdd 61_74 6035_15
+           65_90:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_90 129_40
+           61_75:23_2(f16vec4) Load 59_17(constVec4)
+           60_35:  32_15(ptr) ImageTexelPointer 59_15(fimage3Dv4) 44_5 uint(0)
+         6035_16:23_2(f16vec4) AtomicFAddEXT 60_35 uint(1) uint(0) 61_75
+           65_91:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_76:23_2(f16vec4) Load 65_91
+          129_41:23_2(f16vec4) FAdd 61_76 6035_16
+           65_92:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_92 129_41
+           61_77:23_2(f16vec4) Load 59_17(constVec4)
+           60_36:  32_15(ptr) ImageTexelPointer 59_9(fimage1Dv4) 43_2 uint(0)
+         5614_10:23_2(f16vec4) AtomicFMinEXT 60_36 uint(1) uint(0) 61_77
+           65_93:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_78:23_2(f16vec4) Load 65_93
+          129_42:23_2(f16vec4) FAdd 61_78 5614_10
+           65_94:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_94 129_42
+           61_79:23_2(f16vec4) Load 59_17(constVec4)
+           60_37:  32_15(ptr) ImageTexelPointer 59_10(fimage1DArrayv4) 44_4 uint(0)
+         5614_11:23_2(f16vec4) AtomicFMinEXT 60_37 uint(1) uint(0) 61_79
+           65_95:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_80:23_2(f16vec4) Load 65_95
+          129_43:23_2(f16vec4) FAdd 61_80 5614_11
+           65_96:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_96 129_43
+           61_81:23_2(f16vec4) Load 59_17(constVec4)
+           60_38:  32_15(ptr) ImageTexelPointer 59_11(fimage2Dv4) 44_4 uint(0)
+         5614_12:23_2(f16vec4) AtomicFMinEXT 60_38 uint(1) uint(0) 61_81
+           65_97:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_82:23_2(f16vec4) Load 65_97
+          129_44:23_2(f16vec4) FAdd 61_82 5614_12
+           65_98:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_98 129_44
+           61_83:23_2(f16vec4) Load 59_17(constVec4)
+           60_39:  32_15(ptr) ImageTexelPointer 59_12(fimage2DArrayv4) 44_5 uint(0)
+         5614_13:23_2(f16vec4) AtomicFMinEXT 60_39 uint(1) uint(0) 61_83
+           65_99:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_84:23_2(f16vec4) Load 65_99
+          129_45:23_2(f16vec4) FAdd 61_84 5614_13
+          65_100:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_100 129_45
+           61_85:23_2(f16vec4) Load 59_17(constVec4)
+           60_40:  32_15(ptr) ImageTexelPointer 59_13(fimageCubev4) 44_5 uint(0)
+         5614_14:23_2(f16vec4) AtomicFMinEXT 60_40 uint(1) uint(0) 61_85
+          65_101:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_86:23_2(f16vec4) Load 65_101
+          129_46:23_2(f16vec4) FAdd 61_86 5614_14
+          65_102:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_102 129_46
+           61_87:23_2(f16vec4) Load 59_17(constVec4)
+           60_41:  32_15(ptr) ImageTexelPointer 59_14(fimageCubeArrayv4) 44_5 uint(0)
+         5614_15:23_2(f16vec4) AtomicFMinEXT 60_41 uint(1) uint(0) 61_87
+          65_103:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_88:23_2(f16vec4) Load 65_103
+          129_47:23_2(f16vec4) FAdd 61_88 5614_15
+          65_104:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_104 129_47
+           61_89:23_2(f16vec4) Load 59_17(constVec4)
+           60_42:  32_15(ptr) ImageTexelPointer 59_15(fimage3Dv4) 44_5 uint(0)
+         5614_16:23_2(f16vec4) AtomicFMinEXT 60_42 uint(1) uint(0) 61_89
+          65_105:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_90:23_2(f16vec4) Load 65_105
+          129_48:23_2(f16vec4) FAdd 61_90 5614_16
+          65_106:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_106 129_48
+           61_91:23_2(f16vec4) Load 59_17(constVec4)
+           60_43:  32_15(ptr) ImageTexelPointer 59_9(fimage1Dv4) 43_2 uint(0)
+         5615_10:23_2(f16vec4) AtomicFMaxEXT 60_43 uint(1) uint(0) 61_91
+          65_107:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_92:23_2(f16vec4) Load 65_107
+          129_49:23_2(f16vec4) FAdd 61_92 5615_10
+          65_108:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_108 129_49
+           61_93:23_2(f16vec4) Load 59_17(constVec4)
+           60_44:  32_15(ptr) ImageTexelPointer 59_10(fimage1DArrayv4) 44_4 uint(0)
+         5615_11:23_2(f16vec4) AtomicFMaxEXT 60_44 uint(1) uint(0) 61_93
+          65_109:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_94:23_2(f16vec4) Load 65_109
+          129_50:23_2(f16vec4) FAdd 61_94 5615_11
+          65_110:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_110 129_50
+           61_95:23_2(f16vec4) Load 59_17(constVec4)
+           60_45:  32_15(ptr) ImageTexelPointer 59_11(fimage2Dv4) 44_4 uint(0)
+         5615_12:23_2(f16vec4) AtomicFMaxEXT 60_45 uint(1) uint(0) 61_95
+          65_111:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_96:23_2(f16vec4) Load 65_111
+          129_51:23_2(f16vec4) FAdd 61_96 5615_12
+          65_112:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_112 129_51
+           61_97:23_2(f16vec4) Load 59_17(constVec4)
+           60_46:  32_15(ptr) ImageTexelPointer 59_12(fimage2DArrayv4) 44_5 uint(0)
+         5615_13:23_2(f16vec4) AtomicFMaxEXT 60_46 uint(1) uint(0) 61_97
+          65_113:   32_3(ptr) AccessChain 59_1(buf) 43_4
+           61_98:23_2(f16vec4) Load 65_113
+          129_52:23_2(f16vec4) FAdd 61_98 5615_13
+          65_114:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_114 129_52
+           61_99:23_2(f16vec4) Load 59_17(constVec4)
+           60_47:  32_15(ptr) ImageTexelPointer 59_13(fimageCubev4) 44_5 uint(0)
+         5615_14:23_2(f16vec4) AtomicFMaxEXT 60_47 uint(1) uint(0) 61_99
+          65_115:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_100:23_2(f16vec4) Load 65_115
+          129_53:23_2(f16vec4) FAdd 61_100 5615_14
+          65_116:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_116 129_53
+          61_101:23_2(f16vec4) Load 59_17(constVec4)
+           60_48:  32_15(ptr) ImageTexelPointer 59_14(fimageCubeArrayv4) 44_5 uint(0)
+         5615_15:23_2(f16vec4) AtomicFMaxEXT 60_48 uint(1) uint(0) 61_101
+          65_117:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_102:23_2(f16vec4) Load 65_117
+          129_54:23_2(f16vec4) FAdd 61_102 5615_15
+          65_118:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_118 129_54
+          61_103:23_2(f16vec4) Load 59_17(constVec4)
+           60_49:  32_15(ptr) ImageTexelPointer 59_15(fimage3Dv4) 44_5 uint(0)
+         5615_16:23_2(f16vec4) AtomicFMaxEXT 60_49 uint(1) uint(0) 61_103
+          65_119:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_104:23_2(f16vec4) Load 65_119
+          129_55:23_2(f16vec4) FAdd 61_104 5615_16
+          65_120:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_120 129_55
+          61_105:23_2(f16vec4) Load 59_17(constVec4)
+           60_50:  32_15(ptr) ImageTexelPointer 59_9(fimage1Dv4) 43_2 uint(0)
+          229_10:23_2(f16vec4) AtomicExchange 60_50 uint(1) uint(0) 61_105
+          65_121:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_106:23_2(f16vec4) Load 65_121
+          129_56:23_2(f16vec4) FAdd 61_106 229_10
+          65_122:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_122 129_56
+          61_107:23_2(f16vec4) Load 59_17(constVec4)
+           60_51:  32_15(ptr) ImageTexelPointer 59_10(fimage1DArrayv4) 44_4 uint(0)
+          229_11:23_2(f16vec4) AtomicExchange 60_51 uint(1) uint(0) 61_107
+          65_123:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_108:23_2(f16vec4) Load 65_123
+          129_57:23_2(f16vec4) FAdd 61_108 229_11
+          65_124:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_124 129_57
+          61_109:23_2(f16vec4) Load 59_17(constVec4)
+           60_52:  32_15(ptr) ImageTexelPointer 59_11(fimage2Dv4) 44_4 uint(0)
+          229_12:23_2(f16vec4) AtomicExchange 60_52 uint(1) uint(0) 61_109
+          65_125:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_110:23_2(f16vec4) Load 65_125
+          129_58:23_2(f16vec4) FAdd 61_110 229_12
+          65_126:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_126 129_58
+          61_111:23_2(f16vec4) Load 59_17(constVec4)
+           60_53:  32_15(ptr) ImageTexelPointer 59_12(fimage2DArrayv4) 44_5 uint(0)
+          229_13:23_2(f16vec4) AtomicExchange 60_53 uint(1) uint(0) 61_111
+          65_127:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_112:23_2(f16vec4) Load 65_127
+          129_59:23_2(f16vec4) FAdd 61_112 229_13
+          65_128:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_128 129_59
+          61_113:23_2(f16vec4) Load 59_17(constVec4)
+           60_54:  32_15(ptr) ImageTexelPointer 59_13(fimageCubev4) 44_5 uint(0)
+          229_14:23_2(f16vec4) AtomicExchange 60_54 uint(1) uint(0) 61_113
+          65_129:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_114:23_2(f16vec4) Load 65_129
+          129_60:23_2(f16vec4) FAdd 61_114 229_14
+          65_130:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_130 129_60
+          61_115:23_2(f16vec4) Load 59_17(constVec4)
+           60_55:  32_15(ptr) ImageTexelPointer 59_14(fimageCubeArrayv4) 44_5 uint(0)
+          229_15:23_2(f16vec4) AtomicExchange 60_55 uint(1) uint(0) 61_115
+          65_131:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_116:23_2(f16vec4) Load 65_131
+          129_61:23_2(f16vec4) FAdd 61_116 229_15
+          65_132:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_132 129_61
+          61_117:23_2(f16vec4) Load 59_17(constVec4)
+           60_56:  32_15(ptr) ImageTexelPointer 59_15(fimage3Dv4) 44_5 uint(0)
+          229_16:23_2(f16vec4) AtomicExchange 60_56 uint(1) uint(0) 61_117
+          65_133:   32_3(ptr) AccessChain 59_1(buf) 43_4
+          61_118:23_2(f16vec4) Load 65_133
+          129_62:23_2(f16vec4) FAdd 61_118 229_16
+          65_134:   32_3(ptr) AccessChain 59_1(buf) 43_4
+                              Store 65_134 129_62
                               Return
                               FunctionEnd

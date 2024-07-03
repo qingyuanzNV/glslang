@@ -4,37 +4,37 @@ spv.dead-after-switch-break.vert
 // Id's are bound by 21
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 8 14
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 8  "c"
-                              Name 14  "o"
-                              Decorate 8(c) Location 0
-                              Decorate 14(o) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Input 6(int)
-            8(c):      7(ptr) Variable Input
-              13:             TypePointer Output 6(int)
-           14(o):     13(ptr) Variable Output
-              15:      6(int) Constant 1
-              17:      6(int) Constant 2
-              20:      6(int) Constant 3
-         4(main):           2 Function None 3
-               5:             Label
-               9:      6(int) Load 8(c)
-                              SelectionMerge 12 None
-                              Switch 9 11 
-                                     case 0: 10
-              11:               Label
-                                Branch 12
-              10:               Label
-                                Store 14(o) 15
-                                Branch 12
-              12:             Label
-                              Store 14(o) 20
+                              Name 54_1  "main"
+                              Name 59_1  "c"
+                              Name 59_2  "o"
+                              Decorate 59_1(c) Location 0
+                              Decorate 59_2(o) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Input 21_1(int)
+         59_1(c):   32_1(ptr) Variable Input
+            32_2:             TypePointer Output 21_1(int)
+         59_2(o):   32_2(ptr) Variable Output
+            43_1:   21_1(int) Constant 1
+            43_2:   21_1(int) Constant 2
+            43_3:   21_1(int) Constant 3
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_1(c)
+                              SelectionMerge 248_4 None
+                              Switch 61_1 248_2 
+                                     case 0: 248_3
+           248_2:               Label
+                                Branch 248_4
+           248_3:               Label
+                                Store 59_2(o) 43_1
+                                Branch 248_4
+           248_4:             Label
+                              Store 59_2(o) 43_3
                               Return
                               FunctionEnd

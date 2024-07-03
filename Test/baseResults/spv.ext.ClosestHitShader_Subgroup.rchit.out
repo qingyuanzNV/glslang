@@ -14,109 +14,109 @@ spv.ext.ClosestHitShader_Subgroup.rchit
                               Extension  "SPV_KHR_shader_ballot"
                               Extension  "SPV_KHR_vulkan_memory_model"
                               Extension  "SPV_NV_shader_sm_builtins"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical VulkanKHR
-                              EntryPoint ClosestHitKHR 4  "main" 8 26 28 34 43 48 53 61
+                              EntryPoint ClosestHitKHR 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8
                               Source GLSL 460
                               SourceExtension  "GL_ARB_shader_ballot"
                               SourceExtension  "GL_EXT_ray_tracing"
                               SourceExtension  "GL_KHR_shader_subgroup_ballot"
                               SourceExtension  "GL_KHR_shader_subgroup_basic"
                               SourceExtension  "GL_NV_shader_sm_builtins"
-                              Name 4  "main"
-                              Name 8  "accEXT"
-                              Name 26  "incomingPayload"
-                              Name 28  "gl_SubgroupInvocationID"
-                              Name 34  "gl_SubGroupGeMaskARB"
-                              Name 43  "gl_SubgroupGtMask"
-                              Name 48  "gl_SubgroupLeMask"
-                              Name 53  "gl_SubGroupLtMaskARB"
-                              Name 61  "gl_SMIDNV"
-                              Decorate 8(accEXT) Binding 0
-                              Decorate 8(accEXT) DescriptorSet 0
-                              Decorate 28(gl_SubgroupInvocationID) RelaxedPrecision
-                              Decorate 28(gl_SubgroupInvocationID) BuiltIn SubgroupLocalInvocationId
-                              Decorate 29 RelaxedPrecision
-                              Decorate 30 RelaxedPrecision
-                              Decorate 34(gl_SubGroupGeMaskARB) BuiltIn SubgroupGeMaskKHR
-                              Decorate 41 RelaxedPrecision
-                              Decorate 42 RelaxedPrecision
-                              Decorate 43(gl_SubgroupGtMask) BuiltIn SubgroupGtMaskKHR
-                              Decorate 46 RelaxedPrecision
-                              Decorate 47 RelaxedPrecision
-                              Decorate 48(gl_SubgroupLeMask) BuiltIn SubgroupLeMaskKHR
-                              Decorate 51 RelaxedPrecision
-                              Decorate 52 RelaxedPrecision
-                              Decorate 53(gl_SubGroupLtMaskARB) BuiltIn SubgroupLtMaskKHR
-                              Decorate 59 RelaxedPrecision
-                              Decorate 60 RelaxedPrecision
-                              Decorate 61(gl_SMIDNV) BuiltIn SMIDNV
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeAccelerationStructureKHR
-               7:             TypePointer UniformConstant 6
-       8(accEXT):      7(ptr) Variable UniformConstant
-              10:             TypeInt 32 0
-              11:     10(int) Constant 0
-              12:     10(int) Constant 1
-              13:     10(int) Constant 2
-              14:     10(int) Constant 3
-              15:             TypeFloat 32
-              16:             TypeVector 15(float) 3
-              17:   15(float) Constant 1056964608
-              18:   16(fvec3) ConstantComposite 17 17 17
-              19:   15(float) Constant 1065353216
-              20:   16(fvec3) ConstantComposite 19 19 19
-              21:   15(float) Constant 1061158912
-              22:             TypeInt 32 1
-              23:     22(int) Constant 1
-              24:             TypeVector 15(float) 4
-              25:             TypePointer IncomingRayPayloadKHR 24(fvec4)
-26(incomingPayload):     25(ptr) Variable IncomingRayPayloadKHR
-              27:             TypePointer Input 10(int)
-28(gl_SubgroupInvocationID):     27(ptr) Variable Input
-              31:             TypeVector 10(int) 4
-              32:             TypeInt 64 0
-              33:             TypePointer Input 31(ivec4)
-34(gl_SubGroupGeMaskARB):     33(ptr) Variable Input
-              38:             TypeVector 10(int) 2
-43(gl_SubgroupGtMask):     33(ptr) Variable Input
-48(gl_SubgroupLeMask):     33(ptr) Variable Input
-53(gl_SubGroupLtMaskARB):     33(ptr) Variable Input
-   61(gl_SMIDNV):     27(ptr) Variable Input
-              65:             TypePointer IncomingRayPayloadKHR 15(float)
-         4(main):           2 Function None 3
-               5:             Label
-               9:           6 Load 8(accEXT)
-                              TraceRayKHR 9 11 12 13 14 11 18 17 20 21 26(incomingPayload)
-              29:     10(int) Load 28(gl_SubgroupInvocationID) Volatile 
-              30:   15(float) ConvertUToF 29
-              35:   31(ivec4) Load 34(gl_SubGroupGeMaskARB)
-              36:     10(int) CompositeExtract 35 0
-              37:     10(int) CompositeExtract 35 1
-              39:   38(ivec2) CompositeConstruct 36 37
-              40: 32(int64_t) Bitcast 39
-              41:   15(float) ConvertUToF 40
-              42:   15(float) FAdd 30 41
-              44:   31(ivec4) Load 43(gl_SubgroupGtMask) Volatile 
-              45:   24(fvec4) ConvertUToF 44
-              46:   15(float) CompositeExtract 45 0
-              47:   15(float) FAdd 42 46
-              49:   31(ivec4) Load 48(gl_SubgroupLeMask) Volatile 
-              50:   24(fvec4) ConvertUToF 49
-              51:   15(float) CompositeExtract 50 0
-              52:   15(float) FAdd 47 51
-              54:   31(ivec4) Load 53(gl_SubGroupLtMaskARB)
-              55:     10(int) CompositeExtract 54 0
-              56:     10(int) CompositeExtract 54 1
-              57:   38(ivec2) CompositeConstruct 55 56
-              58: 32(int64_t) Bitcast 57
-              59:   15(float) ConvertUToF 58
-              60:   15(float) FAdd 52 59
-              62:     10(int) Load 61(gl_SMIDNV) Volatile 
-              63:   15(float) ConvertUToF 62
-              64:   15(float) FAdd 60 63
-              66:     65(ptr) AccessChain 26(incomingPayload) 11
-                              Store 66 64
+                              Name 54_1  "main"
+                              Name 59_1  "accEXT"
+                              Name 59_2  "incomingPayload"
+                              Name 59_3  "gl_SubgroupInvocationID"
+                              Name 59_4  "gl_SubGroupGeMaskARB"
+                              Name 59_5  "gl_SubgroupGtMask"
+                              Name 59_6  "gl_SubgroupLeMask"
+                              Name 59_7  "gl_SubGroupLtMaskARB"
+                              Name 59_8  "gl_SMIDNV"
+                              Decorate 59_1(accEXT) Binding 0
+                              Decorate 59_1(accEXT) DescriptorSet 0
+                              Decorate 59_3(gl_SubgroupInvocationID) RelaxedPrecision
+                              Decorate 59_3(gl_SubgroupInvocationID) BuiltIn SubgroupLocalInvocationId
+                              Decorate 61_2 RelaxedPrecision
+                              Decorate 112_1 RelaxedPrecision
+                              Decorate 59_4(gl_SubGroupGeMaskARB) BuiltIn SubgroupGeMaskKHR
+                              Decorate 112_2 RelaxedPrecision
+                              Decorate 129_1 RelaxedPrecision
+                              Decorate 59_5(gl_SubgroupGtMask) BuiltIn SubgroupGtMaskKHR
+                              Decorate 81_3 RelaxedPrecision
+                              Decorate 129_2 RelaxedPrecision
+                              Decorate 59_6(gl_SubgroupLeMask) BuiltIn SubgroupLeMaskKHR
+                              Decorate 81_4 RelaxedPrecision
+                              Decorate 129_3 RelaxedPrecision
+                              Decorate 59_7(gl_SubGroupLtMaskARB) BuiltIn SubgroupLtMaskKHR
+                              Decorate 112_5 RelaxedPrecision
+                              Decorate 129_4 RelaxedPrecision
+                              Decorate 59_8(gl_SMIDNV) BuiltIn SMIDNV
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+          5341_1:             TypeAccelerationStructureKHR
+            32_1:             TypePointer UniformConstant 5341_1
+    59_1(accEXT):   32_1(ptr) Variable UniformConstant
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+         uint(3):   21_1(int) Constant 3
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            43_1: 22_1(float) Constant 1056964608
+            44_1: 23_1(fvec3) ConstantComposite 43_1 43_1 43_1
+            43_2: 22_1(float) Constant 1065353216
+            44_2: 23_1(fvec3) ConstantComposite 43_2 43_2 43_2
+            43_3: 22_1(float) Constant 1061158912
+            21_2:             TypeInt 32 1
+            43_4:   21_2(int) Constant 1
+            23_2:             TypeVector 22_1(float) 4
+            32_2:             TypePointer IncomingRayPayloadKHR 23_2(fvec4)
+59_2(incomingPayload):   32_2(ptr) Variable IncomingRayPayloadKHR
+            32_3:             TypePointer Input 21_1(int)
+59_3(gl_SubgroupInvocationID):   32_3(ptr) Variable Input
+            23_3:             TypeVector 21_1(int) 4
+            21_3:             TypeInt 64 0
+            32_4:             TypePointer Input 23_3(ivec4)
+59_4(gl_SubGroupGeMaskARB):   32_4(ptr) Variable Input
+            23_4:             TypeVector 21_1(int) 2
+59_5(gl_SubgroupGtMask):   32_4(ptr) Variable Input
+59_6(gl_SubgroupLeMask):   32_4(ptr) Variable Input
+59_7(gl_SubGroupLtMaskARB):   32_4(ptr) Variable Input
+ 59_8(gl_SMIDNV):   32_3(ptr) Variable Input
+            32_5:             TypePointer IncomingRayPayloadKHR 22_1(float)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:      5341_1 Load 59_1(accEXT)
+                              TraceRayKHR 61_1 uint(0) uint(1) uint(2) uint(3) uint(0) 44_1 43_1 44_2 43_3 59_2(incomingPayload)
+            61_2:   21_1(int) Load 59_3(gl_SubgroupInvocationID) Volatile 
+           112_1: 22_1(float) ConvertUToF 61_2
+            61_3: 23_3(ivec4) Load 59_4(gl_SubGroupGeMaskARB)
+            81_1:   21_1(int) CompositeExtract 61_3 0
+            81_2:   21_1(int) CompositeExtract 61_3 1
+            80_1: 23_4(ivec2) CompositeConstruct 81_1 81_2
+           124_1:21_3(int64_t) Bitcast 80_1
+           112_2: 22_1(float) ConvertUToF 124_1
+           129_1: 22_1(float) FAdd 112_1 112_2
+            61_4: 23_3(ivec4) Load 59_5(gl_SubgroupGtMask) Volatile 
+           112_3: 23_2(fvec4) ConvertUToF 61_4
+            81_3: 22_1(float) CompositeExtract 112_3 0
+           129_2: 22_1(float) FAdd 129_1 81_3
+            61_5: 23_3(ivec4) Load 59_6(gl_SubgroupLeMask) Volatile 
+           112_4: 23_2(fvec4) ConvertUToF 61_5
+            81_4: 22_1(float) CompositeExtract 112_4 0
+           129_3: 22_1(float) FAdd 129_2 81_4
+            61_6: 23_3(ivec4) Load 59_7(gl_SubGroupLtMaskARB)
+            81_5:   21_1(int) CompositeExtract 61_6 0
+            81_6:   21_1(int) CompositeExtract 61_6 1
+            80_2: 23_4(ivec2) CompositeConstruct 81_5 81_6
+           124_2:21_3(int64_t) Bitcast 80_2
+           112_5: 22_1(float) ConvertUToF 124_2
+           129_4: 22_1(float) FAdd 129_3 112_5
+            61_7:   21_1(int) Load 59_8(gl_SMIDNV) Volatile 
+           112_6: 22_1(float) ConvertUToF 61_7
+           129_5: 22_1(float) FAdd 129_4 112_6
+            65_1:   32_5(ptr) AccessChain 59_2(incomingPayload) uint(0)
+                              Store 65_1 129_5
                               Return
                               FunctionEnd

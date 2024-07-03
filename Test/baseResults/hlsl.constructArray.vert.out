@@ -272,110 +272,110 @@ Shader version: 500
 // Id's are bound by 89
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 87
+                              EntryPoint Vertex 54_1  "main" 59_1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "@main("
-                              Name 15  "float4_array_times"
-                              Name 21  "int4_array"
-                              Name 36  "float2_array_times2"
-                              Name 68  "int4_array2"
-                              Name 76  "int1_array"
-                              Name 87  "@entryPointOutput"
-                              Decorate 87(@entryPointOutput) BuiltIn Position
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypeInt 32 0
-              12:     11(int) Constant 2
-              13:             TypeArray 7(fvec4) 12
-              14:             TypePointer Function 13
-              16:             TypeInt 32 1
-              17:             TypeVector 16(int) 4
-              18:     11(int) Constant 3
-              19:             TypeArray 17(ivec4) 18
-              20:             TypePointer Function 19
-              22:     16(int) Constant 0
-              23:             TypePointer Function 17(ivec4)
-              27:     16(int) Constant 1
-              32:             TypeVector 6(float) 2
-              33:     11(int) Constant 4
-              34:             TypeArray 32(fvec2) 33
-              35:             TypePointer Function 34
-              37:     11(int) Constant 0
-              38:             TypePointer Function 16(int)
-              41:     11(int) Constant 1
-              44:             TypeVector 16(int) 2
-              66:             TypeArray 17(ivec4) 12
-              67:             TypePointer Function 66
-              74:             TypeArray 16(int) 12
-              75:             TypePointer Function 74
-              82:    6(float) Constant 0
-              83:    7(fvec4) ConstantComposite 82 82 82 82
-              86:             TypePointer Output 7(fvec4)
-87(@entryPointOutput):     86(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              88:    7(fvec4) FunctionCall 9(@main()
-                              Store 87(@entryPointOutput) 88
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 59_2  "float4_array_times"
+                              Name 59_3  "int4_array"
+                              Name 59_4  "float2_array_times2"
+                              Name 59_5  "int4_array2"
+                              Name 59_6  "int1_array"
+                              Name 59_1  "@entryPointOutput"
+                              Decorate 59_1(@entryPointOutput) BuiltIn Position
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            21_1:             TypeInt 32 0
+         uint(2):   21_1(int) Constant 2
+            28_1:             TypeArray 23_1(fvec4) uint(2)
+            32_1:             TypePointer Function 28_1
+            21_2:             TypeInt 32 1
+            23_2:             TypeVector 21_2(int) 4
+         uint(3):   21_1(int) Constant 3
+            28_2:             TypeArray 23_2(ivec4) uint(3)
+            32_2:             TypePointer Function 28_2
+            43_1:   21_2(int) Constant 0
+            32_3:             TypePointer Function 23_2(ivec4)
+            43_2:   21_2(int) Constant 1
+            23_3:             TypeVector 22_1(float) 2
+         uint(4):   21_1(int) Constant 4
+            28_3:             TypeArray 23_3(fvec2) uint(4)
+            32_4:             TypePointer Function 28_3
+         uint(0):   21_1(int) Constant 0
+            32_5:             TypePointer Function 21_2(int)
+         uint(1):   21_1(int) Constant 1
+            23_4:             TypeVector 21_2(int) 2
+            28_4:             TypeArray 23_2(ivec4) uint(2)
+            32_6:             TypePointer Function 28_4
+            28_5:             TypeArray 21_2(int) uint(2)
+            32_7:             TypePointer Function 28_5
+            43_3: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_3 43_3 43_3 43_3
+            32_8:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput):   32_8(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main()
+                              Store 59_1(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       9(@main():    7(fvec4) Function None 8
-              10:             Label
-15(float4_array_times):     14(ptr) Variable Function
-  21(int4_array):     20(ptr) Variable Function
-36(float2_array_times2):     35(ptr) Variable Function
- 68(int4_array2):     67(ptr) Variable Function
-  76(int1_array):     75(ptr) Variable Function
-              24:     23(ptr) AccessChain 21(int4_array) 22
-              25:   17(ivec4) Load 24
-              26:    7(fvec4) ConvertSToF 25
-              28:     23(ptr) AccessChain 21(int4_array) 27
-              29:   17(ivec4) Load 28
-              30:    7(fvec4) ConvertSToF 29
-              31:          13 CompositeConstruct 26 30
-                              Store 15(float4_array_times) 31
-              39:     38(ptr) AccessChain 21(int4_array) 22 37
-              40:     16(int) Load 39
-              42:     38(ptr) AccessChain 21(int4_array) 22 41
-              43:     16(int) Load 42
-              45:   44(ivec2) CompositeConstruct 40 43
-              46:   32(fvec2) ConvertSToF 45
-              47:     38(ptr) AccessChain 21(int4_array) 22 12
-              48:     16(int) Load 47
-              49:     38(ptr) AccessChain 21(int4_array) 22 18
-              50:     16(int) Load 49
-              51:   44(ivec2) CompositeConstruct 48 50
-              52:   32(fvec2) ConvertSToF 51
-              53:     38(ptr) AccessChain 21(int4_array) 27 37
-              54:     16(int) Load 53
-              55:     38(ptr) AccessChain 21(int4_array) 27 41
-              56:     16(int) Load 55
-              57:   44(ivec2) CompositeConstruct 54 56
-              58:   32(fvec2) ConvertSToF 57
-              59:     38(ptr) AccessChain 21(int4_array) 27 12
-              60:     16(int) Load 59
-              61:     38(ptr) AccessChain 21(int4_array) 27 18
-              62:     16(int) Load 61
-              63:   44(ivec2) CompositeConstruct 60 62
-              64:   32(fvec2) ConvertSToF 63
-              65:          34 CompositeConstruct 46 52 58 64
-                              Store 36(float2_array_times2) 65
-              69:     23(ptr) AccessChain 21(int4_array) 22
-              70:   17(ivec4) Load 69
-              71:     23(ptr) AccessChain 21(int4_array) 27
-              72:   17(ivec4) Load 71
-              73:          66 CompositeConstruct 70 72
-                              Store 68(int4_array2) 73
-              77:     38(ptr) AccessChain 21(int4_array) 22 37
-              78:     16(int) Load 77
-              79:     38(ptr) AccessChain 21(int4_array) 22 41
-              80:     16(int) Load 79
-              81:          74 CompositeConstruct 78 80
-                              Store 76(int1_array) 81
-                              ReturnValue 83
+    54_2(@main(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+59_2(float4_array_times):   32_1(ptr) Variable Function
+59_3(int4_array):   32_2(ptr) Variable Function
+59_4(float2_array_times2):   32_4(ptr) Variable Function
+59_5(int4_array2):   32_6(ptr) Variable Function
+59_6(int1_array):   32_7(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_3(int4_array) 43_1
+            61_1: 23_2(ivec4) Load 65_1
+           111_1: 23_1(fvec4) ConvertSToF 61_1
+            65_2:   32_3(ptr) AccessChain 59_3(int4_array) 43_2
+            61_2: 23_2(ivec4) Load 65_2
+           111_2: 23_1(fvec4) ConvertSToF 61_2
+            80_1:        28_1 CompositeConstruct 111_1 111_2
+                              Store 59_2(float4_array_times) 80_1
+            65_3:   32_5(ptr) AccessChain 59_3(int4_array) 43_1 uint(0)
+            61_3:   21_2(int) Load 65_3
+            65_4:   32_5(ptr) AccessChain 59_3(int4_array) 43_1 uint(1)
+            61_4:   21_2(int) Load 65_4
+            80_2: 23_4(ivec2) CompositeConstruct 61_3 61_4
+           111_3: 23_3(fvec2) ConvertSToF 80_2
+            65_5:   32_5(ptr) AccessChain 59_3(int4_array) 43_1 uint(2)
+            61_5:   21_2(int) Load 65_5
+            65_6:   32_5(ptr) AccessChain 59_3(int4_array) 43_1 uint(3)
+            61_6:   21_2(int) Load 65_6
+            80_3: 23_4(ivec2) CompositeConstruct 61_5 61_6
+           111_4: 23_3(fvec2) ConvertSToF 80_3
+            65_7:   32_5(ptr) AccessChain 59_3(int4_array) 43_2 uint(0)
+            61_7:   21_2(int) Load 65_7
+            65_8:   32_5(ptr) AccessChain 59_3(int4_array) 43_2 uint(1)
+            61_8:   21_2(int) Load 65_8
+            80_4: 23_4(ivec2) CompositeConstruct 61_7 61_8
+           111_5: 23_3(fvec2) ConvertSToF 80_4
+            65_9:   32_5(ptr) AccessChain 59_3(int4_array) 43_2 uint(2)
+            61_9:   21_2(int) Load 65_9
+           65_10:   32_5(ptr) AccessChain 59_3(int4_array) 43_2 uint(3)
+           61_10:   21_2(int) Load 65_10
+            80_5: 23_4(ivec2) CompositeConstruct 61_9 61_10
+           111_6: 23_3(fvec2) ConvertSToF 80_5
+            80_6:        28_3 CompositeConstruct 111_3 111_4 111_5 111_6
+                              Store 59_4(float2_array_times2) 80_6
+           65_11:   32_3(ptr) AccessChain 59_3(int4_array) 43_1
+           61_11: 23_2(ivec4) Load 65_11
+           65_12:   32_3(ptr) AccessChain 59_3(int4_array) 43_2
+           61_12: 23_2(ivec4) Load 65_12
+            80_7:        28_4 CompositeConstruct 61_11 61_12
+                              Store 59_5(int4_array2) 80_7
+           65_13:   32_5(ptr) AccessChain 59_3(int4_array) 43_1 uint(0)
+           61_13:   21_2(int) Load 65_13
+           65_14:   32_5(ptr) AccessChain 59_3(int4_array) 43_1 uint(1)
+           61_14:   21_2(int) Load 65_14
+            80_8:        28_5 CompositeConstruct 61_13 61_14
+                              Store 59_6(int1_array) 80_8
+                              ReturnValue 44_1
                               FunctionEnd

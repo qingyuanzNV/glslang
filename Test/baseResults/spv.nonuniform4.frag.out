@@ -9,43 +9,43 @@ spv.nonuniform4.frag
                               Capability RuntimeDescriptorArrayEXT
                               Capability StorageTexelBufferArrayNonUniformIndexingEXT
                               Extension  "SPV_EXT_descriptor_indexing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 13
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_nonuniform_qualifier"
-                              Name 4  "main"
-                              Name 10  "data"
-                              Name 13  "rIndex"
-                              Decorate 10(data) Binding 4
-                              Decorate 10(data) DescriptorSet 0
-                              Decorate 13(rIndex) Flat
-                              Decorate 13(rIndex) Location 3
-                              Decorate 15 DecorationNonUniformEXT
-                              Decorate 17 DecorationNonUniformEXT
-                              Decorate 21 DecorationNonUniformEXT
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeImage 6(int) Buffer nonsampled format:R32ui
-               8:             TypeRuntimeArray 7
-               9:             TypePointer UniformConstant 8
-        10(data):      9(ptr) Variable UniformConstant
-              11:             TypeInt 32 1
-              12:             TypePointer Input 11(int)
-      13(rIndex):     12(ptr) Variable Input
-              16:             TypePointer UniformConstant 7
-              18:     11(int) Constant 0
-              19:      6(int) Constant 0
-              20:             TypePointer Image 6(int)
-              22:      6(int) Constant 1
-         4(main):           2 Function None 3
-               5:             Label
-              14:     11(int) Load 13(rIndex)
-              15:     11(int) CopyObject 14
-              17:     16(ptr) AccessChain 10(data) 15
-              21:     20(ptr) ImageTexelPointer 17 18 19
-              23:      6(int) AtomicIAdd 21 22 19 19
+                              Name 54_1  "main"
+                              Name 59_1  "data"
+                              Name 59_2  "rIndex"
+                              Decorate 59_1(data) Binding 4
+                              Decorate 59_1(data) DescriptorSet 0
+                              Decorate 59_2(rIndex) Flat
+                              Decorate 59_2(rIndex) Location 3
+                              Decorate 83_1 DecorationNonUniformEXT
+                              Decorate 65_1 DecorationNonUniformEXT
+                              Decorate 60_1 DecorationNonUniformEXT
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            25_1:             TypeImage 21_1(int) Buffer nonsampled format:R32ui
+            29_1:             TypeRuntimeArray 25_1
+            32_1:             TypePointer UniformConstant 29_1
+      59_1(data):   32_1(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 1
+            32_2:             TypePointer Input 21_2(int)
+    59_2(rIndex):   32_2(ptr) Variable Input
+            32_3:             TypePointer UniformConstant 25_1
+            43_1:   21_2(int) Constant 0
+         uint(0):   21_1(int) Constant 0
+            32_4:             TypePointer Image 21_1(int)
+         uint(1):   21_1(int) Constant 1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_2(int) Load 59_2(rIndex)
+            83_1:   21_2(int) CopyObject 61_1
+            65_1:   32_3(ptr) AccessChain 59_1(data) 83_1
+            60_1:   32_4(ptr) ImageTexelPointer 65_1 43_1 uint(0)
+           234_1:   21_1(int) AtomicIAdd 60_1 uint(1) uint(0) uint(0)
                               Return
                               FunctionEnd

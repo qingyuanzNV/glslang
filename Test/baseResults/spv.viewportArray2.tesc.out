@@ -8,44 +8,44 @@ spv.viewportArray2.tesc
                               Capability ShaderViewportMaskNV
                               Extension  "SPV_EXT_shader_viewport_index_layer"
                               Extension  "SPV_NV_viewport_array2"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationControl 4  "main" 14 16 22
-                              ExecutionMode 4 OutputVertices 4
+                              EntryPoint TessellationControl 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OutputVertices 4
                               Source GLSL 430
                               SourceExtension  "GL_NV_viewport_array2"
-                              Name 4  "main"
-                              Name 10  "gl_PerVertex"
-                              MemberName 10(gl_PerVertex) 0  "gl_ViewportMask"
-                              Name 14  "gl_out"
-                              Name 16  "gl_InvocationID"
-                              Name 22  "gl_Layer"
-                              Decorate 10(gl_PerVertex) Block
-                              MemberDecorate 10(gl_PerVertex) 0 BuiltIn ViewportMaskNV
-                              Decorate 16(gl_InvocationID) BuiltIn InvocationId
-                              Decorate 22(gl_Layer) BuiltIn Layer
-                              Decorate 22(gl_Layer) ViewportRelativeNV
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeInt 32 0
-               8:      7(int) Constant 2
-               9:             TypeArray 6(int) 8
-10(gl_PerVertex):             TypeStruct 9
-              11:      7(int) Constant 4
-              12:             TypeArray 10(gl_PerVertex) 11
-              13:             TypePointer Output 12
-      14(gl_out):     13(ptr) Variable Output
-              15:             TypePointer Input 6(int)
-16(gl_InvocationID):     15(ptr) Variable Input
-              18:      6(int) Constant 0
-              19:      6(int) Constant 1
-              20:             TypePointer Output 6(int)
-    22(gl_Layer):     20(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              17:      6(int) Load 16(gl_InvocationID)
-              21:     20(ptr) AccessChain 14(gl_out) 17 18 18
-                              Store 21 19
+                              Name 54_1  "main"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_ViewportMask"
+                              Name 59_1  "gl_out"
+                              Name 59_2  "gl_InvocationID"
+                              Name 59_3  "gl_Layer"
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn ViewportMaskNV
+                              Decorate 59_2(gl_InvocationID) BuiltIn InvocationId
+                              Decorate 59_3(gl_Layer) BuiltIn Layer
+                              Decorate 59_3(gl_Layer) ViewportRelativeNV
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            21_2:             TypeInt 32 0
+         uint(2):   21_2(int) Constant 2
+            28_1:             TypeArray 21_1(int) uint(2)
+30_1(gl_PerVertex):             TypeStruct 28_1
+         uint(4):   21_2(int) Constant 4
+            28_2:             TypeArray 30_1(gl_PerVertex) uint(4)
+            32_1:             TypePointer Output 28_2
+    59_1(gl_out):   32_1(ptr) Variable Output
+            32_2:             TypePointer Input 21_1(int)
+59_2(gl_InvocationID):   32_2(ptr) Variable Input
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 1
+            32_3:             TypePointer Output 21_1(int)
+  59_3(gl_Layer):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_2(gl_InvocationID)
+            65_1:   32_3(ptr) AccessChain 59_1(gl_out) 61_1 43_1 43_1
+                              Store 65_1 43_2
                               Return
                               FunctionEnd

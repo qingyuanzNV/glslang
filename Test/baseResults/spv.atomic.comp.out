@@ -5,126 +5,126 @@ spv.atomic.comp
 
                               Capability Shader
                               Capability AtomicStorage
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 10  "func(au1;"
-                              Name 9  "c"
-                              Name 12  "atoms("
-                              Name 20  "counter"
-                              Name 23  "val"
-                              Name 27  "countArr"
-                              Name 37  "origi"
-                              Name 39  "atomi"
-                              Name 42  "origu"
-                              Name 44  "atomu"
-                              Name 45  "value"
-                              Name 62  "dataSSB"
-                              MemberName 62(dataSSB) 0  "f"
-                              MemberName 62(dataSSB) 1  "n_frames_rendered"
-                              Name 64  "result"
-                              Name 71  "arrX"
-                              Name 72  "arrY"
-                              Name 73  "arrZ"
-                              Decorate 20(counter) Binding 0
-                              Decorate 20(counter) DescriptorSet 0
-                              Decorate 20(counter) Offset 0
-                              Decorate 27(countArr) Binding 0
-                              Decorate 27(countArr) DescriptorSet 0
-                              Decorate 27(countArr) Offset 4
-                              Decorate 62(dataSSB) BufferBlock
-                              MemberDecorate 62(dataSSB) 0 Restrict
-                              MemberDecorate 62(dataSSB) 0 Offset 0
-                              MemberDecorate 62(dataSSB) 1 Restrict
-                              MemberDecorate 62(dataSSB) 1 Offset 16
-                              Decorate 64(result) Binding 0
-                              Decorate 64(result) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer AtomicCounter 6(int)
-               8:             TypeFunction 6(int) 7(ptr)
-              14:      6(int) Constant 1
-              15:      6(int) Constant 0
-              19:      6(int) Constant 1032
-     20(counter):      7(ptr) Variable AtomicCounter
-              22:             TypePointer Function 6(int)
-              24:      6(int) Constant 4
-              25:             TypeArray 6(int) 24
-              26:             TypePointer AtomicCounter 25
-    27(countArr):     26(ptr) Variable AtomicCounter
-              28:             TypeInt 32 1
-              29:     28(int) Constant 2
-              33:     28(int) Constant 1
-              36:             TypePointer Function 28(int)
-              38:             TypePointer Workgroup 28(int)
-       39(atomi):     38(ptr) Variable Workgroup
-              40:     28(int) Constant 3
-              43:             TypePointer Workgroup 6(int)
-       44(atomu):     43(ptr) Variable Workgroup
-       45(value):     43(ptr) Variable Workgroup
-              48:      6(int) Constant 7
-              53:     28(int) Constant 7
-              57:      6(int) Constant 10
-              60:             TypeFloat 32
-              61:             TypeVector 28(int) 4
-     62(dataSSB):             TypeStruct 60(float) 61(ivec4)
-              63:             TypePointer Uniform 62(dataSSB)
-      64(result):     63(ptr) Variable Uniform
-              65:      6(int) Constant 2
-              66:             TypePointer Uniform 28(int)
-              69:             TypeArray 28(int) 14
-              70:             TypePointer Private 69
-        71(arrX):     70(ptr) Variable Private
-        72(arrY):     70(ptr) Variable Private
-        73(arrZ):     70(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-         23(val):     22(ptr) Variable Function
-                              MemoryBarrier 14 19
-              21:      6(int) FunctionCall 10(func(au1;) 20(counter)
-              30:      7(ptr) AccessChain 27(countArr) 29
-              31:      6(int) AtomicLoad 30 14 15
-                              Store 23(val) 31
-              32:      6(int) AtomicIDecrement 20(counter) 14 15
-              34:      6(int) ISub 32 33
-              35:      6(int) AtomicIIncrement 20(counter) 14 15
+                              Name 54_1  "main"
+                              Name 54_2  "func(au1;"
+                              Name 55_1  "c"
+                              Name 54_3  "atoms("
+                              Name 59_1  "counter"
+                              Name 59_10  "val"
+                              Name 59_2  "countArr"
+                              Name 59_11  "origi"
+                              Name 59_3  "atomi"
+                              Name 59_12  "origu"
+                              Name 59_4  "atomu"
+                              Name 59_5  "value"
+                              Name 30_1  "dataSSB"
+                              MemberName 30_1(dataSSB) 0  "f"
+                              MemberName 30_1(dataSSB) 1  "n_frames_rendered"
+                              Name 59_6  "result"
+                              Name 59_7  "arrX"
+                              Name 59_8  "arrY"
+                              Name 59_9  "arrZ"
+                              Decorate 59_1(counter) Binding 0
+                              Decorate 59_1(counter) DescriptorSet 0
+                              Decorate 59_1(counter) Offset 0
+                              Decorate 59_2(countArr) Binding 0
+                              Decorate 59_2(countArr) DescriptorSet 0
+                              Decorate 59_2(countArr) Offset 4
+                              Decorate 30_1(dataSSB) BufferBlock
+                              MemberDecorate 30_1(dataSSB) 0 Restrict
+                              MemberDecorate 30_1(dataSSB) 0 Offset 0
+                              MemberDecorate 30_1(dataSSB) 1 Restrict
+                              MemberDecorate 30_1(dataSSB) 1 Offset 16
+                              Decorate 59_6(result) Binding 0
+                              Decorate 59_6(result) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer AtomicCounter 21_1(int)
+            33_2:             TypeFunction 21_1(int) 32_1(ptr)
+         uint(1):   21_1(int) Constant 1
+         uint(0):   21_1(int) Constant 0
+      uint(1032):   21_1(int) Constant 1032
+   59_1(counter):   32_1(ptr) Variable AtomicCounter
+            32_2:             TypePointer Function 21_1(int)
+         uint(4):   21_1(int) Constant 4
+            28_1:             TypeArray 21_1(int) uint(4)
+            32_3:             TypePointer AtomicCounter 28_1
+  59_2(countArr):   32_3(ptr) Variable AtomicCounter
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 2
+            43_2:   21_2(int) Constant 1
+            32_4:             TypePointer Function 21_2(int)
+            32_5:             TypePointer Workgroup 21_2(int)
+     59_3(atomi):   32_5(ptr) Variable Workgroup
+            43_3:   21_2(int) Constant 3
+            32_6:             TypePointer Workgroup 21_1(int)
+     59_4(atomu):   32_6(ptr) Variable Workgroup
+     59_5(value):   32_6(ptr) Variable Workgroup
+         uint(7):   21_1(int) Constant 7
+            43_4:   21_2(int) Constant 7
+        uint(10):   21_1(int) Constant 10
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 21_2(int) 4
+   30_1(dataSSB):             TypeStruct 22_1(float) 23_1(ivec4)
+            32_7:             TypePointer Uniform 30_1(dataSSB)
+    59_6(result):   32_7(ptr) Variable Uniform
+         uint(2):   21_1(int) Constant 2
+            32_8:             TypePointer Uniform 21_2(int)
+            28_2:             TypeArray 21_2(int) uint(1)
+            32_9:             TypePointer Private 28_2
+      59_7(arrX):   32_9(ptr) Variable Private
+      59_8(arrY):   32_9(ptr) Variable Private
+      59_9(arrZ):   32_9(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+      59_10(val):   32_2(ptr) Variable Function
+                              MemoryBarrier uint(1) uint(1032)
+            57_1:   21_1(int) FunctionCall 54_2(func(au1;) 59_1(counter)
+            65_1:   32_1(ptr) AccessChain 59_2(countArr) 43_1
+           227_1:   21_1(int) AtomicLoad 65_1 uint(1) uint(0)
+                              Store 59_10(val) 227_1
+           233_1:   21_1(int) AtomicIDecrement 59_1(counter) uint(1) uint(0)
+           130_1:   21_1(int) ISub 233_1 43_2
+           232_1:   21_1(int) AtomicIIncrement 59_1(counter) uint(1) uint(0)
                               Return
                               FunctionEnd
-   10(func(au1;):      6(int) Function None 8
-            9(c):      7(ptr) FunctionParameter
-              11:             Label
-              16:      6(int) AtomicIIncrement 9(c) 14 15
-                              ReturnValue 16
+ 54_2(func(au1;):   21_1(int) Function None 33_2
+         55_1(c):   32_1(ptr) FunctionParameter
+           248_2:             Label
+           232_2:   21_1(int) AtomicIIncrement 55_1(c) uint(1) uint(0)
+                              ReturnValue 232_2
                               FunctionEnd
-      12(atoms():           2 Function None 3
-              13:             Label
-       37(origi):     36(ptr) Variable Function
-       42(origu):     22(ptr) Variable Function
-              41:     28(int) AtomicIAdd 39(atomi) 14 15 40
-                              Store 37(origi) 41
-              46:      6(int) Load 45(value)
-              47:      6(int) AtomicAnd 44(atomu) 14 15 46
-                              Store 42(origu) 47
-              49:      6(int) AtomicOr 44(atomu) 14 15 48
-                              Store 42(origu) 49
-              50:      6(int) AtomicXor 44(atomu) 14 15 48
-                              Store 42(origu) 50
-              51:      6(int) Load 45(value)
-              52:      6(int) AtomicUMin 44(atomu) 14 15 51
-                              Store 42(origu) 52
-              54:     28(int) AtomicSMax 39(atomi) 14 15 53
-                              Store 37(origi) 54
-              55:     28(int) Load 37(origi)
-              56:     28(int) AtomicExchange 39(atomi) 14 15 55
-                              Store 37(origi) 56
-              58:      6(int) Load 45(value)
-              59:      6(int) AtomicCompareExchange 44(atomu) 14 15 15 58 57
-                              Store 42(origu) 59
-              67:     66(ptr) AccessChain 64(result) 33 65
-              68:     28(int) AtomicIAdd 67 14 15 33
+    54_3(atoms():        19_1 Function None 33_1
+           248_3:             Label
+    59_11(origi):   32_4(ptr) Variable Function
+    59_12(origu):   32_2(ptr) Variable Function
+           234_1:   21_2(int) AtomicIAdd 59_3(atomi) uint(1) uint(0) 43_3
+                              Store 59_11(origi) 234_1
+            61_1:   21_1(int) Load 59_5(value)
+           240_1:   21_1(int) AtomicAnd 59_4(atomu) uint(1) uint(0) 61_1
+                              Store 59_12(origu) 240_1
+           241_1:   21_1(int) AtomicOr 59_4(atomu) uint(1) uint(0) uint(7)
+                              Store 59_12(origu) 241_1
+           242_1:   21_1(int) AtomicXor 59_4(atomu) uint(1) uint(0) uint(7)
+                              Store 59_12(origu) 242_1
+            61_2:   21_1(int) Load 59_5(value)
+           237_1:   21_1(int) AtomicUMin 59_4(atomu) uint(1) uint(0) 61_2
+                              Store 59_12(origu) 237_1
+           238_1:   21_2(int) AtomicSMax 59_3(atomi) uint(1) uint(0) 43_4
+                              Store 59_11(origi) 238_1
+            61_3:   21_2(int) Load 59_11(origi)
+           229_1:   21_2(int) AtomicExchange 59_3(atomi) uint(1) uint(0) 61_3
+                              Store 59_11(origi) 229_1
+            61_4:   21_1(int) Load 59_5(value)
+           230_1:   21_1(int) AtomicCompareExchange 59_4(atomu) uint(1) uint(0) uint(0) 61_4 uint(10)
+                              Store 59_12(origu) 230_1
+            65_2:   32_8(ptr) AccessChain 59_6(result) 43_2 uint(2)
+           234_2:   21_2(int) AtomicIAdd 65_2 uint(1) uint(0) 43_2
                               Return
                               FunctionEnd

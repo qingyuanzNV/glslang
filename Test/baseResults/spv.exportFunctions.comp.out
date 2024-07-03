@@ -5,32 +5,32 @@ spv.exportFunctions.comp
 
                               Capability Shader
                               Capability Linkage
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
                               Source GLSL 450
-                              Name 7  "add(f1;f1;"
-                              Name 5  "a"
-                              Name 6  "b"
-                              Name 11  "foo("
-                              Decorate 7(add(f1;f1;) Linkage Attributes 6579297 0
-                              Decorate 11(foo() Linkage Attributes 7303014 0
-               2:             TypeFloat 32
-               3:             TypePointer Function 2(float)
-               4:             TypeFunction 2(float) 3(ptr) 3(ptr)
-               9:             TypeInt 32 1
-              10:             TypeFunction 9(int)
-              17:             TypeVoid
-              19:      9(int) Constant 0
-   7(add(f1;f1;):    2(float) Function None 4
-            5(a):      3(ptr) FunctionParameter
-            6(b):      3(ptr) FunctionParameter
-               8:             Label
-              13:    2(float) Load 5(a)
-              14:    2(float) Load 6(b)
-              15:    2(float) FAdd 13 14
-                              ReturnValue 15
+                              Name 54_1  "add(f1;f1;"
+                              Name 55_1  "a"
+                              Name 55_2  "b"
+                              Name 54_2  "foo("
+                              Decorate 54_1(add(f1;f1;) Linkage Attributes 6579297 0
+                              Decorate 54_2(foo() Linkage Attributes 7303014 0
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            33_1:             TypeFunction 22_1(float) 32_1(ptr) 32_1(ptr)
+            21_1:             TypeInt 32 1
+            33_2:             TypeFunction 21_1(int)
+            19_1:             TypeVoid
+            43_1:   21_1(int) Constant 0
+54_1(add(f1;f1;): 22_1(float) Function None 33_1
+         55_1(a):   32_1(ptr) FunctionParameter
+         55_2(b):   32_1(ptr) FunctionParameter
+           248_1:             Label
+            61_1: 22_1(float) Load 55_1(a)
+            61_2: 22_1(float) Load 55_2(b)
+           129_1: 22_1(float) FAdd 61_1 61_2
+                              ReturnValue 129_1
                               FunctionEnd
-        11(foo():      9(int) Function None 10
-              12:             Label
-                              ReturnValue 19
+      54_2(foo():   21_1(int) Function None 33_2
+           248_2:             Label
+                              ReturnValue 43_1
                               FunctionEnd

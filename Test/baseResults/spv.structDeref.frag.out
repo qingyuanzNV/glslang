@@ -4,187 +4,187 @@ spv.structDeref.frag
 // Id's are bound by 123
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 61 99
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_3 59_6
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 8  "s0"
-                              MemberName 8(s0) 0  "i"
-                              Name 9  "s1"
-                              MemberName 9(s1) 0  "i"
-                              MemberName 9(s1) 1  "f"
-                              MemberName 9(s1) 2  "s0_1"
-                              Name 10  "s2"
-                              MemberName 10(s2) 0  "i"
-                              MemberName 10(s2) 1  "f"
-                              MemberName 10(s2) 2  "s1_1"
-                              Name 14  "s3"
-                              MemberName 14(s3) 0  "s2_1"
-                              MemberName 14(s3) 1  "i"
-                              MemberName 14(s3) 2  "f"
-                              MemberName 14(s3) 3  "s1_1"
-                              Name 16  "foo3"
-                              Name 27  "locals2"
-                              Name 40  "fArray"
-                              Name 46  "locals1Array"
-                              Name 49  "foo1"
-                              Name 53  "locals0"
-                              Name 54  "s00"
-                              MemberName 54(s00) 0  "s0_0"
-                              Name 56  "locals00"
-                              Name 61  "coord"
-                              Name 71  "foo0"
-                              Name 86  "foo00"
-                              Name 99  "gl_FragColor"
-                              Name 116  "samp2D"
-                              Name 122  "foo2"
-                              Decorate 61(coord) Location 0
-                              Decorate 99(gl_FragColor) Location 0
-                              Decorate 116(samp2D) Binding 0
-                              Decorate 116(samp2D) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeFloat 32
-           8(s0):             TypeStruct 6(int)
-           9(s1):             TypeStruct 6(int) 7(float) 8(s0)
-          10(s2):             TypeStruct 6(int) 7(float) 9(s1)
-              11:             TypeInt 32 0
-              12:     11(int) Constant 12
-              13:             TypeArray 10(s2) 12
-          14(s3):             TypeStruct 13 6(int) 7(float) 9(s1)
-              15:             TypePointer Private 14(s3)
-        16(foo3):     15(ptr) Variable Private
-              17:      6(int) Constant 0
-              18:      6(int) Constant 9
-              19:             TypePointer Private 6(int)
-              22:             TypeBool
-              26:             TypePointer Function 10(s2)
-              28:      6(int) Constant 1
-              29:    7(float) Constant 1065353216
-              30:             TypePointer Function 7(float)
-              32:      6(int) Constant 2
-              33:       8(s0) ConstantComposite 17
-              34:       9(s1) ConstantComposite 17 29 33
-              35:             TypePointer Function 9(s1)
-              37:     11(int) Constant 6
-              38:             TypeArray 7(float) 37
-              39:             TypePointer Function 38
-              41:    7(float) Constant 0
-              42:          38 ConstantComposite 41 41 41 41 41 41
-              43:     11(int) Constant 10
-              44:             TypeArray 9(s1) 43
-              45:             TypePointer Function 44
-              47:      6(int) Constant 6
-              48:             TypePointer Private 9(s1)
-        49(foo1):     48(ptr) Variable Private
-              52:             TypePointer Function 8(s0)
-         54(s00):             TypeStruct 8(s0)
-              55:             TypePointer Function 54(s00)
-              57:     54(s00) ConstantComposite 33
-              59:             TypeVector 7(float) 2
-              60:             TypePointer Input 59(fvec2)
-       61(coord):     60(ptr) Variable Input
-              62:     11(int) Constant 0
-              63:             TypePointer Input 7(float)
-              67:     11(int) Constant 1
-              70:             TypePointer Private 8(s0)
-        71(foo0):     70(ptr) Variable Private
-              75:    7(float) Constant 1073741824
-              76:    7(float) Constant 1077936128
-              77:    7(float) Constant 1082130432
-              78:    7(float) Constant 1084227584
-              79:          38 ConstantComposite 41 29 75 76 77 78
-              85:             TypePointer Private 54(s00)
-       86(foo00):     85(ptr) Variable Private
-              88:             TypePointer Function 6(int)
-              91:      6(int) Constant 5
-              97:             TypeVector 7(float) 4
-              98:             TypePointer Output 97(fvec4)
-99(gl_FragColor):     98(ptr) Variable Output
-             106:      6(int) Constant 3
-             113:             TypeImage 7(float) 2D sampled format:Unknown
-             114:             TypeSampledImage 113
-             115:             TypePointer UniformConstant 114
-     116(samp2D):    115(ptr) Variable UniformConstant
-             121:             TypePointer Private 10(s2)
-       122(foo2):    121(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-     27(locals2):     26(ptr) Variable Function
-      40(fArray):     39(ptr) Variable Function
-46(locals1Array):     45(ptr) Variable Function
-     53(locals0):     52(ptr) Variable Function
-    56(locals00):     55(ptr) Variable Function
-              20:     19(ptr) AccessChain 16(foo3) 17 18 17
-              21:      6(int) Load 20
-              23:    22(bool) SGreaterThan 21 17
-                              SelectionMerge 25 None
-                              BranchConditional 23 24 58
-              24:               Label
-              31:     30(ptr)   AccessChain 27(locals2) 28
-                                Store 31 29
-              36:     35(ptr)   AccessChain 27(locals2) 32
-                                Store 36 34
-                                Store 40(fArray) 42
-              50:       9(s1)   Load 49(foo1)
-              51:     35(ptr)   AccessChain 46(locals1Array) 47
-                                Store 51 50
-                                Store 53(locals0) 33
-                                Store 56(locals00) 57
-                                Branch 25
-              58:               Label
-              64:     63(ptr)   AccessChain 61(coord) 62
-              65:    7(float)   Load 64
-              66:     30(ptr)   AccessChain 27(locals2) 28
-                                Store 66 65
-              68:     63(ptr)   AccessChain 61(coord) 67
-              69:    7(float)   Load 68
-              72:       8(s0)   Load 71(foo0)
-              73:       9(s1)   CompositeConstruct 28 69 72
-              74:     35(ptr)   AccessChain 27(locals2) 32
-                                Store 74 73
-                                Store 40(fArray) 79
-              80:     35(ptr)   AccessChain 27(locals2) 32
-              81:       9(s1)   Load 80
-              82:     35(ptr)   AccessChain 46(locals1Array) 47
-                                Store 82 81
-              83:     70(ptr)   AccessChain 49(foo1) 32
-              84:       8(s0)   Load 83
-                                Store 53(locals0) 84
-              87:     54(s00)   Load 86(foo00)
-                                Store 56(locals00) 87
-                                Branch 25
-              25:             Label
-              89:     88(ptr) AccessChain 53(locals0) 17
-              90:      6(int) Load 89
-              92:    22(bool) SGreaterThan 90 91
-                              SelectionMerge 94 None
-                              BranchConditional 92 93 94
-              93:               Label
-              95:     52(ptr)   AccessChain 56(locals00) 17
-              96:       8(s0)   Load 95
-                                Store 53(locals0) 96
-                                Branch 94
-              94:             Label
-             100:     88(ptr) AccessChain 53(locals0) 17
-             101:      6(int) Load 100
-             102:    7(float) ConvertSToF 101
-             103:     30(ptr) AccessChain 46(locals1Array) 47 28
-             104:    7(float) Load 103
-             105:    7(float) FAdd 102 104
-             107:     30(ptr) AccessChain 40(fArray) 106
-             108:    7(float) Load 107
-             109:    7(float) FAdd 105 108
-             110:     30(ptr) AccessChain 27(locals2) 32 28
-             111:    7(float) Load 110
-             112:    7(float) FAdd 109 111
-             117:         114 Load 116(samp2D)
-             118:   59(fvec2) Load 61(coord)
-             119:   97(fvec4) ImageSampleImplicitLod 117 118
-             120:   97(fvec4) VectorTimesScalar 119 112
-                              Store 99(gl_FragColor) 120
+                              Name 54_1  "main"
+                              Name 30_1  "s0"
+                              MemberName 30_1(s0) 0  "i"
+                              Name 30_2  "s1"
+                              MemberName 30_2(s1) 0  "i"
+                              MemberName 30_2(s1) 1  "f"
+                              MemberName 30_2(s1) 2  "s0_1"
+                              Name 30_3  "s2"
+                              MemberName 30_3(s2) 0  "i"
+                              MemberName 30_3(s2) 1  "f"
+                              MemberName 30_3(s2) 2  "s1_1"
+                              Name 30_4  "s3"
+                              MemberName 30_4(s3) 0  "s2_1"
+                              MemberName 30_4(s3) 1  "i"
+                              MemberName 30_4(s3) 2  "f"
+                              MemberName 30_4(s3) 3  "s1_1"
+                              Name 59_1  "foo3"
+                              Name 59_9  "locals2"
+                              Name 59_10  "fArray"
+                              Name 59_11  "locals1Array"
+                              Name 59_2  "foo1"
+                              Name 59_12  "locals0"
+                              Name 30_5  "s00"
+                              MemberName 30_5(s00) 0  "s0_0"
+                              Name 59_13  "locals00"
+                              Name 59_3  "coord"
+                              Name 59_4  "foo0"
+                              Name 59_5  "foo00"
+                              Name 59_6  "gl_FragColor"
+                              Name 59_7  "samp2D"
+                              Name 59_8  "foo2"
+                              Decorate 59_3(coord) Location 0
+                              Decorate 59_6(gl_FragColor) Location 0
+                              Decorate 59_7(samp2D) Binding 0
+                              Decorate 59_7(samp2D) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            22_1:             TypeFloat 32
+        30_1(s0):             TypeStruct 21_1(int)
+        30_2(s1):             TypeStruct 21_1(int) 22_1(float) 30_1(s0)
+        30_3(s2):             TypeStruct 21_1(int) 22_1(float) 30_2(s1)
+            21_2:             TypeInt 32 0
+        uint(12):   21_2(int) Constant 12
+            28_1:             TypeArray 30_3(s2) uint(12)
+        30_4(s3):             TypeStruct 28_1 21_1(int) 22_1(float) 30_2(s1)
+            32_1:             TypePointer Private 30_4(s3)
+      59_1(foo3):   32_1(ptr) Variable Private
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 9
+            32_2:             TypePointer Private 21_1(int)
+            20_1:             TypeBool
+            32_3:             TypePointer Function 30_3(s2)
+            43_3:   21_1(int) Constant 1
+            43_4: 22_1(float) Constant 1065353216
+            32_4:             TypePointer Function 22_1(float)
+            43_5:   21_1(int) Constant 2
+            44_1:    30_1(s0) ConstantComposite 43_1
+            44_2:    30_2(s1) ConstantComposite 43_1 43_4 44_1
+            32_5:             TypePointer Function 30_2(s1)
+         uint(6):   21_2(int) Constant 6
+            28_2:             TypeArray 22_1(float) uint(6)
+            32_6:             TypePointer Function 28_2
+            43_6: 22_1(float) Constant 0
+            44_3:        28_2 ConstantComposite 43_6 43_6 43_6 43_6 43_6 43_6
+        uint(10):   21_2(int) Constant 10
+            28_3:             TypeArray 30_2(s1) uint(10)
+            32_7:             TypePointer Function 28_3
+            43_7:   21_1(int) Constant 6
+            32_8:             TypePointer Private 30_2(s1)
+      59_2(foo1):   32_8(ptr) Variable Private
+            32_9:             TypePointer Function 30_1(s0)
+       30_5(s00):             TypeStruct 30_1(s0)
+           32_10:             TypePointer Function 30_5(s00)
+            44_4:   30_5(s00) ConstantComposite 44_1
+            23_1:             TypeVector 22_1(float) 2
+           32_11:             TypePointer Input 23_1(fvec2)
+     59_3(coord):  32_11(ptr) Variable Input
+         uint(0):   21_2(int) Constant 0
+           32_12:             TypePointer Input 22_1(float)
+         uint(1):   21_2(int) Constant 1
+           32_13:             TypePointer Private 30_1(s0)
+      59_4(foo0):  32_13(ptr) Variable Private
+            43_8: 22_1(float) Constant 1073741824
+            43_9: 22_1(float) Constant 1077936128
+           43_10: 22_1(float) Constant 1082130432
+           43_11: 22_1(float) Constant 1084227584
+            44_5:        28_2 ConstantComposite 43_6 43_4 43_8 43_9 43_10 43_11
+           32_14:             TypePointer Private 30_5(s00)
+     59_5(foo00):  32_14(ptr) Variable Private
+           32_15:             TypePointer Function 21_1(int)
+           43_12:   21_1(int) Constant 5
+            23_2:             TypeVector 22_1(float) 4
+           32_16:             TypePointer Output 23_2(fvec4)
+59_6(gl_FragColor):  32_16(ptr) Variable Output
+           43_13:   21_1(int) Constant 3
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+           32_17:             TypePointer UniformConstant 27_1
+    59_7(samp2D):  32_17(ptr) Variable UniformConstant
+           32_18:             TypePointer Private 30_3(s2)
+      59_8(foo2):  32_18(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+   59_9(locals2):   32_3(ptr) Variable Function
+   59_10(fArray):   32_6(ptr) Variable Function
+59_11(locals1Array):   32_7(ptr) Variable Function
+  59_12(locals0):   32_9(ptr) Variable Function
+ 59_13(locals00):  32_10(ptr) Variable Function
+            65_1:   32_2(ptr) AccessChain 59_1(foo3) 43_1 43_2 43_1
+            61_1:   21_1(int) Load 65_1
+           173_1:  20_1(bool) SGreaterThan 61_1 43_1
+                              SelectionMerge 248_4 None
+                              BranchConditional 173_1 248_2 248_3
+           248_2:               Label
+            65_2:   32_4(ptr)   AccessChain 59_9(locals2) 43_3
+                                Store 65_2 43_4
+            65_3:   32_5(ptr)   AccessChain 59_9(locals2) 43_5
+                                Store 65_3 44_2
+                                Store 59_10(fArray) 44_3
+            61_2:    30_2(s1)   Load 59_2(foo1)
+            65_4:   32_5(ptr)   AccessChain 59_11(locals1Array) 43_7
+                                Store 65_4 61_2
+                                Store 59_12(locals0) 44_1
+                                Store 59_13(locals00) 44_4
+                                Branch 248_4
+           248_3:               Label
+            65_5:  32_12(ptr)   AccessChain 59_3(coord) uint(0)
+            61_3: 22_1(float)   Load 65_5
+            65_6:   32_4(ptr)   AccessChain 59_9(locals2) 43_3
+                                Store 65_6 61_3
+            65_7:  32_12(ptr)   AccessChain 59_3(coord) uint(1)
+            61_4: 22_1(float)   Load 65_7
+            61_5:    30_1(s0)   Load 59_4(foo0)
+            80_1:    30_2(s1)   CompositeConstruct 43_3 61_4 61_5
+            65_8:   32_5(ptr)   AccessChain 59_9(locals2) 43_5
+                                Store 65_8 80_1
+                                Store 59_10(fArray) 44_5
+            65_9:   32_5(ptr)   AccessChain 59_9(locals2) 43_5
+            61_6:    30_2(s1)   Load 65_9
+           65_10:   32_5(ptr)   AccessChain 59_11(locals1Array) 43_7
+                                Store 65_10 61_6
+           65_11:  32_13(ptr)   AccessChain 59_2(foo1) 43_5
+            61_7:    30_1(s0)   Load 65_11
+                                Store 59_12(locals0) 61_7
+            61_8:   30_5(s00)   Load 59_5(foo00)
+                                Store 59_13(locals00) 61_8
+                                Branch 248_4
+           248_4:             Label
+           65_12:  32_15(ptr) AccessChain 59_12(locals0) 43_1
+            61_9:   21_1(int) Load 65_12
+           173_2:  20_1(bool) SGreaterThan 61_9 43_12
+                              SelectionMerge 248_6 None
+                              BranchConditional 173_2 248_5 248_6
+           248_5:               Label
+           65_13:   32_9(ptr)   AccessChain 59_13(locals00) 43_1
+           61_10:    30_1(s0)   Load 65_13
+                                Store 59_12(locals0) 61_10
+                                Branch 248_6
+           248_6:             Label
+           65_14:  32_15(ptr) AccessChain 59_12(locals0) 43_1
+           61_11:   21_1(int) Load 65_14
+           111_1: 22_1(float) ConvertSToF 61_11
+           65_15:   32_4(ptr) AccessChain 59_11(locals1Array) 43_7 43_3
+           61_12: 22_1(float) Load 65_15
+           129_1: 22_1(float) FAdd 111_1 61_12
+           65_16:   32_4(ptr) AccessChain 59_10(fArray) 43_13
+           61_13: 22_1(float) Load 65_16
+           129_2: 22_1(float) FAdd 129_1 61_13
+           65_17:   32_4(ptr) AccessChain 59_9(locals2) 43_5 43_3
+           61_14: 22_1(float) Load 65_17
+           129_3: 22_1(float) FAdd 129_2 61_14
+           61_15:        27_1 Load 59_7(samp2D)
+           61_16: 23_1(fvec2) Load 59_3(coord)
+            87_1: 23_2(fvec4) ImageSampleImplicitLod 61_15 61_16
+           142_1: 23_2(fvec4) VectorTimesScalar 87_1 129_3
+                              Store 59_6(gl_FragColor) 142_1
                               Return
                               FunctionEnd

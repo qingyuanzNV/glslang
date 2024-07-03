@@ -9,15 +9,15 @@ spv.debuginfo.bufferref.glsl.frag
                               Extension  "SPV_KHR_physical_storage_buffer"
                               Extension  "SPV_KHR_relaxed_extended_instruction"
                               Extension  "SPV_KHR_storage_buffer_storage_class"
-               1:             ExtInstImport  "NonSemantic.Shader.DebugInfo.100"
-               3:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "NonSemantic.Shader.DebugInfo.100"
+            11_2:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT GLSL450
-                              EntryPoint Fragment 14  "main" 82 135
-                              ExecutionMode 14 OriginUpperLeft
-               2:             String  "spv.debuginfo.bufferref.glsl.frag"
-               8:             String  "uint"
-              16:             String  "main"
-              19:             String  "// OpModuleProcessed auto-map-locations
+                              EntryPoint Fragment 54_1  "main" 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
+             7_1:             String  "spv.debuginfo.bufferref.glsl.frag"
+             7_2:             String  "uint"
+             7_3:             String  "main"
+             7_4:             String  "// OpModuleProcessed auto-map-locations
 // OpModuleProcessed auto-map-bindings
 // OpModuleProcessed client vulkan100
 // OpModuleProcessed target-env vulkan1.0
@@ -53,179 +53,177 @@ void main() {
     out_fragColor = vec4(vertex_pos0, 1.0);
 }
 "
-              33:             String  "positions"
-              37:             String  "Mesh"
-              40:             String  "float"
-              46:             String  "data"
-              49:             String  "MeshVertexPositions"
-              55:             String  "meshData"
-              69:             String  "PerPass_meshes"
-              75:             String  "perPass_meshes"
-              77:             String  "int"
-              84:             String  "tri_idx0"
-             100:             String  "vertex_pos0"
-             137:             String  "out_fragColor"
+             7_5:             String  "positions"
+             7_6:             String  "Mesh"
+             7_7:             String  "float"
+             7_8:             String  "data"
+             7_9:             String  "MeshVertexPositions"
+            7_10:             String  "meshData"
+            7_11:             String  "PerPass_meshes"
+            7_12:             String  "perPass_meshes"
+            7_13:             String  "int"
+            7_14:             String  "tri_idx0"
+            7_15:             String  "vertex_pos0"
+            7_16:             String  "out_fragColor"
                               SourceExtension  "GL_EXT_buffer_reference"
-                              Name 14  "main"
-                              Name 31  "Mesh"
-                              MemberName 31(Mesh) 0  "positions"
-                              Name 44  "MeshVertexPositions"
-                              MemberName 44(MeshVertexPositions) 0  "data"
-                              Name 53  "meshData"
-                              Name 59  "Mesh"
-                              MemberName 59(Mesh) 0  "positions"
-                              Name 64  "PerPass_meshes"
-                              MemberName 64(PerPass_meshes) 0  "data"
-                              Name 73  "perPass_meshes"
-                              Name 82  "tri_idx0"
-                              Name 98  "vertex_pos0"
-                              Name 135  "out_fragColor"
-                              Decorate 42 ArrayStride 4
-                              Decorate 44(MeshVertexPositions) Block
-                              MemberDecorate 44(MeshVertexPositions) 0 Offset 0
-                              Decorate 53(meshData) DecorationAliasedPointerEXT
-                              MemberDecorate 59(Mesh) 0 Offset 0
-                              Decorate 62 ArrayStride 8
-                              Decorate 64(PerPass_meshes) Block
-                              MemberDecorate 64(PerPass_meshes) 0 NonWritable
-                              MemberDecorate 64(PerPass_meshes) 0 Offset 0
-                              Decorate 73(perPass_meshes) Binding 0
-                              Decorate 73(perPass_meshes) DescriptorSet 0
-                              Decorate 82(tri_idx0) Flat
-                              Decorate 82(tri_idx0) Location 0
-                              Decorate 135(out_fragColor) Location 0
-               4:             TypeVoid
-               5:             TypeFunction 4
-               7:             TypeInt 32 0
-              10:      7(int) Constant 32
-              11:      7(int) Constant 6
-              12:      7(int) Constant 0
-               9:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 8 10 11 12
-              13:      7(int) Constant 3
-               6:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 8(DebugTypeFunction) 13 4
-              18:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 35(DebugSource) 2 19
-              20:      7(int) Constant 20
-              22:      7(int) Constant 1
-              23:      7(int) Constant 4
-              24:      7(int) Constant 2
-              21:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 1(DebugCompilationUnit) 22 23 18 24
-              17:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 16 6 18 20 12 21 16 13 20
-                              TypeForwardPointer 28 PhysicalStorageBufferEXT
-              29:      7(int) Constant 5349
-              30:           4 ExtInstWithForwardRefsKHR 1(NonSemantic.Shader.DebugInfo.100) 3 48 29 12
-        31(Mesh):             TypeStruct 28
-              34:      7(int) Constant 9
-              35:      7(int) Constant 23
-              32:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 33 30 18 34 35 12 12 13
-              38:      7(int) Constant 21
-              36:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 37 22 18 38 12 21 37 12 13 32
-              39:             TypeFloat 32
-              41:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 40 10 13 12
-              42:             TypeRuntimeArray 39(float)
-              43:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 5(DebugTypeArray) 41 12
-44(MeshVertexPositions):             TypeStruct 42
-              47:      7(int) Constant 5
-              45:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 46 43 18 47 34 12 12 13
-              48:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 49 22 18 38 12 21 49 12 13 45
-              28:             TypePointer PhysicalStorageBufferEXT 44(MeshVertexPositions)
-              50:             TypePointer Function 31(Mesh)
-              51:      7(int) Constant 7
-              52:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 36 51 12
-              54:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 55 36 18 38 12 17 23
-              57:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 31(DebugExpression)
-        59(Mesh):             TypeStruct 28(ptr)
-              60:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 33 30 18 34 35 12 12 13
-              61:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 37 22 18 38 12 21 37 12 13 60
-              62:             TypeRuntimeArray 59(Mesh)
-              63:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 5(DebugTypeArray) 61 12
-64(PerPass_meshes):             TypeStruct 62
-              66:      7(int) Constant 13
-              67:      7(int) Constant 8
-              65:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 46 63 18 66 67 12 12 13
-              68:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 69 22 18 38 12 21 69 12 13 65
-              70:             TypePointer StorageBuffer 64(PerPass_meshes)
-              71:      7(int) Constant 12
-              72:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 68 71 12
-73(perPass_meshes):     70(ptr) Variable StorageBuffer
-              74:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 75 68 18 38 12 21 75 73(perPass_meshes) 67
-              76:             TypeInt 32 1
-              78:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 77 10 23 12
-              79:     76(int) Constant 0
-              80:             TypePointer Input 7(int)
-              81:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 9 22 12
-    82(tri_idx0):     80(ptr) Variable Input
-              83:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 84 9 18 38 12 21 84 82(tri_idx0) 67
-              86:             TypePointer StorageBuffer 59(Mesh)
-              87:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 61 71 12
-              91:             TypePointer Function 28(ptr)
-              92:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 30 51 12
-              94:             TypeVector 39(float) 3
-              95:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 41 13
-              96:             TypePointer Function 94(fvec3)
-              97:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 95 51 12
-              99:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 100 95 18 35 12 17 23
-             107:             TypePointer PhysicalStorageBufferEXT 39(float)
-             108:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 41 29 12
-             113:      7(int) Constant 24
-             122:      7(int) Constant 25
-             131:             TypeVector 39(float) 4
-             132:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 41 23
-             133:             TypePointer Output 131(fvec4)
-             134:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 132 13 12
-135(out_fragColor):    133(ptr) Variable Output
-             138:      7(int) Constant 27
-             136:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 137 132 18 138 12 21 137 135(out_fragColor) 67
-             141:   39(float) Constant 1065353216
-             147:      7(int) Constant 28
-        14(main):           4 Function None 5
-              15:             Label
-    53(meshData):     50(ptr) Variable Function
- 98(vertex_pos0):     96(ptr) Variable Function
-              26:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 17
-              27:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 18 20 20 12 12
-              25:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 17 14(main)
-              58:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 18 38 38 12 12
-              56:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 54 53(meshData) 57
-              85:      7(int) Load 82(tri_idx0)
-              88:     86(ptr) AccessChain 73(perPass_meshes) 79 85
-              89:    59(Mesh) Load 88
-              90:     28(ptr) CompositeExtract 89 0
-              93:     91(ptr) AccessChain 53(meshData) 79
-                              Store 93 90
-             102:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 18 35 35 12 12
-             101:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 99 98(vertex_pos0) 57
-             103:     91(ptr) AccessChain 53(meshData) 79
-             104:     28(ptr) Load 103
-             105:      7(int) Load 82(tri_idx0)
-             106:      7(int) IMul 13 105
-             109:    107(ptr) AccessChain 104 79 106
-             110:   39(float) Load 109 Aligned 4
-             112:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 18 113 113 12 12
-             111:     91(ptr) AccessChain 53(meshData) 79
-             114:     28(ptr) Load 111
-             115:      7(int) Load 82(tri_idx0)
-             116:      7(int) IMul 13 115
-             117:      7(int) IAdd 116 22
-             118:    107(ptr) AccessChain 114 79 117
-             119:   39(float) Load 118 Aligned 4
-             121:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 18 122 122 12 12
-             120:     91(ptr) AccessChain 53(meshData) 79
-             123:     28(ptr) Load 120
-             124:      7(int) Load 82(tri_idx0)
-             125:      7(int) IMul 13 124
-             126:      7(int) IAdd 125 24
-             127:    107(ptr) AccessChain 123 79 126
-             128:   39(float) Load 127 Aligned 4
-             129:   94(fvec3) CompositeConstruct 110 119 128
-             130:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 18 35 35 12 12
-                              Store 98(vertex_pos0) 129
-             140:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 18 138 138 12 12
-             139:   94(fvec3) Load 98(vertex_pos0)
-             142:   39(float) CompositeExtract 139 0
-             143:   39(float) CompositeExtract 139 1
-             144:   39(float) CompositeExtract 139 2
-             145:  131(fvec4) CompositeConstruct 142 143 144 141
-                              Store 135(out_fragColor) 145
-             146:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 18 147 147 12 12
+                              Name 54_1  "main"
+                              Name 30_1  "Mesh"
+                              MemberName 30_1(Mesh) 0  "positions"
+                              Name 30_2  "MeshVertexPositions"
+                              MemberName 30_2(MeshVertexPositions) 0  "data"
+                              Name 59_4  "meshData"
+                              Name 30_3  "Mesh"
+                              MemberName 30_3(Mesh) 0  "positions"
+                              Name 30_4  "PerPass_meshes"
+                              MemberName 30_4(PerPass_meshes) 0  "data"
+                              Name 59_1  "perPass_meshes"
+                              Name 59_2  "tri_idx0"
+                              Name 59_5  "vertex_pos0"
+                              Name 59_3  "out_fragColor"
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_2(MeshVertexPositions) Block
+                              MemberDecorate 30_2(MeshVertexPositions) 0 Offset 0
+                              Decorate 59_4(meshData) DecorationAliasedPointerEXT
+                              MemberDecorate 30_3(Mesh) 0 Offset 0
+                              Decorate 29_2 ArrayStride 8
+                              Decorate 30_4(PerPass_meshes) Block
+                              MemberDecorate 30_4(PerPass_meshes) 0 NonWritable
+                              MemberDecorate 30_4(PerPass_meshes) 0 Offset 0
+                              Decorate 59_1(perPass_meshes) Binding 0
+                              Decorate 59_1(perPass_meshes) DescriptorSet 0
+                              Decorate 59_2(tri_idx0) Flat
+                              Decorate 59_2(tri_idx0) Location 0
+                              Decorate 59_3(out_fragColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+        uint(32):   21_1(int) Constant 32
+         uint(6):   21_1(int) Constant 6
+         uint(0):   21_1(int) Constant 0
+           1-2_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_2 uint(32) uint(6) uint(0)
+         uint(3):   21_1(int) Constant 3
+           1-8_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 8(DebugTypeFunction) uint(3) 19_1
+          1-35_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 35(DebugSource) 7_1 7_4
+        uint(20):   21_1(int) Constant 20
+         uint(1):   21_1(int) Constant 1
+         uint(4):   21_1(int) Constant 4
+         uint(2):   21_1(int) Constant 2
+           1-1_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 1(DebugCompilationUnit) uint(1) uint(4) 1-35_1 uint(2)
+          1-20_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 7_3 1-8_1 1-35_1 uint(20) uint(0) 1-1_1 7_3 uint(3) uint(20)
+                              TypeForwardPointer 32_1 PhysicalStorageBufferEXT
+      uint(5349):   21_1(int) Constant 5349
+          4433_1:        19_1 ExtInstWithForwardRefsKHR 11_1(NonSemantic.Shader.DebugInfo.100) 3 1-10_2 uint(5349) uint(0)
+      30_1(Mesh):             TypeStruct 32_1
+         uint(9):   21_1(int) Constant 9
+        uint(23):   21_1(int) Constant 23
+          1-11_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_5 4433_1 1-35_1 uint(9) uint(23) uint(0) uint(0) uint(3)
+        uint(21):   21_1(int) Constant 21
+          1-10_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 7_6 uint(1) 1-35_1 uint(21) uint(0) 1-1_1 7_6 uint(0) uint(3) 1-11_1
+            22_1:             TypeFloat 32
+           1-2_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_7 uint(32) uint(3) uint(0)
+            29_1:             TypeRuntimeArray 22_1(float)
+           1-5_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 5(DebugTypeArray) 1-2_2 uint(0)
+30_2(MeshVertexPositions):             TypeStruct 29_1
+         uint(5):   21_1(int) Constant 5
+          1-11_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_8 1-5_1 1-35_1 uint(5) uint(9) uint(0) uint(0) uint(3)
+          1-10_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 7_9 uint(1) 1-35_1 uint(21) uint(0) 1-1_1 7_9 uint(0) uint(3) 1-11_2
+            32_1:             TypePointer PhysicalStorageBufferEXT 30_2(MeshVertexPositions)
+            32_2:             TypePointer Function 30_1(Mesh)
+         uint(7):   21_1(int) Constant 7
+           1-3_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-10_1 uint(7) uint(0)
+          1-26_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_10 1-10_1 1-35_1 uint(21) uint(0) 1-20_1 uint(4)
+          1-31_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 31(DebugExpression)
+      30_3(Mesh):             TypeStruct 32_1(ptr)
+          1-11_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_5 4433_1 1-35_1 uint(9) uint(23) uint(0) uint(0) uint(3)
+          1-10_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 7_6 uint(1) 1-35_1 uint(21) uint(0) 1-1_1 7_6 uint(0) uint(3) 1-11_3
+            29_2:             TypeRuntimeArray 30_3(Mesh)
+           1-5_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 5(DebugTypeArray) 1-10_3 uint(0)
+30_4(PerPass_meshes):             TypeStruct 29_2
+        uint(13):   21_1(int) Constant 13
+         uint(8):   21_1(int) Constant 8
+          1-11_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_8 1-5_2 1-35_1 uint(13) uint(8) uint(0) uint(0) uint(3)
+          1-10_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 7_11 uint(1) 1-35_1 uint(21) uint(0) 1-1_1 7_11 uint(0) uint(3) 1-11_4
+            32_3:             TypePointer StorageBuffer 30_4(PerPass_meshes)
+        uint(12):   21_1(int) Constant 12
+           1-3_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-10_4 uint(12) uint(0)
+59_1(perPass_meshes):   32_3(ptr) Variable StorageBuffer
+          1-18_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 7_12 1-10_4 1-35_1 uint(21) uint(0) 1-1_1 7_12 59_1(perPass_meshes) uint(8)
+            21_2:             TypeInt 32 1
+           1-2_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_13 uint(32) uint(4) uint(0)
+            43_1:   21_2(int) Constant 0
+            32_4:             TypePointer Input 21_1(int)
+           1-3_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-2_1 uint(1) uint(0)
+  59_2(tri_idx0):   32_4(ptr) Variable Input
+          1-18_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 7_14 1-2_1 1-35_1 uint(21) uint(0) 1-1_1 7_14 59_2(tri_idx0) uint(8)
+            32_5:             TypePointer StorageBuffer 30_3(Mesh)
+           1-3_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-10_3 uint(12) uint(0)
+            32_6:             TypePointer Function 32_1(ptr)
+           1-3_5:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 4433_1 uint(7) uint(0)
+            23_1:             TypeVector 22_1(float) 3
+           1-6_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 1-2_2 uint(3)
+            32_7:             TypePointer Function 23_1(fvec3)
+           1-3_6:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-6_1 uint(7) uint(0)
+          1-26_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_15 1-6_1 1-35_1 uint(23) uint(0) 1-20_1 uint(4)
+            32_8:             TypePointer PhysicalStorageBufferEXT 22_1(float)
+           1-3_7:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-2_2 uint(5349) uint(0)
+        uint(24):   21_1(int) Constant 24
+        uint(25):   21_1(int) Constant 25
+            23_2:             TypeVector 22_1(float) 4
+           1-6_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 1-2_2 uint(4)
+            32_9:             TypePointer Output 23_2(fvec4)
+           1-3_8:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-6_2 uint(3) uint(0)
+59_3(out_fragColor):   32_9(ptr) Variable Output
+        uint(27):   21_1(int) Constant 27
+          1-18_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 7_16 1-6_2 1-35_1 uint(27) uint(0) 1-1_1 7_16 59_3(out_fragColor) uint(8)
+            43_2: 22_1(float) Constant 1065353216
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+  59_4(meshData):   32_2(ptr) Variable Function
+59_5(vertex_pos0):   32_7(ptr) Variable Function
+          1-23_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 1-20_1
+         1-103_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(20) uint(20) uint(0) uint(0)
+         1-101_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 1-20_1 54_1(main)
+         1-103_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(21) uint(21) uint(0) uint(0)
+          1-28_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_1 59_4(meshData) 1-31_1
+            61_1:   21_1(int) Load 59_2(tri_idx0)
+            65_1:   32_5(ptr) AccessChain 59_1(perPass_meshes) 43_1 61_1
+            61_2:  30_3(Mesh) Load 65_1
+            81_1:   32_1(ptr) CompositeExtract 61_2 0
+            65_2:   32_6(ptr) AccessChain 59_4(meshData) 43_1
+                              Store 65_2 81_1
+         1-103_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(23) uint(23) uint(0) uint(0)
+          1-28_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_2 59_5(vertex_pos0) 1-31_1
+            65_3:   32_6(ptr) AccessChain 59_4(meshData) 43_1
+            61_3:   32_1(ptr) Load 65_3
+            61_4:   21_1(int) Load 59_2(tri_idx0)
+           132_1:   21_1(int) IMul uint(3) 61_4
+            65_4:   32_8(ptr) AccessChain 61_3 43_1 132_1
+            61_5: 22_1(float) Load 65_4 Aligned 4
+         1-103_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(24) uint(24) uint(0) uint(0)
+            65_5:   32_6(ptr) AccessChain 59_4(meshData) 43_1
+            61_6:   32_1(ptr) Load 65_5
+            61_7:   21_1(int) Load 59_2(tri_idx0)
+           132_2:   21_1(int) IMul uint(3) 61_7
+           128_1:   21_1(int) IAdd 132_2 uint(1)
+            65_6:   32_8(ptr) AccessChain 61_6 43_1 128_1
+            61_8: 22_1(float) Load 65_6 Aligned 4
+         1-103_5:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(25) uint(25) uint(0) uint(0)
+            65_7:   32_6(ptr) AccessChain 59_4(meshData) 43_1
+            61_9:   32_1(ptr) Load 65_7
+           61_10:   21_1(int) Load 59_2(tri_idx0)
+           132_3:   21_1(int) IMul uint(3) 61_10
+           128_2:   21_1(int) IAdd 132_3 uint(2)
+            65_8:   32_8(ptr) AccessChain 61_9 43_1 128_2
+           61_11: 22_1(float) Load 65_8 Aligned 4
+            80_1: 23_1(fvec3) CompositeConstruct 61_5 61_8 61_11
+         1-103_6:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(23) uint(23) uint(0) uint(0)
+                              Store 59_5(vertex_pos0) 80_1
+         1-103_7:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(27) uint(27) uint(0) uint(0)
+           61_12: 23_1(fvec3) Load 59_5(vertex_pos0)
+            81_2: 22_1(float) CompositeExtract 61_12 0
+            81_3: 22_1(float) CompositeExtract 61_12 1
+            81_4: 22_1(float) CompositeExtract 61_12 2
+            80_2: 23_2(fvec4) CompositeConstruct 81_2 81_3 81_4 43_2
+                              Store 59_3(out_fragColor) 80_2
                               Return
                               FunctionEnd

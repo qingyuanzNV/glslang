@@ -8,38 +8,38 @@ spv.WorkgroupMemoryExplicitLayout.8BitAccess.comp
                               Capability CapabilityWorkgroupMemoryExplicitLayoutKHR
                               Capability CapabilityWorkgroupMemoryExplicitLayout8BitAccessKHR
                               Extension  "SPV_KHR_workgroup_memory_explicit_layout"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 9
-                              ExecutionMode 4 LocalSize 2 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_1
+                              ExecutionMode 54_1 LocalSize 2 1 1
                               Source GLSL 430
                               SourceExtension  "GL_EXT_shader_explicit_arithmetic_types"
                               SourceExtension  "GL_EXT_shared_memory_block"
-                              Name 4  "main"
-                              Name 7  "first"
-                              MemberName 7(first) 0  "a"
-                              Name 9  ""
-                              Decorate 7(first) Block
-                              MemberDecorate 7(first) 0 Offset 0
-                              Decorate 19 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 8 1
-        7(first):             TypeStruct 6(int8_t)
-               8:             TypePointer Workgroup 7(first)
-               9:      8(ptr) Variable Workgroup
-              10:             TypeInt 32 1
-              11:     10(int) Constant 0
-              12:   6(int8_t) Constant 2
-              13:             TypePointer Workgroup 6(int8_t)
-              15:             TypeInt 32 0
-              16:             TypeVector 15(int) 3
-              17:     15(int) Constant 2
-              18:     15(int) Constant 1
-              19:   16(ivec3) ConstantComposite 17 18 18
-         4(main):           2 Function None 3
-               5:             Label
-              14:     13(ptr) AccessChain 9 11
-                              Store 14 12
+                              Name 54_1  "main"
+                              Name 30_1  "first"
+                              MemberName 30_1(first) 0  "a"
+                              Name 59_1  ""
+                              Decorate 30_1(first) Block
+                              MemberDecorate 30_1(first) 0 Offset 0
+                              Decorate 44_1 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 8 1
+     30_1(first):             TypeStruct 21_1(int8_t)
+            32_1:             TypePointer Workgroup 30_1(first)
+            59_1:   32_1(ptr) Variable Workgroup
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            43_2:21_1(int8_t) Constant 2
+            32_2:             TypePointer Workgroup 21_1(int8_t)
+            21_3:             TypeInt 32 0
+            23_1:             TypeVector 21_3(int) 3
+         uint(2):   21_3(int) Constant 2
+         uint(1):   21_3(int) Constant 1
+            44_1: 23_1(ivec3) ConstantComposite uint(2) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_1 43_2
                               Return
                               FunctionEnd

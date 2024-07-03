@@ -4,154 +4,154 @@ spv.matFun.vert
 // Id's are bound by 103
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 76 81
+                              EntryPoint Vertex 54_1  "main" 59_1 59_3
                               Source GLSL 400
-                              Name 4  "main"
-                              Name 14  "xf(mf33;vf3;"
-                              Name 12  "m"
-                              Name 13  "v"
-                              Name 21  "Mat3(mf44;"
-                              Name 20  "m"
-                              Name 26  "mxv(mf44;vf3;"
-                              Name 24  "m4"
-                              Name 25  "v"
-                              Name 65  "param"
-                              Name 74  "gl_PerVertex"
-                              MemberName 74(gl_PerVertex) 0  "gl_Position"
-                              MemberName 74(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 74(gl_PerVertex) 2  "gl_ClipDistance"
-                              Name 76  ""
-                              Name 77  "bl"
-                              MemberName 77(bl) 0  "m4"
-                              MemberName 77(bl) 1  "m3"
-                              Name 79  "bName"
-                              Name 81  "v3"
-                              Name 82  "param"
-                              Name 86  "param"
-                              Name 89  "param"
-                              Name 93  "param"
-                              Decorate 74(gl_PerVertex) Block
-                              MemberDecorate 74(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 74(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 74(gl_PerVertex) 2 BuiltIn ClipDistance
-                              Decorate 77(bl) Block
-                              MemberDecorate 77(bl) 0 ColMajor
-                              MemberDecorate 77(bl) 0 MatrixStride 16
-                              MemberDecorate 77(bl) 0 Offset 0
-                              MemberDecorate 77(bl) 1 ColMajor
-                              MemberDecorate 77(bl) 1 MatrixStride 16
-                              MemberDecorate 77(bl) 1 Offset 64
-                              Decorate 79(bName) Binding 0
-                              Decorate 79(bName) DescriptorSet 0
-                              Decorate 81(v3) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 3
-               8:             TypeMatrix 7(fvec3) 3
-               9:             TypePointer Function 8
-              10:             TypePointer Function 7(fvec3)
-              11:             TypeFunction 7(fvec3) 9(ptr) 10(ptr)
-              16:             TypeVector 6(float) 4
-              17:             TypeMatrix 16(fvec4) 4
-              18:             TypePointer Function 17
-              19:             TypeFunction 8 18(ptr)
-              23:             TypeFunction 7(fvec3) 18(ptr) 10(ptr)
-              33:             TypeInt 32 1
-              34:     33(int) Constant 0
-              35:             TypePointer Function 16(fvec4)
-              39:     33(int) Constant 1
-              43:     33(int) Constant 2
-              47:    6(float) Constant 1065353216
-              48:    6(float) Constant 0
-              71:             TypeInt 32 0
-              72:     71(int) Constant 1
-              73:             TypeArray 6(float) 72
-74(gl_PerVertex):             TypeStruct 16(fvec4) 6(float) 73
-              75:             TypePointer Output 74(gl_PerVertex)
-              76:     75(ptr) Variable Output
-          77(bl):             TypeStruct 17 8
-              78:             TypePointer Uniform 77(bl)
-       79(bName):     78(ptr) Variable Uniform
-              80:             TypePointer Input 7(fvec3)
-          81(v3):     80(ptr) Variable Input
-              83:             TypePointer Uniform 17
-              90:             TypePointer Uniform 8
-             101:             TypePointer Output 16(fvec4)
-         4(main):           2 Function None 3
-               5:             Label
-       82(param):     18(ptr) Variable Function
-       86(param):     10(ptr) Variable Function
-       89(param):      9(ptr) Variable Function
-       93(param):     10(ptr) Variable Function
-              84:     83(ptr) AccessChain 79(bName) 34
-              85:          17 Load 84
-                              Store 82(param) 85
-              87:    7(fvec3) Load 81(v3)
-                              Store 86(param) 87
-              88:    7(fvec3) FunctionCall 26(mxv(mf44;vf3;) 82(param) 86(param)
-              91:     90(ptr) AccessChain 79(bName) 39
-              92:           8 Load 91
-                              Store 89(param) 92
-              94:    7(fvec3) Load 81(v3)
-                              Store 93(param) 94
-              95:    7(fvec3) FunctionCall 14(xf(mf33;vf3;) 89(param) 93(param)
-              96:    7(fvec3) FAdd 88 95
-              97:    6(float) CompositeExtract 96 0
-              98:    6(float) CompositeExtract 96 1
-              99:    6(float) CompositeExtract 96 2
-             100:   16(fvec4) CompositeConstruct 97 98 99 47
-             102:    101(ptr) AccessChain 76 34
-                              Store 102 100
+                              Name 54_1  "main"
+                              Name 54_2  "xf(mf33;vf3;"
+                              Name 55_1  "m"
+                              Name 55_2  "v"
+                              Name 54_3  "Mat3(mf44;"
+                              Name 55_3  "m"
+                              Name 54_4  "mxv(mf44;vf3;"
+                              Name 55_4  "m4"
+                              Name 55_5  "v"
+                              Name 59_8  "param"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_1(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_1(gl_PerVertex) 2  "gl_ClipDistance"
+                              Name 59_1  ""
+                              Name 30_2  "bl"
+                              MemberName 30_2(bl) 0  "m4"
+                              MemberName 30_2(bl) 1  "m3"
+                              Name 59_2  "bName"
+                              Name 59_3  "v3"
+                              Name 59_4  "param"
+                              Name 59_5  "param"
+                              Name 59_6  "param"
+                              Name 59_7  "param"
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_1(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_1(gl_PerVertex) 2 BuiltIn ClipDistance
+                              Decorate 30_2(bl) Block
+                              MemberDecorate 30_2(bl) 0 ColMajor
+                              MemberDecorate 30_2(bl) 0 MatrixStride 16
+                              MemberDecorate 30_2(bl) 0 Offset 0
+                              MemberDecorate 30_2(bl) 1 ColMajor
+                              MemberDecorate 30_2(bl) 1 MatrixStride 16
+                              MemberDecorate 30_2(bl) 1 Offset 64
+                              Decorate 59_2(bName) Binding 0
+                              Decorate 59_2(bName) DescriptorSet 0
+                              Decorate 59_3(v3) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            24_1:             TypeMatrix 23_1(fvec3) 3
+            32_1:             TypePointer Function 24_1
+            32_2:             TypePointer Function 23_1(fvec3)
+            33_2:             TypeFunction 23_1(fvec3) 32_1(ptr) 32_2(ptr)
+            23_2:             TypeVector 22_1(float) 4
+            24_2:             TypeMatrix 23_2(fvec4) 4
+            32_3:             TypePointer Function 24_2
+            33_3:             TypeFunction 24_1 32_3(ptr)
+            33_4:             TypeFunction 23_1(fvec3) 32_3(ptr) 32_2(ptr)
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            32_4:             TypePointer Function 23_2(fvec4)
+            43_2:   21_1(int) Constant 1
+            43_3:   21_1(int) Constant 2
+            43_4: 22_1(float) Constant 1065353216
+            43_5: 22_1(float) Constant 0
+            21_2:             TypeInt 32 0
+         uint(1):   21_2(int) Constant 1
+            28_1:             TypeArray 22_1(float) uint(1)
+30_1(gl_PerVertex):             TypeStruct 23_2(fvec4) 22_1(float) 28_1
+            32_5:             TypePointer Output 30_1(gl_PerVertex)
+            59_1:   32_5(ptr) Variable Output
+        30_2(bl):             TypeStruct 24_2 24_1
+            32_6:             TypePointer Uniform 30_2(bl)
+     59_2(bName):   32_6(ptr) Variable Uniform
+            32_7:             TypePointer Input 23_1(fvec3)
+        59_3(v3):   32_7(ptr) Variable Input
+            32_8:             TypePointer Uniform 24_2
+            32_9:             TypePointer Uniform 24_1
+           32_10:             TypePointer Output 23_2(fvec4)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_4(param):   32_3(ptr) Variable Function
+     59_5(param):   32_2(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+     59_7(param):   32_2(ptr) Variable Function
+            65_1:   32_8(ptr) AccessChain 59_2(bName) 43_1
+            61_1:        24_2 Load 65_1
+                              Store 59_4(param) 61_1
+            61_2: 23_1(fvec3) Load 59_3(v3)
+                              Store 59_5(param) 61_2
+            57_1: 23_1(fvec3) FunctionCall 54_4(mxv(mf44;vf3;) 59_4(param) 59_5(param)
+            65_2:   32_9(ptr) AccessChain 59_2(bName) 43_2
+            61_3:        24_1 Load 65_2
+                              Store 59_6(param) 61_3
+            61_4: 23_1(fvec3) Load 59_3(v3)
+                              Store 59_7(param) 61_4
+            57_2: 23_1(fvec3) FunctionCall 54_2(xf(mf33;vf3;) 59_6(param) 59_7(param)
+           129_1: 23_1(fvec3) FAdd 57_1 57_2
+            81_1: 22_1(float) CompositeExtract 129_1 0
+            81_2: 22_1(float) CompositeExtract 129_1 1
+            81_3: 22_1(float) CompositeExtract 129_1 2
+            80_1: 23_2(fvec4) CompositeConstruct 81_1 81_2 81_3 43_4
+            65_3:  32_10(ptr) AccessChain 59_1 43_1
+                              Store 65_3 80_1
                               Return
                               FunctionEnd
-14(xf(mf33;vf3;):    7(fvec3) Function None 11
-           12(m):      9(ptr) FunctionParameter
-           13(v):     10(ptr) FunctionParameter
-              15:             Label
-              28:    7(fvec3) Load 13(v)
-              29:           8 Load 12(m)
-              30:    7(fvec3) VectorTimesMatrix 28 29
-                              ReturnValue 30
+54_2(xf(mf33;vf3;): 23_1(fvec3) Function None 33_2
+         55_1(m):   32_1(ptr) FunctionParameter
+         55_2(v):   32_2(ptr) FunctionParameter
+           248_2:             Label
+            61_5: 23_1(fvec3) Load 55_2(v)
+            61_6:        24_1 Load 55_1(m)
+           144_1: 23_1(fvec3) VectorTimesMatrix 61_5 61_6
+                              ReturnValue 144_1
                               FunctionEnd
-  21(Mat3(mf44;):           8 Function None 19
-           20(m):     18(ptr) FunctionParameter
-              22:             Label
-              36:     35(ptr) AccessChain 20(m) 34
-              37:   16(fvec4) Load 36
-              38:    7(fvec3) VectorShuffle 37 37 0 1 2
-              40:     35(ptr) AccessChain 20(m) 39
-              41:   16(fvec4) Load 40
-              42:    7(fvec3) VectorShuffle 41 41 0 1 2
-              44:     35(ptr) AccessChain 20(m) 43
-              45:   16(fvec4) Load 44
-              46:    7(fvec3) VectorShuffle 45 45 0 1 2
-              49:    6(float) CompositeExtract 38 0
-              50:    6(float) CompositeExtract 38 1
-              51:    6(float) CompositeExtract 38 2
-              52:    6(float) CompositeExtract 42 0
-              53:    6(float) CompositeExtract 42 1
-              54:    6(float) CompositeExtract 42 2
-              55:    6(float) CompositeExtract 46 0
-              56:    6(float) CompositeExtract 46 1
-              57:    6(float) CompositeExtract 46 2
-              58:    7(fvec3) CompositeConstruct 49 50 51
-              59:    7(fvec3) CompositeConstruct 52 53 54
-              60:    7(fvec3) CompositeConstruct 55 56 57
-              61:           8 CompositeConstruct 58 59 60
-                              ReturnValue 61
+54_3(Mat3(mf44;):        24_1 Function None 33_3
+         55_3(m):   32_3(ptr) FunctionParameter
+           248_3:             Label
+            65_4:   32_4(ptr) AccessChain 55_3(m) 43_1
+            61_7: 23_2(fvec4) Load 65_4
+            79_1: 23_1(fvec3) VectorShuffle 61_7 61_7 0 1 2
+            65_5:   32_4(ptr) AccessChain 55_3(m) 43_2
+            61_8: 23_2(fvec4) Load 65_5
+            79_2: 23_1(fvec3) VectorShuffle 61_8 61_8 0 1 2
+            65_6:   32_4(ptr) AccessChain 55_3(m) 43_3
+            61_9: 23_2(fvec4) Load 65_6
+            79_3: 23_1(fvec3) VectorShuffle 61_9 61_9 0 1 2
+            81_4: 22_1(float) CompositeExtract 79_1 0
+            81_5: 22_1(float) CompositeExtract 79_1 1
+            81_6: 22_1(float) CompositeExtract 79_1 2
+            81_7: 22_1(float) CompositeExtract 79_2 0
+            81_8: 22_1(float) CompositeExtract 79_2 1
+            81_9: 22_1(float) CompositeExtract 79_2 2
+           81_10: 22_1(float) CompositeExtract 79_3 0
+           81_11: 22_1(float) CompositeExtract 79_3 1
+           81_12: 22_1(float) CompositeExtract 79_3 2
+            80_2: 23_1(fvec3) CompositeConstruct 81_4 81_5 81_6
+            80_3: 23_1(fvec3) CompositeConstruct 81_7 81_8 81_9
+            80_4: 23_1(fvec3) CompositeConstruct 81_10 81_11 81_12
+            80_5:        24_1 CompositeConstruct 80_2 80_3 80_4
+                              ReturnValue 80_5
                               FunctionEnd
-26(mxv(mf44;vf3;):    7(fvec3) Function None 23
-          24(m4):     18(ptr) FunctionParameter
-           25(v):     10(ptr) FunctionParameter
-              27:             Label
-       65(param):     18(ptr) Variable Function
-              64:    7(fvec3) Load 25(v)
-              66:          17 Load 24(m4)
-                              Store 65(param) 66
-              67:           8 FunctionCall 21(Mat3(mf44;) 65(param)
-              68:    7(fvec3) VectorTimesMatrix 64 67
-                              ReturnValue 68
+54_4(mxv(mf44;vf3;): 23_1(fvec3) Function None 33_4
+        55_4(m4):   32_3(ptr) FunctionParameter
+         55_5(v):   32_2(ptr) FunctionParameter
+           248_4:             Label
+     59_8(param):   32_3(ptr) Variable Function
+           61_10: 23_1(fvec3) Load 55_5(v)
+           61_11:        24_2 Load 55_4(m4)
+                              Store 59_8(param) 61_11
+            57_3:        24_1 FunctionCall 54_3(Mat3(mf44;) 59_8(param)
+           144_2: 23_1(fvec3) VectorTimesMatrix 61_10 57_3
+                              ReturnValue 144_2
                               FunctionEnd

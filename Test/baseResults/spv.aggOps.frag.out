@@ -7,313 +7,313 @@ WARNING: 0:4: '' : all default precisions are highp; use precision statements to
 // Id's are bound by 215
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 16 41 101 213
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_6 59_7
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 8  "s1"
-                              MemberName 8(s1) 0  "i"
-                              MemberName 8(s1) 1  "f"
-                              Name 13  "a"
-                              Name 16  "u"
-                              Name 37  "b"
-                              Name 41  "w"
-                              Name 55  "s1"
-                              MemberName 55(s1) 0  "i"
-                              MemberName 55(s1) 1  "f"
-                              Name 56  "s2"
-                              MemberName 56(s2) 0  "i"
-                              MemberName 56(s2) 1  "f"
-                              MemberName 56(s2) 2  "s1_1"
-                              Name 57  "ub1"
-                              MemberName 57(ub1) 0  "foo2a"
-                              Name 59  "uName1"
-                              Name 64  "s1"
-                              MemberName 64(s1) 0  "i"
-                              MemberName 64(s1) 1  "f"
-                              Name 65  "s2"
-                              MemberName 65(s2) 0  "i"
-                              MemberName 65(s2) 1  "f"
-                              MemberName 65(s2) 2  "s1_1"
-                              Name 66  "ub2"
-                              MemberName 66(ub2) 0  "foo2b"
-                              Name 68  "uName2"
-                              Name 93  "v"
-                              Name 97  "samp2D"
-                              Name 101  "coord"
-                              Name 213  "color"
-                              Decorate 16(u) Location 1
-                              Decorate 41(w) Location 2
-                              MemberDecorate 55(s1) 0 Offset 0
-                              MemberDecorate 55(s1) 1 Offset 4
-                              MemberDecorate 56(s2) 0 Offset 0
-                              MemberDecorate 56(s2) 1 Offset 4
-                              MemberDecorate 56(s2) 2 Offset 16
-                              Decorate 57(ub1) Block
-                              MemberDecorate 57(ub1) 0 Offset 0
-                              Decorate 59(uName1) Binding 1
-                              Decorate 59(uName1) DescriptorSet 0
-                              MemberDecorate 64(s1) 0 Offset 0
-                              MemberDecorate 64(s1) 1 Offset 4
-                              MemberDecorate 65(s2) 0 Offset 0
-                              MemberDecorate 65(s2) 1 Offset 4
-                              MemberDecorate 65(s2) 2 Offset 8
-                              Decorate 66(ub2) BufferBlock
-                              MemberDecorate 66(ub2) 0 Offset 0
-                              Decorate 68(uName2) Binding 2
-                              Decorate 68(uName2) DescriptorSet 0
-                              Decorate 97(samp2D) Binding 0
-                              Decorate 97(samp2D) DescriptorSet 0
-                              Decorate 101(coord) RelaxedPrecision
-                              Decorate 101(coord) Location 0
-                              Decorate 102 RelaxedPrecision
-                              Decorate 107 RelaxedPrecision
-                              Decorate 108 RelaxedPrecision
-                              Decorate 129 RelaxedPrecision
-                              Decorate 213(color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeFloat 32
-           8(s1):             TypeStruct 6(int) 7(float)
-               9:             TypeInt 32 0
-              10:      9(int) Constant 3
-              11:             TypeArray 8(s1) 10
-              12:             TypePointer Function 11
-              14:             TypeVector 7(float) 4
-              15:             TypePointer Input 14(fvec4)
-           16(u):     15(ptr) Variable Input
-              17:      9(int) Constant 0
-              18:             TypePointer Input 7(float)
-              22:      9(int) Constant 1
-              26:      9(int) Constant 2
-              33:      6(int) Constant 14
-              34:    7(float) Constant 1096810496
-              35:       8(s1) ConstantComposite 33 34
-              38:      6(int) Constant 17
-              39:    7(float) Constant 1099431936
-              40:       8(s1) ConstantComposite 38 39
-           41(w):     15(ptr) Variable Input
-          55(s1):             TypeStruct 6(int) 7(float)
-          56(s2):             TypeStruct 6(int) 7(float) 55(s1)
-         57(ub1):             TypeStruct 56(s2)
-              58:             TypePointer Uniform 57(ub1)
-      59(uName1):     58(ptr) Variable Uniform
-              60:      6(int) Constant 0
-              61:             TypePointer Uniform 56(s2)
-          64(s1):             TypeStruct 6(int) 7(float)
-          65(s2):             TypeStruct 6(int) 7(float) 64(s1)
-         66(ub2):             TypeStruct 65(s2)
-              67:             TypePointer Uniform 66(ub2)
-      68(uName2):     67(ptr) Variable Uniform
-              69:             TypePointer Uniform 65(s2)
-              72:             TypeBool
-              92:             TypePointer Function 14(fvec4)
-              94:             TypeImage 7(float) 2D sampled format:Unknown
-              95:             TypeSampledImage 94
-              96:             TypePointer UniformConstant 95
-      97(samp2D):     96(ptr) Variable UniformConstant
-              99:             TypeVector 7(float) 2
-             100:             TypePointer Input 99(fvec2)
-      101(coord):    100(ptr) Variable Input
-             106:    7(float) Constant 1073741824
-             112:             TypeVector 72(bool) 4
-             117:    7(float) Constant 1077936128
-             126:    7(float) Constant 1082130432
-             132:             TypeVector 72(bool) 2
-             137:    7(float) Constant 1084227584
-             173:    7(float) Constant 1086324736
-             209:    7(float) Constant 1088421888
-             212:             TypePointer Output 14(fvec4)
-      213(color):    212(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-           13(a):     12(ptr) Variable Function
-           37(b):     12(ptr) Variable Function
-           93(v):     92(ptr) Variable Function
-              19:     18(ptr) AccessChain 16(u) 17
-              20:    7(float) Load 19
-              21:      6(int) ConvertFToS 20
-              23:     18(ptr) AccessChain 16(u) 22
-              24:    7(float) Load 23
-              25:       8(s1) CompositeConstruct 21 24
-              27:     18(ptr) AccessChain 16(u) 26
-              28:    7(float) Load 27
-              29:      6(int) ConvertFToS 28
-              30:     18(ptr) AccessChain 16(u) 10
-              31:    7(float) Load 30
-              32:       8(s1) CompositeConstruct 29 31
-              36:          11 CompositeConstruct 25 32 35
-                              Store 13(a) 36
-              42:     18(ptr) AccessChain 41(w) 17
-              43:    7(float) Load 42
-              44:      6(int) ConvertFToS 43
-              45:     18(ptr) AccessChain 41(w) 22
-              46:    7(float) Load 45
-              47:       8(s1) CompositeConstruct 44 46
-              48:     18(ptr) AccessChain 41(w) 26
-              49:    7(float) Load 48
-              50:      6(int) ConvertFToS 49
-              51:     18(ptr) AccessChain 41(w) 10
-              52:    7(float) Load 51
-              53:       8(s1) CompositeConstruct 50 52
-              54:          11 CompositeConstruct 40 47 53
-                              Store 37(b) 54
-              62:     61(ptr) AccessChain 59(uName1) 60
-              63:      56(s2) Load 62
-              70:     69(ptr) AccessChain 68(uName2) 60
-              71:      65(s2) Load 70
-              73:      6(int) CompositeExtract 63 0
-              74:      6(int) CompositeExtract 71 0
-              75:    72(bool) IEqual 73 74
-              76:    7(float) CompositeExtract 63 1
-              77:    7(float) CompositeExtract 71 1
-              78:    72(bool) FOrdEqual 76 77
-              79:    72(bool) LogicalAnd 75 78
-              80:      55(s1) CompositeExtract 63 2
-              81:      64(s1) CompositeExtract 71 2
-              82:      6(int) CompositeExtract 80 0
-              83:      6(int) CompositeExtract 81 0
-              84:    72(bool) IEqual 82 83
-              85:    7(float) CompositeExtract 80 1
-              86:    7(float) CompositeExtract 81 1
-              87:    72(bool) FOrdEqual 85 86
-              88:    72(bool) LogicalAnd 84 87
-              89:    72(bool) LogicalAnd 79 88
-                              SelectionMerge 91 None
-                              BranchConditional 89 90 104
-              90:               Label
-              98:          95   Load 97(samp2D)
-             102:   99(fvec2)   Load 101(coord)
-             103:   14(fvec4)   ImageSampleImplicitLod 98 102
-                                Store 93(v) 103
-                                Branch 91
-             104:               Label
-             105:          95   Load 97(samp2D)
-             107:   99(fvec2)   Load 101(coord)
-             108:   99(fvec2)   VectorTimesScalar 107 106
-             109:   14(fvec4)   ImageSampleImplicitLod 105 108
-                                Store 93(v) 109
-                                Branch 91
-              91:             Label
-             110:   14(fvec4) Load 16(u)
-             111:   14(fvec4) Load 93(v)
-             113:  112(bvec4) FOrdEqual 110 111
-             114:    72(bool) All 113
-                              SelectionMerge 116 None
-                              BranchConditional 114 115 116
-             115:               Label
-             118:   14(fvec4)   Load 93(v)
-             119:   14(fvec4)   VectorTimesScalar 118 117
-                                Store 93(v) 119
-                                Branch 116
-             116:             Label
-             120:   14(fvec4) Load 16(u)
-             121:   14(fvec4) Load 93(v)
-             122:  112(bvec4) FUnordNotEqual 120 121
-             123:    72(bool) Any 122
-                              SelectionMerge 125 None
-                              BranchConditional 123 124 125
-             124:               Label
-             127:   14(fvec4)   Load 93(v)
-             128:   14(fvec4)   VectorTimesScalar 127 126
-                                Store 93(v) 128
-                                Branch 125
-             125:             Label
-             129:   99(fvec2) Load 101(coord)
-             130:   14(fvec4) Load 93(v)
-             131:   99(fvec2) VectorShuffle 130 130 1 3
-             133:  132(bvec2) FOrdEqual 129 131
-             134:    72(bool) All 133
-                              SelectionMerge 136 None
-                              BranchConditional 134 135 136
-             135:               Label
-             138:   14(fvec4)   Load 93(v)
-             139:   14(fvec4)   VectorTimesScalar 138 137
-                                Store 93(v) 139
-                                Branch 136
-             136:             Label
-             140:          11 Load 13(a)
-             141:          11 Load 37(b)
-             142:       8(s1) CompositeExtract 140 0
-             143:       8(s1) CompositeExtract 141 0
-             144:      6(int) CompositeExtract 142 0
-             145:      6(int) CompositeExtract 143 0
-             146:    72(bool) IEqual 144 145
-             147:    7(float) CompositeExtract 142 1
-             148:    7(float) CompositeExtract 143 1
-             149:    72(bool) FOrdEqual 147 148
-             150:    72(bool) LogicalAnd 146 149
-             151:       8(s1) CompositeExtract 140 1
-             152:       8(s1) CompositeExtract 141 1
-             153:      6(int) CompositeExtract 151 0
-             154:      6(int) CompositeExtract 152 0
-             155:    72(bool) IEqual 153 154
-             156:    7(float) CompositeExtract 151 1
-             157:    7(float) CompositeExtract 152 1
-             158:    72(bool) FOrdEqual 156 157
-             159:    72(bool) LogicalAnd 155 158
-             160:    72(bool) LogicalAnd 150 159
-             161:       8(s1) CompositeExtract 140 2
-             162:       8(s1) CompositeExtract 141 2
-             163:      6(int) CompositeExtract 161 0
-             164:      6(int) CompositeExtract 162 0
-             165:    72(bool) IEqual 163 164
-             166:    7(float) CompositeExtract 161 1
-             167:    7(float) CompositeExtract 162 1
-             168:    72(bool) FOrdEqual 166 167
-             169:    72(bool) LogicalAnd 165 168
-             170:    72(bool) LogicalAnd 160 169
-                              SelectionMerge 172 None
-                              BranchConditional 170 171 172
-             171:               Label
-             174:   14(fvec4)   Load 93(v)
-             175:   14(fvec4)   VectorTimesScalar 174 173
-                                Store 93(v) 175
-                                Branch 172
-             172:             Label
-             176:          11 Load 13(a)
-             177:          11 Load 37(b)
-             178:       8(s1) CompositeExtract 176 0
-             179:       8(s1) CompositeExtract 177 0
-             180:      6(int) CompositeExtract 178 0
-             181:      6(int) CompositeExtract 179 0
-             182:    72(bool) INotEqual 180 181
-             183:    7(float) CompositeExtract 178 1
-             184:    7(float) CompositeExtract 179 1
-             185:    72(bool) FUnordNotEqual 183 184
-             186:    72(bool) LogicalOr 182 185
-             187:       8(s1) CompositeExtract 176 1
-             188:       8(s1) CompositeExtract 177 1
-             189:      6(int) CompositeExtract 187 0
-             190:      6(int) CompositeExtract 188 0
-             191:    72(bool) INotEqual 189 190
-             192:    7(float) CompositeExtract 187 1
-             193:    7(float) CompositeExtract 188 1
-             194:    72(bool) FUnordNotEqual 192 193
-             195:    72(bool) LogicalOr 191 194
-             196:    72(bool) LogicalOr 186 195
-             197:       8(s1) CompositeExtract 176 2
-             198:       8(s1) CompositeExtract 177 2
-             199:      6(int) CompositeExtract 197 0
-             200:      6(int) CompositeExtract 198 0
-             201:    72(bool) INotEqual 199 200
-             202:    7(float) CompositeExtract 197 1
-             203:    7(float) CompositeExtract 198 1
-             204:    72(bool) FUnordNotEqual 202 203
-             205:    72(bool) LogicalOr 201 204
-             206:    72(bool) LogicalOr 196 205
-                              SelectionMerge 208 None
-                              BranchConditional 206 207 208
-             207:               Label
-             210:   14(fvec4)   Load 93(v)
-             211:   14(fvec4)   VectorTimesScalar 210 209
-                                Store 93(v) 211
-                                Branch 208
-             208:             Label
-             214:   14(fvec4) Load 93(v)
-                              Store 213(color) 214
+                              Name 54_1  "main"
+                              Name 30_1  "s1"
+                              MemberName 30_1(s1) 0  "i"
+                              MemberName 30_1(s1) 1  "f"
+                              Name 59_8  "a"
+                              Name 59_1  "u"
+                              Name 59_9  "b"
+                              Name 59_2  "w"
+                              Name 30_2  "s1"
+                              MemberName 30_2(s1) 0  "i"
+                              MemberName 30_2(s1) 1  "f"
+                              Name 30_3  "s2"
+                              MemberName 30_3(s2) 0  "i"
+                              MemberName 30_3(s2) 1  "f"
+                              MemberName 30_3(s2) 2  "s1_1"
+                              Name 30_4  "ub1"
+                              MemberName 30_4(ub1) 0  "foo2a"
+                              Name 59_3  "uName1"
+                              Name 30_5  "s1"
+                              MemberName 30_5(s1) 0  "i"
+                              MemberName 30_5(s1) 1  "f"
+                              Name 30_6  "s2"
+                              MemberName 30_6(s2) 0  "i"
+                              MemberName 30_6(s2) 1  "f"
+                              MemberName 30_6(s2) 2  "s1_1"
+                              Name 30_7  "ub2"
+                              MemberName 30_7(ub2) 0  "foo2b"
+                              Name 59_4  "uName2"
+                              Name 59_10  "v"
+                              Name 59_5  "samp2D"
+                              Name 59_6  "coord"
+                              Name 59_7  "color"
+                              Decorate 59_1(u) Location 1
+                              Decorate 59_2(w) Location 2
+                              MemberDecorate 30_2(s1) 0 Offset 0
+                              MemberDecorate 30_2(s1) 1 Offset 4
+                              MemberDecorate 30_3(s2) 0 Offset 0
+                              MemberDecorate 30_3(s2) 1 Offset 4
+                              MemberDecorate 30_3(s2) 2 Offset 16
+                              Decorate 30_4(ub1) Block
+                              MemberDecorate 30_4(ub1) 0 Offset 0
+                              Decorate 59_3(uName1) Binding 1
+                              Decorate 59_3(uName1) DescriptorSet 0
+                              MemberDecorate 30_5(s1) 0 Offset 0
+                              MemberDecorate 30_5(s1) 1 Offset 4
+                              MemberDecorate 30_6(s2) 0 Offset 0
+                              MemberDecorate 30_6(s2) 1 Offset 4
+                              MemberDecorate 30_6(s2) 2 Offset 8
+                              Decorate 30_7(ub2) BufferBlock
+                              MemberDecorate 30_7(ub2) 0 Offset 0
+                              Decorate 59_4(uName2) Binding 2
+                              Decorate 59_4(uName2) DescriptorSet 0
+                              Decorate 59_5(samp2D) Binding 0
+                              Decorate 59_5(samp2D) DescriptorSet 0
+                              Decorate 59_6(coord) RelaxedPrecision
+                              Decorate 59_6(coord) Location 0
+                              Decorate 61_12 RelaxedPrecision
+                              Decorate 61_14 RelaxedPrecision
+                              Decorate 142_1 RelaxedPrecision
+                              Decorate 61_21 RelaxedPrecision
+                              Decorate 59_7(color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            22_1:             TypeFloat 32
+        30_1(s1):             TypeStruct 21_1(int) 22_1(float)
+            21_2:             TypeInt 32 0
+         uint(3):   21_2(int) Constant 3
+            28_1:             TypeArray 30_1(s1) uint(3)
+            32_1:             TypePointer Function 28_1
+            23_1:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Input 23_1(fvec4)
+         59_1(u):   32_2(ptr) Variable Input
+         uint(0):   21_2(int) Constant 0
+            32_3:             TypePointer Input 22_1(float)
+         uint(1):   21_2(int) Constant 1
+         uint(2):   21_2(int) Constant 2
+            43_1:   21_1(int) Constant 14
+            43_2: 22_1(float) Constant 1096810496
+            44_1:    30_1(s1) ConstantComposite 43_1 43_2
+            43_3:   21_1(int) Constant 17
+            43_4: 22_1(float) Constant 1099431936
+            44_2:    30_1(s1) ConstantComposite 43_3 43_4
+         59_2(w):   32_2(ptr) Variable Input
+        30_2(s1):             TypeStruct 21_1(int) 22_1(float)
+        30_3(s2):             TypeStruct 21_1(int) 22_1(float) 30_2(s1)
+       30_4(ub1):             TypeStruct 30_3(s2)
+            32_4:             TypePointer Uniform 30_4(ub1)
+    59_3(uName1):   32_4(ptr) Variable Uniform
+            43_5:   21_1(int) Constant 0
+            32_5:             TypePointer Uniform 30_3(s2)
+        30_5(s1):             TypeStruct 21_1(int) 22_1(float)
+        30_6(s2):             TypeStruct 21_1(int) 22_1(float) 30_5(s1)
+       30_7(ub2):             TypeStruct 30_6(s2)
+            32_6:             TypePointer Uniform 30_7(ub2)
+    59_4(uName2):   32_6(ptr) Variable Uniform
+            32_7:             TypePointer Uniform 30_6(s2)
+            20_1:             TypeBool
+            32_8:             TypePointer Function 23_1(fvec4)
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_9:             TypePointer UniformConstant 27_1
+    59_5(samp2D):   32_9(ptr) Variable UniformConstant
+            23_2:             TypeVector 22_1(float) 2
+           32_10:             TypePointer Input 23_2(fvec2)
+     59_6(coord):  32_10(ptr) Variable Input
+            43_6: 22_1(float) Constant 1073741824
+            23_3:             TypeVector 20_1(bool) 4
+            43_7: 22_1(float) Constant 1077936128
+            43_8: 22_1(float) Constant 1082130432
+            23_4:             TypeVector 20_1(bool) 2
+            43_9: 22_1(float) Constant 1084227584
+           43_10: 22_1(float) Constant 1086324736
+           43_11: 22_1(float) Constant 1088421888
+           32_11:             TypePointer Output 23_1(fvec4)
+     59_7(color):  32_11(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_8(a):   32_1(ptr) Variable Function
+         59_9(b):   32_1(ptr) Variable Function
+        59_10(v):   32_8(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(u) uint(0)
+            61_1: 22_1(float) Load 65_1
+           110_1:   21_1(int) ConvertFToS 61_1
+            65_2:   32_3(ptr) AccessChain 59_1(u) uint(1)
+            61_2: 22_1(float) Load 65_2
+            80_1:    30_1(s1) CompositeConstruct 110_1 61_2
+            65_3:   32_3(ptr) AccessChain 59_1(u) uint(2)
+            61_3: 22_1(float) Load 65_3
+           110_2:   21_1(int) ConvertFToS 61_3
+            65_4:   32_3(ptr) AccessChain 59_1(u) uint(3)
+            61_4: 22_1(float) Load 65_4
+            80_2:    30_1(s1) CompositeConstruct 110_2 61_4
+            80_3:        28_1 CompositeConstruct 80_1 80_2 44_1
+                              Store 59_8(a) 80_3
+            65_5:   32_3(ptr) AccessChain 59_2(w) uint(0)
+            61_5: 22_1(float) Load 65_5
+           110_3:   21_1(int) ConvertFToS 61_5
+            65_6:   32_3(ptr) AccessChain 59_2(w) uint(1)
+            61_6: 22_1(float) Load 65_6
+            80_4:    30_1(s1) CompositeConstruct 110_3 61_6
+            65_7:   32_3(ptr) AccessChain 59_2(w) uint(2)
+            61_7: 22_1(float) Load 65_7
+           110_4:   21_1(int) ConvertFToS 61_7
+            65_8:   32_3(ptr) AccessChain 59_2(w) uint(3)
+            61_8: 22_1(float) Load 65_8
+            80_5:    30_1(s1) CompositeConstruct 110_4 61_8
+            80_6:        28_1 CompositeConstruct 44_2 80_4 80_5
+                              Store 59_9(b) 80_6
+            65_9:   32_5(ptr) AccessChain 59_3(uName1) 43_5
+            61_9:    30_3(s2) Load 65_9
+           65_10:   32_7(ptr) AccessChain 59_4(uName2) 43_5
+           61_10:    30_6(s2) Load 65_10
+            81_1:   21_1(int) CompositeExtract 61_9 0
+            81_2:   21_1(int) CompositeExtract 61_10 0
+           170_1:  20_1(bool) IEqual 81_1 81_2
+            81_3: 22_1(float) CompositeExtract 61_9 1
+            81_4: 22_1(float) CompositeExtract 61_10 1
+           180_1:  20_1(bool) FOrdEqual 81_3 81_4
+           167_1:  20_1(bool) LogicalAnd 170_1 180_1
+            81_5:    30_2(s1) CompositeExtract 61_9 2
+            81_6:    30_5(s1) CompositeExtract 61_10 2
+            81_7:   21_1(int) CompositeExtract 81_5 0
+            81_8:   21_1(int) CompositeExtract 81_6 0
+           170_2:  20_1(bool) IEqual 81_7 81_8
+            81_9: 22_1(float) CompositeExtract 81_5 1
+           81_10: 22_1(float) CompositeExtract 81_6 1
+           180_2:  20_1(bool) FOrdEqual 81_9 81_10
+           167_2:  20_1(bool) LogicalAnd 170_2 180_2
+           167_3:  20_1(bool) LogicalAnd 167_1 167_2
+                              SelectionMerge 248_4 None
+                              BranchConditional 167_3 248_2 248_3
+           248_2:               Label
+           61_11:        27_1   Load 59_5(samp2D)
+           61_12: 23_2(fvec2)   Load 59_6(coord)
+            87_1: 23_1(fvec4)   ImageSampleImplicitLod 61_11 61_12
+                                Store 59_10(v) 87_1
+                                Branch 248_4
+           248_3:               Label
+           61_13:        27_1   Load 59_5(samp2D)
+           61_14: 23_2(fvec2)   Load 59_6(coord)
+           142_1: 23_2(fvec2)   VectorTimesScalar 61_14 43_6
+            87_2: 23_1(fvec4)   ImageSampleImplicitLod 61_13 142_1
+                                Store 59_10(v) 87_2
+                                Branch 248_4
+           248_4:             Label
+           61_15: 23_1(fvec4) Load 59_1(u)
+           61_16: 23_1(fvec4) Load 59_10(v)
+           180_3: 23_3(bvec4) FOrdEqual 61_15 61_16
+           155_1:  20_1(bool) All 180_3
+                              SelectionMerge 248_6 None
+                              BranchConditional 155_1 248_5 248_6
+           248_5:               Label
+           61_17: 23_1(fvec4)   Load 59_10(v)
+           142_2: 23_1(fvec4)   VectorTimesScalar 61_17 43_7
+                                Store 59_10(v) 142_2
+                                Branch 248_6
+           248_6:             Label
+           61_18: 23_1(fvec4) Load 59_1(u)
+           61_19: 23_1(fvec4) Load 59_10(v)
+           183_1: 23_3(bvec4) FUnordNotEqual 61_18 61_19
+           154_1:  20_1(bool) Any 183_1
+                              SelectionMerge 248_8 None
+                              BranchConditional 154_1 248_7 248_8
+           248_7:               Label
+           61_20: 23_1(fvec4)   Load 59_10(v)
+           142_3: 23_1(fvec4)   VectorTimesScalar 61_20 43_8
+                                Store 59_10(v) 142_3
+                                Branch 248_8
+           248_8:             Label
+           61_21: 23_2(fvec2) Load 59_6(coord)
+           61_22: 23_1(fvec4) Load 59_10(v)
+            79_1: 23_2(fvec2) VectorShuffle 61_22 61_22 1 3
+           180_4: 23_4(bvec2) FOrdEqual 61_21 79_1
+           155_2:  20_1(bool) All 180_4
+                              SelectionMerge 248_10 None
+                              BranchConditional 155_2 248_9 248_10
+           248_9:               Label
+           61_23: 23_1(fvec4)   Load 59_10(v)
+           142_4: 23_1(fvec4)   VectorTimesScalar 61_23 43_9
+                                Store 59_10(v) 142_4
+                                Branch 248_10
+          248_10:             Label
+           61_24:        28_1 Load 59_8(a)
+           61_25:        28_1 Load 59_9(b)
+           81_11:    30_1(s1) CompositeExtract 61_24 0
+           81_12:    30_1(s1) CompositeExtract 61_25 0
+           81_13:   21_1(int) CompositeExtract 81_11 0
+           81_14:   21_1(int) CompositeExtract 81_12 0
+           170_3:  20_1(bool) IEqual 81_13 81_14
+           81_15: 22_1(float) CompositeExtract 81_11 1
+           81_16: 22_1(float) CompositeExtract 81_12 1
+           180_5:  20_1(bool) FOrdEqual 81_15 81_16
+           167_4:  20_1(bool) LogicalAnd 170_3 180_5
+           81_17:    30_1(s1) CompositeExtract 61_24 1
+           81_18:    30_1(s1) CompositeExtract 61_25 1
+           81_19:   21_1(int) CompositeExtract 81_17 0
+           81_20:   21_1(int) CompositeExtract 81_18 0
+           170_4:  20_1(bool) IEqual 81_19 81_20
+           81_21: 22_1(float) CompositeExtract 81_17 1
+           81_22: 22_1(float) CompositeExtract 81_18 1
+           180_6:  20_1(bool) FOrdEqual 81_21 81_22
+           167_5:  20_1(bool) LogicalAnd 170_4 180_6
+           167_6:  20_1(bool) LogicalAnd 167_4 167_5
+           81_23:    30_1(s1) CompositeExtract 61_24 2
+           81_24:    30_1(s1) CompositeExtract 61_25 2
+           81_25:   21_1(int) CompositeExtract 81_23 0
+           81_26:   21_1(int) CompositeExtract 81_24 0
+           170_5:  20_1(bool) IEqual 81_25 81_26
+           81_27: 22_1(float) CompositeExtract 81_23 1
+           81_28: 22_1(float) CompositeExtract 81_24 1
+           180_7:  20_1(bool) FOrdEqual 81_27 81_28
+           167_7:  20_1(bool) LogicalAnd 170_5 180_7
+           167_8:  20_1(bool) LogicalAnd 167_6 167_7
+                              SelectionMerge 248_12 None
+                              BranchConditional 167_8 248_11 248_12
+          248_11:               Label
+           61_26: 23_1(fvec4)   Load 59_10(v)
+           142_5: 23_1(fvec4)   VectorTimesScalar 61_26 43_10
+                                Store 59_10(v) 142_5
+                                Branch 248_12
+          248_12:             Label
+           61_27:        28_1 Load 59_8(a)
+           61_28:        28_1 Load 59_9(b)
+           81_29:    30_1(s1) CompositeExtract 61_27 0
+           81_30:    30_1(s1) CompositeExtract 61_28 0
+           81_31:   21_1(int) CompositeExtract 81_29 0
+           81_32:   21_1(int) CompositeExtract 81_30 0
+           171_1:  20_1(bool) INotEqual 81_31 81_32
+           81_33: 22_1(float) CompositeExtract 81_29 1
+           81_34: 22_1(float) CompositeExtract 81_30 1
+           183_2:  20_1(bool) FUnordNotEqual 81_33 81_34
+           166_1:  20_1(bool) LogicalOr 171_1 183_2
+           81_35:    30_1(s1) CompositeExtract 61_27 1
+           81_36:    30_1(s1) CompositeExtract 61_28 1
+           81_37:   21_1(int) CompositeExtract 81_35 0
+           81_38:   21_1(int) CompositeExtract 81_36 0
+           171_2:  20_1(bool) INotEqual 81_37 81_38
+           81_39: 22_1(float) CompositeExtract 81_35 1
+           81_40: 22_1(float) CompositeExtract 81_36 1
+           183_3:  20_1(bool) FUnordNotEqual 81_39 81_40
+           166_2:  20_1(bool) LogicalOr 171_2 183_3
+           166_3:  20_1(bool) LogicalOr 166_1 166_2
+           81_41:    30_1(s1) CompositeExtract 61_27 2
+           81_42:    30_1(s1) CompositeExtract 61_28 2
+           81_43:   21_1(int) CompositeExtract 81_41 0
+           81_44:   21_1(int) CompositeExtract 81_42 0
+           171_3:  20_1(bool) INotEqual 81_43 81_44
+           81_45: 22_1(float) CompositeExtract 81_41 1
+           81_46: 22_1(float) CompositeExtract 81_42 1
+           183_4:  20_1(bool) FUnordNotEqual 81_45 81_46
+           166_4:  20_1(bool) LogicalOr 171_3 183_4
+           166_5:  20_1(bool) LogicalOr 166_3 166_4
+                              SelectionMerge 248_14 None
+                              BranchConditional 166_5 248_13 248_14
+          248_13:               Label
+           61_29: 23_1(fvec4)   Load 59_10(v)
+           142_6: 23_1(fvec4)   VectorTimesScalar 61_29 43_11
+                                Store 59_10(v) 142_6
+                                Branch 248_14
+          248_14:             Label
+           61_30: 23_1(fvec4) Load 59_10(v)
+                              Store 59_7(color) 61_30
                               Return
                               FunctionEnd

@@ -6,37 +6,37 @@ spv.arbPostDepthCoverage.frag
                               Capability Shader
                               Capability SampleMaskPostDepthCoverage
                               Extension  "SPV_KHR_post_depth_coverage"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 8 13
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 EarlyFragmentTests
-                              ExecutionMode 4 PostDepthCoverage
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 EarlyFragmentTests
+                              ExecutionMode 54_1 PostDepthCoverage
                               Source GLSL 450
                               SourceExtension  "GL_ARB_post_depth_coverage"
                               SourceExtension  "GL_EXT_post_depth_coverage"
-                              Name 4  "main"
-                              Name 8  "readSampleMaskIn"
-                              Name 13  "gl_SampleMaskIn"
-                              Decorate 8(readSampleMaskIn) Location 0
-                              Decorate 13(gl_SampleMaskIn) BuiltIn SampleMask
-                              Decorate 13(gl_SampleMaskIn) Flat
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Output 6(int)
-8(readSampleMaskIn):      7(ptr) Variable Output
-               9:             TypeInt 32 0
-              10:      9(int) Constant 1
-              11:             TypeArray 6(int) 10
-              12:             TypePointer Input 11
-13(gl_SampleMaskIn):     12(ptr) Variable Input
-              14:      6(int) Constant 0
-              15:             TypePointer Input 6(int)
-         4(main):           2 Function None 3
-               5:             Label
-              16:     15(ptr) AccessChain 13(gl_SampleMaskIn) 14
-              17:      6(int) Load 16
-                              Store 8(readSampleMaskIn) 17
+                              Name 54_1  "main"
+                              Name 59_1  "readSampleMaskIn"
+                              Name 59_2  "gl_SampleMaskIn"
+                              Decorate 59_1(readSampleMaskIn) Location 0
+                              Decorate 59_2(gl_SampleMaskIn) BuiltIn SampleMask
+                              Decorate 59_2(gl_SampleMaskIn) Flat
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Output 21_1(int)
+59_1(readSampleMaskIn):   32_1(ptr) Variable Output
+            21_2:             TypeInt 32 0
+         uint(1):   21_2(int) Constant 1
+            28_1:             TypeArray 21_1(int) uint(1)
+            32_2:             TypePointer Input 28_1
+59_2(gl_SampleMaskIn):   32_2(ptr) Variable Input
+            43_1:   21_1(int) Constant 0
+            32_3:             TypePointer Input 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2(gl_SampleMaskIn) 43_1
+            61_1:   21_1(int) Load 65_1
+                              Store 59_1(readSampleMaskIn) 61_1
                               Return
                               FunctionEnd

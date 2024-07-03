@@ -4,103 +4,103 @@ spv.funcall.array.frag
 // Id's are bound by 66
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 27
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 16  "f(vf4[9];i1;"
-                              Name 14  "a"
-                              Name 15  "ix"
-                              Name 20  "indexable"
-                              Name 27  "color"
-                              Name 29  "ub"
-                              MemberName 29(ub) 0  "u"
-                              Name 31  ""
-                              Name 37  "arg"
-                              Name 64  "param"
-                              Decorate 27(color) Location 0
-                              Decorate 28 ArrayStride 16
-                              Decorate 29(ub) Block
-                              MemberDecorate 29(ub) 0 Offset 0
-                              Decorate 31 Binding 0
-                              Decorate 31 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeInt 32 0
-               9:      8(int) Constant 9
-              10:             TypeArray 7(fvec4) 9
-              11:             TypeInt 32 1
-              12:             TypePointer Function 11(int)
-              13:             TypeFunction 7(fvec4) 10 12(ptr)
-              19:             TypePointer Function 10
-              21:             TypePointer Function 7(fvec4)
-              26:             TypePointer Output 7(fvec4)
-       27(color):     26(ptr) Variable Output
-              28:             TypeArray 7(fvec4) 9
-          29(ub):             TypeStruct 28
-              30:             TypePointer Uniform 29(ub)
-              31:     30(ptr) Variable Uniform
-              32:     11(int) Constant 0
-              33:             TypePointer Uniform 28
-              36:     11(int) Constant 2
-              41:     11(int) Constant 1
-              46:     11(int) Constant 3
-              49:     11(int) Constant 4
-              52:     11(int) Constant 5
-              55:     11(int) Constant 6
-              58:     11(int) Constant 7
-              61:     11(int) Constant 8
-         4(main):           2 Function None 3
-               5:             Label
-         37(arg):     19(ptr) Variable Function
-       64(param):     12(ptr) Variable Function
-              34:     33(ptr) AccessChain 31 32
-              35:          28 Load 34
-              38:    7(fvec4) CompositeExtract 35 0
-              39:     21(ptr) AccessChain 37(arg) 32
-                              Store 39 38
-              40:    7(fvec4) CompositeExtract 35 1
-              42:     21(ptr) AccessChain 37(arg) 41
-                              Store 42 40
-              43:    7(fvec4) CompositeExtract 35 2
-              44:     21(ptr) AccessChain 37(arg) 36
-                              Store 44 43
-              45:    7(fvec4) CompositeExtract 35 3
-              47:     21(ptr) AccessChain 37(arg) 46
-                              Store 47 45
-              48:    7(fvec4) CompositeExtract 35 4
-              50:     21(ptr) AccessChain 37(arg) 49
-                              Store 50 48
-              51:    7(fvec4) CompositeExtract 35 5
-              53:     21(ptr) AccessChain 37(arg) 52
-                              Store 53 51
-              54:    7(fvec4) CompositeExtract 35 6
-              56:     21(ptr) AccessChain 37(arg) 55
-                              Store 56 54
-              57:    7(fvec4) CompositeExtract 35 7
-              59:     21(ptr) AccessChain 37(arg) 58
-                              Store 59 57
-              60:    7(fvec4) CompositeExtract 35 8
-              62:     21(ptr) AccessChain 37(arg) 61
-                              Store 62 60
-              63:          10 Load 37(arg)
-                              Store 64(param) 36
-              65:    7(fvec4) FunctionCall 16(f(vf4[9];i1;) 63 64(param)
-                              Store 27(color) 65
+                              Name 54_1  "main"
+                              Name 54_2  "f(vf4[9];i1;"
+                              Name 55_1  "a"
+                              Name 55_2  "ix"
+                              Name 59_5  "indexable"
+                              Name 59_1  "color"
+                              Name 30_1  "ub"
+                              MemberName 30_1(ub) 0  "u"
+                              Name 59_2  ""
+                              Name 59_3  "arg"
+                              Name 59_4  "param"
+                              Decorate 59_1(color) Location 0
+                              Decorate 28_2 ArrayStride 16
+                              Decorate 30_1(ub) Block
+                              MemberDecorate 30_1(ub) 0 Offset 0
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            21_1:             TypeInt 32 0
+         uint(9):   21_1(int) Constant 9
+            28_1:             TypeArray 23_1(fvec4) uint(9)
+            21_2:             TypeInt 32 1
+            32_1:             TypePointer Function 21_2(int)
+            33_2:             TypeFunction 23_1(fvec4) 28_1 32_1(ptr)
+            32_2:             TypePointer Function 28_1
+            32_3:             TypePointer Function 23_1(fvec4)
+            32_4:             TypePointer Output 23_1(fvec4)
+     59_1(color):   32_4(ptr) Variable Output
+            28_2:             TypeArray 23_1(fvec4) uint(9)
+        30_1(ub):             TypeStruct 28_2
+            32_5:             TypePointer Uniform 30_1(ub)
+            59_2:   32_5(ptr) Variable Uniform
+            43_1:   21_2(int) Constant 0
+            32_6:             TypePointer Uniform 28_2
+            43_2:   21_2(int) Constant 2
+            43_3:   21_2(int) Constant 1
+            43_4:   21_2(int) Constant 3
+            43_5:   21_2(int) Constant 4
+            43_6:   21_2(int) Constant 5
+            43_7:   21_2(int) Constant 6
+            43_8:   21_2(int) Constant 7
+            43_9:   21_2(int) Constant 8
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_3(arg):   32_2(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            65_1:   32_6(ptr) AccessChain 59_2 43_1
+            61_1:        28_2 Load 65_1
+            81_1: 23_1(fvec4) CompositeExtract 61_1 0
+            65_2:   32_3(ptr) AccessChain 59_3(arg) 43_1
+                              Store 65_2 81_1
+            81_2: 23_1(fvec4) CompositeExtract 61_1 1
+            65_3:   32_3(ptr) AccessChain 59_3(arg) 43_3
+                              Store 65_3 81_2
+            81_3: 23_1(fvec4) CompositeExtract 61_1 2
+            65_4:   32_3(ptr) AccessChain 59_3(arg) 43_2
+                              Store 65_4 81_3
+            81_4: 23_1(fvec4) CompositeExtract 61_1 3
+            65_5:   32_3(ptr) AccessChain 59_3(arg) 43_4
+                              Store 65_5 81_4
+            81_5: 23_1(fvec4) CompositeExtract 61_1 4
+            65_6:   32_3(ptr) AccessChain 59_3(arg) 43_5
+                              Store 65_6 81_5
+            81_6: 23_1(fvec4) CompositeExtract 61_1 5
+            65_7:   32_3(ptr) AccessChain 59_3(arg) 43_6
+                              Store 65_7 81_6
+            81_7: 23_1(fvec4) CompositeExtract 61_1 6
+            65_8:   32_3(ptr) AccessChain 59_3(arg) 43_7
+                              Store 65_8 81_7
+            81_8: 23_1(fvec4) CompositeExtract 61_1 7
+            65_9:   32_3(ptr) AccessChain 59_3(arg) 43_8
+                              Store 65_9 81_8
+            81_9: 23_1(fvec4) CompositeExtract 61_1 8
+           65_10:   32_3(ptr) AccessChain 59_3(arg) 43_9
+                              Store 65_10 81_9
+            61_2:        28_1 Load 59_3(arg)
+                              Store 59_4(param) 43_2
+            57_1: 23_1(fvec4) FunctionCall 54_2(f(vf4[9];i1;) 61_2 59_4(param)
+                              Store 59_1(color) 57_1
                               Return
                               FunctionEnd
-16(f(vf4[9];i1;):    7(fvec4) Function None 13
-           14(a):          10 FunctionParameter
-          15(ix):     12(ptr) FunctionParameter
-              17:             Label
-   20(indexable):     19(ptr) Variable Function
-              18:     11(int) Load 15(ix)
-                              Store 20(indexable) 14(a)
-              22:     21(ptr) AccessChain 20(indexable) 18
-              23:    7(fvec4) Load 22
-                              ReturnValue 23
+54_2(f(vf4[9];i1;): 23_1(fvec4) Function None 33_2
+         55_1(a):        28_1 FunctionParameter
+        55_2(ix):   32_1(ptr) FunctionParameter
+           248_2:             Label
+ 59_5(indexable):   32_2(ptr) Variable Function
+            61_3:   21_2(int) Load 55_2(ix)
+                              Store 59_5(indexable) 55_1(a)
+           65_11:   32_3(ptr) AccessChain 59_5(indexable) 61_3
+            61_4: 23_1(fvec4) Load 65_11
+                              ReturnValue 61_4
                               FunctionEnd

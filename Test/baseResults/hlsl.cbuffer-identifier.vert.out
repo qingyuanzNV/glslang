@@ -254,151 +254,151 @@ Shader version: 500
 // Id's are bound by 93
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 74 78 86 90
+                              EntryPoint Vertex 54_1  "main" 59_2 59_3 59_4 59_5
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "VS_INPUT"
-                              MemberName 9(VS_INPUT) 0  "Pos"
-                              MemberName 9(VS_INPUT) 1  "Norm"
-                              Name 11  "PS_INPUT"
-                              MemberName 11(PS_INPUT) 0  "Pos"
-                              MemberName 11(PS_INPUT) 1  "Norm"
-                              Name 14  "@main(struct-VS_INPUT-vf4-vf31;"
-                              Name 13  "input"
-                              Name 18  "ConstantBuffer"
-                              Name 21  "output"
-                              Name 28  "C"
-                              MemberName 28(C) 0  "World"
-                              MemberName 28(C) 1  "View"
-                              MemberName 28(C) 2  "Projection"
-                              Name 30  ""
-                              Name 72  "input"
-                              Name 74  "input.Pos"
-                              Name 78  "input.Norm"
-                              Name 81  "flattenTemp"
-                              Name 82  "param"
-                              Name 86  "@entryPointOutput.Pos"
-                              Name 90  "@entryPointOutput.Norm"
-                              Decorate 28(C) Block
-                              MemberDecorate 28(C) 0 RowMajor
-                              MemberDecorate 28(C) 0 MatrixStride 16
-                              MemberDecorate 28(C) 0 Offset 0
-                              MemberDecorate 28(C) 1 RowMajor
-                              MemberDecorate 28(C) 1 MatrixStride 16
-                              MemberDecorate 28(C) 1 Offset 64
-                              MemberDecorate 28(C) 2 RowMajor
-                              MemberDecorate 28(C) 2 MatrixStride 16
-                              MemberDecorate 28(C) 2 Offset 128
-                              Decorate 30 Binding 0
-                              Decorate 30 DescriptorSet 0
-                              Decorate 74(input.Pos) Location 0
-                              Decorate 78(input.Norm) Location 1
-                              Decorate 86(@entryPointOutput.Pos) BuiltIn Position
-                              Decorate 90(@entryPointOutput.Norm) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeVector 6(float) 3
-     9(VS_INPUT):             TypeStruct 7(fvec4) 8(fvec3)
-              10:             TypePointer Function 9(VS_INPUT)
-    11(PS_INPUT):             TypeStruct 7(fvec4) 8(fvec3)
-              12:             TypeFunction 11(PS_INPUT) 10(ptr)
-              16:             TypeInt 32 1
-              17:             TypePointer Function 16(int)
-              19:     16(int) Constant 42
-              20:             TypePointer Function 11(PS_INPUT)
-              22:    6(float) Constant 0
-              23:    7(fvec4) ConstantComposite 22 22 22 22
-              24:    8(fvec3) ConstantComposite 22 22 22
-              25:11(PS_INPUT) ConstantComposite 23 24
-              26:     16(int) Constant 0
-              27:             TypeMatrix 7(fvec4) 4
-           28(C):             TypeStruct 27 27 27
-              29:             TypePointer Uniform 28(C)
-              30:     29(ptr) Variable Uniform
-              31:             TypePointer Uniform 27
-              34:             TypePointer Function 7(fvec4)
-              39:     16(int) Constant 1
-              46:     16(int) Constant 2
-              55:             TypeMatrix 7(fvec4) 3
-              60:             TypePointer Function 8(fvec3)
-              73:             TypePointer Input 7(fvec4)
-   74(input.Pos):     73(ptr) Variable Input
-              77:             TypePointer Input 8(fvec3)
-  78(input.Norm):     77(ptr) Variable Input
-              85:             TypePointer Output 7(fvec4)
-86(@entryPointOutput.Pos):     85(ptr) Variable Output
-              89:             TypePointer Output 8(fvec3)
-90(@entryPointOutput.Norm):     89(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-       72(input):     10(ptr) Variable Function
- 81(flattenTemp):     20(ptr) Variable Function
-       82(param):     10(ptr) Variable Function
-              75:    7(fvec4) Load 74(input.Pos)
-              76:     34(ptr) AccessChain 72(input) 26
-                              Store 76 75
-              79:    8(fvec3) Load 78(input.Norm)
-              80:     60(ptr) AccessChain 72(input) 39
-                              Store 80 79
-              83: 9(VS_INPUT) Load 72(input)
-                              Store 82(param) 83
-              84:11(PS_INPUT) FunctionCall 14(@main(struct-VS_INPUT-vf4-vf31;) 82(param)
-                              Store 81(flattenTemp) 84
-              87:     34(ptr) AccessChain 81(flattenTemp) 26
-              88:    7(fvec4) Load 87
-                              Store 86(@entryPointOutput.Pos) 88
-              91:     60(ptr) AccessChain 81(flattenTemp) 39
-              92:    8(fvec3) Load 91
-                              Store 90(@entryPointOutput.Norm) 92
+                              Name 54_1  "main"
+                              Name 30_1  "VS_INPUT"
+                              MemberName 30_1(VS_INPUT) 0  "Pos"
+                              MemberName 30_1(VS_INPUT) 1  "Norm"
+                              Name 30_2  "PS_INPUT"
+                              MemberName 30_2(PS_INPUT) 0  "Pos"
+                              MemberName 30_2(PS_INPUT) 1  "Norm"
+                              Name 54_2  "@main(struct-VS_INPUT-vf4-vf31;"
+                              Name 55_1  "input"
+                              Name 59_9  "ConstantBuffer"
+                              Name 59_10  "output"
+                              Name 30_3  "C"
+                              MemberName 30_3(C) 0  "World"
+                              MemberName 30_3(C) 1  "View"
+                              MemberName 30_3(C) 2  "Projection"
+                              Name 59_1  ""
+                              Name 59_6  "input"
+                              Name 59_2  "input.Pos"
+                              Name 59_3  "input.Norm"
+                              Name 59_7  "flattenTemp"
+                              Name 59_8  "param"
+                              Name 59_4  "@entryPointOutput.Pos"
+                              Name 59_5  "@entryPointOutput.Norm"
+                              Decorate 30_3(C) Block
+                              MemberDecorate 30_3(C) 0 RowMajor
+                              MemberDecorate 30_3(C) 0 MatrixStride 16
+                              MemberDecorate 30_3(C) 0 Offset 0
+                              MemberDecorate 30_3(C) 1 RowMajor
+                              MemberDecorate 30_3(C) 1 MatrixStride 16
+                              MemberDecorate 30_3(C) 1 Offset 64
+                              MemberDecorate 30_3(C) 2 RowMajor
+                              MemberDecorate 30_3(C) 2 MatrixStride 16
+                              MemberDecorate 30_3(C) 2 Offset 128
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(input.Pos) Location 0
+                              Decorate 59_3(input.Norm) Location 1
+                              Decorate 59_4(@entryPointOutput.Pos) BuiltIn Position
+                              Decorate 59_5(@entryPointOutput.Norm) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            23_2:             TypeVector 22_1(float) 3
+  30_1(VS_INPUT):             TypeStruct 23_1(fvec4) 23_2(fvec3)
+            32_1:             TypePointer Function 30_1(VS_INPUT)
+  30_2(PS_INPUT):             TypeStruct 23_1(fvec4) 23_2(fvec3)
+            33_2:             TypeFunction 30_2(PS_INPUT) 32_1(ptr)
+            21_1:             TypeInt 32 1
+            32_2:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 42
+            32_3:             TypePointer Function 30_2(PS_INPUT)
+            43_2: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+            44_2: 23_2(fvec3) ConstantComposite 43_2 43_2 43_2
+            44_3:30_2(PS_INPUT) ConstantComposite 44_1 44_2
+            43_3:   21_1(int) Constant 0
+            24_1:             TypeMatrix 23_1(fvec4) 4
+         30_3(C):             TypeStruct 24_1 24_1 24_1
+            32_4:             TypePointer Uniform 30_3(C)
+            59_1:   32_4(ptr) Variable Uniform
+            32_5:             TypePointer Uniform 24_1
+            32_6:             TypePointer Function 23_1(fvec4)
+            43_4:   21_1(int) Constant 1
+            43_5:   21_1(int) Constant 2
+            24_2:             TypeMatrix 23_1(fvec4) 3
+            32_7:             TypePointer Function 23_2(fvec3)
+            32_8:             TypePointer Input 23_1(fvec4)
+ 59_2(input.Pos):   32_8(ptr) Variable Input
+            32_9:             TypePointer Input 23_2(fvec3)
+59_3(input.Norm):   32_9(ptr) Variable Input
+           32_10:             TypePointer Output 23_1(fvec4)
+59_4(@entryPointOutput.Pos):  32_10(ptr) Variable Output
+           32_11:             TypePointer Output 23_2(fvec3)
+59_5(@entryPointOutput.Norm):  32_11(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_6(input):   32_1(ptr) Variable Function
+59_7(flattenTemp):   32_3(ptr) Variable Function
+     59_8(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_2(input.Pos)
+            65_1:   32_6(ptr) AccessChain 59_6(input) 43_3
+                              Store 65_1 61_1
+            61_2: 23_2(fvec3) Load 59_3(input.Norm)
+            65_2:   32_7(ptr) AccessChain 59_6(input) 43_4
+                              Store 65_2 61_2
+            61_3:30_1(VS_INPUT) Load 59_6(input)
+                              Store 59_8(param) 61_3
+            57_1:30_2(PS_INPUT) FunctionCall 54_2(@main(struct-VS_INPUT-vf4-vf31;) 59_8(param)
+                              Store 59_7(flattenTemp) 57_1
+            65_3:   32_6(ptr) AccessChain 59_7(flattenTemp) 43_3
+            61_4: 23_1(fvec4) Load 65_3
+                              Store 59_4(@entryPointOutput.Pos) 61_4
+            65_4:   32_7(ptr) AccessChain 59_7(flattenTemp) 43_4
+            61_5: 23_2(fvec3) Load 65_4
+                              Store 59_5(@entryPointOutput.Norm) 61_5
                               Return
                               FunctionEnd
-14(@main(struct-VS_INPUT-vf4-vf31;):11(PS_INPUT) Function None 12
-       13(input):     10(ptr) FunctionParameter
-              15:             Label
-18(ConstantBuffer):     17(ptr) Variable Function
-      21(output):     20(ptr) Variable Function
-                              Store 18(ConstantBuffer) 19
-                              Store 21(output) 25
-              32:     31(ptr) AccessChain 30 26
-              33:          27 Load 32
-              35:     34(ptr) AccessChain 13(input) 26
-              36:    7(fvec4) Load 35
-              37:    7(fvec4) MatrixTimesVector 33 36
-              38:     34(ptr) AccessChain 21(output) 26
-                              Store 38 37
-              40:     31(ptr) AccessChain 30 39
-              41:          27 Load 40
-              42:     34(ptr) AccessChain 21(output) 26
-              43:    7(fvec4) Load 42
-              44:    7(fvec4) MatrixTimesVector 41 43
-              45:     34(ptr) AccessChain 21(output) 26
-                              Store 45 44
-              47:     31(ptr) AccessChain 30 46
-              48:          27 Load 47
-              49:     34(ptr) AccessChain 21(output) 26
-              50:    7(fvec4) Load 49
-              51:    7(fvec4) MatrixTimesVector 48 50
-              52:     34(ptr) AccessChain 21(output) 26
-                              Store 52 51
-              53:     31(ptr) AccessChain 30 26
-              54:          27 Load 53
-              56:    7(fvec4) CompositeExtract 54 0
-              57:    7(fvec4) CompositeExtract 54 1
-              58:    7(fvec4) CompositeExtract 54 2
-              59:          55 CompositeConstruct 56 57 58
-              61:     60(ptr) AccessChain 13(input) 39
-              62:    8(fvec3) Load 61
-              63:    7(fvec4) MatrixTimesVector 59 62
-              64:    6(float) CompositeExtract 63 0
-              65:    6(float) CompositeExtract 63 1
-              66:    6(float) CompositeExtract 63 2
-              67:    8(fvec3) CompositeConstruct 64 65 66
-              68:     60(ptr) AccessChain 21(output) 39
-                              Store 68 67
-              69:11(PS_INPUT) Load 21(output)
-                              ReturnValue 69
+54_2(@main(struct-VS_INPUT-vf4-vf31;):30_2(PS_INPUT) Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+           248_2:             Label
+59_9(ConstantBuffer):   32_2(ptr) Variable Function
+   59_10(output):   32_3(ptr) Variable Function
+                              Store 59_9(ConstantBuffer) 43_1
+                              Store 59_10(output) 44_3
+            65_5:   32_5(ptr) AccessChain 59_1 43_3
+            61_6:        24_1 Load 65_5
+            65_6:   32_6(ptr) AccessChain 55_1(input) 43_3
+            61_7: 23_1(fvec4) Load 65_6
+           145_1: 23_1(fvec4) MatrixTimesVector 61_6 61_7
+            65_7:   32_6(ptr) AccessChain 59_10(output) 43_3
+                              Store 65_7 145_1
+            65_8:   32_5(ptr) AccessChain 59_1 43_4
+            61_8:        24_1 Load 65_8
+            65_9:   32_6(ptr) AccessChain 59_10(output) 43_3
+            61_9: 23_1(fvec4) Load 65_9
+           145_2: 23_1(fvec4) MatrixTimesVector 61_8 61_9
+           65_10:   32_6(ptr) AccessChain 59_10(output) 43_3
+                              Store 65_10 145_2
+           65_11:   32_5(ptr) AccessChain 59_1 43_5
+           61_10:        24_1 Load 65_11
+           65_12:   32_6(ptr) AccessChain 59_10(output) 43_3
+           61_11: 23_1(fvec4) Load 65_12
+           145_3: 23_1(fvec4) MatrixTimesVector 61_10 61_11
+           65_13:   32_6(ptr) AccessChain 59_10(output) 43_3
+                              Store 65_13 145_3
+           65_14:   32_5(ptr) AccessChain 59_1 43_3
+           61_12:        24_1 Load 65_14
+            81_1: 23_1(fvec4) CompositeExtract 61_12 0
+            81_2: 23_1(fvec4) CompositeExtract 61_12 1
+            81_3: 23_1(fvec4) CompositeExtract 61_12 2
+            80_1:        24_2 CompositeConstruct 81_1 81_2 81_3
+           65_15:   32_7(ptr) AccessChain 55_1(input) 43_4
+           61_13: 23_2(fvec3) Load 65_15
+           145_4: 23_1(fvec4) MatrixTimesVector 80_1 61_13
+            81_4: 22_1(float) CompositeExtract 145_4 0
+            81_5: 22_1(float) CompositeExtract 145_4 1
+            81_6: 22_1(float) CompositeExtract 145_4 2
+            80_2: 23_2(fvec3) CompositeConstruct 81_4 81_5 81_6
+           65_16:   32_7(ptr) AccessChain 59_10(output) 43_4
+                              Store 65_16 80_2
+           61_14:30_2(PS_INPUT) Load 59_10(output)
+                              ReturnValue 61_14
                               FunctionEnd

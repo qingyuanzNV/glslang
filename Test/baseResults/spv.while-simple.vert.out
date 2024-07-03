@@ -4,39 +4,39 @@ spv.while-simple.vert
 // Id's are bound by 22
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main"
+                              EntryPoint Vertex 54_1  "main"
                               Source ESSL 310
-                              Name 4  "main"
-                              Name 8  "i"
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:      6(int) Constant 0
-              16:      6(int) Constant 10
-              17:             TypeBool
-              20:      6(int) Constant 1
-         4(main):           2 Function None 3
-               5:             Label
-            8(i):      7(ptr) Variable Function
-                              Store 8(i) 9
-                              Branch 10
-              10:             Label
-                              LoopMerge 12 13 None
-                              Branch 14
-              14:             Label
-              15:      6(int) Load 8(i)
-              18:    17(bool) SLessThan 15 16
-                              BranchConditional 18 11 12
-              11:               Label
-              19:      6(int)   Load 8(i)
-              21:      6(int)   IAdd 19 20
-                                Store 8(i) 21
-                                Branch 13
-              13:               Label
-                                Branch 10
-              12:             Label
+                              Name 54_1  "main"
+                              Name 59_1  "i"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 10
+            20_1:             TypeBool
+            43_3:   21_1(int) Constant 1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_1(i):   32_1(ptr) Variable Function
+                              Store 59_1(i) 43_1
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 None
+                              Branch 248_3
+           248_3:             Label
+            61_1:   21_1(int) Load 59_1(i)
+           177_1:  20_1(bool) SLessThan 61_1 43_2
+                              BranchConditional 177_1 248_4 248_6
+           248_4:               Label
+            61_2:   21_1(int)   Load 59_1(i)
+           128_1:   21_1(int)   IAdd 61_2 43_3
+                                Store 59_1(i) 128_1
+                                Branch 248_5
+           248_5:               Label
+                                Branch 248_2
+           248_6:             Label
                               Return
                               FunctionEnd

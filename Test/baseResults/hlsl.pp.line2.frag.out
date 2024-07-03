@@ -4,15 +4,15 @@ hlsl.pp.line2.frag
 // Id's are bound by 80
 
                               Capability Shader
-               2:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 5  "MainPs" 71 75
-                              ExecutionMode 5 OriginUpperLeft
-               1:             String  "hlsl.pp.line2.frag"
-               7:             String  "foo.frag"
-              32:             String  "foo.h"
-              42:             String  "foo2.h"
-                              Source HLSL 500 1  "// OpModuleProcessed auto-map-locations
+                              EntryPoint Fragment 54_1  "MainPs" 59_4 59_5
+                              ExecutionMode 54_1 OriginUpperLeft
+             7_1:             String  "hlsl.pp.line2.frag"
+             7_2:             String  "foo.frag"
+             7_3:             String  "foo.h"
+             7_4:             String  "foo2.h"
+                              Source HLSL 500 7_1  "// OpModuleProcessed auto-map-locations
 // OpModuleProcessed auto-map-bindings
 // OpModuleProcessed entry-point MainPs
 // OpModuleProcessed client vulkan100
@@ -61,127 +61,127 @@ PS_OUTPUT MainPs ( PS_INPUT i )
 }
 
 "
-                              Name 5  "MainPs"
-                              Name 10  "PS_INPUT"
-                              MemberName 10(PS_INPUT) 0  "vTextureCoords"
-                              Name 13  "PS_OUTPUT"
-                              MemberName 13(PS_OUTPUT) 0  "vColor"
-                              Name 16  "@MainPs(struct-PS_INPUT-vf21;"
-                              Name 15  "i"
-                              Name 19  "PerViewConstantBuffer_t"
-                              MemberName 19(PerViewConstantBuffer_t) 0  "g_nDataIdx"
-                              MemberName 19(PerViewConstantBuffer_t) 1  "g_nDataIdx2"
-                              MemberName 19(PerViewConstantBuffer_t) 2  "g_B"
-                              Name 21  ""
-                              Name 34  "u"
-                              Name 44  "ps_output"
-                              Name 49  "g_tColor"
-                              Name 56  "g_sAniso"
-                              Name 69  "i"
-                              Name 71  "i.vTextureCoords"
-                              Name 75  "@entryPointOutput.vColor"
-                              Name 76  "param"
-                              Decorate 19(PerViewConstantBuffer_t) Block
-                              MemberDecorate 19(PerViewConstantBuffer_t) 0 Offset 0
-                              MemberDecorate 19(PerViewConstantBuffer_t) 1 Offset 4
-                              MemberDecorate 19(PerViewConstantBuffer_t) 2 Offset 8
-                              Decorate 49(g_tColor) Binding 0
-                              Decorate 49(g_tColor) DescriptorSet 0
-                              Decorate 56(g_sAniso) Binding 1
-                              Decorate 56(g_sAniso) DescriptorSet 0
-                              Decorate 71(i.vTextureCoords) Location 0
-                              Decorate 75(@entryPointOutput.vColor) Location 0
-               3:             TypeVoid
-               4:             TypeFunction 3
-               8:             TypeFloat 32
-               9:             TypeVector 8(float) 2
-    10(PS_INPUT):             TypeStruct 9(fvec2)
-              11:             TypePointer Function 10(PS_INPUT)
-              12:             TypeVector 8(float) 4
-   13(PS_OUTPUT):             TypeStruct 12(fvec4)
-              14:             TypeFunction 13(PS_OUTPUT) 11(ptr)
-              18:             TypeInt 32 0
-19(PerViewConstantBuffer_t):             TypeStruct 18(int) 18(int) 18(int)
-              20:             TypePointer PushConstant 19(PerViewConstantBuffer_t)
-              21:     20(ptr) Variable PushConstant
-              22:             TypeInt 32 1
-              23:     22(int) Constant 2
-              24:             TypePointer PushConstant 18(int)
-              27:             TypeBool
-              28:     18(int) Constant 0
-              33:             TypePointer Function 18(int)
-              35:     22(int) Constant 0
-              39:     22(int) Constant 1
-              43:             TypePointer Function 13(PS_OUTPUT)
-              45:             TypeImage 8(float) 2D sampled format:Unknown
-              46:     18(int) Constant 128
-              47:             TypeArray 45 46
-              48:             TypePointer UniformConstant 47
-    49(g_tColor):     48(ptr) Variable UniformConstant
-              51:             TypePointer UniformConstant 45
-              54:             TypeSampler
-              55:             TypePointer UniformConstant 54
-    56(g_sAniso):     55(ptr) Variable UniformConstant
-              58:             TypeSampledImage 45
-              60:             TypePointer Function 9(fvec2)
-              64:             TypePointer Function 12(fvec4)
-              70:             TypePointer Input 9(fvec2)
-71(i.vTextureCoords):     70(ptr) Variable Input
-              74:             TypePointer Output 12(fvec4)
-75(@entryPointOutput.vColor):     74(ptr) Variable Output
-                              Line 7 23 1
-       5(MainPs):           3 Function None 4
-               6:             Label
-           69(i):     11(ptr) Variable Function
-       76(param):     11(ptr) Variable Function
-                              Line 7 23 0
-              72:    9(fvec2) Load 71(i.vTextureCoords)
-              73:     60(ptr) AccessChain 69(i) 35
-                              Store 73 72
-              77:10(PS_INPUT) Load 69(i)
-                              Store 76(param) 77
-              78:13(PS_OUTPUT) FunctionCall 16(@MainPs(struct-PS_INPUT-vf21;) 76(param)
-              79:   12(fvec4) CompositeExtract 78 0
-                              Store 75(@entryPointOutput.vColor) 79
+                              Name 54_1  "MainPs"
+                              Name 30_1  "PS_INPUT"
+                              MemberName 30_1(PS_INPUT) 0  "vTextureCoords"
+                              Name 30_2  "PS_OUTPUT"
+                              MemberName 30_2(PS_OUTPUT) 0  "vColor"
+                              Name 54_2  "@MainPs(struct-PS_INPUT-vf21;"
+                              Name 55_1  "i"
+                              Name 30_3  "PerViewConstantBuffer_t"
+                              MemberName 30_3(PerViewConstantBuffer_t) 0  "g_nDataIdx"
+                              MemberName 30_3(PerViewConstantBuffer_t) 1  "g_nDataIdx2"
+                              MemberName 30_3(PerViewConstantBuffer_t) 2  "g_B"
+                              Name 59_1  ""
+                              Name 59_8  "u"
+                              Name 59_9  "ps_output"
+                              Name 59_2  "g_tColor"
+                              Name 59_3  "g_sAniso"
+                              Name 59_6  "i"
+                              Name 59_4  "i.vTextureCoords"
+                              Name 59_5  "@entryPointOutput.vColor"
+                              Name 59_7  "param"
+                              Decorate 30_3(PerViewConstantBuffer_t) Block
+                              MemberDecorate 30_3(PerViewConstantBuffer_t) 0 Offset 0
+                              MemberDecorate 30_3(PerViewConstantBuffer_t) 1 Offset 4
+                              MemberDecorate 30_3(PerViewConstantBuffer_t) 2 Offset 8
+                              Decorate 59_2(g_tColor) Binding 0
+                              Decorate 59_2(g_tColor) DescriptorSet 0
+                              Decorate 59_3(g_sAniso) Binding 1
+                              Decorate 59_3(g_sAniso) DescriptorSet 0
+                              Decorate 59_4(i.vTextureCoords) Location 0
+                              Decorate 59_5(@entryPointOutput.vColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+  30_1(PS_INPUT):             TypeStruct 23_1(fvec2)
+            32_1:             TypePointer Function 30_1(PS_INPUT)
+            23_2:             TypeVector 22_1(float) 4
+ 30_2(PS_OUTPUT):             TypeStruct 23_2(fvec4)
+            33_2:             TypeFunction 30_2(PS_OUTPUT) 32_1(ptr)
+            21_1:             TypeInt 32 0
+30_3(PerViewConstantBuffer_t):             TypeStruct 21_1(int) 21_1(int) 21_1(int)
+            32_2:             TypePointer PushConstant 30_3(PerViewConstantBuffer_t)
+            59_1:   32_2(ptr) Variable PushConstant
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 2
+            32_3:             TypePointer PushConstant 21_1(int)
+            20_1:             TypeBool
+         uint(0):   21_1(int) Constant 0
+            32_4:             TypePointer Function 21_1(int)
+            43_2:   21_2(int) Constant 0
+            43_3:   21_2(int) Constant 1
+            32_5:             TypePointer Function 30_2(PS_OUTPUT)
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+       uint(128):   21_1(int) Constant 128
+            28_1:             TypeArray 25_1 uint(128)
+            32_6:             TypePointer UniformConstant 28_1
+  59_2(g_tColor):   32_6(ptr) Variable UniformConstant
+            32_7:             TypePointer UniformConstant 25_1
+            26_1:             TypeSampler
+            32_8:             TypePointer UniformConstant 26_1
+  59_3(g_sAniso):   32_8(ptr) Variable UniformConstant
+            27_1:             TypeSampledImage 25_1
+            32_9:             TypePointer Function 23_1(fvec2)
+           32_10:             TypePointer Function 23_2(fvec4)
+           32_11:             TypePointer Input 23_1(fvec2)
+59_4(i.vTextureCoords):  32_11(ptr) Variable Input
+           32_12:             TypePointer Output 23_2(fvec4)
+59_5(@entryPointOutput.vColor):  32_12(ptr) Variable Output
+                              Line 7_2 23 1
+    54_1(MainPs):        19_1 Function None 33_1
+           248_1:             Label
+         59_6(i):   32_1(ptr) Variable Function
+     59_7(param):   32_1(ptr) Variable Function
+                              Line 7_2 23 0
+            61_1: 23_1(fvec2) Load 59_4(i.vTextureCoords)
+            65_1:   32_9(ptr) AccessChain 59_6(i) 43_2
+                              Store 65_1 61_1
+            61_2:30_1(PS_INPUT) Load 59_6(i)
+                              Store 59_7(param) 61_2
+            57_1:30_2(PS_OUTPUT) FunctionCall 54_2(@MainPs(struct-PS_INPUT-vf21;) 59_7(param)
+            81_1: 23_2(fvec4) CompositeExtract 57_1 0
+                              Store 59_5(@entryPointOutput.vColor) 81_1
                               Return
                               FunctionEnd
-                              Line 7 23 1
-16(@MainPs(struct-PS_INPUT-vf21;):13(PS_OUTPUT) Function None 14
-           15(i):     11(ptr) FunctionParameter
-              17:             Label
-           34(u):     33(ptr) Variable Function
-   44(ps_output):     43(ptr) Variable Function
-                              Line 7 47 0
-              25:     24(ptr) AccessChain 21 23
-              26:     18(int) Load 25
-              29:    27(bool) INotEqual 26 28
-                              SelectionMerge 31 None
-                              BranchConditional 29 30 38
-              30:               Label
-                                Line 32 3 0
-              36:     24(ptr)   AccessChain 21 35
-              37:     18(int)   Load 36
-                                Store 34(u) 37
-                                Branch 31
-              38:               Label
-                                Line 32 67 0
-              40:     24(ptr)   AccessChain 21 39
-              41:     18(int)   Load 40
-                                Store 34(u) 41
-                                Branch 31
-              31:             Label
-                              Line 42 7 0
-              50:     18(int) Load 34(u)
-              52:     51(ptr) AccessChain 49(g_tColor) 50
-              53:          45 Load 52
-              57:          54 Load 56(g_sAniso)
-              59:          58 SampledImage 53 57
-              61:     60(ptr) AccessChain 15(i) 35
-              62:    9(fvec2) Load 61
-              63:   12(fvec4) ImageSampleImplicitLod 59 62
-              65:     64(ptr) AccessChain 44(ps_output) 35
-                              Store 65 63
-                              Line 42 105 0
-              66:13(PS_OUTPUT) Load 44(ps_output)
-                              ReturnValue 66
+                              Line 7_2 23 1
+54_2(@MainPs(struct-PS_INPUT-vf21;):30_2(PS_OUTPUT) Function None 33_2
+         55_1(i):   32_1(ptr) FunctionParameter
+           248_2:             Label
+         59_8(u):   32_4(ptr) Variable Function
+ 59_9(ps_output):   32_5(ptr) Variable Function
+                              Line 7_2 47 0
+            65_2:   32_3(ptr) AccessChain 59_1 43_1
+            61_3:   21_1(int) Load 65_2
+           171_1:  20_1(bool) INotEqual 61_3 uint(0)
+                              SelectionMerge 248_5 None
+                              BranchConditional 171_1 248_3 248_4
+           248_3:               Label
+                                Line 7_3 3 0
+            65_3:   32_3(ptr)   AccessChain 59_1 43_2
+            61_4:   21_1(int)   Load 65_3
+                                Store 59_8(u) 61_4
+                                Branch 248_5
+           248_4:               Label
+                                Line 7_3 67 0
+            65_4:   32_3(ptr)   AccessChain 59_1 43_3
+            61_5:   21_1(int)   Load 65_4
+                                Store 59_8(u) 61_5
+                                Branch 248_5
+           248_5:             Label
+                              Line 7_4 7 0
+            61_6:   21_1(int) Load 59_8(u)
+            65_5:   32_7(ptr) AccessChain 59_2(g_tColor) 61_6
+            61_7:        25_1 Load 65_5
+            61_8:        26_1 Load 59_3(g_sAniso)
+            86_1:        27_1 SampledImage 61_7 61_8
+            65_6:   32_9(ptr) AccessChain 55_1(i) 43_2
+            61_9: 23_1(fvec2) Load 65_6
+            87_1: 23_2(fvec4) ImageSampleImplicitLod 86_1 61_9
+            65_7:  32_10(ptr) AccessChain 59_9(ps_output) 43_2
+                              Store 65_7 87_1
+                              Line 7_4 105 0
+           61_10:30_2(PS_OUTPUT) Load 59_9(ps_output)
+                              ReturnValue 61_10
                               FunctionEnd

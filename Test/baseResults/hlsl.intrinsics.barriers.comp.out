@@ -44,33 +44,33 @@ local_size = (1, 1, 1)
 // Id's are bound by 15
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "ComputeShaderFunction"
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "ComputeShaderFunction"
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source HLSL 500
-                              Name 4  "ComputeShaderFunction"
-                              Name 6  "@ComputeShaderFunction("
-               2:             TypeVoid
-               3:             TypeFunction 2
-               8:             TypeInt 32 0
-               9:      8(int) Constant 1
-              10:      8(int) Constant 3400
-              11:      8(int) Constant 2
-              12:      8(int) Constant 2120
-              13:      8(int) Constant 264
-4(ComputeShaderFunction):           2 Function None 3
-               5:             Label
-              14:           2 FunctionCall 6(@ComputeShaderFunction()
+                              Name 54_1  "ComputeShaderFunction"
+                              Name 54_2  "@ComputeShaderFunction("
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+         uint(1):   21_1(int) Constant 1
+      uint(3400):   21_1(int) Constant 3400
+         uint(2):   21_1(int) Constant 2
+      uint(2120):   21_1(int) Constant 2120
+       uint(264):   21_1(int) Constant 264
+54_1(ComputeShaderFunction):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:        19_1 FunctionCall 54_2(@ComputeShaderFunction()
                               Return
                               FunctionEnd
-6(@ComputeShaderFunction():           2 Function None 3
-               7:             Label
-                              MemoryBarrier 9 10
-                              ControlBarrier 11 9 10
-                              MemoryBarrier 9 12
-                              ControlBarrier 11 9 12
-                              MemoryBarrier 11 13
-                              ControlBarrier 11 11 13
+54_2(@ComputeShaderFunction():        19_1 Function None 33_1
+           248_2:             Label
+                              MemoryBarrier uint(1) uint(3400)
+                              ControlBarrier uint(2) uint(1) uint(3400)
+                              MemoryBarrier uint(1) uint(2120)
+                              ControlBarrier uint(2) uint(1) uint(2120)
+                              MemoryBarrier uint(2) uint(264)
+                              ControlBarrier uint(2) uint(2) uint(264)
                               Return
                               FunctionEnd

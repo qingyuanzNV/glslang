@@ -7,41 +7,41 @@ spv.specConstantOp.float16.comp
                               Capability Float16
                               Capability StorageUniformBufferBlock16
                               Extension  "SPV_KHR_16bit_storage"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 450
                               SourceExtension  "GL_EXT_shader_explicit_arithmetic_types_float16"
-                              Name 4  "main"
-                              Name 8  "S"
-                              MemberName 8(S) 0  "p_out"
-                              Name 10  ""
-                              Name 14  "c"
-                              Decorate 7 ArrayStride 2
-                              Decorate 8(S) BufferBlock
-                              MemberDecorate 8(S) 0 Restrict
-                              MemberDecorate 8(S) 0 NonReadable
-                              MemberDecorate 8(S) 0 Offset 0
-                              Decorate 10 Binding 0
-                              Decorate 10 DescriptorSet 0
-                              Decorate 14(c) SpecId 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 16
-               7:             TypeRuntimeArray 6(float16_t)
-            8(S):             TypeStruct 7
-               9:             TypePointer Uniform 8(S)
-              10:      9(ptr) Variable Uniform
-              11:             TypeInt 32 1
-              12:     11(int) Constant 0
-              13:             TypeFloat 32
-           14(c):   13(float) SpecConstant 1090519040
-              15:6(float16_t) SpecConstantOp 115 14(c)
-              16:             TypePointer Uniform 6(float16_t)
-         4(main):           2 Function None 3
-               5:             Label
-              17:     16(ptr) AccessChain 10 12 12
-                              Store 17 15
+                              Name 54_1  "main"
+                              Name 30_1  "S"
+                              MemberName 30_1(S) 0  "p_out"
+                              Name 59_1  ""
+                              Name 50_1  "c"
+                              Decorate 29_1 ArrayStride 2
+                              Decorate 30_1(S) BufferBlock
+                              MemberDecorate 30_1(S) 0 Restrict
+                              MemberDecorate 30_1(S) 0 NonReadable
+                              MemberDecorate 30_1(S) 0 Offset 0
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 50_1(c) SpecId 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 16
+            29_1:             TypeRuntimeArray 22_1(float16_t)
+         30_1(S):             TypeStruct 29_1
+            32_1:             TypePointer Uniform 30_1(S)
+            59_1:   32_1(ptr) Variable Uniform
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            22_2:             TypeFloat 32
+         50_1(c): 22_2(float) SpecConstant 1090519040
+            52_1:22_1(float16_t) SpecConstantOp 115 50_1(c)
+            32_2:             TypePointer Uniform 22_1(float16_t)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 43_1 43_1
+                              Store 65_1 52_1
                               Return
                               FunctionEnd

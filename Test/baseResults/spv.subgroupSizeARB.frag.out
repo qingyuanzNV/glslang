@@ -6,29 +6,29 @@ spv.subgroupSizeARB.frag
                               Capability Shader
                               Capability SubgroupBallotKHR
                               Extension  "SPV_KHR_shader_ballot"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 8 10
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_ARB_shader_ballot"
                               SourceExtension  "GL_KHR_shader_subgroup_basic"
-                              Name 4  "main"
-                              Name 8  "result"
-                              Name 10  "gl_SubGroupSizeARB"
-                              Decorate 8(result) Location 0
-                              Decorate 10(gl_SubGroupSizeARB) BuiltIn SubgroupSize
-                              Decorate 10(gl_SubGroupSizeARB) Flat
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Output 6(int)
-       8(result):      7(ptr) Variable Output
-               9:             TypePointer Input 6(int)
-10(gl_SubGroupSizeARB):      9(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              11:      6(int) Load 10(gl_SubGroupSizeARB)
-                              Store 8(result) 11
+                              Name 54_1  "main"
+                              Name 59_1  "result"
+                              Name 59_2  "gl_SubGroupSizeARB"
+                              Decorate 59_1(result) Location 0
+                              Decorate 59_2(gl_SubGroupSizeARB) BuiltIn SubgroupSize
+                              Decorate 59_2(gl_SubGroupSizeARB) Flat
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Output 21_1(int)
+    59_1(result):   32_1(ptr) Variable Output
+            32_2:             TypePointer Input 21_1(int)
+59_2(gl_SubGroupSizeARB):   32_2(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_2(gl_SubGroupSizeARB)
+                              Store 59_1(result) 61_1
                               Return
                               FunctionEnd

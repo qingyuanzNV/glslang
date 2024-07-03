@@ -66,64 +66,64 @@ Shader version: 500
 // Id's are bound by 28
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 26
+                              EntryPoint Vertex 54_1  "main" 59_2
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "@main("
-                              Name 11  "N1"
-                              MemberName 11(N1) 0  "a"
-                              MemberName 11(N1) 1  "b"
-                              Name 12  "N2"
-                              MemberName 12(N2) 0  "s1"
-                              MemberName 12(N2) 1  "s2"
-                              Name 13  "N3"
-                              MemberName 13(N3) 0  "t1"
-                              MemberName 13(N3) 1  "t2"
-                              MemberName 13(N3) 2  "t3"
-                              Name 14  "$Global"
-                              MemberName 14($Global) 0  "foo"
-                              Name 16  ""
-                              Name 26  "@entryPointOutput"
-                              MemberDecorate 11(N1) 0 Offset 0
-                              MemberDecorate 11(N1) 1 Offset 4
-                              MemberDecorate 12(N2) 0 Offset 0
-                              MemberDecorate 12(N2) 1 Offset 16
-                              MemberDecorate 13(N3) 0 Offset 0
-                              MemberDecorate 13(N3) 1 Offset 32
-                              MemberDecorate 13(N3) 2 Offset 48
-                              Decorate 14($Global) Block
-                              MemberDecorate 14($Global) 0 Offset 0
-                              Decorate 16 Binding 0
-                              Decorate 16 DescriptorSet 0
-                              Decorate 26(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeFunction 6(float)
-              10:             TypeInt 32 1
-          11(N1):             TypeStruct 10(int) 6(float)
-          12(N2):             TypeStruct 11(N1) 11(N1)
-          13(N3):             TypeStruct 12(N2) 11(N1) 12(N2)
-     14($Global):             TypeStruct 13(N3)
-              15:             TypePointer Uniform 14($Global)
-              16:     15(ptr) Variable Uniform
-              17:     10(int) Constant 0
-              18:     10(int) Constant 2
-              19:     10(int) Constant 1
-              20:             TypePointer Uniform 6(float)
-              25:             TypePointer Output 6(float)
-26(@entryPointOutput):     25(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              27:    6(float) FunctionCall 8(@main()
-                              Store 26(@entryPointOutput) 27
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 30_1  "N1"
+                              MemberName 30_1(N1) 0  "a"
+                              MemberName 30_1(N1) 1  "b"
+                              Name 30_2  "N2"
+                              MemberName 30_2(N2) 0  "s1"
+                              MemberName 30_2(N2) 1  "s2"
+                              Name 30_3  "N3"
+                              MemberName 30_3(N3) 0  "t1"
+                              MemberName 30_3(N3) 1  "t2"
+                              MemberName 30_3(N3) 2  "t3"
+                              Name 30_4  "$Global"
+                              MemberName 30_4($Global) 0  "foo"
+                              Name 59_1  ""
+                              Name 59_2  "@entryPointOutput"
+                              MemberDecorate 30_1(N1) 0 Offset 0
+                              MemberDecorate 30_1(N1) 1 Offset 4
+                              MemberDecorate 30_2(N2) 0 Offset 0
+                              MemberDecorate 30_2(N2) 1 Offset 16
+                              MemberDecorate 30_3(N3) 0 Offset 0
+                              MemberDecorate 30_3(N3) 1 Offset 32
+                              MemberDecorate 30_3(N3) 2 Offset 48
+                              Decorate 30_4($Global) Block
+                              MemberDecorate 30_4($Global) 0 Offset 0
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            33_2:             TypeFunction 22_1(float)
+            21_1:             TypeInt 32 1
+        30_1(N1):             TypeStruct 21_1(int) 22_1(float)
+        30_2(N2):             TypeStruct 30_1(N1) 30_1(N1)
+        30_3(N3):             TypeStruct 30_2(N2) 30_1(N1) 30_2(N2)
+   30_4($Global):             TypeStruct 30_3(N3)
+            32_1:             TypePointer Uniform 30_4($Global)
+            59_1:   32_1(ptr) Variable Uniform
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 2
+            43_3:   21_1(int) Constant 1
+            32_2:             TypePointer Uniform 22_1(float)
+            32_3:             TypePointer Output 22_1(float)
+59_2(@entryPointOutput):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 22_1(float) FunctionCall 54_2(@main()
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       8(@main():    6(float) Function None 7
-               9:             Label
-              21:     20(ptr) AccessChain 16 17 18 19 19
-              22:    6(float) Load 21
-                              ReturnValue 22
+    54_2(@main(): 22_1(float) Function None 33_2
+           248_2:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 43_1 43_2 43_3 43_3
+            61_1: 22_1(float) Load 65_1
+                              ReturnValue 61_1
                               FunctionEnd

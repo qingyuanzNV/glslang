@@ -7,86 +7,86 @@ spv.bufferhandle16.frag
                               Capability Int64
                               Capability PhysicalStorageBufferAddressesEXT
                               Extension  "SPV_KHR_physical_storage_buffer"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_buffer_reference"
                               SourceExtension  "GL_EXT_scalar_block_layout"
                               SourceExtension  "GL_EXT_shader_explicit_arithmetic_types_int64"
-                              Name 4  "main"
-                              Name 9  "T1"
-                              MemberName 9(T1) 0  "x"
-                              MemberName 9(T1) 1  "y"
-                              Name 11  "a"
-                              Name 15  "b"
-                              Name 18  "c"
-                              Name 24  "d"
-                              Name 26  "e"
-                              Name 29  "f"
-                              Name 46  "x"
-                              Decorate 9(T1) Block
-                              MemberDecorate 9(T1) 0 Offset 0
-                              MemberDecorate 9(T1) 1 Offset 4
-                              Decorate 11(a) DecorationAliasedPointerEXT
-                              Decorate 15(b) DecorationAliasedPointerEXT
-                              Decorate 18(c) DecorationAliasedPointerEXT
-                              Decorate 24(d) DecorationAliasedPointerEXT
-                              Decorate 26(e) DecorationAliasedPointerEXT
-                              Decorate 29(f) DecorationAliasedPointerEXT
-               2:             TypeVoid
-               3:             TypeFunction 2
-                              TypeForwardPointer 6 PhysicalStorageBufferEXT
-               7:             TypeInt 32 1
-               8:             TypeInt 32 0
-           9(T1):             TypeStruct 7(int) 8(int)
-               6:             TypePointer PhysicalStorageBufferEXT 9(T1)
-              10:             TypePointer Function 6(ptr)
-              12:             TypeInt 64 0
-              13: 12(int64_t) Constant 4 0
-              16: 12(int64_t) Constant 5 0
-              19:             TypeBool
-              20:    19(bool) ConstantTrue
-              27: 12(int64_t) Constant 6 0
-              31:      7(int) Constant 1
-              32:             TypePointer PhysicalStorageBufferEXT 8(int)
-              35:      8(int) Constant 0
-              37: 12(int64_t) Constant 8 0
-              39: 12(int64_t) Constant 9 0
-              42:      7(int) Constant 3
-              43:      8(int) Constant 3
-              44:             TypeArray 7(int) 43
-              45:             TypePointer Private 44
-           46(x):     45(ptr) Variable Private
-              47: 12(int64_t) Constant 10 0
-         4(main):           2 Function None 3
-               5:             Label
-           11(a):     10(ptr) Variable Function
-           15(b):     10(ptr) Variable Function
-           18(c):     10(ptr) Variable Function
-           24(d):     10(ptr) Variable Function
-           26(e):     10(ptr) Variable Function
-           29(f):     10(ptr) Variable Function
-              14:      6(ptr) Bitcast 13
-                              Store 11(a) 14
-              17:      6(ptr) Bitcast 16
-                              Store 15(b) 17
-              21:      6(ptr) Load 11(a)
-              22:      6(ptr) Load 15(b)
-              23:      6(ptr) Select 20 21 22
-                              Store 18(c) 23
-              25:      6(ptr) Load 15(b)
-                              Store 24(d) 25
-              28:      6(ptr) Bitcast 27
-                              Store 26(e) 28
-              30:      6(ptr) Load 11(a)
-              33:     32(ptr) AccessChain 30 31
-              34:      8(int) Load 33 Aligned 4
-              36:    19(bool) INotEqual 34 35
-              38:      6(ptr) Bitcast 37
-              40:      6(ptr) Bitcast 39
-              41:      6(ptr) Select 36 38 40
-                              Store 29(f) 41
+                              Name 54_1  "main"
+                              Name 30_1  "T1"
+                              MemberName 30_1(T1) 0  "x"
+                              MemberName 30_1(T1) 1  "y"
+                              Name 59_2  "a"
+                              Name 59_3  "b"
+                              Name 59_4  "c"
+                              Name 59_5  "d"
+                              Name 59_6  "e"
+                              Name 59_7  "f"
+                              Name 59_1  "x"
+                              Decorate 30_1(T1) Block
+                              MemberDecorate 30_1(T1) 0 Offset 0
+                              MemberDecorate 30_1(T1) 1 Offset 4
+                              Decorate 59_2(a) DecorationAliasedPointerEXT
+                              Decorate 59_3(b) DecorationAliasedPointerEXT
+                              Decorate 59_4(c) DecorationAliasedPointerEXT
+                              Decorate 59_5(d) DecorationAliasedPointerEXT
+                              Decorate 59_6(e) DecorationAliasedPointerEXT
+                              Decorate 59_7(f) DecorationAliasedPointerEXT
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+                              TypeForwardPointer 32_1 PhysicalStorageBufferEXT
+            21_1:             TypeInt 32 1
+            21_2:             TypeInt 32 0
+        30_1(T1):             TypeStruct 21_1(int) 21_2(int)
+            32_1:             TypePointer PhysicalStorageBufferEXT 30_1(T1)
+            32_2:             TypePointer Function 32_1(ptr)
+            21_3:             TypeInt 64 0
+            43_1:21_3(int64_t) Constant 4 0
+            43_2:21_3(int64_t) Constant 5 0
+            20_1:             TypeBool
+            41_1:  20_1(bool) ConstantTrue
+            43_3:21_3(int64_t) Constant 6 0
+            43_4:   21_1(int) Constant 1
+            32_3:             TypePointer PhysicalStorageBufferEXT 21_2(int)
+         uint(0):   21_2(int) Constant 0
+            43_5:21_3(int64_t) Constant 8 0
+            43_6:21_3(int64_t) Constant 9 0
+            43_7:   21_1(int) Constant 3
+         uint(3):   21_2(int) Constant 3
+            28_1:             TypeArray 21_1(int) uint(3)
+            32_4:             TypePointer Private 28_1
+         59_1(x):   32_4(ptr) Variable Private
+            43_8:21_3(int64_t) Constant 10 0
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_2(a):   32_2(ptr) Variable Function
+         59_3(b):   32_2(ptr) Variable Function
+         59_4(c):   32_2(ptr) Variable Function
+         59_5(d):   32_2(ptr) Variable Function
+         59_6(e):   32_2(ptr) Variable Function
+         59_7(f):   32_2(ptr) Variable Function
+           124_1:   32_1(ptr) Bitcast 43_1
+                              Store 59_2(a) 124_1
+           124_2:   32_1(ptr) Bitcast 43_2
+                              Store 59_3(b) 124_2
+            61_1:   32_1(ptr) Load 59_2(a)
+            61_2:   32_1(ptr) Load 59_3(b)
+           169_1:   32_1(ptr) Select 41_1 61_1 61_2
+                              Store 59_4(c) 169_1
+            61_3:   32_1(ptr) Load 59_3(b)
+                              Store 59_5(d) 61_3
+           124_3:   32_1(ptr) Bitcast 43_3
+                              Store 59_6(e) 124_3
+            61_4:   32_1(ptr) Load 59_2(a)
+            65_1:   32_3(ptr) AccessChain 61_4 43_4
+            61_5:   21_2(int) Load 65_1 Aligned 4
+           171_1:  20_1(bool) INotEqual 61_5 uint(0)
+           124_4:   32_1(ptr) Bitcast 43_5
+           124_5:   32_1(ptr) Bitcast 43_6
+           169_2:   32_1(ptr) Select 171_1 124_4 124_5
+                              Store 59_7(f) 169_2
                               Return
                               FunctionEnd

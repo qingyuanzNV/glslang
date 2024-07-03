@@ -9,74 +9,74 @@ Validation failed
                               Capability UniformAndStorageBuffer8BitAccess
                               Extension  "SPV_KHR_16bit_storage"
                               Extension  "SPV_KHR_8bit_storage"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_shader_16bit_storage"
                               SourceExtension  "GL_EXT_shader_8bit_storage"
-                              Name 4  "main"
-                              Name 11  "B"
-                              MemberName 11(B) 0  "i8_from_i16"
-                              MemberName 11(B) 1  "i16_from_i8"
-                              MemberName 11(B) 2  "u8_from_u16"
-                              MemberName 11(B) 3  "u16_from_u8"
-                              MemberName 11(B) 4  "f16_from_i8"
-                              Name 13  ""
-                              Decorate 11(B) BufferBlock
-                              MemberDecorate 11(B) 0 Offset 0
-                              MemberDecorate 11(B) 1 Offset 2
-                              MemberDecorate 11(B) 2 Offset 4
-                              MemberDecorate 11(B) 3 Offset 6
-                              MemberDecorate 11(B) 4 Offset 8
-                              Decorate 13 Binding 0
-                              Decorate 13 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 8 1
-               7:             TypeInt 16 1
-               8:             TypeInt 8 0
-               9:             TypeInt 16 0
-              10:             TypeFloat 16
-           11(B):             TypeStruct 6(int8_t) 7(int16_t) 8(int8_t) 9(int16_t) 10(float16_t)
-              12:             TypePointer Uniform 11(B)
-              13:     12(ptr) Variable Uniform
-              14:             TypeInt 32 1
-              15:     14(int) Constant 0
-              16:     14(int) Constant 1
-              19:             TypePointer Uniform 6(int8_t)
-              23:             TypePointer Uniform 7(int16_t)
-              25:     14(int) Constant 2
-              26:             TypeInt 32 0
-              27:     26(int) Constant 1
-              30:             TypePointer Uniform 8(int8_t)
-              32:     14(int) Constant 3
-              35:             TypePointer Uniform 9(int16_t)
-              37:     14(int) Constant 4
-              39:             TypeFloat 32
-              41:             TypePointer Uniform 10(float16_t)
-         4(main):           2 Function None 3
-               5:             Label
-              17:  7(int16_t) SConvert 16
-              18:   6(int8_t) SConvert 17
-              20:     19(ptr) AccessChain 13 15
-                              Store 20 18
-              21:   6(int8_t) SConvert 16
-              22:  7(int16_t) SConvert 21
-              24:     23(ptr) AccessChain 13 16
-                              Store 24 22
-              28:  9(int16_t) UConvert 27
-              29:   8(int8_t) UConvert 28
-              31:     30(ptr) AccessChain 13 25
-                              Store 31 29
-              33:   8(int8_t) UConvert 27
-              34:  9(int16_t) UConvert 33
-              36:     35(ptr) AccessChain 13 32
-                              Store 36 34
-              38:   6(int8_t) SConvert 16
-              40:10(float16_t) FConvert 38
-              42:     41(ptr) AccessChain 13 37
-                              Store 42 40
+                              Name 54_1  "main"
+                              Name 30_1  "B"
+                              MemberName 30_1(B) 0  "i8_from_i16"
+                              MemberName 30_1(B) 1  "i16_from_i8"
+                              MemberName 30_1(B) 2  "u8_from_u16"
+                              MemberName 30_1(B) 3  "u16_from_u8"
+                              MemberName 30_1(B) 4  "f16_from_i8"
+                              Name 59_1  ""
+                              Decorate 30_1(B) BufferBlock
+                              MemberDecorate 30_1(B) 0 Offset 0
+                              MemberDecorate 30_1(B) 1 Offset 2
+                              MemberDecorate 30_1(B) 2 Offset 4
+                              MemberDecorate 30_1(B) 3 Offset 6
+                              MemberDecorate 30_1(B) 4 Offset 8
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 8 1
+            21_2:             TypeInt 16 1
+            21_3:             TypeInt 8 0
+            21_4:             TypeInt 16 0
+            22_1:             TypeFloat 16
+         30_1(B):             TypeStruct 21_1(int8_t) 21_2(int16_t) 21_3(int8_t) 21_4(int16_t) 22_1(float16_t)
+            32_1:             TypePointer Uniform 30_1(B)
+            59_1:   32_1(ptr) Variable Uniform
+            21_5:             TypeInt 32 1
+            43_1:   21_5(int) Constant 0
+            43_2:   21_5(int) Constant 1
+            32_2:             TypePointer Uniform 21_1(int8_t)
+            32_3:             TypePointer Uniform 21_2(int16_t)
+            43_3:   21_5(int) Constant 2
+            21_6:             TypeInt 32 0
+         uint(1):   21_6(int) Constant 1
+            32_4:             TypePointer Uniform 21_3(int8_t)
+            43_4:   21_5(int) Constant 3
+            32_5:             TypePointer Uniform 21_4(int16_t)
+            43_5:   21_5(int) Constant 4
+            22_2:             TypeFloat 32
+            32_6:             TypePointer Uniform 22_1(float16_t)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+           114_1:21_2(int16_t) SConvert 43_2
+           114_2:21_1(int8_t) SConvert 114_1
+            65_1:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_1 114_2
+           114_3:21_1(int8_t) SConvert 43_2
+           114_4:21_2(int16_t) SConvert 114_3
+            65_2:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_2 114_4
+           113_1:21_4(int16_t) UConvert uint(1)
+           113_2:21_3(int8_t) UConvert 113_1
+            65_3:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_3 113_2
+           113_3:21_3(int8_t) UConvert uint(1)
+           113_4:21_4(int16_t) UConvert 113_3
+            65_4:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_4 113_4
+           114_5:21_1(int8_t) SConvert 43_2
+           115_1:22_1(float16_t) FConvert 114_5
+            65_5:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_5 115_1
                               Return
                               FunctionEnd

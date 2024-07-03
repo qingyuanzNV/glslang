@@ -4,59 +4,59 @@ spv.pushConstant.vert
 // Id's are bound by 35
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 24
+                              EntryPoint Vertex 54_1  "main" 59_2
                               Source GLSL 400
-                              Name 4  "main"
-                              Name 11  "Material"
-                              MemberName 11(Material) 0  "kind"
-                              MemberName 11(Material) 1  "fa"
-                              Name 13  "matInst"
-                              Name 24  "color"
-                              Decorate 10 ArrayStride 4
-                              Decorate 11(Material) Block
-                              MemberDecorate 11(Material) 0 Offset 0
-                              MemberDecorate 11(Material) 1 Offset 4
-                              Decorate 24(color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeFloat 32
-               8:             TypeInt 32 0
-               9:      8(int) Constant 3
-              10:             TypeArray 7(float) 9
-    11(Material):             TypeStruct 6(int) 10
-              12:             TypePointer PushConstant 11(Material)
-     13(matInst):     12(ptr) Variable PushConstant
-              14:      6(int) Constant 0
-              15:             TypePointer PushConstant 6(int)
-              22:             TypeVector 7(float) 4
-              23:             TypePointer Output 22(fvec4)
-       24(color):     23(ptr) Variable Output
-              25:    7(float) Constant 1045220557
-              26:   22(fvec4) ConstantComposite 25 25 25 25
-              28:    7(float) Constant 1056964608
-              29:   22(fvec4) ConstantComposite 28 28 28 28
-              31:    7(float) Constant 0
-              32:   22(fvec4) ConstantComposite 31 31 31 31
-         4(main):           2 Function None 3
-               5:             Label
-              16:     15(ptr) AccessChain 13(matInst) 14
-              17:      6(int) Load 16
-                              SelectionMerge 21 None
-                              Switch 17 20 
-                                     case 1: 18
-                                     case 2: 19
-              20:               Label
-                                Store 24(color) 32
-                                Branch 21
-              18:               Label
-                                Store 24(color) 26
-                                Branch 21
-              19:               Label
-                                Store 24(color) 29
-                                Branch 21
-              21:             Label
+                              Name 54_1  "main"
+                              Name 30_1  "Material"
+                              MemberName 30_1(Material) 0  "kind"
+                              MemberName 30_1(Material) 1  "fa"
+                              Name 59_1  "matInst"
+                              Name 59_2  "color"
+                              Decorate 28_1 ArrayStride 4
+                              Decorate 30_1(Material) Block
+                              MemberDecorate 30_1(Material) 0 Offset 0
+                              MemberDecorate 30_1(Material) 1 Offset 4
+                              Decorate 59_2(color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            22_1:             TypeFloat 32
+            21_2:             TypeInt 32 0
+         uint(3):   21_2(int) Constant 3
+            28_1:             TypeArray 22_1(float) uint(3)
+  30_1(Material):             TypeStruct 21_1(int) 28_1
+            32_1:             TypePointer PushConstant 30_1(Material)
+   59_1(matInst):   32_1(ptr) Variable PushConstant
+            43_1:   21_1(int) Constant 0
+            32_2:             TypePointer PushConstant 21_1(int)
+            23_1:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Output 23_1(fvec4)
+     59_2(color):   32_3(ptr) Variable Output
+            43_2: 22_1(float) Constant 1045220557
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+            43_3: 22_1(float) Constant 1056964608
+            44_2: 23_1(fvec4) ConstantComposite 43_3 43_3 43_3 43_3
+            43_4: 22_1(float) Constant 0
+            44_3: 23_1(fvec4) ConstantComposite 43_4 43_4 43_4 43_4
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1(matInst) 43_1
+            61_1:   21_1(int) Load 65_1
+                              SelectionMerge 248_5 None
+                              Switch 61_1 248_2 
+                                     case 1: 248_3
+                                     case 2: 248_4
+           248_2:               Label
+                                Store 59_2(color) 44_3
+                                Branch 248_5
+           248_3:               Label
+                                Store 59_2(color) 44_1
+                                Branch 248_5
+           248_4:               Label
+                                Store 59_2(color) 44_2
+                                Branch 248_5
+           248_5:             Label
                               Return
                               FunctionEnd

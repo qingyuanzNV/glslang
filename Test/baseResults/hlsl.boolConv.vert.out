@@ -208,126 +208,126 @@ Shader version: 500
 // Id's are bound by 99
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 97
+                              EntryPoint Vertex 54_1  "main" 59_3
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "@main("
-                              Name 13  "b"
-                              Name 17  "r"
-                              Name 19  "a"
-                              Name 97  "@entryPointOutput"
-                              Decorate 97(@entryPointOutput) BuiltIn Position
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypeBool
-              12:             TypePointer Private 11(bool)
-           13(b):     12(ptr) Variable Private
-              14:    11(bool) ConstantTrue
-              15:             TypeInt 32 1
-              16:             TypePointer Function 15(int)
-              18:     15(int) Constant 0
-           19(a):     12(ptr) Variable Private
-              21:     15(int) Constant 1
-              96:             TypePointer Output 7(fvec4)
-97(@entryPointOutput):     96(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-                              Store 13(b) 14
-              98:    7(fvec4) FunctionCall 9(@main()
-                              Store 97(@entryPointOutput) 98
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 59_1  "b"
+                              Name 59_4  "r"
+                              Name 59_2  "a"
+                              Name 59_3  "@entryPointOutput"
+                              Decorate 59_3(@entryPointOutput) BuiltIn Position
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            20_1:             TypeBool
+            32_1:             TypePointer Private 20_1(bool)
+         59_1(b):   32_1(ptr) Variable Private
+            41_1:  20_1(bool) ConstantTrue
+            21_1:             TypeInt 32 1
+            32_2:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+         59_2(a):   32_1(ptr) Variable Private
+            43_2:   21_1(int) Constant 1
+            32_3:             TypePointer Output 23_1(fvec4)
+59_3(@entryPointOutput):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+                              Store 59_1(b) 41_1
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main()
+                              Store 59_3(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       9(@main():    7(fvec4) Function None 8
-              10:             Label
-           17(r):     16(ptr) Variable Function
-                              Store 17(r) 18
-              20:    11(bool) Load 19(a)
-              22:     15(int) Select 20 21 18
-              23:    11(bool) Load 13(b)
-              24:     15(int) Select 23 21 18
-              25:     15(int) IAdd 22 24
-              26:     15(int) Load 17(r)
-              27:     15(int) IAdd 26 25
-                              Store 17(r) 27
-              28:    11(bool) Load 19(a)
-              29:     15(int) Select 28 21 18
-              30:    11(bool) Load 13(b)
-              31:     15(int) Select 30 21 18
-              32:     15(int) ISub 29 31
-              33:     15(int) Load 17(r)
-              34:     15(int) IAdd 33 32
-                              Store 17(r) 34
-              35:    11(bool) Load 19(a)
-              36:     15(int) Select 35 21 18
-              37:    11(bool) Load 13(b)
-              38:     15(int) Select 37 21 18
-              39:     15(int) IMul 36 38
-              40:     15(int) Load 17(r)
-              41:     15(int) IAdd 40 39
-                              Store 17(r) 41
-              42:    11(bool) Load 19(a)
-              43:     15(int) Select 42 21 18
-              44:    11(bool) Load 13(b)
-              45:     15(int) Select 44 21 18
-              46:     15(int) SDiv 43 45
-              47:     15(int) Load 17(r)
-              48:     15(int) IAdd 47 46
-                              Store 17(r) 48
-              49:    11(bool) Load 19(a)
-              50:     15(int) Select 49 21 18
-              51:    11(bool) Load 13(b)
-              52:     15(int) Select 51 21 18
-              53:     15(int) SMod 50 52
-              54:     15(int) Load 17(r)
-              55:     15(int) IAdd 54 53
-                              Store 17(r) 55
-              56:    11(bool) Load 19(a)
-              57:     15(int) Select 56 21 18
-              58:    11(bool) Load 13(b)
-              59:     15(int) Select 58 21 18
-              60:     15(int) BitwiseAnd 57 59
-              61:     15(int) Load 17(r)
-              62:     15(int) IAdd 61 60
-                              Store 17(r) 62
-              63:    11(bool) Load 19(a)
-              64:     15(int) Select 63 21 18
-              65:    11(bool) Load 13(b)
-              66:     15(int) Select 65 21 18
-              67:     15(int) BitwiseOr 64 66
-              68:     15(int) Load 17(r)
-              69:     15(int) IAdd 68 67
-                              Store 17(r) 69
-              70:    11(bool) Load 19(a)
-              71:     15(int) Select 70 21 18
-              72:    11(bool) Load 13(b)
-              73:     15(int) Select 72 21 18
-              74:     15(int) BitwiseXor 71 73
-              75:     15(int) Load 17(r)
-              76:     15(int) IAdd 75 74
-                              Store 17(r) 76
-              77:    11(bool) Load 19(a)
-              78:     15(int) Select 77 21 18
-              79:    11(bool) Load 13(b)
-              80:     15(int) Select 79 21 18
-              81:     15(int) ShiftLeftLogical 78 80
-              82:     15(int) Load 17(r)
-              83:     15(int) IAdd 82 81
-                              Store 17(r) 83
-              84:    11(bool) Load 19(a)
-              85:     15(int) Select 84 21 18
-              86:    11(bool) Load 13(b)
-              87:     15(int) Select 86 21 18
-              88:     15(int) ShiftRightArithmetic 85 87
-              89:     15(int) Load 17(r)
-              90:     15(int) IAdd 89 88
-                              Store 17(r) 90
-              91:     15(int) Load 17(r)
-              92:    6(float) ConvertSToF 91
-              93:    7(fvec4) CompositeConstruct 92 92 92 92
-                              ReturnValue 93
+    54_2(@main(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+         59_4(r):   32_2(ptr) Variable Function
+                              Store 59_4(r) 43_1
+            61_1:  20_1(bool) Load 59_2(a)
+           169_1:   21_1(int) Select 61_1 43_2 43_1
+            61_2:  20_1(bool) Load 59_1(b)
+           169_2:   21_1(int) Select 61_2 43_2 43_1
+           128_1:   21_1(int) IAdd 169_1 169_2
+            61_3:   21_1(int) Load 59_4(r)
+           128_2:   21_1(int) IAdd 61_3 128_1
+                              Store 59_4(r) 128_2
+            61_4:  20_1(bool) Load 59_2(a)
+           169_3:   21_1(int) Select 61_4 43_2 43_1
+            61_5:  20_1(bool) Load 59_1(b)
+           169_4:   21_1(int) Select 61_5 43_2 43_1
+           130_1:   21_1(int) ISub 169_3 169_4
+            61_6:   21_1(int) Load 59_4(r)
+           128_3:   21_1(int) IAdd 61_6 130_1
+                              Store 59_4(r) 128_3
+            61_7:  20_1(bool) Load 59_2(a)
+           169_5:   21_1(int) Select 61_7 43_2 43_1
+            61_8:  20_1(bool) Load 59_1(b)
+           169_6:   21_1(int) Select 61_8 43_2 43_1
+           132_1:   21_1(int) IMul 169_5 169_6
+            61_9:   21_1(int) Load 59_4(r)
+           128_4:   21_1(int) IAdd 61_9 132_1
+                              Store 59_4(r) 128_4
+           61_10:  20_1(bool) Load 59_2(a)
+           169_7:   21_1(int) Select 61_10 43_2 43_1
+           61_11:  20_1(bool) Load 59_1(b)
+           169_8:   21_1(int) Select 61_11 43_2 43_1
+           135_1:   21_1(int) SDiv 169_7 169_8
+           61_12:   21_1(int) Load 59_4(r)
+           128_5:   21_1(int) IAdd 61_12 135_1
+                              Store 59_4(r) 128_5
+           61_13:  20_1(bool) Load 59_2(a)
+           169_9:   21_1(int) Select 61_13 43_2 43_1
+           61_14:  20_1(bool) Load 59_1(b)
+          169_10:   21_1(int) Select 61_14 43_2 43_1
+           139_1:   21_1(int) SMod 169_9 169_10
+           61_15:   21_1(int) Load 59_4(r)
+           128_6:   21_1(int) IAdd 61_15 139_1
+                              Store 59_4(r) 128_6
+           61_16:  20_1(bool) Load 59_2(a)
+          169_11:   21_1(int) Select 61_16 43_2 43_1
+           61_17:  20_1(bool) Load 59_1(b)
+          169_12:   21_1(int) Select 61_17 43_2 43_1
+           199_1:   21_1(int) BitwiseAnd 169_11 169_12
+           61_18:   21_1(int) Load 59_4(r)
+           128_7:   21_1(int) IAdd 61_18 199_1
+                              Store 59_4(r) 128_7
+           61_19:  20_1(bool) Load 59_2(a)
+          169_13:   21_1(int) Select 61_19 43_2 43_1
+           61_20:  20_1(bool) Load 59_1(b)
+          169_14:   21_1(int) Select 61_20 43_2 43_1
+           197_1:   21_1(int) BitwiseOr 169_13 169_14
+           61_21:   21_1(int) Load 59_4(r)
+           128_8:   21_1(int) IAdd 61_21 197_1
+                              Store 59_4(r) 128_8
+           61_22:  20_1(bool) Load 59_2(a)
+          169_15:   21_1(int) Select 61_22 43_2 43_1
+           61_23:  20_1(bool) Load 59_1(b)
+          169_16:   21_1(int) Select 61_23 43_2 43_1
+           198_1:   21_1(int) BitwiseXor 169_15 169_16
+           61_24:   21_1(int) Load 59_4(r)
+           128_9:   21_1(int) IAdd 61_24 198_1
+                              Store 59_4(r) 128_9
+           61_25:  20_1(bool) Load 59_2(a)
+          169_17:   21_1(int) Select 61_25 43_2 43_1
+           61_26:  20_1(bool) Load 59_1(b)
+          169_18:   21_1(int) Select 61_26 43_2 43_1
+           196_1:   21_1(int) ShiftLeftLogical 169_17 169_18
+           61_27:   21_1(int) Load 59_4(r)
+          128_10:   21_1(int) IAdd 61_27 196_1
+                              Store 59_4(r) 128_10
+           61_28:  20_1(bool) Load 59_2(a)
+          169_19:   21_1(int) Select 61_28 43_2 43_1
+           61_29:  20_1(bool) Load 59_1(b)
+          169_20:   21_1(int) Select 61_29 43_2 43_1
+           195_1:   21_1(int) ShiftRightArithmetic 169_19 169_20
+           61_30:   21_1(int) Load 59_4(r)
+          128_11:   21_1(int) IAdd 61_30 195_1
+                              Store 59_4(r) 128_11
+           61_31:   21_1(int) Load 59_4(r)
+           111_1: 22_1(float) ConvertSToF 61_31
+            80_1: 23_1(fvec4) CompositeConstruct 111_1 111_1 111_1 111_1
+                              ReturnValue 80_1
                               FunctionEnd

@@ -198,115 +198,115 @@ Shader version: 500
 // Id's are bound by 75
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 73
+                              EntryPoint Vertex 54_1  "main" 59_1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "@main("
-                              Name 12  "d"
-                              Name 16  "d2"
-                              Name 21  "f1"
-                              Name 25  "f2"
-                              Name 31  "f3"
-                              Name 36  "f22"
-                              Name 39  "a"
-                              Name 40  "b"
-                              Name 51  "c"
-                              Name 73  "@entryPointOutput"
-                              Decorate 40(b) RelaxedPrecision
-                              Decorate 41 RelaxedPrecision
-                              Decorate 43 RelaxedPrecision
-                              Decorate 44 RelaxedPrecision
-                              Decorate 46 RelaxedPrecision
-                              Decorate 47 RelaxedPrecision
-                              Decorate 48 RelaxedPrecision
-                              Decorate 49 RelaxedPrecision
-                              Decorate 52 RelaxedPrecision
-                              Decorate 73(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeFunction 6(float)
-              10:             TypeInt 32 1
-              11:             TypePointer Function 10(int)
-              13:     10(int) Constant 4
-              14:             TypeVector 10(int) 2
-              15:             TypePointer Function 14(ivec2)
-              17:     10(int) Constant 5
-              20:             TypePointer Function 6(float)
-              22:    6(float) Constant 1075092088
-              23:             TypeVector 6(float) 2
-              24:             TypePointer Function 23(fvec2)
-              29:             TypeVector 6(float) 3
-              30:             TypePointer Function 29(fvec3)
-              32:    6(float) Constant 1073288085
-              33:    6(float) Constant 1060205080
-              34:    6(float) Constant 1066180436
-              35:   29(fvec3) ConstantComposite 32 33 34
-              37:    6(float) Constant 0
-              38:   23(fvec2) ConstantComposite 37 37
-              42:             TypeInt 32 0
-              45:     42(int) Constant 0
-              50:             TypePointer Function 42(int)
-              59:     42(int) Constant 2
-              63:     42(int) Constant 1
-              72:             TypePointer Output 6(float)
-73(@entryPointOutput):     72(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              74:    6(float) FunctionCall 8(@main()
-                              Store 73(@entryPointOutput) 74
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 59_2  "d"
+                              Name 59_3  "d2"
+                              Name 59_4  "f1"
+                              Name 59_5  "f2"
+                              Name 59_6  "f3"
+                              Name 59_7  "f22"
+                              Name 59_8  "a"
+                              Name 59_9  "b"
+                              Name 59_10  "c"
+                              Name 59_1  "@entryPointOutput"
+                              Decorate 59_9(b) RelaxedPrecision
+                              Decorate 61_3 RelaxedPrecision
+                              Decorate 124_1 RelaxedPrecision
+                              Decorate 1-62_1 RelaxedPrecision
+                              Decorate 81_1 RelaxedPrecision
+                              Decorate 61_4 RelaxedPrecision
+                              Decorate 61_5 RelaxedPrecision
+                              Decorate 133_1 RelaxedPrecision
+                              Decorate 61_6 RelaxedPrecision
+                              Decorate 59_1(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            33_2:             TypeFunction 22_1(float)
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 4
+            23_1:             TypeVector 21_1(int) 2
+            32_2:             TypePointer Function 23_1(ivec2)
+            43_2:   21_1(int) Constant 5
+            32_3:             TypePointer Function 22_1(float)
+            43_3: 22_1(float) Constant 1075092088
+            23_2:             TypeVector 22_1(float) 2
+            32_4:             TypePointer Function 23_2(fvec2)
+            23_3:             TypeVector 22_1(float) 3
+            32_5:             TypePointer Function 23_3(fvec3)
+            43_4: 22_1(float) Constant 1073288085
+            43_5: 22_1(float) Constant 1060205080
+            43_6: 22_1(float) Constant 1066180436
+            44_1: 23_3(fvec3) ConstantComposite 43_4 43_5 43_6
+            43_7: 22_1(float) Constant 0
+            44_2: 23_2(fvec2) ConstantComposite 43_7 43_7
+            21_2:             TypeInt 32 0
+         uint(0):   21_2(int) Constant 0
+            32_6:             TypePointer Function 21_2(int)
+         uint(2):   21_2(int) Constant 2
+         uint(1):   21_2(int) Constant 1
+            32_7:             TypePointer Output 22_1(float)
+59_1(@entryPointOutput):   32_7(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 22_1(float) FunctionCall 54_2(@main()
+                              Store 59_1(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       8(@main():    6(float) Function None 7
-               9:             Label
-           12(d):     11(ptr) Variable Function
-          16(d2):     15(ptr) Variable Function
-          21(f1):     20(ptr) Variable Function
-          25(f2):     24(ptr) Variable Function
-          31(f3):     30(ptr) Variable Function
-         36(f22):     24(ptr) Variable Function
-           39(a):     11(ptr) Variable Function
-           40(b):     20(ptr) Variable Function
-           51(c):     50(ptr) Variable Function
-                              Store 12(d) 13
-              18:     10(int) Load 12(d)
-              19:   14(ivec2) CompositeConstruct 17 18
-                              Store 16(d2) 19
-                              Store 21(f1) 22
-              26:   14(ivec2) Load 16(d2)
-              27:   23(fvec2) ConvertSToF 26
-              28:   23(fvec2) ExtInst 1(GLSL.std.450) 28(Log) 27
-                              Store 25(f2) 28
-                              Store 31(f3) 35
-                              Store 36(f22) 38
-                              Store 39(a) 17
-              41:     10(int) Load 39(a)
-              43:     42(int) Bitcast 41
-              44:   23(fvec2) ExtInst 1(GLSL.std.450) 62(UnpackHalf2x16) 43
-              46:    6(float) CompositeExtract 44 0
-                              Store 40(b) 46
-              47:    6(float) Load 40(b)
-              48:    6(float) Load 40(b)
-              49:    6(float) FMul 48 47
-                              Store 40(b) 49
-              52:    6(float) Load 40(b)
-              53:   23(fvec2) CompositeConstruct 52 37
-              54:     42(int) ExtInst 1(GLSL.std.450) 58(PackHalf2x16) 53
-                              Store 51(c) 54
-              55:    6(float) Load 21(f1)
-              56:     20(ptr) AccessChain 25(f2) 45
-              57:    6(float) Load 56
-              58:    6(float) FAdd 55 57
-              60:     20(ptr) AccessChain 31(f3) 59
-              61:    6(float) Load 60
-              62:    6(float) FAdd 58 61
-              64:     20(ptr) AccessChain 36(f22) 63
-              65:    6(float) Load 64
-              66:    6(float) FAdd 62 65
-              67:     42(int) Load 51(c)
-              68:    6(float) ConvertUToF 67
-              69:    6(float) FAdd 66 68
-                              ReturnValue 69
+    54_2(@main(): 22_1(float) Function None 33_2
+           248_2:             Label
+         59_2(d):   32_1(ptr) Variable Function
+        59_3(d2):   32_2(ptr) Variable Function
+        59_4(f1):   32_3(ptr) Variable Function
+        59_5(f2):   32_4(ptr) Variable Function
+        59_6(f3):   32_5(ptr) Variable Function
+       59_7(f22):   32_4(ptr) Variable Function
+         59_8(a):   32_1(ptr) Variable Function
+         59_9(b):   32_3(ptr) Variable Function
+        59_10(c):   32_6(ptr) Variable Function
+                              Store 59_2(d) 43_1
+            61_1:   21_1(int) Load 59_2(d)
+            80_1: 23_1(ivec2) CompositeConstruct 43_2 61_1
+                              Store 59_3(d2) 80_1
+                              Store 59_4(f1) 43_3
+            61_2: 23_1(ivec2) Load 59_3(d2)
+           111_1: 23_2(fvec2) ConvertSToF 61_2
+          1-28_1: 23_2(fvec2) ExtInst 11_1(GLSL.std.450) 28(Log) 111_1
+                              Store 59_5(f2) 1-28_1
+                              Store 59_6(f3) 44_1
+                              Store 59_7(f22) 44_2
+                              Store 59_8(a) 43_2
+            61_3:   21_1(int) Load 59_8(a)
+           124_1:   21_2(int) Bitcast 61_3
+          1-62_1: 23_2(fvec2) ExtInst 11_1(GLSL.std.450) 62(UnpackHalf2x16) 124_1
+            81_1: 22_1(float) CompositeExtract 1-62_1 0
+                              Store 59_9(b) 81_1
+            61_4: 22_1(float) Load 59_9(b)
+            61_5: 22_1(float) Load 59_9(b)
+           133_1: 22_1(float) FMul 61_5 61_4
+                              Store 59_9(b) 133_1
+            61_6: 22_1(float) Load 59_9(b)
+            80_2: 23_2(fvec2) CompositeConstruct 61_6 43_7
+          1-58_1:   21_2(int) ExtInst 11_1(GLSL.std.450) 58(PackHalf2x16) 80_2
+                              Store 59_10(c) 1-58_1
+            61_7: 22_1(float) Load 59_4(f1)
+            65_1:   32_3(ptr) AccessChain 59_5(f2) uint(0)
+            61_8: 22_1(float) Load 65_1
+           129_1: 22_1(float) FAdd 61_7 61_8
+            65_2:   32_3(ptr) AccessChain 59_6(f3) uint(2)
+            61_9: 22_1(float) Load 65_2
+           129_2: 22_1(float) FAdd 129_1 61_9
+            65_3:   32_3(ptr) AccessChain 59_7(f22) uint(1)
+           61_10: 22_1(float) Load 65_3
+           129_3: 22_1(float) FAdd 129_2 61_10
+           61_11:   21_2(int) Load 59_10(c)
+           112_1: 22_1(float) ConvertUToF 61_11
+           129_4: 22_1(float) FAdd 129_3 112_1
+                              ReturnValue 129_4
                               FunctionEnd

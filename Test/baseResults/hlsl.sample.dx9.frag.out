@@ -383,13 +383,13 @@ using depth_any
 
                               Capability Shader
                               Capability Sampled1D
-               2:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 5  "main" 128 132
-                              ExecutionMode 5 OriginUpperLeft
-                              ExecutionMode 5 DepthReplacing
-               1:             String  ""
-                              Source HLSL 500 1  "// OpModuleProcessed auto-map-locations
+                              EntryPoint Fragment 54_1  "main" 59_6 59_7
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 DepthReplacing
+             7_1:             String  ""
+                              Source HLSL 500 7_1  "// OpModuleProcessed auto-map-locations
 // OpModuleProcessed auto-map-bindings
 // OpModuleProcessed entry-point main
 // OpModuleProcessed client vulkan100
@@ -398,197 +398,197 @@ using depth_any
 // OpModuleProcessed hlsl-offsets
 #line 1
 "
-                              Name 5  "main"
-                              Name 9  "PS_OUTPUT"
-                              MemberName 9(PS_OUTPUT) 0  "Color"
-                              MemberName 9(PS_OUTPUT) 1  "Depth"
-                              Name 11  "@main("
-                              Name 14  "ColorOut"
-                              Name 20  "g_sam"
-                              Name 32  "g_sam1D"
-                              Name 38  "g_sam2D"
-                              Name 48  "g_sam3D"
-                              Name 58  "g_samCube"
-                              Name 110  "psout"
-                              Name 125  "flattenTemp"
-                              Name 128  "@entryPointOutput.Color"
-                              Name 132  "@entryPointOutput.Depth"
-                              Decorate 20(g_sam) Binding 0
-                              Decorate 20(g_sam) DescriptorSet 0
-                              Decorate 32(g_sam1D) Binding 1
-                              Decorate 32(g_sam1D) DescriptorSet 0
-                              Decorate 38(g_sam2D) Binding 2
-                              Decorate 38(g_sam2D) DescriptorSet 0
-                              Decorate 48(g_sam3D) Binding 3
-                              Decorate 48(g_sam3D) DescriptorSet 0
-                              Decorate 58(g_samCube) Binding 4
-                              Decorate 58(g_samCube) DescriptorSet 0
-                              Decorate 128(@entryPointOutput.Color) Location 0
-                              Decorate 132(@entryPointOutput.Depth) BuiltIn FragDepth
-               3:             TypeVoid
-               4:             TypeFunction 3
-               7:             TypeFloat 32
-               8:             TypeVector 7(float) 4
-    9(PS_OUTPUT):             TypeStruct 8(fvec4) 7(float)
-              10:             TypeFunction 9(PS_OUTPUT)
-              13:             TypePointer Function 8(fvec4)
-              15:    7(float) Constant 0
-              16:    8(fvec4) ConstantComposite 15 15 15 15
-              17:             TypeImage 7(float) 2D sampled format:Unknown
-              18:             TypeSampledImage 17
-              19:             TypePointer UniformConstant 18
-       20(g_sam):     19(ptr) Variable UniformConstant
-              22:             TypeVector 7(float) 2
-              23:    7(float) Constant 1053609165
-              24:    7(float) Constant 1050253722
-              25:   22(fvec2) ConstantComposite 23 24
-              29:             TypeImage 7(float) 1D sampled format:Unknown
-              30:             TypeSampledImage 29
-              31:             TypePointer UniformConstant 30
-     32(g_sam1D):     31(ptr) Variable UniformConstant
-              34:    7(float) Constant 1056964608
-     38(g_sam2D):     19(ptr) Variable UniformConstant
-              40:    7(float) Constant 1058642330
-              41:   22(fvec2) ConstantComposite 34 40
-              45:             TypeImage 7(float) 3D sampled format:Unknown
-              46:             TypeSampledImage 45
-              47:             TypePointer UniformConstant 46
-     48(g_sam3D):     47(ptr) Variable UniformConstant
-              50:             TypeVector 7(float) 3
-              51:   50(fvec3) ConstantComposite 34 40 23
-              55:             TypeImage 7(float) Cube sampled format:Unknown
-              56:             TypeSampledImage 55
-              57:             TypePointer UniformConstant 56
-   58(g_samCube):     57(ptr) Variable UniformConstant
-              64:    8(fvec4) ConstantComposite 23 24 15 15
-              68:             TypeInt 32 0
-              69:     68(int) Constant 3
-              75:    8(fvec4) ConstantComposite 34 15 15 15
-              82:    8(fvec4) ConstantComposite 34 40 15 15
-              91:    8(fvec4) ConstantComposite 34 40 23 15
-             109:             TypePointer Function 9(PS_OUTPUT)
-             111:             TypeInt 32 1
-             112:    111(int) Constant 0
-             114:    7(float) Constant 1092616192
-             118:    111(int) Constant 1
-             119:    7(float) Constant 1065353216
-             120:             TypePointer Function 7(float)
-             127:             TypePointer Output 8(fvec4)
-128(@entryPointOutput.Color):    127(ptr) Variable Output
-             131:             TypePointer Output 7(float)
-132(@entryPointOutput.Depth):    131(ptr) Variable Output
-                              Line 1 15 1
-         5(main):           3 Function None 4
-               6:             Label
-125(flattenTemp):    109(ptr) Variable Function
-                              Line 1 15 0
-             126:9(PS_OUTPUT) FunctionCall 11(@main()
-                              Store 125(flattenTemp) 126
-             129:     13(ptr) AccessChain 125(flattenTemp) 112
-             130:    8(fvec4) Load 129
-                              Store 128(@entryPointOutput.Color) 130
-             133:    120(ptr) AccessChain 125(flattenTemp) 118
-             134:    7(float) Load 133
-                              Store 132(@entryPointOutput.Depth) 134
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              MemberName 30_1(PS_OUTPUT) 1  "Depth"
+                              Name 54_2  "@main("
+                              Name 59_9  "ColorOut"
+                              Name 59_1  "g_sam"
+                              Name 59_2  "g_sam1D"
+                              Name 59_3  "g_sam2D"
+                              Name 59_4  "g_sam3D"
+                              Name 59_5  "g_samCube"
+                              Name 59_10  "psout"
+                              Name 59_8  "flattenTemp"
+                              Name 59_6  "@entryPointOutput.Color"
+                              Name 59_7  "@entryPointOutput.Depth"
+                              Decorate 59_1(g_sam) Binding 0
+                              Decorate 59_1(g_sam) DescriptorSet 0
+                              Decorate 59_2(g_sam1D) Binding 1
+                              Decorate 59_2(g_sam1D) DescriptorSet 0
+                              Decorate 59_3(g_sam2D) Binding 2
+                              Decorate 59_3(g_sam2D) DescriptorSet 0
+                              Decorate 59_4(g_sam3D) Binding 3
+                              Decorate 59_4(g_sam3D) DescriptorSet 0
+                              Decorate 59_5(g_samCube) Binding 4
+                              Decorate 59_5(g_samCube) DescriptorSet 0
+                              Decorate 59_6(@entryPointOutput.Color) Location 0
+                              Decorate 59_7(@entryPointOutput.Depth) BuiltIn FragDepth
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4) 22_1(float)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            32_1:             TypePointer Function 23_1(fvec4)
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_2:             TypePointer UniformConstant 27_1
+     59_1(g_sam):   32_2(ptr) Variable UniformConstant
+            23_2:             TypeVector 22_1(float) 2
+            43_2: 22_1(float) Constant 1053609165
+            43_3: 22_1(float) Constant 1050253722
+            44_2: 23_2(fvec2) ConstantComposite 43_2 43_3
+            25_2:             TypeImage 22_1(float) 1D sampled format:Unknown
+            27_2:             TypeSampledImage 25_2
+            32_3:             TypePointer UniformConstant 27_2
+   59_2(g_sam1D):   32_3(ptr) Variable UniformConstant
+            43_4: 22_1(float) Constant 1056964608
+   59_3(g_sam2D):   32_2(ptr) Variable UniformConstant
+            43_5: 22_1(float) Constant 1058642330
+            44_3: 23_2(fvec2) ConstantComposite 43_4 43_5
+            25_3:             TypeImage 22_1(float) 3D sampled format:Unknown
+            27_3:             TypeSampledImage 25_3
+            32_4:             TypePointer UniformConstant 27_3
+   59_4(g_sam3D):   32_4(ptr) Variable UniformConstant
+            23_3:             TypeVector 22_1(float) 3
+            44_4: 23_3(fvec3) ConstantComposite 43_4 43_5 43_2
+            25_4:             TypeImage 22_1(float) Cube sampled format:Unknown
+            27_4:             TypeSampledImage 25_4
+            32_5:             TypePointer UniformConstant 27_4
+ 59_5(g_samCube):   32_5(ptr) Variable UniformConstant
+            44_5: 23_1(fvec4) ConstantComposite 43_2 43_3 43_1 43_1
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            44_6: 23_1(fvec4) ConstantComposite 43_4 43_1 43_1 43_1
+            44_7: 23_1(fvec4) ConstantComposite 43_4 43_5 43_1 43_1
+            44_8: 23_1(fvec4) ConstantComposite 43_4 43_5 43_2 43_1
+            32_6:             TypePointer Function 30_1(PS_OUTPUT)
+            21_2:             TypeInt 32 1
+            43_6:   21_2(int) Constant 0
+            43_7: 22_1(float) Constant 1092616192
+            43_8:   21_2(int) Constant 1
+            43_9: 22_1(float) Constant 1065353216
+            32_7:             TypePointer Function 22_1(float)
+            32_8:             TypePointer Output 23_1(fvec4)
+59_6(@entryPointOutput.Color):   32_8(ptr) Variable Output
+            32_9:             TypePointer Output 22_1(float)
+59_7(@entryPointOutput.Depth):   32_9(ptr) Variable Output
+                              Line 7_1 15 1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_8(flattenTemp):   32_6(ptr) Variable Function
+                              Line 7_1 15 0
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_2(@main()
+                              Store 59_8(flattenTemp) 57_1
+            65_1:   32_1(ptr) AccessChain 59_8(flattenTemp) 43_6
+            61_1: 23_1(fvec4) Load 65_1
+                              Store 59_6(@entryPointOutput.Color) 61_1
+            65_2:   32_7(ptr) AccessChain 59_8(flattenTemp) 43_8
+            61_2: 22_1(float) Load 65_2
+                              Store 59_7(@entryPointOutput.Depth) 61_2
                               Return
                               FunctionEnd
-                              Line 1 15 1
-      11(@main():9(PS_OUTPUT) Function None 10
-              12:             Label
-    14(ColorOut):     13(ptr) Variable Function
-      110(psout):    109(ptr) Variable Function
-                              Line 1 18 0
-                              Store 14(ColorOut) 16
-                              Line 1 20 0
-              21:          18 Load 20(g_sam)
-              26:    8(fvec4) ImageSampleImplicitLod 21 25
-              27:    8(fvec4) Load 14(ColorOut)
-              28:    8(fvec4) FAdd 27 26
-                              Store 14(ColorOut) 28
-                              Line 1 21 0
-              33:          30 Load 32(g_sam1D)
-              35:    8(fvec4) ImageSampleImplicitLod 33 34
-              36:    8(fvec4) Load 14(ColorOut)
-              37:    8(fvec4) FAdd 36 35
-                              Store 14(ColorOut) 37
-                              Line 1 22 0
-              39:          18 Load 38(g_sam2D)
-              42:    8(fvec4) ImageSampleImplicitLod 39 41
-              43:    8(fvec4) Load 14(ColorOut)
-              44:    8(fvec4) FAdd 43 42
-                              Store 14(ColorOut) 44
-                              Line 1 23 0
-              49:          46 Load 48(g_sam3D)
-              52:    8(fvec4) ImageSampleImplicitLod 49 51
-              53:    8(fvec4) Load 14(ColorOut)
-              54:    8(fvec4) FAdd 53 52
-                              Store 14(ColorOut) 54
-                              Line 1 24 0
-              59:          56 Load 58(g_samCube)
-              60:    8(fvec4) ImageSampleImplicitLod 59 51
-              61:    8(fvec4) Load 14(ColorOut)
-              62:    8(fvec4) FAdd 61 60
-                              Store 14(ColorOut) 62
-                              Line 1 26 0
-              63:          18 Load 20(g_sam)
-              65:    7(float) CompositeExtract 64 0
-              66:    7(float) CompositeExtract 64 1
-              67:   22(fvec2) CompositeConstruct 65 66
-              70:    7(float) CompositeExtract 64 3
-              71:    8(fvec4) ImageSampleExplicitLod 63 67 Lod 70
-              72:    8(fvec4) Load 14(ColorOut)
-              73:    8(fvec4) FAdd 72 71
-                              Store 14(ColorOut) 73
-                              Line 1 27 0
-              74:          30 Load 32(g_sam1D)
-              76:    7(float) CompositeExtract 75 0
-              77:    7(float) CompositeExtract 75 3
-              78:    8(fvec4) ImageSampleExplicitLod 74 76 Lod 77
-              79:    8(fvec4) Load 14(ColorOut)
-              80:    8(fvec4) FAdd 79 78
-                              Store 14(ColorOut) 80
-                              Line 1 28 0
-              81:          18 Load 38(g_sam2D)
-              83:    7(float) CompositeExtract 82 0
-              84:    7(float) CompositeExtract 82 1
-              85:   22(fvec2) CompositeConstruct 83 84
-              86:    7(float) CompositeExtract 82 3
-              87:    8(fvec4) ImageSampleExplicitLod 81 85 Lod 86
-              88:    8(fvec4) Load 14(ColorOut)
-              89:    8(fvec4) FAdd 88 87
-                              Store 14(ColorOut) 89
-                              Line 1 29 0
-              90:          46 Load 48(g_sam3D)
-              92:    7(float) CompositeExtract 91 0
-              93:    7(float) CompositeExtract 91 1
-              94:    7(float) CompositeExtract 91 2
-              95:   50(fvec3) CompositeConstruct 92 93 94
-              96:    7(float) CompositeExtract 91 3
-              97:    8(fvec4) ImageSampleExplicitLod 90 95 Lod 96
-              98:    8(fvec4) Load 14(ColorOut)
-              99:    8(fvec4) FAdd 98 97
-                              Store 14(ColorOut) 99
-                              Line 1 30 0
-             100:          56 Load 58(g_samCube)
-             101:    7(float) CompositeExtract 91 0
-             102:    7(float) CompositeExtract 91 1
-             103:    7(float) CompositeExtract 91 2
-             104:   50(fvec3) CompositeConstruct 101 102 103
-             105:    7(float) CompositeExtract 91 3
-             106:    8(fvec4) ImageSampleExplicitLod 100 104 Lod 105
-             107:    8(fvec4) Load 14(ColorOut)
-             108:    8(fvec4) FAdd 107 106
-                              Store 14(ColorOut) 108
-                              Line 1 32 0
-             113:    8(fvec4) Load 14(ColorOut)
-             115:    8(fvec4) CompositeConstruct 114 114 114 114
-             116:    8(fvec4) FDiv 113 115
-             117:     13(ptr) AccessChain 110(psout) 112
-                              Store 117 116
-                              Line 1 33 0
-             121:    120(ptr) AccessChain 110(psout) 118
-                              Store 121 119
-                              Line 1 35 0
-             122:9(PS_OUTPUT) Load 110(psout)
-                              ReturnValue 122
+                              Line 7_1 15 1
+    54_2(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_2:             Label
+  59_9(ColorOut):   32_1(ptr) Variable Function
+    59_10(psout):   32_6(ptr) Variable Function
+                              Line 7_1 18 0
+                              Store 59_9(ColorOut) 44_1
+                              Line 7_1 20 0
+            61_3:        27_1 Load 59_1(g_sam)
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 61_3 44_2
+            61_4: 23_1(fvec4) Load 59_9(ColorOut)
+           129_1: 23_1(fvec4) FAdd 61_4 87_1
+                              Store 59_9(ColorOut) 129_1
+                              Line 7_1 21 0
+            61_5:        27_2 Load 59_2(g_sam1D)
+            87_2: 23_1(fvec4) ImageSampleImplicitLod 61_5 43_4
+            61_6: 23_1(fvec4) Load 59_9(ColorOut)
+           129_2: 23_1(fvec4) FAdd 61_6 87_2
+                              Store 59_9(ColorOut) 129_2
+                              Line 7_1 22 0
+            61_7:        27_1 Load 59_3(g_sam2D)
+            87_3: 23_1(fvec4) ImageSampleImplicitLod 61_7 44_3
+            61_8: 23_1(fvec4) Load 59_9(ColorOut)
+           129_3: 23_1(fvec4) FAdd 61_8 87_3
+                              Store 59_9(ColorOut) 129_3
+                              Line 7_1 23 0
+            61_9:        27_3 Load 59_4(g_sam3D)
+            87_4: 23_1(fvec4) ImageSampleImplicitLod 61_9 44_4
+           61_10: 23_1(fvec4) Load 59_9(ColorOut)
+           129_4: 23_1(fvec4) FAdd 61_10 87_4
+                              Store 59_9(ColorOut) 129_4
+                              Line 7_1 24 0
+           61_11:        27_4 Load 59_5(g_samCube)
+            87_5: 23_1(fvec4) ImageSampleImplicitLod 61_11 44_4
+           61_12: 23_1(fvec4) Load 59_9(ColorOut)
+           129_5: 23_1(fvec4) FAdd 61_12 87_5
+                              Store 59_9(ColorOut) 129_5
+                              Line 7_1 26 0
+           61_13:        27_1 Load 59_1(g_sam)
+            81_1: 22_1(float) CompositeExtract 44_5 0
+            81_2: 22_1(float) CompositeExtract 44_5 1
+            80_1: 23_2(fvec2) CompositeConstruct 81_1 81_2
+            81_3: 22_1(float) CompositeExtract 44_5 3
+            88_1: 23_1(fvec4) ImageSampleExplicitLod 61_13 80_1 Lod 81_3
+           61_14: 23_1(fvec4) Load 59_9(ColorOut)
+           129_6: 23_1(fvec4) FAdd 61_14 88_1
+                              Store 59_9(ColorOut) 129_6
+                              Line 7_1 27 0
+           61_15:        27_2 Load 59_2(g_sam1D)
+            81_4: 22_1(float) CompositeExtract 44_6 0
+            81_5: 22_1(float) CompositeExtract 44_6 3
+            88_2: 23_1(fvec4) ImageSampleExplicitLod 61_15 81_4 Lod 81_5
+           61_16: 23_1(fvec4) Load 59_9(ColorOut)
+           129_7: 23_1(fvec4) FAdd 61_16 88_2
+                              Store 59_9(ColorOut) 129_7
+                              Line 7_1 28 0
+           61_17:        27_1 Load 59_3(g_sam2D)
+            81_6: 22_1(float) CompositeExtract 44_7 0
+            81_7: 22_1(float) CompositeExtract 44_7 1
+            80_2: 23_2(fvec2) CompositeConstruct 81_6 81_7
+            81_8: 22_1(float) CompositeExtract 44_7 3
+            88_3: 23_1(fvec4) ImageSampleExplicitLod 61_17 80_2 Lod 81_8
+           61_18: 23_1(fvec4) Load 59_9(ColorOut)
+           129_8: 23_1(fvec4) FAdd 61_18 88_3
+                              Store 59_9(ColorOut) 129_8
+                              Line 7_1 29 0
+           61_19:        27_3 Load 59_4(g_sam3D)
+            81_9: 22_1(float) CompositeExtract 44_8 0
+           81_10: 22_1(float) CompositeExtract 44_8 1
+           81_11: 22_1(float) CompositeExtract 44_8 2
+            80_3: 23_3(fvec3) CompositeConstruct 81_9 81_10 81_11
+           81_12: 22_1(float) CompositeExtract 44_8 3
+            88_4: 23_1(fvec4) ImageSampleExplicitLod 61_19 80_3 Lod 81_12
+           61_20: 23_1(fvec4) Load 59_9(ColorOut)
+           129_9: 23_1(fvec4) FAdd 61_20 88_4
+                              Store 59_9(ColorOut) 129_9
+                              Line 7_1 30 0
+           61_21:        27_4 Load 59_5(g_samCube)
+           81_13: 22_1(float) CompositeExtract 44_8 0
+           81_14: 22_1(float) CompositeExtract 44_8 1
+           81_15: 22_1(float) CompositeExtract 44_8 2
+            80_4: 23_3(fvec3) CompositeConstruct 81_13 81_14 81_15
+           81_16: 22_1(float) CompositeExtract 44_8 3
+            88_5: 23_1(fvec4) ImageSampleExplicitLod 61_21 80_4 Lod 81_16
+           61_22: 23_1(fvec4) Load 59_9(ColorOut)
+          129_10: 23_1(fvec4) FAdd 61_22 88_5
+                              Store 59_9(ColorOut) 129_10
+                              Line 7_1 32 0
+           61_23: 23_1(fvec4) Load 59_9(ColorOut)
+            80_5: 23_1(fvec4) CompositeConstruct 43_7 43_7 43_7 43_7
+           136_1: 23_1(fvec4) FDiv 61_23 80_5
+            65_3:   32_1(ptr) AccessChain 59_10(psout) 43_6
+                              Store 65_3 136_1
+                              Line 7_1 33 0
+            65_4:   32_7(ptr) AccessChain 59_10(psout) 43_8
+                              Store 65_4 43_9
+                              Line 7_1 35 0
+           61_24:30_1(PS_OUTPUT) Load 59_10(psout)
+                              ReturnValue 61_24
                               FunctionEnd

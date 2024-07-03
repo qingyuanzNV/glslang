@@ -122,79 +122,79 @@ gl_FragCoord origin is upper left
 // Id's are bound by 49
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 29 36 41 45
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_OUTPUT"
-                              MemberName 8(PS_OUTPUT) 0  "color"
-                              MemberName 8(PS_OUTPUT) 1  "other_struct_member1"
-                              MemberName 8(PS_OUTPUT) 2  "other_struct_member2"
-                              MemberName 8(PS_OUTPUT) 3  "other_struct_member3"
-                              Name 10  "Func1("
-                              Name 12  "@main("
-                              Name 26  "flattenTemp"
-                              Name 29  "@entryPointOutput.color"
-                              Name 36  "@entryPointOutput.other_struct_member1"
-                              Name 41  "@entryPointOutput.other_struct_member2"
-                              Name 45  "@entryPointOutput.other_struct_member3"
-                              Decorate 29(@entryPointOutput.color) Location 0
-                              Decorate 36(@entryPointOutput.other_struct_member1) Location 1
-                              Decorate 41(@entryPointOutput.other_struct_member2) Location 2
-                              Decorate 45(@entryPointOutput.other_struct_member3) Location 3
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(PS_OUTPUT):             TypeStruct 7(fvec4) 6(float) 6(float) 6(float)
-               9:             TypeFunction 8(PS_OUTPUT)
-              14:    6(float) Constant 1065353216
-              15:    7(fvec4) ConstantComposite 14 14 14 14
-              16:    6(float) Constant 1073741824
-              17:    6(float) Constant 1077936128
-              18:    6(float) Constant 1082130432
-              19:8(PS_OUTPUT) ConstantComposite 15 16 17 18
-              25:             TypePointer Function 8(PS_OUTPUT)
-              28:             TypePointer Output 7(fvec4)
-29(@entryPointOutput.color):     28(ptr) Variable Output
-              30:             TypeInt 32 1
-              31:     30(int) Constant 0
-              32:             TypePointer Function 7(fvec4)
-              35:             TypePointer Output 6(float)
-36(@entryPointOutput.other_struct_member1):     35(ptr) Variable Output
-              37:     30(int) Constant 1
-              38:             TypePointer Function 6(float)
-41(@entryPointOutput.other_struct_member2):     35(ptr) Variable Output
-              42:     30(int) Constant 2
-45(@entryPointOutput.other_struct_member3):     35(ptr) Variable Output
-              46:     30(int) Constant 3
-         4(main):           2 Function None 3
-               5:             Label
- 26(flattenTemp):     25(ptr) Variable Function
-              27:8(PS_OUTPUT) FunctionCall 12(@main()
-                              Store 26(flattenTemp) 27
-              33:     32(ptr) AccessChain 26(flattenTemp) 31
-              34:    7(fvec4) Load 33
-                              Store 29(@entryPointOutput.color) 34
-              39:     38(ptr) AccessChain 26(flattenTemp) 37
-              40:    6(float) Load 39
-                              Store 36(@entryPointOutput.other_struct_member1) 40
-              43:     38(ptr) AccessChain 26(flattenTemp) 42
-              44:    6(float) Load 43
-                              Store 41(@entryPointOutput.other_struct_member2) 44
-              47:     38(ptr) AccessChain 26(flattenTemp) 46
-              48:    6(float) Load 47
-                              Store 45(@entryPointOutput.other_struct_member3) 48
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "color"
+                              MemberName 30_1(PS_OUTPUT) 1  "other_struct_member1"
+                              MemberName 30_1(PS_OUTPUT) 2  "other_struct_member2"
+                              MemberName 30_1(PS_OUTPUT) 3  "other_struct_member3"
+                              Name 54_2  "Func1("
+                              Name 54_3  "@main("
+                              Name 59_5  "flattenTemp"
+                              Name 59_1  "@entryPointOutput.color"
+                              Name 59_2  "@entryPointOutput.other_struct_member1"
+                              Name 59_3  "@entryPointOutput.other_struct_member2"
+                              Name 59_4  "@entryPointOutput.other_struct_member3"
+                              Decorate 59_1(@entryPointOutput.color) Location 0
+                              Decorate 59_2(@entryPointOutput.other_struct_member1) Location 1
+                              Decorate 59_3(@entryPointOutput.other_struct_member2) Location 2
+                              Decorate 59_4(@entryPointOutput.other_struct_member3) Location 3
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4) 22_1(float) 22_1(float) 22_1(float)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            43_1: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            43_2: 22_1(float) Constant 1073741824
+            43_3: 22_1(float) Constant 1077936128
+            43_4: 22_1(float) Constant 1082130432
+            44_2:30_1(PS_OUTPUT) ConstantComposite 44_1 43_2 43_3 43_4
+            32_1:             TypePointer Function 30_1(PS_OUTPUT)
+            32_2:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput.color):   32_2(ptr) Variable Output
+            21_1:             TypeInt 32 1
+            43_5:   21_1(int) Constant 0
+            32_3:             TypePointer Function 23_1(fvec4)
+            32_4:             TypePointer Output 22_1(float)
+59_2(@entryPointOutput.other_struct_member1):   32_4(ptr) Variable Output
+            43_6:   21_1(int) Constant 1
+            32_5:             TypePointer Function 22_1(float)
+59_3(@entryPointOutput.other_struct_member2):   32_4(ptr) Variable Output
+            43_7:   21_1(int) Constant 2
+59_4(@entryPointOutput.other_struct_member3):   32_4(ptr) Variable Output
+            43_8:   21_1(int) Constant 3
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_5(flattenTemp):   32_1(ptr) Variable Function
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_3(@main()
+                              Store 59_5(flattenTemp) 57_1
+            65_1:   32_3(ptr) AccessChain 59_5(flattenTemp) 43_5
+            61_1: 23_1(fvec4) Load 65_1
+                              Store 59_1(@entryPointOutput.color) 61_1
+            65_2:   32_5(ptr) AccessChain 59_5(flattenTemp) 43_6
+            61_2: 22_1(float) Load 65_2
+                              Store 59_2(@entryPointOutput.other_struct_member1) 61_2
+            65_3:   32_5(ptr) AccessChain 59_5(flattenTemp) 43_7
+            61_3: 22_1(float) Load 65_3
+                              Store 59_3(@entryPointOutput.other_struct_member2) 61_3
+            65_4:   32_5(ptr) AccessChain 59_5(flattenTemp) 43_8
+            61_4: 22_1(float) Load 65_4
+                              Store 59_4(@entryPointOutput.other_struct_member3) 61_4
                               Return
                               FunctionEnd
-      10(Func1():8(PS_OUTPUT) Function None 9
-              11:             Label
-                              ReturnValue 19
+    54_2(Func1():30_1(PS_OUTPUT) Function None 33_2
+           248_2:             Label
+                              ReturnValue 44_2
                               FunctionEnd
-      12(@main():8(PS_OUTPUT) Function None 9
-              13:             Label
-              22:8(PS_OUTPUT) FunctionCall 10(Func1()
-                              ReturnValue 22
+    54_3(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_3:             Label
+            57_2:30_1(PS_OUTPUT) FunctionCall 54_2(Func1()
+                              ReturnValue 57_2
                               FunctionEnd

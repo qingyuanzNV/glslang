@@ -72,56 +72,56 @@ gl_FragCoord origin is upper left
 // Id's are bound by 35
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 28 31
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "foo("
-                              Name 16  "@main(f1;"
-                              Name 15  "f"
-                              Name 26  "f"
-                              Name 28  "f"
-                              Name 31  "@entryPointOutput"
-                              Name 32  "param"
-                              Decorate 28(f) Location 0
-                              Decorate 31(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeVector 6(int) 3
-               8:             TypeFunction 7(ivec3)
-              11:             TypeFloat 32
-              12:             TypePointer Function 11(float)
-              13:             TypeVector 11(float) 4
-              14:             TypeFunction 13(fvec4) 12(ptr)
-              18:      6(int) Constant 13
-              19:    7(ivec3) ConstantComposite 18 18 18
-              27:             TypePointer Input 11(float)
-           28(f):     27(ptr) Variable Input
-              30:             TypePointer Output 13(fvec4)
-31(@entryPointOutput):     30(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-           26(f):     12(ptr) Variable Function
-       32(param):     12(ptr) Variable Function
-              29:   11(float) Load 28(f)
-                              Store 26(f) 29
-              33:   11(float) Load 26(f)
-                              Store 32(param) 33
-              34:   13(fvec4) FunctionCall 16(@main(f1;) 32(param)
-                              Store 31(@entryPointOutput) 34
+                              Name 54_1  "main"
+                              Name 54_2  "foo("
+                              Name 54_3  "@main(f1;"
+                              Name 55_1  "f"
+                              Name 59_3  "f"
+                              Name 59_1  "f"
+                              Name 59_2  "@entryPointOutput"
+                              Name 59_4  "param"
+                              Decorate 59_1(f) Location 0
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            23_1:             TypeVector 21_1(int) 3
+            33_2:             TypeFunction 23_1(ivec3)
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            23_2:             TypeVector 22_1(float) 4
+            33_3:             TypeFunction 23_2(fvec4) 32_1(ptr)
+            43_1:   21_1(int) Constant 13
+            44_1: 23_1(ivec3) ConstantComposite 43_1 43_1 43_1
+            32_2:             TypePointer Input 22_1(float)
+         59_1(f):   32_2(ptr) Variable Input
+            32_3:             TypePointer Output 23_2(fvec4)
+59_2(@entryPointOutput):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_3(f):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1: 22_1(float) Load 59_1(f)
+                              Store 59_3(f) 61_1
+            61_2: 22_1(float) Load 59_3(f)
+                              Store 59_4(param) 61_2
+            57_1: 23_2(fvec4) FunctionCall 54_3(@main(f1;) 59_4(param)
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-         9(foo():    7(ivec3) Function None 8
-              10:             Label
-                              ReturnValue 19
+      54_2(foo(): 23_1(ivec3) Function None 33_2
+           248_2:             Label
+                              ReturnValue 44_1
                               FunctionEnd
-   16(@main(f1;):   13(fvec4) Function None 14
-           15(f):     12(ptr) FunctionParameter
-              17:             Label
-              22:   11(float) Load 15(f)
-              23:   13(fvec4) CompositeConstruct 22 22 22 22
-                              ReturnValue 23
+ 54_3(@main(f1;): 23_2(fvec4) Function None 33_3
+         55_1(f):   32_1(ptr) FunctionParameter
+           248_3:             Label
+            61_3: 22_1(float) Load 55_1(f)
+            80_1: 23_2(fvec4) CompositeConstruct 61_3 61_3 61_3 61_3
+                              ReturnValue 80_1
                               FunctionEnd

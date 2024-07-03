@@ -10,47 +10,47 @@ WARNING: 0:6: '' : all default precisions are highp; use precision statements to
                               Capability TileImageDepthReadAccessEXT
                               Capability TileImageStencilReadAccessEXT
                               Extension  "SPV_EXT_shader_tile_image"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 16 22
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 460
                               SourceExtension  "GL_EXT_shader_tile_image"
-                              Name 4  "main"
-                              Name 8  "depth"
-                              Name 12  "stencil_value"
-                              Name 16  "stencil_out"
-                              Name 22  "depth_out"
-                              Decorate 13 RelaxedPrecision
-                              Decorate 16(stencil_out) Location 0
-                              Decorate 22(depth_out) Location 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-              10:             TypeInt 32 0
-              11:             TypePointer Function 10(int)
-              14:             TypeVector 10(int) 4
-              15:             TypePointer Output 14(ivec4)
- 16(stencil_out):     15(ptr) Variable Output
-              18:     10(int) Constant 0
-              20:             TypeVector 6(float) 4
-              21:             TypePointer Output 20(fvec4)
-   22(depth_out):     21(ptr) Variable Output
-              24:    6(float) Constant 0
-         4(main):           2 Function None 3
-               5:             Label
-        8(depth):      7(ptr) Variable Function
-12(stencil_value):     11(ptr) Variable Function
-               9:    6(float) DepthAttachmentReadEXT
-                              Store 8(depth) 9
-              13:     10(int) StencilAttachmentReadEXT
-                              Store 12(stencil_value) 13
-              17:     10(int) Load 12(stencil_value)
-              19:   14(ivec4) CompositeConstruct 17 18 18 18
-                              Store 16(stencil_out) 19
-              23:    6(float) Load 8(depth)
-              25:   20(fvec4) CompositeConstruct 23 24 24 24
-                              Store 22(depth_out) 25
+                              Name 54_1  "main"
+                              Name 59_3  "depth"
+                              Name 59_4  "stencil_value"
+                              Name 59_1  "stencil_out"
+                              Name 59_2  "depth_out"
+                              Decorate 4162_1 RelaxedPrecision
+                              Decorate 59_1(stencil_out) Location 0
+                              Decorate 59_2(depth_out) Location 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            21_1:             TypeInt 32 0
+            32_2:             TypePointer Function 21_1(int)
+            23_1:             TypeVector 21_1(int) 4
+            32_3:             TypePointer Output 23_1(ivec4)
+59_1(stencil_out):   32_3(ptr) Variable Output
+         uint(0):   21_1(int) Constant 0
+            23_2:             TypeVector 22_1(float) 4
+            32_4:             TypePointer Output 23_2(fvec4)
+ 59_2(depth_out):   32_4(ptr) Variable Output
+            43_1: 22_1(float) Constant 0
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(depth):   32_1(ptr) Variable Function
+59_4(stencil_value):   32_2(ptr) Variable Function
+          4161_1: 22_1(float) DepthAttachmentReadEXT
+                              Store 59_3(depth) 4161_1
+          4162_1:   21_1(int) StencilAttachmentReadEXT
+                              Store 59_4(stencil_value) 4162_1
+            61_1:   21_1(int) Load 59_4(stencil_value)
+            80_1: 23_1(ivec4) CompositeConstruct 61_1 uint(0) uint(0) uint(0)
+                              Store 59_1(stencil_out) 80_1
+            61_2: 22_1(float) Load 59_3(depth)
+            80_2: 23_2(fvec4) CompositeConstruct 61_2 43_1 43_1 43_1
+                              Store 59_2(depth_out) 80_2
                               Return
                               FunctionEnd

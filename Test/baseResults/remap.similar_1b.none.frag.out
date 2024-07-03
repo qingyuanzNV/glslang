@@ -4,134 +4,134 @@ remap.similar_1b.none.frag
 // Id's are bound by 91
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 58 78 80
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 11  "Test1(i1;"
-                              Name 10  "bound"
-                              Name 14  "Test2(i1;"
-                              Name 13  "bound"
-                              Name 17  "r"
-                              Name 19  "x"
-                              Name 49  "param"
-                              Name 58  "ini4"
-                              Name 78  "outf4"
-                              Name 80  "inf"
-                              Name 83  "param"
-                              Name 87  "param"
-                              Decorate 58(ini4) Flat
-                              Decorate 58(ini4) Location 0
-                              Decorate 78(outf4) Location 0
-                              Decorate 80(inf) Location 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               8:             TypeFloat 32
-               9:             TypeFunction 8(float) 7(ptr)
-              16:             TypePointer Function 8(float)
-              18:    8(float) Constant 0
-              20:      6(int) Constant 0
-              28:             TypeBool
-              30:    8(float) Constant 1056964608
-              34:      6(int) Constant 1
-              36:    8(float) Constant 1045220557
-              43:      6(int) Constant 2
-              54:      6(int) Constant 4
-              56:             TypeVector 6(int) 4
-              57:             TypePointer Input 56(ivec4)
-        58(ini4):     57(ptr) Variable Input
-              59:             TypeInt 32 0
-              60:     59(int) Constant 1
-              61:             TypePointer Input 6(int)
-              64:     59(int) Constant 2
-              69:     59(int) Constant 0
-              76:             TypeVector 8(float) 4
-              77:             TypePointer Output 76(fvec4)
-       78(outf4):     77(ptr) Variable Output
-              79:             TypePointer Input 8(float)
-         80(inf):     79(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-       83(param):      7(ptr) Variable Function
-       87(param):      7(ptr) Variable Function
-              81:    8(float) Load 80(inf)
-              82:      6(int) ConvertFToS 81
-                              Store 83(param) 82
-              84:    8(float) FunctionCall 11(Test1(i1;) 83(param)
-              85:    8(float) Load 80(inf)
-              86:      6(int) ConvertFToS 85
-                              Store 87(param) 86
-              88:    8(float) FunctionCall 14(Test2(i1;) 87(param)
-              89:    8(float) FAdd 84 88
-              90:   76(fvec4) CompositeConstruct 89 89 89 89
-                              Store 78(outf4) 90
+                              Name 54_1  "main"
+                              Name 54_2  "Test1(i1;"
+                              Name 55_1  "bound"
+                              Name 54_3  "Test2(i1;"
+                              Name 55_2  "bound"
+                              Name 59_6  "r"
+                              Name 59_7  "x"
+                              Name 59_8  "param"
+                              Name 59_1  "ini4"
+                              Name 59_2  "outf4"
+                              Name 59_3  "inf"
+                              Name 59_4  "param"
+                              Name 59_5  "param"
+                              Decorate 59_1(ini4) Flat
+                              Decorate 59_1(ini4) Location 0
+                              Decorate 59_2(outf4) Location 0
+                              Decorate 59_3(inf) Location 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            22_1:             TypeFloat 32
+            33_2:             TypeFunction 22_1(float) 32_1(ptr)
+            32_2:             TypePointer Function 22_1(float)
+            43_1: 22_1(float) Constant 0
+            43_2:   21_1(int) Constant 0
+            20_1:             TypeBool
+            43_3: 22_1(float) Constant 1056964608
+            43_4:   21_1(int) Constant 1
+            43_5: 22_1(float) Constant 1045220557
+            43_6:   21_1(int) Constant 2
+            43_7:   21_1(int) Constant 4
+            23_1:             TypeVector 21_1(int) 4
+            32_3:             TypePointer Input 23_1(ivec4)
+      59_1(ini4):   32_3(ptr) Variable Input
+            21_2:             TypeInt 32 0
+         uint(1):   21_2(int) Constant 1
+            32_4:             TypePointer Input 21_1(int)
+         uint(2):   21_2(int) Constant 2
+         uint(0):   21_2(int) Constant 0
+            23_2:             TypeVector 22_1(float) 4
+            32_5:             TypePointer Output 23_2(fvec4)
+     59_2(outf4):   32_5(ptr) Variable Output
+            32_6:             TypePointer Input 22_1(float)
+       59_3(inf):   32_6(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_4(param):   32_1(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+            61_1: 22_1(float) Load 59_3(inf)
+           110_1:   21_1(int) ConvertFToS 61_1
+                              Store 59_4(param) 110_1
+            57_1: 22_1(float) FunctionCall 54_2(Test1(i1;) 59_4(param)
+            61_2: 22_1(float) Load 59_3(inf)
+           110_2:   21_1(int) ConvertFToS 61_2
+                              Store 59_5(param) 110_2
+            57_2: 22_1(float) FunctionCall 54_3(Test2(i1;) 59_5(param)
+           129_1: 22_1(float) FAdd 57_1 57_2
+            80_1: 23_2(fvec4) CompositeConstruct 129_1 129_1 129_1 129_1
+                              Store 59_2(outf4) 80_1
                               Return
                               FunctionEnd
-   11(Test1(i1;):    8(float) Function None 9
-       10(bound):      7(ptr) FunctionParameter
-              12:             Label
-           17(r):     16(ptr) Variable Function
-           19(x):      7(ptr) Variable Function
-                              Store 17(r) 18
-                              Store 19(x) 20
-                              Branch 21
-              21:             Label
-                              LoopMerge 23 24 None
-                              Branch 25
-              25:             Label
-              26:      6(int) Load 19(x)
-              27:      6(int) Load 10(bound)
-              29:    28(bool) SLessThan 26 27
-                              BranchConditional 29 22 23
-              22:               Label
-              31:    8(float)   Load 17(r)
-              32:    8(float)   FAdd 31 30
-                                Store 17(r) 32
-                                Branch 24
-              24:               Label
-              33:      6(int)   Load 19(x)
-              35:      6(int)   IAdd 33 34
-                                Store 19(x) 35
-                                Branch 21
-              23:             Label
-              37:    8(float) Load 17(r)
-              38:    8(float) FAdd 37 36
-                              Store 17(r) 38
-              39:    8(float) Load 17(r)
-                              ReturnValue 39
+ 54_2(Test1(i1;): 22_1(float) Function None 33_2
+     55_1(bound):   32_1(ptr) FunctionParameter
+           248_2:             Label
+         59_6(r):   32_2(ptr) Variable Function
+         59_7(x):   32_1(ptr) Variable Function
+                              Store 59_6(r) 43_1
+                              Store 59_7(x) 43_2
+                              Branch 248_3
+           248_3:             Label
+                              LoopMerge 248_7 248_6 None
+                              Branch 248_4
+           248_4:             Label
+            61_3:   21_1(int) Load 59_7(x)
+            61_4:   21_1(int) Load 55_1(bound)
+           177_1:  20_1(bool) SLessThan 61_3 61_4
+                              BranchConditional 177_1 248_5 248_7
+           248_5:               Label
+            61_5: 22_1(float)   Load 59_6(r)
+           129_2: 22_1(float)   FAdd 61_5 43_3
+                                Store 59_6(r) 129_2
+                                Branch 248_6
+           248_6:               Label
+            61_6:   21_1(int)   Load 59_7(x)
+           128_1:   21_1(int)   IAdd 61_6 43_4
+                                Store 59_7(x) 128_1
+                                Branch 248_3
+           248_7:             Label
+            61_7: 22_1(float) Load 59_6(r)
+           129_3: 22_1(float) FAdd 61_7 43_5
+                              Store 59_6(r) 129_3
+            61_8: 22_1(float) Load 59_6(r)
+                              ReturnValue 61_8
                               FunctionEnd
-   14(Test2(i1;):    8(float) Function None 9
-       13(bound):      7(ptr) FunctionParameter
-              15:             Label
-       49(param):      7(ptr) Variable Function
-              42:      6(int) Load 13(bound)
-              44:    28(bool) SGreaterThan 42 43
-                              SelectionMerge 46 None
-                              BranchConditional 44 45 52
-              45:               Label
-              47:      6(int)   Load 13(bound)
-              48:      6(int)   IMul 47 43
-                                Store 49(param) 48
-              50:    8(float)   FunctionCall 11(Test1(i1;) 49(param)
-                                ReturnValue 50
-              52:               Label
-              53:      6(int)   Load 13(bound)
-              55:      6(int)   IMul 53 54
-              62:     61(ptr)   AccessChain 58(ini4) 60
-              63:      6(int)   Load 62
-              65:     61(ptr)   AccessChain 58(ini4) 64
-              66:      6(int)   Load 65
-              67:      6(int)   IMul 63 66
-              68:      6(int)   IAdd 55 67
-              70:     61(ptr)   AccessChain 58(ini4) 69
-              71:      6(int)   Load 70
-              72:      6(int)   IAdd 68 71
-              73:    8(float)   ConvertSToF 72
-                                ReturnValue 73
-              46:             Label
+ 54_3(Test2(i1;): 22_1(float) Function None 33_2
+     55_2(bound):   32_1(ptr) FunctionParameter
+           248_8:             Label
+     59_8(param):   32_1(ptr) Variable Function
+            61_9:   21_1(int) Load 55_2(bound)
+           173_1:  20_1(bool) SGreaterThan 61_9 43_6
+                              SelectionMerge 248_11 None
+                              BranchConditional 173_1 248_9 248_10
+           248_9:               Label
+           61_10:   21_1(int)   Load 55_2(bound)
+           132_1:   21_1(int)   IMul 61_10 43_6
+                                Store 59_8(param) 132_1
+            57_3: 22_1(float)   FunctionCall 54_2(Test1(i1;) 59_8(param)
+                                ReturnValue 57_3
+          248_10:               Label
+           61_11:   21_1(int)   Load 55_2(bound)
+           132_2:   21_1(int)   IMul 61_11 43_7
+            65_1:   32_4(ptr)   AccessChain 59_1(ini4) uint(1)
+           61_12:   21_1(int)   Load 65_1
+            65_2:   32_4(ptr)   AccessChain 59_1(ini4) uint(2)
+           61_13:   21_1(int)   Load 65_2
+           132_3:   21_1(int)   IMul 61_12 61_13
+           128_2:   21_1(int)   IAdd 132_2 132_3
+            65_3:   32_4(ptr)   AccessChain 59_1(ini4) uint(0)
+           61_14:   21_1(int)   Load 65_3
+           128_3:   21_1(int)   IAdd 128_2 61_14
+           111_1: 22_1(float)   ConvertSToF 128_3
+                                ReturnValue 111_1
+          248_11:             Label
                               Unreachable
                               FunctionEnd

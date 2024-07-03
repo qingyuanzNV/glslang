@@ -6,57 +6,57 @@ spv.smBuiltins.vert
                               Capability Shader
                               Capability ShaderSMBuiltinsNV
                               Extension  "SPV_NV_shader_sm_builtins"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 15 18 20 22 24
+                              EntryPoint Vertex 54_1  "main" 59_2 59_3 59_4 59_5 59_6
                               Source GLSL 450
                               SourceExtension  "GL_NV_shader_sm_builtins"
-                              Name 4  "main"
-                              Name 9  "Output"
-                              MemberName 9(Output) 0  "result"
-                              Name 11  ""
-                              Name 15  "gl_VertexIndex"
-                              Name 18  "gl_WarpsPerSMNV"
-                              Name 20  "gl_SMCountNV"
-                              Name 22  "gl_WarpIDNV"
-                              Name 24  "gl_SMIDNV"
-                              Decorate 8 ArrayStride 16
-                              Decorate 9(Output) BufferBlock
-                              MemberDecorate 9(Output) 0 Offset 0
-                              Decorate 11 Binding 0
-                              Decorate 11 DescriptorSet 0
-                              Decorate 15(gl_VertexIndex) BuiltIn VertexIndex
-                              Decorate 18(gl_WarpsPerSMNV) BuiltIn WarpsPerSMNV
-                              Decorate 20(gl_SMCountNV) BuiltIn SMCountNV
-                              Decorate 22(gl_WarpIDNV) BuiltIn WarpIDNV
-                              Decorate 24(gl_SMIDNV) BuiltIn SMIDNV
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 4
-               8:             TypeRuntimeArray 7(ivec4)
-       9(Output):             TypeStruct 8
-              10:             TypePointer Uniform 9(Output)
-              11:     10(ptr) Variable Uniform
-              12:             TypeInt 32 1
-              13:     12(int) Constant 0
-              14:             TypePointer Input 12(int)
-15(gl_VertexIndex):     14(ptr) Variable Input
-              17:             TypePointer Input 6(int)
-18(gl_WarpsPerSMNV):     17(ptr) Variable Input
-20(gl_SMCountNV):     17(ptr) Variable Input
- 22(gl_WarpIDNV):     17(ptr) Variable Input
-   24(gl_SMIDNV):     17(ptr) Variable Input
-              27:             TypePointer Uniform 7(ivec4)
-         4(main):           2 Function None 3
-               5:             Label
-              16:     12(int) Load 15(gl_VertexIndex)
-              19:      6(int) Load 18(gl_WarpsPerSMNV)
-              21:      6(int) Load 20(gl_SMCountNV)
-              23:      6(int) Load 22(gl_WarpIDNV)
-              25:      6(int) Load 24(gl_SMIDNV)
-              26:    7(ivec4) CompositeConstruct 19 21 23 25
-              28:     27(ptr) AccessChain 11 13 16
-                              Store 28 26
+                              Name 54_1  "main"
+                              Name 30_1  "Output"
+                              MemberName 30_1(Output) 0  "result"
+                              Name 59_1  ""
+                              Name 59_2  "gl_VertexIndex"
+                              Name 59_3  "gl_WarpsPerSMNV"
+                              Name 59_4  "gl_SMCountNV"
+                              Name 59_5  "gl_WarpIDNV"
+                              Name 59_6  "gl_SMIDNV"
+                              Decorate 29_1 ArrayStride 16
+                              Decorate 30_1(Output) BufferBlock
+                              MemberDecorate 30_1(Output) 0 Offset 0
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(gl_VertexIndex) BuiltIn VertexIndex
+                              Decorate 59_3(gl_WarpsPerSMNV) BuiltIn WarpsPerSMNV
+                              Decorate 59_4(gl_SMCountNV) BuiltIn SMCountNV
+                              Decorate 59_5(gl_WarpIDNV) BuiltIn WarpIDNV
+                              Decorate 59_6(gl_SMIDNV) BuiltIn SMIDNV
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 4
+            29_1:             TypeRuntimeArray 23_1(ivec4)
+    30_1(Output):             TypeStruct 29_1
+            32_1:             TypePointer Uniform 30_1(Output)
+            59_1:   32_1(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_2:             TypePointer Input 21_2(int)
+59_2(gl_VertexIndex):   32_2(ptr) Variable Input
+            32_3:             TypePointer Input 21_1(int)
+59_3(gl_WarpsPerSMNV):   32_3(ptr) Variable Input
+59_4(gl_SMCountNV):   32_3(ptr) Variable Input
+59_5(gl_WarpIDNV):   32_3(ptr) Variable Input
+ 59_6(gl_SMIDNV):   32_3(ptr) Variable Input
+            32_4:             TypePointer Uniform 23_1(ivec4)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_2(int) Load 59_2(gl_VertexIndex)
+            61_2:   21_1(int) Load 59_3(gl_WarpsPerSMNV)
+            61_3:   21_1(int) Load 59_4(gl_SMCountNV)
+            61_4:   21_1(int) Load 59_5(gl_WarpIDNV)
+            61_5:   21_1(int) Load 59_6(gl_SMIDNV)
+            80_1: 23_1(ivec4) CompositeConstruct 61_2 61_3 61_4 61_5
+            65_1:   32_4(ptr) AccessChain 59_1 43_1 61_1
+                              Store 65_1 80_1
                               Return
                               FunctionEnd

@@ -6,132 +6,132 @@ spv.310.comp
                               Capability Shader
                               Capability DeviceGroup
                               Extension  "SPV_KHR_device_group"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 53 65
-                              ExecutionMode 4 LocalSize 16 32 4
+                              EntryPoint GLCompute 54_1  "main" 59_6 59_7
+                              ExecutionMode 54_1 LocalSize 16 32 4
                               Source ESSL 310
                               SourceExtension  "GL_EXT_device_group"
-                              Name 4  "main"
-                              Name 12  "outb"
-                              MemberName 12(outb) 0  "f"
-                              MemberName 12(outb) 1  "g"
-                              MemberName 12(outb) 2  "h"
-                              MemberName 12(outb) 3  "uns"
-                              Name 14  "outbname"
-                              Name 18  "s"
-                              Name 23  "outbna"
-                              MemberName 23(outbna) 0  "k"
-                              MemberName 23(outbna) 1  "na"
-                              Name 25  "outbnamena"
-                              Name 42  "i"
-                              Name 48  "outs"
-                              MemberName 48(outs) 0  "s"
-                              MemberName 48(outs) 1  "va"
-                              Name 50  "outnames"
-                              Name 53  "gl_LocalInvocationID"
-                              Name 65  "gl_DeviceIndex"
-                              Decorate 11 ArrayStride 16
-                              Decorate 12(outb) BufferBlock
-                              MemberDecorate 12(outb) 0 Offset 0
-                              MemberDecorate 12(outb) 1 Offset 4
-                              MemberDecorate 12(outb) 2 Offset 8
-                              MemberDecorate 12(outb) 3 Offset 16
-                              Decorate 14(outbname) Binding 0
-                              Decorate 14(outbname) DescriptorSet 0
-                              Decorate 23(outbna) BufferBlock
-                              MemberDecorate 23(outbna) 0 Offset 0
-                              MemberDecorate 23(outbna) 1 Offset 16
-                              Decorate 25(outbnamena) Binding 1
-                              Decorate 25(outbnamena) DescriptorSet 0
-                              Decorate 47 ArrayStride 16
-                              Decorate 48(outs) BufferBlock
-                              MemberDecorate 48(outs) 0 Offset 0
-                              MemberDecorate 48(outs) 1 Offset 16
-                              Decorate 50(outnames) Binding 2
-                              Decorate 50(outnames) DescriptorSet 0
-                              Decorate 53(gl_LocalInvocationID) BuiltIn LocalInvocationId
-                              Decorate 65(gl_DeviceIndex) BuiltIn DeviceIndex
-                              Decorate 71 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:      6(int) Constant 2
-               8:      6(int) Constant 264
-               9:             TypeFloat 32
-              10:             TypeVector 9(float) 3
-              11:             TypeRuntimeArray 10(fvec3)
-        12(outb):             TypeStruct 9(float) 9(float) 9(float) 11
-              13:             TypePointer Uniform 12(outb)
-    14(outbname):     13(ptr) Variable Uniform
-              15:             TypeInt 32 1
-              16:     15(int) Constant 0
-              17:             TypePointer Workgroup 9(float)
-           18(s):     17(ptr) Variable Workgroup
-              20:             TypePointer Uniform 9(float)
-              22:             TypeVector 9(float) 4
-      23(outbna):             TypeStruct 15(int) 22(fvec4)
-              24:             TypePointer Uniform 23(outbna)
-  25(outbnamena):     24(ptr) Variable Uniform
-              26:     15(int) Constant 1
-              29:             TypePointer Uniform 22(fvec4)
-              31:     15(int) Constant 3
-              32:     15(int) Constant 18
-              33:      6(int) Constant 0
-              36:     15(int) Constant 17
-              37:    9(float) Constant 1077936128
-              38:   10(fvec3) ConstantComposite 37 37 37
-              39:             TypePointer Uniform 10(fvec3)
-              41:             TypePointer Workgroup 15(int)
-           42(i):     41(ptr) Variable Workgroup
-              47:             TypeRuntimeArray 22(fvec4)
-        48(outs):             TypeStruct 15(int) 47
-              49:             TypePointer Uniform 48(outs)
-    50(outnames):     49(ptr) Variable Uniform
-              51:             TypeVector 6(int) 3
-              52:             TypePointer Input 51(ivec3)
-53(gl_LocalInvocationID):     52(ptr) Variable Input
-              54:             TypePointer Input 6(int)
-              62:             TypePointer Uniform 15(int)
-              64:             TypePointer Input 15(int)
-65(gl_DeviceIndex):     64(ptr) Variable Input
-              66:      6(int) Constant 1
-              67:      6(int) Constant 3400
-              68:      6(int) Constant 16
-              69:      6(int) Constant 32
-              70:      6(int) Constant 4
-              71:   51(ivec3) ConstantComposite 68 69 70
-         4(main):           2 Function None 3
-               5:             Label
-                              ControlBarrier 7 7 8
-              19:    9(float) Load 18(s)
-              21:     20(ptr) AccessChain 14(outbname) 16
-                              Store 21 19
-              27:    9(float) Load 18(s)
-              28:   22(fvec4) CompositeConstruct 27 27 27 27
-              30:     29(ptr) AccessChain 25(outbnamena) 26
-                              Store 30 28
-              34:     20(ptr) AccessChain 14(outbname) 31 32 33
-              35:    9(float) Load 34
-                              Store 18(s) 35
-              40:     39(ptr) AccessChain 14(outbname) 31 36
-                              Store 40 38
-              43:     15(int) Load 42(i)
-              44:    9(float) Load 18(s)
-              45:   10(fvec3) CompositeConstruct 44 44 44
-              46:     39(ptr) AccessChain 14(outbname) 31 43
-                              Store 46 45
-              55:     54(ptr) AccessChain 53(gl_LocalInvocationID) 33
-              56:      6(int) Load 55
-              57:    9(float) Load 18(s)
-              58:   22(fvec4) CompositeConstruct 57 57 57 57
-              59:     29(ptr) AccessChain 50(outnames) 26 56
-                              Store 59 58
-              60:      6(int) ArrayLength 14(outbname) 3
-              61:     15(int) Bitcast 60
-              63:     62(ptr) AccessChain 50(outnames) 16
-                              Store 63 61
-                              MemoryBarrier 66 8
-                              MemoryBarrier 7 67
+                              Name 54_1  "main"
+                              Name 30_1  "outb"
+                              MemberName 30_1(outb) 0  "f"
+                              MemberName 30_1(outb) 1  "g"
+                              MemberName 30_1(outb) 2  "h"
+                              MemberName 30_1(outb) 3  "uns"
+                              Name 59_1  "outbname"
+                              Name 59_2  "s"
+                              Name 30_2  "outbna"
+                              MemberName 30_2(outbna) 0  "k"
+                              MemberName 30_2(outbna) 1  "na"
+                              Name 59_3  "outbnamena"
+                              Name 59_4  "i"
+                              Name 30_3  "outs"
+                              MemberName 30_3(outs) 0  "s"
+                              MemberName 30_3(outs) 1  "va"
+                              Name 59_5  "outnames"
+                              Name 59_6  "gl_LocalInvocationID"
+                              Name 59_7  "gl_DeviceIndex"
+                              Decorate 29_1 ArrayStride 16
+                              Decorate 30_1(outb) BufferBlock
+                              MemberDecorate 30_1(outb) 0 Offset 0
+                              MemberDecorate 30_1(outb) 1 Offset 4
+                              MemberDecorate 30_1(outb) 2 Offset 8
+                              MemberDecorate 30_1(outb) 3 Offset 16
+                              Decorate 59_1(outbname) Binding 0
+                              Decorate 59_1(outbname) DescriptorSet 0
+                              Decorate 30_2(outbna) BufferBlock
+                              MemberDecorate 30_2(outbna) 0 Offset 0
+                              MemberDecorate 30_2(outbna) 1 Offset 16
+                              Decorate 59_3(outbnamena) Binding 1
+                              Decorate 59_3(outbnamena) DescriptorSet 0
+                              Decorate 29_2 ArrayStride 16
+                              Decorate 30_3(outs) BufferBlock
+                              MemberDecorate 30_3(outs) 0 Offset 0
+                              MemberDecorate 30_3(outs) 1 Offset 16
+                              Decorate 59_5(outnames) Binding 2
+                              Decorate 59_5(outnames) DescriptorSet 0
+                              Decorate 59_6(gl_LocalInvocationID) BuiltIn LocalInvocationId
+                              Decorate 59_7(gl_DeviceIndex) BuiltIn DeviceIndex
+                              Decorate 44_2 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+         uint(2):   21_1(int) Constant 2
+       uint(264):   21_1(int) Constant 264
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            29_1:             TypeRuntimeArray 23_1(fvec3)
+      30_1(outb):             TypeStruct 22_1(float) 22_1(float) 22_1(float) 29_1
+            32_1:             TypePointer Uniform 30_1(outb)
+  59_1(outbname):   32_1(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_2:             TypePointer Workgroup 22_1(float)
+         59_2(s):   32_2(ptr) Variable Workgroup
+            32_3:             TypePointer Uniform 22_1(float)
+            23_2:             TypeVector 22_1(float) 4
+    30_2(outbna):             TypeStruct 21_2(int) 23_2(fvec4)
+            32_4:             TypePointer Uniform 30_2(outbna)
+59_3(outbnamena):   32_4(ptr) Variable Uniform
+            43_2:   21_2(int) Constant 1
+            32_5:             TypePointer Uniform 23_2(fvec4)
+            43_3:   21_2(int) Constant 3
+            43_4:   21_2(int) Constant 18
+         uint(0):   21_1(int) Constant 0
+            43_5:   21_2(int) Constant 17
+            43_6: 22_1(float) Constant 1077936128
+            44_1: 23_1(fvec3) ConstantComposite 43_6 43_6 43_6
+            32_6:             TypePointer Uniform 23_1(fvec3)
+            32_7:             TypePointer Workgroup 21_2(int)
+         59_4(i):   32_7(ptr) Variable Workgroup
+            29_2:             TypeRuntimeArray 23_2(fvec4)
+      30_3(outs):             TypeStruct 21_2(int) 29_2
+            32_8:             TypePointer Uniform 30_3(outs)
+  59_5(outnames):   32_8(ptr) Variable Uniform
+            23_3:             TypeVector 21_1(int) 3
+            32_9:             TypePointer Input 23_3(ivec3)
+59_6(gl_LocalInvocationID):   32_9(ptr) Variable Input
+           32_10:             TypePointer Input 21_1(int)
+           32_11:             TypePointer Uniform 21_2(int)
+           32_12:             TypePointer Input 21_2(int)
+59_7(gl_DeviceIndex):  32_12(ptr) Variable Input
+         uint(1):   21_1(int) Constant 1
+      uint(3400):   21_1(int) Constant 3400
+        uint(16):   21_1(int) Constant 16
+        uint(32):   21_1(int) Constant 32
+         uint(4):   21_1(int) Constant 4
+            44_2: 23_3(ivec3) ConstantComposite uint(16) uint(32) uint(4)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+                              ControlBarrier uint(2) uint(2) uint(264)
+            61_1: 22_1(float) Load 59_2(s)
+            65_1:   32_3(ptr) AccessChain 59_1(outbname) 43_1
+                              Store 65_1 61_1
+            61_2: 22_1(float) Load 59_2(s)
+            80_1: 23_2(fvec4) CompositeConstruct 61_2 61_2 61_2 61_2
+            65_2:   32_5(ptr) AccessChain 59_3(outbnamena) 43_2
+                              Store 65_2 80_1
+            65_3:   32_3(ptr) AccessChain 59_1(outbname) 43_3 43_4 uint(0)
+            61_3: 22_1(float) Load 65_3
+                              Store 59_2(s) 61_3
+            65_4:   32_6(ptr) AccessChain 59_1(outbname) 43_3 43_5
+                              Store 65_4 44_1
+            61_4:   21_2(int) Load 59_4(i)
+            61_5: 22_1(float) Load 59_2(s)
+            80_2: 23_1(fvec3) CompositeConstruct 61_5 61_5 61_5
+            65_5:   32_6(ptr) AccessChain 59_1(outbname) 43_3 61_4
+                              Store 65_5 80_2
+            65_6:  32_10(ptr) AccessChain 59_6(gl_LocalInvocationID) uint(0)
+            61_6:   21_1(int) Load 65_6
+            61_7: 22_1(float) Load 59_2(s)
+            80_3: 23_2(fvec4) CompositeConstruct 61_7 61_7 61_7 61_7
+            65_7:   32_5(ptr) AccessChain 59_5(outnames) 43_2 61_6
+                              Store 65_7 80_3
+            68_1:   21_1(int) ArrayLength 59_1(outbname) 3
+           124_1:   21_2(int) Bitcast 68_1
+            65_8:  32_11(ptr) AccessChain 59_5(outnames) 43_1
+                              Store 65_8 124_1
+                              MemoryBarrier uint(1) uint(264)
+                              MemoryBarrier uint(2) uint(3400)
                               Return
                               FunctionEnd

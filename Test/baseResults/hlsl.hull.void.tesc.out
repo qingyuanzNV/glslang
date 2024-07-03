@@ -188,107 +188,107 @@ triangle order = ccw
 // Id's are bound by 67
 
                               Capability Tessellation
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationControl 4  "main" 34 48 50
-                              ExecutionMode 4 OutputVertices 3
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 SpacingFractionalEven
-                              ExecutionMode 4 VertexOrderCcw
+                              EntryPoint TessellationControl 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OutputVertices 3
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 SpacingFractionalEven
+                              ExecutionMode 54_1 VertexOrderCcw
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "VS_OUT"
-                              MemberName 8(VS_OUT) 0  "cpoint"
-                              Name 13  "HS_OUT"
-                              MemberName 13(HS_OUT) 0  "cpoint"
-                              Name 16  "@main(struct-VS_OUT-vf31[3];"
-                              Name 15  "ip"
-                              Name 18  "PCF("
-                              Name 21  "output"
-                              Name 31  "ip"
-                              Name 34  "ip.cpoint"
-                              Name 48  "@entryPointOutput.cpoint"
-                              Name 50  "InvocationId"
-                              Name 52  "param"
-                              Decorate 34(ip.cpoint) Location 0
-                              Decorate 48(@entryPointOutput.cpoint) Location 0
-                              Decorate 50(InvocationId) BuiltIn InvocationId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 3
-       8(VS_OUT):             TypeStruct 7(fvec3)
-               9:             TypeInt 32 0
-              10:      9(int) Constant 3
-              11:             TypeArray 8(VS_OUT) 10
-              12:             TypePointer Function 11
-      13(HS_OUT):             TypeStruct 7(fvec3)
-              14:             TypeFunction 13(HS_OUT) 12(ptr)
-              20:             TypePointer Function 13(HS_OUT)
-              22:             TypeInt 32 1
-              23:     22(int) Constant 0
-              24:             TypePointer Function 7(fvec3)
-              32:             TypeArray 7(fvec3) 10
-              33:             TypePointer Input 32
-   34(ip.cpoint):     33(ptr) Variable Input
-              35:             TypePointer Input 7(fvec3)
-              39:     22(int) Constant 1
-              43:     22(int) Constant 2
-              47:             TypePointer Output 32
-48(@entryPointOutput.cpoint):     47(ptr) Variable Output
-              49:             TypePointer Input 9(int)
-50(InvocationId):     49(ptr) Variable Input
-              56:             TypePointer Output 7(fvec3)
-              58:      9(int) Constant 2
-              59:      9(int) Constant 4
-              60:      9(int) Constant 0
-              62:             TypeBool
-         4(main):           2 Function None 3
-               5:             Label
-          31(ip):     12(ptr) Variable Function
-       52(param):     12(ptr) Variable Function
-              36:     35(ptr) AccessChain 34(ip.cpoint) 23
-              37:    7(fvec3) Load 36
-              38:     24(ptr) AccessChain 31(ip) 23 23
-                              Store 38 37
-              40:     35(ptr) AccessChain 34(ip.cpoint) 39
-              41:    7(fvec3) Load 40
-              42:     24(ptr) AccessChain 31(ip) 39 23
-                              Store 42 41
-              44:     35(ptr) AccessChain 34(ip.cpoint) 43
-              45:    7(fvec3) Load 44
-              46:     24(ptr) AccessChain 31(ip) 43 23
-                              Store 46 45
-              51:      9(int) Load 50(InvocationId)
-              53:          11 Load 31(ip)
-                              Store 52(param) 53
-              54:  13(HS_OUT) FunctionCall 16(@main(struct-VS_OUT-vf31[3];) 52(param)
-              55:    7(fvec3) CompositeExtract 54 0
-              57:     56(ptr) AccessChain 48(@entryPointOutput.cpoint) 51
-                              Store 57 55
-                              ControlBarrier 58 59 60
-              61:      9(int) Load 50(InvocationId)
-              63:    62(bool) IEqual 61 23
-                              SelectionMerge 65 None
-                              BranchConditional 63 64 65
-              64:               Label
-              66:           2   FunctionCall 18(PCF()
-                                Branch 65
-              65:             Label
+                              Name 54_1  "main"
+                              Name 30_1  "VS_OUT"
+                              MemberName 30_1(VS_OUT) 0  "cpoint"
+                              Name 30_2  "HS_OUT"
+                              MemberName 30_2(HS_OUT) 0  "cpoint"
+                              Name 54_2  "@main(struct-VS_OUT-vf31[3];"
+                              Name 55_1  "ip"
+                              Name 54_3  "PCF("
+                              Name 59_6  "output"
+                              Name 59_4  "ip"
+                              Name 59_1  "ip.cpoint"
+                              Name 59_2  "@entryPointOutput.cpoint"
+                              Name 59_3  "InvocationId"
+                              Name 59_5  "param"
+                              Decorate 59_1(ip.cpoint) Location 0
+                              Decorate 59_2(@entryPointOutput.cpoint) Location 0
+                              Decorate 59_3(InvocationId) BuiltIn InvocationId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+    30_1(VS_OUT):             TypeStruct 23_1(fvec3)
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 30_1(VS_OUT) uint(3)
+            32_1:             TypePointer Function 28_1
+    30_2(HS_OUT):             TypeStruct 23_1(fvec3)
+            33_2:             TypeFunction 30_2(HS_OUT) 32_1(ptr)
+            32_2:             TypePointer Function 30_2(HS_OUT)
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_3:             TypePointer Function 23_1(fvec3)
+            28_2:             TypeArray 23_1(fvec3) uint(3)
+            32_4:             TypePointer Input 28_2
+ 59_1(ip.cpoint):   32_4(ptr) Variable Input
+            32_5:             TypePointer Input 23_1(fvec3)
+            43_2:   21_2(int) Constant 1
+            43_3:   21_2(int) Constant 2
+            32_6:             TypePointer Output 28_2
+59_2(@entryPointOutput.cpoint):   32_6(ptr) Variable Output
+            32_7:             TypePointer Input 21_1(int)
+59_3(InvocationId):   32_7(ptr) Variable Input
+            32_8:             TypePointer Output 23_1(fvec3)
+         uint(2):   21_1(int) Constant 2
+         uint(4):   21_1(int) Constant 4
+         uint(0):   21_1(int) Constant 0
+            20_1:             TypeBool
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_4(ip):   32_1(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+            65_1:   32_5(ptr) AccessChain 59_1(ip.cpoint) 43_1
+            61_1: 23_1(fvec3) Load 65_1
+            65_2:   32_3(ptr) AccessChain 59_4(ip) 43_1 43_1
+                              Store 65_2 61_1
+            65_3:   32_5(ptr) AccessChain 59_1(ip.cpoint) 43_2
+            61_2: 23_1(fvec3) Load 65_3
+            65_4:   32_3(ptr) AccessChain 59_4(ip) 43_2 43_1
+                              Store 65_4 61_2
+            65_5:   32_5(ptr) AccessChain 59_1(ip.cpoint) 43_3
+            61_3: 23_1(fvec3) Load 65_5
+            65_6:   32_3(ptr) AccessChain 59_4(ip) 43_3 43_1
+                              Store 65_6 61_3
+            61_4:   21_1(int) Load 59_3(InvocationId)
+            61_5:        28_1 Load 59_4(ip)
+                              Store 59_5(param) 61_5
+            57_1:30_2(HS_OUT) FunctionCall 54_2(@main(struct-VS_OUT-vf31[3];) 59_5(param)
+            81_1: 23_1(fvec3) CompositeExtract 57_1 0
+            65_7:   32_8(ptr) AccessChain 59_2(@entryPointOutput.cpoint) 61_4
+                              Store 65_7 81_1
+                              ControlBarrier uint(2) uint(4) uint(0)
+            61_6:   21_1(int) Load 59_3(InvocationId)
+           170_1:  20_1(bool) IEqual 61_6 43_1
+                              SelectionMerge 248_3 None
+                              BranchConditional 170_1 248_2 248_3
+           248_2:               Label
+            57_2:        19_1   FunctionCall 54_3(PCF()
+                                Branch 248_3
+           248_3:             Label
                               Return
                               FunctionEnd
-16(@main(struct-VS_OUT-vf31[3];):  13(HS_OUT) Function None 14
-          15(ip):     12(ptr) FunctionParameter
-              17:             Label
-      21(output):     20(ptr) Variable Function
-              25:     24(ptr) AccessChain 15(ip) 23 23
-              26:    7(fvec3) Load 25
-              27:     24(ptr) AccessChain 21(output) 23
-                              Store 27 26
-              28:  13(HS_OUT) Load 21(output)
-                              ReturnValue 28
+54_2(@main(struct-VS_OUT-vf31[3];):30_2(HS_OUT) Function None 33_2
+        55_1(ip):   32_1(ptr) FunctionParameter
+           248_4:             Label
+    59_6(output):   32_2(ptr) Variable Function
+            65_8:   32_3(ptr) AccessChain 55_1(ip) 43_1 43_1
+            61_7: 23_1(fvec3) Load 65_8
+            65_9:   32_3(ptr) AccessChain 59_6(output) 43_1
+                              Store 65_9 61_7
+            61_8:30_2(HS_OUT) Load 59_6(output)
+                              ReturnValue 61_8
                               FunctionEnd
-        18(PCF():           2 Function None 3
-              19:             Label
+      54_3(PCF():        19_1 Function None 33_1
+           248_5:             Label
                               Return
                               FunctionEnd

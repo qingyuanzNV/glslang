@@ -20,486 +20,486 @@ spv.nonuniform.frag
                               Capability UniformTexelBufferArrayNonUniformIndexingEXT
                               Capability StorageTexelBufferArrayNonUniformIndexingEXT
                               Extension  "SPV_EXT_descriptor_indexing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 41 98 188
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_6 59_15
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_nonuniform_qualifier"
-                              Name 4  "main"
-                              Name 11  "foo(i1;i1;"
-                              Name 9  "nupi"
-                              Name 10  "f"
-                              Name 16  "a"
-                              Name 17  "nu_li"
-                              Name 18  "param"
-                              Name 20  "param"
-                              Name 30  "nu_li2"
-                              Name 38  "b"
-                              Name 41  "nu_inv4"
-                              Name 47  "nu_gf"
-                              Name 53  "inputAttachmentDyn"
-                              Name 54  "dyn_i"
-                              Name 70  "uniformTexelBufferDyn"
-                              Name 84  "storageTexelBufferDyn"
-                              Name 93  "uname"
-                              MemberName 93(uname) 0  "a"
-                              Name 96  "uniformBuffer"
-                              Name 98  "nu_ii"
-                              Name 105  "bname"
-                              MemberName 105(bname) 0  "b"
-                              Name 108  "storageBuffer"
-                              Name 118  "sampledImage"
-                              Name 133  "storageImage"
-                              Name 145  "inputAttachment"
-                              Name 155  "uniformTexelBuffer"
-                              Name 166  "storageTexelBuffer"
-                              Name 177  "uniformTexArr"
-                              Name 184  "uniformSampler"
-                              Name 188  "inTexcoord"
-                              Name 207  "v"
-                              Name 222  "uv"
-                              Name 232  "m"
-                              Name 240  "S"
-                              MemberName 240(S) 0  "a"
-                              Name 242  "s"
-                              Name 252  "arr"
-                              Name 259  "um"
-                              Name 268  "US"
-                              MemberName 268(US) 0  "a"
-                              Name 270  "us"
-                              Name 278  "uarr"
-                              Decorate 13 DecorationNonUniformEXT
-                              Decorate 19 DecorationNonUniformEXT
-                              Decorate 21 DecorationNonUniformEXT
-                              Decorate 22 DecorationNonUniformEXT
-                              Decorate 24 DecorationNonUniformEXT
-                              Decorate 28 DecorationNonUniformEXT
-                              Decorate 29 DecorationNonUniformEXT
-                              Decorate 34 DecorationNonUniformEXT
-                              Decorate 35 DecorationNonUniformEXT
-                              Decorate 41(nu_inv4) Location 0
-                              Decorate 46 DecorationNonUniformEXT
-                              Decorate 48 DecorationNonUniformEXT
-                              Decorate 49 DecorationNonUniformEXT
-                              Decorate 53(inputAttachmentDyn) Binding 0
-                              Decorate 53(inputAttachmentDyn) DescriptorSet 0
-                              Decorate 53(inputAttachmentDyn) InputAttachmentIndex 0
-                              Decorate 70(uniformTexelBufferDyn) Binding 1
-                              Decorate 70(uniformTexelBufferDyn) DescriptorSet 0
-                              Decorate 84(storageTexelBufferDyn) Binding 2
-                              Decorate 84(storageTexelBufferDyn) DescriptorSet 0
-                              Decorate 93(uname) Block
-                              MemberDecorate 93(uname) 0 Offset 0
-                              Decorate 96(uniformBuffer) Binding 3
-                              Decorate 96(uniformBuffer) DescriptorSet 0
-                              Decorate 98(nu_ii) Flat
-                              Decorate 98(nu_ii) Location 1
-                              Decorate 99 DecorationNonUniformEXT
-                              Decorate 101 DecorationNonUniformEXT
-                              Decorate 102 DecorationNonUniformEXT
-                              Decorate 104 DecorationNonUniformEXT
-                              Decorate 105(bname) BufferBlock
-                              MemberDecorate 105(bname) 0 Offset 0
-                              Decorate 108(storageBuffer) Binding 4
-                              Decorate 108(storageBuffer) DescriptorSet 0
-                              Decorate 109 DecorationNonUniformEXT
-                              Decorate 110 DecorationNonUniformEXT
-                              Decorate 111 DecorationNonUniformEXT
-                              Decorate 113 DecorationNonUniformEXT
-                              Decorate 118(sampledImage) Binding 5
-                              Decorate 118(sampledImage) DescriptorSet 0
-                              Decorate 119 DecorationNonUniformEXT
-                              Decorate 121 DecorationNonUniformEXT
-                              Decorate 122 DecorationNonUniformEXT
-                              Decorate 133(storageImage) Binding 6
-                              Decorate 133(storageImage) DescriptorSet 0
-                              Decorate 134 DecorationNonUniformEXT
-                              Decorate 136 DecorationNonUniformEXT
-                              Decorate 137 DecorationNonUniformEXT
-                              Decorate 145(inputAttachment) Binding 7
-                              Decorate 145(inputAttachment) DescriptorSet 0
-                              Decorate 145(inputAttachment) InputAttachmentIndex 1
-                              Decorate 146 DecorationNonUniformEXT
-                              Decorate 147 DecorationNonUniformEXT
-                              Decorate 148 DecorationNonUniformEXT
-                              Decorate 155(uniformTexelBuffer) Binding 8
-                              Decorate 155(uniformTexelBuffer) DescriptorSet 0
-                              Decorate 156 DecorationNonUniformEXT
-                              Decorate 157 DecorationNonUniformEXT
-                              Decorate 158 DecorationNonUniformEXT
-                              Decorate 159 DecorationNonUniformEXT
-                              Decorate 166(storageTexelBuffer) Binding 9
-                              Decorate 166(storageTexelBuffer) DescriptorSet 0
-                              Decorate 167 DecorationNonUniformEXT
-                              Decorate 168 DecorationNonUniformEXT
-                              Decorate 169 DecorationNonUniformEXT
-                              Decorate 177(uniformTexArr) Binding 10
-                              Decorate 177(uniformTexArr) DescriptorSet 0
-                              Decorate 178 DecorationNonUniformEXT
-                              Decorate 180 DecorationNonUniformEXT
-                              Decorate 181 DecorationNonUniformEXT
-                              Decorate 184(uniformSampler) Binding 11
-                              Decorate 184(uniformSampler) DescriptorSet 0
-                              Decorate 188(inTexcoord) Location 2
-                              Decorate 194 DecorationNonUniformEXT
-                              Decorate 195 DecorationNonUniformEXT
-                              Decorate 196 DecorationNonUniformEXT
-                              Decorate 199 DecorationNonUniformEXT
-                              Decorate 210 DecorationNonUniformEXT
-                              Decorate 211 DecorationNonUniformEXT
-                              Decorate 212 DecorationNonUniformEXT
-                              Decorate 214 DecorationNonUniformEXT
-                              Decorate 217 DecorationNonUniformEXT
-                              Decorate 218 DecorationNonUniformEXT
-                              Decorate 219 DecorationNonUniformEXT
-                              Decorate 221 DecorationNonUniformEXT
-                              Decorate 223 DecorationNonUniformEXT
-                              Decorate 224 DecorationNonUniformEXT
-                              Decorate 225 DecorationNonUniformEXT
-                              Decorate 226 DecorationNonUniformEXT
-                              Decorate 227 DecorationNonUniformEXT
-                              Decorate 229 DecorationNonUniformEXT
-                              Decorate 234 DecorationNonUniformEXT
-                              Decorate 244 DecorationNonUniformEXT
-                              Decorate 245 DecorationNonUniformEXT
-                              Decorate 246 DecorationNonUniformEXT
-                              Decorate 248 DecorationNonUniformEXT
-                              Decorate 254 DecorationNonUniformEXT
-                              Decorate 255 DecorationNonUniformEXT
-                              Decorate 256 DecorationNonUniformEXT
-                              Decorate 258 DecorationNonUniformEXT
-                              Decorate 260 DecorationNonUniformEXT
-                              Decorate 261 DecorationNonUniformEXT
-                              Decorate 262 DecorationNonUniformEXT
-                              Decorate 271 DecorationNonUniformEXT
-                              Decorate 272 DecorationNonUniformEXT
-                              Decorate 273 DecorationNonUniformEXT
-                              Decorate 274 DecorationNonUniformEXT
-                              Decorate 275 DecorationNonUniformEXT
-                              Decorate 277 DecorationNonUniformEXT
-                              Decorate 279 DecorationNonUniformEXT
-                              Decorate 280 DecorationNonUniformEXT
-                              Decorate 281 DecorationNonUniformEXT
-                              Decorate 282 DecorationNonUniformEXT
-                              Decorate 283 DecorationNonUniformEXT
-                              Decorate 285 DecorationNonUniformEXT
-                              Decorate 286 DecorationNonUniformEXT
-                              Decorate 288 DecorationNonUniformEXT
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               8:             TypeFunction 6(int) 7(ptr) 7(ptr)
-              26:      6(int) Constant 2
-              36:             TypeFloat 32
-              37:             TypePointer Function 36(float)
-              39:             TypeVector 36(float) 4
-              40:             TypePointer Input 39(fvec4)
-     41(nu_inv4):     40(ptr) Variable Input
-              42:             TypeInt 32 0
-              43:     42(int) Constant 0
-              44:             TypePointer Input 36(float)
-              50:             TypeImage 36(float) SubpassData nonsampled format:Unknown
-              51:             TypeRuntimeArray 50
-              52:             TypePointer UniformConstant 51
-53(inputAttachmentDyn):     52(ptr) Variable UniformConstant
-              56:             TypePointer UniformConstant 50
-              59:      6(int) Constant 0
-              60:             TypeVector 6(int) 2
-              61:   60(ivec2) ConstantComposite 59 59
-              66:             TypeImage 36(float) Buffer sampled format:Unknown
-              67:             TypeSampledImage 66
-              68:             TypeRuntimeArray 67
-              69:             TypePointer UniformConstant 68
-70(uniformTexelBufferDyn):     69(ptr) Variable UniformConstant
-              72:             TypePointer UniformConstant 67
-              75:      6(int) Constant 1
-              81:             TypeImage 36(float) Buffer nonsampled format:R32f
-              82:             TypeRuntimeArray 81
-              83:             TypePointer UniformConstant 82
-84(storageTexelBufferDyn):     83(ptr) Variable UniformConstant
-              86:             TypePointer UniformConstant 81
-       93(uname):             TypeStruct 36(float)
-              94:             TypeRuntimeArray 93(uname)
-              95:             TypePointer Uniform 94
-96(uniformBuffer):     95(ptr) Variable Uniform
-              97:             TypePointer Input 6(int)
-       98(nu_ii):     97(ptr) Variable Input
-             100:             TypePointer Uniform 36(float)
-      105(bname):             TypeStruct 36(float)
-             106:             TypeRuntimeArray 105(bname)
-             107:             TypePointer Uniform 106
-108(storageBuffer):    107(ptr) Variable Uniform
-             114:             TypeImage 36(float) 2D sampled format:Unknown
-             115:             TypeSampledImage 114
-             116:             TypeRuntimeArray 115
-             117:             TypePointer UniformConstant 116
-118(sampledImage):    117(ptr) Variable UniformConstant
-             120:             TypePointer UniformConstant 115
-             123:             TypeVector 36(float) 2
-             124:   36(float) Constant 1056964608
-             125:  123(fvec2) ConstantComposite 124 124
-             130:             TypeImage 36(float) 2D nonsampled format:R32f
-             131:             TypeRuntimeArray 130
-             132:             TypePointer UniformConstant 131
-133(storageImage):    132(ptr) Variable UniformConstant
-             135:             TypePointer UniformConstant 130
-             138:   60(ivec2) ConstantComposite 75 75
-             143:             TypeRuntimeArray 50
-             144:             TypePointer UniformConstant 143
-145(inputAttachment):    144(ptr) Variable UniformConstant
-             153:             TypeRuntimeArray 67
-             154:             TypePointer UniformConstant 153
-155(uniformTexelBuffer):    154(ptr) Variable UniformConstant
-             164:             TypeRuntimeArray 81
-             165:             TypePointer UniformConstant 164
-166(storageTexelBuffer):    165(ptr) Variable UniformConstant
-             174:     42(int) Constant 8
-             175:             TypeArray 114 174
-             176:             TypePointer UniformConstant 175
-177(uniformTexArr):    176(ptr) Variable UniformConstant
-             179:             TypePointer UniformConstant 114
-             182:             TypeSampler
-             183:             TypePointer UniformConstant 182
-184(uniformSampler):    183(ptr) Variable UniformConstant
-             187:             TypePointer Input 123(fvec2)
- 188(inTexcoord):    187(ptr) Variable Input
-             205:             TypeVector 6(int) 4
-             206:             TypePointer Function 205(ivec4)
-             208:     42(int) Constant 1
-             215:     42(int) Constant 2
-             230:             TypeMatrix 39(fvec4) 4
-             231:             TypePointer Function 230
-          240(S):             TypeStruct 6(int)
-             241:             TypePointer Function 240(S)
-             249:     42(int) Constant 10
-             250:             TypeArray 6(int) 249
-             251:             TypePointer Function 250
-         268(US):             TypeStruct 250
-             269:             TypePointer Function 268(US)
-         4(main):           2 Function None 3
-               5:             Label
-           16(a):      7(ptr) Variable Function
-       17(nu_li):      7(ptr) Variable Function
-       18(param):      7(ptr) Variable Function
-       20(param):      7(ptr) Variable Function
-      30(nu_li2):      7(ptr) Variable Function
-           38(b):     37(ptr) Variable Function
-       47(nu_gf):     37(ptr) Variable Function
-       54(dyn_i):      7(ptr) Variable Function
-          207(v):    206(ptr) Variable Function
-         222(uv):    206(ptr) Variable Function
-          232(m):    231(ptr) Variable Function
-          242(s):    241(ptr) Variable Function
-        252(arr):    251(ptr) Variable Function
-         259(um):    231(ptr) Variable Function
-         270(us):    269(ptr) Variable Function
-       278(uarr):    251(ptr) Variable Function
-              19:      6(int) Load 17(nu_li)
-                              Store 18(param) 19
-              21:      6(int) FunctionCall 11(foo(i1;i1;) 18(param) 20(param)
-              22:      6(int) Load 20(param)
-                              Store 17(nu_li) 22
-                              Store 16(a) 21
-              23:      6(int) Load 16(a)
-              24:      6(int) CopyObject 23
-              25:      6(int) Load 16(a)
-              27:      6(int) IMul 25 26
-              28:      6(int) CopyObject 27
-              29:      6(int) IAdd 24 28
-                              Store 17(nu_li) 29
-              31:      6(int) Load 16(a)
-              32:      6(int) Load 16(a)
-              33:      6(int) IMul 32 26
-              34:      6(int) CopyObject 33
-              35:      6(int) IAdd 31 34
-                              Store 30(nu_li2) 35
-              45:     44(ptr) AccessChain 41(nu_inv4) 43
-              46:   36(float) Load 45
-              48:   36(float) Load 47(nu_gf)
-              49:   36(float) FMul 46 48
-                              Store 38(b) 49
-              55:      6(int) Load 54(dyn_i)
-              57:     56(ptr) AccessChain 53(inputAttachmentDyn) 55
-              58:          50 Load 57
-              62:   39(fvec4) ImageRead 58 61
-              63:   36(float) CompositeExtract 62 0
-              64:   36(float) Load 38(b)
-              65:   36(float) FAdd 64 63
-                              Store 38(b) 65
-              71:      6(int) Load 54(dyn_i)
-              73:     72(ptr) AccessChain 70(uniformTexelBufferDyn) 71
-              74:          67 Load 73
-              76:          66 Image 74
-              77:   39(fvec4) ImageFetch 76 75
-              78:   36(float) CompositeExtract 77 0
-              79:   36(float) Load 38(b)
-              80:   36(float) FAdd 79 78
-                              Store 38(b) 80
-              85:      6(int) Load 54(dyn_i)
-              87:     86(ptr) AccessChain 84(storageTexelBufferDyn) 85
-              88:          81 Load 87
-              89:   39(fvec4) ImageRead 88 75
-              90:   36(float) CompositeExtract 89 0
-              91:   36(float) Load 38(b)
-              92:   36(float) FAdd 91 90
-                              Store 38(b) 92
-              99:      6(int) Load 98(nu_ii)
-             101:    100(ptr) AccessChain 96(uniformBuffer) 99 59
-             102:   36(float) Load 101
-             103:   36(float) Load 38(b)
-             104:   36(float) FAdd 103 102
-                              Store 38(b) 104
-             109:      6(int) Load 98(nu_ii)
-             110:    100(ptr) AccessChain 108(storageBuffer) 109 59
-             111:   36(float) Load 110
-             112:   36(float) Load 38(b)
-             113:   36(float) FAdd 112 111
-                              Store 38(b) 113
-             119:      6(int) Load 98(nu_ii)
-             121:    120(ptr) AccessChain 118(sampledImage) 119
-             122:         115 Load 121
-             126:   39(fvec4) ImageSampleImplicitLod 122 125
-             127:   36(float) CompositeExtract 126 0
-             128:   36(float) Load 38(b)
-             129:   36(float) FAdd 128 127
-                              Store 38(b) 129
-             134:      6(int) Load 98(nu_ii)
-             136:    135(ptr) AccessChain 133(storageImage) 134
-             137:         130 Load 136
-             139:   39(fvec4) ImageRead 137 138
-             140:   36(float) CompositeExtract 139 0
-             141:   36(float) Load 38(b)
-             142:   36(float) FAdd 141 140
-                              Store 38(b) 142
-             146:      6(int) Load 98(nu_ii)
-             147:     56(ptr) AccessChain 145(inputAttachment) 146
-             148:          50 Load 147
-             149:   39(fvec4) ImageRead 148 61
-             150:   36(float) CompositeExtract 149 0
-             151:   36(float) Load 38(b)
-             152:   36(float) FAdd 151 150
-                              Store 38(b) 152
-             156:      6(int) Load 98(nu_ii)
-             157:     72(ptr) AccessChain 155(uniformTexelBuffer) 156
-             158:          67 Load 157
-             159:          66 Image 158
-             160:   39(fvec4) ImageFetch 159 75
-             161:   36(float) CompositeExtract 160 0
-             162:   36(float) Load 38(b)
-             163:   36(float) FAdd 162 161
-                              Store 38(b) 163
-             167:      6(int) Load 98(nu_ii)
-             168:     86(ptr) AccessChain 166(storageTexelBuffer) 167
-             169:          81 Load 168
-             170:   39(fvec4) ImageRead 169 75
-             171:   36(float) CompositeExtract 170 0
-             172:   36(float) Load 38(b)
-             173:   36(float) FAdd 172 171
-                              Store 38(b) 173
-             178:      6(int) Load 98(nu_ii)
-             180:    179(ptr) AccessChain 177(uniformTexArr) 178
-             181:         114 Load 180
-             185:         182 Load 184(uniformSampler)
-             186:         115 SampledImage 181 185
-             189:  123(fvec2) Load 188(inTexcoord)
-             190:   39(fvec4) ImageSampleImplicitLod 186 189
-             191:   36(float) CompositeExtract 190 0
-             192:   36(float) Load 38(b)
-             193:   36(float) FAdd 192 191
-                              Store 38(b) 193
-             194:      6(int) Load 98(nu_ii)
-             195:    179(ptr) AccessChain 177(uniformTexArr) 194
-             196:         114 Load 195
-             197:         182 Load 184(uniformSampler)
-             198:         115 SampledImage 196 197
-             199:         115 CopyObject 198
-             200:  123(fvec2) Load 188(inTexcoord)
-             201:   39(fvec4) ImageSampleImplicitLod 199 200
-             202:   36(float) CompositeExtract 201 0
-             203:   36(float) Load 38(b)
-             204:   36(float) FAdd 203 202
-                              Store 38(b) 204
-             209:      7(ptr) AccessChain 207(v) 208
-             210:      6(int) Load 209
-             211:    100(ptr) AccessChain 96(uniformBuffer) 210 59
-             212:   36(float) Load 211
-             213:   36(float) Load 38(b)
-             214:   36(float) FAdd 213 212
-                              Store 38(b) 214
-             216:      7(ptr) AccessChain 207(v) 215
-             217:      6(int) Load 216
-             218:    100(ptr) AccessChain 96(uniformBuffer) 217 59
-             219:   36(float) Load 218
-             220:   36(float) Load 38(b)
-             221:   36(float) FAdd 220 219
-                              Store 38(b) 221
-             223:      6(int) Load 98(nu_ii)
-             224:      7(ptr) AccessChain 222(uv) 223
-             225:      6(int) Load 224
-             226:    100(ptr) AccessChain 96(uniformBuffer) 225 59
-             227:   36(float) Load 226
-             228:   36(float) Load 38(b)
-             229:   36(float) FAdd 228 227
-                              Store 38(b) 229
-             233:     37(ptr) AccessChain 232(m) 26 215
-             234:   36(float) Load 233
-             235:      6(int) ConvertFToS 234
-             236:    100(ptr) AccessChain 96(uniformBuffer) 235 59
-             237:   36(float) Load 236
-             238:   36(float) Load 38(b)
-             239:   36(float) FAdd 238 237
-                              Store 38(b) 239
-             243:      7(ptr) AccessChain 242(s) 59
-             244:      6(int) Load 243
-             245:    100(ptr) AccessChain 96(uniformBuffer) 244 59
-             246:   36(float) Load 245
-             247:   36(float) Load 38(b)
-             248:   36(float) FAdd 247 246
-                              Store 38(b) 248
-             253:      7(ptr) AccessChain 252(arr) 26
-             254:      6(int) Load 253
-             255:    100(ptr) AccessChain 96(uniformBuffer) 254 59
-             256:   36(float) Load 255
-             257:   36(float) Load 38(b)
-             258:   36(float) FAdd 257 256
-                              Store 38(b) 258
-             260:      6(int) Load 98(nu_ii)
-             261:     37(ptr) AccessChain 259(um) 260 215
-             262:   36(float) Load 261
-             263:      6(int) ConvertFToS 262
-             264:    100(ptr) AccessChain 96(uniformBuffer) 263 59
-             265:   36(float) Load 264
-             266:   36(float) Load 38(b)
-             267:   36(float) FAdd 266 265
-                              Store 38(b) 267
-             271:      6(int) Load 98(nu_ii)
-             272:      7(ptr) AccessChain 270(us) 59 271
-             273:      6(int) Load 272
-             274:    100(ptr) AccessChain 96(uniformBuffer) 273 59
-             275:   36(float) Load 274
-             276:   36(float) Load 38(b)
-             277:   36(float) FAdd 276 275
-                              Store 38(b) 277
-             279:      6(int) Load 98(nu_ii)
-             280:      7(ptr) AccessChain 278(uarr) 279
-             281:      6(int) Load 280
-             282:    100(ptr) AccessChain 96(uniformBuffer) 281 59
-             283:   36(float) Load 282
-             284:   36(float) Load 38(b)
-             285:   36(float) FAdd 284 283
-                              Store 38(b) 285
-             286:      6(int) Load 98(nu_ii)
-             287:   36(float) Load 38(b)
-             288:    100(ptr) AccessChain 108(storageBuffer) 286 59
-                              Store 288 287
+                              Name 54_1  "main"
+                              Name 54_2  "foo(i1;i1;"
+                              Name 55_1  "nupi"
+                              Name 55_2  "f"
+                              Name 59_16  "a"
+                              Name 59_17  "nu_li"
+                              Name 59_18  "param"
+                              Name 59_19  "param"
+                              Name 59_20  "nu_li2"
+                              Name 59_21  "b"
+                              Name 59_1  "nu_inv4"
+                              Name 59_22  "nu_gf"
+                              Name 59_2  "inputAttachmentDyn"
+                              Name 59_23  "dyn_i"
+                              Name 59_3  "uniformTexelBufferDyn"
+                              Name 59_4  "storageTexelBufferDyn"
+                              Name 30_1  "uname"
+                              MemberName 30_1(uname) 0  "a"
+                              Name 59_5  "uniformBuffer"
+                              Name 59_6  "nu_ii"
+                              Name 30_2  "bname"
+                              MemberName 30_2(bname) 0  "b"
+                              Name 59_7  "storageBuffer"
+                              Name 59_8  "sampledImage"
+                              Name 59_9  "storageImage"
+                              Name 59_10  "inputAttachment"
+                              Name 59_11  "uniformTexelBuffer"
+                              Name 59_12  "storageTexelBuffer"
+                              Name 59_13  "uniformTexArr"
+                              Name 59_14  "uniformSampler"
+                              Name 59_15  "inTexcoord"
+                              Name 59_24  "v"
+                              Name 59_25  "uv"
+                              Name 59_26  "m"
+                              Name 30_3  "S"
+                              MemberName 30_3(S) 0  "a"
+                              Name 59_27  "s"
+                              Name 59_28  "arr"
+                              Name 59_29  "um"
+                              Name 30_4  "US"
+                              MemberName 30_4(US) 0  "a"
+                              Name 59_30  "us"
+                              Name 59_31  "uarr"
+                              Decorate 61_82 DecorationNonUniformEXT
+                              Decorate 61_1 DecorationNonUniformEXT
+                              Decorate 57_1 DecorationNonUniformEXT
+                              Decorate 61_2 DecorationNonUniformEXT
+                              Decorate 83_1 DecorationNonUniformEXT
+                              Decorate 83_2 DecorationNonUniformEXT
+                              Decorate 128_1 DecorationNonUniformEXT
+                              Decorate 83_3 DecorationNonUniformEXT
+                              Decorate 128_2 DecorationNonUniformEXT
+                              Decorate 59_1(nu_inv4) Location 0
+                              Decorate 61_7 DecorationNonUniformEXT
+                              Decorate 61_8 DecorationNonUniformEXT
+                              Decorate 133_1 DecorationNonUniformEXT
+                              Decorate 59_2(inputAttachmentDyn) Binding 0
+                              Decorate 59_2(inputAttachmentDyn) DescriptorSet 0
+                              Decorate 59_2(inputAttachmentDyn) InputAttachmentIndex 0
+                              Decorate 59_3(uniformTexelBufferDyn) Binding 1
+                              Decorate 59_3(uniformTexelBufferDyn) DescriptorSet 0
+                              Decorate 59_4(storageTexelBufferDyn) Binding 2
+                              Decorate 59_4(storageTexelBufferDyn) DescriptorSet 0
+                              Decorate 30_1(uname) Block
+                              MemberDecorate 30_1(uname) 0 Offset 0
+                              Decorate 59_5(uniformBuffer) Binding 3
+                              Decorate 59_5(uniformBuffer) DescriptorSet 0
+                              Decorate 59_6(nu_ii) Flat
+                              Decorate 59_6(nu_ii) Location 1
+                              Decorate 61_18 DecorationNonUniformEXT
+                              Decorate 65_5 DecorationNonUniformEXT
+                              Decorate 61_19 DecorationNonUniformEXT
+                              Decorate 129_4 DecorationNonUniformEXT
+                              Decorate 30_2(bname) BufferBlock
+                              MemberDecorate 30_2(bname) 0 Offset 0
+                              Decorate 59_7(storageBuffer) Binding 4
+                              Decorate 59_7(storageBuffer) DescriptorSet 0
+                              Decorate 61_21 DecorationNonUniformEXT
+                              Decorate 65_6 DecorationNonUniformEXT
+                              Decorate 61_22 DecorationNonUniformEXT
+                              Decorate 129_5 DecorationNonUniformEXT
+                              Decorate 59_8(sampledImage) Binding 5
+                              Decorate 59_8(sampledImage) DescriptorSet 0
+                              Decorate 61_24 DecorationNonUniformEXT
+                              Decorate 65_7 DecorationNonUniformEXT
+                              Decorate 61_25 DecorationNonUniformEXT
+                              Decorate 59_9(storageImage) Binding 6
+                              Decorate 59_9(storageImage) DescriptorSet 0
+                              Decorate 61_27 DecorationNonUniformEXT
+                              Decorate 65_8 DecorationNonUniformEXT
+                              Decorate 61_28 DecorationNonUniformEXT
+                              Decorate 59_10(inputAttachment) Binding 7
+                              Decorate 59_10(inputAttachment) DescriptorSet 0
+                              Decorate 59_10(inputAttachment) InputAttachmentIndex 1
+                              Decorate 61_30 DecorationNonUniformEXT
+                              Decorate 65_9 DecorationNonUniformEXT
+                              Decorate 61_31 DecorationNonUniformEXT
+                              Decorate 59_11(uniformTexelBuffer) Binding 8
+                              Decorate 59_11(uniformTexelBuffer) DescriptorSet 0
+                              Decorate 61_33 DecorationNonUniformEXT
+                              Decorate 65_10 DecorationNonUniformEXT
+                              Decorate 61_34 DecorationNonUniformEXT
+                              Decorate 100_2 DecorationNonUniformEXT
+                              Decorate 59_12(storageTexelBuffer) Binding 9
+                              Decorate 59_12(storageTexelBuffer) DescriptorSet 0
+                              Decorate 61_36 DecorationNonUniformEXT
+                              Decorate 65_11 DecorationNonUniformEXT
+                              Decorate 61_37 DecorationNonUniformEXT
+                              Decorate 59_13(uniformTexArr) Binding 10
+                              Decorate 59_13(uniformTexArr) DescriptorSet 0
+                              Decorate 61_39 DecorationNonUniformEXT
+                              Decorate 65_12 DecorationNonUniformEXT
+                              Decorate 61_40 DecorationNonUniformEXT
+                              Decorate 59_14(uniformSampler) Binding 11
+                              Decorate 59_14(uniformSampler) DescriptorSet 0
+                              Decorate 59_15(inTexcoord) Location 2
+                              Decorate 61_44 DecorationNonUniformEXT
+                              Decorate 65_13 DecorationNonUniformEXT
+                              Decorate 61_45 DecorationNonUniformEXT
+                              Decorate 83_4 DecorationNonUniformEXT
+                              Decorate 61_49 DecorationNonUniformEXT
+                              Decorate 65_15 DecorationNonUniformEXT
+                              Decorate 61_50 DecorationNonUniformEXT
+                              Decorate 129_13 DecorationNonUniformEXT
+                              Decorate 61_52 DecorationNonUniformEXT
+                              Decorate 65_17 DecorationNonUniformEXT
+                              Decorate 61_53 DecorationNonUniformEXT
+                              Decorate 129_14 DecorationNonUniformEXT
+                              Decorate 61_55 DecorationNonUniformEXT
+                              Decorate 65_18 DecorationNonUniformEXT
+                              Decorate 61_56 DecorationNonUniformEXT
+                              Decorate 65_19 DecorationNonUniformEXT
+                              Decorate 61_57 DecorationNonUniformEXT
+                              Decorate 129_15 DecorationNonUniformEXT
+                              Decorate 61_59 DecorationNonUniformEXT
+                              Decorate 61_62 DecorationNonUniformEXT
+                              Decorate 65_23 DecorationNonUniformEXT
+                              Decorate 61_63 DecorationNonUniformEXT
+                              Decorate 129_17 DecorationNonUniformEXT
+                              Decorate 61_65 DecorationNonUniformEXT
+                              Decorate 65_25 DecorationNonUniformEXT
+                              Decorate 61_66 DecorationNonUniformEXT
+                              Decorate 129_18 DecorationNonUniformEXT
+                              Decorate 61_68 DecorationNonUniformEXT
+                              Decorate 65_26 DecorationNonUniformEXT
+                              Decorate 61_69 DecorationNonUniformEXT
+                              Decorate 61_72 DecorationNonUniformEXT
+                              Decorate 65_28 DecorationNonUniformEXT
+                              Decorate 61_73 DecorationNonUniformEXT
+                              Decorate 65_29 DecorationNonUniformEXT
+                              Decorate 61_74 DecorationNonUniformEXT
+                              Decorate 129_20 DecorationNonUniformEXT
+                              Decorate 61_76 DecorationNonUniformEXT
+                              Decorate 65_30 DecorationNonUniformEXT
+                              Decorate 61_77 DecorationNonUniformEXT
+                              Decorate 65_31 DecorationNonUniformEXT
+                              Decorate 61_78 DecorationNonUniformEXT
+                              Decorate 129_21 DecorationNonUniformEXT
+                              Decorate 61_80 DecorationNonUniformEXT
+                              Decorate 65_32 DecorationNonUniformEXT
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            33_2:             TypeFunction 21_1(int) 32_1(ptr) 32_1(ptr)
+            43_1:   21_1(int) Constant 2
+            22_1:             TypeFloat 32
+            32_2:             TypePointer Function 22_1(float)
+            23_1:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Input 23_1(fvec4)
+   59_1(nu_inv4):   32_3(ptr) Variable Input
+            21_2:             TypeInt 32 0
+         uint(0):   21_2(int) Constant 0
+            32_4:             TypePointer Input 22_1(float)
+            25_1:             TypeImage 22_1(float) SubpassData nonsampled format:Unknown
+            29_1:             TypeRuntimeArray 25_1
+            32_5:             TypePointer UniformConstant 29_1
+59_2(inputAttachmentDyn):   32_5(ptr) Variable UniformConstant
+            32_6:             TypePointer UniformConstant 25_1
+            43_2:   21_1(int) Constant 0
+            23_2:             TypeVector 21_1(int) 2
+            44_1: 23_2(ivec2) ConstantComposite 43_2 43_2
+            25_2:             TypeImage 22_1(float) Buffer sampled format:Unknown
+            27_1:             TypeSampledImage 25_2
+            29_2:             TypeRuntimeArray 27_1
+            32_7:             TypePointer UniformConstant 29_2
+59_3(uniformTexelBufferDyn):   32_7(ptr) Variable UniformConstant
+            32_8:             TypePointer UniformConstant 27_1
+            43_3:   21_1(int) Constant 1
+            25_3:             TypeImage 22_1(float) Buffer nonsampled format:R32f
+            29_3:             TypeRuntimeArray 25_3
+            32_9:             TypePointer UniformConstant 29_3
+59_4(storageTexelBufferDyn):   32_9(ptr) Variable UniformConstant
+           32_10:             TypePointer UniformConstant 25_3
+     30_1(uname):             TypeStruct 22_1(float)
+            29_4:             TypeRuntimeArray 30_1(uname)
+           32_11:             TypePointer Uniform 29_4
+59_5(uniformBuffer):  32_11(ptr) Variable Uniform
+           32_12:             TypePointer Input 21_1(int)
+     59_6(nu_ii):  32_12(ptr) Variable Input
+           32_13:             TypePointer Uniform 22_1(float)
+     30_2(bname):             TypeStruct 22_1(float)
+            29_5:             TypeRuntimeArray 30_2(bname)
+           32_14:             TypePointer Uniform 29_5
+59_7(storageBuffer):  32_14(ptr) Variable Uniform
+            25_4:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_2:             TypeSampledImage 25_4
+            29_6:             TypeRuntimeArray 27_2
+           32_15:             TypePointer UniformConstant 29_6
+59_8(sampledImage):  32_15(ptr) Variable UniformConstant
+           32_16:             TypePointer UniformConstant 27_2
+            23_3:             TypeVector 22_1(float) 2
+            43_4: 22_1(float) Constant 1056964608
+            44_2: 23_3(fvec2) ConstantComposite 43_4 43_4
+            25_5:             TypeImage 22_1(float) 2D nonsampled format:R32f
+            29_7:             TypeRuntimeArray 25_5
+           32_17:             TypePointer UniformConstant 29_7
+59_9(storageImage):  32_17(ptr) Variable UniformConstant
+           32_18:             TypePointer UniformConstant 25_5
+            44_3: 23_2(ivec2) ConstantComposite 43_3 43_3
+            29_8:             TypeRuntimeArray 25_1
+           32_19:             TypePointer UniformConstant 29_8
+59_10(inputAttachment):  32_19(ptr) Variable UniformConstant
+            29_9:             TypeRuntimeArray 27_1
+           32_20:             TypePointer UniformConstant 29_9
+59_11(uniformTexelBuffer):  32_20(ptr) Variable UniformConstant
+           29_10:             TypeRuntimeArray 25_3
+           32_21:             TypePointer UniformConstant 29_10
+59_12(storageTexelBuffer):  32_21(ptr) Variable UniformConstant
+         uint(8):   21_2(int) Constant 8
+            28_1:             TypeArray 25_4 uint(8)
+           32_22:             TypePointer UniformConstant 28_1
+59_13(uniformTexArr):  32_22(ptr) Variable UniformConstant
+           32_23:             TypePointer UniformConstant 25_4
+            26_1:             TypeSampler
+           32_24:             TypePointer UniformConstant 26_1
+59_14(uniformSampler):  32_24(ptr) Variable UniformConstant
+           32_25:             TypePointer Input 23_3(fvec2)
+59_15(inTexcoord):  32_25(ptr) Variable Input
+            23_4:             TypeVector 21_1(int) 4
+           32_26:             TypePointer Function 23_4(ivec4)
+         uint(1):   21_2(int) Constant 1
+         uint(2):   21_2(int) Constant 2
+            24_1:             TypeMatrix 23_1(fvec4) 4
+           32_27:             TypePointer Function 24_1
+         30_3(S):             TypeStruct 21_1(int)
+           32_28:             TypePointer Function 30_3(S)
+        uint(10):   21_2(int) Constant 10
+            28_2:             TypeArray 21_1(int) uint(10)
+           32_29:             TypePointer Function 28_2
+        30_4(US):             TypeStruct 28_2
+           32_30:             TypePointer Function 30_4(US)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_16(a):   32_1(ptr) Variable Function
+    59_17(nu_li):   32_1(ptr) Variable Function
+    59_18(param):   32_1(ptr) Variable Function
+    59_19(param):   32_1(ptr) Variable Function
+   59_20(nu_li2):   32_1(ptr) Variable Function
+        59_21(b):   32_2(ptr) Variable Function
+    59_22(nu_gf):   32_2(ptr) Variable Function
+    59_23(dyn_i):   32_1(ptr) Variable Function
+        59_24(v):  32_26(ptr) Variable Function
+       59_25(uv):  32_26(ptr) Variable Function
+        59_26(m):  32_27(ptr) Variable Function
+        59_27(s):  32_28(ptr) Variable Function
+      59_28(arr):  32_29(ptr) Variable Function
+       59_29(um):  32_27(ptr) Variable Function
+       59_30(us):  32_30(ptr) Variable Function
+     59_31(uarr):  32_29(ptr) Variable Function
+            61_1:   21_1(int) Load 59_17(nu_li)
+                              Store 59_18(param) 61_1
+            57_1:   21_1(int) FunctionCall 54_2(foo(i1;i1;) 59_18(param) 59_19(param)
+            61_2:   21_1(int) Load 59_19(param)
+                              Store 59_17(nu_li) 61_2
+                              Store 59_16(a) 57_1
+            61_3:   21_1(int) Load 59_16(a)
+            83_1:   21_1(int) CopyObject 61_3
+            61_4:   21_1(int) Load 59_16(a)
+           132_1:   21_1(int) IMul 61_4 43_1
+            83_2:   21_1(int) CopyObject 132_1
+           128_1:   21_1(int) IAdd 83_1 83_2
+                              Store 59_17(nu_li) 128_1
+            61_5:   21_1(int) Load 59_16(a)
+            61_6:   21_1(int) Load 59_16(a)
+           132_2:   21_1(int) IMul 61_6 43_1
+            83_3:   21_1(int) CopyObject 132_2
+           128_2:   21_1(int) IAdd 61_5 83_3
+                              Store 59_20(nu_li2) 128_2
+            65_1:   32_4(ptr) AccessChain 59_1(nu_inv4) uint(0)
+            61_7: 22_1(float) Load 65_1
+            61_8: 22_1(float) Load 59_22(nu_gf)
+           133_1: 22_1(float) FMul 61_7 61_8
+                              Store 59_21(b) 133_1
+            61_9:   21_1(int) Load 59_23(dyn_i)
+            65_2:   32_6(ptr) AccessChain 59_2(inputAttachmentDyn) 61_9
+           61_10:        25_1 Load 65_2
+            98_1: 23_1(fvec4) ImageRead 61_10 44_1
+            81_1: 22_1(float) CompositeExtract 98_1 0
+           61_11: 22_1(float) Load 59_21(b)
+           129_1: 22_1(float) FAdd 61_11 81_1
+                              Store 59_21(b) 129_1
+           61_12:   21_1(int) Load 59_23(dyn_i)
+            65_3:   32_8(ptr) AccessChain 59_3(uniformTexelBufferDyn) 61_12
+           61_13:        27_1 Load 65_3
+           100_1:        25_2 Image 61_13
+            95_1: 23_1(fvec4) ImageFetch 100_1 43_3
+            81_2: 22_1(float) CompositeExtract 95_1 0
+           61_14: 22_1(float) Load 59_21(b)
+           129_2: 22_1(float) FAdd 61_14 81_2
+                              Store 59_21(b) 129_2
+           61_15:   21_1(int) Load 59_23(dyn_i)
+            65_4:  32_10(ptr) AccessChain 59_4(storageTexelBufferDyn) 61_15
+           61_16:        25_3 Load 65_4
+            98_2: 23_1(fvec4) ImageRead 61_16 43_3
+            81_3: 22_1(float) CompositeExtract 98_2 0
+           61_17: 22_1(float) Load 59_21(b)
+           129_3: 22_1(float) FAdd 61_17 81_3
+                              Store 59_21(b) 129_3
+           61_18:   21_1(int) Load 59_6(nu_ii)
+            65_5:  32_13(ptr) AccessChain 59_5(uniformBuffer) 61_18 43_2
+           61_19: 22_1(float) Load 65_5
+           61_20: 22_1(float) Load 59_21(b)
+           129_4: 22_1(float) FAdd 61_20 61_19
+                              Store 59_21(b) 129_4
+           61_21:   21_1(int) Load 59_6(nu_ii)
+            65_6:  32_13(ptr) AccessChain 59_7(storageBuffer) 61_21 43_2
+           61_22: 22_1(float) Load 65_6
+           61_23: 22_1(float) Load 59_21(b)
+           129_5: 22_1(float) FAdd 61_23 61_22
+                              Store 59_21(b) 129_5
+           61_24:   21_1(int) Load 59_6(nu_ii)
+            65_7:  32_16(ptr) AccessChain 59_8(sampledImage) 61_24
+           61_25:        27_2 Load 65_7
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 61_25 44_2
+            81_4: 22_1(float) CompositeExtract 87_1 0
+           61_26: 22_1(float) Load 59_21(b)
+           129_6: 22_1(float) FAdd 61_26 81_4
+                              Store 59_21(b) 129_6
+           61_27:   21_1(int) Load 59_6(nu_ii)
+            65_8:  32_18(ptr) AccessChain 59_9(storageImage) 61_27
+           61_28:        25_5 Load 65_8
+            98_3: 23_1(fvec4) ImageRead 61_28 44_3
+            81_5: 22_1(float) CompositeExtract 98_3 0
+           61_29: 22_1(float) Load 59_21(b)
+           129_7: 22_1(float) FAdd 61_29 81_5
+                              Store 59_21(b) 129_7
+           61_30:   21_1(int) Load 59_6(nu_ii)
+            65_9:   32_6(ptr) AccessChain 59_10(inputAttachment) 61_30
+           61_31:        25_1 Load 65_9
+            98_4: 23_1(fvec4) ImageRead 61_31 44_1
+            81_6: 22_1(float) CompositeExtract 98_4 0
+           61_32: 22_1(float) Load 59_21(b)
+           129_8: 22_1(float) FAdd 61_32 81_6
+                              Store 59_21(b) 129_8
+           61_33:   21_1(int) Load 59_6(nu_ii)
+           65_10:   32_8(ptr) AccessChain 59_11(uniformTexelBuffer) 61_33
+           61_34:        27_1 Load 65_10
+           100_2:        25_2 Image 61_34
+            95_2: 23_1(fvec4) ImageFetch 100_2 43_3
+            81_7: 22_1(float) CompositeExtract 95_2 0
+           61_35: 22_1(float) Load 59_21(b)
+           129_9: 22_1(float) FAdd 61_35 81_7
+                              Store 59_21(b) 129_9
+           61_36:   21_1(int) Load 59_6(nu_ii)
+           65_11:  32_10(ptr) AccessChain 59_12(storageTexelBuffer) 61_36
+           61_37:        25_3 Load 65_11
+            98_5: 23_1(fvec4) ImageRead 61_37 43_3
+            81_8: 22_1(float) CompositeExtract 98_5 0
+           61_38: 22_1(float) Load 59_21(b)
+          129_10: 22_1(float) FAdd 61_38 81_8
+                              Store 59_21(b) 129_10
+           61_39:   21_1(int) Load 59_6(nu_ii)
+           65_12:  32_23(ptr) AccessChain 59_13(uniformTexArr) 61_39
+           61_40:        25_4 Load 65_12
+           61_41:        26_1 Load 59_14(uniformSampler)
+            86_1:        27_2 SampledImage 61_40 61_41
+           61_42: 23_3(fvec2) Load 59_15(inTexcoord)
+            87_2: 23_1(fvec4) ImageSampleImplicitLod 86_1 61_42
+            81_9: 22_1(float) CompositeExtract 87_2 0
+           61_43: 22_1(float) Load 59_21(b)
+          129_11: 22_1(float) FAdd 61_43 81_9
+                              Store 59_21(b) 129_11
+           61_44:   21_1(int) Load 59_6(nu_ii)
+           65_13:  32_23(ptr) AccessChain 59_13(uniformTexArr) 61_44
+           61_45:        25_4 Load 65_13
+           61_46:        26_1 Load 59_14(uniformSampler)
+            86_2:        27_2 SampledImage 61_45 61_46
+            83_4:        27_2 CopyObject 86_2
+           61_47: 23_3(fvec2) Load 59_15(inTexcoord)
+            87_3: 23_1(fvec4) ImageSampleImplicitLod 83_4 61_47
+           81_10: 22_1(float) CompositeExtract 87_3 0
+           61_48: 22_1(float) Load 59_21(b)
+          129_12: 22_1(float) FAdd 61_48 81_10
+                              Store 59_21(b) 129_12
+           65_14:   32_1(ptr) AccessChain 59_24(v) uint(1)
+           61_49:   21_1(int) Load 65_14
+           65_15:  32_13(ptr) AccessChain 59_5(uniformBuffer) 61_49 43_2
+           61_50: 22_1(float) Load 65_15
+           61_51: 22_1(float) Load 59_21(b)
+          129_13: 22_1(float) FAdd 61_51 61_50
+                              Store 59_21(b) 129_13
+           65_16:   32_1(ptr) AccessChain 59_24(v) uint(2)
+           61_52:   21_1(int) Load 65_16
+           65_17:  32_13(ptr) AccessChain 59_5(uniformBuffer) 61_52 43_2
+           61_53: 22_1(float) Load 65_17
+           61_54: 22_1(float) Load 59_21(b)
+          129_14: 22_1(float) FAdd 61_54 61_53
+                              Store 59_21(b) 129_14
+           61_55:   21_1(int) Load 59_6(nu_ii)
+           65_18:   32_1(ptr) AccessChain 59_25(uv) 61_55
+           61_56:   21_1(int) Load 65_18
+           65_19:  32_13(ptr) AccessChain 59_5(uniformBuffer) 61_56 43_2
+           61_57: 22_1(float) Load 65_19
+           61_58: 22_1(float) Load 59_21(b)
+          129_15: 22_1(float) FAdd 61_58 61_57
+                              Store 59_21(b) 129_15
+           65_20:   32_2(ptr) AccessChain 59_26(m) 43_1 uint(2)
+           61_59: 22_1(float) Load 65_20
+           110_1:   21_1(int) ConvertFToS 61_59
+           65_21:  32_13(ptr) AccessChain 59_5(uniformBuffer) 110_1 43_2
+           61_60: 22_1(float) Load 65_21
+           61_61: 22_1(float) Load 59_21(b)
+          129_16: 22_1(float) FAdd 61_61 61_60
+                              Store 59_21(b) 129_16
+           65_22:   32_1(ptr) AccessChain 59_27(s) 43_2
+           61_62:   21_1(int) Load 65_22
+           65_23:  32_13(ptr) AccessChain 59_5(uniformBuffer) 61_62 43_2
+           61_63: 22_1(float) Load 65_23
+           61_64: 22_1(float) Load 59_21(b)
+          129_17: 22_1(float) FAdd 61_64 61_63
+                              Store 59_21(b) 129_17
+           65_24:   32_1(ptr) AccessChain 59_28(arr) 43_1
+           61_65:   21_1(int) Load 65_24
+           65_25:  32_13(ptr) AccessChain 59_5(uniformBuffer) 61_65 43_2
+           61_66: 22_1(float) Load 65_25
+           61_67: 22_1(float) Load 59_21(b)
+          129_18: 22_1(float) FAdd 61_67 61_66
+                              Store 59_21(b) 129_18
+           61_68:   21_1(int) Load 59_6(nu_ii)
+           65_26:   32_2(ptr) AccessChain 59_29(um) 61_68 uint(2)
+           61_69: 22_1(float) Load 65_26
+           110_2:   21_1(int) ConvertFToS 61_69
+           65_27:  32_13(ptr) AccessChain 59_5(uniformBuffer) 110_2 43_2
+           61_70: 22_1(float) Load 65_27
+           61_71: 22_1(float) Load 59_21(b)
+          129_19: 22_1(float) FAdd 61_71 61_70
+                              Store 59_21(b) 129_19
+           61_72:   21_1(int) Load 59_6(nu_ii)
+           65_28:   32_1(ptr) AccessChain 59_30(us) 43_2 61_72
+           61_73:   21_1(int) Load 65_28
+           65_29:  32_13(ptr) AccessChain 59_5(uniformBuffer) 61_73 43_2
+           61_74: 22_1(float) Load 65_29
+           61_75: 22_1(float) Load 59_21(b)
+          129_20: 22_1(float) FAdd 61_75 61_74
+                              Store 59_21(b) 129_20
+           61_76:   21_1(int) Load 59_6(nu_ii)
+           65_30:   32_1(ptr) AccessChain 59_31(uarr) 61_76
+           61_77:   21_1(int) Load 65_30
+           65_31:  32_13(ptr) AccessChain 59_5(uniformBuffer) 61_77 43_2
+           61_78: 22_1(float) Load 65_31
+           61_79: 22_1(float) Load 59_21(b)
+          129_21: 22_1(float) FAdd 61_79 61_78
+                              Store 59_21(b) 129_21
+           61_80:   21_1(int) Load 59_6(nu_ii)
+           61_81: 22_1(float) Load 59_21(b)
+           65_32:  32_13(ptr) AccessChain 59_7(storageBuffer) 61_80 43_2
+                              Store 65_32 61_81
                               Return
                               FunctionEnd
-  11(foo(i1;i1;):      6(int) Function None 8
-         9(nupi):      7(ptr) FunctionParameter
-           10(f):      7(ptr) FunctionParameter
-              12:             Label
-              13:      6(int) Load 9(nupi)
-                              ReturnValue 13
+54_2(foo(i1;i1;):   21_1(int) Function None 33_2
+      55_1(nupi):   32_1(ptr) FunctionParameter
+         55_2(f):   32_1(ptr) FunctionParameter
+           248_2:             Label
+           61_82:   21_1(int) Load 55_1(nupi)
+                              ReturnValue 61_82
                               FunctionEnd

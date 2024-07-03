@@ -6,139 +6,139 @@ spv.150.geom
                               Capability Geometry
                               Capability GeometryPointSize
                               Capability GeometryStreams
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Geometry 4  "main" 10 18 29 33 47 49 51 70
-                              ExecutionMode 4 InputTrianglesAdjacency
-                              ExecutionMode 4 Invocations 1
-                              ExecutionMode 4 OutputTriangleStrip
-                              ExecutionMode 4 OutputVertices 30
+                              EntryPoint Geometry 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8
+                              ExecutionMode 54_1 InputTrianglesAdjacency
+                              ExecutionMode 54_1 Invocations 1
+                              ExecutionMode 54_1 OutputTriangleStrip
+                              ExecutionMode 54_1 OutputVertices 30
                               Source GLSL 150
-                              Name 4  "main"
-                              Name 8  "fromVertex"
-                              MemberName 8(fromVertex) 0  "color"
-                              Name 10  ""
-                              Name 13  "fromVertex"
-                              MemberName 13(fromVertex) 0  "color"
-                              Name 18  "fromV"
-                              Name 27  "gl_PerVertex"
-                              MemberName 27(gl_PerVertex) 0  "gl_Position"
-                              MemberName 27(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 27(gl_PerVertex) 2  "gl_ClipDistance"
-                              Name 29  ""
-                              Name 30  "gl_PerVertex"
-                              MemberName 30(gl_PerVertex) 0  "gl_Position"
-                              MemberName 30(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 30(gl_PerVertex) 2  "gl_ClipDistance"
-                              Name 33  "gl_in"
-                              Name 47  "gl_PrimitiveID"
-                              Name 49  "gl_PrimitiveIDIn"
-                              Name 51  "gl_Layer"
-                              Name 68  "toFragment"
-                              MemberName 68(toFragment) 0  "color"
-                              Name 70  "toF"
-                              Decorate 8(fromVertex) Block
-                              Decorate 10 Stream 3
-                              Decorate 10 Location 1
-                              Decorate 13(fromVertex) Block
-                              Decorate 18(fromV) Location 0
-                              Decorate 27(gl_PerVertex) Block
-                              MemberDecorate 27(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 27(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 27(gl_PerVertex) 2 BuiltIn ClipDistance
-                              Decorate 29 Stream 0
-                              Decorate 30(gl_PerVertex) Block
-                              MemberDecorate 30(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 30(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 30(gl_PerVertex) 2 BuiltIn ClipDistance
-                              Decorate 47(gl_PrimitiveID) BuiltIn PrimitiveId
-                              Decorate 47(gl_PrimitiveID) Stream 0
-                              Decorate 49(gl_PrimitiveIDIn) BuiltIn PrimitiveId
-                              Decorate 51(gl_Layer) BuiltIn Layer
-                              Decorate 51(gl_Layer) Stream 0
-                              Decorate 68(toFragment) Block
-                              Decorate 70(toF) Stream 3
-                              Decorate 70(toF) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 3
-   8(fromVertex):             TypeStruct 7(fvec3)
-               9:             TypePointer Output 8(fromVertex)
-              10:      9(ptr) Variable Output
-              11:             TypeInt 32 1
-              12:     11(int) Constant 0
-  13(fromVertex):             TypeStruct 7(fvec3)
-              14:             TypeInt 32 0
-              15:     14(int) Constant 6
-              16:             TypeArray 13(fromVertex) 15
-              17:             TypePointer Input 16
-       18(fromV):     17(ptr) Variable Input
-              19:             TypePointer Input 7(fvec3)
-              22:             TypePointer Output 7(fvec3)
-              24:             TypeVector 6(float) 4
-              25:     14(int) Constant 1
-              26:             TypeArray 6(float) 25
-27(gl_PerVertex):             TypeStruct 24(fvec4) 6(float) 26
-              28:             TypePointer Output 27(gl_PerVertex)
-              29:     28(ptr) Variable Output
-30(gl_PerVertex):             TypeStruct 24(fvec4) 6(float) 26
-              31:             TypeArray 30(gl_PerVertex) 15
-              32:             TypePointer Input 31
-       33(gl_in):     32(ptr) Variable Input
-              34:             TypePointer Input 24(fvec4)
-              37:             TypePointer Output 24(fvec4)
-              39:     11(int) Constant 1
-              40:     11(int) Constant 3
-              41:             TypePointer Input 6(float)
-              44:             TypePointer Output 6(float)
-              46:             TypePointer Output 11(int)
-47(gl_PrimitiveID):     46(ptr) Variable Output
-              48:             TypePointer Input 11(int)
-49(gl_PrimitiveIDIn):     48(ptr) Variable Input
-    51(gl_Layer):     46(ptr) Variable Output
-              52:     11(int) Constant 2
-              53:    6(float) Constant 1073741824
-  68(toFragment):             TypeStruct 7(fvec3)
-              69:             TypePointer Output 68(toFragment)
-         70(toF):     69(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              20:     19(ptr) AccessChain 18(fromV) 12 12
-              21:    7(fvec3) Load 20
-              23:     22(ptr) AccessChain 10 12
-                              Store 23 21
-              35:     34(ptr) AccessChain 33(gl_in) 12 12
-              36:   24(fvec4) Load 35
-              38:     37(ptr) AccessChain 29 12
-                              Store 38 36
-              42:     41(ptr) AccessChain 33(gl_in) 40 39
-              43:    6(float) Load 42
-              45:     44(ptr) AccessChain 29 39
-                              Store 45 43
-              50:     11(int) Load 49(gl_PrimitiveIDIn)
-                              Store 47(gl_PrimitiveID) 50
-                              Store 51(gl_Layer) 52
+                              Name 54_1  "main"
+                              Name 30_1  "fromVertex"
+                              MemberName 30_1(fromVertex) 0  "color"
+                              Name 59_1  ""
+                              Name 30_2  "fromVertex"
+                              MemberName 30_2(fromVertex) 0  "color"
+                              Name 59_2  "fromV"
+                              Name 30_3  "gl_PerVertex"
+                              MemberName 30_3(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_3(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_3(gl_PerVertex) 2  "gl_ClipDistance"
+                              Name 59_3  ""
+                              Name 30_4  "gl_PerVertex"
+                              MemberName 30_4(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_4(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_4(gl_PerVertex) 2  "gl_ClipDistance"
+                              Name 59_4  "gl_in"
+                              Name 59_5  "gl_PrimitiveID"
+                              Name 59_6  "gl_PrimitiveIDIn"
+                              Name 59_7  "gl_Layer"
+                              Name 30_5  "toFragment"
+                              MemberName 30_5(toFragment) 0  "color"
+                              Name 59_8  "toF"
+                              Decorate 30_1(fromVertex) Block
+                              Decorate 59_1 Stream 3
+                              Decorate 59_1 Location 1
+                              Decorate 30_2(fromVertex) Block
+                              Decorate 59_2(fromV) Location 0
+                              Decorate 30_3(gl_PerVertex) Block
+                              MemberDecorate 30_3(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_3(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_3(gl_PerVertex) 2 BuiltIn ClipDistance
+                              Decorate 59_3 Stream 0
+                              Decorate 30_4(gl_PerVertex) Block
+                              MemberDecorate 30_4(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_4(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_4(gl_PerVertex) 2 BuiltIn ClipDistance
+                              Decorate 59_5(gl_PrimitiveID) BuiltIn PrimitiveId
+                              Decorate 59_5(gl_PrimitiveID) Stream 0
+                              Decorate 59_6(gl_PrimitiveIDIn) BuiltIn PrimitiveId
+                              Decorate 59_7(gl_Layer) BuiltIn Layer
+                              Decorate 59_7(gl_Layer) Stream 0
+                              Decorate 30_5(toFragment) Block
+                              Decorate 59_8(toF) Stream 3
+                              Decorate 59_8(toF) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+30_1(fromVertex):             TypeStruct 23_1(fvec3)
+            32_1:             TypePointer Output 30_1(fromVertex)
+            59_1:   32_1(ptr) Variable Output
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+30_2(fromVertex):             TypeStruct 23_1(fvec3)
+            21_2:             TypeInt 32 0
+         uint(6):   21_2(int) Constant 6
+            28_1:             TypeArray 30_2(fromVertex) uint(6)
+            32_2:             TypePointer Input 28_1
+     59_2(fromV):   32_2(ptr) Variable Input
+            32_3:             TypePointer Input 23_1(fvec3)
+            32_4:             TypePointer Output 23_1(fvec3)
+            23_2:             TypeVector 22_1(float) 4
+         uint(1):   21_2(int) Constant 1
+            28_2:             TypeArray 22_1(float) uint(1)
+30_3(gl_PerVertex):             TypeStruct 23_2(fvec4) 22_1(float) 28_2
+            32_5:             TypePointer Output 30_3(gl_PerVertex)
+            59_3:   32_5(ptr) Variable Output
+30_4(gl_PerVertex):             TypeStruct 23_2(fvec4) 22_1(float) 28_2
+            28_3:             TypeArray 30_4(gl_PerVertex) uint(6)
+            32_6:             TypePointer Input 28_3
+     59_4(gl_in):   32_6(ptr) Variable Input
+            32_7:             TypePointer Input 23_2(fvec4)
+            32_8:             TypePointer Output 23_2(fvec4)
+            43_2:   21_1(int) Constant 1
+            43_3:   21_1(int) Constant 3
+            32_9:             TypePointer Input 22_1(float)
+           32_10:             TypePointer Output 22_1(float)
+           32_11:             TypePointer Output 21_1(int)
+59_5(gl_PrimitiveID):  32_11(ptr) Variable Output
+           32_12:             TypePointer Input 21_1(int)
+59_6(gl_PrimitiveIDIn):  32_12(ptr) Variable Input
+  59_7(gl_Layer):  32_11(ptr) Variable Output
+            43_4:   21_1(int) Constant 2
+            43_5: 22_1(float) Constant 1073741824
+30_5(toFragment):             TypeStruct 23_1(fvec3)
+           32_13:             TypePointer Output 30_5(toFragment)
+       59_8(toF):  32_13(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2(fromV) 43_1 43_1
+            61_1: 23_1(fvec3) Load 65_1
+            65_2:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_2 61_1
+            65_3:   32_7(ptr) AccessChain 59_4(gl_in) 43_1 43_1
+            61_2: 23_2(fvec4) Load 65_3
+            65_4:   32_8(ptr) AccessChain 59_3 43_1
+                              Store 65_4 61_2
+            65_5:   32_9(ptr) AccessChain 59_4(gl_in) 43_3 43_2
+            61_3: 22_1(float) Load 65_5
+            65_6:  32_10(ptr) AccessChain 59_3 43_2
+                              Store 65_6 61_3
+            61_4:   21_1(int) Load 59_6(gl_PrimitiveIDIn)
+                              Store 59_5(gl_PrimitiveID) 61_4
+                              Store 59_7(gl_Layer) 43_4
                               EmitVertex
-              54:     19(ptr) AccessChain 18(fromV) 12 12
-              55:    7(fvec3) Load 54
-              56:    7(fvec3) VectorTimesScalar 55 53
-              57:     22(ptr) AccessChain 10 12
-                              Store 57 56
-              58:     34(ptr) AccessChain 33(gl_in) 12 12
-              59:   24(fvec4) Load 58
-              60:   24(fvec4) VectorTimesScalar 59 53
-              61:     37(ptr) AccessChain 29 12
-                              Store 61 60
-              62:     41(ptr) AccessChain 33(gl_in) 40 39
-              63:    6(float) Load 62
-              64:    6(float) FMul 53 63
-              65:     44(ptr) AccessChain 29 39
-                              Store 65 64
-              66:     11(int) Load 49(gl_PrimitiveIDIn)
-              67:     11(int) IAdd 66 39
-                              Store 47(gl_PrimitiveID) 67
-                              Store 51(gl_Layer) 40
+            65_7:   32_3(ptr) AccessChain 59_2(fromV) 43_1 43_1
+            61_5: 23_1(fvec3) Load 65_7
+           142_1: 23_1(fvec3) VectorTimesScalar 61_5 43_5
+            65_8:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_8 142_1
+            65_9:   32_7(ptr) AccessChain 59_4(gl_in) 43_1 43_1
+            61_6: 23_2(fvec4) Load 65_9
+           142_2: 23_2(fvec4) VectorTimesScalar 61_6 43_5
+           65_10:   32_8(ptr) AccessChain 59_3 43_1
+                              Store 65_10 142_2
+           65_11:   32_9(ptr) AccessChain 59_4(gl_in) 43_3 43_2
+            61_7: 22_1(float) Load 65_11
+           133_1: 22_1(float) FMul 43_5 61_7
+           65_12:  32_10(ptr) AccessChain 59_3 43_2
+                              Store 65_12 133_1
+            61_8:   21_1(int) Load 59_6(gl_PrimitiveIDIn)
+           128_1:   21_1(int) IAdd 61_8 43_2
+                              Store 59_5(gl_PrimitiveID) 128_1
+                              Store 59_7(gl_Layer) 43_3
                               EmitVertex
                               EndPrimitive
                               Return

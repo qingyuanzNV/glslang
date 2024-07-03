@@ -78,49 +78,49 @@ gl_FragCoord origin is upper left
 // Id's are bound by 29
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 27
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "@main("
-                              Name 14  "$Global"
-                              MemberName 14($Global) 0  "col4"
-                              Name 16  ""
-                              Name 27  "@entryPointOutput"
-                              Decorate 14($Global) Block
-                              MemberDecorate 14($Global) 0 Offset 0
-                              Decorate 16 Binding 0
-                              Decorate 16 DescriptorSet 0
-                              Decorate 27(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeVector 6(int) 4
-               8:             TypeFunction 7(ivec4)
-              11:             TypeFloat 32
-              12:   11(float) Constant 1132396672
-              13:             TypeVector 11(float) 4
-     14($Global):             TypeStruct 13(fvec4)
-              15:             TypePointer Uniform 14($Global)
-              16:     15(ptr) Variable Uniform
-              17:      6(int) Constant 0
-              18:             TypePointer Uniform 13(fvec4)
-              26:             TypePointer Output 7(ivec4)
-27(@entryPointOutput):     26(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              28:    7(ivec4) FunctionCall 9(@main()
-                              Store 27(@entryPointOutput) 28
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 30_1  "$Global"
+                              MemberName 30_1($Global) 0  "col4"
+                              Name 59_1  ""
+                              Name 59_2  "@entryPointOutput"
+                              Decorate 30_1($Global) Block
+                              MemberDecorate 30_1($Global) 0 Offset 0
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            23_1:             TypeVector 21_1(int) 4
+            33_2:             TypeFunction 23_1(ivec4)
+            22_1:             TypeFloat 32
+            43_1: 22_1(float) Constant 1132396672
+            23_2:             TypeVector 22_1(float) 4
+   30_1($Global):             TypeStruct 23_2(fvec4)
+            32_1:             TypePointer Uniform 30_1($Global)
+            59_1:   32_1(ptr) Variable Uniform
+            43_2:   21_1(int) Constant 0
+            32_2:             TypePointer Uniform 23_2(fvec4)
+            32_3:             TypePointer Output 23_1(ivec4)
+59_2(@entryPointOutput):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 23_1(ivec4) FunctionCall 54_2(@main()
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       9(@main():    7(ivec4) Function None 8
-              10:             Label
-              19:     18(ptr) AccessChain 16 17
-              20:   13(fvec4) Load 19
-              21:   13(fvec4) VectorShuffle 20 20 2 1 0 3
-              22:   13(fvec4) VectorTimesScalar 21 12
-              23:    7(ivec4) ConvertFToS 22
-                              ReturnValue 23
+    54_2(@main(): 23_1(ivec4) Function None 33_2
+           248_2:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 43_2
+            61_1: 23_2(fvec4) Load 65_1
+            79_1: 23_2(fvec4) VectorShuffle 61_1 61_1 2 1 0 3
+           142_1: 23_2(fvec4) VectorTimesScalar 79_1 43_1
+           110_1: 23_1(ivec4) ConvertFToS 142_1
+                              ReturnValue 110_1
                               FunctionEnd

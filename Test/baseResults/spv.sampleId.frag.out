@@ -5,48 +5,48 @@ spv.sampleId.frag
 
                               Capability Shader
                               Capability SampleRateShading
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 8 18 20
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 8  "gl_SampleID"
-                              Name 18  "color"
-                              Name 20  "samp"
-                              Decorate 8(gl_SampleID) BuiltIn SampleId
-                              Decorate 8(gl_SampleID) Flat
-                              Decorate 18(color) Location 0
-                              Decorate 20(samp) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Input 6(int)
-  8(gl_SampleID):      7(ptr) Variable Input
-              10:      6(int) Constant 3
-              11:             TypeBool
-              15:             TypeFloat 32
-              16:             TypeVector 15(float) 4
-              17:             TypePointer Output 16(fvec4)
-       18(color):     17(ptr) Variable Output
-              19:             TypePointer Input 16(fvec4)
-        20(samp):     19(ptr) Variable Input
-              23:   15(float) Constant 1073741824
-         4(main):           2 Function None 3
-               5:             Label
-               9:      6(int) Load 8(gl_SampleID)
-              12:    11(bool) SLessThan 9 10
-                              SelectionMerge 14 None
-                              BranchConditional 12 13 22
-              13:               Label
-              21:   16(fvec4)   Load 20(samp)
-                                Store 18(color) 21
-                                Branch 14
-              22:               Label
-              24:   16(fvec4)   Load 20(samp)
-              25:   16(fvec4)   VectorTimesScalar 24 23
-                                Store 18(color) 25
-                                Branch 14
-              14:             Label
+                              Name 54_1  "main"
+                              Name 59_1  "gl_SampleID"
+                              Name 59_2  "color"
+                              Name 59_3  "samp"
+                              Decorate 59_1(gl_SampleID) BuiltIn SampleId
+                              Decorate 59_1(gl_SampleID) Flat
+                              Decorate 59_2(color) Location 0
+                              Decorate 59_3(samp) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Input 21_1(int)
+59_1(gl_SampleID):   32_1(ptr) Variable Input
+            43_1:   21_1(int) Constant 3
+            20_1:             TypeBool
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Output 23_1(fvec4)
+     59_2(color):   32_2(ptr) Variable Output
+            32_3:             TypePointer Input 23_1(fvec4)
+      59_3(samp):   32_3(ptr) Variable Input
+            43_2: 22_1(float) Constant 1073741824
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_1(gl_SampleID)
+           177_1:  20_1(bool) SLessThan 61_1 43_1
+                              SelectionMerge 248_4 None
+                              BranchConditional 177_1 248_2 248_3
+           248_2:               Label
+            61_2: 23_1(fvec4)   Load 59_3(samp)
+                                Store 59_2(color) 61_2
+                                Branch 248_4
+           248_3:               Label
+            61_3: 23_1(fvec4)   Load 59_3(samp)
+           142_1: 23_1(fvec4)   VectorTimesScalar 61_3 43_2
+                                Store 59_2(color) 142_1
+                                Branch 248_4
+           248_4:             Label
                               Return
                               FunctionEnd

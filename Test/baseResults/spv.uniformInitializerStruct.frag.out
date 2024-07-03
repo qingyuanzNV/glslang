@@ -4,95 +4,95 @@ spv.uniformInitializerStruct.frag
 // Id's are bound by 63
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 9
-                              ExecutionMode 4 OriginLowerLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginLowerLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "color"
-                              Name 15  "i"
-                              Name 26  ""
-                              MemberName 26 0  "r"
-                              MemberName 26 1  "g"
-                              MemberName 26 2  "b"
-                              Name 34  "parts"
-                              Decorate 9(color) Location 0
-                              Decorate 34(parts) Location 0
-                              Decorate 34(parts) Binding 0
-                              Decorate 34(parts) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Output 7(fvec4)
-        9(color):      8(ptr) Variable Output
-              10:    6(float) Constant 0
-              11:    6(float) Constant 1065353216
-              12:    7(fvec4) ConstantComposite 10 10 10 11
-              13:             TypeInt 32 1
-              14:             TypePointer Function 13(int)
-              16:     13(int) Constant 0
-              23:     13(int) Constant 2
-              24:             TypeBool
-              26:             TypeStruct 6(float) 6(float) 6(float)
-              27:             TypeInt 32 0
-              28:     27(int) Constant 2
-              29:             TypeArray 26(struct) 28
-              30:  26(struct) ConstantComposite 11 11 11
-              31:  26(struct) ConstantComposite 10 11 10
-              32:          29 ConstantComposite 30 31
-              33:             TypePointer UniformConstant 29
-       34(parts):     33(ptr) Variable UniformConstant 32
-              36:             TypePointer UniformConstant 6(float)
-              39:     27(int) Constant 0
-              40:             TypePointer Output 6(float)
-              46:     13(int) Constant 1
-              49:     27(int) Constant 1
-         4(main):           2 Function None 3
-               5:             Label
-           15(i):     14(ptr) Variable Function
-                              Store 9(color) 12
-                              Store 15(i) 16
-                              Branch 17
-              17:             Label
-                              LoopMerge 19 20 None
-                              Branch 21
-              21:             Label
-              22:     13(int) Load 15(i)
-              25:    24(bool) SLessThan 22 23
-                              BranchConditional 25 18 19
-              18:               Label
-              35:     13(int)   Load 15(i)
-              37:     36(ptr)   AccessChain 34(parts) 35 16
-              38:    6(float)   Load 37
-              41:     40(ptr)   AccessChain 9(color) 39
-              42:    6(float)   Load 41
-              43:    6(float)   FAdd 42 38
-              44:     40(ptr)   AccessChain 9(color) 39
-                                Store 44 43
-              45:     13(int)   Load 15(i)
-              47:     36(ptr)   AccessChain 34(parts) 45 46
-              48:    6(float)   Load 47
-              50:     40(ptr)   AccessChain 9(color) 49
-              51:    6(float)   Load 50
-              52:    6(float)   FAdd 51 48
-              53:     40(ptr)   AccessChain 9(color) 49
-                                Store 53 52
-              54:     13(int)   Load 15(i)
-              55:     36(ptr)   AccessChain 34(parts) 54 23
-              56:    6(float)   Load 55
-              57:     40(ptr)   AccessChain 9(color) 28
-              58:    6(float)   Load 57
-              59:    6(float)   FAdd 58 56
-              60:     40(ptr)   AccessChain 9(color) 28
-                                Store 60 59
-                                Branch 20
-              20:               Label
-              61:     13(int)   Load 15(i)
-              62:     13(int)   IAdd 61 46
-                                Store 15(i) 62
-                                Branch 17
-              19:             Label
+                              Name 54_1  "main"
+                              Name 59_1  "color"
+                              Name 59_3  "i"
+                              Name 30_1  ""
+                              MemberName 30_1 0  "r"
+                              MemberName 30_1 1  "g"
+                              MemberName 30_1 2  "b"
+                              Name 59_2  "parts"
+                              Decorate 59_1(color) Location 0
+                              Decorate 59_2(parts) Location 0
+                              Decorate 59_2(parts) Binding 0
+                              Decorate 59_2(parts) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Output 23_1(fvec4)
+     59_1(color):   32_1(ptr) Variable Output
+            43_1: 22_1(float) Constant 0
+            43_2: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_2
+            21_1:             TypeInt 32 1
+            32_2:             TypePointer Function 21_1(int)
+            43_3:   21_1(int) Constant 0
+            43_4:   21_1(int) Constant 2
+            20_1:             TypeBool
+            30_1:             TypeStruct 22_1(float) 22_1(float) 22_1(float)
+            21_2:             TypeInt 32 0
+         uint(2):   21_2(int) Constant 2
+            28_1:             TypeArray 30_1(struct) uint(2)
+            44_2:30_1(struct) ConstantComposite 43_2 43_2 43_2
+            44_3:30_1(struct) ConstantComposite 43_1 43_2 43_1
+            44_4:        28_1 ConstantComposite 44_2 44_3
+            32_3:             TypePointer UniformConstant 28_1
+     59_2(parts):   32_3(ptr) Variable UniformConstant 44_4
+            32_4:             TypePointer UniformConstant 22_1(float)
+         uint(0):   21_2(int) Constant 0
+            32_5:             TypePointer Output 22_1(float)
+            43_5:   21_1(int) Constant 1
+         uint(1):   21_2(int) Constant 1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_3(i):   32_2(ptr) Variable Function
+                              Store 59_1(color) 44_1
+                              Store 59_3(i) 43_3
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 None
+                              Branch 248_3
+           248_3:             Label
+            61_1:   21_1(int) Load 59_3(i)
+           177_1:  20_1(bool) SLessThan 61_1 43_4
+                              BranchConditional 177_1 248_4 248_6
+           248_4:               Label
+            61_2:   21_1(int)   Load 59_3(i)
+            65_1:   32_4(ptr)   AccessChain 59_2(parts) 61_2 43_3
+            61_3: 22_1(float)   Load 65_1
+            65_2:   32_5(ptr)   AccessChain 59_1(color) uint(0)
+            61_4: 22_1(float)   Load 65_2
+           129_1: 22_1(float)   FAdd 61_4 61_3
+            65_3:   32_5(ptr)   AccessChain 59_1(color) uint(0)
+                                Store 65_3 129_1
+            61_5:   21_1(int)   Load 59_3(i)
+            65_4:   32_4(ptr)   AccessChain 59_2(parts) 61_5 43_5
+            61_6: 22_1(float)   Load 65_4
+            65_5:   32_5(ptr)   AccessChain 59_1(color) uint(1)
+            61_7: 22_1(float)   Load 65_5
+           129_2: 22_1(float)   FAdd 61_7 61_6
+            65_6:   32_5(ptr)   AccessChain 59_1(color) uint(1)
+                                Store 65_6 129_2
+            61_8:   21_1(int)   Load 59_3(i)
+            65_7:   32_4(ptr)   AccessChain 59_2(parts) 61_8 43_4
+            61_9: 22_1(float)   Load 65_7
+            65_8:   32_5(ptr)   AccessChain 59_1(color) uint(2)
+           61_10: 22_1(float)   Load 65_8
+           129_3: 22_1(float)   FAdd 61_10 61_9
+            65_9:   32_5(ptr)   AccessChain 59_1(color) uint(2)
+                                Store 65_9 129_3
+                                Branch 248_5
+           248_5:               Label
+           61_11:   21_1(int)   Load 59_3(i)
+           128_1:   21_1(int)   IAdd 61_11 43_5
+                                Store 59_3(i) 128_1
+                                Branch 248_2
+           248_6:             Label
                               Return
                               FunctionEnd

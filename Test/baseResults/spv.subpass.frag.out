@@ -5,117 +5,117 @@ spv.subpass.frag
 
                               Capability Shader
                               Capability InputAttachment
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 15 27 53
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_7
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 400
-                              Name 4  "main"
-                              Name 11  "foo(iIPM1;"
-                              Name 10  "sb"
-                              Name 15  "icolor"
-                              Name 27  "color"
-                              Name 30  "sub"
-                              Name 35  "subMS"
-                              Name 42  "isub"
-                              Name 45  "isubMS"
-                              Name 53  "ucolor"
-                              Name 56  "usub"
-                              Name 61  "usubMS"
-                              Decorate 15(icolor) Location 1
-                              Decorate 27(color) Location 0
-                              Decorate 30(sub) Binding 0
-                              Decorate 30(sub) DescriptorSet 0
-                              Decorate 30(sub) InputAttachmentIndex 1
-                              Decorate 35(subMS) Binding 1
-                              Decorate 35(subMS) DescriptorSet 0
-                              Decorate 35(subMS) InputAttachmentIndex 2
-                              Decorate 42(isub) Binding 2
-                              Decorate 42(isub) DescriptorSet 0
-                              Decorate 42(isub) InputAttachmentIndex 3
-                              Decorate 45(isubMS) Binding 3
-                              Decorate 45(isubMS) DescriptorSet 0
-                              Decorate 45(isubMS) InputAttachmentIndex 4
-                              Decorate 53(ucolor) Location 2
-                              Decorate 56(usub) Binding 4
-                              Decorate 56(usub) DescriptorSet 0
-                              Decorate 56(usub) InputAttachmentIndex 5
-                              Decorate 61(usubMS) Binding 5
-                              Decorate 61(usubMS) DescriptorSet 0
-                              Decorate 61(usubMS) InputAttachmentIndex 6
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeImage 6(int) SubpassData multi-sampled nonsampled format:Unknown
-               8:             TypePointer UniformConstant 7
-               9:             TypeFunction 2 8(ptr)
-              13:             TypeVector 6(int) 4
-              14:             TypePointer Output 13(ivec4)
-      15(icolor):     14(ptr) Variable Output
-              17:      6(int) Constant 3
-              18:      6(int) Constant 0
-              19:             TypeVector 6(int) 2
-              20:   19(ivec2) ConstantComposite 18 18
-              24:             TypeFloat 32
-              25:             TypeVector 24(float) 4
-              26:             TypePointer Output 25(fvec4)
-       27(color):     26(ptr) Variable Output
-              28:             TypeImage 24(float) SubpassData nonsampled format:Unknown
-              29:             TypePointer UniformConstant 28
-         30(sub):     29(ptr) Variable UniformConstant
-              33:             TypeImage 24(float) SubpassData multi-sampled nonsampled format:Unknown
-              34:             TypePointer UniformConstant 33
-       35(subMS):     34(ptr) Variable UniformConstant
-              40:             TypeImage 6(int) SubpassData nonsampled format:Unknown
-              41:             TypePointer UniformConstant 40
-        42(isub):     41(ptr) Variable UniformConstant
-      45(isubMS):      8(ptr) Variable UniformConstant
-              50:             TypeInt 32 0
-              51:             TypeVector 50(int) 4
-              52:             TypePointer Output 51(ivec4)
-      53(ucolor):     52(ptr) Variable Output
-              54:             TypeImage 50(int) SubpassData nonsampled format:Unknown
-              55:             TypePointer UniformConstant 54
-        56(usub):     55(ptr) Variable UniformConstant
-              59:             TypeImage 50(int) SubpassData multi-sampled nonsampled format:Unknown
-              60:             TypePointer UniformConstant 59
-      61(usubMS):     60(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-              31:          28 Load 30(sub)
-              32:   25(fvec4) ImageRead 31 20
-                              Store 27(color) 32
-              36:          33 Load 35(subMS)
-              37:   25(fvec4) ImageRead 36 20 Sample 17
-              38:   25(fvec4) Load 27(color)
-              39:   25(fvec4) FAdd 38 37
-                              Store 27(color) 39
-              43:          40 Load 42(isub)
-              44:   13(ivec4) ImageRead 43 20
-                              Store 15(icolor) 44
-              46:           7 Load 45(isubMS)
-              47:   13(ivec4) ImageRead 46 20 Sample 17
-              48:   13(ivec4) Load 15(icolor)
-              49:   13(ivec4) IAdd 48 47
-                              Store 15(icolor) 49
-              57:          54 Load 56(usub)
-              58:   51(ivec4) ImageRead 57 20
-                              Store 53(ucolor) 58
-              62:          59 Load 61(usubMS)
-              63:   51(ivec4) ImageRead 62 20 Sample 17
-              64:   51(ivec4) Load 53(ucolor)
-              65:   51(ivec4) IAdd 64 63
-                              Store 53(ucolor) 65
-              66:           2 FunctionCall 11(foo(iIPM1;) 45(isubMS)
+                              Name 54_1  "main"
+                              Name 54_2  "foo(iIPM1;"
+                              Name 55_1  "sb"
+                              Name 59_1  "icolor"
+                              Name 59_2  "color"
+                              Name 59_3  "sub"
+                              Name 59_4  "subMS"
+                              Name 59_5  "isub"
+                              Name 59_6  "isubMS"
+                              Name 59_7  "ucolor"
+                              Name 59_8  "usub"
+                              Name 59_9  "usubMS"
+                              Decorate 59_1(icolor) Location 1
+                              Decorate 59_2(color) Location 0
+                              Decorate 59_3(sub) Binding 0
+                              Decorate 59_3(sub) DescriptorSet 0
+                              Decorate 59_3(sub) InputAttachmentIndex 1
+                              Decorate 59_4(subMS) Binding 1
+                              Decorate 59_4(subMS) DescriptorSet 0
+                              Decorate 59_4(subMS) InputAttachmentIndex 2
+                              Decorate 59_5(isub) Binding 2
+                              Decorate 59_5(isub) DescriptorSet 0
+                              Decorate 59_5(isub) InputAttachmentIndex 3
+                              Decorate 59_6(isubMS) Binding 3
+                              Decorate 59_6(isubMS) DescriptorSet 0
+                              Decorate 59_6(isubMS) InputAttachmentIndex 4
+                              Decorate 59_7(ucolor) Location 2
+                              Decorate 59_8(usub) Binding 4
+                              Decorate 59_8(usub) DescriptorSet 0
+                              Decorate 59_8(usub) InputAttachmentIndex 5
+                              Decorate 59_9(usubMS) Binding 5
+                              Decorate 59_9(usubMS) DescriptorSet 0
+                              Decorate 59_9(usubMS) InputAttachmentIndex 6
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            25_1:             TypeImage 21_1(int) SubpassData multi-sampled nonsampled format:Unknown
+            32_1:             TypePointer UniformConstant 25_1
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            23_1:             TypeVector 21_1(int) 4
+            32_2:             TypePointer Output 23_1(ivec4)
+    59_1(icolor):   32_2(ptr) Variable Output
+            43_1:   21_1(int) Constant 3
+            43_2:   21_1(int) Constant 0
+            23_2:             TypeVector 21_1(int) 2
+            44_1: 23_2(ivec2) ConstantComposite 43_2 43_2
+            22_1:             TypeFloat 32
+            23_3:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Output 23_3(fvec4)
+     59_2(color):   32_3(ptr) Variable Output
+            25_2:             TypeImage 22_1(float) SubpassData nonsampled format:Unknown
+            32_4:             TypePointer UniformConstant 25_2
+       59_3(sub):   32_4(ptr) Variable UniformConstant
+            25_3:             TypeImage 22_1(float) SubpassData multi-sampled nonsampled format:Unknown
+            32_5:             TypePointer UniformConstant 25_3
+     59_4(subMS):   32_5(ptr) Variable UniformConstant
+            25_4:             TypeImage 21_1(int) SubpassData nonsampled format:Unknown
+            32_6:             TypePointer UniformConstant 25_4
+      59_5(isub):   32_6(ptr) Variable UniformConstant
+    59_6(isubMS):   32_1(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 0
+            23_4:             TypeVector 21_2(int) 4
+            32_7:             TypePointer Output 23_4(ivec4)
+    59_7(ucolor):   32_7(ptr) Variable Output
+            25_5:             TypeImage 21_2(int) SubpassData nonsampled format:Unknown
+            32_8:             TypePointer UniformConstant 25_5
+      59_8(usub):   32_8(ptr) Variable UniformConstant
+            25_6:             TypeImage 21_2(int) SubpassData multi-sampled nonsampled format:Unknown
+            32_9:             TypePointer UniformConstant 25_6
+    59_9(usubMS):   32_9(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:        25_2 Load 59_3(sub)
+            98_1: 23_3(fvec4) ImageRead 61_1 44_1
+                              Store 59_2(color) 98_1
+            61_2:        25_3 Load 59_4(subMS)
+            98_2: 23_3(fvec4) ImageRead 61_2 44_1 Sample 43_1
+            61_3: 23_3(fvec4) Load 59_2(color)
+           129_1: 23_3(fvec4) FAdd 61_3 98_2
+                              Store 59_2(color) 129_1
+            61_4:        25_4 Load 59_5(isub)
+            98_3: 23_1(ivec4) ImageRead 61_4 44_1
+                              Store 59_1(icolor) 98_3
+            61_5:        25_1 Load 59_6(isubMS)
+            98_4: 23_1(ivec4) ImageRead 61_5 44_1 Sample 43_1
+            61_6: 23_1(ivec4) Load 59_1(icolor)
+           128_1: 23_1(ivec4) IAdd 61_6 98_4
+                              Store 59_1(icolor) 128_1
+            61_7:        25_5 Load 59_8(usub)
+            98_5: 23_4(ivec4) ImageRead 61_7 44_1
+                              Store 59_7(ucolor) 98_5
+            61_8:        25_6 Load 59_9(usubMS)
+            98_6: 23_4(ivec4) ImageRead 61_8 44_1 Sample 43_1
+            61_9: 23_4(ivec4) Load 59_7(ucolor)
+           128_2: 23_4(ivec4) IAdd 61_9 98_6
+                              Store 59_7(ucolor) 128_2
+            57_1:        19_1 FunctionCall 54_2(foo(iIPM1;) 59_6(isubMS)
                               Return
                               FunctionEnd
-  11(foo(iIPM1;):           2 Function None 9
-          10(sb):      8(ptr) FunctionParameter
-              12:             Label
-              16:           7 Load 10(sb)
-              21:   13(ivec4) ImageRead 16 20 Sample 17
-              22:   13(ivec4) Load 15(icolor)
-              23:   13(ivec4) IAdd 22 21
-                              Store 15(icolor) 23
+54_2(foo(iIPM1;):        19_1 Function None 33_2
+        55_1(sb):   32_1(ptr) FunctionParameter
+           248_2:             Label
+           61_10:        25_1 Load 55_1(sb)
+            98_7: 23_1(ivec4) ImageRead 61_10 44_1 Sample 43_1
+           61_11: 23_1(ivec4) Load 59_1(icolor)
+           128_3: 23_1(ivec4) IAdd 61_11 98_7
+                              Store 59_1(icolor) 128_3
                               Return
                               FunctionEnd

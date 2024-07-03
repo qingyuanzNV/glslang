@@ -246,157 +246,157 @@ local_size = (128, 1, 1)
 // Id's are bound by 88
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 83
-                              ExecutionMode 4 LocalSize 128 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_4
+                              ExecutionMode 54_1 LocalSize 128 1 1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 10  "@main(u1;"
-                              Name 9  "id"
-                              Name 12  "MyStruct"
-                              MemberName 12(MyStruct) 0  "a"
-                              MemberName 12(MyStruct) 1  "b"
-                              MemberName 12(MyStruct) 2  "c"
-                              Name 16  "s"
-                              Name 25  "count"
-                              Name 26  "MyStruct"
-                              MemberName 26(MyStruct) 0  "a"
-                              MemberName 26(MyStruct) 1  "b"
-                              MemberName 26(MyStruct) 2  "c"
-                              Name 28  "MyStructs"
-                              MemberName 28(MyStructs) 0  "count"
-                              MemberName 28(MyStructs) 1  "data"
-                              Name 30  "sb"
-                              MemberName 30(sb) 0  "@data"
-                              Name 32  "sb"
-                              Name 37  "ms"
-                              Name 65  "o"
-                              MemberName 65(o) 0  "@data"
-                              Name 67  "o"
-                              Name 81  "id"
-                              Name 83  "id"
-                              Name 85  "param"
-                              MemberDecorate 26(MyStruct) 0 Offset 0
-                              MemberDecorate 26(MyStruct) 1 Offset 4
-                              MemberDecorate 26(MyStruct) 2 Offset 8
-                              Decorate 27 ArrayStride 12
-                              Decorate 28(MyStructs) BufferBlock
-                              MemberDecorate 28(MyStructs) 0 Offset 0
-                              MemberDecorate 28(MyStructs) 1 Offset 4
-                              Decorate 29 ArrayStride 16
-                              Decorate 30(sb) BufferBlock
-                              MemberDecorate 30(sb) 0 NonWritable
-                              MemberDecorate 30(sb) 0 Offset 0
-                              Decorate 32(sb) Binding 0
-                              Decorate 32(sb) DescriptorSet 0
-                              Decorate 64 ArrayStride 12
-                              Decorate 65(o) BufferBlock
-                              MemberDecorate 65(o) 0 NonWritable
-                              MemberDecorate 65(o) 0 Offset 0
-                              Decorate 67(o) Binding 1
-                              Decorate 67(o) DescriptorSet 0
-                              Decorate 83(id) BuiltIn LocalInvocationIndex
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               8:             TypeFunction 2 7(ptr)
-    12(MyStruct):             TypeStruct 6(int) 6(int) 6(int)
-              13:      6(int) Constant 128
-              14:             TypeArray 12(MyStruct) 13
-              15:             TypePointer Workgroup 14
-           16(s):     15(ptr) Variable Workgroup
-              17:             TypeInt 32 1
-              18:     17(int) Constant 0
-              19:      6(int) Constant 1
-              20:      6(int) Constant 2
-              21:      6(int) Constant 3
-              22:12(MyStruct) ConstantComposite 19 20 21
-              23:             TypePointer Workgroup 12(MyStruct)
-    26(MyStruct):             TypeStruct 6(int) 6(int) 6(int)
-              27:             TypeRuntimeArray 26(MyStruct)
-   28(MyStructs):             TypeStruct 6(int) 27
-              29:             TypeRuntimeArray 28(MyStructs)
-          30(sb):             TypeStruct 29
-              31:             TypePointer Uniform 30(sb)
-          32(sb):     31(ptr) Variable Uniform
-              33:             TypePointer Uniform 6(int)
-              36:             TypePointer Function 12(MyStruct)
-              40:             TypeBool
-              47:     17(int) Constant 1
-              49:             TypePointer Uniform 26(MyStruct)
-              61:     17(int) Constant 2
-              64:             TypeRuntimeArray 26(MyStruct)
-           65(o):             TypeStruct 64
-              66:             TypePointer Uniform 65(o)
-           67(o):     66(ptr) Variable Uniform
-              71:      6(int) Constant 0
-              82:             TypePointer Input 6(int)
-          83(id):     82(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-          81(id):      7(ptr) Variable Function
-       85(param):      7(ptr) Variable Function
-              84:      6(int) Load 83(id)
-                              Store 81(id) 84
-              86:      6(int) Load 81(id)
-                              Store 85(param) 86
-              87:           2 FunctionCall 10(@main(u1;) 85(param)
+                              Name 54_1  "main"
+                              Name 54_2  "@main(u1;"
+                              Name 55_1  "id"
+                              Name 30_1  "MyStruct"
+                              MemberName 30_1(MyStruct) 0  "a"
+                              MemberName 30_1(MyStruct) 1  "b"
+                              MemberName 30_1(MyStruct) 2  "c"
+                              Name 59_1  "s"
+                              Name 59_7  "count"
+                              Name 30_2  "MyStruct"
+                              MemberName 30_2(MyStruct) 0  "a"
+                              MemberName 30_2(MyStruct) 1  "b"
+                              MemberName 30_2(MyStruct) 2  "c"
+                              Name 30_3  "MyStructs"
+                              MemberName 30_3(MyStructs) 0  "count"
+                              MemberName 30_3(MyStructs) 1  "data"
+                              Name 30_4  "sb"
+                              MemberName 30_4(sb) 0  "@data"
+                              Name 59_2  "sb"
+                              Name 59_8  "ms"
+                              Name 30_5  "o"
+                              MemberName 30_5(o) 0  "@data"
+                              Name 59_3  "o"
+                              Name 59_5  "id"
+                              Name 59_4  "id"
+                              Name 59_6  "param"
+                              MemberDecorate 30_2(MyStruct) 0 Offset 0
+                              MemberDecorate 30_2(MyStruct) 1 Offset 4
+                              MemberDecorate 30_2(MyStruct) 2 Offset 8
+                              Decorate 29_1 ArrayStride 12
+                              Decorate 30_3(MyStructs) BufferBlock
+                              MemberDecorate 30_3(MyStructs) 0 Offset 0
+                              MemberDecorate 30_3(MyStructs) 1 Offset 4
+                              Decorate 29_2 ArrayStride 16
+                              Decorate 30_4(sb) BufferBlock
+                              MemberDecorate 30_4(sb) 0 NonWritable
+                              MemberDecorate 30_4(sb) 0 Offset 0
+                              Decorate 59_2(sb) Binding 0
+                              Decorate 59_2(sb) DescriptorSet 0
+                              Decorate 29_3 ArrayStride 12
+                              Decorate 30_5(o) BufferBlock
+                              MemberDecorate 30_5(o) 0 NonWritable
+                              MemberDecorate 30_5(o) 0 Offset 0
+                              Decorate 59_3(o) Binding 1
+                              Decorate 59_3(o) DescriptorSet 0
+                              Decorate 59_4(id) BuiltIn LocalInvocationIndex
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+  30_1(MyStruct):             TypeStruct 21_1(int) 21_1(int) 21_1(int)
+       uint(128):   21_1(int) Constant 128
+            28_1:             TypeArray 30_1(MyStruct) uint(128)
+            32_2:             TypePointer Workgroup 28_1
+         59_1(s):   32_2(ptr) Variable Workgroup
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+         uint(3):   21_1(int) Constant 3
+            44_1:30_1(MyStruct) ConstantComposite uint(1) uint(2) uint(3)
+            32_3:             TypePointer Workgroup 30_1(MyStruct)
+  30_2(MyStruct):             TypeStruct 21_1(int) 21_1(int) 21_1(int)
+            29_1:             TypeRuntimeArray 30_2(MyStruct)
+ 30_3(MyStructs):             TypeStruct 21_1(int) 29_1
+            29_2:             TypeRuntimeArray 30_3(MyStructs)
+        30_4(sb):             TypeStruct 29_2
+            32_4:             TypePointer Uniform 30_4(sb)
+        59_2(sb):   32_4(ptr) Variable Uniform
+            32_5:             TypePointer Uniform 21_1(int)
+            32_6:             TypePointer Function 30_1(MyStruct)
+            20_1:             TypeBool
+            43_2:   21_2(int) Constant 1
+            32_7:             TypePointer Uniform 30_2(MyStruct)
+            43_3:   21_2(int) Constant 2
+            29_3:             TypeRuntimeArray 30_2(MyStruct)
+         30_5(o):             TypeStruct 29_3
+            32_8:             TypePointer Uniform 30_5(o)
+         59_3(o):   32_8(ptr) Variable Uniform
+         uint(0):   21_1(int) Constant 0
+            32_9:             TypePointer Input 21_1(int)
+        59_4(id):   32_9(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_5(id):   32_1(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+            61_1:   21_1(int) Load 59_4(id)
+                              Store 59_5(id) 61_1
+            61_2:   21_1(int) Load 59_5(id)
+                              Store 59_6(param) 61_2
+            57_1:        19_1 FunctionCall 54_2(@main(u1;) 59_6(param)
                               Return
                               FunctionEnd
-   10(@main(u1;):           2 Function None 8
-           9(id):      7(ptr) FunctionParameter
-              11:             Label
-       25(count):      7(ptr) Variable Function
-          37(ms):     36(ptr) Variable Function
-              52:     36(ptr) Variable Function
-              24:     23(ptr) AccessChain 16(s) 18
-                              Store 24 22
-              34:     33(ptr) AccessChain 32(sb) 18 18 18
-              35:      6(int) Load 34
-                              Store 25(count) 35
-              38:      6(int) Load 9(id)
-              39:      6(int) Load 25(count)
-              41:    40(bool) UGreaterThan 38 39
-              42:      6(int) Load 9(id)
-              43:      6(int) Load 25(count)
-              44:      6(int) ISub 42 43
-              45:     23(ptr) AccessChain 16(s) 44
-              46:12(MyStruct) Load 45
-              48:      6(int) Load 9(id)
-              50:     49(ptr) AccessChain 32(sb) 18 18 47 48
-              51:26(MyStruct) Load 50
-                              SelectionMerge 54 None
-                              BranchConditional 41 53 55
-              53:               Label
-                                Store 52 46
-                                Branch 54
-              55:               Label
-              56:      6(int)   CompositeExtract 51 0
-              57:      7(ptr)   AccessChain 52 18
-                                Store 57 56
-              58:      6(int)   CompositeExtract 51 1
-              59:      7(ptr)   AccessChain 52 47
-                                Store 59 58
-              60:      6(int)   CompositeExtract 51 2
-              62:      7(ptr)   AccessChain 52 61
-                                Store 62 60
-                                Branch 54
-              54:             Label
-              63:12(MyStruct) Load 52
-                              Store 37(ms) 63
-              68:     33(ptr) AccessChain 67(o) 18 18 18
-              69:      7(ptr) AccessChain 37(ms) 18
-              70:      6(int) Load 69
-              72:      6(int) AtomicIAdd 68 19 71 70
-              73:     33(ptr) AccessChain 67(o) 18 18 47
-              74:      7(ptr) AccessChain 37(ms) 47
-              75:      6(int) Load 74
-              76:      6(int) AtomicIAdd 73 19 71 75
-              77:     33(ptr) AccessChain 67(o) 18 18 61
-              78:      7(ptr) AccessChain 37(ms) 61
-              79:      6(int) Load 78
-              80:      6(int) AtomicIAdd 77 19 71 79
+ 54_2(@main(u1;):        19_1 Function None 33_2
+        55_1(id):   32_1(ptr) FunctionParameter
+           248_2:             Label
+     59_7(count):   32_1(ptr) Variable Function
+        59_8(ms):   32_6(ptr) Variable Function
+            59_9:   32_6(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(s) 43_1
+                              Store 65_1 44_1
+            65_2:   32_5(ptr) AccessChain 59_2(sb) 43_1 43_1 43_1
+            61_3:   21_1(int) Load 65_2
+                              Store 59_7(count) 61_3
+            61_4:   21_1(int) Load 55_1(id)
+            61_5:   21_1(int) Load 59_7(count)
+           172_1:  20_1(bool) UGreaterThan 61_4 61_5
+            61_6:   21_1(int) Load 55_1(id)
+            61_7:   21_1(int) Load 59_7(count)
+           130_1:   21_1(int) ISub 61_6 61_7
+            65_3:   32_3(ptr) AccessChain 59_1(s) 130_1
+            61_8:30_1(MyStruct) Load 65_3
+            61_9:   21_1(int) Load 55_1(id)
+            65_4:   32_7(ptr) AccessChain 59_2(sb) 43_1 43_1 43_2 61_9
+           61_10:30_2(MyStruct) Load 65_4
+                              SelectionMerge 248_5 None
+                              BranchConditional 172_1 248_3 248_4
+           248_3:               Label
+                                Store 59_9 61_8
+                                Branch 248_5
+           248_4:               Label
+            81_1:   21_1(int)   CompositeExtract 61_10 0
+            65_5:   32_1(ptr)   AccessChain 59_9 43_1
+                                Store 65_5 81_1
+            81_2:   21_1(int)   CompositeExtract 61_10 1
+            65_6:   32_1(ptr)   AccessChain 59_9 43_2
+                                Store 65_6 81_2
+            81_3:   21_1(int)   CompositeExtract 61_10 2
+            65_7:   32_1(ptr)   AccessChain 59_9 43_3
+                                Store 65_7 81_3
+                                Branch 248_5
+           248_5:             Label
+           61_11:30_1(MyStruct) Load 59_9
+                              Store 59_8(ms) 61_11
+            65_8:   32_5(ptr) AccessChain 59_3(o) 43_1 43_1 43_1
+            65_9:   32_1(ptr) AccessChain 59_8(ms) 43_1
+           61_12:   21_1(int) Load 65_9
+           234_1:   21_1(int) AtomicIAdd 65_8 uint(1) uint(0) 61_12
+           65_10:   32_5(ptr) AccessChain 59_3(o) 43_1 43_1 43_2
+           65_11:   32_1(ptr) AccessChain 59_8(ms) 43_2
+           61_13:   21_1(int) Load 65_11
+           234_2:   21_1(int) AtomicIAdd 65_10 uint(1) uint(0) 61_13
+           65_12:   32_5(ptr) AccessChain 59_3(o) 43_1 43_1 43_3
+           65_13:   32_1(ptr) AccessChain 59_8(ms) 43_3
+           61_14:   21_1(int) Load 65_13
+           234_3:   21_1(int) AtomicIAdd 65_12 uint(1) uint(0) 61_14
                               Return
                               FunctionEnd

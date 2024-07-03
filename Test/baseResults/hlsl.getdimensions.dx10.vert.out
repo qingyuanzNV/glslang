@@ -122,79 +122,79 @@ Shader version: 500
                               Capability Shader
                               Capability Sampled1D
                               Capability ImageQuery
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 42
+                              EntryPoint Vertex 54_1  "main" 59_2
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "VS_OUTPUT"
-                              MemberName 8(VS_OUTPUT) 0  "Pos"
-                              Name 10  "@main("
-                              Name 14  "sizeQueryTemp"
-                              Name 17  "g_tTex1df4"
-                              Name 22  "WidthU"
-                              Name 24  "sizeQueryTemp"
-                              Name 29  "NumberOfLevelsU"
-                              Name 33  "vsout"
-                              Name 42  "@entryPointOutput.Pos"
-                              Name 47  "g_sSamp"
-                              Decorate 17(g_tTex1df4) Binding 0
-                              Decorate 17(g_tTex1df4) DescriptorSet 0
-                              Decorate 42(@entryPointOutput.Pos) BuiltIn Position
-                              Decorate 47(g_sSamp) Binding 0
-                              Decorate 47(g_sSamp) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(VS_OUTPUT):             TypeStruct 7(fvec4)
-               9:             TypeFunction 8(VS_OUTPUT)
-              12:             TypeInt 32 0
-              13:             TypePointer Function 12(int)
-              15:             TypeImage 6(float) 1D sampled format:Unknown
-              16:             TypePointer UniformConstant 15
-  17(g_tTex1df4):     16(ptr) Variable UniformConstant
-              19:             TypeInt 32 1
-              20:     19(int) Constant 0
-              26:     12(int) Constant 6
-              32:             TypePointer Function 8(VS_OUTPUT)
-              34:    6(float) Constant 0
-              35:    7(fvec4) ConstantComposite 34 34 34 34
-              36:             TypePointer Function 7(fvec4)
-              41:             TypePointer Output 7(fvec4)
-42(@entryPointOutput.Pos):     41(ptr) Variable Output
-              45:             TypeSampler
-              46:             TypePointer UniformConstant 45
-     47(g_sSamp):     46(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-              43:8(VS_OUTPUT) FunctionCall 10(@main()
-              44:    7(fvec4) CompositeExtract 43 0
-                              Store 42(@entryPointOutput.Pos) 44
+                              Name 54_1  "main"
+                              Name 30_1  "VS_OUTPUT"
+                              MemberName 30_1(VS_OUTPUT) 0  "Pos"
+                              Name 54_2  "@main("
+                              Name 59_4  "sizeQueryTemp"
+                              Name 59_1  "g_tTex1df4"
+                              Name 59_5  "WidthU"
+                              Name 59_6  "sizeQueryTemp"
+                              Name 59_7  "NumberOfLevelsU"
+                              Name 59_8  "vsout"
+                              Name 59_2  "@entryPointOutput.Pos"
+                              Name 59_3  "g_sSamp"
+                              Decorate 59_1(g_tTex1df4) Binding 0
+                              Decorate 59_1(g_tTex1df4) DescriptorSet 0
+                              Decorate 59_2(@entryPointOutput.Pos) BuiltIn Position
+                              Decorate 59_3(g_sSamp) Binding 0
+                              Decorate 59_3(g_sSamp) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(VS_OUTPUT):             TypeStruct 23_1(fvec4)
+            33_2:             TypeFunction 30_1(VS_OUTPUT)
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            25_1:             TypeImage 22_1(float) 1D sampled format:Unknown
+            32_2:             TypePointer UniformConstant 25_1
+59_1(g_tTex1df4):   32_2(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+         uint(6):   21_1(int) Constant 6
+            32_3:             TypePointer Function 30_1(VS_OUTPUT)
+            43_2: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+            32_4:             TypePointer Function 23_1(fvec4)
+            32_5:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput.Pos):   32_5(ptr) Variable Output
+            26_1:             TypeSampler
+            32_6:             TypePointer UniformConstant 26_1
+   59_3(g_sSamp):   32_6(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:30_1(VS_OUTPUT) FunctionCall 54_2(@main()
+            81_1: 23_1(fvec4) CompositeExtract 57_1 0
+                              Store 59_2(@entryPointOutput.Pos) 81_1
                               Return
                               FunctionEnd
-      10(@main():8(VS_OUTPUT) Function None 9
-              11:             Label
-14(sizeQueryTemp):     13(ptr) Variable Function
-      22(WidthU):     13(ptr) Variable Function
-24(sizeQueryTemp):     13(ptr) Variable Function
-29(NumberOfLevelsU):     13(ptr) Variable Function
-       33(vsout):     32(ptr) Variable Function
-              18:          15 Load 17(g_tTex1df4)
-              21:     12(int) ImageQuerySizeLod 18 20
-                              Store 14(sizeQueryTemp) 21
-              23:     12(int) Load 14(sizeQueryTemp)
-                              Store 22(WidthU) 23
-              25:          15 Load 17(g_tTex1df4)
-              27:     12(int) ImageQuerySizeLod 25 26
-                              Store 24(sizeQueryTemp) 27
-              28:     12(int) Load 24(sizeQueryTemp)
-                              Store 22(WidthU) 28
-              30:          15 Load 17(g_tTex1df4)
-              31:     12(int) ImageQueryLevels 30
-                              Store 29(NumberOfLevelsU) 31
-              37:     36(ptr) AccessChain 33(vsout) 20
-                              Store 37 35
-              38:8(VS_OUTPUT) Load 33(vsout)
-                              ReturnValue 38
+    54_2(@main():30_1(VS_OUTPUT) Function None 33_2
+           248_2:             Label
+59_4(sizeQueryTemp):   32_1(ptr) Variable Function
+    59_5(WidthU):   32_1(ptr) Variable Function
+59_6(sizeQueryTemp):   32_1(ptr) Variable Function
+59_7(NumberOfLevelsU):   32_1(ptr) Variable Function
+     59_8(vsout):   32_3(ptr) Variable Function
+            61_1:        25_1 Load 59_1(g_tTex1df4)
+           103_1:   21_1(int) ImageQuerySizeLod 61_1 43_1
+                              Store 59_4(sizeQueryTemp) 103_1
+            61_2:   21_1(int) Load 59_4(sizeQueryTemp)
+                              Store 59_5(WidthU) 61_2
+            61_3:        25_1 Load 59_1(g_tTex1df4)
+           103_2:   21_1(int) ImageQuerySizeLod 61_3 uint(6)
+                              Store 59_6(sizeQueryTemp) 103_2
+            61_4:   21_1(int) Load 59_6(sizeQueryTemp)
+                              Store 59_5(WidthU) 61_4
+            61_5:        25_1 Load 59_1(g_tTex1df4)
+           106_1:   21_1(int) ImageQueryLevels 61_5
+                              Store 59_7(NumberOfLevelsU) 106_1
+            65_1:   32_4(ptr) AccessChain 59_8(vsout) 43_1
+                              Store 65_1 44_1
+            61_6:30_1(VS_OUTPUT) Load 59_8(vsout)
+                              ReturnValue 61_6
                               FunctionEnd

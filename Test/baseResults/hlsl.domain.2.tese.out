@@ -430,189 +430,189 @@ triangle order = none
 // Id's are bound by 120
 
                               Capability Tessellation
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationEvaluation 4  "main" 52 67 71 78 85 103 113 117
-                              ExecutionMode 4 Triangles
+                              EntryPoint TessellationEvaluation 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8
+                              ExecutionMode 54_1 Triangles
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 10  "pcf_in_t"
-                              MemberName 10(pcf_in_t) 0  "flTessFactor"
-                              MemberName 10(pcf_in_t) 1  "flInsideTessFactor"
-                              MemberName 10(pcf_in_t) 2  "foo"
-                              Name 14  "ds_in_t"
-                              MemberName 14(ds_in_t) 0  "pos"
-                              MemberName 14(ds_in_t) 1  "norm"
-                              Name 17  "gs_in_t"
-                              MemberName 17(gs_in_t) 0  "pos"
-                              MemberName 17(gs_in_t) 1  "norm"
-                              Name 22  "@main(struct-pcf_in_t-f1[3]-f1-f11;struct-ds_in_t-vf4-vf31[3];vf3;"
-                              Name 19  "pcf_data"
-                              Name 20  "i"
-                              Name 21  "tesscoord"
-                              Name 25  "o"
-                              Name 48  "pcf_data"
-                              Name 52  "pcf_data.flTessFactor"
-                              Name 67  "pcf_data.flInsideTessFactor"
-                              Name 71  "pcf_data.foo"
-                              Name 75  "i"
-                              Name 78  "i.pos"
-                              Name 85  "i.norm"
-                              Name 102  "tesscoord"
-                              Name 103  "tesscoord"
-                              Name 105  "flattenTemp"
-                              Name 107  "param"
-                              Name 109  "param"
-                              Name 113  "@entryPointOutput.pos"
-                              Name 117  "@entryPointOutput.norm"
-                              Decorate 52(pcf_data.flTessFactor) BuiltIn TessLevelOuter
-                              Decorate 52(pcf_data.flTessFactor) Patch
-                              Decorate 67(pcf_data.flInsideTessFactor) BuiltIn TessLevelInner
-                              Decorate 67(pcf_data.flInsideTessFactor) Patch
-                              Decorate 71(pcf_data.foo) Patch
-                              Decorate 71(pcf_data.foo) Location 2
-                              Decorate 78(i.pos) Location 0
-                              Decorate 85(i.norm) Location 1
-                              Decorate 103(tesscoord) BuiltIn TessCoord
-                              Decorate 103(tesscoord) Patch
-                              Decorate 113(@entryPointOutput.pos) Location 0
-                              Decorate 117(@entryPointOutput.norm) Location 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeInt 32 0
-               8:      7(int) Constant 3
-               9:             TypeArray 6(float) 8
-    10(pcf_in_t):             TypeStruct 9 6(float) 6(float)
-              11:             TypePointer Function 10(pcf_in_t)
-              12:             TypeVector 6(float) 4
-              13:             TypeVector 6(float) 3
-     14(ds_in_t):             TypeStruct 12(fvec4) 13(fvec3)
-              15:             TypeArray 14(ds_in_t) 8
-              16:             TypePointer Function 13(fvec3)
-     17(gs_in_t):             TypeStruct 12(fvec4) 13(fvec3)
-              18:             TypeFunction 17(gs_in_t) 11(ptr) 15 16(ptr)
-              24:             TypePointer Function 17(gs_in_t)
-              26:             TypeInt 32 1
-              27:     26(int) Constant 0
-              29:      7(int) Constant 0
-              30:             TypePointer Function 6(float)
-              35:             TypePointer Function 12(fvec4)
-              37:     26(int) Constant 1
-              39:      7(int) Constant 1
-              49:      7(int) Constant 4
-              50:             TypeArray 6(float) 49
-              51:             TypePointer Input 50
-52(pcf_data.flTessFactor):     51(ptr) Variable Input
-              53:             TypePointer Input 6(float)
-              60:     26(int) Constant 2
-              64:      7(int) Constant 2
-              65:             TypeArray 6(float) 64
-              66:             TypePointer Input 65
-67(pcf_data.flInsideTessFactor):     66(ptr) Variable Input
-71(pcf_data.foo):     53(ptr) Variable Input
-              74:             TypePointer Function 15
-              76:             TypeArray 12(fvec4) 8
-              77:             TypePointer Input 76
-       78(i.pos):     77(ptr) Variable Input
-              79:             TypePointer Input 12(fvec4)
-              83:             TypeArray 13(fvec3) 8
-              84:             TypePointer Input 83
-      85(i.norm):     84(ptr) Variable Input
-              86:             TypePointer Input 13(fvec3)
-  103(tesscoord):     86(ptr) Variable Input
-             112:             TypePointer Output 12(fvec4)
-113(@entryPointOutput.pos):    112(ptr) Variable Output
-             116:             TypePointer Output 13(fvec3)
-117(@entryPointOutput.norm):    116(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-    48(pcf_data):     11(ptr) Variable Function
-           75(i):     74(ptr) Variable Function
-  102(tesscoord):     16(ptr) Variable Function
-105(flattenTemp):     24(ptr) Variable Function
-      107(param):     11(ptr) Variable Function
-      109(param):     16(ptr) Variable Function
-              54:     53(ptr) AccessChain 52(pcf_data.flTessFactor) 27
-              55:    6(float) Load 54
-              56:     30(ptr) AccessChain 48(pcf_data) 27 27
-                              Store 56 55
-              57:     53(ptr) AccessChain 52(pcf_data.flTessFactor) 37
-              58:    6(float) Load 57
-              59:     30(ptr) AccessChain 48(pcf_data) 27 37
-                              Store 59 58
-              61:     53(ptr) AccessChain 52(pcf_data.flTessFactor) 60
-              62:    6(float) Load 61
-              63:     30(ptr) AccessChain 48(pcf_data) 27 60
-                              Store 63 62
-              68:     53(ptr) AccessChain 67(pcf_data.flInsideTessFactor) 27
-              69:    6(float) Load 68
-              70:     30(ptr) AccessChain 48(pcf_data) 37
-                              Store 70 69
-              72:    6(float) Load 71(pcf_data.foo)
-              73:     30(ptr) AccessChain 48(pcf_data) 60
-                              Store 73 72
-              80:     79(ptr) AccessChain 78(i.pos) 27
-              81:   12(fvec4) Load 80
-              82:     35(ptr) AccessChain 75(i) 27 27
-                              Store 82 81
-              87:     86(ptr) AccessChain 85(i.norm) 27
-              88:   13(fvec3) Load 87
-              89:     16(ptr) AccessChain 75(i) 27 37
-                              Store 89 88
-              90:     79(ptr) AccessChain 78(i.pos) 37
-              91:   12(fvec4) Load 90
-              92:     35(ptr) AccessChain 75(i) 37 27
-                              Store 92 91
-              93:     86(ptr) AccessChain 85(i.norm) 37
-              94:   13(fvec3) Load 93
-              95:     16(ptr) AccessChain 75(i) 37 37
-                              Store 95 94
-              96:     79(ptr) AccessChain 78(i.pos) 60
-              97:   12(fvec4) Load 96
-              98:     35(ptr) AccessChain 75(i) 60 27
-                              Store 98 97
-              99:     86(ptr) AccessChain 85(i.norm) 60
-             100:   13(fvec3) Load 99
-             101:     16(ptr) AccessChain 75(i) 60 37
-                              Store 101 100
-             104:   13(fvec3) Load 103(tesscoord)
-                              Store 102(tesscoord) 104
-             106:          15 Load 75(i)
-             108:10(pcf_in_t) Load 48(pcf_data)
-                              Store 107(param) 108
-             110:   13(fvec3) Load 102(tesscoord)
-                              Store 109(param) 110
-             111: 17(gs_in_t) FunctionCall 22(@main(struct-pcf_in_t-f1[3]-f1-f11;struct-ds_in_t-vf4-vf31[3];vf3;) 107(param) 106 109(param)
-                              Store 105(flattenTemp) 111
-             114:     35(ptr) AccessChain 105(flattenTemp) 27
-             115:   12(fvec4) Load 114
-                              Store 113(@entryPointOutput.pos) 115
-             118:     16(ptr) AccessChain 105(flattenTemp) 37
-             119:   13(fvec3) Load 118
-                              Store 117(@entryPointOutput.norm) 119
+                              Name 54_1  "main"
+                              Name 30_1  "pcf_in_t"
+                              MemberName 30_1(pcf_in_t) 0  "flTessFactor"
+                              MemberName 30_1(pcf_in_t) 1  "flInsideTessFactor"
+                              MemberName 30_1(pcf_in_t) 2  "foo"
+                              Name 30_2  "ds_in_t"
+                              MemberName 30_2(ds_in_t) 0  "pos"
+                              MemberName 30_2(ds_in_t) 1  "norm"
+                              Name 30_3  "gs_in_t"
+                              MemberName 30_3(gs_in_t) 0  "pos"
+                              MemberName 30_3(gs_in_t) 1  "norm"
+                              Name 54_2  "@main(struct-pcf_in_t-f1[3]-f1-f11;struct-ds_in_t-vf4-vf31[3];vf3;"
+                              Name 55_1  "pcf_data"
+                              Name 55_2  "i"
+                              Name 55_3  "tesscoord"
+                              Name 59_15  "o"
+                              Name 59_9  "pcf_data"
+                              Name 59_1  "pcf_data.flTessFactor"
+                              Name 59_2  "pcf_data.flInsideTessFactor"
+                              Name 59_3  "pcf_data.foo"
+                              Name 59_10  "i"
+                              Name 59_4  "i.pos"
+                              Name 59_5  "i.norm"
+                              Name 59_11  "tesscoord"
+                              Name 59_6  "tesscoord"
+                              Name 59_12  "flattenTemp"
+                              Name 59_13  "param"
+                              Name 59_14  "param"
+                              Name 59_7  "@entryPointOutput.pos"
+                              Name 59_8  "@entryPointOutput.norm"
+                              Decorate 59_1(pcf_data.flTessFactor) BuiltIn TessLevelOuter
+                              Decorate 59_1(pcf_data.flTessFactor) Patch
+                              Decorate 59_2(pcf_data.flInsideTessFactor) BuiltIn TessLevelInner
+                              Decorate 59_2(pcf_data.flInsideTessFactor) Patch
+                              Decorate 59_3(pcf_data.foo) Patch
+                              Decorate 59_3(pcf_data.foo) Location 2
+                              Decorate 59_4(i.pos) Location 0
+                              Decorate 59_5(i.norm) Location 1
+                              Decorate 59_6(tesscoord) BuiltIn TessCoord
+                              Decorate 59_6(tesscoord) Patch
+                              Decorate 59_7(@entryPointOutput.pos) Location 0
+                              Decorate 59_8(@entryPointOutput.norm) Location 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 22_1(float) uint(3)
+  30_1(pcf_in_t):             TypeStruct 28_1 22_1(float) 22_1(float)
+            32_1:             TypePointer Function 30_1(pcf_in_t)
+            23_1:             TypeVector 22_1(float) 4
+            23_2:             TypeVector 22_1(float) 3
+   30_2(ds_in_t):             TypeStruct 23_1(fvec4) 23_2(fvec3)
+            28_2:             TypeArray 30_2(ds_in_t) uint(3)
+            32_2:             TypePointer Function 23_2(fvec3)
+   30_3(gs_in_t):             TypeStruct 23_1(fvec4) 23_2(fvec3)
+            33_2:             TypeFunction 30_3(gs_in_t) 32_1(ptr) 28_2 32_2(ptr)
+            32_3:             TypePointer Function 30_3(gs_in_t)
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+         uint(0):   21_1(int) Constant 0
+            32_4:             TypePointer Function 22_1(float)
+            32_5:             TypePointer Function 23_1(fvec4)
+            43_2:   21_2(int) Constant 1
+         uint(1):   21_1(int) Constant 1
+         uint(4):   21_1(int) Constant 4
+            28_3:             TypeArray 22_1(float) uint(4)
+            32_6:             TypePointer Input 28_3
+59_1(pcf_data.flTessFactor):   32_6(ptr) Variable Input
+            32_7:             TypePointer Input 22_1(float)
+            43_3:   21_2(int) Constant 2
+         uint(2):   21_1(int) Constant 2
+            28_4:             TypeArray 22_1(float) uint(2)
+            32_8:             TypePointer Input 28_4
+59_2(pcf_data.flInsideTessFactor):   32_8(ptr) Variable Input
+59_3(pcf_data.foo):   32_7(ptr) Variable Input
+            32_9:             TypePointer Function 28_2
+            28_5:             TypeArray 23_1(fvec4) uint(3)
+           32_10:             TypePointer Input 28_5
+     59_4(i.pos):  32_10(ptr) Variable Input
+           32_11:             TypePointer Input 23_1(fvec4)
+            28_6:             TypeArray 23_2(fvec3) uint(3)
+           32_12:             TypePointer Input 28_6
+    59_5(i.norm):  32_12(ptr) Variable Input
+           32_13:             TypePointer Input 23_2(fvec3)
+ 59_6(tesscoord):  32_13(ptr) Variable Input
+           32_14:             TypePointer Output 23_1(fvec4)
+59_7(@entryPointOutput.pos):  32_14(ptr) Variable Output
+           32_15:             TypePointer Output 23_2(fvec3)
+59_8(@entryPointOutput.norm):  32_15(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+  59_9(pcf_data):   32_1(ptr) Variable Function
+        59_10(i):   32_9(ptr) Variable Function
+59_11(tesscoord):   32_2(ptr) Variable Function
+59_12(flattenTemp):   32_3(ptr) Variable Function
+    59_13(param):   32_1(ptr) Variable Function
+    59_14(param):   32_2(ptr) Variable Function
+            65_1:   32_7(ptr) AccessChain 59_1(pcf_data.flTessFactor) 43_1
+            61_1: 22_1(float) Load 65_1
+            65_2:   32_4(ptr) AccessChain 59_9(pcf_data) 43_1 43_1
+                              Store 65_2 61_1
+            65_3:   32_7(ptr) AccessChain 59_1(pcf_data.flTessFactor) 43_2
+            61_2: 22_1(float) Load 65_3
+            65_4:   32_4(ptr) AccessChain 59_9(pcf_data) 43_1 43_2
+                              Store 65_4 61_2
+            65_5:   32_7(ptr) AccessChain 59_1(pcf_data.flTessFactor) 43_3
+            61_3: 22_1(float) Load 65_5
+            65_6:   32_4(ptr) AccessChain 59_9(pcf_data) 43_1 43_3
+                              Store 65_6 61_3
+            65_7:   32_7(ptr) AccessChain 59_2(pcf_data.flInsideTessFactor) 43_1
+            61_4: 22_1(float) Load 65_7
+            65_8:   32_4(ptr) AccessChain 59_9(pcf_data) 43_2
+                              Store 65_8 61_4
+            61_5: 22_1(float) Load 59_3(pcf_data.foo)
+            65_9:   32_4(ptr) AccessChain 59_9(pcf_data) 43_3
+                              Store 65_9 61_5
+           65_10:  32_11(ptr) AccessChain 59_4(i.pos) 43_1
+            61_6: 23_1(fvec4) Load 65_10
+           65_11:   32_5(ptr) AccessChain 59_10(i) 43_1 43_1
+                              Store 65_11 61_6
+           65_12:  32_13(ptr) AccessChain 59_5(i.norm) 43_1
+            61_7: 23_2(fvec3) Load 65_12
+           65_13:   32_2(ptr) AccessChain 59_10(i) 43_1 43_2
+                              Store 65_13 61_7
+           65_14:  32_11(ptr) AccessChain 59_4(i.pos) 43_2
+            61_8: 23_1(fvec4) Load 65_14
+           65_15:   32_5(ptr) AccessChain 59_10(i) 43_2 43_1
+                              Store 65_15 61_8
+           65_16:  32_13(ptr) AccessChain 59_5(i.norm) 43_2
+            61_9: 23_2(fvec3) Load 65_16
+           65_17:   32_2(ptr) AccessChain 59_10(i) 43_2 43_2
+                              Store 65_17 61_9
+           65_18:  32_11(ptr) AccessChain 59_4(i.pos) 43_3
+           61_10: 23_1(fvec4) Load 65_18
+           65_19:   32_5(ptr) AccessChain 59_10(i) 43_3 43_1
+                              Store 65_19 61_10
+           65_20:  32_13(ptr) AccessChain 59_5(i.norm) 43_3
+           61_11: 23_2(fvec3) Load 65_20
+           65_21:   32_2(ptr) AccessChain 59_10(i) 43_3 43_2
+                              Store 65_21 61_11
+           61_12: 23_2(fvec3) Load 59_6(tesscoord)
+                              Store 59_11(tesscoord) 61_12
+           61_13:        28_2 Load 59_10(i)
+           61_14:30_1(pcf_in_t) Load 59_9(pcf_data)
+                              Store 59_13(param) 61_14
+           61_15: 23_2(fvec3) Load 59_11(tesscoord)
+                              Store 59_14(param) 61_15
+            57_1:30_3(gs_in_t) FunctionCall 54_2(@main(struct-pcf_in_t-f1[3]-f1-f11;struct-ds_in_t-vf4-vf31[3];vf3;) 59_13(param) 61_13 59_14(param)
+                              Store 59_12(flattenTemp) 57_1
+           65_22:   32_5(ptr) AccessChain 59_12(flattenTemp) 43_1
+           61_16: 23_1(fvec4) Load 65_22
+                              Store 59_7(@entryPointOutput.pos) 61_16
+           65_23:   32_2(ptr) AccessChain 59_12(flattenTemp) 43_2
+           61_17: 23_2(fvec3) Load 65_23
+                              Store 59_8(@entryPointOutput.norm) 61_17
                               Return
                               FunctionEnd
-22(@main(struct-pcf_in_t-f1[3]-f1-f11;struct-ds_in_t-vf4-vf31[3];vf3;): 17(gs_in_t) Function None 18
-    19(pcf_data):     11(ptr) FunctionParameter
-           20(i):          15 FunctionParameter
-   21(tesscoord):     16(ptr) FunctionParameter
-              23:             Label
-           25(o):     24(ptr) Variable Function
-              28:   12(fvec4) CompositeExtract 20(i) 0 0
-              31:     30(ptr) AccessChain 21(tesscoord) 29
-              32:    6(float) Load 31
-              33:   12(fvec4) CompositeConstruct 32 32 32 32
-              34:   12(fvec4) FAdd 28 33
-              36:     35(ptr) AccessChain 25(o) 27
-                              Store 36 34
-              38:   13(fvec3) CompositeExtract 20(i) 0 1
-              40:     30(ptr) AccessChain 21(tesscoord) 39
-              41:    6(float) Load 40
-              42:   13(fvec3) CompositeConstruct 41 41 41
-              43:   13(fvec3) FAdd 38 42
-              44:     16(ptr) AccessChain 25(o) 37
-                              Store 44 43
-              45: 17(gs_in_t) Load 25(o)
-                              ReturnValue 45
+54_2(@main(struct-pcf_in_t-f1[3]-f1-f11;struct-ds_in_t-vf4-vf31[3];vf3;):30_3(gs_in_t) Function None 33_2
+  55_1(pcf_data):   32_1(ptr) FunctionParameter
+         55_2(i):        28_2 FunctionParameter
+ 55_3(tesscoord):   32_2(ptr) FunctionParameter
+           248_2:             Label
+        59_15(o):   32_3(ptr) Variable Function
+            81_1: 23_1(fvec4) CompositeExtract 55_2(i) 0 0
+           65_24:   32_4(ptr) AccessChain 55_3(tesscoord) uint(0)
+           61_18: 22_1(float) Load 65_24
+            80_1: 23_1(fvec4) CompositeConstruct 61_18 61_18 61_18 61_18
+           129_1: 23_1(fvec4) FAdd 81_1 80_1
+           65_25:   32_5(ptr) AccessChain 59_15(o) 43_1
+                              Store 65_25 129_1
+            81_2: 23_2(fvec3) CompositeExtract 55_2(i) 0 1
+           65_26:   32_4(ptr) AccessChain 55_3(tesscoord) uint(1)
+           61_19: 22_1(float) Load 65_26
+            80_2: 23_2(fvec3) CompositeConstruct 61_19 61_19 61_19
+           129_2: 23_2(fvec3) FAdd 81_2 80_2
+           65_27:   32_2(ptr) AccessChain 59_15(o) 43_2
+                              Store 65_27 129_2
+           61_20:30_3(gs_in_t) Load 59_15(o)
+                              ReturnValue 61_20
                               FunctionEnd

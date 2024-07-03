@@ -181,148 +181,148 @@ Shader version: 430
 // Id's are bound by 73
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 14 34 42 65
+                              EntryPoint Vertex 54_1  "main" 59_1 59_4 59_5 59_7
                               Source GLSL 430
-                              Name 4  "main"
-                              Name 9  "getColor2("
-                              Name 11  "getWorld("
-                              Name 14  "oColor"
-                              Name 16  "ColorBlock"
-                              MemberName 16(ColorBlock) 0  "color1"
-                              MemberName 16(ColorBlock) 1  "b"
-                              MemberName 16(ColorBlock) 2  "color2"
-                              MemberName 16(ColorBlock) 3  "color3"
-                              Name 18  "uC"
-                              Name 26  "SecondaryColorBlock"
-                              MemberName 26(SecondaryColorBlock) 0  "c"
-                              Name 28  "uColorBuf"
-                              Name 32  "Vertex"
-                              MemberName 32(Vertex) 0  "v1"
-                              MemberName 32(Vertex) 1  "v2"
-                              Name 34  "oV"
-                              Name 40  "gl_PerVertex"
-                              MemberName 40(gl_PerVertex) 0  "gl_Position"
-                              MemberName 40(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 40(gl_PerVertex) 2  "gl_ClipDistance"
-                              Name 42  ""
-                              Name 44  "MatrixBlock"
-                              MemberName 44(MatrixBlock) 0  "uProj"
-                              MemberName 44(MatrixBlock) 1  "uWorld"
-                              Name 46  "uM"
-                              Name 65  "P"
-                              Name 70  "BufferBlock"
-                              MemberName 70(BufferBlock) 0  "p"
-                              Name 72  "uBuf"
-                              Decorate 14(oColor) Location 2
-                              Decorate 16(ColorBlock) Block
-                              MemberDecorate 16(ColorBlock) 0 Offset 0
-                              MemberDecorate 16(ColorBlock) 1 Offset 16
-                              MemberDecorate 16(ColorBlock) 2 Offset 32
-                              MemberDecorate 16(ColorBlock) 3 Offset 48
-                              Decorate 18(uC) Binding 1
-                              Decorate 18(uC) DescriptorSet 0
-                              Decorate 26(SecondaryColorBlock) BufferBlock
-                              MemberDecorate 26(SecondaryColorBlock) 0 Offset 0
-                              Decorate 28(uColorBuf) Binding 0
-                              Decorate 28(uColorBuf) DescriptorSet 0
-                              Decorate 32(Vertex) Block
-                              Decorate 34(oV) Location 0
-                              Decorate 40(gl_PerVertex) Block
-                              MemberDecorate 40(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 40(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 40(gl_PerVertex) 2 BuiltIn ClipDistance
-                              Decorate 44(MatrixBlock) Block
-                              MemberDecorate 44(MatrixBlock) 0 ColMajor
-                              MemberDecorate 44(MatrixBlock) 0 MatrixStride 16
-                              MemberDecorate 44(MatrixBlock) 0 Offset 0
-                              MemberDecorate 44(MatrixBlock) 1 ColMajor
-                              MemberDecorate 44(MatrixBlock) 1 MatrixStride 16
-                              MemberDecorate 44(MatrixBlock) 1 Offset 64
-                              Decorate 46(uM) Binding 0
-                              Decorate 46(uM) DescriptorSet 0
-                              Decorate 65(P) Location 0
-                              Decorate 70(BufferBlock) BufferBlock
-                              MemberDecorate 70(BufferBlock) 0 ColMajor
-                              MemberDecorate 70(BufferBlock) 0 MatrixStride 16
-                              MemberDecorate 70(BufferBlock) 0 Offset 0
-                              Decorate 72(uBuf) Binding 1
-                              Decorate 72(uBuf) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              13:             TypePointer Output 7(fvec4)
-      14(oColor):     13(ptr) Variable Output
-              15:             TypeInt 32 0
-  16(ColorBlock):             TypeStruct 7(fvec4) 15(int) 7(fvec4) 7(fvec4)
-              17:             TypePointer Uniform 16(ColorBlock)
-          18(uC):     17(ptr) Variable Uniform
-              19:             TypeInt 32 1
-              20:     19(int) Constant 0
-              21:             TypePointer Uniform 7(fvec4)
-26(SecondaryColorBlock):             TypeStruct 7(fvec4)
-              27:             TypePointer Uniform 26(SecondaryColorBlock)
-   28(uColorBuf):     27(ptr) Variable Uniform
-      32(Vertex):             TypeStruct 7(fvec4) 7(fvec4)
-              33:             TypePointer Output 32(Vertex)
-          34(oV):     33(ptr) Variable Output
-              38:     15(int) Constant 1
-              39:             TypeArray 6(float) 38
-40(gl_PerVertex):             TypeStruct 7(fvec4) 6(float) 39
-              41:             TypePointer Output 40(gl_PerVertex)
-              42:     41(ptr) Variable Output
-              43:             TypeMatrix 7(fvec4) 4
- 44(MatrixBlock):             TypeStruct 43 43
-              45:             TypePointer Uniform 44(MatrixBlock)
-          46(uM):     45(ptr) Variable Uniform
-              47:             TypePointer Uniform 43
-              53:     19(int) Constant 2
-              58:    6(float) Constant 1065353216
-              59:    7(fvec4) ConstantComposite 58 58 58 58
-              61:     19(int) Constant 1
-              64:             TypePointer Input 7(fvec4)
-           65(P):     64(ptr) Variable Input
- 70(BufferBlock):             TypeStruct 43
-              71:             TypePointer Uniform 70(BufferBlock)
-        72(uBuf):     71(ptr) Variable Uniform
-         4(main):           2 Function None 3
-               5:             Label
-              22:     21(ptr) AccessChain 18(uC) 20
-              23:    7(fvec4) Load 22
-              24:    7(fvec4) FunctionCall 9(getColor2()
-              25:    7(fvec4) FMul 23 24
-              29:     21(ptr) AccessChain 28(uColorBuf) 20
-              30:    7(fvec4) Load 29
-              31:    7(fvec4) FMul 25 30
-                              Store 14(oColor) 31
-              35:     21(ptr) AccessChain 18(uC) 20
-              36:    7(fvec4) Load 35
-              37:     13(ptr) AccessChain 34(oV) 20
-                              Store 37 36
-              48:     47(ptr) AccessChain 46(uM) 20
-              49:          43 Load 48
-              50:    7(fvec4) FunctionCall 11(getWorld()
-              51:    7(fvec4) MatrixTimesVector 49 50
-              52:     13(ptr) AccessChain 42 20
-                              Store 52 51
+                              Name 54_1  "main"
+                              Name 54_2  "getColor2("
+                              Name 54_3  "getWorld("
+                              Name 59_1  "oColor"
+                              Name 30_1  "ColorBlock"
+                              MemberName 30_1(ColorBlock) 0  "color1"
+                              MemberName 30_1(ColorBlock) 1  "b"
+                              MemberName 30_1(ColorBlock) 2  "color2"
+                              MemberName 30_1(ColorBlock) 3  "color3"
+                              Name 59_2  "uC"
+                              Name 30_2  "SecondaryColorBlock"
+                              MemberName 30_2(SecondaryColorBlock) 0  "c"
+                              Name 59_3  "uColorBuf"
+                              Name 30_3  "Vertex"
+                              MemberName 30_3(Vertex) 0  "v1"
+                              MemberName 30_3(Vertex) 1  "v2"
+                              Name 59_4  "oV"
+                              Name 30_4  "gl_PerVertex"
+                              MemberName 30_4(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_4(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_4(gl_PerVertex) 2  "gl_ClipDistance"
+                              Name 59_5  ""
+                              Name 30_5  "MatrixBlock"
+                              MemberName 30_5(MatrixBlock) 0  "uProj"
+                              MemberName 30_5(MatrixBlock) 1  "uWorld"
+                              Name 59_6  "uM"
+                              Name 59_7  "P"
+                              Name 30_6  "BufferBlock"
+                              MemberName 30_6(BufferBlock) 0  "p"
+                              Name 59_8  "uBuf"
+                              Decorate 59_1(oColor) Location 2
+                              Decorate 30_1(ColorBlock) Block
+                              MemberDecorate 30_1(ColorBlock) 0 Offset 0
+                              MemberDecorate 30_1(ColorBlock) 1 Offset 16
+                              MemberDecorate 30_1(ColorBlock) 2 Offset 32
+                              MemberDecorate 30_1(ColorBlock) 3 Offset 48
+                              Decorate 59_2(uC) Binding 1
+                              Decorate 59_2(uC) DescriptorSet 0
+                              Decorate 30_2(SecondaryColorBlock) BufferBlock
+                              MemberDecorate 30_2(SecondaryColorBlock) 0 Offset 0
+                              Decorate 59_3(uColorBuf) Binding 0
+                              Decorate 59_3(uColorBuf) DescriptorSet 0
+                              Decorate 30_3(Vertex) Block
+                              Decorate 59_4(oV) Location 0
+                              Decorate 30_4(gl_PerVertex) Block
+                              MemberDecorate 30_4(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_4(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_4(gl_PerVertex) 2 BuiltIn ClipDistance
+                              Decorate 30_5(MatrixBlock) Block
+                              MemberDecorate 30_5(MatrixBlock) 0 ColMajor
+                              MemberDecorate 30_5(MatrixBlock) 0 MatrixStride 16
+                              MemberDecorate 30_5(MatrixBlock) 0 Offset 0
+                              MemberDecorate 30_5(MatrixBlock) 1 ColMajor
+                              MemberDecorate 30_5(MatrixBlock) 1 MatrixStride 16
+                              MemberDecorate 30_5(MatrixBlock) 1 Offset 64
+                              Decorate 59_6(uM) Binding 0
+                              Decorate 59_6(uM) DescriptorSet 0
+                              Decorate 59_7(P) Location 0
+                              Decorate 30_6(BufferBlock) BufferBlock
+                              MemberDecorate 30_6(BufferBlock) 0 ColMajor
+                              MemberDecorate 30_6(BufferBlock) 0 MatrixStride 16
+                              MemberDecorate 30_6(BufferBlock) 0 Offset 0
+                              Decorate 59_8(uBuf) Binding 1
+                              Decorate 59_8(uBuf) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            32_1:             TypePointer Output 23_1(fvec4)
+    59_1(oColor):   32_1(ptr) Variable Output
+            21_1:             TypeInt 32 0
+30_1(ColorBlock):             TypeStruct 23_1(fvec4) 21_1(int) 23_1(fvec4) 23_1(fvec4)
+            32_2:             TypePointer Uniform 30_1(ColorBlock)
+        59_2(uC):   32_2(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_3:             TypePointer Uniform 23_1(fvec4)
+30_2(SecondaryColorBlock):             TypeStruct 23_1(fvec4)
+            32_4:             TypePointer Uniform 30_2(SecondaryColorBlock)
+ 59_3(uColorBuf):   32_4(ptr) Variable Uniform
+    30_3(Vertex):             TypeStruct 23_1(fvec4) 23_1(fvec4)
+            32_5:             TypePointer Output 30_3(Vertex)
+        59_4(oV):   32_5(ptr) Variable Output
+         uint(1):   21_1(int) Constant 1
+            28_1:             TypeArray 22_1(float) uint(1)
+30_4(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float) 28_1
+            32_6:             TypePointer Output 30_4(gl_PerVertex)
+            59_5:   32_6(ptr) Variable Output
+            24_1:             TypeMatrix 23_1(fvec4) 4
+30_5(MatrixBlock):             TypeStruct 24_1 24_1
+            32_7:             TypePointer Uniform 30_5(MatrixBlock)
+        59_6(uM):   32_7(ptr) Variable Uniform
+            32_8:             TypePointer Uniform 24_1
+            43_2:   21_2(int) Constant 2
+            43_3: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_3 43_3 43_3 43_3
+            43_4:   21_2(int) Constant 1
+            32_9:             TypePointer Input 23_1(fvec4)
+         59_7(P):   32_9(ptr) Variable Input
+30_6(BufferBlock):             TypeStruct 24_1
+           32_10:             TypePointer Uniform 30_6(BufferBlock)
+      59_8(uBuf):  32_10(ptr) Variable Uniform
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2(uC) 43_1
+            61_1: 23_1(fvec4) Load 65_1
+            57_1: 23_1(fvec4) FunctionCall 54_2(getColor2()
+           133_1: 23_1(fvec4) FMul 61_1 57_1
+            65_2:   32_3(ptr) AccessChain 59_3(uColorBuf) 43_1
+            61_2: 23_1(fvec4) Load 65_2
+           133_2: 23_1(fvec4) FMul 133_1 61_2
+                              Store 59_1(oColor) 133_2
+            65_3:   32_3(ptr) AccessChain 59_2(uC) 43_1
+            61_3: 23_1(fvec4) Load 65_3
+            65_4:   32_1(ptr) AccessChain 59_4(oV) 43_1
+                              Store 65_4 61_3
+            65_5:   32_8(ptr) AccessChain 59_6(uM) 43_1
+            61_4:        24_1 Load 65_5
+            57_2: 23_1(fvec4) FunctionCall 54_3(getWorld()
+           145_1: 23_1(fvec4) MatrixTimesVector 61_4 57_2
+            65_6:   32_1(ptr) AccessChain 59_5 43_1
+                              Store 65_6 145_1
                               Return
                               FunctionEnd
-   9(getColor2():    7(fvec4) Function None 8
-              10:             Label
-              54:     21(ptr) AccessChain 18(uC) 53
-              55:    7(fvec4) Load 54
-                              ReturnValue 55
+54_2(getColor2(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+            65_7:   32_3(ptr) AccessChain 59_2(uC) 43_2
+            61_5: 23_1(fvec4) Load 65_7
+                              ReturnValue 61_5
                               FunctionEnd
-   11(getWorld():    7(fvec4) Function None 8
-              12:             Label
-              60:     13(ptr) AccessChain 34(oV) 20
-                              Store 60 59
-              62:     47(ptr) AccessChain 46(uM) 61
-              63:          43 Load 62
-              66:    7(fvec4) Load 65(P)
-              67:    7(fvec4) MatrixTimesVector 63 66
-                              ReturnValue 67
+ 54_3(getWorld(): 23_1(fvec4) Function None 33_2
+           248_3:             Label
+            65_8:   32_1(ptr) AccessChain 59_4(oV) 43_1
+                              Store 65_8 44_1
+            65_9:   32_8(ptr) AccessChain 59_6(uM) 43_4
+            61_6:        24_1 Load 65_9
+            61_7: 23_1(fvec4) Load 59_7(P)
+           145_2: 23_1(fvec4) MatrixTimesVector 61_6 61_7
+                              ReturnValue 145_2
                               FunctionEnd

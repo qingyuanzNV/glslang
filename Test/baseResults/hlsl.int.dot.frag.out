@@ -228,112 +228,112 @@ gl_FragCoord origin is upper left
 // Id's are bound by 84
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 82
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "@main("
-                              Name 13  "i"
-                              Name 15  "i2"
-                              Name 19  "i3"
-                              Name 24  "i4"
-                              Name 29  "i5"
-                              Name 82  "@entryPointOutput"
-                              Decorate 82(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypeInt 32 1
-              12:             TypePointer Function 11(int)
-              14:     11(int) Constant 1
-              16:     11(int) Constant 2
-              17:             TypeVector 11(int) 2
-              18:             TypePointer Function 17(ivec2)
-              20:     11(int) Constant 3
-              21:   17(ivec2) ConstantComposite 20 20
-              22:             TypeVector 11(int) 3
-              23:             TypePointer Function 22(ivec3)
-              25:     11(int) Constant 4
-              26:   22(ivec3) ConstantComposite 25 25 25
-              27:             TypeVector 11(int) 4
-              28:             TypePointer Function 27(ivec4)
-              30:     11(int) Constant 5
-              31:   27(ivec4) ConstantComposite 30 30 30 30
-              81:             TypePointer Output 7(fvec4)
-82(@entryPointOutput):     81(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              83:    7(fvec4) FunctionCall 9(@main()
-                              Store 82(@entryPointOutput) 83
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 59_2  "i"
+                              Name 59_3  "i2"
+                              Name 59_4  "i3"
+                              Name 59_5  "i4"
+                              Name 59_6  "i5"
+                              Name 59_1  "@entryPointOutput"
+                              Decorate 59_1(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 1
+            43_2:   21_1(int) Constant 2
+            23_2:             TypeVector 21_1(int) 2
+            32_2:             TypePointer Function 23_2(ivec2)
+            43_3:   21_1(int) Constant 3
+            44_1: 23_2(ivec2) ConstantComposite 43_3 43_3
+            23_3:             TypeVector 21_1(int) 3
+            32_3:             TypePointer Function 23_3(ivec3)
+            43_4:   21_1(int) Constant 4
+            44_2: 23_3(ivec3) ConstantComposite 43_4 43_4 43_4
+            23_4:             TypeVector 21_1(int) 4
+            32_4:             TypePointer Function 23_4(ivec4)
+            43_5:   21_1(int) Constant 5
+            44_3: 23_4(ivec4) ConstantComposite 43_5 43_5 43_5 43_5
+            32_5:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput):   32_5(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main()
+                              Store 59_1(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       9(@main():    7(fvec4) Function None 8
-              10:             Label
-           13(i):     12(ptr) Variable Function
-          15(i2):     12(ptr) Variable Function
-          19(i3):     18(ptr) Variable Function
-          24(i4):     23(ptr) Variable Function
-          29(i5):     28(ptr) Variable Function
-                              Store 13(i) 14
-                              Store 15(i2) 16
-                              Store 19(i3) 21
-                              Store 24(i4) 26
-                              Store 29(i5) 31
-              32:     11(int) Load 13(i)
-              33:     11(int) Load 13(i)
-              34:     11(int) IMul 32 33
-                              Store 13(i) 34
-              35:     11(int) Load 15(i2)
-              36:     11(int) Load 15(i2)
-              37:     11(int) IMul 35 36
-                              Store 15(i2) 37
-              38:   17(ivec2) Load 19(i3)
-              39:   17(ivec2) Load 19(i3)
-              40:   17(ivec2) IMul 38 39
-              41:     11(int) CompositeExtract 40 0
-              42:     11(int) CompositeExtract 40 1
-              43:     11(int) IAdd 41 42
-              44:   17(ivec2) CompositeConstruct 43 43
-                              Store 19(i3) 44
-              45:   22(ivec3) Load 24(i4)
-              46:   22(ivec3) Load 24(i4)
-              47:   22(ivec3) IMul 45 46
-              48:     11(int) CompositeExtract 47 0
-              49:     11(int) CompositeExtract 47 1
-              50:     11(int) IAdd 48 49
-              51:     11(int) CompositeExtract 47 2
-              52:     11(int) IAdd 50 51
-              53:   22(ivec3) CompositeConstruct 52 52 52
-                              Store 24(i4) 53
-              54:   27(ivec4) Load 29(i5)
-              55:   27(ivec4) Load 29(i5)
-              56:   27(ivec4) IMul 54 55
-              57:     11(int) CompositeExtract 56 0
-              58:     11(int) CompositeExtract 56 1
-              59:     11(int) IAdd 57 58
-              60:     11(int) CompositeExtract 56 2
-              61:     11(int) IAdd 59 60
-              62:     11(int) CompositeExtract 56 3
-              63:     11(int) IAdd 61 62
-              64:   27(ivec4) CompositeConstruct 63 63 63 63
-                              Store 29(i5) 64
-              65:     11(int) Load 13(i)
-              66:     11(int) Load 15(i2)
-              67:   27(ivec4) CompositeConstruct 66 66 66 66
-              68:   27(ivec4) CompositeConstruct 65 65 65 65
-              69:   27(ivec4) IAdd 68 67
-              70:   17(ivec2) Load 19(i3)
-              71:   27(ivec4) VectorShuffle 70 70 0 1 0 1
-              72:   27(ivec4) IAdd 69 71
-              73:   22(ivec3) Load 24(i4)
-              74:   27(ivec4) VectorShuffle 73 73 0 1 2 0
-              75:   27(ivec4) IAdd 72 74
-              76:   27(ivec4) Load 29(i5)
-              77:   27(ivec4) IAdd 75 76
-              78:    7(fvec4) ConvertSToF 77
-                              ReturnValue 78
+    54_2(@main(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+         59_2(i):   32_1(ptr) Variable Function
+        59_3(i2):   32_1(ptr) Variable Function
+        59_4(i3):   32_2(ptr) Variable Function
+        59_5(i4):   32_3(ptr) Variable Function
+        59_6(i5):   32_4(ptr) Variable Function
+                              Store 59_2(i) 43_1
+                              Store 59_3(i2) 43_2
+                              Store 59_4(i3) 44_1
+                              Store 59_5(i4) 44_2
+                              Store 59_6(i5) 44_3
+            61_1:   21_1(int) Load 59_2(i)
+            61_2:   21_1(int) Load 59_2(i)
+           132_1:   21_1(int) IMul 61_1 61_2
+                              Store 59_2(i) 132_1
+            61_3:   21_1(int) Load 59_3(i2)
+            61_4:   21_1(int) Load 59_3(i2)
+           132_2:   21_1(int) IMul 61_3 61_4
+                              Store 59_3(i2) 132_2
+            61_5: 23_2(ivec2) Load 59_4(i3)
+            61_6: 23_2(ivec2) Load 59_4(i3)
+           132_3: 23_2(ivec2) IMul 61_5 61_6
+            81_1:   21_1(int) CompositeExtract 132_3 0
+            81_2:   21_1(int) CompositeExtract 132_3 1
+           128_1:   21_1(int) IAdd 81_1 81_2
+            80_1: 23_2(ivec2) CompositeConstruct 128_1 128_1
+                              Store 59_4(i3) 80_1
+            61_7: 23_3(ivec3) Load 59_5(i4)
+            61_8: 23_3(ivec3) Load 59_5(i4)
+           132_4: 23_3(ivec3) IMul 61_7 61_8
+            81_3:   21_1(int) CompositeExtract 132_4 0
+            81_4:   21_1(int) CompositeExtract 132_4 1
+           128_2:   21_1(int) IAdd 81_3 81_4
+            81_5:   21_1(int) CompositeExtract 132_4 2
+           128_3:   21_1(int) IAdd 128_2 81_5
+            80_2: 23_3(ivec3) CompositeConstruct 128_3 128_3 128_3
+                              Store 59_5(i4) 80_2
+            61_9: 23_4(ivec4) Load 59_6(i5)
+           61_10: 23_4(ivec4) Load 59_6(i5)
+           132_5: 23_4(ivec4) IMul 61_9 61_10
+            81_6:   21_1(int) CompositeExtract 132_5 0
+            81_7:   21_1(int) CompositeExtract 132_5 1
+           128_4:   21_1(int) IAdd 81_6 81_7
+            81_8:   21_1(int) CompositeExtract 132_5 2
+           128_5:   21_1(int) IAdd 128_4 81_8
+            81_9:   21_1(int) CompositeExtract 132_5 3
+           128_6:   21_1(int) IAdd 128_5 81_9
+            80_3: 23_4(ivec4) CompositeConstruct 128_6 128_6 128_6 128_6
+                              Store 59_6(i5) 80_3
+           61_11:   21_1(int) Load 59_2(i)
+           61_12:   21_1(int) Load 59_3(i2)
+            80_4: 23_4(ivec4) CompositeConstruct 61_12 61_12 61_12 61_12
+            80_5: 23_4(ivec4) CompositeConstruct 61_11 61_11 61_11 61_11
+           128_7: 23_4(ivec4) IAdd 80_5 80_4
+           61_13: 23_2(ivec2) Load 59_4(i3)
+            79_1: 23_4(ivec4) VectorShuffle 61_13 61_13 0 1 0 1
+           128_8: 23_4(ivec4) IAdd 128_7 79_1
+           61_14: 23_3(ivec3) Load 59_5(i4)
+            79_2: 23_4(ivec4) VectorShuffle 61_14 61_14 0 1 2 0
+           128_9: 23_4(ivec4) IAdd 128_8 79_2
+           61_15: 23_4(ivec4) Load 59_6(i5)
+          128_10: 23_4(ivec4) IAdd 128_9 61_15
+           111_1: 23_1(fvec4) ConvertSToF 128_10
+                              ReturnValue 111_1
                               FunctionEnd

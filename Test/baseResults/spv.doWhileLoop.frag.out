@@ -4,60 +4,60 @@ spv.doWhileLoop.frag
 // Id's are bound by 34
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 11 17 27 32
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 9  "color"
-                              Name 11  "BaseColor"
-                              Name 17  "bigColor"
-                              Name 27  "d"
-                              Name 32  "gl_FragColor"
-                              Decorate 11(BaseColor) Location 1
-                              Decorate 17(bigColor) Location 0
-                              Decorate 27(d) Location 2
-                              Decorate 32(gl_FragColor) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-              10:             TypePointer Input 7(fvec4)
-   11(BaseColor):     10(ptr) Variable Input
-    17(bigColor):     10(ptr) Variable Input
-              21:             TypeInt 32 0
-              22:     21(int) Constant 0
-              23:             TypePointer Function 6(float)
-              26:             TypePointer Input 6(float)
-           27(d):     26(ptr) Variable Input
-              29:             TypeBool
-              31:             TypePointer Output 7(fvec4)
-32(gl_FragColor):     31(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-        9(color):      8(ptr) Variable Function
-              12:    7(fvec4) Load 11(BaseColor)
-                              Store 9(color) 12
-                              Branch 13
-              13:             Label
-                              LoopMerge 15 16 None
-                              Branch 14
-              14:             Label
-              18:    7(fvec4) Load 17(bigColor)
-              19:    7(fvec4) Load 9(color)
-              20:    7(fvec4) FAdd 19 18
-                              Store 9(color) 20
-                              Branch 16
-              16:             Label
-              24:     23(ptr) AccessChain 9(color) 22
-              25:    6(float) Load 24
-              28:    6(float) Load 27(d)
-              30:    29(bool) FOrdLessThan 25 28
-                              BranchConditional 30 13 15
-              15:             Label
-              33:    7(fvec4) Load 9(color)
-                              Store 32(gl_FragColor) 33
+                              Name 54_1  "main"
+                              Name 59_5  "color"
+                              Name 59_1  "BaseColor"
+                              Name 59_2  "bigColor"
+                              Name 59_3  "d"
+                              Name 59_4  "gl_FragColor"
+                              Decorate 59_1(BaseColor) Location 1
+                              Decorate 59_2(bigColor) Location 0
+                              Decorate 59_3(d) Location 2
+                              Decorate 59_4(gl_FragColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            32_2:             TypePointer Input 23_1(fvec4)
+ 59_1(BaseColor):   32_2(ptr) Variable Input
+  59_2(bigColor):   32_2(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Function 22_1(float)
+            32_4:             TypePointer Input 22_1(float)
+         59_3(d):   32_4(ptr) Variable Input
+            20_1:             TypeBool
+            32_5:             TypePointer Output 23_1(fvec4)
+59_4(gl_FragColor):   32_5(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_5(color):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(BaseColor)
+                              Store 59_5(color) 61_1
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_5 248_4 None
+                              Branch 248_3
+           248_3:             Label
+            61_2: 23_1(fvec4) Load 59_2(bigColor)
+            61_3: 23_1(fvec4) Load 59_5(color)
+           129_1: 23_1(fvec4) FAdd 61_3 61_2
+                              Store 59_5(color) 129_1
+                              Branch 248_4
+           248_4:             Label
+            65_1:   32_3(ptr) AccessChain 59_5(color) uint(0)
+            61_4: 22_1(float) Load 65_1
+            61_5: 22_1(float) Load 59_3(d)
+           184_1:  20_1(bool) FOrdLessThan 61_4 61_5
+                              BranchConditional 184_1 248_2 248_5
+           248_5:             Label
+            61_6: 23_1(fvec4) Load 59_5(color)
+                              Store 59_4(gl_FragColor) 61_6
                               Return
                               FunctionEnd

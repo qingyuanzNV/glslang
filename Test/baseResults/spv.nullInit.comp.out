@@ -4,62 +4,62 @@ spv.nullInit.comp
 // Id's are bound by 37
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 460
                               SourceExtension  "GL_EXT_null_initializer"
-                              Name 4  "main"
-                              Name 12  "S"
-                              MemberName 12(S) 0  "v"
-                              MemberName 12(S) 1  "a"
-                              Name 15  "local"
-                              Name 23  "f"
-                              Name 24  "T"
-                              MemberName 24(T) 0  "b"
-                              MemberName 24(T) 1  "s"
-                              Name 27  "t1"
-                              Name 28  "t2"
-                              Name 30  "s"
-                              Name 31  "g"
-                              Name 34  "i"
-                              Name 36  "global"
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 3
-               8:             TypeInt 32 0
-               9:      8(int) Constant 4
-              10:             TypeArray 7(fvec3) 9
-              11:             TypeInt 32 1
-           12(S):             TypeStruct 10 11(int)
-              13:       12(S) ConstantNull
-              14:             TypePointer Function 12(S)
-              16:     11(int) Constant 1
-              17:             TypePointer Function 11(int)
-              21:    6(float) ConstantNull
-              22:             TypePointer Workgroup 6(float)
-           23(f):     22(ptr) Variable Workgroup 21
-           24(T):             TypeStruct 11(int) 12(S)
-              25:       24(T) ConstantNull
-              26:             TypePointer Workgroup 24(T)
-          27(t1):     26(ptr) Variable Workgroup 25
-          28(t2):     26(ptr) Variable Workgroup 25
-              29:             TypePointer Workgroup 12(S)
-           30(s):     29(ptr) Variable Workgroup 13
-           31(g):     22(ptr) Variable Workgroup 21
-              32:     11(int) ConstantNull
-              33:             TypePointer Workgroup 11(int)
-           34(i):     33(ptr) Variable Workgroup 32
-              35:             TypePointer Private 12(S)
-      36(global):     35(ptr) Variable Private 13
-         4(main):           2 Function None 3
-               5:             Label
-       15(local):     14(ptr) Variable Function 13
-              18:     17(ptr) AccessChain 15(local) 16
-              19:     11(int) Load 18
-              20:     11(int) IAdd 19 16
-                              Store 18 20
+                              Name 54_1  "main"
+                              Name 30_1  "S"
+                              MemberName 30_1(S) 0  "v"
+                              MemberName 30_1(S) 1  "a"
+                              Name 59_8  "local"
+                              Name 59_1  "f"
+                              Name 30_2  "T"
+                              MemberName 30_2(T) 0  "b"
+                              MemberName 30_2(T) 1  "s"
+                              Name 59_2  "t1"
+                              Name 59_3  "t2"
+                              Name 59_4  "s"
+                              Name 59_5  "g"
+                              Name 59_6  "i"
+                              Name 59_7  "global"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            21_1:             TypeInt 32 0
+         uint(4):   21_1(int) Constant 4
+            28_1:             TypeArray 23_1(fvec3) uint(4)
+            21_2:             TypeInt 32 1
+         30_1(S):             TypeStruct 28_1 21_2(int)
+            46_1:     30_1(S) ConstantNull
+            32_1:             TypePointer Function 30_1(S)
+            43_1:   21_2(int) Constant 1
+            32_2:             TypePointer Function 21_2(int)
+            46_2: 22_1(float) ConstantNull
+            32_3:             TypePointer Workgroup 22_1(float)
+         59_1(f):   32_3(ptr) Variable Workgroup 46_2
+         30_2(T):             TypeStruct 21_2(int) 30_1(S)
+            46_3:     30_2(T) ConstantNull
+            32_4:             TypePointer Workgroup 30_2(T)
+        59_2(t1):   32_4(ptr) Variable Workgroup 46_3
+        59_3(t2):   32_4(ptr) Variable Workgroup 46_3
+            32_5:             TypePointer Workgroup 30_1(S)
+         59_4(s):   32_5(ptr) Variable Workgroup 46_1
+         59_5(g):   32_3(ptr) Variable Workgroup 46_2
+            46_4:   21_2(int) ConstantNull
+            32_6:             TypePointer Workgroup 21_2(int)
+         59_6(i):   32_6(ptr) Variable Workgroup 46_4
+            32_7:             TypePointer Private 30_1(S)
+    59_7(global):   32_7(ptr) Variable Private 46_1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_8(local):   32_1(ptr) Variable Function 46_1
+            65_1:   32_2(ptr) AccessChain 59_8(local) 43_1
+            61_1:   21_2(int) Load 65_1
+           128_1:   21_2(int) IAdd 61_1 43_1
+                              Store 65_1 128_1
                               Return
                               FunctionEnd

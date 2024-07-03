@@ -389,117 +389,117 @@ Shader version: 500
 
                               Capability Shader
                               Capability ClipDistance
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 48 54
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "VS_OUTPUT"
-                              MemberName 9(VS_OUTPUT) 0  "Position"
-                              MemberName 9(VS_OUTPUT) 1  "clip0"
-                              MemberName 9(VS_OUTPUT) 2  "clip1"
-                              Name 11  "@main("
-                              Name 14  "Output"
-                              Name 45  "flattenTemp"
-                              Name 48  "@entryPointOutput.Position"
-                              Name 54  "@entryPointOutput.clip1"
-                              Decorate 48(@entryPointOutput.Position) BuiltIn Position
-                              Decorate 54(@entryPointOutput.clip1) BuiltIn ClipDistance
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeVector 6(float) 3
-    9(VS_OUTPUT):             TypeStruct 7(fvec4) 8(fvec3) 7(fvec4)
-              10:             TypeFunction 9(VS_OUTPUT)
-              13:             TypePointer Function 9(VS_OUTPUT)
-              15:             TypeInt 32 1
-              16:     15(int) Constant 0
-              17:    6(float) Constant 0
-              18:    7(fvec4) ConstantComposite 17 17 17 17
-              19:             TypePointer Function 7(fvec4)
-              21:     15(int) Constant 1
-              22:             TypeInt 32 0
-              23:     22(int) Constant 0
-              24:             TypePointer Function 6(float)
-              26:    6(float) Constant 1065353216
-              27:     22(int) Constant 1
-              29:    6(float) Constant 1073741824
-              30:     22(int) Constant 2
-              32:     15(int) Constant 2
-              33:    6(float) Constant 1082130432
-              35:    6(float) Constant 1084227584
-              37:    6(float) Constant 1086324736
-              39:    6(float) Constant 1088421888
-              40:     22(int) Constant 3
-              47:             TypePointer Output 7(fvec4)
-48(@entryPointOutput.Position):     47(ptr) Variable Output
-              51:     22(int) Constant 8
-              52:             TypeArray 6(float) 51
-              53:             TypePointer Output 52
-54(@entryPointOutput.clip1):     53(ptr) Variable Output
-              57:             TypePointer Output 6(float)
-              65:     15(int) Constant 4
-              69:     15(int) Constant 5
-              73:     15(int) Constant 6
-              77:     15(int) Constant 7
-         4(main):           2 Function None 3
-               5:             Label
- 45(flattenTemp):     13(ptr) Variable Function
-              46:9(VS_OUTPUT) FunctionCall 11(@main()
-                              Store 45(flattenTemp) 46
-              49:     19(ptr) AccessChain 45(flattenTemp) 16
-              50:    7(fvec4) Load 49
-                              Store 48(@entryPointOutput.Position) 50
-              55:     24(ptr) AccessChain 45(flattenTemp) 21 23
-              56:    6(float) Load 55
-              58:     57(ptr) AccessChain 54(@entryPointOutput.clip1) 16
-                              Store 58 56
-              59:     24(ptr) AccessChain 45(flattenTemp) 21 27
-              60:    6(float) Load 59
-              61:     57(ptr) AccessChain 54(@entryPointOutput.clip1) 21
-                              Store 61 60
-              62:     24(ptr) AccessChain 45(flattenTemp) 21 30
-              63:    6(float) Load 62
-              64:     57(ptr) AccessChain 54(@entryPointOutput.clip1) 32
-                              Store 64 63
-              66:     24(ptr) AccessChain 45(flattenTemp) 32 23
-              67:    6(float) Load 66
-              68:     57(ptr) AccessChain 54(@entryPointOutput.clip1) 65
-                              Store 68 67
-              70:     24(ptr) AccessChain 45(flattenTemp) 32 27
-              71:    6(float) Load 70
-              72:     57(ptr) AccessChain 54(@entryPointOutput.clip1) 69
-                              Store 72 71
-              74:     24(ptr) AccessChain 45(flattenTemp) 32 30
-              75:    6(float) Load 74
-              76:     57(ptr) AccessChain 54(@entryPointOutput.clip1) 73
-                              Store 76 75
-              78:     24(ptr) AccessChain 45(flattenTemp) 32 40
-              79:    6(float) Load 78
-              80:     57(ptr) AccessChain 54(@entryPointOutput.clip1) 77
-                              Store 80 79
+                              Name 54_1  "main"
+                              Name 30_1  "VS_OUTPUT"
+                              MemberName 30_1(VS_OUTPUT) 0  "Position"
+                              MemberName 30_1(VS_OUTPUT) 1  "clip0"
+                              MemberName 30_1(VS_OUTPUT) 2  "clip1"
+                              Name 54_2  "@main("
+                              Name 59_4  "Output"
+                              Name 59_3  "flattenTemp"
+                              Name 59_1  "@entryPointOutput.Position"
+                              Name 59_2  "@entryPointOutput.clip1"
+                              Decorate 59_1(@entryPointOutput.Position) BuiltIn Position
+                              Decorate 59_2(@entryPointOutput.clip1) BuiltIn ClipDistance
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            23_2:             TypeVector 22_1(float) 3
+ 30_1(VS_OUTPUT):             TypeStruct 23_1(fvec4) 23_2(fvec3) 23_1(fvec4)
+            33_2:             TypeFunction 30_1(VS_OUTPUT)
+            32_1:             TypePointer Function 30_1(VS_OUTPUT)
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            43_2: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+            32_2:             TypePointer Function 23_1(fvec4)
+            43_3:   21_1(int) Constant 1
+            21_2:             TypeInt 32 0
+         uint(0):   21_2(int) Constant 0
+            32_3:             TypePointer Function 22_1(float)
+            43_4: 22_1(float) Constant 1065353216
+         uint(1):   21_2(int) Constant 1
+            43_5: 22_1(float) Constant 1073741824
+         uint(2):   21_2(int) Constant 2
+            43_6:   21_1(int) Constant 2
+            43_7: 22_1(float) Constant 1082130432
+            43_8: 22_1(float) Constant 1084227584
+            43_9: 22_1(float) Constant 1086324736
+           43_10: 22_1(float) Constant 1088421888
+         uint(3):   21_2(int) Constant 3
+            32_4:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput.Position):   32_4(ptr) Variable Output
+         uint(8):   21_2(int) Constant 8
+            28_1:             TypeArray 22_1(float) uint(8)
+            32_5:             TypePointer Output 28_1
+59_2(@entryPointOutput.clip1):   32_5(ptr) Variable Output
+            32_6:             TypePointer Output 22_1(float)
+           43_11:   21_1(int) Constant 4
+           43_12:   21_1(int) Constant 5
+           43_13:   21_1(int) Constant 6
+           43_14:   21_1(int) Constant 7
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_3(flattenTemp):   32_1(ptr) Variable Function
+            57_1:30_1(VS_OUTPUT) FunctionCall 54_2(@main()
+                              Store 59_3(flattenTemp) 57_1
+            65_1:   32_2(ptr) AccessChain 59_3(flattenTemp) 43_1
+            61_1: 23_1(fvec4) Load 65_1
+                              Store 59_1(@entryPointOutput.Position) 61_1
+            65_2:   32_3(ptr) AccessChain 59_3(flattenTemp) 43_3 uint(0)
+            61_2: 22_1(float) Load 65_2
+            65_3:   32_6(ptr) AccessChain 59_2(@entryPointOutput.clip1) 43_1
+                              Store 65_3 61_2
+            65_4:   32_3(ptr) AccessChain 59_3(flattenTemp) 43_3 uint(1)
+            61_3: 22_1(float) Load 65_4
+            65_5:   32_6(ptr) AccessChain 59_2(@entryPointOutput.clip1) 43_3
+                              Store 65_5 61_3
+            65_6:   32_3(ptr) AccessChain 59_3(flattenTemp) 43_3 uint(2)
+            61_4: 22_1(float) Load 65_6
+            65_7:   32_6(ptr) AccessChain 59_2(@entryPointOutput.clip1) 43_6
+                              Store 65_7 61_4
+            65_8:   32_3(ptr) AccessChain 59_3(flattenTemp) 43_6 uint(0)
+            61_5: 22_1(float) Load 65_8
+            65_9:   32_6(ptr) AccessChain 59_2(@entryPointOutput.clip1) 43_11
+                              Store 65_9 61_5
+           65_10:   32_3(ptr) AccessChain 59_3(flattenTemp) 43_6 uint(1)
+            61_6: 22_1(float) Load 65_10
+           65_11:   32_6(ptr) AccessChain 59_2(@entryPointOutput.clip1) 43_12
+                              Store 65_11 61_6
+           65_12:   32_3(ptr) AccessChain 59_3(flattenTemp) 43_6 uint(2)
+            61_7: 22_1(float) Load 65_12
+           65_13:   32_6(ptr) AccessChain 59_2(@entryPointOutput.clip1) 43_13
+                              Store 65_13 61_7
+           65_14:   32_3(ptr) AccessChain 59_3(flattenTemp) 43_6 uint(3)
+            61_8: 22_1(float) Load 65_14
+           65_15:   32_6(ptr) AccessChain 59_2(@entryPointOutput.clip1) 43_14
+                              Store 65_15 61_8
                               Return
                               FunctionEnd
-      11(@main():9(VS_OUTPUT) Function None 10
-              12:             Label
-      14(Output):     13(ptr) Variable Function
-              20:     19(ptr) AccessChain 14(Output) 16
-                              Store 20 18
-              25:     24(ptr) AccessChain 14(Output) 21 23
-                              Store 25 17
-              28:     24(ptr) AccessChain 14(Output) 21 27
-                              Store 28 26
-              31:     24(ptr) AccessChain 14(Output) 21 30
-                              Store 31 29
-              34:     24(ptr) AccessChain 14(Output) 32 23
-                              Store 34 33
-              36:     24(ptr) AccessChain 14(Output) 32 27
-                              Store 36 35
-              38:     24(ptr) AccessChain 14(Output) 32 30
-                              Store 38 37
-              41:     24(ptr) AccessChain 14(Output) 32 40
-                              Store 41 39
-              42:9(VS_OUTPUT) Load 14(Output)
-                              ReturnValue 42
+    54_2(@main():30_1(VS_OUTPUT) Function None 33_2
+           248_2:             Label
+    59_4(Output):   32_1(ptr) Variable Function
+           65_16:   32_2(ptr) AccessChain 59_4(Output) 43_1
+                              Store 65_16 44_1
+           65_17:   32_3(ptr) AccessChain 59_4(Output) 43_3 uint(0)
+                              Store 65_17 43_2
+           65_18:   32_3(ptr) AccessChain 59_4(Output) 43_3 uint(1)
+                              Store 65_18 43_4
+           65_19:   32_3(ptr) AccessChain 59_4(Output) 43_3 uint(2)
+                              Store 65_19 43_5
+           65_20:   32_3(ptr) AccessChain 59_4(Output) 43_6 uint(0)
+                              Store 65_20 43_7
+           65_21:   32_3(ptr) AccessChain 59_4(Output) 43_6 uint(1)
+                              Store 65_21 43_8
+           65_22:   32_3(ptr) AccessChain 59_4(Output) 43_6 uint(2)
+                              Store 65_22 43_9
+           65_23:   32_3(ptr) AccessChain 59_4(Output) 43_6 uint(3)
+                              Store 65_23 43_10
+            61_9:30_1(VS_OUTPUT) Load 59_4(Output)
+                              ReturnValue 61_9
                               FunctionEnd

@@ -4,112 +4,112 @@ spv.nonSquare.vert
 // Id's are bound by 90
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 12 22 28 55
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 9  "a"
-                              Name 12  "v3"
-                              Name 16  "m23"
-                              Name 19  "b"
-                              Name 22  "m32"
-                              Name 28  "gl_Position"
-                              Name 55  "v4"
-                              Decorate 12(v3) Location 0
-                              Decorate 22(m32) Location 0
-                              Decorate 28(gl_Position) BuiltIn Position
-                              Decorate 55(v4) Location 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypePointer Function 7(fvec2)
-              10:             TypeVector 6(float) 3
-              11:             TypePointer Input 10(fvec3)
-          12(v3):     11(ptr) Variable Input
-              14:             TypeMatrix 10(fvec3) 2
-              15:             TypePointer Function 14
-              20:             TypeMatrix 7(fvec2) 3
-              21:             TypePointer Output 20
-         22(m32):     21(ptr) Variable Output
-              26:             TypeVector 6(float) 4
-              27:             TypePointer Output 26(fvec4)
- 28(gl_Position):     27(ptr) Variable Output
-              31:             TypeMatrix 10(fvec3) 3
-              35:    6(float) Constant 0
-              40:             TypeMatrix 26(fvec4) 4
-              41:    6(float) Constant 1077936128
-              42:    6(float) Constant 1086324736
-              43:   26(fvec4) ConstantComposite 41 42 35 35
-              44:    6(float) Constant 1091567616
-              45:    6(float) Constant 1094713344
-              46:   26(fvec4) ConstantComposite 44 45 35 35
-              47:    6(float) Constant 1097859072
-              48:    6(float) Constant 1099956224
-              49:   26(fvec4) ConstantComposite 47 48 35 35
-              50:    6(float) Constant 1101529088
-              51:    6(float) Constant 1103101952
-              52:   26(fvec4) ConstantComposite 50 51 35 35
-              53:          40 ConstantComposite 43 46 49 52
-              54:             TypePointer Input 26(fvec4)
-          55(v4):     54(ptr) Variable Input
-              59:    6(float) Constant 1112014848
-              60:    6(float) Constant 1121714176
-              61:    6(float) Constant 1126825984
-              62:    6(float) Constant 1130758144
-              63:   26(fvec4) ConstantComposite 59 60 61 62
-              65:    6(float) Constant 1106247680
-              66:    6(float) Constant 1114636288
-              67:   26(fvec4) ConstantComposite 65 66 35 35
-              69:    6(float) Constant 1101004800
-              70:    6(float) Constant 1092616192
-              71:    6(float) Constant 1084227584
-              72:   26(fvec4) ConstantComposite 69 70 42 71
-              74:    7(fvec2) ConstantComposite 70 69
-              75:             TypeMatrix 26(fvec4) 2
-              76:   26(fvec4) ConstantComposite 41 35 35 35
-              77:   26(fvec4) ConstantComposite 35 41 35 35
-              78:          75 ConstantComposite 76 77
-              79:             TypeMatrix 7(fvec2) 4
-              80:    6(float) Constant 1065353216
-              81:    6(float) Constant 1073741824
-              82:    7(fvec2) ConstantComposite 80 81
-              83:    6(float) Constant 1082130432
-              84:    7(fvec2) ConstantComposite 41 83
-              85:    7(fvec2) ConstantComposite 71 42
-              86:    6(float) Constant 1088421888
-              87:    6(float) Constant 1090519040
-              88:    7(fvec2) ConstantComposite 86 87
-              89:          79 ConstantComposite 82 84 85 88
-         4(main):           2 Function None 3
-               5:             Label
-            9(a):      8(ptr) Variable Function
-         16(m23):     15(ptr) Variable Function
-           19(b):      8(ptr) Variable Function
-              13:   10(fvec3) Load 12(v3)
-              17:          14 Load 16(m23)
-              18:    7(fvec2) VectorTimesMatrix 13 17
-                              Store 9(a) 18
-              23:          20 Load 22(m32)
-              24:   10(fvec3) Load 12(v3)
-              25:    7(fvec2) MatrixTimesVector 23 24
-                              Store 19(b) 25
-              29:          14 Load 16(m23)
-              30:          20 Load 22(m32)
-              32:          31 MatrixTimesMatrix 29 30
-              33:   10(fvec3) Load 12(v3)
-              34:   10(fvec3) MatrixTimesVector 32 33
-              36:    6(float) CompositeExtract 34 0
-              37:    6(float) CompositeExtract 34 1
-              38:    6(float) CompositeExtract 34 2
-              39:   26(fvec4) CompositeConstruct 36 37 38 35
-              56:   26(fvec4) Load 55(v4)
-              57:   26(fvec4) MatrixTimesVector 53 56
-              58:   26(fvec4) FAdd 39 57
-              64:   26(fvec4) FAdd 58 63
-              68:   26(fvec4) FAdd 64 67
-              73:   26(fvec4) FAdd 68 72
-                              Store 28(gl_Position) 73
+                              Name 54_1  "main"
+                              Name 59_5  "a"
+                              Name 59_1  "v3"
+                              Name 59_6  "m23"
+                              Name 59_7  "b"
+                              Name 59_2  "m32"
+                              Name 59_3  "gl_Position"
+                              Name 59_4  "v4"
+                              Decorate 59_1(v3) Location 0
+                              Decorate 59_2(m32) Location 0
+                              Decorate 59_3(gl_Position) BuiltIn Position
+                              Decorate 59_4(v4) Location 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            32_1:             TypePointer Function 23_1(fvec2)
+            23_2:             TypeVector 22_1(float) 3
+            32_2:             TypePointer Input 23_2(fvec3)
+        59_1(v3):   32_2(ptr) Variable Input
+            24_1:             TypeMatrix 23_2(fvec3) 2
+            32_3:             TypePointer Function 24_1
+            24_2:             TypeMatrix 23_1(fvec2) 3
+            32_4:             TypePointer Output 24_2
+       59_2(m32):   32_4(ptr) Variable Output
+            23_3:             TypeVector 22_1(float) 4
+            32_5:             TypePointer Output 23_3(fvec4)
+59_3(gl_Position):   32_5(ptr) Variable Output
+            24_3:             TypeMatrix 23_2(fvec3) 3
+            43_1: 22_1(float) Constant 0
+            24_4:             TypeMatrix 23_3(fvec4) 4
+            43_2: 22_1(float) Constant 1077936128
+            43_3: 22_1(float) Constant 1086324736
+            44_1: 23_3(fvec4) ConstantComposite 43_2 43_3 43_1 43_1
+            43_4: 22_1(float) Constant 1091567616
+            43_5: 22_1(float) Constant 1094713344
+            44_2: 23_3(fvec4) ConstantComposite 43_4 43_5 43_1 43_1
+            43_6: 22_1(float) Constant 1097859072
+            43_7: 22_1(float) Constant 1099956224
+            44_3: 23_3(fvec4) ConstantComposite 43_6 43_7 43_1 43_1
+            43_8: 22_1(float) Constant 1101529088
+            43_9: 22_1(float) Constant 1103101952
+            44_4: 23_3(fvec4) ConstantComposite 43_8 43_9 43_1 43_1
+            44_5:        24_4 ConstantComposite 44_1 44_2 44_3 44_4
+            32_6:             TypePointer Input 23_3(fvec4)
+        59_4(v4):   32_6(ptr) Variable Input
+           43_10: 22_1(float) Constant 1112014848
+           43_11: 22_1(float) Constant 1121714176
+           43_12: 22_1(float) Constant 1126825984
+           43_13: 22_1(float) Constant 1130758144
+            44_6: 23_3(fvec4) ConstantComposite 43_10 43_11 43_12 43_13
+           43_14: 22_1(float) Constant 1106247680
+           43_15: 22_1(float) Constant 1114636288
+            44_7: 23_3(fvec4) ConstantComposite 43_14 43_15 43_1 43_1
+           43_16: 22_1(float) Constant 1101004800
+           43_17: 22_1(float) Constant 1092616192
+           43_18: 22_1(float) Constant 1084227584
+            44_8: 23_3(fvec4) ConstantComposite 43_16 43_17 43_3 43_18
+            44_9: 23_1(fvec2) ConstantComposite 43_17 43_16
+            24_5:             TypeMatrix 23_3(fvec4) 2
+           44_10: 23_3(fvec4) ConstantComposite 43_2 43_1 43_1 43_1
+           44_11: 23_3(fvec4) ConstantComposite 43_1 43_2 43_1 43_1
+           44_12:        24_5 ConstantComposite 44_10 44_11
+            24_6:             TypeMatrix 23_1(fvec2) 4
+           43_19: 22_1(float) Constant 1065353216
+           43_20: 22_1(float) Constant 1073741824
+           44_13: 23_1(fvec2) ConstantComposite 43_19 43_20
+           43_21: 22_1(float) Constant 1082130432
+           44_14: 23_1(fvec2) ConstantComposite 43_2 43_21
+           44_15: 23_1(fvec2) ConstantComposite 43_18 43_3
+           43_22: 22_1(float) Constant 1088421888
+           43_23: 22_1(float) Constant 1090519040
+           44_16: 23_1(fvec2) ConstantComposite 43_22 43_23
+           44_17:        24_6 ConstantComposite 44_13 44_14 44_15 44_16
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_5(a):   32_1(ptr) Variable Function
+       59_6(m23):   32_3(ptr) Variable Function
+         59_7(b):   32_1(ptr) Variable Function
+            61_1: 23_2(fvec3) Load 59_1(v3)
+            61_2:        24_1 Load 59_6(m23)
+           144_1: 23_1(fvec2) VectorTimesMatrix 61_1 61_2
+                              Store 59_5(a) 144_1
+            61_3:        24_2 Load 59_2(m32)
+            61_4: 23_2(fvec3) Load 59_1(v3)
+           145_1: 23_1(fvec2) MatrixTimesVector 61_3 61_4
+                              Store 59_7(b) 145_1
+            61_5:        24_1 Load 59_6(m23)
+            61_6:        24_2 Load 59_2(m32)
+           146_1:        24_3 MatrixTimesMatrix 61_5 61_6
+            61_7: 23_2(fvec3) Load 59_1(v3)
+           145_2: 23_2(fvec3) MatrixTimesVector 146_1 61_7
+            81_1: 22_1(float) CompositeExtract 145_2 0
+            81_2: 22_1(float) CompositeExtract 145_2 1
+            81_3: 22_1(float) CompositeExtract 145_2 2
+            80_1: 23_3(fvec4) CompositeConstruct 81_1 81_2 81_3 43_1
+            61_8: 23_3(fvec4) Load 59_4(v4)
+           145_3: 23_3(fvec4) MatrixTimesVector 44_5 61_8
+           129_1: 23_3(fvec4) FAdd 80_1 145_3
+           129_2: 23_3(fvec4) FAdd 129_1 44_6
+           129_3: 23_3(fvec4) FAdd 129_2 44_7
+           129_4: 23_3(fvec4) FAdd 129_3 44_8
+                              Store 59_3(gl_Position) 129_4
                               Return
                               FunctionEnd

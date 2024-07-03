@@ -241,140 +241,140 @@ Shader version: 500
 // Id's are bound by 93
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 86 89
+                              EntryPoint Vertex 54_1  "main" 59_2 59_3
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 11  "@main(vf4;"
-                              Name 10  "pos"
-                              Name 22  "Packed"
-                              MemberName 22(Packed) 0  "tex"
-                              MemberName 22(Packed) 1  "pos"
-                              MemberName 22(Packed) 2  "uv"
-                              MemberName 22(Packed) 3  "x"
-                              MemberName 22(Packed) 4  "n"
-                              Name 24  "packed"
-                              Name 27  "tex"
-                              Name 47  "i"
-                              Name 72  "packed2"
-                              Name 84  "pos"
-                              Name 86  "pos"
-                              Name 89  "@entryPointOutput"
-                              Name 90  "param"
-                              Decorate 27(tex) Binding 0
-                              Decorate 27(tex) DescriptorSet 0
-                              Decorate 86(pos) Location 0
-                              Decorate 89(@entryPointOutput) BuiltIn Position
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeFunction 7(fvec4) 8(ptr)
-              13:             TypeImage 6(float) 2D sampled format:Unknown
-              14:             TypeVector 6(float) 3
-              15:             TypeInt 32 0
-              16:     15(int) Constant 3
-              17:             TypeArray 14(fvec3) 16
-              18:             TypeVector 6(float) 2
-              19:     15(int) Constant 2
-              20:             TypeArray 18(fvec2) 19
-              21:             TypeInt 32 1
-      22(Packed):             TypeStruct 13 17 20 6(float) 21(int)
-              23:             TypePointer Function 22(Packed)
-              25:     21(int) Constant 0
-              26:             TypePointer UniformConstant 13
-         27(tex):     26(ptr) Variable UniformConstant
-              29:             TypePointer Function 13
-              31:     21(int) Constant 1
-              32:    6(float) Constant 0
-              33:   14(fvec3) ConstantComposite 32 32 32
-              34:             TypePointer Function 14(fvec3)
-              36:     21(int) Constant 2
-              37:    6(float) Constant 1065353216
-              38:   18(fvec2) ConstantComposite 32 37
-              39:             TypePointer Function 18(fvec2)
-              41:     21(int) Constant 3
-              42:             TypePointer Function 6(float)
-              44:     21(int) Constant 4
-              45:             TypePointer Function 21(int)
-              54:             TypeBool
-              64:     15(int) Constant 0
-              67:     15(int) Constant 1
-              85:             TypePointer Input 7(fvec4)
-         86(pos):     85(ptr) Variable Input
-              88:             TypePointer Output 7(fvec4)
-89(@entryPointOutput):     88(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-         84(pos):      8(ptr) Variable Function
-       90(param):      8(ptr) Variable Function
-              87:    7(fvec4) Load 86(pos)
-                              Store 84(pos) 87
-              91:    7(fvec4) Load 84(pos)
-                              Store 90(param) 91
-              92:    7(fvec4) FunctionCall 11(@main(vf4;) 90(param)
-                              Store 89(@entryPointOutput) 92
+                              Name 54_1  "main"
+                              Name 54_2  "@main(vf4;"
+                              Name 55_1  "pos"
+                              Name 30_1  "Packed"
+                              MemberName 30_1(Packed) 0  "tex"
+                              MemberName 30_1(Packed) 1  "pos"
+                              MemberName 30_1(Packed) 2  "uv"
+                              MemberName 30_1(Packed) 3  "x"
+                              MemberName 30_1(Packed) 4  "n"
+                              Name 59_6  "packed"
+                              Name 59_1  "tex"
+                              Name 59_7  "i"
+                              Name 59_8  "packed2"
+                              Name 59_4  "pos"
+                              Name 59_2  "pos"
+                              Name 59_3  "@entryPointOutput"
+                              Name 59_5  "param"
+                              Decorate 59_1(tex) Binding 0
+                              Decorate 59_1(tex) DescriptorSet 0
+                              Decorate 59_2(pos) Location 0
+                              Decorate 59_3(@entryPointOutput) BuiltIn Position
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            23_2:             TypeVector 22_1(float) 3
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 23_2(fvec3) uint(3)
+            23_3:             TypeVector 22_1(float) 2
+         uint(2):   21_1(int) Constant 2
+            28_2:             TypeArray 23_3(fvec2) uint(2)
+            21_2:             TypeInt 32 1
+    30_1(Packed):             TypeStruct 25_1 28_1 28_2 22_1(float) 21_2(int)
+            32_2:             TypePointer Function 30_1(Packed)
+            43_1:   21_2(int) Constant 0
+            32_3:             TypePointer UniformConstant 25_1
+       59_1(tex):   32_3(ptr) Variable UniformConstant
+            32_4:             TypePointer Function 25_1
+            43_2:   21_2(int) Constant 1
+            43_3: 22_1(float) Constant 0
+            44_1: 23_2(fvec3) ConstantComposite 43_3 43_3 43_3
+            32_5:             TypePointer Function 23_2(fvec3)
+            43_4:   21_2(int) Constant 2
+            43_5: 22_1(float) Constant 1065353216
+            44_2: 23_3(fvec2) ConstantComposite 43_3 43_5
+            32_6:             TypePointer Function 23_3(fvec2)
+            43_6:   21_2(int) Constant 3
+            32_7:             TypePointer Function 22_1(float)
+            43_7:   21_2(int) Constant 4
+            32_8:             TypePointer Function 21_2(int)
+            20_1:             TypeBool
+         uint(0):   21_1(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+            32_9:             TypePointer Input 23_1(fvec4)
+       59_2(pos):   32_9(ptr) Variable Input
+           32_10:             TypePointer Output 23_1(fvec4)
+59_3(@entryPointOutput):  32_10(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_4(pos):   32_1(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_2(pos)
+                              Store 59_4(pos) 61_1
+            61_2: 23_1(fvec4) Load 59_4(pos)
+                              Store 59_5(param) 61_2
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main(vf4;) 59_5(param)
+                              Store 59_3(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-  11(@main(vf4;):    7(fvec4) Function None 9
-         10(pos):      8(ptr) FunctionParameter
-              12:             Label
-      24(packed):     23(ptr) Variable Function
-           47(i):     45(ptr) Variable Function
-     72(packed2):     23(ptr) Variable Function
-              28:          13 Load 27(tex)
-              30:     29(ptr) AccessChain 24(packed) 25
-                              Store 30 28
-              35:     34(ptr) AccessChain 24(packed) 31 25
-                              Store 35 33
-              40:     39(ptr) AccessChain 24(packed) 36 25
-                              Store 40 38
-              43:     42(ptr) AccessChain 24(packed) 41
-                              Store 43 37
-              46:     45(ptr) AccessChain 24(packed) 44
-                              Store 46 41
-                              Store 47(i) 25
-                              Branch 48
-              48:             Label
-                              LoopMerge 50 51 None
-                              Branch 52
-              52:             Label
-              53:     21(int) Load 47(i)
-              55:    54(bool) SLessThan 53 31
-                              BranchConditional 55 49 50
-              49:               Label
-              56:     21(int)   Load 47(i)
-              57:     21(int)   Load 47(i)
-              58:     39(ptr)   AccessChain 24(packed) 36 57
-              59:   18(fvec2)   Load 58
-              60:     34(ptr)   AccessChain 24(packed) 31 56
-              61:   14(fvec3)   Load 60
-              62:   18(fvec2)   VectorShuffle 61 61 0 1
-              63:   18(fvec2)   FAdd 62 59
-              65:     42(ptr)   AccessChain 24(packed) 31 56 64
-              66:    6(float)   CompositeExtract 63 0
-                                Store 65 66
-              68:     42(ptr)   AccessChain 24(packed) 31 56 67
-              69:    6(float)   CompositeExtract 63 1
-                                Store 68 69
-                                Branch 51
-              51:               Label
-              70:     21(int)   Load 47(i)
-              71:     21(int)   IAdd 70 31
-                                Store 47(i) 71
-                                Branch 48
-              50:             Label
-              73:  22(Packed) Load 24(packed)
-                              Store 72(packed2) 73
-              74:    7(fvec4) Load 10(pos)
-              75:     34(ptr) AccessChain 72(packed2) 31 25
-              76:   14(fvec3) Load 75
-              77:    6(float) CompositeExtract 76 0
-              78:    6(float) CompositeExtract 76 1
-              79:    6(float) CompositeExtract 76 2
-              80:    7(fvec4) CompositeConstruct 77 78 79 32
-              81:    7(fvec4) FAdd 74 80
-                              ReturnValue 81
+54_2(@main(vf4;): 23_1(fvec4) Function None 33_2
+       55_1(pos):   32_1(ptr) FunctionParameter
+           248_2:             Label
+    59_6(packed):   32_2(ptr) Variable Function
+         59_7(i):   32_8(ptr) Variable Function
+   59_8(packed2):   32_2(ptr) Variable Function
+            61_3:        25_1 Load 59_1(tex)
+            65_1:   32_4(ptr) AccessChain 59_6(packed) 43_1
+                              Store 65_1 61_3
+            65_2:   32_5(ptr) AccessChain 59_6(packed) 43_2 43_1
+                              Store 65_2 44_1
+            65_3:   32_6(ptr) AccessChain 59_6(packed) 43_4 43_1
+                              Store 65_3 44_2
+            65_4:   32_7(ptr) AccessChain 59_6(packed) 43_6
+                              Store 65_4 43_5
+            65_5:   32_8(ptr) AccessChain 59_6(packed) 43_7
+                              Store 65_5 43_6
+                              Store 59_7(i) 43_1
+                              Branch 248_3
+           248_3:             Label
+                              LoopMerge 248_7 248_6 None
+                              Branch 248_4
+           248_4:             Label
+            61_4:   21_2(int) Load 59_7(i)
+           177_1:  20_1(bool) SLessThan 61_4 43_2
+                              BranchConditional 177_1 248_5 248_7
+           248_5:               Label
+            61_5:   21_2(int)   Load 59_7(i)
+            61_6:   21_2(int)   Load 59_7(i)
+            65_6:   32_6(ptr)   AccessChain 59_6(packed) 43_4 61_6
+            61_7: 23_3(fvec2)   Load 65_6
+            65_7:   32_5(ptr)   AccessChain 59_6(packed) 43_2 61_5
+            61_8: 23_2(fvec3)   Load 65_7
+            79_1: 23_3(fvec2)   VectorShuffle 61_8 61_8 0 1
+           129_1: 23_3(fvec2)   FAdd 79_1 61_7
+            65_8:   32_7(ptr)   AccessChain 59_6(packed) 43_2 61_5 uint(0)
+            81_1: 22_1(float)   CompositeExtract 129_1 0
+                                Store 65_8 81_1
+            65_9:   32_7(ptr)   AccessChain 59_6(packed) 43_2 61_5 uint(1)
+            81_2: 22_1(float)   CompositeExtract 129_1 1
+                                Store 65_9 81_2
+                                Branch 248_6
+           248_6:               Label
+            61_9:   21_2(int)   Load 59_7(i)
+           128_1:   21_2(int)   IAdd 61_9 43_2
+                                Store 59_7(i) 128_1
+                                Branch 248_3
+           248_7:             Label
+           61_10:30_1(Packed) Load 59_6(packed)
+                              Store 59_8(packed2) 61_10
+           61_11: 23_1(fvec4) Load 55_1(pos)
+           65_10:   32_5(ptr) AccessChain 59_8(packed2) 43_2 43_1
+           61_12: 23_2(fvec3) Load 65_10
+            81_3: 22_1(float) CompositeExtract 61_12 0
+            81_4: 22_1(float) CompositeExtract 61_12 1
+            81_5: 22_1(float) CompositeExtract 61_12 2
+            80_1: 23_1(fvec4) CompositeConstruct 81_3 81_4 81_5 43_3
+           129_2: 23_1(fvec4) FAdd 61_11 80_1
+                              ReturnValue 129_2
                               FunctionEnd

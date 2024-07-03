@@ -296,124 +296,124 @@ gl_FragCoord origin is upper left
                               Capability Shader
                               Capability ClipDistance
                               Capability CullDistance
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 37 43 62 76
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 18  "@main(vf4;vf2[2];vf2[2];"
-                              Name 15  "pos"
-                              Name 16  "clip"
-                              Name 17  "cull"
-                              Name 35  "pos"
-                              Name 37  "pos"
-                              Name 39  "clip"
-                              Name 43  "clip"
-                              Name 61  "cull"
-                              Name 62  "cull"
-                              Name 76  "@entryPointOutput"
-                              Name 77  "param"
-                              Name 79  "param"
-                              Name 81  "param"
-                              Decorate 37(pos) BuiltIn FragCoord
-                              Decorate 43(clip) BuiltIn ClipDistance
-                              Decorate 62(cull) BuiltIn CullDistance
-                              Decorate 76(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeVector 6(float) 2
-              10:             TypeInt 32 0
-              11:     10(int) Constant 2
-              12:             TypeArray 9(fvec2) 11
-              13:             TypePointer Function 12
-              14:             TypeFunction 7(fvec4) 8(ptr) 13(ptr) 13(ptr)
-              21:             TypeInt 32 1
-              22:     21(int) Constant 0
-              23:     10(int) Constant 0
-              24:             TypePointer Function 6(float)
-              36:             TypePointer Input 7(fvec4)
-         37(pos):     36(ptr) Variable Input
-              40:     10(int) Constant 4
-              41:             TypeArray 6(float) 40
-              42:             TypePointer Input 41
-        43(clip):     42(ptr) Variable Input
-              44:             TypePointer Input 6(float)
-              48:     21(int) Constant 1
-              51:     10(int) Constant 1
-              53:     21(int) Constant 2
-              57:     21(int) Constant 3
-        62(cull):     42(ptr) Variable Input
-              75:             TypePointer Output 7(fvec4)
-76(@entryPointOutput):     75(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-         35(pos):      8(ptr) Variable Function
-        39(clip):     13(ptr) Variable Function
-        61(cull):     13(ptr) Variable Function
-       77(param):      8(ptr) Variable Function
-       79(param):     13(ptr) Variable Function
-       81(param):     13(ptr) Variable Function
-              38:    7(fvec4) Load 37(pos)
-                              Store 35(pos) 38
-              45:     44(ptr) AccessChain 43(clip) 22
-              46:    6(float) Load 45
-              47:     24(ptr) AccessChain 39(clip) 22 23
-                              Store 47 46
-              49:     44(ptr) AccessChain 43(clip) 48
-              50:    6(float) Load 49
-              52:     24(ptr) AccessChain 39(clip) 22 51
-                              Store 52 50
-              54:     44(ptr) AccessChain 43(clip) 53
-              55:    6(float) Load 54
-              56:     24(ptr) AccessChain 39(clip) 48 23
-                              Store 56 55
-              58:     44(ptr) AccessChain 43(clip) 57
-              59:    6(float) Load 58
-              60:     24(ptr) AccessChain 39(clip) 48 51
-                              Store 60 59
-              63:     44(ptr) AccessChain 62(cull) 22
-              64:    6(float) Load 63
-              65:     24(ptr) AccessChain 61(cull) 22 23
-                              Store 65 64
-              66:     44(ptr) AccessChain 62(cull) 48
-              67:    6(float) Load 66
-              68:     24(ptr) AccessChain 61(cull) 22 51
-                              Store 68 67
-              69:     44(ptr) AccessChain 62(cull) 53
-              70:    6(float) Load 69
-              71:     24(ptr) AccessChain 61(cull) 48 23
-                              Store 71 70
-              72:     44(ptr) AccessChain 62(cull) 57
-              73:    6(float) Load 72
-              74:     24(ptr) AccessChain 61(cull) 48 51
-                              Store 74 73
-              78:    7(fvec4) Load 35(pos)
-                              Store 77(param) 78
-              80:          12 Load 39(clip)
-                              Store 79(param) 80
-              82:          12 Load 61(cull)
-                              Store 81(param) 82
-              83:    7(fvec4) FunctionCall 18(@main(vf4;vf2[2];vf2[2];) 77(param) 79(param) 81(param)
-                              Store 76(@entryPointOutput) 83
+                              Name 54_1  "main"
+                              Name 54_2  "@main(vf4;vf2[2];vf2[2];"
+                              Name 55_1  "pos"
+                              Name 55_2  "clip"
+                              Name 55_3  "cull"
+                              Name 59_5  "pos"
+                              Name 59_1  "pos"
+                              Name 59_6  "clip"
+                              Name 59_2  "clip"
+                              Name 59_7  "cull"
+                              Name 59_3  "cull"
+                              Name 59_4  "@entryPointOutput"
+                              Name 59_8  "param"
+                              Name 59_9  "param"
+                              Name 59_10  "param"
+                              Decorate 59_1(pos) BuiltIn FragCoord
+                              Decorate 59_2(clip) BuiltIn ClipDistance
+                              Decorate 59_3(cull) BuiltIn CullDistance
+                              Decorate 59_4(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            23_2:             TypeVector 22_1(float) 2
+            21_1:             TypeInt 32 0
+         uint(2):   21_1(int) Constant 2
+            28_1:             TypeArray 23_2(fvec2) uint(2)
+            32_2:             TypePointer Function 28_1
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr) 32_2(ptr) 32_2(ptr)
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Function 22_1(float)
+            32_4:             TypePointer Input 23_1(fvec4)
+       59_1(pos):   32_4(ptr) Variable Input
+         uint(4):   21_1(int) Constant 4
+            28_2:             TypeArray 22_1(float) uint(4)
+            32_5:             TypePointer Input 28_2
+      59_2(clip):   32_5(ptr) Variable Input
+            32_6:             TypePointer Input 22_1(float)
+            43_2:   21_2(int) Constant 1
+         uint(1):   21_1(int) Constant 1
+            43_3:   21_2(int) Constant 2
+            43_4:   21_2(int) Constant 3
+      59_3(cull):   32_5(ptr) Variable Input
+            32_7:             TypePointer Output 23_1(fvec4)
+59_4(@entryPointOutput):   32_7(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_5(pos):   32_1(ptr) Variable Function
+      59_6(clip):   32_2(ptr) Variable Function
+      59_7(cull):   32_2(ptr) Variable Function
+     59_8(param):   32_1(ptr) Variable Function
+     59_9(param):   32_2(ptr) Variable Function
+    59_10(param):   32_2(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(pos)
+                              Store 59_5(pos) 61_1
+            65_1:   32_6(ptr) AccessChain 59_2(clip) 43_1
+            61_2: 22_1(float) Load 65_1
+            65_2:   32_3(ptr) AccessChain 59_6(clip) 43_1 uint(0)
+                              Store 65_2 61_2
+            65_3:   32_6(ptr) AccessChain 59_2(clip) 43_2
+            61_3: 22_1(float) Load 65_3
+            65_4:   32_3(ptr) AccessChain 59_6(clip) 43_1 uint(1)
+                              Store 65_4 61_3
+            65_5:   32_6(ptr) AccessChain 59_2(clip) 43_3
+            61_4: 22_1(float) Load 65_5
+            65_6:   32_3(ptr) AccessChain 59_6(clip) 43_2 uint(0)
+                              Store 65_6 61_4
+            65_7:   32_6(ptr) AccessChain 59_2(clip) 43_4
+            61_5: 22_1(float) Load 65_7
+            65_8:   32_3(ptr) AccessChain 59_6(clip) 43_2 uint(1)
+                              Store 65_8 61_5
+            65_9:   32_6(ptr) AccessChain 59_3(cull) 43_1
+            61_6: 22_1(float) Load 65_9
+           65_10:   32_3(ptr) AccessChain 59_7(cull) 43_1 uint(0)
+                              Store 65_10 61_6
+           65_11:   32_6(ptr) AccessChain 59_3(cull) 43_2
+            61_7: 22_1(float) Load 65_11
+           65_12:   32_3(ptr) AccessChain 59_7(cull) 43_1 uint(1)
+                              Store 65_12 61_7
+           65_13:   32_6(ptr) AccessChain 59_3(cull) 43_3
+            61_8: 22_1(float) Load 65_13
+           65_14:   32_3(ptr) AccessChain 59_7(cull) 43_2 uint(0)
+                              Store 65_14 61_8
+           65_15:   32_6(ptr) AccessChain 59_3(cull) 43_4
+            61_9: 22_1(float) Load 65_15
+           65_16:   32_3(ptr) AccessChain 59_7(cull) 43_2 uint(1)
+                              Store 65_16 61_9
+           61_10: 23_1(fvec4) Load 59_5(pos)
+                              Store 59_8(param) 61_10
+           61_11:        28_1 Load 59_6(clip)
+                              Store 59_9(param) 61_11
+           61_12:        28_1 Load 59_7(cull)
+                              Store 59_10(param) 61_12
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main(vf4;vf2[2];vf2[2];) 59_8(param) 59_9(param) 59_10(param)
+                              Store 59_4(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-18(@main(vf4;vf2[2];vf2[2];):    7(fvec4) Function None 14
-         15(pos):      8(ptr) FunctionParameter
-        16(clip):     13(ptr) FunctionParameter
-        17(cull):     13(ptr) FunctionParameter
-              19:             Label
-              20:    7(fvec4) Load 15(pos)
-              25:     24(ptr) AccessChain 16(clip) 22 23
-              26:    6(float) Load 25
-              27:    7(fvec4) CompositeConstruct 26 26 26 26
-              28:    7(fvec4) FAdd 20 27
-              29:     24(ptr) AccessChain 17(cull) 22 23
-              30:    6(float) Load 29
-              31:    7(fvec4) CompositeConstruct 30 30 30 30
-              32:    7(fvec4) FAdd 28 31
-                              ReturnValue 32
+54_2(@main(vf4;vf2[2];vf2[2];): 23_1(fvec4) Function None 33_2
+       55_1(pos):   32_1(ptr) FunctionParameter
+      55_2(clip):   32_2(ptr) FunctionParameter
+      55_3(cull):   32_2(ptr) FunctionParameter
+           248_2:             Label
+           61_13: 23_1(fvec4) Load 55_1(pos)
+           65_17:   32_3(ptr) AccessChain 55_2(clip) 43_1 uint(0)
+           61_14: 22_1(float) Load 65_17
+            80_1: 23_1(fvec4) CompositeConstruct 61_14 61_14 61_14 61_14
+           129_1: 23_1(fvec4) FAdd 61_13 80_1
+           65_18:   32_3(ptr) AccessChain 55_3(cull) 43_1 uint(0)
+           61_15: 22_1(float) Load 65_18
+            80_2: 23_1(fvec4) CompositeConstruct 61_15 61_15 61_15 61_15
+           129_2: 23_1(fvec4) FAdd 129_1 80_2
+                              ReturnValue 129_2
                               FunctionEnd

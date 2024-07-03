@@ -286,148 +286,148 @@ output primitive = triangle_strip
 // Id's are bound by 86
 
                               Capability Geometry
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Geometry 4  "GeometryShader" 39 43 52 57 76
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 Invocations 5
-                              ExecutionMode 4 OutputTriangleStrip
-                              ExecutionMode 4 OutputVertices 3
+                              EntryPoint Geometry 54_1  "GeometryShader" 59_1 59_2 59_3 59_4 59_5
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 Invocations 5
+                              ExecutionMode 54_1 OutputTriangleStrip
+                              ExecutionMode 54_1 OutputVertices 3
                               Source HLSL 500
-                              Name 4  "GeometryShader"
-                              Name 8  "VertexShaderOutput"
-                              MemberName 8(VertexShaderOutput) 0  "m_position"
-                              MemberName 8(VertexShaderOutput) 1  "m_color"
-                              Name 19  "@GeometryShader(struct-VertexShaderOutput-vf4-vf41[3];struct-VertexShaderOutput-vf4-vf41;u1;"
-                              Name 16  "input"
-                              Name 17  "output"
-                              Name 18  "id"
-                              Name 23  "i"
-                              Name 34  "flattenTemp"
-                              Name 39  "output.m_position"
-                              Name 43  "output.m_color"
-                              Name 49  "input"
-                              Name 52  "input.m_position"
-                              Name 57  "input.m_color"
-                              Name 74  "id"
-                              Name 76  "id"
-                              Name 78  "output"
-                              Name 79  "param"
-                              Name 81  "param"
-                              Name 82  "param"
-                              Decorate 39(output.m_position) BuiltIn Position
-                              Decorate 43(output.m_color) Location 0
-                              Decorate 52(input.m_position) BuiltIn Position
-                              Decorate 57(input.m_color) Location 0
-                              Decorate 76(id) BuiltIn InvocationId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-8(VertexShaderOutput):             TypeStruct 7(fvec4) 7(fvec4)
-               9:             TypeInt 32 0
-              10:      9(int) Constant 3
-              11:             TypeArray 8(VertexShaderOutput) 10
-              12:             TypePointer Function 11
-              13:             TypePointer Function 8(VertexShaderOutput)
-              14:             TypePointer Function 9(int)
-              15:             TypeFunction 2 12(ptr) 13(ptr) 14(ptr)
-              21:             TypeInt 32 1
-              22:             TypePointer Function 21(int)
-              24:     21(int) Constant 0
-              31:     21(int) Constant 3
-              32:             TypeBool
-              38:             TypePointer Output 7(fvec4)
-39(output.m_position):     38(ptr) Variable Output
-              40:             TypePointer Function 7(fvec4)
-43(output.m_color):     38(ptr) Variable Output
-              44:     21(int) Constant 1
-              50:             TypeArray 7(fvec4) 10
-              51:             TypePointer Input 50
-52(input.m_position):     51(ptr) Variable Input
-              53:             TypePointer Input 7(fvec4)
-57(input.m_color):     51(ptr) Variable Input
-              67:     21(int) Constant 2
-              75:             TypePointer Input 9(int)
-          76(id):     75(ptr) Variable Input
-4(GeometryShader):           2 Function None 3
-               5:             Label
-       49(input):     12(ptr) Variable Function
-          74(id):     14(ptr) Variable Function
-      78(output):     13(ptr) Variable Function
-       79(param):     12(ptr) Variable Function
-       81(param):     13(ptr) Variable Function
-       82(param):     14(ptr) Variable Function
-              54:     53(ptr) AccessChain 52(input.m_position) 24
-              55:    7(fvec4) Load 54
-              56:     40(ptr) AccessChain 49(input) 24 24
-                              Store 56 55
-              58:     53(ptr) AccessChain 57(input.m_color) 24
-              59:    7(fvec4) Load 58
-              60:     40(ptr) AccessChain 49(input) 24 44
-                              Store 60 59
-              61:     53(ptr) AccessChain 52(input.m_position) 44
-              62:    7(fvec4) Load 61
-              63:     40(ptr) AccessChain 49(input) 44 24
-                              Store 63 62
-              64:     53(ptr) AccessChain 57(input.m_color) 44
-              65:    7(fvec4) Load 64
-              66:     40(ptr) AccessChain 49(input) 44 44
-                              Store 66 65
-              68:     53(ptr) AccessChain 52(input.m_position) 67
-              69:    7(fvec4) Load 68
-              70:     40(ptr) AccessChain 49(input) 67 24
-                              Store 70 69
-              71:     53(ptr) AccessChain 57(input.m_color) 67
-              72:    7(fvec4) Load 71
-              73:     40(ptr) AccessChain 49(input) 67 44
-                              Store 73 72
-              77:      9(int) Load 76(id)
-                              Store 74(id) 77
-              80:          11 Load 49(input)
-                              Store 79(param) 80
-              83:      9(int) Load 74(id)
-                              Store 82(param) 83
-              84:           2 FunctionCall 19(@GeometryShader(struct-VertexShaderOutput-vf4-vf41[3];struct-VertexShaderOutput-vf4-vf41;u1;) 79(param) 81(param) 82(param)
-              85:8(VertexShaderOutput) Load 81(param)
-                              Store 78(output) 85
+                              Name 54_1  "GeometryShader"
+                              Name 30_1  "VertexShaderOutput"
+                              MemberName 30_1(VertexShaderOutput) 0  "m_position"
+                              MemberName 30_1(VertexShaderOutput) 1  "m_color"
+                              Name 54_2  "@GeometryShader(struct-VertexShaderOutput-vf4-vf41[3];struct-VertexShaderOutput-vf4-vf41;u1;"
+                              Name 55_1  "input"
+                              Name 55_2  "output"
+                              Name 55_3  "id"
+                              Name 59_12  "i"
+                              Name 59_13  "flattenTemp"
+                              Name 59_1  "output.m_position"
+                              Name 59_2  "output.m_color"
+                              Name 59_6  "input"
+                              Name 59_3  "input.m_position"
+                              Name 59_4  "input.m_color"
+                              Name 59_7  "id"
+                              Name 59_5  "id"
+                              Name 59_8  "output"
+                              Name 59_9  "param"
+                              Name 59_10  "param"
+                              Name 59_11  "param"
+                              Decorate 59_1(output.m_position) BuiltIn Position
+                              Decorate 59_2(output.m_color) Location 0
+                              Decorate 59_3(input.m_position) BuiltIn Position
+                              Decorate 59_4(input.m_color) Location 0
+                              Decorate 59_5(id) BuiltIn InvocationId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+30_1(VertexShaderOutput):             TypeStruct 23_1(fvec4) 23_1(fvec4)
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 30_1(VertexShaderOutput) uint(3)
+            32_1:             TypePointer Function 28_1
+            32_2:             TypePointer Function 30_1(VertexShaderOutput)
+            32_3:             TypePointer Function 21_1(int)
+            33_2:             TypeFunction 19_1 32_1(ptr) 32_2(ptr) 32_3(ptr)
+            21_2:             TypeInt 32 1
+            32_4:             TypePointer Function 21_2(int)
+            43_1:   21_2(int) Constant 0
+            43_2:   21_2(int) Constant 3
+            20_1:             TypeBool
+            32_5:             TypePointer Output 23_1(fvec4)
+59_1(output.m_position):   32_5(ptr) Variable Output
+            32_6:             TypePointer Function 23_1(fvec4)
+59_2(output.m_color):   32_5(ptr) Variable Output
+            43_3:   21_2(int) Constant 1
+            28_2:             TypeArray 23_1(fvec4) uint(3)
+            32_7:             TypePointer Input 28_2
+59_3(input.m_position):   32_7(ptr) Variable Input
+            32_8:             TypePointer Input 23_1(fvec4)
+59_4(input.m_color):   32_7(ptr) Variable Input
+            43_4:   21_2(int) Constant 2
+            32_9:             TypePointer Input 21_1(int)
+        59_5(id):   32_9(ptr) Variable Input
+54_1(GeometryShader):        19_1 Function None 33_1
+           248_1:             Label
+     59_6(input):   32_1(ptr) Variable Function
+        59_7(id):   32_3(ptr) Variable Function
+    59_8(output):   32_2(ptr) Variable Function
+     59_9(param):   32_1(ptr) Variable Function
+    59_10(param):   32_2(ptr) Variable Function
+    59_11(param):   32_3(ptr) Variable Function
+            65_1:   32_8(ptr) AccessChain 59_3(input.m_position) 43_1
+            61_1: 23_1(fvec4) Load 65_1
+            65_2:   32_6(ptr) AccessChain 59_6(input) 43_1 43_1
+                              Store 65_2 61_1
+            65_3:   32_8(ptr) AccessChain 59_4(input.m_color) 43_1
+            61_2: 23_1(fvec4) Load 65_3
+            65_4:   32_6(ptr) AccessChain 59_6(input) 43_1 43_3
+                              Store 65_4 61_2
+            65_5:   32_8(ptr) AccessChain 59_3(input.m_position) 43_3
+            61_3: 23_1(fvec4) Load 65_5
+            65_6:   32_6(ptr) AccessChain 59_6(input) 43_3 43_1
+                              Store 65_6 61_3
+            65_7:   32_8(ptr) AccessChain 59_4(input.m_color) 43_3
+            61_4: 23_1(fvec4) Load 65_7
+            65_8:   32_6(ptr) AccessChain 59_6(input) 43_3 43_3
+                              Store 65_8 61_4
+            65_9:   32_8(ptr) AccessChain 59_3(input.m_position) 43_4
+            61_5: 23_1(fvec4) Load 65_9
+           65_10:   32_6(ptr) AccessChain 59_6(input) 43_4 43_1
+                              Store 65_10 61_5
+           65_11:   32_8(ptr) AccessChain 59_4(input.m_color) 43_4
+            61_6: 23_1(fvec4) Load 65_11
+           65_12:   32_6(ptr) AccessChain 59_6(input) 43_4 43_3
+                              Store 65_12 61_6
+            61_7:   21_1(int) Load 59_5(id)
+                              Store 59_7(id) 61_7
+            61_8:        28_1 Load 59_6(input)
+                              Store 59_9(param) 61_8
+            61_9:   21_1(int) Load 59_7(id)
+                              Store 59_11(param) 61_9
+            57_1:        19_1 FunctionCall 54_2(@GeometryShader(struct-VertexShaderOutput-vf4-vf41[3];struct-VertexShaderOutput-vf4-vf41;u1;) 59_9(param) 59_10(param) 59_11(param)
+           61_10:30_1(VertexShaderOutput) Load 59_10(param)
+                              Store 59_8(output) 61_10
                               Return
                               FunctionEnd
-19(@GeometryShader(struct-VertexShaderOutput-vf4-vf41[3];struct-VertexShaderOutput-vf4-vf41;u1;):           2 Function None 15
-       16(input):     12(ptr) FunctionParameter
-      17(output):     13(ptr) FunctionParameter
-          18(id):     14(ptr) FunctionParameter
-              20:             Label
-           23(i):     22(ptr) Variable Function
- 34(flattenTemp):     13(ptr) Variable Function
-                              Store 23(i) 24
-                              Branch 25
-              25:             Label
-                              LoopMerge 27 28 DontUnroll 
-                              Branch 29
-              29:             Label
-              30:     21(int) Load 23(i)
-              33:    32(bool) SLessThan 30 31
-                              BranchConditional 33 26 27
-              26:               Label
-              35:     21(int)   Load 23(i)
-              36:     13(ptr)   AccessChain 16(input) 35
-              37:8(VertexShaderOutput)   Load 36
-                                Store 34(flattenTemp) 37
-              41:     40(ptr)   AccessChain 34(flattenTemp) 24
-              42:    7(fvec4)   Load 41
-                                Store 39(output.m_position) 42
-              45:     40(ptr)   AccessChain 34(flattenTemp) 44
-              46:    7(fvec4)   Load 45
-                                Store 43(output.m_color) 46
+54_2(@GeometryShader(struct-VertexShaderOutput-vf4-vf41[3];struct-VertexShaderOutput-vf4-vf41;u1;):        19_1 Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+    55_2(output):   32_2(ptr) FunctionParameter
+        55_3(id):   32_3(ptr) FunctionParameter
+           248_2:             Label
+        59_12(i):   32_4(ptr) Variable Function
+59_13(flattenTemp):   32_2(ptr) Variable Function
+                              Store 59_12(i) 43_1
+                              Branch 248_3
+           248_3:             Label
+                              LoopMerge 248_7 248_6 DontUnroll 
+                              Branch 248_4
+           248_4:             Label
+           61_11:   21_2(int) Load 59_12(i)
+           177_1:  20_1(bool) SLessThan 61_11 43_2
+                              BranchConditional 177_1 248_5 248_7
+           248_5:               Label
+           61_12:   21_2(int)   Load 59_12(i)
+           65_13:   32_2(ptr)   AccessChain 55_1(input) 61_12
+           61_13:30_1(VertexShaderOutput)   Load 65_13
+                                Store 59_13(flattenTemp) 61_13
+           65_14:   32_6(ptr)   AccessChain 59_13(flattenTemp) 43_1
+           61_14: 23_1(fvec4)   Load 65_14
+                                Store 59_1(output.m_position) 61_14
+           65_15:   32_6(ptr)   AccessChain 59_13(flattenTemp) 43_3
+           61_15: 23_1(fvec4)   Load 65_15
+                                Store 59_2(output.m_color) 61_15
                                 EmitVertex
-                                Branch 28
-              28:               Label
-              47:     21(int)   Load 23(i)
-              48:     21(int)   IAdd 47 44
-                                Store 23(i) 48
-                                Branch 25
-              27:             Label
+                                Branch 248_6
+           248_6:               Label
+           61_16:   21_2(int)   Load 59_12(i)
+           128_1:   21_2(int)   IAdd 61_16 43_3
+                                Store 59_12(i) 128_1
+                                Branch 248_3
+           248_7:             Label
                               EndPrimitive
                               Return
                               FunctionEnd

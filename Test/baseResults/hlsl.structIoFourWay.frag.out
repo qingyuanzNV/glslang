@@ -166,137 +166,137 @@ using depth_greater
 // Id's are bound by 65
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 22 27 31 36 45 48 51 55
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 DepthReplacing
-                              ExecutionMode 4 DepthGreater
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 DepthReplacing
+                              ExecutionMode 54_1 DepthGreater
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "T"
-                              MemberName 8(T) 0  "f"
-                              MemberName 8(T) 1  "g"
-                              MemberName 8(T) 2  "d"
-                              MemberName 8(T) 3  "normal"
-                              Name 12  "@main(struct-T-f1-f1-f1-vf41;"
-                              Name 11  "t"
-                              Name 14  "local"
-                              Name 18  "t"
-                              Name 22  "t.f"
-                              Name 27  "t.g"
-                              Name 31  "t.d"
-                              Name 36  "t.normal"
-                              Name 40  "flattenTemp"
-                              Name 41  "param"
-                              Name 45  "@entryPointOutput.f"
-                              Name 48  "@entryPointOutput.g"
-                              Name 51  "@entryPointOutput.d"
-                              Name 55  "@entryPointOutput.normal"
-                              Name 58  "T"
-                              MemberName 58(T) 0  "f"
-                              MemberName 58(T) 1  "g"
-                              MemberName 58(T) 2  "d"
-                              MemberName 58(T) 3  "normal"
-                              Name 59  "$Global"
-                              MemberName 59($Global) 0  "s"
-                              Name 61  ""
-                              Name 62  "buff"
-                              MemberName 62(buff) 0  "t"
-                              Name 64  ""
-                              Decorate 22(t.f) Location 0
-                              Decorate 27(t.g) Centroid
-                              Decorate 27(t.g) Location 1
-                              Decorate 31(t.d) Location 2
-                              Decorate 36(t.normal) Location 3
-                              Decorate 45(@entryPointOutput.f) Location 0
-                              Decorate 48(@entryPointOutput.g) Location 1
-                              Decorate 51(@entryPointOutput.d) BuiltIn FragDepth
-                              Decorate 55(@entryPointOutput.normal) Location 2
-                              MemberDecorate 58(T) 0 Offset 68
-                              MemberDecorate 58(T) 1 Offset 72
-                              MemberDecorate 58(T) 2 Offset 76
-                              MemberDecorate 58(T) 3 Offset 80
-                              Decorate 59($Global) Block
-                              MemberDecorate 59($Global) 0 Offset 0
-                              Decorate 61 Binding 0
-                              Decorate 61 DescriptorSet 0
-                              Decorate 62(buff) Block
-                              MemberDecorate 62(buff) 0 Offset 96
-                              Decorate 64 Binding 0
-                              Decorate 64 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-            8(T):             TypeStruct 6(float) 6(float) 6(float) 7(fvec4)
-               9:             TypePointer Function 8(T)
-              10:             TypeFunction 8(T) 9(ptr)
-              19:             TypeInt 32 1
-              20:     19(int) Constant 0
-              21:             TypePointer Input 6(float)
-         22(t.f):     21(ptr) Variable Input
-              24:             TypePointer Function 6(float)
-              26:     19(int) Constant 1
-         27(t.g):     21(ptr) Variable Input
-              30:     19(int) Constant 2
-         31(t.d):     21(ptr) Variable Input
-              34:     19(int) Constant 3
-              35:             TypePointer Input 7(fvec4)
-    36(t.normal):     35(ptr) Variable Input
-              38:             TypePointer Function 7(fvec4)
-              44:             TypePointer Output 6(float)
-45(@entryPointOutput.f):     44(ptr) Variable Output
-48(@entryPointOutput.g):     44(ptr) Variable Output
-51(@entryPointOutput.d):     44(ptr) Variable Output
-              54:             TypePointer Output 7(fvec4)
-55(@entryPointOutput.normal):     54(ptr) Variable Output
-           58(T):             TypeStruct 6(float) 6(float) 6(float) 7(fvec4)
-     59($Global):             TypeStruct 58(T)
-              60:             TypePointer Uniform 59($Global)
-              61:     60(ptr) Variable Uniform
-        62(buff):             TypeStruct 58(T)
-              63:             TypePointer Uniform 62(buff)
-              64:     63(ptr) Variable Uniform
-         4(main):           2 Function None 3
-               5:             Label
-           18(t):      9(ptr) Variable Function
- 40(flattenTemp):      9(ptr) Variable Function
-       41(param):      9(ptr) Variable Function
-              23:    6(float) Load 22(t.f)
-              25:     24(ptr) AccessChain 18(t) 20
-                              Store 25 23
-              28:    6(float) Load 27(t.g)
-              29:     24(ptr) AccessChain 18(t) 26
-                              Store 29 28
-              32:    6(float) Load 31(t.d)
-              33:     24(ptr) AccessChain 18(t) 30
-                              Store 33 32
-              37:    7(fvec4) Load 36(t.normal)
-              39:     38(ptr) AccessChain 18(t) 34
-                              Store 39 37
-              42:        8(T) Load 18(t)
-                              Store 41(param) 42
-              43:        8(T) FunctionCall 12(@main(struct-T-f1-f1-f1-vf41;) 41(param)
-                              Store 40(flattenTemp) 43
-              46:     24(ptr) AccessChain 40(flattenTemp) 20
-              47:    6(float) Load 46
-                              Store 45(@entryPointOutput.f) 47
-              49:     24(ptr) AccessChain 40(flattenTemp) 26
-              50:    6(float) Load 49
-                              Store 48(@entryPointOutput.g) 50
-              52:     24(ptr) AccessChain 40(flattenTemp) 30
-              53:    6(float) Load 52
-                              Store 51(@entryPointOutput.d) 53
-              56:     38(ptr) AccessChain 40(flattenTemp) 34
-              57:    7(fvec4) Load 56
-                              Store 55(@entryPointOutput.normal) 57
+                              Name 54_1  "main"
+                              Name 30_1  "T"
+                              MemberName 30_1(T) 0  "f"
+                              MemberName 30_1(T) 1  "g"
+                              MemberName 30_1(T) 2  "d"
+                              MemberName 30_1(T) 3  "normal"
+                              Name 54_2  "@main(struct-T-f1-f1-f1-vf41;"
+                              Name 55_1  "t"
+                              Name 59_14  "local"
+                              Name 59_11  "t"
+                              Name 59_1  "t.f"
+                              Name 59_2  "t.g"
+                              Name 59_3  "t.d"
+                              Name 59_4  "t.normal"
+                              Name 59_12  "flattenTemp"
+                              Name 59_13  "param"
+                              Name 59_5  "@entryPointOutput.f"
+                              Name 59_6  "@entryPointOutput.g"
+                              Name 59_7  "@entryPointOutput.d"
+                              Name 59_8  "@entryPointOutput.normal"
+                              Name 30_2  "T"
+                              MemberName 30_2(T) 0  "f"
+                              MemberName 30_2(T) 1  "g"
+                              MemberName 30_2(T) 2  "d"
+                              MemberName 30_2(T) 3  "normal"
+                              Name 30_3  "$Global"
+                              MemberName 30_3($Global) 0  "s"
+                              Name 59_9  ""
+                              Name 30_4  "buff"
+                              MemberName 30_4(buff) 0  "t"
+                              Name 59_10  ""
+                              Decorate 59_1(t.f) Location 0
+                              Decorate 59_2(t.g) Centroid
+                              Decorate 59_2(t.g) Location 1
+                              Decorate 59_3(t.d) Location 2
+                              Decorate 59_4(t.normal) Location 3
+                              Decorate 59_5(@entryPointOutput.f) Location 0
+                              Decorate 59_6(@entryPointOutput.g) Location 1
+                              Decorate 59_7(@entryPointOutput.d) BuiltIn FragDepth
+                              Decorate 59_8(@entryPointOutput.normal) Location 2
+                              MemberDecorate 30_2(T) 0 Offset 68
+                              MemberDecorate 30_2(T) 1 Offset 72
+                              MemberDecorate 30_2(T) 2 Offset 76
+                              MemberDecorate 30_2(T) 3 Offset 80
+                              Decorate 30_3($Global) Block
+                              MemberDecorate 30_3($Global) 0 Offset 0
+                              Decorate 59_9 Binding 0
+                              Decorate 59_9 DescriptorSet 0
+                              Decorate 30_4(buff) Block
+                              MemberDecorate 30_4(buff) 0 Offset 96
+                              Decorate 59_10 Binding 0
+                              Decorate 59_10 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+         30_1(T):             TypeStruct 22_1(float) 22_1(float) 22_1(float) 23_1(fvec4)
+            32_1:             TypePointer Function 30_1(T)
+            33_2:             TypeFunction 30_1(T) 32_1(ptr)
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            32_2:             TypePointer Input 22_1(float)
+       59_1(t.f):   32_2(ptr) Variable Input
+            32_3:             TypePointer Function 22_1(float)
+            43_2:   21_1(int) Constant 1
+       59_2(t.g):   32_2(ptr) Variable Input
+            43_3:   21_1(int) Constant 2
+       59_3(t.d):   32_2(ptr) Variable Input
+            43_4:   21_1(int) Constant 3
+            32_4:             TypePointer Input 23_1(fvec4)
+  59_4(t.normal):   32_4(ptr) Variable Input
+            32_5:             TypePointer Function 23_1(fvec4)
+            32_6:             TypePointer Output 22_1(float)
+59_5(@entryPointOutput.f):   32_6(ptr) Variable Output
+59_6(@entryPointOutput.g):   32_6(ptr) Variable Output
+59_7(@entryPointOutput.d):   32_6(ptr) Variable Output
+            32_7:             TypePointer Output 23_1(fvec4)
+59_8(@entryPointOutput.normal):   32_7(ptr) Variable Output
+         30_2(T):             TypeStruct 22_1(float) 22_1(float) 22_1(float) 23_1(fvec4)
+   30_3($Global):             TypeStruct 30_2(T)
+            32_8:             TypePointer Uniform 30_3($Global)
+            59_9:   32_8(ptr) Variable Uniform
+      30_4(buff):             TypeStruct 30_2(T)
+            32_9:             TypePointer Uniform 30_4(buff)
+           59_10:   32_9(ptr) Variable Uniform
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_11(t):   32_1(ptr) Variable Function
+59_12(flattenTemp):   32_1(ptr) Variable Function
+    59_13(param):   32_1(ptr) Variable Function
+            61_1: 22_1(float) Load 59_1(t.f)
+            65_1:   32_3(ptr) AccessChain 59_11(t) 43_1
+                              Store 65_1 61_1
+            61_2: 22_1(float) Load 59_2(t.g)
+            65_2:   32_3(ptr) AccessChain 59_11(t) 43_2
+                              Store 65_2 61_2
+            61_3: 22_1(float) Load 59_3(t.d)
+            65_3:   32_3(ptr) AccessChain 59_11(t) 43_3
+                              Store 65_3 61_3
+            61_4: 23_1(fvec4) Load 59_4(t.normal)
+            65_4:   32_5(ptr) AccessChain 59_11(t) 43_4
+                              Store 65_4 61_4
+            61_5:     30_1(T) Load 59_11(t)
+                              Store 59_13(param) 61_5
+            57_1:     30_1(T) FunctionCall 54_2(@main(struct-T-f1-f1-f1-vf41;) 59_13(param)
+                              Store 59_12(flattenTemp) 57_1
+            65_5:   32_3(ptr) AccessChain 59_12(flattenTemp) 43_1
+            61_6: 22_1(float) Load 65_5
+                              Store 59_5(@entryPointOutput.f) 61_6
+            65_6:   32_3(ptr) AccessChain 59_12(flattenTemp) 43_2
+            61_7: 22_1(float) Load 65_6
+                              Store 59_6(@entryPointOutput.g) 61_7
+            65_7:   32_3(ptr) AccessChain 59_12(flattenTemp) 43_3
+            61_8: 22_1(float) Load 65_7
+                              Store 59_7(@entryPointOutput.d) 61_8
+            65_8:   32_5(ptr) AccessChain 59_12(flattenTemp) 43_4
+            61_9: 23_1(fvec4) Load 65_8
+                              Store 59_8(@entryPointOutput.normal) 61_9
                               Return
                               FunctionEnd
-12(@main(struct-T-f1-f1-f1-vf41;):        8(T) Function None 10
-           11(t):      9(ptr) FunctionParameter
-              13:             Label
-       14(local):      9(ptr) Variable Function
-              15:        8(T) Load 14(local)
-                              ReturnValue 15
+54_2(@main(struct-T-f1-f1-f1-vf41;):     30_1(T) Function None 33_2
+         55_1(t):   32_1(ptr) FunctionParameter
+           248_2:             Label
+    59_14(local):   32_1(ptr) Variable Function
+           61_10:     30_1(T) Load 59_14(local)
+                              ReturnValue 61_10
                               FunctionEnd

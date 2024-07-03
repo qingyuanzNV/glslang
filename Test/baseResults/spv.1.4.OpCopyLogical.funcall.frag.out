@@ -4,107 +4,107 @@ spv.1.4.OpCopyLogical.funcall.frag
 // Id's are bound by 59
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 25 36
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "S"
-                              MemberName 9(S) 0  "m"
-                              Name 12  "fooConst(struct-S-mf441;"
-                              Name 11  "s"
-                              Name 17  "foo(struct-S-mf441;"
-                              Name 16  "s"
-                              Name 20  "fooOut(struct-S-mf441;"
-                              Name 19  "s"
-                              Name 22  "S"
-                              MemberName 22(S) 0  "m"
-                              Name 23  "blockName"
-                              MemberName 23(blockName) 0  "s1"
-                              Name 25  ""
-                              Name 31  "arg"
-                              Name 36  "s2"
-                              Name 39  "param"
-                              Name 44  "param"
-                              Name 47  "param"
-                              Name 55  "param"
-                              MemberDecorate 22(S) 0 ColMajor
-                              MemberDecorate 22(S) 0 MatrixStride 16
-                              MemberDecorate 22(S) 0 Offset 0
-                              Decorate 23(blockName) Block
-                              MemberDecorate 23(blockName) 0 Offset 0
-                              Decorate 25 Binding 0
-                              Decorate 25 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeMatrix 7(fvec4) 4
-            9(S):             TypeStruct 8
-              10:             TypeFunction 2 9(S)
-              14:             TypePointer Function 9(S)
-              15:             TypeFunction 2 14(ptr)
-           22(S):             TypeStruct 8
-   23(blockName):             TypeStruct 22(S)
-              24:             TypePointer StorageBuffer 23(blockName)
-              25:     24(ptr) Variable StorageBuffer
-              26:             TypeInt 32 1
-              27:     26(int) Constant 0
-              28:             TypePointer StorageBuffer 22(S)
-              35:             TypePointer Private 9(S)
-          36(s2):     35(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-         31(arg):     14(ptr) Variable Function
-       39(param):     14(ptr) Variable Function
-       44(param):     14(ptr) Variable Function
-       47(param):     14(ptr) Variable Function
-       55(param):     14(ptr) Variable Function
-              29:     28(ptr) AccessChain 25 27
-              30:       22(S) Load 29
-              32:        9(S) CopyLogical 30
-                              Store 31(arg) 32
-              33:        9(S) Load 31(arg)
-              34:           2 FunctionCall 12(fooConst(struct-S-mf441;) 33
-              37:        9(S) Load 36(s2)
-              38:           2 FunctionCall 12(fooConst(struct-S-mf441;) 37
-              40:     28(ptr) AccessChain 25 27
-              41:       22(S) Load 40
-              42:        9(S) CopyLogical 41
-                              Store 39(param) 42
-              43:           2 FunctionCall 17(foo(struct-S-mf441;) 39(param)
-              45:        9(S) Load 36(s2)
-                              Store 44(param) 45
-              46:           2 FunctionCall 17(foo(struct-S-mf441;) 44(param)
-              48:     28(ptr) AccessChain 25 27
-              49:       22(S) Load 48
-              50:        9(S) CopyLogical 49
-                              Store 47(param) 50
-              51:           2 FunctionCall 20(fooOut(struct-S-mf441;) 47(param)
-              52:        9(S) Load 47(param)
-              53:     28(ptr) AccessChain 25 27
-              54:       22(S) CopyLogical 52
-                              Store 53 54
-              56:        9(S) Load 36(s2)
-                              Store 55(param) 56
-              57:           2 FunctionCall 20(fooOut(struct-S-mf441;) 55(param)
-              58:        9(S) Load 55(param)
-                              Store 36(s2) 58
+                              Name 54_1  "main"
+                              Name 30_1  "S"
+                              MemberName 30_1(S) 0  "m"
+                              Name 54_2  "fooConst(struct-S-mf441;"
+                              Name 55_1  "s"
+                              Name 54_3  "foo(struct-S-mf441;"
+                              Name 55_2  "s"
+                              Name 54_4  "fooOut(struct-S-mf441;"
+                              Name 55_3  "s"
+                              Name 30_2  "S"
+                              MemberName 30_2(S) 0  "m"
+                              Name 30_3  "blockName"
+                              MemberName 30_3(blockName) 0  "s1"
+                              Name 59_1  ""
+                              Name 59_3  "arg"
+                              Name 59_2  "s2"
+                              Name 59_4  "param"
+                              Name 59_5  "param"
+                              Name 59_6  "param"
+                              Name 59_7  "param"
+                              MemberDecorate 30_2(S) 0 ColMajor
+                              MemberDecorate 30_2(S) 0 MatrixStride 16
+                              MemberDecorate 30_2(S) 0 Offset 0
+                              Decorate 30_3(blockName) Block
+                              MemberDecorate 30_3(blockName) 0 Offset 0
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            24_1:             TypeMatrix 23_1(fvec4) 4
+         30_1(S):             TypeStruct 24_1
+            33_2:             TypeFunction 19_1 30_1(S)
+            32_1:             TypePointer Function 30_1(S)
+            33_3:             TypeFunction 19_1 32_1(ptr)
+         30_2(S):             TypeStruct 24_1
+ 30_3(blockName):             TypeStruct 30_2(S)
+            32_2:             TypePointer StorageBuffer 30_3(blockName)
+            59_1:   32_2(ptr) Variable StorageBuffer
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            32_3:             TypePointer StorageBuffer 30_2(S)
+            32_4:             TypePointer Private 30_1(S)
+        59_2(s2):   32_4(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_3(arg):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+     59_7(param):   32_1(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1 43_1
+            61_1:     30_2(S) Load 65_1
+           400_1:     30_1(S) CopyLogical 61_1
+                              Store 59_3(arg) 400_1
+            61_2:     30_1(S) Load 59_3(arg)
+            57_1:        19_1 FunctionCall 54_2(fooConst(struct-S-mf441;) 61_2
+            61_3:     30_1(S) Load 59_2(s2)
+            57_2:        19_1 FunctionCall 54_2(fooConst(struct-S-mf441;) 61_3
+            65_2:   32_3(ptr) AccessChain 59_1 43_1
+            61_4:     30_2(S) Load 65_2
+           400_2:     30_1(S) CopyLogical 61_4
+                              Store 59_4(param) 400_2
+            57_3:        19_1 FunctionCall 54_3(foo(struct-S-mf441;) 59_4(param)
+            61_5:     30_1(S) Load 59_2(s2)
+                              Store 59_5(param) 61_5
+            57_4:        19_1 FunctionCall 54_3(foo(struct-S-mf441;) 59_5(param)
+            65_3:   32_3(ptr) AccessChain 59_1 43_1
+            61_6:     30_2(S) Load 65_3
+           400_3:     30_1(S) CopyLogical 61_6
+                              Store 59_6(param) 400_3
+            57_5:        19_1 FunctionCall 54_4(fooOut(struct-S-mf441;) 59_6(param)
+            61_7:     30_1(S) Load 59_6(param)
+            65_4:   32_3(ptr) AccessChain 59_1 43_1
+           400_4:     30_2(S) CopyLogical 61_7
+                              Store 65_4 400_4
+            61_8:     30_1(S) Load 59_2(s2)
+                              Store 59_7(param) 61_8
+            57_6:        19_1 FunctionCall 54_4(fooOut(struct-S-mf441;) 59_7(param)
+            61_9:     30_1(S) Load 59_7(param)
+                              Store 59_2(s2) 61_9
                               Return
                               FunctionEnd
-12(fooConst(struct-S-mf441;):           2 Function None 10
-           11(s):        9(S) FunctionParameter
-              13:             Label
+54_2(fooConst(struct-S-mf441;):        19_1 Function None 33_2
+         55_1(s):     30_1(S) FunctionParameter
+           248_2:             Label
                               Return
                               FunctionEnd
-17(foo(struct-S-mf441;):           2 Function None 15
-           16(s):     14(ptr) FunctionParameter
-              18:             Label
+54_3(foo(struct-S-mf441;):        19_1 Function None 33_3
+         55_2(s):   32_1(ptr) FunctionParameter
+           248_3:             Label
                               Return
                               FunctionEnd
-20(fooOut(struct-S-mf441;):           2 Function None 15
-           19(s):     14(ptr) FunctionParameter
-              21:             Label
+54_4(fooOut(struct-S-mf441;):        19_1 Function None 33_3
+         55_3(s):   32_1(ptr) FunctionParameter
+           248_4:             Label
                               Return
                               FunctionEnd

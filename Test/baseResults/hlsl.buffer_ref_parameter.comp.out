@@ -250,141 +250,141 @@ local_size = (64, 1, 1)
 // Id's are bound by 90
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 53 62 85
-                              ExecutionMode 4 LocalSize 64 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 LocalSize 64 1 1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  ""
-                              MemberName 8 0  "@data"
-                              Name 16  "pull_position(block--u1[0]1;u1;"
-                              Name 14  "buffer_position"
-                              Name 15  "vertex_id"
-                              Name 20  "@main(u1;"
-                              Name 19  "gi"
-                              Name 24  "byteAddrTemp"
-                              Name 52  "position_ms"
-                              Name 53  "buffer_position_ms"
-                              Name 54  "param"
-                              Name 57  "byteAddrTemp"
-                              Name 60  "r"
-                              MemberName 60(r) 0  "@data"
-                              Name 62  "r"
-                              Name 83  "gi"
-                              Name 85  "gi"
-                              Name 87  "param"
-                              Decorate 7 ArrayStride 4
-                              Decorate 8 Block
-                              MemberDecorate 8 0 NonWritable
-                              MemberDecorate 8 0 Offset 0
-                              Decorate 14(buffer_position) NonWritable
-                              Decorate 53(buffer_position_ms) Binding 0
-                              Decorate 53(buffer_position_ms) DescriptorSet 0
-                              Decorate 59 ArrayStride 4
-                              Decorate 60(r) Block
-                              MemberDecorate 60(r) 0 Offset 0
-                              Decorate 62(r) Binding 1
-                              Decorate 62(r) DescriptorSet 0
-                              Decorate 85(gi) BuiltIn LocalInvocationIndex
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeRuntimeArray 6(int)
-               8:             TypeStruct 7
-               9:             TypePointer StorageBuffer 8(struct)
-              10:             TypePointer Function 6(int)
-              11:             TypeFloat 32
-              12:             TypeVector 11(float) 3
-              13:             TypeFunction 12(fvec3) 9(ptr) 10(ptr)
-              18:             TypeFunction 2 10(ptr)
-              22:             TypeInt 32 1
-              23:             TypePointer Function 22(int)
-              26:      6(int) Constant 3
-              28:      6(int) Constant 4
-              30:     22(int) Constant 2
-              32:     22(int) Constant 0
-              34:             TypePointer StorageBuffer 6(int)
-              38:     22(int) Constant 1
-              46:             TypeVector 6(int) 3
-              51:             TypePointer Function 12(fvec3)
-53(buffer_position_ms):      9(ptr) Variable StorageBuffer
-              59:             TypeRuntimeArray 6(int)
-           60(r):             TypeStruct 59
-              61:             TypePointer StorageBuffer 60(r)
-           62(r):     61(ptr) Variable StorageBuffer
-              66:      6(int) Constant 0
-              73:      6(int) Constant 1
-              80:      6(int) Constant 2
-              84:             TypePointer Input 6(int)
-          85(gi):     84(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-          83(gi):     10(ptr) Variable Function
-       87(param):     10(ptr) Variable Function
-              86:      6(int) Load 85(gi)
-                              Store 83(gi) 86
-              88:      6(int) Load 83(gi)
-                              Store 87(param) 88
-              89:           2 FunctionCall 20(@main(u1;) 87(param)
+                              Name 54_1  "main"
+                              Name 30_1  ""
+                              MemberName 30_1 0  "@data"
+                              Name 54_2  "pull_position(block--u1[0]1;u1;"
+                              Name 55_1  "buffer_position"
+                              Name 55_2  "vertex_id"
+                              Name 54_3  "@main(u1;"
+                              Name 55_3  "gi"
+                              Name 59_6  "byteAddrTemp"
+                              Name 59_7  "position_ms"
+                              Name 59_1  "buffer_position_ms"
+                              Name 59_8  "param"
+                              Name 59_9  "byteAddrTemp"
+                              Name 30_2  "r"
+                              MemberName 30_2(r) 0  "@data"
+                              Name 59_2  "r"
+                              Name 59_4  "gi"
+                              Name 59_3  "gi"
+                              Name 59_5  "param"
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_1 Block
+                              MemberDecorate 30_1 0 NonWritable
+                              MemberDecorate 30_1 0 Offset 0
+                              Decorate 55_1(buffer_position) NonWritable
+                              Decorate 59_1(buffer_position_ms) Binding 0
+                              Decorate 59_1(buffer_position_ms) DescriptorSet 0
+                              Decorate 29_2 ArrayStride 4
+                              Decorate 30_2(r) Block
+                              MemberDecorate 30_2(r) 0 Offset 0
+                              Decorate 59_2(r) Binding 1
+                              Decorate 59_2(r) DescriptorSet 0
+                              Decorate 59_3(gi) BuiltIn LocalInvocationIndex
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            29_1:             TypeRuntimeArray 21_1(int)
+            30_1:             TypeStruct 29_1
+            32_1:             TypePointer StorageBuffer 30_1(struct)
+            32_2:             TypePointer Function 21_1(int)
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            33_2:             TypeFunction 23_1(fvec3) 32_1(ptr) 32_2(ptr)
+            33_3:             TypeFunction 19_1 32_2(ptr)
+            21_2:             TypeInt 32 1
+            32_3:             TypePointer Function 21_2(int)
+         uint(3):   21_1(int) Constant 3
+         uint(4):   21_1(int) Constant 4
+            43_1:   21_2(int) Constant 2
+            43_2:   21_2(int) Constant 0
+            32_4:             TypePointer StorageBuffer 21_1(int)
+            43_3:   21_2(int) Constant 1
+            23_2:             TypeVector 21_1(int) 3
+            32_5:             TypePointer Function 23_1(fvec3)
+59_1(buffer_position_ms):   32_1(ptr) Variable StorageBuffer
+            29_2:             TypeRuntimeArray 21_1(int)
+         30_2(r):             TypeStruct 29_2
+            32_6:             TypePointer StorageBuffer 30_2(r)
+         59_2(r):   32_6(ptr) Variable StorageBuffer
+         uint(0):   21_1(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+            32_7:             TypePointer Input 21_1(int)
+        59_3(gi):   32_7(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_4(gi):   32_2(ptr) Variable Function
+     59_5(param):   32_2(ptr) Variable Function
+            61_1:   21_1(int) Load 59_3(gi)
+                              Store 59_4(gi) 61_1
+            61_2:   21_1(int) Load 59_4(gi)
+                              Store 59_5(param) 61_2
+            57_1:        19_1 FunctionCall 54_3(@main(u1;) 59_5(param)
                               Return
                               FunctionEnd
-16(pull_position(block--u1[0]1;u1;):   12(fvec3) Function None 13
-14(buffer_position):      9(ptr) FunctionParameter
-   15(vertex_id):     10(ptr) FunctionParameter
-              17:             Label
-24(byteAddrTemp):     23(ptr) Variable Function
-              25:      6(int) Load 15(vertex_id)
-              27:      6(int) IMul 25 26
-              29:      6(int) IMul 27 28
-              31:     22(int) ShiftRightLogical 29 30
-                              Store 24(byteAddrTemp) 31
-              33:     22(int) Load 24(byteAddrTemp)
-              35:     34(ptr) AccessChain 14(buffer_position) 32 33
-              36:      6(int) Load 35
-              37:     22(int) Load 24(byteAddrTemp)
-              39:     22(int) IAdd 37 38
-              40:     34(ptr) AccessChain 14(buffer_position) 32 39
-              41:      6(int) Load 40
-              42:     22(int) Load 24(byteAddrTemp)
-              43:     22(int) IAdd 42 30
-              44:     34(ptr) AccessChain 14(buffer_position) 32 43
-              45:      6(int) Load 44
-              47:   46(ivec3) CompositeConstruct 36 41 45
-              48:   12(fvec3) Bitcast 47
-                              ReturnValue 48
+54_2(pull_position(block--u1[0]1;u1;): 23_1(fvec3) Function None 33_2
+55_1(buffer_position):   32_1(ptr) FunctionParameter
+ 55_2(vertex_id):   32_2(ptr) FunctionParameter
+           248_2:             Label
+59_6(byteAddrTemp):   32_3(ptr) Variable Function
+            61_3:   21_1(int) Load 55_2(vertex_id)
+           132_1:   21_1(int) IMul 61_3 uint(3)
+           132_2:   21_1(int) IMul 132_1 uint(4)
+           194_1:   21_2(int) ShiftRightLogical 132_2 43_1
+                              Store 59_6(byteAddrTemp) 194_1
+            61_4:   21_2(int) Load 59_6(byteAddrTemp)
+            65_1:   32_4(ptr) AccessChain 55_1(buffer_position) 43_2 61_4
+            61_5:   21_1(int) Load 65_1
+            61_6:   21_2(int) Load 59_6(byteAddrTemp)
+           128_1:   21_2(int) IAdd 61_6 43_3
+            65_2:   32_4(ptr) AccessChain 55_1(buffer_position) 43_2 128_1
+            61_7:   21_1(int) Load 65_2
+            61_8:   21_2(int) Load 59_6(byteAddrTemp)
+           128_2:   21_2(int) IAdd 61_8 43_1
+            65_3:   32_4(ptr) AccessChain 55_1(buffer_position) 43_2 128_2
+            61_9:   21_1(int) Load 65_3
+            80_1: 23_2(ivec3) CompositeConstruct 61_5 61_7 61_9
+           124_1: 23_1(fvec3) Bitcast 80_1
+                              ReturnValue 124_1
                               FunctionEnd
-   20(@main(u1;):           2 Function None 18
-          19(gi):     10(ptr) FunctionParameter
-              21:             Label
- 52(position_ms):     51(ptr) Variable Function
-       54(param):     10(ptr) Variable Function
-57(byteAddrTemp):     23(ptr) Variable Function
-              55:      6(int) Load 19(gi)
-                              Store 54(param) 55
-              56:   12(fvec3) FunctionCall 16(pull_position(block--u1[0]1;u1;) 53(buffer_position_ms) 54(param)
-                              Store 52(position_ms) 56
-              58:     22(int) ShiftRightArithmetic 32 30
-                              Store 57(byteAddrTemp) 58
-              63:     22(int) Load 57(byteAddrTemp)
-              64:   12(fvec3) Load 52(position_ms)
-              65:   46(ivec3) Bitcast 64
-              67:      6(int) CompositeExtract 65 0
-              68:     34(ptr) AccessChain 62(r) 32 63
-                              Store 68 67
-              69:     22(int) Load 57(byteAddrTemp)
-              70:     22(int) IAdd 69 38
-              71:   12(fvec3) Load 52(position_ms)
-              72:   46(ivec3) Bitcast 71
-              74:      6(int) CompositeExtract 72 1
-              75:     34(ptr) AccessChain 62(r) 32 70
-                              Store 75 74
-              76:     22(int) Load 57(byteAddrTemp)
-              77:     22(int) IAdd 76 30
-              78:   12(fvec3) Load 52(position_ms)
-              79:   46(ivec3) Bitcast 78
-              81:      6(int) CompositeExtract 79 2
-              82:     34(ptr) AccessChain 62(r) 32 77
-                              Store 82 81
+ 54_3(@main(u1;):        19_1 Function None 33_3
+        55_3(gi):   32_2(ptr) FunctionParameter
+           248_3:             Label
+59_7(position_ms):   32_5(ptr) Variable Function
+     59_8(param):   32_2(ptr) Variable Function
+59_9(byteAddrTemp):   32_3(ptr) Variable Function
+           61_10:   21_1(int) Load 55_3(gi)
+                              Store 59_8(param) 61_10
+            57_2: 23_1(fvec3) FunctionCall 54_2(pull_position(block--u1[0]1;u1;) 59_1(buffer_position_ms) 59_8(param)
+                              Store 59_7(position_ms) 57_2
+           195_1:   21_2(int) ShiftRightArithmetic 43_2 43_1
+                              Store 59_9(byteAddrTemp) 195_1
+           61_11:   21_2(int) Load 59_9(byteAddrTemp)
+           61_12: 23_1(fvec3) Load 59_7(position_ms)
+           124_2: 23_2(ivec3) Bitcast 61_12
+            81_1:   21_1(int) CompositeExtract 124_2 0
+            65_4:   32_4(ptr) AccessChain 59_2(r) 43_2 61_11
+                              Store 65_4 81_1
+           61_13:   21_2(int) Load 59_9(byteAddrTemp)
+           128_3:   21_2(int) IAdd 61_13 43_3
+           61_14: 23_1(fvec3) Load 59_7(position_ms)
+           124_3: 23_2(ivec3) Bitcast 61_14
+            81_2:   21_1(int) CompositeExtract 124_3 1
+            65_5:   32_4(ptr) AccessChain 59_2(r) 43_2 128_3
+                              Store 65_5 81_2
+           61_15:   21_2(int) Load 59_9(byteAddrTemp)
+           128_4:   21_2(int) IAdd 61_15 43_1
+           61_16: 23_1(fvec3) Load 59_7(position_ms)
+           124_4: 23_2(ivec3) Bitcast 61_16
+            81_3:   21_1(int) CompositeExtract 124_4 2
+            65_6:   32_4(ptr) AccessChain 59_2(r) 43_2 128_4
+                              Store 65_6 81_3
                               Return
                               FunctionEnd

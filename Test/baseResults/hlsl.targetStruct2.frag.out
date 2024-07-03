@@ -188,111 +188,111 @@ gl_FragCoord origin is upper left
 // Id's are bound by 65
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 42 46 57 60 63
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PSInput"
-                              MemberName 8(PSInput) 0  "interp"
-                              MemberName 8(PSInput) 1  "no_interp"
-                              Name 12  "PSOutput"
-                              MemberName 12(PSOutput) 0  "o1"
-                              MemberName 12(PSOutput) 1  "o2"
-                              Name 16  "@main(struct-PSInput-f1-u11;vf4;"
-                              Name 14  "input"
-                              Name 15  "po"
-                              Name 19  "pso"
-                              Name 40  "input"
-                              Name 42  "input.interp"
-                              Name 46  "input.no_interp"
-                              Name 49  "flattenTemp"
-                              Name 50  "po"
-                              Name 51  "param"
-                              Name 53  "param"
-                              Name 57  "@entryPointOutput.o1"
-                              Name 60  "@entryPointOutput.o2"
-                              Name 63  "po"
-                              Decorate 42(input.interp) Location 0
-                              Decorate 46(input.no_interp) Flat
-                              Decorate 46(input.no_interp) Location 1
-                              Decorate 57(@entryPointOutput.o1) Location 2
-                              Decorate 60(@entryPointOutput.o2) Location 3
-                              Decorate 63(po) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeInt 32 0
-      8(PSInput):             TypeStruct 6(float) 7(int)
-               9:             TypePointer Function 8(PSInput)
-              10:             TypeVector 6(float) 4
-              11:             TypePointer Function 10(fvec4)
-    12(PSOutput):             TypeStruct 10(fvec4) 10(fvec4)
-              13:             TypeFunction 12(PSOutput) 9(ptr) 11(ptr)
-              18:             TypePointer Function 12(PSOutput)
-              20:             TypeInt 32 1
-              21:     20(int) Constant 0
-              22:     20(int) Constant 1
-              23:             TypePointer Function 7(int)
-              27:             TypePointer Function 6(float)
-              30:    6(float) Constant 0
-              31:    6(float) Constant 1065353216
-              34:   10(fvec4) ConstantComposite 31 31 31 31
-              36:   10(fvec4) ConstantComposite 30 30 30 30
-              41:             TypePointer Input 6(float)
-42(input.interp):     41(ptr) Variable Input
-              45:             TypePointer Input 7(int)
-46(input.no_interp):     45(ptr) Variable Input
-              56:             TypePointer Output 10(fvec4)
-57(@entryPointOutput.o1):     56(ptr) Variable Output
-60(@entryPointOutput.o2):     56(ptr) Variable Output
-          63(po):     56(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-       40(input):      9(ptr) Variable Function
- 49(flattenTemp):     18(ptr) Variable Function
-          50(po):     11(ptr) Variable Function
-       51(param):      9(ptr) Variable Function
-       53(param):     11(ptr) Variable Function
-              43:    6(float) Load 42(input.interp)
-              44:     27(ptr) AccessChain 40(input) 21
-                              Store 44 43
-              47:      7(int) Load 46(input.no_interp)
-              48:     23(ptr) AccessChain 40(input) 22
-                              Store 48 47
-              52:  8(PSInput) Load 40(input)
-                              Store 51(param) 52
-              54:12(PSOutput) FunctionCall 16(@main(struct-PSInput-f1-u11;vf4;) 51(param) 53(param)
-              55:   10(fvec4) Load 53(param)
-                              Store 50(po) 55
-                              Store 49(flattenTemp) 54
-              58:     11(ptr) AccessChain 49(flattenTemp) 21
-              59:   10(fvec4) Load 58
-                              Store 57(@entryPointOutput.o1) 59
-              61:     11(ptr) AccessChain 49(flattenTemp) 22
-              62:   10(fvec4) Load 61
-                              Store 60(@entryPointOutput.o2) 62
-              64:   10(fvec4) Load 50(po)
-                              Store 63(po) 64
+                              Name 54_1  "main"
+                              Name 30_1  "PSInput"
+                              MemberName 30_1(PSInput) 0  "interp"
+                              MemberName 30_1(PSInput) 1  "no_interp"
+                              Name 30_2  "PSOutput"
+                              MemberName 30_2(PSOutput) 0  "o1"
+                              MemberName 30_2(PSOutput) 1  "o2"
+                              Name 54_2  "@main(struct-PSInput-f1-u11;vf4;"
+                              Name 55_1  "input"
+                              Name 55_2  "po"
+                              Name 59_11  "pso"
+                              Name 59_6  "input"
+                              Name 59_1  "input.interp"
+                              Name 59_2  "input.no_interp"
+                              Name 59_7  "flattenTemp"
+                              Name 59_8  "po"
+                              Name 59_9  "param"
+                              Name 59_10  "param"
+                              Name 59_3  "@entryPointOutput.o1"
+                              Name 59_4  "@entryPointOutput.o2"
+                              Name 59_5  "po"
+                              Decorate 59_1(input.interp) Location 0
+                              Decorate 59_2(input.no_interp) Flat
+                              Decorate 59_2(input.no_interp) Location 1
+                              Decorate 59_3(@entryPointOutput.o1) Location 2
+                              Decorate 59_4(@entryPointOutput.o2) Location 3
+                              Decorate 59_5(po) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            21_1:             TypeInt 32 0
+   30_1(PSInput):             TypeStruct 22_1(float) 21_1(int)
+            32_1:             TypePointer Function 30_1(PSInput)
+            23_1:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Function 23_1(fvec4)
+  30_2(PSOutput):             TypeStruct 23_1(fvec4) 23_1(fvec4)
+            33_2:             TypeFunction 30_2(PSOutput) 32_1(ptr) 32_2(ptr)
+            32_3:             TypePointer Function 30_2(PSOutput)
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            43_2:   21_2(int) Constant 1
+            32_4:             TypePointer Function 21_1(int)
+            32_5:             TypePointer Function 22_1(float)
+            43_3: 22_1(float) Constant 0
+            43_4: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_4 43_4 43_4 43_4
+            44_2: 23_1(fvec4) ConstantComposite 43_3 43_3 43_3 43_3
+            32_6:             TypePointer Input 22_1(float)
+59_1(input.interp):   32_6(ptr) Variable Input
+            32_7:             TypePointer Input 21_1(int)
+59_2(input.no_interp):   32_7(ptr) Variable Input
+            32_8:             TypePointer Output 23_1(fvec4)
+59_3(@entryPointOutput.o1):   32_8(ptr) Variable Output
+59_4(@entryPointOutput.o2):   32_8(ptr) Variable Output
+        59_5(po):   32_8(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_6(input):   32_1(ptr) Variable Function
+59_7(flattenTemp):   32_3(ptr) Variable Function
+        59_8(po):   32_2(ptr) Variable Function
+     59_9(param):   32_1(ptr) Variable Function
+    59_10(param):   32_2(ptr) Variable Function
+            61_1: 22_1(float) Load 59_1(input.interp)
+            65_1:   32_5(ptr) AccessChain 59_6(input) 43_1
+                              Store 65_1 61_1
+            61_2:   21_1(int) Load 59_2(input.no_interp)
+            65_2:   32_4(ptr) AccessChain 59_6(input) 43_2
+                              Store 65_2 61_2
+            61_3:30_1(PSInput) Load 59_6(input)
+                              Store 59_9(param) 61_3
+            57_1:30_2(PSOutput) FunctionCall 54_2(@main(struct-PSInput-f1-u11;vf4;) 59_9(param) 59_10(param)
+            61_4: 23_1(fvec4) Load 59_10(param)
+                              Store 59_8(po) 61_4
+                              Store 59_7(flattenTemp) 57_1
+            65_3:   32_2(ptr) AccessChain 59_7(flattenTemp) 43_1
+            61_5: 23_1(fvec4) Load 65_3
+                              Store 59_3(@entryPointOutput.o1) 61_5
+            65_4:   32_2(ptr) AccessChain 59_7(flattenTemp) 43_2
+            61_6: 23_1(fvec4) Load 65_4
+                              Store 59_4(@entryPointOutput.o2) 61_6
+            61_7: 23_1(fvec4) Load 59_8(po)
+                              Store 59_5(po) 61_7
                               Return
                               FunctionEnd
-16(@main(struct-PSInput-f1-u11;vf4;):12(PSOutput) Function None 13
-       14(input):      9(ptr) FunctionParameter
-          15(po):     11(ptr) FunctionParameter
-              17:             Label
-         19(pso):     18(ptr) Variable Function
-              24:     23(ptr) AccessChain 14(input) 22
-              25:      7(int) Load 24
-              26:    6(float) ConvertUToF 25
-              28:     27(ptr) AccessChain 14(input) 21
-              29:    6(float) Load 28
-              32:   10(fvec4) CompositeConstruct 26 29 30 31
-              33:     11(ptr) AccessChain 19(pso) 21
-                              Store 33 32
-              35:     11(ptr) AccessChain 19(pso) 22
-                              Store 35 34
-                              Store 15(po) 36
-              37:12(PSOutput) Load 19(pso)
-                              ReturnValue 37
+54_2(@main(struct-PSInput-f1-u11;vf4;):30_2(PSOutput) Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+        55_2(po):   32_2(ptr) FunctionParameter
+           248_2:             Label
+      59_11(pso):   32_3(ptr) Variable Function
+            65_5:   32_4(ptr) AccessChain 55_1(input) 43_2
+            61_8:   21_1(int) Load 65_5
+           112_1: 22_1(float) ConvertUToF 61_8
+            65_6:   32_5(ptr) AccessChain 55_1(input) 43_1
+            61_9: 22_1(float) Load 65_6
+            80_1: 23_1(fvec4) CompositeConstruct 112_1 61_9 43_3 43_4
+            65_7:   32_2(ptr) AccessChain 59_11(pso) 43_1
+                              Store 65_7 80_1
+            65_8:   32_2(ptr) AccessChain 59_11(pso) 43_2
+                              Store 65_8 44_1
+                              Store 55_2(po) 44_2
+           61_10:30_2(PSOutput) Load 59_11(pso)
+                              ReturnValue 61_10
                               FunctionEnd

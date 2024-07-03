@@ -4,90 +4,90 @@ spv.buffer.autoassign.frag
 // Id's are bound by 50
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 47
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_OUTPUT"
-                              MemberName 8(PS_OUTPUT) 0  "Color"
-                              Name 10  "@main("
-                              Name 13  "psout"
-                              Name 16  "MyUB1"
-                              MemberName 16(MyUB1) 0  "g_a"
-                              MemberName 16(MyUB1) 1  "g_b"
-                              Name 18  ""
-                              Name 28  "MyUB2"
-                              MemberName 28(MyUB2) 0  "g_c"
-                              Name 30  ""
-                              Name 34  "MyUB3"
-                              MemberName 34(MyUB3) 0  "g_d"
-                              Name 36  ""
-                              Name 47  "@entryPointOutput.Color"
-                              Decorate 16(MyUB1) Block
-                              MemberDecorate 16(MyUB1) 0 Offset 0
-                              MemberDecorate 16(MyUB1) 1 Offset 4
-                              Decorate 18 Binding 20
-                              Decorate 18 DescriptorSet 0
-                              Decorate 28(MyUB2) Block
-                              MemberDecorate 28(MyUB2) 0 Offset 0
-                              Decorate 30 Binding 15
-                              Decorate 30 DescriptorSet 0
-                              Decorate 34(MyUB3) Block
-                              MemberDecorate 34(MyUB3) 0 Offset 0
-                              Decorate 36 Binding 16
-                              Decorate 36 DescriptorSet 0
-                              Decorate 47(@entryPointOutput.Color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(PS_OUTPUT):             TypeStruct 7(fvec4)
-               9:             TypeFunction 8(PS_OUTPUT)
-              12:             TypePointer Function 8(PS_OUTPUT)
-              14:             TypeInt 32 1
-              15:     14(int) Constant 0
-       16(MyUB1):             TypeStruct 6(float) 14(int)
-              17:             TypePointer Uniform 16(MyUB1)
-              18:     17(ptr) Variable Uniform
-              19:             TypePointer Uniform 6(float)
-              22:     14(int) Constant 1
-              23:             TypePointer Uniform 14(int)
-       28(MyUB2):             TypeStruct 6(float)
-              29:             TypePointer Uniform 28(MyUB2)
-              30:     29(ptr) Variable Uniform
-       34(MyUB3):             TypeStruct 6(float)
-              35:             TypePointer Uniform 34(MyUB3)
-              36:     35(ptr) Variable Uniform
-              41:             TypePointer Function 7(fvec4)
-              46:             TypePointer Output 7(fvec4)
-47(@entryPointOutput.Color):     46(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              48:8(PS_OUTPUT) FunctionCall 10(@main()
-              49:    7(fvec4) CompositeExtract 48 0
-                              Store 47(@entryPointOutput.Color) 49
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              Name 54_2  "@main("
+                              Name 59_5  "psout"
+                              Name 30_2  "MyUB1"
+                              MemberName 30_2(MyUB1) 0  "g_a"
+                              MemberName 30_2(MyUB1) 1  "g_b"
+                              Name 59_1  ""
+                              Name 30_3  "MyUB2"
+                              MemberName 30_3(MyUB2) 0  "g_c"
+                              Name 59_2  ""
+                              Name 30_4  "MyUB3"
+                              MemberName 30_4(MyUB3) 0  "g_d"
+                              Name 59_3  ""
+                              Name 59_4  "@entryPointOutput.Color"
+                              Decorate 30_2(MyUB1) Block
+                              MemberDecorate 30_2(MyUB1) 0 Offset 0
+                              MemberDecorate 30_2(MyUB1) 1 Offset 4
+                              Decorate 59_1 Binding 20
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 30_3(MyUB2) Block
+                              MemberDecorate 30_3(MyUB2) 0 Offset 0
+                              Decorate 59_2 Binding 15
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 30_4(MyUB3) Block
+                              MemberDecorate 30_4(MyUB3) 0 Offset 0
+                              Decorate 59_3 Binding 16
+                              Decorate 59_3 DescriptorSet 0
+                              Decorate 59_4(@entryPointOutput.Color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            32_1:             TypePointer Function 30_1(PS_OUTPUT)
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+     30_2(MyUB1):             TypeStruct 22_1(float) 21_1(int)
+            32_2:             TypePointer Uniform 30_2(MyUB1)
+            59_1:   32_2(ptr) Variable Uniform
+            32_3:             TypePointer Uniform 22_1(float)
+            43_2:   21_1(int) Constant 1
+            32_4:             TypePointer Uniform 21_1(int)
+     30_3(MyUB2):             TypeStruct 22_1(float)
+            32_5:             TypePointer Uniform 30_3(MyUB2)
+            59_2:   32_5(ptr) Variable Uniform
+     30_4(MyUB3):             TypeStruct 22_1(float)
+            32_6:             TypePointer Uniform 30_4(MyUB3)
+            59_3:   32_6(ptr) Variable Uniform
+            32_7:             TypePointer Function 23_1(fvec4)
+            32_8:             TypePointer Output 23_1(fvec4)
+59_4(@entryPointOutput.Color):   32_8(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_2(@main()
+            81_1: 23_1(fvec4) CompositeExtract 57_1 0
+                              Store 59_4(@entryPointOutput.Color) 81_1
                               Return
                               FunctionEnd
-      10(@main():8(PS_OUTPUT) Function None 9
-              11:             Label
-       13(psout):     12(ptr) Variable Function
-              20:     19(ptr) AccessChain 18 15
-              21:    6(float) Load 20
-              24:     23(ptr) AccessChain 18 22
-              25:     14(int) Load 24
-              26:    6(float) ConvertSToF 25
-              27:    6(float) FAdd 21 26
-              31:     19(ptr) AccessChain 30 15
-              32:    6(float) Load 31
-              33:    6(float) FAdd 27 32
-              37:     19(ptr) AccessChain 36 15
-              38:    6(float) Load 37
-              39:    6(float) FAdd 33 38
-              40:    7(fvec4) CompositeConstruct 39 39 39 39
-              42:     41(ptr) AccessChain 13(psout) 15
-                              Store 42 40
-              43:8(PS_OUTPUT) Load 13(psout)
-                              ReturnValue 43
+    54_2(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_2:             Label
+     59_5(psout):   32_1(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1 43_1
+            61_1: 22_1(float) Load 65_1
+            65_2:   32_4(ptr) AccessChain 59_1 43_2
+            61_2:   21_1(int) Load 65_2
+           111_1: 22_1(float) ConvertSToF 61_2
+           129_1: 22_1(float) FAdd 61_1 111_1
+            65_3:   32_3(ptr) AccessChain 59_2 43_1
+            61_3: 22_1(float) Load 65_3
+           129_2: 22_1(float) FAdd 129_1 61_3
+            65_4:   32_3(ptr) AccessChain 59_3 43_1
+            61_4: 22_1(float) Load 65_4
+           129_3: 22_1(float) FAdd 129_2 61_4
+            80_1: 23_1(fvec4) CompositeConstruct 129_3 129_3 129_3 129_3
+            65_5:   32_7(ptr) AccessChain 59_5(psout) 43_1
+                              Store 65_5 80_1
+            61_5:30_1(PS_OUTPUT) Load 59_5(psout)
+                              ReturnValue 61_5
                               FunctionEnd

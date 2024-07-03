@@ -5,33 +5,33 @@ Validation failed
 // Id's are bound by 20
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 12 16
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 12  "gl_FragData"
-                              Name 16  "Color"
-                              Decorate 16(Color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeInt 32 0
-               9:      8(int) Constant 32
-              10:             TypeArray 7(fvec4) 9
-              11:             TypePointer Output 10
- 12(gl_FragData):     11(ptr) Variable Output
-              13:             TypeInt 32 1
-              14:     13(int) Constant 1
-              15:             TypePointer Input 7(fvec4)
-       16(Color):     15(ptr) Variable Input
-              18:             TypePointer Output 7(fvec4)
-         4(main):           2 Function None 3
-               5:             Label
-              17:    7(fvec4) Load 16(Color)
-              19:     18(ptr) AccessChain 12(gl_FragData) 14
-                              Store 19 17
+                              Name 54_1  "main"
+                              Name 59_1  "gl_FragData"
+                              Name 59_2  "Color"
+                              Decorate 59_2(Color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            21_1:             TypeInt 32 0
+        uint(32):   21_1(int) Constant 32
+            28_1:             TypeArray 23_1(fvec4) uint(32)
+            32_1:             TypePointer Output 28_1
+59_1(gl_FragData):   32_1(ptr) Variable Output
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 1
+            32_2:             TypePointer Input 23_1(fvec4)
+     59_2(Color):   32_2(ptr) Variable Input
+            32_3:             TypePointer Output 23_1(fvec4)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1: 23_1(fvec4) Load 59_2(Color)
+            65_1:   32_3(ptr) AccessChain 59_1(gl_FragData) 43_1
+                              Store 65_1 61_1
                               Return
                               FunctionEnd

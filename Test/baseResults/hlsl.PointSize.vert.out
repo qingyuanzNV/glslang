@@ -42,28 +42,28 @@ Shader version: 500
 // Id's are bound by 16
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 14
+                              EntryPoint Vertex 54_1  "main" 59_1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "@main("
-                              Name 14  "@entryPointOutput"
-                              Decorate 14(@entryPointOutput) BuiltIn PointSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeFunction 6(float)
-              10:    6(float) Constant 1075000115
-              13:             TypePointer Output 6(float)
-14(@entryPointOutput):     13(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              15:    6(float) FunctionCall 8(@main()
-                              Store 14(@entryPointOutput) 15
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 59_1  "@entryPointOutput"
+                              Decorate 59_1(@entryPointOutput) BuiltIn PointSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            33_2:             TypeFunction 22_1(float)
+            43_1: 22_1(float) Constant 1075000115
+            32_1:             TypePointer Output 22_1(float)
+59_1(@entryPointOutput):   32_1(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 22_1(float) FunctionCall 54_2(@main()
+                              Store 59_1(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       8(@main():    6(float) Function None 7
-               9:             Label
-                              ReturnValue 10
+    54_2(@main(): 22_1(float) Function None 33_2
+           248_2:             Label
+                              ReturnValue 43_1
                               FunctionEnd

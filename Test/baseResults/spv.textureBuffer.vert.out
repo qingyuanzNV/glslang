@@ -5,65 +5,65 @@ spv.textureBuffer.vert
 
                               Capability Shader
                               Capability SampledBuffer
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main"
+                              EntryPoint Vertex 54_1  "main"
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "tBuf"
-                              Name 13  "s"
-                              Name 23  "sBuf"
-                              Name 32  "utBuf"
-                              Name 38  "itBuf"
-                              Decorate 9(tBuf) Binding 0
-                              Decorate 9(tBuf) DescriptorSet 0
-                              Decorate 13(s) Binding 1
-                              Decorate 13(s) DescriptorSet 0
-                              Decorate 23(sBuf) Binding 2
-                              Decorate 23(sBuf) DescriptorSet 0
-                              Decorate 32(utBuf) Binding 3
-                              Decorate 32(utBuf) DescriptorSet 0
-                              Decorate 38(itBuf) Binding 4
-                              Decorate 38(itBuf) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeImage 6(float) Buffer sampled format:Unknown
-               8:             TypePointer UniformConstant 7
-         9(tBuf):      8(ptr) Variable UniformConstant
-              11:             TypeSampler
-              12:             TypePointer UniformConstant 11
-           13(s):     12(ptr) Variable UniformConstant
-              15:             TypeSampledImage 7
-              17:             TypeInt 32 1
-              18:     17(int) Constant 13
-              20:             TypeVector 6(float) 4
-              22:             TypePointer UniformConstant 15
-        23(sBuf):     22(ptr) Variable UniformConstant
-              29:             TypeInt 32 0
-              30:             TypeImage 29(int) Buffer sampled format:Unknown
-              31:             TypePointer UniformConstant 30
-       32(utBuf):     31(ptr) Variable UniformConstant
-              34:             TypeVector 29(int) 4
-              36:             TypeImage 17(int) Buffer sampled format:Unknown
-              37:             TypePointer UniformConstant 36
-       38(itBuf):     37(ptr) Variable UniformConstant
-              40:             TypeVector 17(int) 4
-         4(main):           2 Function None 3
-               5:             Label
-              10:           7 Load 9(tBuf)
-              14:          11 Load 13(s)
-              16:          15 SampledImage 10 14
-              19:           7 Image 16
-              21:   20(fvec4) ImageFetch 19 18
-              24:          15 Load 23(sBuf)
-              25:           7 Image 24
-              26:   20(fvec4) ImageFetch 25 18
-              27:           7 Load 9(tBuf)
-              28:   20(fvec4) ImageFetch 27 18
-              33:          30 Load 32(utBuf)
-              35:   34(ivec4) ImageFetch 33 18
-              39:          36 Load 38(itBuf)
-              41:   40(ivec4) ImageFetch 39 18
+                              Name 54_1  "main"
+                              Name 59_1  "tBuf"
+                              Name 59_2  "s"
+                              Name 59_3  "sBuf"
+                              Name 59_4  "utBuf"
+                              Name 59_5  "itBuf"
+                              Decorate 59_1(tBuf) Binding 0
+                              Decorate 59_1(tBuf) DescriptorSet 0
+                              Decorate 59_2(s) Binding 1
+                              Decorate 59_2(s) DescriptorSet 0
+                              Decorate 59_3(sBuf) Binding 2
+                              Decorate 59_3(sBuf) DescriptorSet 0
+                              Decorate 59_4(utBuf) Binding 3
+                              Decorate 59_4(utBuf) DescriptorSet 0
+                              Decorate 59_5(itBuf) Binding 4
+                              Decorate 59_5(itBuf) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            25_1:             TypeImage 22_1(float) Buffer sampled format:Unknown
+            32_1:             TypePointer UniformConstant 25_1
+      59_1(tBuf):   32_1(ptr) Variable UniformConstant
+            26_1:             TypeSampler
+            32_2:             TypePointer UniformConstant 26_1
+         59_2(s):   32_2(ptr) Variable UniformConstant
+            27_1:             TypeSampledImage 25_1
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 13
+            23_1:             TypeVector 22_1(float) 4
+            32_3:             TypePointer UniformConstant 27_1
+      59_3(sBuf):   32_3(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 0
+            25_2:             TypeImage 21_2(int) Buffer sampled format:Unknown
+            32_4:             TypePointer UniformConstant 25_2
+     59_4(utBuf):   32_4(ptr) Variable UniformConstant
+            23_2:             TypeVector 21_2(int) 4
+            25_3:             TypeImage 21_1(int) Buffer sampled format:Unknown
+            32_5:             TypePointer UniformConstant 25_3
+     59_5(itBuf):   32_5(ptr) Variable UniformConstant
+            23_3:             TypeVector 21_1(int) 4
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:        25_1 Load 59_1(tBuf)
+            61_2:        26_1 Load 59_2(s)
+            86_1:        27_1 SampledImage 61_1 61_2
+           100_1:        25_1 Image 86_1
+            95_1: 23_1(fvec4) ImageFetch 100_1 43_1
+            61_3:        27_1 Load 59_3(sBuf)
+           100_2:        25_1 Image 61_3
+            95_2: 23_1(fvec4) ImageFetch 100_2 43_1
+            61_4:        25_1 Load 59_1(tBuf)
+            95_3: 23_1(fvec4) ImageFetch 61_4 43_1
+            61_5:        25_2 Load 59_4(utBuf)
+            95_4: 23_2(ivec4) ImageFetch 61_5 43_1
+            61_6:        25_3 Load 59_5(itBuf)
+            95_5: 23_3(ivec4) ImageFetch 61_6 43_1
                               Return
                               FunctionEnd

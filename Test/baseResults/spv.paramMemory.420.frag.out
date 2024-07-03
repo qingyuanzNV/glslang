@@ -7,133 +7,133 @@ Validation failed
                               Capability Shader
                               Capability StorageImageReadWithoutFormat
                               Capability StorageImageWriteWithoutFormat
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 27 66
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_6
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 420
                               SourceExtension  "GL_EXT_shader_image_load_formatted"
-                              Name 4  "main"
-                              Name 16  "image_load(I21;vi2;"
-                              Name 14  "image"
-                              Name 15  "coords"
-                              Name 23  "image_store(I21;vi2;vf4;"
-                              Name 20  "image"
-                              Name 21  "coords"
-                              Name 22  "data"
-                              Name 27  "in_coords"
-                              Name 35  "read1"
-                              Name 36  "image1"
-                              Name 37  "param"
-                              Name 40  "read2"
-                              Name 41  "image2"
-                              Name 42  "param"
-                              Name 47  "image3"
-                              Name 51  "param"
-                              Name 53  "param"
-                              Name 57  "image4"
-                              Name 61  "param"
-                              Name 63  "param"
-                              Name 66  "out_color"
-                              Decorate 14(image) Coherent
-                              Decorate 14(image) NonWritable
-                              Decorate 20(image) Coherent
-                              Decorate 20(image) NonReadable
-                              Decorate 27(in_coords) Flat
-                              Decorate 27(in_coords) Location 0
-                              Decorate 36(image1) Coherent
-                              Decorate 36(image1) NonWritable
-                              Decorate 36(image1) Binding 0
-                              Decorate 36(image1) DescriptorSet 0
-                              Decorate 41(image2) NonWritable
-                              Decorate 41(image2) Binding 2
-                              Decorate 41(image2) DescriptorSet 0
-                              Decorate 47(image3) Coherent
-                              Decorate 47(image3) NonReadable
-                              Decorate 47(image3) Binding 1
-                              Decorate 47(image3) DescriptorSet 0
-                              Decorate 57(image4) NonReadable
-                              Decorate 57(image4) Binding 3
-                              Decorate 57(image4) DescriptorSet 0
-                              Decorate 66(out_color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeImage 6(float) 2D nonsampled format:Unknown
-               8:             TypePointer UniformConstant 7
-               9:             TypeInt 32 1
-              10:             TypeVector 9(int) 2
-              11:             TypePointer Function 10(ivec2)
-              12:             TypeVector 6(float) 4
-              13:             TypeFunction 12(fvec4) 8(ptr) 11(ptr)
-              18:             TypePointer Function 12(fvec4)
-              19:             TypeFunction 2 8(ptr) 11(ptr) 18(ptr)
-              26:             TypePointer Input 10(ivec2)
-   27(in_coords):     26(ptr) Variable Input
-      36(image1):      8(ptr) Variable UniformConstant
-      41(image2):      8(ptr) Variable UniformConstant
-              45:             TypeImage 6(float) 2D nonsampled format:Rgba32f
-              46:             TypePointer UniformConstant 45
-      47(image3):     46(ptr) Variable UniformConstant
-              49:    6(float) Constant 1056964608
-              55:             TypeImage 6(float) 2D nonsampled format:Rgba16f
-              56:             TypePointer UniformConstant 55
-      57(image4):     56(ptr) Variable UniformConstant
-              59:    6(float) Constant 1073741824
-              65:             TypePointer Output 12(fvec4)
-   66(out_color):     65(ptr) Variable Output
-              67:    6(float) Constant 0
-              68:   12(fvec4) ConstantComposite 67 67 67 67
-         4(main):           2 Function None 3
-               5:             Label
-       35(read1):     18(ptr) Variable Function
-       37(param):     11(ptr) Variable Function
-       40(read2):     18(ptr) Variable Function
-       42(param):     11(ptr) Variable Function
-       51(param):     11(ptr) Variable Function
-       53(param):     18(ptr) Variable Function
-       61(param):     11(ptr) Variable Function
-       63(param):     18(ptr) Variable Function
-              38:   10(ivec2) Load 27(in_coords)
-                              Store 37(param) 38
-              39:   12(fvec4) FunctionCall 16(image_load(I21;vi2;) 36(image1) 37(param)
-                              Store 35(read1) 39
-              43:   10(ivec2) Load 27(in_coords)
-                              Store 42(param) 43
-              44:   12(fvec4) FunctionCall 16(image_load(I21;vi2;) 41(image2) 42(param)
-                              Store 40(read2) 44
-              48:   12(fvec4) Load 35(read1)
-              50:   12(fvec4) VectorTimesScalar 48 49
-              52:   10(ivec2) Load 27(in_coords)
-                              Store 51(param) 52
-                              Store 53(param) 50
-              54:           2 FunctionCall 23(image_store(I21;vi2;vf4;) 47(image3) 51(param) 53(param)
-              58:   12(fvec4) Load 40(read2)
-              60:   12(fvec4) VectorTimesScalar 58 59
-              62:   10(ivec2) Load 27(in_coords)
-                              Store 61(param) 62
-                              Store 63(param) 60
-              64:           2 FunctionCall 23(image_store(I21;vi2;vf4;) 57(image4) 61(param) 63(param)
-                              Store 66(out_color) 68
+                              Name 54_1  "main"
+                              Name 54_2  "image_load(I21;vi2;"
+                              Name 55_1  "image"
+                              Name 55_2  "coords"
+                              Name 54_3  "image_store(I21;vi2;vf4;"
+                              Name 55_3  "image"
+                              Name 55_4  "coords"
+                              Name 55_5  "data"
+                              Name 59_1  "in_coords"
+                              Name 59_7  "read1"
+                              Name 59_2  "image1"
+                              Name 59_8  "param"
+                              Name 59_9  "read2"
+                              Name 59_3  "image2"
+                              Name 59_10  "param"
+                              Name 59_4  "image3"
+                              Name 59_11  "param"
+                              Name 59_12  "param"
+                              Name 59_5  "image4"
+                              Name 59_13  "param"
+                              Name 59_14  "param"
+                              Name 59_6  "out_color"
+                              Decorate 55_1(image) Coherent
+                              Decorate 55_1(image) NonWritable
+                              Decorate 55_3(image) Coherent
+                              Decorate 55_3(image) NonReadable
+                              Decorate 59_1(in_coords) Flat
+                              Decorate 59_1(in_coords) Location 0
+                              Decorate 59_2(image1) Coherent
+                              Decorate 59_2(image1) NonWritable
+                              Decorate 59_2(image1) Binding 0
+                              Decorate 59_2(image1) DescriptorSet 0
+                              Decorate 59_3(image2) NonWritable
+                              Decorate 59_3(image2) Binding 2
+                              Decorate 59_3(image2) DescriptorSet 0
+                              Decorate 59_4(image3) Coherent
+                              Decorate 59_4(image3) NonReadable
+                              Decorate 59_4(image3) Binding 1
+                              Decorate 59_4(image3) DescriptorSet 0
+                              Decorate 59_5(image4) NonReadable
+                              Decorate 59_5(image4) Binding 3
+                              Decorate 59_5(image4) DescriptorSet 0
+                              Decorate 59_6(out_color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            25_1:             TypeImage 22_1(float) 2D nonsampled format:Unknown
+            32_1:             TypePointer UniformConstant 25_1
+            21_1:             TypeInt 32 1
+            23_1:             TypeVector 21_1(int) 2
+            32_2:             TypePointer Function 23_1(ivec2)
+            23_2:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_2(fvec4) 32_1(ptr) 32_2(ptr)
+            32_3:             TypePointer Function 23_2(fvec4)
+            33_3:             TypeFunction 19_1 32_1(ptr) 32_2(ptr) 32_3(ptr)
+            32_4:             TypePointer Input 23_1(ivec2)
+ 59_1(in_coords):   32_4(ptr) Variable Input
+    59_2(image1):   32_1(ptr) Variable UniformConstant
+    59_3(image2):   32_1(ptr) Variable UniformConstant
+            25_2:             TypeImage 22_1(float) 2D nonsampled format:Rgba32f
+            32_5:             TypePointer UniformConstant 25_2
+    59_4(image3):   32_5(ptr) Variable UniformConstant
+            43_1: 22_1(float) Constant 1056964608
+            25_3:             TypeImage 22_1(float) 2D nonsampled format:Rgba16f
+            32_6:             TypePointer UniformConstant 25_3
+    59_5(image4):   32_6(ptr) Variable UniformConstant
+            43_2: 22_1(float) Constant 1073741824
+            32_7:             TypePointer Output 23_2(fvec4)
+ 59_6(out_color):   32_7(ptr) Variable Output
+            43_3: 22_1(float) Constant 0
+            44_1: 23_2(fvec4) ConstantComposite 43_3 43_3 43_3 43_3
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_7(read1):   32_3(ptr) Variable Function
+     59_8(param):   32_2(ptr) Variable Function
+     59_9(read2):   32_3(ptr) Variable Function
+    59_10(param):   32_2(ptr) Variable Function
+    59_11(param):   32_2(ptr) Variable Function
+    59_12(param):   32_3(ptr) Variable Function
+    59_13(param):   32_2(ptr) Variable Function
+    59_14(param):   32_3(ptr) Variable Function
+            61_1: 23_1(ivec2) Load 59_1(in_coords)
+                              Store 59_8(param) 61_1
+            57_1: 23_2(fvec4) FunctionCall 54_2(image_load(I21;vi2;) 59_2(image1) 59_8(param)
+                              Store 59_7(read1) 57_1
+            61_2: 23_1(ivec2) Load 59_1(in_coords)
+                              Store 59_10(param) 61_2
+            57_2: 23_2(fvec4) FunctionCall 54_2(image_load(I21;vi2;) 59_3(image2) 59_10(param)
+                              Store 59_9(read2) 57_2
+            61_3: 23_2(fvec4) Load 59_7(read1)
+           142_1: 23_2(fvec4) VectorTimesScalar 61_3 43_1
+            61_4: 23_1(ivec2) Load 59_1(in_coords)
+                              Store 59_11(param) 61_4
+                              Store 59_12(param) 142_1
+            57_3:        19_1 FunctionCall 54_3(image_store(I21;vi2;vf4;) 59_4(image3) 59_11(param) 59_12(param)
+            61_5: 23_2(fvec4) Load 59_9(read2)
+           142_2: 23_2(fvec4) VectorTimesScalar 61_5 43_2
+            61_6: 23_1(ivec2) Load 59_1(in_coords)
+                              Store 59_13(param) 61_6
+                              Store 59_14(param) 142_2
+            57_4:        19_1 FunctionCall 54_3(image_store(I21;vi2;vf4;) 59_5(image4) 59_13(param) 59_14(param)
+                              Store 59_6(out_color) 44_1
                               Return
                               FunctionEnd
-16(image_load(I21;vi2;):   12(fvec4) Function None 13
-       14(image):      8(ptr) FunctionParameter
-      15(coords):     11(ptr) FunctionParameter
-              17:             Label
-              25:           7 Load 14(image)
-              28:   10(ivec2) Load 27(in_coords)
-              29:   12(fvec4) ImageRead 25 28
-                              ReturnValue 29
+54_2(image_load(I21;vi2;): 23_2(fvec4) Function None 33_2
+     55_1(image):   32_1(ptr) FunctionParameter
+    55_2(coords):   32_2(ptr) FunctionParameter
+           248_2:             Label
+            61_7:        25_1 Load 55_1(image)
+            61_8: 23_1(ivec2) Load 59_1(in_coords)
+            98_1: 23_2(fvec4) ImageRead 61_7 61_8
+                              ReturnValue 98_1
                               FunctionEnd
-23(image_store(I21;vi2;vf4;):           2 Function None 19
-       20(image):      8(ptr) FunctionParameter
-      21(coords):     11(ptr) FunctionParameter
-        22(data):     18(ptr) FunctionParameter
-              24:             Label
-              32:           7 Load 20(image)
-              33:   10(ivec2) Load 27(in_coords)
-              34:   12(fvec4) Load 22(data)
-                              ImageWrite 32 33 34
+54_3(image_store(I21;vi2;vf4;):        19_1 Function None 33_3
+     55_3(image):   32_1(ptr) FunctionParameter
+    55_4(coords):   32_2(ptr) FunctionParameter
+      55_5(data):   32_3(ptr) FunctionParameter
+           248_3:             Label
+            61_9:        25_1 Load 55_3(image)
+           61_10: 23_1(ivec2) Load 59_1(in_coords)
+           61_11: 23_2(fvec4) Load 55_5(data)
+                              ImageWrite 61_9 61_10 61_11
                               Return
                               FunctionEnd

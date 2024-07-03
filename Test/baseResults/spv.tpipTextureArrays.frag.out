@@ -6,123 +6,123 @@ spv.tpipTextureArrays.frag
                               Capability Shader
                               Capability TextureBlockMatchQCOM
                               Extension  "SPV_QCOM_image_processing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 13 46
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_QCOM_image_processing"
-                              Name 4  "main"
-                              Name 9  "tgt_coords"
-                              Name 13  "v_texcoord"
-                              Name 26  "ref_coords"
-                              Name 37  "blockSize"
-                              Name 40  "ii"
-                              Name 46  "fragColor"
-                              Name 51  "samplers"
-                              Name 60  "tex2D_srcs"
-                              Name 67  "samp"
-                              Decorate 13(v_texcoord) Location 0
-                              Decorate 46(fragColor) Location 0
-                              Decorate 51(samplers) Binding 5
-                              Decorate 51(samplers) DescriptorSet 0
-                              Decorate 55 DecorationBlockMatchTextureQCOM
-                              Decorate 60(tex2D_srcs) Binding 4
-                              Decorate 60(tex2D_srcs) DescriptorSet 0
-                              Decorate 63 DecorationBlockMatchTextureQCOM
-                              Decorate 67(samp) Binding 3
-                              Decorate 67(samp) DescriptorSet 0
-                              Decorate 74 DecorationBlockMatchTextureQCOM
-                              Decorate 79 DecorationBlockMatchTextureQCOM
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 2
-               8:             TypePointer Function 7(ivec2)
-              10:             TypeFloat 32
-              11:             TypeVector 10(float) 4
-              12:             TypePointer Input 11(fvec4)
-  13(v_texcoord):     12(ptr) Variable Input
-              14:      6(int) Constant 0
-              15:             TypePointer Input 10(float)
-              19:             TypePointer Function 6(int)
-              21:      6(int) Constant 1
-              27:      6(int) Constant 2
-              32:      6(int) Constant 3
-              38:      6(int) Constant 4
-              39:    7(ivec2) ConstantComposite 38 38
-              43:      6(int) Constant 8
-              45:             TypePointer Output 11(fvec4)
-   46(fragColor):     45(ptr) Variable Output
-              47:             TypeImage 10(float) 2D sampled format:Unknown
-              48:             TypeSampledImage 47
-              49:             TypeArray 48 32
-              50:             TypePointer UniformConstant 49
-    51(samplers):     50(ptr) Variable UniformConstant
-              52:             TypeInt 32 1
-              53:     52(int) Constant 0
-              54:             TypePointer UniformConstant 48
-              58:             TypeArray 47 43
-              59:             TypePointer UniformConstant 58
-  60(tex2D_srcs):     59(ptr) Variable UniformConstant
-              62:             TypePointer UniformConstant 47
-              65:             TypeSampler
-              66:             TypePointer UniformConstant 65
-        67(samp):     66(ptr) Variable UniformConstant
-              73:     52(int) Constant 1
-         4(main):           2 Function None 3
-               5:             Label
-   9(tgt_coords):      8(ptr) Variable Function
-  26(ref_coords):      8(ptr) Variable Function
-   37(blockSize):      8(ptr) Variable Function
-          40(ii):     19(ptr) Variable Function
-              16:     15(ptr) AccessChain 13(v_texcoord) 14
-              17:   10(float) Load 16
-              18:      6(int) ConvertFToU 17
-              20:     19(ptr) AccessChain 9(tgt_coords) 14
-                              Store 20 18
-              22:     15(ptr) AccessChain 13(v_texcoord) 21
-              23:   10(float) Load 22
-              24:      6(int) ConvertFToU 23
-              25:     19(ptr) AccessChain 9(tgt_coords) 14
-                              Store 25 24
-              28:     15(ptr) AccessChain 13(v_texcoord) 27
-              29:   10(float) Load 28
-              30:      6(int) ConvertFToU 29
-              31:     19(ptr) AccessChain 26(ref_coords) 14
-                              Store 31 30
-              33:     15(ptr) AccessChain 13(v_texcoord) 32
-              34:   10(float) Load 33
-              35:      6(int) ConvertFToU 34
-              36:     19(ptr) AccessChain 26(ref_coords) 21
-                              Store 36 35
-                              Store 37(blockSize) 39
-              41:     19(ptr) AccessChain 9(tgt_coords) 14
-              42:      6(int) Load 41
-              44:      6(int) UMod 42 43
-                              Store 40(ii) 44
-              55:     54(ptr) AccessChain 51(samplers) 53
-              56:          48 Load 55
-              57:    7(ivec2) Load 9(tgt_coords)
-              61:      6(int) Load 40(ii)
-              63:     62(ptr) AccessChain 60(tex2D_srcs) 61
-              64:          47 Load 63
-              68:          65 Load 67(samp)
-              69:          48 SampledImage 64 68
-              70:    7(ivec2) Load 26(ref_coords)
-              71:    7(ivec2) Load 37(blockSize)
-              72:   11(fvec4) ImageBlockMatchSSDQCOM 56 57 69 70 71
-                              Store 46(fragColor) 72
-              74:     62(ptr) AccessChain 60(tex2D_srcs) 73
-              75:          47 Load 74
-              76:          65 Load 67(samp)
-              77:          48 SampledImage 75 76
-              78:    7(ivec2) Load 9(tgt_coords)
-              79:     54(ptr) AccessChain 51(samplers) 73
-              80:          48 Load 79
-              81:    7(ivec2) Load 26(ref_coords)
-              82:    7(ivec2) Load 37(blockSize)
-              83:   11(fvec4) ImageBlockMatchSADQCOM 77 78 80 81 82
-                              Store 46(fragColor) 83
+                              Name 54_1  "main"
+                              Name 59_6  "tgt_coords"
+                              Name 59_1  "v_texcoord"
+                              Name 59_7  "ref_coords"
+                              Name 59_8  "blockSize"
+                              Name 59_9  "ii"
+                              Name 59_2  "fragColor"
+                              Name 59_3  "samplers"
+                              Name 59_4  "tex2D_srcs"
+                              Name 59_5  "samp"
+                              Decorate 59_1(v_texcoord) Location 0
+                              Decorate 59_2(fragColor) Location 0
+                              Decorate 59_3(samplers) Binding 5
+                              Decorate 59_3(samplers) DescriptorSet 0
+                              Decorate 65_10 DecorationBlockMatchTextureQCOM
+                              Decorate 59_4(tex2D_srcs) Binding 4
+                              Decorate 59_4(tex2D_srcs) DescriptorSet 0
+                              Decorate 65_11 DecorationBlockMatchTextureQCOM
+                              Decorate 59_5(samp) Binding 3
+                              Decorate 59_5(samp) DescriptorSet 0
+                              Decorate 65_12 DecorationBlockMatchTextureQCOM
+                              Decorate 65_13 DecorationBlockMatchTextureQCOM
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 2
+            32_1:             TypePointer Function 23_1(ivec2)
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Input 23_2(fvec4)
+59_1(v_texcoord):   32_2(ptr) Variable Input
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Input 22_1(float)
+            32_4:             TypePointer Function 21_1(int)
+         uint(1):   21_1(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+         uint(3):   21_1(int) Constant 3
+         uint(4):   21_1(int) Constant 4
+            44_1: 23_1(ivec2) ConstantComposite uint(4) uint(4)
+         uint(8):   21_1(int) Constant 8
+            32_5:             TypePointer Output 23_2(fvec4)
+ 59_2(fragColor):   32_5(ptr) Variable Output
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            28_1:             TypeArray 27_1 uint(3)
+            32_6:             TypePointer UniformConstant 28_1
+  59_3(samplers):   32_6(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_7:             TypePointer UniformConstant 27_1
+            28_2:             TypeArray 25_1 uint(8)
+            32_8:             TypePointer UniformConstant 28_2
+59_4(tex2D_srcs):   32_8(ptr) Variable UniformConstant
+            32_9:             TypePointer UniformConstant 25_1
+            26_1:             TypeSampler
+           32_10:             TypePointer UniformConstant 26_1
+      59_5(samp):  32_10(ptr) Variable UniformConstant
+            43_2:   21_2(int) Constant 1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_6(tgt_coords):   32_1(ptr) Variable Function
+59_7(ref_coords):   32_1(ptr) Variable Function
+ 59_8(blockSize):   32_1(ptr) Variable Function
+        59_9(ii):   32_4(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(v_texcoord) uint(0)
+            61_1: 22_1(float) Load 65_1
+           109_1:   21_1(int) ConvertFToU 61_1
+            65_2:   32_4(ptr) AccessChain 59_6(tgt_coords) uint(0)
+                              Store 65_2 109_1
+            65_3:   32_3(ptr) AccessChain 59_1(v_texcoord) uint(1)
+            61_2: 22_1(float) Load 65_3
+           109_2:   21_1(int) ConvertFToU 61_2
+            65_4:   32_4(ptr) AccessChain 59_6(tgt_coords) uint(0)
+                              Store 65_4 109_2
+            65_5:   32_3(ptr) AccessChain 59_1(v_texcoord) uint(2)
+            61_3: 22_1(float) Load 65_5
+           109_3:   21_1(int) ConvertFToU 61_3
+            65_6:   32_4(ptr) AccessChain 59_7(ref_coords) uint(0)
+                              Store 65_6 109_3
+            65_7:   32_3(ptr) AccessChain 59_1(v_texcoord) uint(3)
+            61_4: 22_1(float) Load 65_7
+           109_4:   21_1(int) ConvertFToU 61_4
+            65_8:   32_4(ptr) AccessChain 59_7(ref_coords) uint(1)
+                              Store 65_8 109_4
+                              Store 59_8(blockSize) 44_1
+            65_9:   32_4(ptr) AccessChain 59_6(tgt_coords) uint(0)
+            61_5:   21_1(int) Load 65_9
+           137_1:   21_1(int) UMod 61_5 uint(8)
+                              Store 59_9(ii) 137_1
+           65_10:   32_7(ptr) AccessChain 59_3(samplers) 43_1
+            61_6:        27_1 Load 65_10
+            61_7: 23_1(ivec2) Load 59_6(tgt_coords)
+            61_8:   21_1(int) Load 59_9(ii)
+           65_11:   32_9(ptr) AccessChain 59_4(tex2D_srcs) 61_8
+            61_9:        25_1 Load 65_11
+           61_10:        26_1 Load 59_5(samp)
+            86_1:        27_1 SampledImage 61_9 61_10
+           61_11: 23_1(ivec2) Load 59_7(ref_coords)
+           61_12: 23_1(ivec2) Load 59_8(blockSize)
+          4482_1: 23_2(fvec4) ImageBlockMatchSSDQCOM 61_6 61_7 86_1 61_11 61_12
+                              Store 59_2(fragColor) 4482_1
+           65_12:   32_9(ptr) AccessChain 59_4(tex2D_srcs) 43_2
+           61_13:        25_1 Load 65_12
+           61_14:        26_1 Load 59_5(samp)
+            86_2:        27_1 SampledImage 61_13 61_14
+           61_15: 23_1(ivec2) Load 59_6(tgt_coords)
+           65_13:   32_7(ptr) AccessChain 59_3(samplers) 43_2
+           61_16:        27_1 Load 65_13
+           61_17: 23_1(ivec2) Load 59_7(ref_coords)
+           61_18: 23_1(ivec2) Load 59_8(blockSize)
+          4483_1: 23_2(fvec4) ImageBlockMatchSADQCOM 86_2 61_15 61_16 61_17 61_18
+                              Store 59_2(fragColor) 4483_1
                               Return
                               FunctionEnd

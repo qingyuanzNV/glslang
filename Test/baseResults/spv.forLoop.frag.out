@@ -4,230 +4,230 @@ spv.forLoop.frag
 // Id's are bound by 143
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 11 24 28 36 53 111
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 9  "color"
-                              Name 11  "BaseColor"
-                              Name 15  "i"
-                              Name 24  "Count"
-                              Name 28  "bigColor"
-                              Name 36  "gl_FragColor"
-                              Name 39  "sum"
-                              Name 41  "i"
-                              Name 53  "v4"
-                              Name 63  "i"
-                              Name 71  "tv4"
-                              Name 88  "r"
-                              Name 101  "i"
-                              Name 111  "f"
-                              Name 129  "i"
-                              Decorate 11(BaseColor) Location 1
-                              Decorate 24(Count) Flat
-                              Decorate 24(Count) Location 3
-                              Decorate 28(bigColor) Location 0
-                              Decorate 36(gl_FragColor) Location 0
-                              Decorate 53(v4) Flat
-                              Decorate 53(v4) Location 4
-                              Decorate 111(f) Location 2
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-              10:             TypePointer Input 7(fvec4)
-   11(BaseColor):     10(ptr) Variable Input
-              13:             TypeInt 32 1
-              14:             TypePointer Function 13(int)
-              16:     13(int) Constant 0
-              23:             TypePointer Input 13(int)
-       24(Count):     23(ptr) Variable Input
-              26:             TypeBool
-    28(bigColor):     10(ptr) Variable Input
-              33:     13(int) Constant 1
-              35:             TypePointer Output 7(fvec4)
-36(gl_FragColor):     35(ptr) Variable Output
-              38:             TypePointer Function 6(float)
-              40:    6(float) Constant 0
-              48:     13(int) Constant 4
-              50:             TypeInt 32 0
-              51:             TypeVector 50(int) 4
-              52:             TypePointer Input 51(ivec4)
-          53(v4):     52(ptr) Variable Input
-              55:             TypePointer Input 50(int)
-              76:     50(int) Constant 4
-              89:             TypeVector 6(float) 3
-              92:     50(int) Constant 0
-              95:     50(int) Constant 1
-              98:     50(int) Constant 2
-             110:             TypePointer Input 6(float)
-          111(f):    110(ptr) Variable Input
-             113:     50(int) Constant 3
-             122:             TypePointer Output 6(float)
-             136:     13(int) Constant 16
-         4(main):           2 Function None 3
-               5:             Label
-        9(color):      8(ptr) Variable Function
-           15(i):     14(ptr) Variable Function
-         39(sum):     38(ptr) Variable Function
-           41(i):     14(ptr) Variable Function
-           63(i):     14(ptr) Variable Function
-         71(tv4):      8(ptr) Variable Function
-           88(r):      8(ptr) Variable Function
-          101(i):     14(ptr) Variable Function
-          129(i):     14(ptr) Variable Function
-              12:    7(fvec4) Load 11(BaseColor)
-                              Store 9(color) 12
-                              Store 15(i) 16
-                              Branch 17
-              17:             Label
-                              LoopMerge 19 20 None
-                              Branch 21
-              21:             Label
-              22:     13(int) Load 15(i)
-              25:     13(int) Load 24(Count)
-              27:    26(bool) SLessThan 22 25
-                              BranchConditional 27 18 19
-              18:               Label
-              29:    7(fvec4)   Load 28(bigColor)
-              30:    7(fvec4)   Load 9(color)
-              31:    7(fvec4)   FAdd 30 29
-                                Store 9(color) 31
-                                Branch 20
-              20:               Label
-              32:     13(int)   Load 15(i)
-              34:     13(int)   IAdd 32 33
-                                Store 15(i) 34
-                                Branch 17
-              19:             Label
-              37:    7(fvec4) Load 9(color)
-                              Store 36(gl_FragColor) 37
-                              Store 39(sum) 40
-                              Store 41(i) 16
-                              Branch 42
-              42:             Label
-                              LoopMerge 44 45 None
-                              Branch 46
-              46:             Label
-              47:     13(int) Load 41(i)
-              49:    26(bool) SLessThan 47 48
-                              BranchConditional 49 43 44
-              43:               Label
-              54:     13(int)   Load 41(i)
-              56:     55(ptr)   AccessChain 53(v4) 54
-              57:     50(int)   Load 56
-              58:    6(float)   ConvertUToF 57
-              59:    6(float)   Load 39(sum)
-              60:    6(float)   FAdd 59 58
-                                Store 39(sum) 60
-                                Branch 45
-              45:               Label
-              61:     13(int)   Load 41(i)
-              62:     13(int)   IAdd 61 33
-                                Store 41(i) 62
-                                Branch 42
-              44:             Label
-                              Store 63(i) 16
-                              Branch 64
-              64:             Label
-                              LoopMerge 66 67 None
-                              Branch 68
-              68:             Label
-              69:     13(int) Load 63(i)
-              70:    26(bool) SLessThan 69 48
-                              BranchConditional 70 65 66
-              65:               Label
-              72:     13(int)   Load 63(i)
-              73:     13(int)   Load 63(i)
-              74:     55(ptr)   AccessChain 53(v4) 73
-              75:     50(int)   Load 74
-              77:     50(int)   IMul 75 76
-              78:    6(float)   ConvertUToF 77
-              79:     38(ptr)   AccessChain 71(tv4) 72
-                                Store 79 78
-                                Branch 67
-              67:               Label
-              80:     13(int)   Load 63(i)
-              81:     13(int)   IAdd 80 33
-                                Store 63(i) 81
-                                Branch 64
-              66:             Label
-              82:    6(float) Load 39(sum)
-              83:    7(fvec4) CompositeConstruct 82 82 82 82
-              84:    7(fvec4) Load 71(tv4)
-              85:    7(fvec4) FAdd 83 84
-              86:    7(fvec4) Load 36(gl_FragColor)
-              87:    7(fvec4) FAdd 86 85
-                              Store 36(gl_FragColor) 87
-              90:    7(fvec4) Load 11(BaseColor)
-              91:   89(fvec3) VectorShuffle 90 90 0 1 2
-              93:     38(ptr) AccessChain 88(r) 92
-              94:    6(float) CompositeExtract 91 0
-                              Store 93 94
-              96:     38(ptr) AccessChain 88(r) 95
-              97:    6(float) CompositeExtract 91 1
-                              Store 96 97
-              99:     38(ptr) AccessChain 88(r) 98
-             100:    6(float) CompositeExtract 91 2
-                              Store 99 100
-                              Store 101(i) 16
-                              Branch 102
-             102:             Label
-                              LoopMerge 104 105 None
-                              Branch 106
-             106:             Label
-             107:     13(int) Load 101(i)
-             108:     13(int) Load 24(Count)
-             109:    26(bool) SLessThan 107 108
-                              BranchConditional 109 103 104
-             103:               Label
-             112:    6(float)   Load 111(f)
-             114:     38(ptr)   AccessChain 88(r) 113
-                                Store 114 112
-                                Branch 105
-             105:               Label
-             115:     13(int)   Load 101(i)
-             116:     13(int)   IAdd 115 33
-                                Store 101(i) 116
-                                Branch 102
-             104:             Label
-             117:    7(fvec4) Load 88(r)
-             118:   89(fvec3) VectorShuffle 117 117 0 1 2
-             119:    7(fvec4) Load 36(gl_FragColor)
-             120:   89(fvec3) VectorShuffle 119 119 0 1 2
-             121:   89(fvec3) FAdd 120 118
-             123:    122(ptr) AccessChain 36(gl_FragColor) 92
-             124:    6(float) CompositeExtract 121 0
-                              Store 123 124
-             125:    122(ptr) AccessChain 36(gl_FragColor) 95
-             126:    6(float) CompositeExtract 121 1
-                              Store 125 126
-             127:    122(ptr) AccessChain 36(gl_FragColor) 98
-             128:    6(float) CompositeExtract 121 2
-                              Store 127 128
-                              Store 129(i) 16
-                              Branch 130
-             130:             Label
-                              LoopMerge 132 133 None
-                              Branch 134
-             134:             Label
-             135:     13(int) Load 129(i)
-             137:    26(bool) SLessThan 135 136
-                              BranchConditional 137 131 132
-             131:               Label
-             138:    6(float)   Load 111(f)
-             139:    7(fvec4)   Load 36(gl_FragColor)
-             140:    7(fvec4)   VectorTimesScalar 139 138
-                                Store 36(gl_FragColor) 140
-                                Branch 133
-             133:               Label
-             141:     13(int)   Load 129(i)
-             142:     13(int)   IAdd 141 48
-                                Store 129(i) 142
-                                Branch 130
-             132:             Label
+                              Name 54_1  "main"
+                              Name 59_7  "color"
+                              Name 59_1  "BaseColor"
+                              Name 59_8  "i"
+                              Name 59_2  "Count"
+                              Name 59_3  "bigColor"
+                              Name 59_4  "gl_FragColor"
+                              Name 59_9  "sum"
+                              Name 59_10  "i"
+                              Name 59_5  "v4"
+                              Name 59_11  "i"
+                              Name 59_12  "tv4"
+                              Name 59_13  "r"
+                              Name 59_14  "i"
+                              Name 59_6  "f"
+                              Name 59_15  "i"
+                              Decorate 59_1(BaseColor) Location 1
+                              Decorate 59_2(Count) Flat
+                              Decorate 59_2(Count) Location 3
+                              Decorate 59_3(bigColor) Location 0
+                              Decorate 59_4(gl_FragColor) Location 0
+                              Decorate 59_5(v4) Flat
+                              Decorate 59_5(v4) Location 4
+                              Decorate 59_6(f) Location 2
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            32_2:             TypePointer Input 23_1(fvec4)
+ 59_1(BaseColor):   32_2(ptr) Variable Input
+            21_1:             TypeInt 32 1
+            32_3:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+            32_4:             TypePointer Input 21_1(int)
+     59_2(Count):   32_4(ptr) Variable Input
+            20_1:             TypeBool
+  59_3(bigColor):   32_2(ptr) Variable Input
+            43_2:   21_1(int) Constant 1
+            32_5:             TypePointer Output 23_1(fvec4)
+59_4(gl_FragColor):   32_5(ptr) Variable Output
+            32_6:             TypePointer Function 22_1(float)
+            43_3: 22_1(float) Constant 0
+            43_4:   21_1(int) Constant 4
+            21_2:             TypeInt 32 0
+            23_2:             TypeVector 21_2(int) 4
+            32_7:             TypePointer Input 23_2(ivec4)
+        59_5(v4):   32_7(ptr) Variable Input
+            32_8:             TypePointer Input 21_2(int)
+         uint(4):   21_2(int) Constant 4
+            23_3:             TypeVector 22_1(float) 3
+         uint(0):   21_2(int) Constant 0
+         uint(1):   21_2(int) Constant 1
+         uint(2):   21_2(int) Constant 2
+            32_9:             TypePointer Input 22_1(float)
+         59_6(f):   32_9(ptr) Variable Input
+         uint(3):   21_2(int) Constant 3
+           32_10:             TypePointer Output 22_1(float)
+            43_5:   21_1(int) Constant 16
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_7(color):   32_1(ptr) Variable Function
+         59_8(i):   32_3(ptr) Variable Function
+       59_9(sum):   32_6(ptr) Variable Function
+        59_10(i):   32_3(ptr) Variable Function
+        59_11(i):   32_3(ptr) Variable Function
+      59_12(tv4):   32_1(ptr) Variable Function
+        59_13(r):   32_1(ptr) Variable Function
+        59_14(i):   32_3(ptr) Variable Function
+        59_15(i):   32_3(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(BaseColor)
+                              Store 59_7(color) 61_1
+                              Store 59_8(i) 43_1
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 None
+                              Branch 248_3
+           248_3:             Label
+            61_2:   21_1(int) Load 59_8(i)
+            61_3:   21_1(int) Load 59_2(Count)
+           177_1:  20_1(bool) SLessThan 61_2 61_3
+                              BranchConditional 177_1 248_4 248_6
+           248_4:               Label
+            61_4: 23_1(fvec4)   Load 59_3(bigColor)
+            61_5: 23_1(fvec4)   Load 59_7(color)
+           129_1: 23_1(fvec4)   FAdd 61_5 61_4
+                                Store 59_7(color) 129_1
+                                Branch 248_5
+           248_5:               Label
+            61_6:   21_1(int)   Load 59_8(i)
+           128_1:   21_1(int)   IAdd 61_6 43_2
+                                Store 59_8(i) 128_1
+                                Branch 248_2
+           248_6:             Label
+            61_7: 23_1(fvec4) Load 59_7(color)
+                              Store 59_4(gl_FragColor) 61_7
+                              Store 59_9(sum) 43_3
+                              Store 59_10(i) 43_1
+                              Branch 248_7
+           248_7:             Label
+                              LoopMerge 248_11 248_10 None
+                              Branch 248_8
+           248_8:             Label
+            61_8:   21_1(int) Load 59_10(i)
+           177_2:  20_1(bool) SLessThan 61_8 43_4
+                              BranchConditional 177_2 248_9 248_11
+           248_9:               Label
+            61_9:   21_1(int)   Load 59_10(i)
+            65_1:   32_8(ptr)   AccessChain 59_5(v4) 61_9
+           61_10:   21_2(int)   Load 65_1
+           112_1: 22_1(float)   ConvertUToF 61_10
+           61_11: 22_1(float)   Load 59_9(sum)
+           129_2: 22_1(float)   FAdd 61_11 112_1
+                                Store 59_9(sum) 129_2
+                                Branch 248_10
+          248_10:               Label
+           61_12:   21_1(int)   Load 59_10(i)
+           128_2:   21_1(int)   IAdd 61_12 43_2
+                                Store 59_10(i) 128_2
+                                Branch 248_7
+          248_11:             Label
+                              Store 59_11(i) 43_1
+                              Branch 248_12
+          248_12:             Label
+                              LoopMerge 248_16 248_15 None
+                              Branch 248_13
+          248_13:             Label
+           61_13:   21_1(int) Load 59_11(i)
+           177_3:  20_1(bool) SLessThan 61_13 43_4
+                              BranchConditional 177_3 248_14 248_16
+          248_14:               Label
+           61_14:   21_1(int)   Load 59_11(i)
+           61_15:   21_1(int)   Load 59_11(i)
+            65_2:   32_8(ptr)   AccessChain 59_5(v4) 61_15
+           61_16:   21_2(int)   Load 65_2
+           132_1:   21_2(int)   IMul 61_16 uint(4)
+           112_2: 22_1(float)   ConvertUToF 132_1
+            65_3:   32_6(ptr)   AccessChain 59_12(tv4) 61_14
+                                Store 65_3 112_2
+                                Branch 248_15
+          248_15:               Label
+           61_17:   21_1(int)   Load 59_11(i)
+           128_3:   21_1(int)   IAdd 61_17 43_2
+                                Store 59_11(i) 128_3
+                                Branch 248_12
+          248_16:             Label
+           61_18: 22_1(float) Load 59_9(sum)
+            80_1: 23_1(fvec4) CompositeConstruct 61_18 61_18 61_18 61_18
+           61_19: 23_1(fvec4) Load 59_12(tv4)
+           129_3: 23_1(fvec4) FAdd 80_1 61_19
+           61_20: 23_1(fvec4) Load 59_4(gl_FragColor)
+           129_4: 23_1(fvec4) FAdd 61_20 129_3
+                              Store 59_4(gl_FragColor) 129_4
+           61_21: 23_1(fvec4) Load 59_1(BaseColor)
+            79_1: 23_3(fvec3) VectorShuffle 61_21 61_21 0 1 2
+            65_4:   32_6(ptr) AccessChain 59_13(r) uint(0)
+            81_1: 22_1(float) CompositeExtract 79_1 0
+                              Store 65_4 81_1
+            65_5:   32_6(ptr) AccessChain 59_13(r) uint(1)
+            81_2: 22_1(float) CompositeExtract 79_1 1
+                              Store 65_5 81_2
+            65_6:   32_6(ptr) AccessChain 59_13(r) uint(2)
+            81_3: 22_1(float) CompositeExtract 79_1 2
+                              Store 65_6 81_3
+                              Store 59_14(i) 43_1
+                              Branch 248_17
+          248_17:             Label
+                              LoopMerge 248_21 248_20 None
+                              Branch 248_18
+          248_18:             Label
+           61_22:   21_1(int) Load 59_14(i)
+           61_23:   21_1(int) Load 59_2(Count)
+           177_4:  20_1(bool) SLessThan 61_22 61_23
+                              BranchConditional 177_4 248_19 248_21
+          248_19:               Label
+           61_24: 22_1(float)   Load 59_6(f)
+            65_7:   32_6(ptr)   AccessChain 59_13(r) uint(3)
+                                Store 65_7 61_24
+                                Branch 248_20
+          248_20:               Label
+           61_25:   21_1(int)   Load 59_14(i)
+           128_4:   21_1(int)   IAdd 61_25 43_2
+                                Store 59_14(i) 128_4
+                                Branch 248_17
+          248_21:             Label
+           61_26: 23_1(fvec4) Load 59_13(r)
+            79_2: 23_3(fvec3) VectorShuffle 61_26 61_26 0 1 2
+           61_27: 23_1(fvec4) Load 59_4(gl_FragColor)
+            79_3: 23_3(fvec3) VectorShuffle 61_27 61_27 0 1 2
+           129_5: 23_3(fvec3) FAdd 79_3 79_2
+            65_8:  32_10(ptr) AccessChain 59_4(gl_FragColor) uint(0)
+            81_4: 22_1(float) CompositeExtract 129_5 0
+                              Store 65_8 81_4
+            65_9:  32_10(ptr) AccessChain 59_4(gl_FragColor) uint(1)
+            81_5: 22_1(float) CompositeExtract 129_5 1
+                              Store 65_9 81_5
+           65_10:  32_10(ptr) AccessChain 59_4(gl_FragColor) uint(2)
+            81_6: 22_1(float) CompositeExtract 129_5 2
+                              Store 65_10 81_6
+                              Store 59_15(i) 43_1
+                              Branch 248_22
+          248_22:             Label
+                              LoopMerge 248_26 248_25 None
+                              Branch 248_23
+          248_23:             Label
+           61_28:   21_1(int) Load 59_15(i)
+           177_5:  20_1(bool) SLessThan 61_28 43_5
+                              BranchConditional 177_5 248_24 248_26
+          248_24:               Label
+           61_29: 22_1(float)   Load 59_6(f)
+           61_30: 23_1(fvec4)   Load 59_4(gl_FragColor)
+           142_1: 23_1(fvec4)   VectorTimesScalar 61_30 61_29
+                                Store 59_4(gl_FragColor) 142_1
+                                Branch 248_25
+          248_25:               Label
+           61_31:   21_1(int)   Load 59_15(i)
+           128_5:   21_1(int)   IAdd 61_31 43_4
+                                Store 59_15(i) 128_5
+                                Branch 248_22
+          248_26:             Label
                               Return
                               FunctionEnd

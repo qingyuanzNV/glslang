@@ -131,58 +131,58 @@ Shader version: 440
 // Id's are bound by 29
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 9 14 22 27 28
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4 59_5
                               Source GLSL 440
-                              Name 4  "main"
-                              Name 9  "a1"
-                              Name 14  "a2"
-                              Name 20  "gl_PerVertex"
-                              MemberName 20(gl_PerVertex) 0  "gl_Position"
-                              MemberName 20(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 20(gl_PerVertex) 2  "gl_ClipDistance"
-                              Name 22  ""
-                              Name 27  "gl_VertexID"
-                              Name 28  "gl_InstanceID"
-                              Decorate 9(a1) Location 0
-                              Decorate 14(a2) Location 1
-                              Decorate 20(gl_PerVertex) Block
-                              MemberDecorate 20(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 20(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 20(gl_PerVertex) 2 BuiltIn ClipDistance
-                              Decorate 27(gl_VertexID) BuiltIn VertexId
-                              Decorate 28(gl_InstanceID) BuiltIn InstanceId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Output 7(fvec4)
-           9(a1):      8(ptr) Variable Output
-              10:    6(float) Constant 1065353216
-              11:    7(fvec4) ConstantComposite 10 10 10 10
-              12:             TypeVector 6(float) 2
-              13:             TypePointer Output 12(fvec2)
-          14(a2):     13(ptr) Variable Output
-              15:    6(float) Constant 1056964608
-              16:   12(fvec2) ConstantComposite 15 15
-              17:             TypeInt 32 0
-              18:     17(int) Constant 1
-              19:             TypeArray 6(float) 18
-20(gl_PerVertex):             TypeStruct 7(fvec4) 6(float) 19
-              21:             TypePointer Output 20(gl_PerVertex)
-              22:     21(ptr) Variable Output
-              23:             TypeInt 32 1
-              24:     23(int) Constant 0
-              26:             TypePointer Input 23(int)
- 27(gl_VertexID):     26(ptr) Variable Input
-28(gl_InstanceID):     26(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-                              Store 9(a1) 11
-                              Store 14(a2) 16
-              25:      8(ptr) AccessChain 22 24
-                              Store 25 11
+                              Name 54_1  "main"
+                              Name 59_1  "a1"
+                              Name 59_2  "a2"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_1(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_1(gl_PerVertex) 2  "gl_ClipDistance"
+                              Name 59_3  ""
+                              Name 59_4  "gl_VertexID"
+                              Name 59_5  "gl_InstanceID"
+                              Decorate 59_1(a1) Location 0
+                              Decorate 59_2(a2) Location 1
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_1(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_1(gl_PerVertex) 2 BuiltIn ClipDistance
+                              Decorate 59_4(gl_VertexID) BuiltIn VertexId
+                              Decorate 59_5(gl_InstanceID) BuiltIn InstanceId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Output 23_1(fvec4)
+        59_1(a1):   32_1(ptr) Variable Output
+            43_1: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            23_2:             TypeVector 22_1(float) 2
+            32_2:             TypePointer Output 23_2(fvec2)
+        59_2(a2):   32_2(ptr) Variable Output
+            43_2: 22_1(float) Constant 1056964608
+            44_2: 23_2(fvec2) ConstantComposite 43_2 43_2
+            21_1:             TypeInt 32 0
+         uint(1):   21_1(int) Constant 1
+            28_1:             TypeArray 22_1(float) uint(1)
+30_1(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float) 28_1
+            32_3:             TypePointer Output 30_1(gl_PerVertex)
+            59_3:   32_3(ptr) Variable Output
+            21_2:             TypeInt 32 1
+            43_3:   21_2(int) Constant 0
+            32_4:             TypePointer Input 21_2(int)
+59_4(gl_VertexID):   32_4(ptr) Variable Input
+59_5(gl_InstanceID):   32_4(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+                              Store 59_1(a1) 44_1
+                              Store 59_2(a2) 44_2
+            65_1:   32_1(ptr) AccessChain 59_3 43_3
+                              Store 65_1 44_1
                               Return
                               FunctionEnd
 // Module Version 10000
@@ -190,47 +190,47 @@ Shader version: 440
 // Id's are bound by 29
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 9 13
-                              ExecutionMode 4 OriginLowerLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginLowerLeft
                               Source GLSL 440
-                              Name 4  "main"
-                              Name 9  "color"
-                              Name 11  "Inputs"
-                              MemberName 11(Inputs) 0  "a1"
-                              MemberName 11(Inputs) 1  "a2"
-                              Name 13  ""
-                              Decorate 9(color) Location 0
-                              Decorate 11(Inputs) Block
-                              Decorate 13 Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Output 7(fvec4)
-        9(color):      8(ptr) Variable Output
-              10:             TypeVector 6(float) 2
-      11(Inputs):             TypeStruct 7(fvec4) 10(fvec2)
-              12:             TypePointer Input 11(Inputs)
-              13:     12(ptr) Variable Input
-              14:             TypeInt 32 1
-              15:     14(int) Constant 0
-              16:             TypePointer Input 7(fvec4)
-              20:     14(int) Constant 1
-              21:             TypePointer Input 10(fvec2)
-         4(main):           2 Function None 3
-               5:             Label
-              17:     16(ptr) AccessChain 13 15
-              18:    7(fvec4) Load 17
-              19:   10(fvec2) VectorShuffle 18 18 0 1
-              22:     21(ptr) AccessChain 13 20
-              23:   10(fvec2) Load 22
-              24:    6(float) CompositeExtract 19 0
-              25:    6(float) CompositeExtract 19 1
-              26:    6(float) CompositeExtract 23 0
-              27:    6(float) CompositeExtract 23 1
-              28:    7(fvec4) CompositeConstruct 24 25 26 27
-                              Store 9(color) 28
+                              Name 54_1  "main"
+                              Name 59_1  "color"
+                              Name 30_1  "Inputs"
+                              MemberName 30_1(Inputs) 0  "a1"
+                              MemberName 30_1(Inputs) 1  "a2"
+                              Name 59_2  ""
+                              Decorate 59_1(color) Location 0
+                              Decorate 30_1(Inputs) Block
+                              Decorate 59_2 Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Output 23_1(fvec4)
+     59_1(color):   32_1(ptr) Variable Output
+            23_2:             TypeVector 22_1(float) 2
+    30_1(Inputs):             TypeStruct 23_1(fvec4) 23_2(fvec2)
+            32_2:             TypePointer Input 30_1(Inputs)
+            59_2:   32_2(ptr) Variable Input
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            32_3:             TypePointer Input 23_1(fvec4)
+            43_2:   21_1(int) Constant 1
+            32_4:             TypePointer Input 23_2(fvec2)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2 43_1
+            61_1: 23_1(fvec4) Load 65_1
+            79_1: 23_2(fvec2) VectorShuffle 61_1 61_1 0 1
+            65_2:   32_4(ptr) AccessChain 59_2 43_2
+            61_2: 23_2(fvec2) Load 65_2
+            81_1: 22_1(float) CompositeExtract 79_1 0
+            81_2: 22_1(float) CompositeExtract 79_1 1
+            81_3: 22_1(float) CompositeExtract 61_2 0
+            81_4: 22_1(float) CompositeExtract 61_2 1
+            80_1: 23_1(fvec4) CompositeConstruct 81_1 81_2 81_3 81_4
+                              Store 59_1(color) 80_1
                               Return
                               FunctionEnd

@@ -5,16 +5,16 @@ spv.debuginfo.hlsl.vert
 
                               Capability Shader
                               Extension  "SPV_KHR_non_semantic_info"
-               1:             ExtInstImport  "NonSemantic.Shader.DebugInfo.100"
-               3:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "NonSemantic.Shader.DebugInfo.100"
+            11_2:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 6  "main" 462 465 469 472 475 478 482 486 494 498 501 504 507 510
-               2:             String  ""
-               9:             String  "float"
-              12:             String  "uint"
-              24:             String  "int"
-              29:             String  "instanceRot"
-              31:             String  "// OpModuleProcessed auto-map-locations
+                              EntryPoint Vertex 54_1  "main" 59_2 59_3 59_4 59_5 59_6 59_7 59_8 59_9 59_10 59_11 59_12 59_13 59_14 59_15
+             7_1:             String  ""
+             7_2:             String  "float"
+             7_3:             String  "uint"
+             7_4:             String  "int"
+             7_5:             String  "instanceRot"
+             7_6:             String  "// OpModuleProcessed auto-map-locations
 // OpModuleProcessed auto-map-bindings
 // OpModuleProcessed entry-point main
 // OpModuleProcessed client vulkan100
@@ -23,633 +23,633 @@ spv.debuginfo.hlsl.vert
 // OpModuleProcessed hlsl-offsets
 #line 1
 "
-              36:             String  "UV"
-              43:             String  "instanceScale"
-              47:             String  "instanceTexIndex"
-              51:             String  "VSInput"
-              63:             String  "Pos"
-              67:             String  "LightVec"
-              74:             String  "VSOutput"
-              80:             String  "@main"
-              83:             String  "input"
-              93:             String  "output"
-             130:             String  "s"
-             140:             String  "bool"
-             145:             String  "modelview"
-             150:             String  "lightPos"
-             154:             String  "globSpeed"
-             158:             String  "UBO"
-             161:             String  "ubo"
-             178:             String  "c"
-             194:             String  "mx"
-             229:             String  "my"
-             263:             String  "mz"
-             283:             String  "rotMat"
-             313:             String  "gRotMat"
-             341:             String  "locPos"
-             355:             String  "pos"
-             421:             String  "lPos"
-                              Name 6  "main"
-                              Name 27  "VSInput"
-                              MemberName 27(VSInput) 0  "Pos"
-                              MemberName 27(VSInput) 1  "Normal"
-                              MemberName 27(VSInput) 2  "UV"
-                              MemberName 27(VSInput) 3  "Color"
-                              MemberName 27(VSInput) 4  "instancePos"
-                              MemberName 27(VSInput) 5  "instanceRot"
-                              MemberName 27(VSInput) 6  "instanceScale"
-                              MemberName 27(VSInput) 7  "instanceTexIndex"
-                              Name 61  "VSOutput"
-                              MemberName 61(VSOutput) 0  "Pos"
-                              MemberName 61(VSOutput) 1  "Normal"
-                              MemberName 61(VSOutput) 2  "Color"
-                              MemberName 61(VSOutput) 3  "UV"
-                              MemberName 61(VSOutput) 4  "ViewVec"
-                              MemberName 61(VSOutput) 5  "LightVec"
-                              Name 78  "@main(struct-VSInput-vf3-vf3-vf2-vf3-vf3-vf3-f1-i11;"
-                              Name 77  "input"
-                              Name 91  "output"
-                              Name 128  "s"
-                              Name 143  "UBO"
-                              MemberName 143(UBO) 0  "projection"
-                              MemberName 143(UBO) 1  "modelview"
-                              MemberName 143(UBO) 2  "lightPos"
-                              MemberName 143(UBO) 3  "locSpeed"
-                              MemberName 143(UBO) 4  "globSpeed"
-                              Name 159  "ubo"
-                              MemberName 159(ubo) 0  "ubo"
-                              Name 166  ""
-                              Name 176  "c"
-                              Name 192  "mx"
-                              Name 227  "my"
-                              Name 261  "mz"
-                              Name 281  "rotMat"
-                              Name 311  "gRotMat"
-                              Name 339  "locPos"
-                              Name 353  "pos"
-                              Name 419  "lPos"
-                              Name 460  "input"
-                              Name 462  "input.Pos"
-                              Name 465  "input.Normal"
-                              Name 469  "input.UV"
-                              Name 472  "input.Color"
-                              Name 475  "input.instancePos"
-                              Name 478  "input.instanceRot"
-                              Name 482  "input.instanceScale"
-                              Name 486  "input.instanceTexIndex"
-                              Name 489  "flattenTemp"
-                              Name 490  "param"
-                              Name 494  "@entryPointOutput.Pos"
-                              Name 498  "@entryPointOutput.Normal"
-                              Name 501  "@entryPointOutput.Color"
-                              Name 504  "@entryPointOutput.UV"
-                              Name 507  "@entryPointOutput.ViewVec"
-                              Name 510  "@entryPointOutput.LightVec"
-                              MemberDecorate 143(UBO) 0 RowMajor
-                              MemberDecorate 143(UBO) 0 MatrixStride 16
-                              MemberDecorate 143(UBO) 0 Offset 0
-                              MemberDecorate 143(UBO) 1 RowMajor
-                              MemberDecorate 143(UBO) 1 MatrixStride 16
-                              MemberDecorate 143(UBO) 1 Offset 64
-                              MemberDecorate 143(UBO) 2 Offset 128
-                              MemberDecorate 143(UBO) 3 Offset 144
-                              MemberDecorate 143(UBO) 4 Offset 148
-                              Decorate 159(ubo) Block
-                              MemberDecorate 159(ubo) 0 Offset 0
-                              Decorate 166 Binding 0
-                              Decorate 166 DescriptorSet 0
-                              Decorate 462(input.Pos) Location 0
-                              Decorate 465(input.Normal) Location 1
-                              Decorate 469(input.UV) Location 2
-                              Decorate 472(input.Color) Location 3
-                              Decorate 475(input.instancePos) Location 4
-                              Decorate 478(input.instanceRot) Location 5
-                              Decorate 482(input.instanceScale) Location 6
-                              Decorate 486(input.instanceTexIndex) Location 7
-                              Decorate 494(@entryPointOutput.Pos) BuiltIn Position
-                              Decorate 498(@entryPointOutput.Normal) Location 0
-                              Decorate 501(@entryPointOutput.Color) Location 1
-                              Decorate 504(@entryPointOutput.UV) Location 2
-                              Decorate 507(@entryPointOutput.ViewVec) Location 3
-                              Decorate 510(@entryPointOutput.LightVec) Location 4
-               4:             TypeVoid
-               5:             TypeFunction 4
-               8:             TypeFloat 32
-              11:             TypeInt 32 0
-              14:     11(int) Constant 32
-              15:     11(int) Constant 6
-              16:     11(int) Constant 0
-              13:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 12 14 15 16
-              17:     11(int) Constant 3
-              10:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 9 14 17 16
-              18:             TypeVector 8(float) 3
-              19:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 10 17
-              20:             TypeVector 8(float) 2
-              21:     11(int) Constant 2
-              22:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 10 21
-              23:             TypeInt 32 1
-              26:     11(int) Constant 4
-              25:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 24 14 26 16
-     27(VSInput):             TypeStruct 18(fvec3) 18(fvec3) 20(fvec2) 18(fvec3) 18(fvec3) 18(fvec3) 8(float) 23(int)
-              30:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 35(DebugSource) 2 31
-              32:     11(int) Constant 35
-              33:     11(int) Constant 40
-              28:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 29 19 30 32 33 16 16 17
-              34:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 29 19 30 32 33 16 16 17
-              37:     11(int) Constant 30
-              38:     11(int) Constant 31
-              35:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 36 22 30 37 38 16 16 17
-              39:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 29 19 30 32 33 16 16 17
-              40:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 29 19 30 32 33 16 16 17
-              41:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 29 19 30 32 33 16 16 17
-              44:     11(int) Constant 36
-              45:     11(int) Constant 41
-              42:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 43 10 30 44 45 16 16 17
-              48:     11(int) Constant 37
-              49:     11(int) Constant 42
-              46:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 47 25 30 48 49 16 16 17
-              52:     11(int) Constant 1
-              53:     11(int) Constant 62
-              55:     11(int) Constant 5
-              54:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 1(DebugCompilationUnit) 52 26 30 55
-              50:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 51 52 30 53 16 54 51 16 17 28 34 35 39 40 41 42 46
-              56:             TypePointer Function 27(VSInput)
-              57:     11(int) Constant 7
-              58:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 50 57 16
-              59:             TypeVector 8(float) 4
-              60:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 10 26
-    61(VSOutput):             TypeStruct 59(fvec4) 18(fvec3) 18(fvec3) 18(fvec3) 18(fvec3) 18(fvec3)
-              64:     11(int) Constant 53
-              65:     11(int) Constant 13
-              62:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 63 60 30 64 65 16 16 17
-              68:     11(int) Constant 58
-              66:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 67 19 30 68 48 16 16 17
-              69:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 67 19 30 68 48 16 16 17
-              70:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 67 19 30 68 48 16 16 17
-              71:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 67 19 30 68 48 16 16 17
-              72:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 67 19 30 68 48 16 16 17
-              73:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 74 52 30 53 16 54 74 16 17 62 66 69 70 71 72
-              75:             TypeFunction 61(VSOutput) 56(ptr)
-              76:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 8(DebugTypeFunction) 17 73 50
-              81:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 80 76 30 53 16 54 80 17 53
-              82:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 83 50 30 53 16 81 26 52
-              85:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 31(DebugExpression)
-              89:             TypePointer Function 61(VSOutput)
-              90:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 73 57 16
-              94:     11(int) Constant 63
-              92:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 93 73 30 94 16 81 26
-              97:    8(float) Constant 0
-              98:   59(fvec4) ConstantComposite 97 97 97 97
-              99:   18(fvec3) ConstantComposite 97 97 97
-             100:61(VSOutput) ConstantComposite 98 99 99 99 99 99
-             101:     23(int) Constant 2
-             102:     23(int) Constant 3
-             103:             TypePointer Function 18(fvec3)
-             104:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 19 57 16
-             107:     11(int) Constant 64
-             110:             TypePointer Function 20(fvec2)
-             111:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 22 57 16
-             114:     11(int) Constant 65
-             116:     23(int) Constant 7
-             117:             TypePointer Function 23(int)
-             118:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 25 57 16
-             126:             TypePointer Function 8(float)
-             127:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 10 57 16
-             131:     11(int) Constant 68
-             129:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 130 10 30 131 16 81 26
-             134:     23(int) Constant 5
-             137:             TypeMatrix 59(fvec4) 4
-             139:             TypeBool
-             141:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 140 14 21 16
-             142:   139(bool) ConstantTrue
-             138:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 108(DebugTypeMatrix) 60 26 142
-        143(UBO):             TypeStruct 137 137 59(fvec4) 8(float) 8(float)
-             146:     11(int) Constant 43
-             147:     11(int) Constant 20
-             144:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 145 138 30 146 147 16 16 17
-             148:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 145 138 30 146 147 16 16 17
-             151:     11(int) Constant 44
-             152:     11(int) Constant 17
-             149:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 150 60 30 151 152 16 16 17
-             155:     11(int) Constant 46
-             153:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 154 10 30 155 152 16 16 17
-             156:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 154 10 30 155 152 16 16 17
-             157:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 158 52 30 131 16 54 158 16 17 144 148 149 153 156
-        159(ubo):             TypeStruct 143(UBO)
-             162:     11(int) Constant 49
-             160:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 161 157 30 162 48 16 16 17
-             163:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 161 52 30 131 16 54 161 16 17 160
-             164:             TypePointer Uniform 159(ubo)
-             165:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 163 21 16
-             166:    164(ptr) Variable Uniform
-             168:     11(int) Constant 8
-             167:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 2 163 30 131 16 54 2 166 168
-             169:     23(int) Constant 0
-             170:             TypePointer Uniform 8(float)
-             171:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 10 21 16
-             179:     11(int) Constant 69
-             177:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 178 10 30 179 16 81 26
-             188:             TypeMatrix 18(fvec3) 3
-             189:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 108(DebugTypeMatrix) 19 17 142
-             190:             TypePointer Function 188
-             191:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 189 57 16
-             195:     11(int) Constant 71
-             193:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 194 189 30 195 16 81 26
-             203:     11(int) Constant 72
-             205:    8(float) Constant 1065353216
-             213:     11(int) Constant 76
-             221:     11(int) Constant 77
-             230:     11(int) Constant 79
-             228:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 229 189 30 230 16 81 26
-             238:     11(int) Constant 81
-             247:     11(int) Constant 84
-             255:     11(int) Constant 85
-             264:     11(int) Constant 87
-             262:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 263 189 30 264 16 81 26
-             269:     11(int) Constant 88
-             274:     11(int) Constant 89
-             284:     11(int) Constant 91
-             282:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 283 189 30 284 16 81 26
-             294:     11(int) Constant 94
-             296:     23(int) Constant 4
-             303:     11(int) Constant 95
-             309:             TypePointer Function 137
-             310:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 138 57 16
-             314:     11(int) Constant 96
-             312:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 313 138 30 314 16 81 26
-             321:             TypePointer Function 59(fvec4)
-             322:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 60 57 16
-             324:     23(int) Constant 1
-             325:   59(fvec4) ConstantComposite 97 205 97 97
-             328:     11(int) Constant 97
-             331:     11(int) Constant 98
-             335:   59(fvec4) ConstantComposite 97 97 97 205
-             338:     11(int) Constant 99
-             342:     11(int) Constant 101
-             340:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 341 60 30 342 16 81 26
-             356:     11(int) Constant 102
-             354:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 355 60 30 356 16 81 26
-             361:     23(int) Constant 6
-             374:     11(int) Constant 104
-             377:             TypePointer Uniform 137
-             378:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 138 21 16
-             388:     11(int) Constant 105
-             407:     11(int) Constant 107
-             422:     11(int) Constant 108
-             420:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 421 19 30 422 16 81 26
-             425:             TypePointer Uniform 59(fvec4)
-             426:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 60 21 16
-             442:     11(int) Constant 109
-             449:     11(int) Constant 110
-             455:     11(int) Constant 111
-             461:             TypePointer Input 18(fvec3)
-  462(input.Pos):    461(ptr) Variable Input
-465(input.Normal):    461(ptr) Variable Input
-             468:             TypePointer Input 20(fvec2)
-   469(input.UV):    468(ptr) Variable Input
-472(input.Color):    461(ptr) Variable Input
-475(input.instancePos):    461(ptr) Variable Input
-478(input.instanceRot):    461(ptr) Variable Input
-             481:             TypePointer Input 8(float)
-482(input.instanceScale):    481(ptr) Variable Input
-             485:             TypePointer Input 23(int)
-486(input.instanceTexIndex):    485(ptr) Variable Input
-             493:             TypePointer Output 59(fvec4)
-494(@entryPointOutput.Pos):    493(ptr) Variable Output
-             497:             TypePointer Output 18(fvec3)
-498(@entryPointOutput.Normal):    497(ptr) Variable Output
-501(@entryPointOutput.Color):    497(ptr) Variable Output
-504(@entryPointOutput.UV):    497(ptr) Variable Output
-507(@entryPointOutput.ViewVec):    497(ptr) Variable Output
-510(@entryPointOutput.LightVec):    497(ptr) Variable Output
-         6(main):           4 Function None 5
-               7:             Label
-      460(input):     56(ptr) Variable Function
-489(flattenTemp):     89(ptr) Variable Function
-      490(param):     56(ptr) Variable Function
-             463:   18(fvec3) Load 462(input.Pos)
-             464:    103(ptr) AccessChain 460(input) 169
-                              Store 464 463
-             466:   18(fvec3) Load 465(input.Normal)
-             467:    103(ptr) AccessChain 460(input) 324
-                              Store 467 466
-             470:   20(fvec2) Load 469(input.UV)
-             471:    110(ptr) AccessChain 460(input) 101
-                              Store 471 470
-             473:   18(fvec3) Load 472(input.Color)
-             474:    103(ptr) AccessChain 460(input) 102
-                              Store 474 473
-             476:   18(fvec3) Load 475(input.instancePos)
-             477:    103(ptr) AccessChain 460(input) 296
-                              Store 477 476
-             479:   18(fvec3) Load 478(input.instanceRot)
-             480:    103(ptr) AccessChain 460(input) 134
-                              Store 480 479
-             483:    8(float) Load 482(input.instanceScale)
-             484:    126(ptr) AccessChain 460(input) 361
-                              Store 484 483
-             487:     23(int) Load 486(input.instanceTexIndex)
-             488:    117(ptr) AccessChain 460(input) 116
-                              Store 488 487
-             491: 27(VSInput) Load 460(input)
-                              Store 490(param) 491
-             492:61(VSOutput) FunctionCall 78(@main(struct-VSInput-vf3-vf3-vf2-vf3-vf3-vf3-f1-i11;) 490(param)
-                              Store 489(flattenTemp) 492
-             495:    321(ptr) AccessChain 489(flattenTemp) 169
-             496:   59(fvec4) Load 495
-                              Store 494(@entryPointOutput.Pos) 496
-             499:    103(ptr) AccessChain 489(flattenTemp) 324
-             500:   18(fvec3) Load 499
-                              Store 498(@entryPointOutput.Normal) 500
-             502:    103(ptr) AccessChain 489(flattenTemp) 101
-             503:   18(fvec3) Load 502
-                              Store 501(@entryPointOutput.Color) 503
-             505:    103(ptr) AccessChain 489(flattenTemp) 102
-             506:   18(fvec3) Load 505
-                              Store 504(@entryPointOutput.UV) 506
-             508:    103(ptr) AccessChain 489(flattenTemp) 296
-             509:   18(fvec3) Load 508
-                              Store 507(@entryPointOutput.ViewVec) 509
-             511:    103(ptr) AccessChain 489(flattenTemp) 134
-             512:   18(fvec3) Load 511
-                              Store 510(@entryPointOutput.LightVec) 512
+             7_7:             String  "UV"
+             7_8:             String  "instanceScale"
+             7_9:             String  "instanceTexIndex"
+            7_10:             String  "VSInput"
+            7_11:             String  "Pos"
+            7_12:             String  "LightVec"
+            7_13:             String  "VSOutput"
+            7_14:             String  "@main"
+            7_15:             String  "input"
+            7_16:             String  "output"
+            7_17:             String  "s"
+            7_18:             String  "bool"
+            7_19:             String  "modelview"
+            7_20:             String  "lightPos"
+            7_21:             String  "globSpeed"
+            7_22:             String  "UBO"
+            7_23:             String  "ubo"
+            7_24:             String  "c"
+            7_25:             String  "mx"
+            7_26:             String  "my"
+            7_27:             String  "mz"
+            7_28:             String  "rotMat"
+            7_29:             String  "gRotMat"
+            7_30:             String  "locPos"
+            7_31:             String  "pos"
+            7_32:             String  "lPos"
+                              Name 54_1  "main"
+                              Name 30_1  "VSInput"
+                              MemberName 30_1(VSInput) 0  "Pos"
+                              MemberName 30_1(VSInput) 1  "Normal"
+                              MemberName 30_1(VSInput) 2  "UV"
+                              MemberName 30_1(VSInput) 3  "Color"
+                              MemberName 30_1(VSInput) 4  "instancePos"
+                              MemberName 30_1(VSInput) 5  "instanceRot"
+                              MemberName 30_1(VSInput) 6  "instanceScale"
+                              MemberName 30_1(VSInput) 7  "instanceTexIndex"
+                              Name 30_2  "VSOutput"
+                              MemberName 30_2(VSOutput) 0  "Pos"
+                              MemberName 30_2(VSOutput) 1  "Normal"
+                              MemberName 30_2(VSOutput) 2  "Color"
+                              MemberName 30_2(VSOutput) 3  "UV"
+                              MemberName 30_2(VSOutput) 4  "ViewVec"
+                              MemberName 30_2(VSOutput) 5  "LightVec"
+                              Name 54_2  "@main(struct-VSInput-vf3-vf3-vf2-vf3-vf3-vf3-f1-i11;"
+                              Name 55_1  "input"
+                              Name 59_19  "output"
+                              Name 59_20  "s"
+                              Name 30_3  "UBO"
+                              MemberName 30_3(UBO) 0  "projection"
+                              MemberName 30_3(UBO) 1  "modelview"
+                              MemberName 30_3(UBO) 2  "lightPos"
+                              MemberName 30_3(UBO) 3  "locSpeed"
+                              MemberName 30_3(UBO) 4  "globSpeed"
+                              Name 30_4  "ubo"
+                              MemberName 30_4(ubo) 0  "ubo"
+                              Name 59_1  ""
+                              Name 59_21  "c"
+                              Name 59_22  "mx"
+                              Name 59_23  "my"
+                              Name 59_24  "mz"
+                              Name 59_25  "rotMat"
+                              Name 59_26  "gRotMat"
+                              Name 59_27  "locPos"
+                              Name 59_28  "pos"
+                              Name 59_29  "lPos"
+                              Name 59_16  "input"
+                              Name 59_2  "input.Pos"
+                              Name 59_3  "input.Normal"
+                              Name 59_4  "input.UV"
+                              Name 59_5  "input.Color"
+                              Name 59_6  "input.instancePos"
+                              Name 59_7  "input.instanceRot"
+                              Name 59_8  "input.instanceScale"
+                              Name 59_9  "input.instanceTexIndex"
+                              Name 59_17  "flattenTemp"
+                              Name 59_18  "param"
+                              Name 59_10  "@entryPointOutput.Pos"
+                              Name 59_11  "@entryPointOutput.Normal"
+                              Name 59_12  "@entryPointOutput.Color"
+                              Name 59_13  "@entryPointOutput.UV"
+                              Name 59_14  "@entryPointOutput.ViewVec"
+                              Name 59_15  "@entryPointOutput.LightVec"
+                              MemberDecorate 30_3(UBO) 0 RowMajor
+                              MemberDecorate 30_3(UBO) 0 MatrixStride 16
+                              MemberDecorate 30_3(UBO) 0 Offset 0
+                              MemberDecorate 30_3(UBO) 1 RowMajor
+                              MemberDecorate 30_3(UBO) 1 MatrixStride 16
+                              MemberDecorate 30_3(UBO) 1 Offset 64
+                              MemberDecorate 30_3(UBO) 2 Offset 128
+                              MemberDecorate 30_3(UBO) 3 Offset 144
+                              MemberDecorate 30_3(UBO) 4 Offset 148
+                              Decorate 30_4(ubo) Block
+                              MemberDecorate 30_4(ubo) 0 Offset 0
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(input.Pos) Location 0
+                              Decorate 59_3(input.Normal) Location 1
+                              Decorate 59_4(input.UV) Location 2
+                              Decorate 59_5(input.Color) Location 3
+                              Decorate 59_6(input.instancePos) Location 4
+                              Decorate 59_7(input.instanceRot) Location 5
+                              Decorate 59_8(input.instanceScale) Location 6
+                              Decorate 59_9(input.instanceTexIndex) Location 7
+                              Decorate 59_10(@entryPointOutput.Pos) BuiltIn Position
+                              Decorate 59_11(@entryPointOutput.Normal) Location 0
+                              Decorate 59_12(@entryPointOutput.Color) Location 1
+                              Decorate 59_13(@entryPointOutput.UV) Location 2
+                              Decorate 59_14(@entryPointOutput.ViewVec) Location 3
+                              Decorate 59_15(@entryPointOutput.LightVec) Location 4
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            21_1:             TypeInt 32 0
+        uint(32):   21_1(int) Constant 32
+         uint(6):   21_1(int) Constant 6
+         uint(0):   21_1(int) Constant 0
+           1-2_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_3 uint(32) uint(6) uint(0)
+         uint(3):   21_1(int) Constant 3
+           1-2_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_2 uint(32) uint(3) uint(0)
+            23_1:             TypeVector 22_1(float) 3
+           1-6_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 1-2_2 uint(3)
+            23_2:             TypeVector 22_1(float) 2
+         uint(2):   21_1(int) Constant 2
+           1-6_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 1-2_2 uint(2)
+            21_2:             TypeInt 32 1
+         uint(4):   21_1(int) Constant 4
+           1-2_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_4 uint(32) uint(4) uint(0)
+   30_1(VSInput):             TypeStruct 23_1(fvec3) 23_1(fvec3) 23_2(fvec2) 23_1(fvec3) 23_1(fvec3) 23_1(fvec3) 22_1(float) 21_2(int)
+          1-35_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 35(DebugSource) 7_1 7_6
+        uint(35):   21_1(int) Constant 35
+        uint(40):   21_1(int) Constant 40
+          1-11_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_5 1-6_1 1-35_1 uint(35) uint(40) uint(0) uint(0) uint(3)
+          1-11_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_5 1-6_1 1-35_1 uint(35) uint(40) uint(0) uint(0) uint(3)
+        uint(30):   21_1(int) Constant 30
+        uint(31):   21_1(int) Constant 31
+          1-11_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_7 1-6_2 1-35_1 uint(30) uint(31) uint(0) uint(0) uint(3)
+          1-11_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_5 1-6_1 1-35_1 uint(35) uint(40) uint(0) uint(0) uint(3)
+          1-11_5:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_5 1-6_1 1-35_1 uint(35) uint(40) uint(0) uint(0) uint(3)
+          1-11_6:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_5 1-6_1 1-35_1 uint(35) uint(40) uint(0) uint(0) uint(3)
+        uint(36):   21_1(int) Constant 36
+        uint(41):   21_1(int) Constant 41
+          1-11_7:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_8 1-2_2 1-35_1 uint(36) uint(41) uint(0) uint(0) uint(3)
+        uint(37):   21_1(int) Constant 37
+        uint(42):   21_1(int) Constant 42
+          1-11_8:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_9 1-2_3 1-35_1 uint(37) uint(42) uint(0) uint(0) uint(3)
+         uint(1):   21_1(int) Constant 1
+        uint(62):   21_1(int) Constant 62
+         uint(5):   21_1(int) Constant 5
+           1-1_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 1(DebugCompilationUnit) uint(1) uint(4) 1-35_1 uint(5)
+          1-10_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 7_10 uint(1) 1-35_1 uint(62) uint(0) 1-1_1 7_10 uint(0) uint(3) 1-11_1 1-11_2 1-11_3 1-11_4 1-11_5 1-11_6 1-11_7 1-11_8
+            32_1:             TypePointer Function 30_1(VSInput)
+         uint(7):   21_1(int) Constant 7
+           1-3_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-10_1 uint(7) uint(0)
+            23_3:             TypeVector 22_1(float) 4
+           1-6_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 6(DebugTypeVector) 1-2_2 uint(4)
+  30_2(VSOutput):             TypeStruct 23_3(fvec4) 23_1(fvec3) 23_1(fvec3) 23_1(fvec3) 23_1(fvec3) 23_1(fvec3)
+        uint(53):   21_1(int) Constant 53
+        uint(13):   21_1(int) Constant 13
+          1-11_9:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_11 1-6_3 1-35_1 uint(53) uint(13) uint(0) uint(0) uint(3)
+        uint(58):   21_1(int) Constant 58
+         1-11_10:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_12 1-6_1 1-35_1 uint(58) uint(37) uint(0) uint(0) uint(3)
+         1-11_11:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_12 1-6_1 1-35_1 uint(58) uint(37) uint(0) uint(0) uint(3)
+         1-11_12:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_12 1-6_1 1-35_1 uint(58) uint(37) uint(0) uint(0) uint(3)
+         1-11_13:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_12 1-6_1 1-35_1 uint(58) uint(37) uint(0) uint(0) uint(3)
+         1-11_14:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_12 1-6_1 1-35_1 uint(58) uint(37) uint(0) uint(0) uint(3)
+          1-10_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 7_13 uint(1) 1-35_1 uint(62) uint(0) 1-1_1 7_13 uint(0) uint(3) 1-11_9 1-11_10 1-11_11 1-11_12 1-11_13 1-11_14
+            33_2:             TypeFunction 30_2(VSOutput) 32_1(ptr)
+           1-8_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 8(DebugTypeFunction) uint(3) 1-10_2 1-10_1
+          1-20_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 20(DebugFunction) 7_14 1-8_1 1-35_1 uint(62) uint(0) 1-1_1 7_14 uint(3) uint(62)
+          1-26_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_15 1-10_1 1-35_1 uint(62) uint(0) 1-20_1 uint(4) uint(1)
+          1-31_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 31(DebugExpression)
+            32_2:             TypePointer Function 30_2(VSOutput)
+           1-3_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-10_2 uint(7) uint(0)
+        uint(63):   21_1(int) Constant 63
+          1-26_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_16 1-10_2 1-35_1 uint(63) uint(0) 1-20_1 uint(4)
+            43_1: 22_1(float) Constant 0
+            44_1: 23_3(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            44_2: 23_1(fvec3) ConstantComposite 43_1 43_1 43_1
+            44_3:30_2(VSOutput) ConstantComposite 44_1 44_2 44_2 44_2 44_2 44_2
+            43_2:   21_2(int) Constant 2
+            43_3:   21_2(int) Constant 3
+            32_3:             TypePointer Function 23_1(fvec3)
+           1-3_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-6_1 uint(7) uint(0)
+        uint(64):   21_1(int) Constant 64
+            32_4:             TypePointer Function 23_2(fvec2)
+           1-3_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-6_2 uint(7) uint(0)
+        uint(65):   21_1(int) Constant 65
+            43_4:   21_2(int) Constant 7
+            32_5:             TypePointer Function 21_2(int)
+           1-3_5:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-2_3 uint(7) uint(0)
+            32_6:             TypePointer Function 22_1(float)
+           1-3_6:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-2_2 uint(7) uint(0)
+        uint(68):   21_1(int) Constant 68
+          1-26_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_17 1-2_2 1-35_1 uint(68) uint(0) 1-20_1 uint(4)
+            43_5:   21_2(int) Constant 5
+            24_1:             TypeMatrix 23_3(fvec4) 4
+            20_1:             TypeBool
+           1-2_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 2(DebugTypeBasic) 7_18 uint(32) uint(2) uint(0)
+            41_1:  20_1(bool) ConstantTrue
+         1-108_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 108(DebugTypeMatrix) 1-6_3 uint(4) 41_1
+       30_3(UBO):             TypeStruct 24_1 24_1 23_3(fvec4) 22_1(float) 22_1(float)
+        uint(43):   21_1(int) Constant 43
+        uint(20):   21_1(int) Constant 20
+         1-11_15:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_19 1-108_1 1-35_1 uint(43) uint(20) uint(0) uint(0) uint(3)
+         1-11_16:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_19 1-108_1 1-35_1 uint(43) uint(20) uint(0) uint(0) uint(3)
+        uint(44):   21_1(int) Constant 44
+        uint(17):   21_1(int) Constant 17
+         1-11_17:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_20 1-6_3 1-35_1 uint(44) uint(17) uint(0) uint(0) uint(3)
+        uint(46):   21_1(int) Constant 46
+         1-11_18:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_21 1-2_2 1-35_1 uint(46) uint(17) uint(0) uint(0) uint(3)
+         1-11_19:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_21 1-2_2 1-35_1 uint(46) uint(17) uint(0) uint(0) uint(3)
+          1-10_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 7_22 uint(1) 1-35_1 uint(68) uint(0) 1-1_1 7_22 uint(0) uint(3) 1-11_15 1-11_16 1-11_17 1-11_18 1-11_19
+       30_4(ubo):             TypeStruct 30_3(UBO)
+        uint(49):   21_1(int) Constant 49
+         1-11_20:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 11(DebugTypeMember) 7_23 1-10_3 1-35_1 uint(49) uint(37) uint(0) uint(0) uint(3)
+          1-10_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 10(DebugTypeComposite) 7_23 uint(1) 1-35_1 uint(68) uint(0) 1-1_1 7_23 uint(0) uint(3) 1-11_20
+            32_7:             TypePointer Uniform 30_4(ubo)
+           1-3_7:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-10_4 uint(2) uint(0)
+            59_1:   32_7(ptr) Variable Uniform
+         uint(8):   21_1(int) Constant 8
+          1-18_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 18(DebugGlobalVariable) 7_1 1-10_4 1-35_1 uint(68) uint(0) 1-1_1 7_1 59_1 uint(8)
+            43_6:   21_2(int) Constant 0
+            32_8:             TypePointer Uniform 22_1(float)
+           1-3_8:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-2_2 uint(2) uint(0)
+        uint(69):   21_1(int) Constant 69
+          1-26_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_24 1-2_2 1-35_1 uint(69) uint(0) 1-20_1 uint(4)
+            24_2:             TypeMatrix 23_1(fvec3) 3
+         1-108_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 108(DebugTypeMatrix) 1-6_1 uint(3) 41_1
+            32_9:             TypePointer Function 24_2
+           1-3_9:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-108_2 uint(7) uint(0)
+        uint(71):   21_1(int) Constant 71
+          1-26_5:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_25 1-108_2 1-35_1 uint(71) uint(0) 1-20_1 uint(4)
+        uint(72):   21_1(int) Constant 72
+            43_7: 22_1(float) Constant 1065353216
+        uint(76):   21_1(int) Constant 76
+        uint(77):   21_1(int) Constant 77
+        uint(79):   21_1(int) Constant 79
+          1-26_6:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_26 1-108_2 1-35_1 uint(79) uint(0) 1-20_1 uint(4)
+        uint(81):   21_1(int) Constant 81
+        uint(84):   21_1(int) Constant 84
+        uint(85):   21_1(int) Constant 85
+        uint(87):   21_1(int) Constant 87
+          1-26_7:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_27 1-108_2 1-35_1 uint(87) uint(0) 1-20_1 uint(4)
+        uint(88):   21_1(int) Constant 88
+        uint(89):   21_1(int) Constant 89
+        uint(91):   21_1(int) Constant 91
+          1-26_8:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_28 1-108_2 1-35_1 uint(91) uint(0) 1-20_1 uint(4)
+        uint(94):   21_1(int) Constant 94
+            43_8:   21_2(int) Constant 4
+        uint(95):   21_1(int) Constant 95
+           32_10:             TypePointer Function 24_1
+          1-3_10:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-108_1 uint(7) uint(0)
+        uint(96):   21_1(int) Constant 96
+          1-26_9:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_29 1-108_1 1-35_1 uint(96) uint(0) 1-20_1 uint(4)
+           32_11:             TypePointer Function 23_3(fvec4)
+          1-3_11:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-6_3 uint(7) uint(0)
+            43_9:   21_2(int) Constant 1
+            44_4: 23_3(fvec4) ConstantComposite 43_1 43_7 43_1 43_1
+        uint(97):   21_1(int) Constant 97
+        uint(98):   21_1(int) Constant 98
+            44_5: 23_3(fvec4) ConstantComposite 43_1 43_1 43_1 43_7
+        uint(99):   21_1(int) Constant 99
+       uint(101):   21_1(int) Constant 101
+         1-26_10:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_30 1-6_3 1-35_1 uint(101) uint(0) 1-20_1 uint(4)
+       uint(102):   21_1(int) Constant 102
+         1-26_11:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_31 1-6_3 1-35_1 uint(102) uint(0) 1-20_1 uint(4)
+           43_10:   21_2(int) Constant 6
+       uint(104):   21_1(int) Constant 104
+           32_12:             TypePointer Uniform 24_1
+          1-3_12:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-108_1 uint(2) uint(0)
+       uint(105):   21_1(int) Constant 105
+       uint(107):   21_1(int) Constant 107
+       uint(108):   21_1(int) Constant 108
+         1-26_12:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 26(DebugLocalVariable) 7_32 1-6_1 1-35_1 uint(108) uint(0) 1-20_1 uint(4)
+           32_13:             TypePointer Uniform 23_3(fvec4)
+          1-3_13:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 3(DebugTypePointer) 1-6_3 uint(2) uint(0)
+       uint(109):   21_1(int) Constant 109
+       uint(110):   21_1(int) Constant 110
+       uint(111):   21_1(int) Constant 111
+           32_14:             TypePointer Input 23_1(fvec3)
+ 59_2(input.Pos):  32_14(ptr) Variable Input
+59_3(input.Normal):  32_14(ptr) Variable Input
+           32_15:             TypePointer Input 23_2(fvec2)
+  59_4(input.UV):  32_15(ptr) Variable Input
+59_5(input.Color):  32_14(ptr) Variable Input
+59_6(input.instancePos):  32_14(ptr) Variable Input
+59_7(input.instanceRot):  32_14(ptr) Variable Input
+           32_16:             TypePointer Input 22_1(float)
+59_8(input.instanceScale):  32_16(ptr) Variable Input
+           32_17:             TypePointer Input 21_2(int)
+59_9(input.instanceTexIndex):  32_17(ptr) Variable Input
+           32_18:             TypePointer Output 23_3(fvec4)
+59_10(@entryPointOutput.Pos):  32_18(ptr) Variable Output
+           32_19:             TypePointer Output 23_1(fvec3)
+59_11(@entryPointOutput.Normal):  32_19(ptr) Variable Output
+59_12(@entryPointOutput.Color):  32_19(ptr) Variable Output
+59_13(@entryPointOutput.UV):  32_19(ptr) Variable Output
+59_14(@entryPointOutput.ViewVec):  32_19(ptr) Variable Output
+59_15(@entryPointOutput.LightVec):  32_19(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+    59_16(input):   32_1(ptr) Variable Function
+59_17(flattenTemp):   32_2(ptr) Variable Function
+    59_18(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec3) Load 59_2(input.Pos)
+            65_1:   32_3(ptr) AccessChain 59_16(input) 43_6
+                              Store 65_1 61_1
+            61_2: 23_1(fvec3) Load 59_3(input.Normal)
+            65_2:   32_3(ptr) AccessChain 59_16(input) 43_9
+                              Store 65_2 61_2
+            61_3: 23_2(fvec2) Load 59_4(input.UV)
+            65_3:   32_4(ptr) AccessChain 59_16(input) 43_2
+                              Store 65_3 61_3
+            61_4: 23_1(fvec3) Load 59_5(input.Color)
+            65_4:   32_3(ptr) AccessChain 59_16(input) 43_3
+                              Store 65_4 61_4
+            61_5: 23_1(fvec3) Load 59_6(input.instancePos)
+            65_5:   32_3(ptr) AccessChain 59_16(input) 43_8
+                              Store 65_5 61_5
+            61_6: 23_1(fvec3) Load 59_7(input.instanceRot)
+            65_6:   32_3(ptr) AccessChain 59_16(input) 43_5
+                              Store 65_6 61_6
+            61_7: 22_1(float) Load 59_8(input.instanceScale)
+            65_7:   32_6(ptr) AccessChain 59_16(input) 43_10
+                              Store 65_7 61_7
+            61_8:   21_2(int) Load 59_9(input.instanceTexIndex)
+            65_8:   32_5(ptr) AccessChain 59_16(input) 43_4
+                              Store 65_8 61_8
+            61_9:30_1(VSInput) Load 59_16(input)
+                              Store 59_18(param) 61_9
+            57_1:30_2(VSOutput) FunctionCall 54_2(@main(struct-VSInput-vf3-vf3-vf2-vf3-vf3-vf3-f1-i11;) 59_18(param)
+                              Store 59_17(flattenTemp) 57_1
+            65_9:  32_11(ptr) AccessChain 59_17(flattenTemp) 43_6
+           61_10: 23_3(fvec4) Load 65_9
+                              Store 59_10(@entryPointOutput.Pos) 61_10
+           65_10:   32_3(ptr) AccessChain 59_17(flattenTemp) 43_9
+           61_11: 23_1(fvec3) Load 65_10
+                              Store 59_11(@entryPointOutput.Normal) 61_11
+           65_11:   32_3(ptr) AccessChain 59_17(flattenTemp) 43_2
+           61_12: 23_1(fvec3) Load 65_11
+                              Store 59_12(@entryPointOutput.Color) 61_12
+           65_12:   32_3(ptr) AccessChain 59_17(flattenTemp) 43_3
+           61_13: 23_1(fvec3) Load 65_12
+                              Store 59_13(@entryPointOutput.UV) 61_13
+           65_13:   32_3(ptr) AccessChain 59_17(flattenTemp) 43_8
+           61_14: 23_1(fvec3) Load 65_13
+                              Store 59_14(@entryPointOutput.ViewVec) 61_14
+           65_14:   32_3(ptr) AccessChain 59_17(flattenTemp) 43_5
+           61_15: 23_1(fvec3) Load 65_14
+                              Store 59_15(@entryPointOutput.LightVec) 61_15
                               Return
                               FunctionEnd
-78(@main(struct-VSInput-vf3-vf3-vf2-vf3-vf3-vf3-f1-i11;):61(VSOutput) Function None 75
-       77(input):     56(ptr) FunctionParameter
-              79:             Label
-      91(output):     89(ptr) Variable Function
-          128(s):    126(ptr) Variable Function
-          176(c):    126(ptr) Variable Function
-         192(mx):    190(ptr) Variable Function
-         227(my):    190(ptr) Variable Function
-         261(mz):    190(ptr) Variable Function
-     281(rotMat):    190(ptr) Variable Function
-    311(gRotMat):    309(ptr) Variable Function
-     339(locPos):    321(ptr) Variable Function
-        353(pos):    321(ptr) Variable Function
-       419(lPos):    103(ptr) Variable Function
-              86:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 81
-              87:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 53 53 16 16
-              84:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 82 77(input) 85
-              88:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 81 78(@main(struct-VSInput-vf3-vf3-vf2-vf3-vf3-vf3-f1-i11;)
-              96:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 94 94 16 16
-              95:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 92 91(output) 85
-                              Store 91(output) 100
-             106:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 107 107 16 16
-             105:    103(ptr) AccessChain 77(input) 102
-             108:   18(fvec3) Load 105
-             109:    103(ptr) AccessChain 91(output) 101
-                              Store 109 108
-             113:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 114 114 16 16
-             112:    110(ptr) AccessChain 77(input) 101
-             115:   20(fvec2) Load 112
-             119:    117(ptr) AccessChain 77(input) 116
-             120:     23(int) Load 119
-             121:    8(float) ConvertSToF 120
-             122:    8(float) CompositeExtract 115 0
-             123:    8(float) CompositeExtract 115 1
-             124:   18(fvec3) CompositeConstruct 122 123 121
-             125:    103(ptr) AccessChain 91(output) 102
-                              Store 125 124
-             133:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 131 131 16 16
-             132:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 129 128(s) 85
-             135:    126(ptr) AccessChain 77(input) 134 16
-             136:    8(float) Load 135
-             172:    170(ptr) AccessChain 166 169 102
-             173:    8(float) Load 172
-             174:    8(float) FAdd 136 173
-             175:    8(float) ExtInst 3(GLSL.std.450) 13(Sin) 174
-                              Store 128(s) 175
-             181:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 179 179 16 16
-             180:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 177 176(c) 85
-             182:    126(ptr) AccessChain 77(input) 134 16
-             183:    8(float) Load 182
-             184:    170(ptr) AccessChain 166 169 102
-             185:    8(float) Load 184
-             186:    8(float) FAdd 183 185
-             187:    8(float) ExtInst 3(GLSL.std.450) 14(Cos) 186
-                              Store 176(c) 187
-             197:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 195 195 16 16
-             196:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 193 192(mx) 85
-             198:    8(float) Load 176(c)
-             199:    8(float) Load 128(s)
-             200:    8(float) FNegate 199
-             202:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 203 203 16 16
-             201:    8(float) Load 128(s)
-             204:    8(float) Load 176(c)
-             206:   18(fvec3) CompositeConstruct 198 200 97
-             207:   18(fvec3) CompositeConstruct 201 204 97
-             208:   18(fvec3) CompositeConstruct 97 97 205
-             209:         188 CompositeConstruct 206 207 208
-             210:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 195 195 16 16
-                              Store 192(mx) 209
-             212:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 213 213 16 16
-             211:    126(ptr) AccessChain 77(input) 134 52
-             214:    8(float) Load 211
-             215:    170(ptr) AccessChain 166 169 102
-             216:    8(float) Load 215
-             217:    8(float) FAdd 214 216
-             218:    8(float) ExtInst 3(GLSL.std.450) 13(Sin) 217
-                              Store 128(s) 218
-             220:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 221 221 16 16
-             219:    126(ptr) AccessChain 77(input) 134 52
-             222:    8(float) Load 219
-             223:    170(ptr) AccessChain 166 169 102
-             224:    8(float) Load 223
-             225:    8(float) FAdd 222 224
-             226:    8(float) ExtInst 3(GLSL.std.450) 14(Cos) 225
-                              Store 176(c) 226
-             232:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 230 230 16 16
-             231:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 228 227(my) 85
-             233:    8(float) Load 176(c)
-             234:    8(float) Load 128(s)
-             235:    8(float) FNegate 234
-             237:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 238 238 16 16
-             236:    8(float) Load 128(s)
-             239:    8(float) Load 176(c)
-             240:   18(fvec3) CompositeConstruct 233 97 235
-             241:   18(fvec3) CompositeConstruct 97 205 97
-             242:   18(fvec3) CompositeConstruct 236 97 239
-             243:         188 CompositeConstruct 240 241 242
-             244:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 230 230 16 16
-                              Store 227(my) 243
-             246:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 247 247 16 16
-             245:    126(ptr) AccessChain 77(input) 134 21
-             248:    8(float) Load 245
-             249:    170(ptr) AccessChain 166 169 102
-             250:    8(float) Load 249
-             251:    8(float) FAdd 248 250
-             252:    8(float) ExtInst 3(GLSL.std.450) 13(Sin) 251
-                              Store 128(s) 252
-             254:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 255 255 16 16
-             253:    126(ptr) AccessChain 77(input) 134 21
-             256:    8(float) Load 253
-             257:    170(ptr) AccessChain 166 169 102
-             258:    8(float) Load 257
-             259:    8(float) FAdd 256 258
-             260:    8(float) ExtInst 3(GLSL.std.450) 14(Cos) 259
-                              Store 176(c) 260
-             266:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 264 264 16 16
-             265:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 262 261(mz) 85
-             268:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 269 269 16 16
-             267:    8(float) Load 176(c)
-             270:    8(float) Load 128(s)
-             271:    8(float) FNegate 270
-             273:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 274 274 16 16
-             272:    8(float) Load 128(s)
-             275:    8(float) Load 176(c)
-             276:   18(fvec3) CompositeConstruct 205 97 97
-             277:   18(fvec3) CompositeConstruct 97 267 271
-             278:   18(fvec3) CompositeConstruct 97 272 275
-             279:         188 CompositeConstruct 276 277 278
-             280:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 264 264 16 16
-                              Store 261(mz) 279
-             286:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 284 284 16 16
-             285:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 282 281(rotMat) 85
-             287:         188 Load 192(mx)
-             288:         188 Load 227(my)
-             289:         188 MatrixTimesMatrix 287 288
-             290:         188 Load 261(mz)
-             291:         188 MatrixTimesMatrix 289 290
-                              Store 281(rotMat) 291
-             293:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 294 294 16 16
-             292:    126(ptr) AccessChain 77(input) 134 52
-             295:    8(float) Load 292
-             297:    170(ptr) AccessChain 166 169 296
-             298:    8(float) Load 297
-             299:    8(float) FAdd 295 298
-             300:    8(float) ExtInst 3(GLSL.std.450) 13(Sin) 299
-                              Store 128(s) 300
-             302:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 303 303 16 16
-             301:    126(ptr) AccessChain 77(input) 134 52
-             304:    8(float) Load 301
-             305:    170(ptr) AccessChain 166 169 296
-             306:    8(float) Load 305
-             307:    8(float) FAdd 304 306
-             308:    8(float) ExtInst 3(GLSL.std.450) 14(Cos) 307
-                              Store 176(c) 308
-             316:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 314 314 16 16
-             315:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 312 311(gRotMat) 85
-             317:    8(float) Load 176(c)
-             318:    8(float) Load 128(s)
-             319:    8(float) FNegate 318
-             320:   59(fvec4) CompositeConstruct 317 97 319 97
-             323:    321(ptr) AccessChain 311(gRotMat) 169
-                              Store 323 320
-             327:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 328 328 16 16
-             326:    321(ptr) AccessChain 311(gRotMat) 324
-                              Store 326 325
-             330:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 331 331 16 16
-             329:    8(float) Load 128(s)
-             332:    8(float) Load 176(c)
-             333:   59(fvec4) CompositeConstruct 329 97 332 97
-             334:    321(ptr) AccessChain 311(gRotMat) 101
-                              Store 334 333
-             337:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 338 338 16 16
-             336:    321(ptr) AccessChain 311(gRotMat) 102
-                              Store 336 335
-             344:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 342 342 16 16
-             343:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 340 339(locPos) 85
-             345:    103(ptr) AccessChain 77(input) 169
-             346:   18(fvec3) Load 345
-             347:         188 Load 281(rotMat)
-             348:   18(fvec3) VectorTimesMatrix 346 347
-             349:    8(float) CompositeExtract 348 0
-             350:    8(float) CompositeExtract 348 1
-             351:    8(float) CompositeExtract 348 2
-             352:   59(fvec4) CompositeConstruct 349 350 351 205
-                              Store 339(locPos) 352
-             358:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 356 356 16 16
-             357:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 354 353(pos) 85
-             359:   59(fvec4) Load 339(locPos)
-             360:   18(fvec3) VectorShuffle 359 359 0 1 2
-             362:    126(ptr) AccessChain 77(input) 361
-             363:    8(float) Load 362
-             364:   18(fvec3) VectorTimesScalar 360 363
-             365:    103(ptr) AccessChain 77(input) 296
-             366:   18(fvec3) Load 365
-             367:   18(fvec3) FAdd 364 366
-             368:    8(float) CompositeExtract 367 0
-             369:    8(float) CompositeExtract 367 1
-             370:    8(float) CompositeExtract 367 2
-             371:   59(fvec4) CompositeConstruct 368 369 370 205
-                              Store 353(pos) 371
-             373:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 374 374 16 16
-             372:   59(fvec4) Load 353(pos)
-             375:         137 Load 311(gRotMat)
-             376:   59(fvec4) VectorTimesMatrix 372 375
-             379:    377(ptr) AccessChain 166 169 324
-             380:         137 Load 379
-             381:   59(fvec4) VectorTimesMatrix 376 380
-             382:    377(ptr) AccessChain 166 169 169
-             383:         137 Load 382
-             384:   59(fvec4) VectorTimesMatrix 381 383
-             385:    321(ptr) AccessChain 91(output) 169
-                              Store 385 384
-             387:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 388 388 16 16
-             386:    103(ptr) AccessChain 77(input) 324
-             389:   18(fvec3) Load 386
-             390:         188 Load 281(rotMat)
-             391:   18(fvec3) VectorTimesMatrix 389 390
-             392:         137 Load 311(gRotMat)
-             393:    377(ptr) AccessChain 166 169 324
-             394:         137 Load 393
-             395:         137 MatrixTimesMatrix 392 394
-             396:   59(fvec4) CompositeExtract 395 0
-             397:   18(fvec3) VectorShuffle 396 396 0 1 2
-             398:   59(fvec4) CompositeExtract 395 1
-             399:   18(fvec3) VectorShuffle 398 398 0 1 2
-             400:   59(fvec4) CompositeExtract 395 2
-             401:   18(fvec3) VectorShuffle 400 400 0 1 2
-             402:         188 CompositeConstruct 397 399 401
-             403:   18(fvec3) VectorTimesMatrix 391 402
-             404:    103(ptr) AccessChain 91(output) 324
-                              Store 404 403
-             406:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 407 407 16 16
-             405:    103(ptr) AccessChain 77(input) 169
-             408:   18(fvec3) Load 405
-             409:    103(ptr) AccessChain 77(input) 296
-             410:   18(fvec3) Load 409
-             411:   18(fvec3) FAdd 408 410
-             412:    8(float) CompositeExtract 411 0
-             413:    8(float) CompositeExtract 411 1
-             414:    8(float) CompositeExtract 411 2
-             415:   59(fvec4) CompositeConstruct 412 413 414 205
-             416:    377(ptr) AccessChain 166 169 324
-             417:         137 Load 416
-             418:   59(fvec4) VectorTimesMatrix 415 417
-                              Store 353(pos) 418
-             424:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 422 422 16 16
-             423:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 420 419(lPos) 85
-             427:    425(ptr) AccessChain 166 169 101
-             428:   59(fvec4) Load 427
-             429:   18(fvec3) VectorShuffle 428 428 0 1 2
-             430:    377(ptr) AccessChain 166 169 324
-             431:         137 Load 430
-             432:   59(fvec4) CompositeExtract 431 0
-             433:   18(fvec3) VectorShuffle 432 432 0 1 2
-             434:   59(fvec4) CompositeExtract 431 1
-             435:   18(fvec3) VectorShuffle 434 434 0 1 2
-             436:   59(fvec4) CompositeExtract 431 2
-             437:   18(fvec3) VectorShuffle 436 436 0 1 2
-             438:         188 CompositeConstruct 433 435 437
-             439:   18(fvec3) VectorTimesMatrix 429 438
-                              Store 419(lPos) 439
-             441:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 442 442 16 16
-             440:   18(fvec3) Load 419(lPos)
-             443:   59(fvec4) Load 353(pos)
-             444:   18(fvec3) VectorShuffle 443 443 0 1 2
-             445:   18(fvec3) FSub 440 444
-             446:    103(ptr) AccessChain 91(output) 134
-                              Store 446 445
-             448:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 449 449 16 16
-             447:   59(fvec4) Load 353(pos)
-             450:   18(fvec3) VectorShuffle 447 447 0 1 2
-             451:   18(fvec3) FNegate 450
-             452:    103(ptr) AccessChain 91(output) 296
-                              Store 452 451
-             454:           4 ExtInst 1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 30 455 455 16 16
-             453:61(VSOutput) Load 91(output)
-                              ReturnValue 453
+54_2(@main(struct-VSInput-vf3-vf3-vf2-vf3-vf3-vf3-f1-i11;):30_2(VSOutput) Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+           248_2:             Label
+   59_19(output):   32_2(ptr) Variable Function
+        59_20(s):   32_6(ptr) Variable Function
+        59_21(c):   32_6(ptr) Variable Function
+       59_22(mx):   32_9(ptr) Variable Function
+       59_23(my):   32_9(ptr) Variable Function
+       59_24(mz):   32_9(ptr) Variable Function
+   59_25(rotMat):   32_9(ptr) Variable Function
+  59_26(gRotMat):  32_10(ptr) Variable Function
+   59_27(locPos):  32_11(ptr) Variable Function
+      59_28(pos):  32_11(ptr) Variable Function
+     59_29(lPos):   32_3(ptr) Variable Function
+          1-23_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 23(DebugScope) 1-20_1
+         1-103_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(62) uint(62) uint(0) uint(0)
+          1-28_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_1 55_1(input) 1-31_1
+         1-101_1:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 101(DebugFunctionDefinition) 1-20_1 54_2(@main(struct-VSInput-vf3-vf3-vf2-vf3-vf3-vf3-f1-i11;)
+         1-103_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(63) uint(63) uint(0) uint(0)
+          1-28_2:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_2 59_19(output) 1-31_1
+                              Store 59_19(output) 44_3
+         1-103_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(64) uint(64) uint(0) uint(0)
+           65_15:   32_3(ptr) AccessChain 55_1(input) 43_3
+           61_16: 23_1(fvec3) Load 65_15
+           65_16:   32_3(ptr) AccessChain 59_19(output) 43_2
+                              Store 65_16 61_16
+         1-103_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(65) uint(65) uint(0) uint(0)
+           65_17:   32_4(ptr) AccessChain 55_1(input) 43_2
+           61_17: 23_2(fvec2) Load 65_17
+           65_18:   32_5(ptr) AccessChain 55_1(input) 43_4
+           61_18:   21_2(int) Load 65_18
+           111_1: 22_1(float) ConvertSToF 61_18
+            81_1: 22_1(float) CompositeExtract 61_17 0
+            81_2: 22_1(float) CompositeExtract 61_17 1
+            80_1: 23_1(fvec3) CompositeConstruct 81_1 81_2 111_1
+           65_19:   32_3(ptr) AccessChain 59_19(output) 43_3
+                              Store 65_19 80_1
+         1-103_5:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(68) uint(68) uint(0) uint(0)
+          1-28_3:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_3 59_20(s) 1-31_1
+           65_20:   32_6(ptr) AccessChain 55_1(input) 43_5 uint(0)
+           61_19: 22_1(float) Load 65_20
+           65_21:   32_8(ptr) AccessChain 59_1 43_6 43_3
+           61_20: 22_1(float) Load 65_21
+           129_1: 22_1(float) FAdd 61_19 61_20
+          3-13_1: 22_1(float) ExtInst 11_2(GLSL.std.450) 13(Sin) 129_1
+                              Store 59_20(s) 3-13_1
+         1-103_6:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(69) uint(69) uint(0) uint(0)
+          1-28_4:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_4 59_21(c) 1-31_1
+           65_22:   32_6(ptr) AccessChain 55_1(input) 43_5 uint(0)
+           61_21: 22_1(float) Load 65_22
+           65_23:   32_8(ptr) AccessChain 59_1 43_6 43_3
+           61_22: 22_1(float) Load 65_23
+           129_2: 22_1(float) FAdd 61_21 61_22
+          3-14_1: 22_1(float) ExtInst 11_2(GLSL.std.450) 14(Cos) 129_2
+                              Store 59_21(c) 3-14_1
+         1-103_7:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(71) uint(71) uint(0) uint(0)
+          1-28_5:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_5 59_22(mx) 1-31_1
+           61_23: 22_1(float) Load 59_21(c)
+           61_24: 22_1(float) Load 59_20(s)
+           127_1: 22_1(float) FNegate 61_24
+         1-103_8:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(72) uint(72) uint(0) uint(0)
+           61_25: 22_1(float) Load 59_20(s)
+           61_26: 22_1(float) Load 59_21(c)
+            80_2: 23_1(fvec3) CompositeConstruct 61_23 127_1 43_1
+            80_3: 23_1(fvec3) CompositeConstruct 61_25 61_26 43_1
+            80_4: 23_1(fvec3) CompositeConstruct 43_1 43_1 43_7
+            80_5:        24_2 CompositeConstruct 80_2 80_3 80_4
+         1-103_9:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(71) uint(71) uint(0) uint(0)
+                              Store 59_22(mx) 80_5
+        1-103_10:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(76) uint(76) uint(0) uint(0)
+           65_24:   32_6(ptr) AccessChain 55_1(input) 43_5 uint(1)
+           61_27: 22_1(float) Load 65_24
+           65_25:   32_8(ptr) AccessChain 59_1 43_6 43_3
+           61_28: 22_1(float) Load 65_25
+           129_3: 22_1(float) FAdd 61_27 61_28
+          3-13_2: 22_1(float) ExtInst 11_2(GLSL.std.450) 13(Sin) 129_3
+                              Store 59_20(s) 3-13_2
+        1-103_11:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(77) uint(77) uint(0) uint(0)
+           65_26:   32_6(ptr) AccessChain 55_1(input) 43_5 uint(1)
+           61_29: 22_1(float) Load 65_26
+           65_27:   32_8(ptr) AccessChain 59_1 43_6 43_3
+           61_30: 22_1(float) Load 65_27
+           129_4: 22_1(float) FAdd 61_29 61_30
+          3-14_2: 22_1(float) ExtInst 11_2(GLSL.std.450) 14(Cos) 129_4
+                              Store 59_21(c) 3-14_2
+        1-103_12:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(79) uint(79) uint(0) uint(0)
+          1-28_6:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_6 59_23(my) 1-31_1
+           61_31: 22_1(float) Load 59_21(c)
+           61_32: 22_1(float) Load 59_20(s)
+           127_2: 22_1(float) FNegate 61_32
+        1-103_13:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(81) uint(81) uint(0) uint(0)
+           61_33: 22_1(float) Load 59_20(s)
+           61_34: 22_1(float) Load 59_21(c)
+            80_6: 23_1(fvec3) CompositeConstruct 61_31 43_1 127_2
+            80_7: 23_1(fvec3) CompositeConstruct 43_1 43_7 43_1
+            80_8: 23_1(fvec3) CompositeConstruct 61_33 43_1 61_34
+            80_9:        24_2 CompositeConstruct 80_6 80_7 80_8
+        1-103_14:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(79) uint(79) uint(0) uint(0)
+                              Store 59_23(my) 80_9
+        1-103_15:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(84) uint(84) uint(0) uint(0)
+           65_28:   32_6(ptr) AccessChain 55_1(input) 43_5 uint(2)
+           61_35: 22_1(float) Load 65_28
+           65_29:   32_8(ptr) AccessChain 59_1 43_6 43_3
+           61_36: 22_1(float) Load 65_29
+           129_5: 22_1(float) FAdd 61_35 61_36
+          3-13_3: 22_1(float) ExtInst 11_2(GLSL.std.450) 13(Sin) 129_5
+                              Store 59_20(s) 3-13_3
+        1-103_16:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(85) uint(85) uint(0) uint(0)
+           65_30:   32_6(ptr) AccessChain 55_1(input) 43_5 uint(2)
+           61_37: 22_1(float) Load 65_30
+           65_31:   32_8(ptr) AccessChain 59_1 43_6 43_3
+           61_38: 22_1(float) Load 65_31
+           129_6: 22_1(float) FAdd 61_37 61_38
+          3-14_3: 22_1(float) ExtInst 11_2(GLSL.std.450) 14(Cos) 129_6
+                              Store 59_21(c) 3-14_3
+        1-103_17:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(87) uint(87) uint(0) uint(0)
+          1-28_7:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_7 59_24(mz) 1-31_1
+        1-103_18:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(88) uint(88) uint(0) uint(0)
+           61_39: 22_1(float) Load 59_21(c)
+           61_40: 22_1(float) Load 59_20(s)
+           127_3: 22_1(float) FNegate 61_40
+        1-103_19:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(89) uint(89) uint(0) uint(0)
+           61_41: 22_1(float) Load 59_20(s)
+           61_42: 22_1(float) Load 59_21(c)
+           80_10: 23_1(fvec3) CompositeConstruct 43_7 43_1 43_1
+           80_11: 23_1(fvec3) CompositeConstruct 43_1 61_39 127_3
+           80_12: 23_1(fvec3) CompositeConstruct 43_1 61_41 61_42
+           80_13:        24_2 CompositeConstruct 80_10 80_11 80_12
+        1-103_20:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(87) uint(87) uint(0) uint(0)
+                              Store 59_24(mz) 80_13
+        1-103_21:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(91) uint(91) uint(0) uint(0)
+          1-28_8:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_8 59_25(rotMat) 1-31_1
+           61_43:        24_2 Load 59_22(mx)
+           61_44:        24_2 Load 59_23(my)
+           146_1:        24_2 MatrixTimesMatrix 61_43 61_44
+           61_45:        24_2 Load 59_24(mz)
+           146_2:        24_2 MatrixTimesMatrix 146_1 61_45
+                              Store 59_25(rotMat) 146_2
+        1-103_22:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(94) uint(94) uint(0) uint(0)
+           65_32:   32_6(ptr) AccessChain 55_1(input) 43_5 uint(1)
+           61_46: 22_1(float) Load 65_32
+           65_33:   32_8(ptr) AccessChain 59_1 43_6 43_8
+           61_47: 22_1(float) Load 65_33
+           129_7: 22_1(float) FAdd 61_46 61_47
+          3-13_4: 22_1(float) ExtInst 11_2(GLSL.std.450) 13(Sin) 129_7
+                              Store 59_20(s) 3-13_4
+        1-103_23:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(95) uint(95) uint(0) uint(0)
+           65_34:   32_6(ptr) AccessChain 55_1(input) 43_5 uint(1)
+           61_48: 22_1(float) Load 65_34
+           65_35:   32_8(ptr) AccessChain 59_1 43_6 43_8
+           61_49: 22_1(float) Load 65_35
+           129_8: 22_1(float) FAdd 61_48 61_49
+          3-14_4: 22_1(float) ExtInst 11_2(GLSL.std.450) 14(Cos) 129_8
+                              Store 59_21(c) 3-14_4
+        1-103_24:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(96) uint(96) uint(0) uint(0)
+          1-28_9:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_9 59_26(gRotMat) 1-31_1
+           61_50: 22_1(float) Load 59_21(c)
+           61_51: 22_1(float) Load 59_20(s)
+           127_4: 22_1(float) FNegate 61_51
+           80_14: 23_3(fvec4) CompositeConstruct 61_50 43_1 127_4 43_1
+           65_36:  32_11(ptr) AccessChain 59_26(gRotMat) 43_6
+                              Store 65_36 80_14
+        1-103_25:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(97) uint(97) uint(0) uint(0)
+           65_37:  32_11(ptr) AccessChain 59_26(gRotMat) 43_9
+                              Store 65_37 44_4
+        1-103_26:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(98) uint(98) uint(0) uint(0)
+           61_52: 22_1(float) Load 59_20(s)
+           61_53: 22_1(float) Load 59_21(c)
+           80_15: 23_3(fvec4) CompositeConstruct 61_52 43_1 61_53 43_1
+           65_38:  32_11(ptr) AccessChain 59_26(gRotMat) 43_2
+                              Store 65_38 80_15
+        1-103_27:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(99) uint(99) uint(0) uint(0)
+           65_39:  32_11(ptr) AccessChain 59_26(gRotMat) 43_3
+                              Store 65_39 44_5
+        1-103_28:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(101) uint(101) uint(0) uint(0)
+         1-28_10:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_10 59_27(locPos) 1-31_1
+           65_40:   32_3(ptr) AccessChain 55_1(input) 43_6
+           61_54: 23_1(fvec3) Load 65_40
+           61_55:        24_2 Load 59_25(rotMat)
+           144_1: 23_1(fvec3) VectorTimesMatrix 61_54 61_55
+            81_3: 22_1(float) CompositeExtract 144_1 0
+            81_4: 22_1(float) CompositeExtract 144_1 1
+            81_5: 22_1(float) CompositeExtract 144_1 2
+           80_16: 23_3(fvec4) CompositeConstruct 81_3 81_4 81_5 43_7
+                              Store 59_27(locPos) 80_16
+        1-103_29:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(102) uint(102) uint(0) uint(0)
+         1-28_11:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_11 59_28(pos) 1-31_1
+           61_56: 23_3(fvec4) Load 59_27(locPos)
+            79_1: 23_1(fvec3) VectorShuffle 61_56 61_56 0 1 2
+           65_41:   32_6(ptr) AccessChain 55_1(input) 43_10
+           61_57: 22_1(float) Load 65_41
+           142_1: 23_1(fvec3) VectorTimesScalar 79_1 61_57
+           65_42:   32_3(ptr) AccessChain 55_1(input) 43_8
+           61_58: 23_1(fvec3) Load 65_42
+           129_9: 23_1(fvec3) FAdd 142_1 61_58
+            81_6: 22_1(float) CompositeExtract 129_9 0
+            81_7: 22_1(float) CompositeExtract 129_9 1
+            81_8: 22_1(float) CompositeExtract 129_9 2
+           80_17: 23_3(fvec4) CompositeConstruct 81_6 81_7 81_8 43_7
+                              Store 59_28(pos) 80_17
+        1-103_30:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(104) uint(104) uint(0) uint(0)
+           61_59: 23_3(fvec4) Load 59_28(pos)
+           61_60:        24_1 Load 59_26(gRotMat)
+           144_2: 23_3(fvec4) VectorTimesMatrix 61_59 61_60
+           65_43:  32_12(ptr) AccessChain 59_1 43_6 43_9
+           61_61:        24_1 Load 65_43
+           144_3: 23_3(fvec4) VectorTimesMatrix 144_2 61_61
+           65_44:  32_12(ptr) AccessChain 59_1 43_6 43_6
+           61_62:        24_1 Load 65_44
+           144_4: 23_3(fvec4) VectorTimesMatrix 144_3 61_62
+           65_45:  32_11(ptr) AccessChain 59_19(output) 43_6
+                              Store 65_45 144_4
+        1-103_31:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(105) uint(105) uint(0) uint(0)
+           65_46:   32_3(ptr) AccessChain 55_1(input) 43_9
+           61_63: 23_1(fvec3) Load 65_46
+           61_64:        24_2 Load 59_25(rotMat)
+           144_5: 23_1(fvec3) VectorTimesMatrix 61_63 61_64
+           61_65:        24_1 Load 59_26(gRotMat)
+           65_47:  32_12(ptr) AccessChain 59_1 43_6 43_9
+           61_66:        24_1 Load 65_47
+           146_3:        24_1 MatrixTimesMatrix 61_65 61_66
+            81_9: 23_3(fvec4) CompositeExtract 146_3 0
+            79_2: 23_1(fvec3) VectorShuffle 81_9 81_9 0 1 2
+           81_10: 23_3(fvec4) CompositeExtract 146_3 1
+            79_3: 23_1(fvec3) VectorShuffle 81_10 81_10 0 1 2
+           81_11: 23_3(fvec4) CompositeExtract 146_3 2
+            79_4: 23_1(fvec3) VectorShuffle 81_11 81_11 0 1 2
+           80_18:        24_2 CompositeConstruct 79_2 79_3 79_4
+           144_6: 23_1(fvec3) VectorTimesMatrix 144_5 80_18
+           65_48:   32_3(ptr) AccessChain 59_19(output) 43_9
+                              Store 65_48 144_6
+        1-103_32:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(107) uint(107) uint(0) uint(0)
+           65_49:   32_3(ptr) AccessChain 55_1(input) 43_6
+           61_67: 23_1(fvec3) Load 65_49
+           65_50:   32_3(ptr) AccessChain 55_1(input) 43_8
+           61_68: 23_1(fvec3) Load 65_50
+          129_10: 23_1(fvec3) FAdd 61_67 61_68
+           81_12: 22_1(float) CompositeExtract 129_10 0
+           81_13: 22_1(float) CompositeExtract 129_10 1
+           81_14: 22_1(float) CompositeExtract 129_10 2
+           80_19: 23_3(fvec4) CompositeConstruct 81_12 81_13 81_14 43_7
+           65_51:  32_12(ptr) AccessChain 59_1 43_6 43_9
+           61_69:        24_1 Load 65_51
+           144_7: 23_3(fvec4) VectorTimesMatrix 80_19 61_69
+                              Store 59_28(pos) 144_7
+        1-103_33:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(108) uint(108) uint(0) uint(0)
+         1-28_12:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 28(DebugDeclare) 1-26_12 59_29(lPos) 1-31_1
+           65_52:  32_13(ptr) AccessChain 59_1 43_6 43_2
+           61_70: 23_3(fvec4) Load 65_52
+            79_5: 23_1(fvec3) VectorShuffle 61_70 61_70 0 1 2
+           65_53:  32_12(ptr) AccessChain 59_1 43_6 43_9
+           61_71:        24_1 Load 65_53
+           81_15: 23_3(fvec4) CompositeExtract 61_71 0
+            79_6: 23_1(fvec3) VectorShuffle 81_15 81_15 0 1 2
+           81_16: 23_3(fvec4) CompositeExtract 61_71 1
+            79_7: 23_1(fvec3) VectorShuffle 81_16 81_16 0 1 2
+           81_17: 23_3(fvec4) CompositeExtract 61_71 2
+            79_8: 23_1(fvec3) VectorShuffle 81_17 81_17 0 1 2
+           80_20:        24_2 CompositeConstruct 79_6 79_7 79_8
+           144_8: 23_1(fvec3) VectorTimesMatrix 79_5 80_20
+                              Store 59_29(lPos) 144_8
+        1-103_34:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(109) uint(109) uint(0) uint(0)
+           61_72: 23_1(fvec3) Load 59_29(lPos)
+           61_73: 23_3(fvec4) Load 59_28(pos)
+            79_9: 23_1(fvec3) VectorShuffle 61_73 61_73 0 1 2
+           131_1: 23_1(fvec3) FSub 61_72 79_9
+           65_54:   32_3(ptr) AccessChain 59_19(output) 43_5
+                              Store 65_54 131_1
+        1-103_35:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(110) uint(110) uint(0) uint(0)
+           61_74: 23_3(fvec4) Load 59_28(pos)
+           79_10: 23_1(fvec3) VectorShuffle 61_74 61_74 0 1 2
+           127_5: 23_1(fvec3) FNegate 79_10
+           65_55:   32_3(ptr) AccessChain 59_19(output) 43_8
+                              Store 65_55 127_5
+        1-103_36:        19_1 ExtInst 11_1(NonSemantic.Shader.DebugInfo.100) 103(DebugLine) 1-35_1 uint(111) uint(111) uint(0) uint(0)
+           61_75:30_2(VSOutput) Load 59_19(output)
+                              ReturnValue 61_75
                               FunctionEnd

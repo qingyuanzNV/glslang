@@ -6,25 +6,25 @@ spv.viewportindex.tese
                               Capability Tessellation
                               Capability ShaderViewportIndexLayerNV
                               Extension  "SPV_EXT_shader_viewport_index_layer"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationEvaluation 4  "main" 8
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 SpacingEqual
-                              ExecutionMode 4 VertexOrderCcw
+                              EntryPoint TessellationEvaluation 54_1  "main" 59_1
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 SpacingEqual
+                              ExecutionMode 54_1 VertexOrderCcw
                               Source GLSL 450
                               SourceExtension  "GL_ARB_shader_viewport_layer_array"
-                              Name 4  "main"
-                              Name 8  "gl_ViewportIndex"
-                              Decorate 8(gl_ViewportIndex) BuiltIn ViewportIndex
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Output 6(int)
-8(gl_ViewportIndex):      7(ptr) Variable Output
-               9:      6(int) Constant 1
-         4(main):           2 Function None 3
-               5:             Label
-                              Store 8(gl_ViewportIndex) 9
+                              Name 54_1  "main"
+                              Name 59_1  "gl_ViewportIndex"
+                              Decorate 59_1(gl_ViewportIndex) BuiltIn ViewportIndex
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Output 21_1(int)
+59_1(gl_ViewportIndex):   32_1(ptr) Variable Output
+            43_1:   21_1(int) Constant 1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+                              Store 59_1(gl_ViewportIndex) 43_1
                               Return
                               FunctionEnd

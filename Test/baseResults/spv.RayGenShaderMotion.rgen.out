@@ -7,74 +7,74 @@ spv.RayGenShaderMotion.rgen
                               Capability RayTracingMotionBlurNV
                               Extension  "SPV_KHR_ray_tracing"
                               Extension  "SPV_NV_ray_tracing_motion_blur"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint RayGenerationKHR 4  "main" 11 21 29 46
+                              EntryPoint RayGenerationKHR 54_1  "main" 59_1 59_2 59_3 59_4
                               Source GLSL 460
                               SourceExtension  "GL_EXT_ray_tracing"
                               SourceExtension  "GL_NV_ray_tracing_motion_blur"
-                              Name 4  "main"
-                              Name 8  "lx"
-                              Name 11  "gl_LaunchIDEXT"
-                              Name 16  "ly"
-                              Name 20  "sx"
-                              Name 21  "gl_LaunchSizeEXT"
-                              Name 24  "sy"
-                              Name 29  "accEXT"
-                              Name 46  "payloadEXT"
-                              Decorate 11(gl_LaunchIDEXT) BuiltIn LaunchIdKHR
-                              Decorate 21(gl_LaunchSizeEXT) BuiltIn LaunchSizeKHR
-                              Decorate 29(accEXT) Binding 0
-                              Decorate 29(accEXT) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               9:             TypeVector 6(int) 3
-              10:             TypePointer Input 9(ivec3)
-11(gl_LaunchIDEXT):     10(ptr) Variable Input
-              12:      6(int) Constant 0
-              13:             TypePointer Input 6(int)
-              17:      6(int) Constant 1
-21(gl_LaunchSizeEXT):     10(ptr) Variable Input
-              27:             TypeAccelerationStructureKHR
-              28:             TypePointer UniformConstant 27
-      29(accEXT):     28(ptr) Variable UniformConstant
-              35:             TypeFloat 32
-              36:             TypeVector 35(float) 3
-              37:   35(float) Constant 1056964608
-              38:   36(fvec3) ConstantComposite 37 37 37
-              39:   35(float) Constant 1065353216
-              40:   36(fvec3) ConstantComposite 39 39 39
-              41:   35(float) Constant 1061158912
-              42:             TypeInt 32 1
-              43:     42(int) Constant 0
-              44:             TypeVector 35(float) 4
-              45:             TypePointer RayPayloadKHR 44(fvec4)
-  46(payloadEXT):     45(ptr) Variable RayPayloadKHR
-         4(main):           2 Function None 3
-               5:             Label
-           8(lx):      7(ptr) Variable Function
-          16(ly):      7(ptr) Variable Function
-          20(sx):      7(ptr) Variable Function
-          24(sy):      7(ptr) Variable Function
-              14:     13(ptr) AccessChain 11(gl_LaunchIDEXT) 12
-              15:      6(int) Load 14
-                              Store 8(lx) 15
-              18:     13(ptr) AccessChain 11(gl_LaunchIDEXT) 17
-              19:      6(int) Load 18
-                              Store 16(ly) 19
-              22:     13(ptr) AccessChain 21(gl_LaunchSizeEXT) 12
-              23:      6(int) Load 22
-                              Store 20(sx) 23
-              25:     13(ptr) AccessChain 21(gl_LaunchSizeEXT) 17
-              26:      6(int) Load 25
-                              Store 24(sy) 26
-              30:          27 Load 29(accEXT)
-              31:      6(int) Load 8(lx)
-              32:      6(int) Load 16(ly)
-              33:      6(int) Load 20(sx)
-              34:      6(int) Load 24(sy)
-                              TraceRayMotionNV 30 31 32 33 34 12 38 37 40 41 37 46(payloadEXT)
+                              Name 54_1  "main"
+                              Name 59_5  "lx"
+                              Name 59_1  "gl_LaunchIDEXT"
+                              Name 59_6  "ly"
+                              Name 59_7  "sx"
+                              Name 59_2  "gl_LaunchSizeEXT"
+                              Name 59_8  "sy"
+                              Name 59_3  "accEXT"
+                              Name 59_4  "payloadEXT"
+                              Decorate 59_1(gl_LaunchIDEXT) BuiltIn LaunchIdKHR
+                              Decorate 59_2(gl_LaunchSizeEXT) BuiltIn LaunchSizeKHR
+                              Decorate 59_3(accEXT) Binding 0
+                              Decorate 59_3(accEXT) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            23_1:             TypeVector 21_1(int) 3
+            32_2:             TypePointer Input 23_1(ivec3)
+59_1(gl_LaunchIDEXT):   32_2(ptr) Variable Input
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Input 21_1(int)
+         uint(1):   21_1(int) Constant 1
+59_2(gl_LaunchSizeEXT):   32_2(ptr) Variable Input
+          5341_1:             TypeAccelerationStructureKHR
+            32_4:             TypePointer UniformConstant 5341_1
+    59_3(accEXT):   32_4(ptr) Variable UniformConstant
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 3
+            43_1: 22_1(float) Constant 1056964608
+            44_1: 23_2(fvec3) ConstantComposite 43_1 43_1 43_1
+            43_2: 22_1(float) Constant 1065353216
+            44_2: 23_2(fvec3) ConstantComposite 43_2 43_2 43_2
+            43_3: 22_1(float) Constant 1061158912
+            21_2:             TypeInt 32 1
+            43_4:   21_2(int) Constant 0
+            23_3:             TypeVector 22_1(float) 4
+            32_5:             TypePointer RayPayloadKHR 23_3(fvec4)
+59_4(payloadEXT):   32_5(ptr) Variable RayPayloadKHR
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_5(lx):   32_1(ptr) Variable Function
+        59_6(ly):   32_1(ptr) Variable Function
+        59_7(sx):   32_1(ptr) Variable Function
+        59_8(sy):   32_1(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(gl_LaunchIDEXT) uint(0)
+            61_1:   21_1(int) Load 65_1
+                              Store 59_5(lx) 61_1
+            65_2:   32_3(ptr) AccessChain 59_1(gl_LaunchIDEXT) uint(1)
+            61_2:   21_1(int) Load 65_2
+                              Store 59_6(ly) 61_2
+            65_3:   32_3(ptr) AccessChain 59_2(gl_LaunchSizeEXT) uint(0)
+            61_3:   21_1(int) Load 65_3
+                              Store 59_7(sx) 61_3
+            65_4:   32_3(ptr) AccessChain 59_2(gl_LaunchSizeEXT) uint(1)
+            61_4:   21_1(int) Load 65_4
+                              Store 59_8(sy) 61_4
+            61_5:      5341_1 Load 59_3(accEXT)
+            61_6:   21_1(int) Load 59_5(lx)
+            61_7:   21_1(int) Load 59_6(ly)
+            61_8:   21_1(int) Load 59_7(sx)
+            61_9:   21_1(int) Load 59_8(sy)
+                              TraceRayMotionNV 61_5 61_6 61_7 61_8 61_9 uint(0) 44_1 43_1 44_2 43_3 43_1 59_4(payloadEXT)
                               Return
                               FunctionEnd

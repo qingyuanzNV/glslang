@@ -12,1542 +12,1542 @@ spv.shaderBallotAMD.comp
                               Capability StorageUniformBufferBlock16
                               Extension  "SPV_AMD_shader_ballot"
                               Extension  "SPV_KHR_16bit_storage"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 8 8 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 8 8 1
                               Source GLSL 450
                               SourceExtension  "GL_AMD_gpu_shader_half_float"
                               SourceExtension  "GL_AMD_gpu_shader_int16"
                               SourceExtension  "GL_AMD_shader_ballot"
                               SourceExtension  "GL_ARB_gpu_shader_int64"
-                              Name 4  "main"
-                              Name 21  "Buffers"
-                              MemberName 21(Buffers) 0  "i"
-                              MemberName 21(Buffers) 1  "uv"
-                              MemberName 21(Buffers) 2  "fv"
-                              MemberName 21(Buffers) 3  "dv"
-                              MemberName 21(Buffers) 4  "i64"
-                              MemberName 21(Buffers) 5  "u64v"
-                              MemberName 21(Buffers) 6  "f16v"
-                              MemberName 21(Buffers) 7  "i16v"
-                              MemberName 21(Buffers) 8  "u16"
-                              Name 23  ""
-                              Decorate 21(Buffers) BufferBlock
-                              MemberDecorate 21(Buffers) 0 Offset 0
-                              MemberDecorate 21(Buffers) 1 Offset 8
-                              MemberDecorate 21(Buffers) 2 Offset 16
-                              MemberDecorate 21(Buffers) 3 Offset 32
-                              MemberDecorate 21(Buffers) 4 Offset 64
-                              MemberDecorate 21(Buffers) 5 Offset 80
-                              MemberDecorate 21(Buffers) 6 Offset 96
-                              MemberDecorate 21(Buffers) 7 Offset 104
-                              MemberDecorate 21(Buffers) 8 Offset 112
-                              Decorate 23 Binding 0
-                              Decorate 23 DescriptorSet 0
-                              Decorate 1342 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeInt 32 0
-               8:             TypeVector 7(int) 2
-               9:             TypeFloat 32
-              10:             TypeVector 9(float) 3
-              11:             TypeFloat 64
-              12:             TypeVector 11(float64_t) 4
-              13:             TypeInt 64 1
-              14:             TypeInt 64 0
-              15:             TypeVector 14(int64_t) 2
-              16:             TypeFloat 16
-              17:             TypeVector 16(float16_t) 3
-              18:             TypeInt 16 1
-              19:             TypeVector 18(int16_t) 4
-              20:             TypeInt 16 0
-     21(Buffers):             TypeStruct 6(int) 8(ivec2) 10(fvec3) 12(f64vec4) 13(int64_t) 15(i64vec2) 17(f16vec3) 19(i16vec4) 20(int16_t)
-              22:             TypePointer Uniform 21(Buffers)
-              23:     22(ptr) Variable Uniform
-              24:      6(int) Constant 0
-              25:             TypePointer Uniform 6(int)
-              28:      7(int) Constant 3
-              31:      6(int) Constant 1
-              32:             TypePointer Uniform 8(ivec2)
-              41:      6(int) Constant 2
-              42:             TypePointer Uniform 10(fvec3)
-              53:      6(int) Constant 3
-              54:             TypePointer Uniform 12(f64vec4)
-              67:      6(int) Constant 4
-              68:             TypePointer Uniform 13(int64_t)
-              73:      6(int) Constant 5
-              74:             TypePointer Uniform 15(i64vec2)
-              83:      6(int) Constant 6
-              84:             TypePointer Uniform 17(f16vec3)
-              95:      6(int) Constant 7
-              96:             TypePointer Uniform 19(i16vec4)
-             109:      6(int) Constant 8
-             110:             TypePointer Uniform 20(int16_t)
-            1339:             TypeVector 7(int) 3
-            1340:      7(int) Constant 8
-            1341:      7(int) Constant 1
-            1342: 1339(ivec3) ConstantComposite 1340 1340 1341
-         4(main):           2 Function None 3
-               5:             Label
-              26:     25(ptr) AccessChain 23 24
-              27:      6(int) Load 26
-              29:      6(int) GroupSMin 28 Reduce 27
-              30:     25(ptr) AccessChain 23 24
-                              Store 30 29
-              33:     32(ptr) AccessChain 23 31
-              34:    8(ivec2) Load 33
-              35:      7(int) CompositeExtract 34 0
-              36:      7(int) GroupUMin 28 Reduce 35
-              37:      7(int) CompositeExtract 34 1
-              38:      7(int) GroupUMin 28 Reduce 37
-              39:    8(ivec2) CompositeConstruct 36 38
-              40:     32(ptr) AccessChain 23 31
-                              Store 40 39
-              43:     42(ptr) AccessChain 23 41
-              44:   10(fvec3) Load 43
-              45:    9(float) CompositeExtract 44 0
-              46:    9(float) GroupFMin 28 Reduce 45
-              47:    9(float) CompositeExtract 44 1
-              48:    9(float) GroupFMin 28 Reduce 47
-              49:    9(float) CompositeExtract 44 2
-              50:    9(float) GroupFMin 28 Reduce 49
-              51:   10(fvec3) CompositeConstruct 46 48 50
-              52:     42(ptr) AccessChain 23 41
-                              Store 52 51
-              55:     54(ptr) AccessChain 23 53
-              56: 12(f64vec4) Load 55
-              57:11(float64_t) CompositeExtract 56 0
-              58:11(float64_t) GroupFMin 28 Reduce 57
-              59:11(float64_t) CompositeExtract 56 1
-              60:11(float64_t) GroupFMin 28 Reduce 59
-              61:11(float64_t) CompositeExtract 56 2
-              62:11(float64_t) GroupFMin 28 Reduce 61
-              63:11(float64_t) CompositeExtract 56 3
-              64:11(float64_t) GroupFMin 28 Reduce 63
-              65: 12(f64vec4) CompositeConstruct 58 60 62 64
-              66:     54(ptr) AccessChain 23 53
-                              Store 66 65
-              69:     68(ptr) AccessChain 23 67
-              70: 13(int64_t) Load 69
-              71: 13(int64_t) GroupSMin 28 Reduce 70
-              72:     68(ptr) AccessChain 23 67
-                              Store 72 71
-              75:     74(ptr) AccessChain 23 73
-              76: 15(i64vec2) Load 75
-              77: 14(int64_t) CompositeExtract 76 0
-              78: 14(int64_t) GroupUMin 28 Reduce 77
-              79: 14(int64_t) CompositeExtract 76 1
-              80: 14(int64_t) GroupUMin 28 Reduce 79
-              81: 15(i64vec2) CompositeConstruct 78 80
-              82:     74(ptr) AccessChain 23 73
-                              Store 82 81
-              85:     84(ptr) AccessChain 23 83
-              86: 17(f16vec3) Load 85
-              87:16(float16_t) CompositeExtract 86 0
-              88:16(float16_t) GroupFMin 28 Reduce 87
-              89:16(float16_t) CompositeExtract 86 1
-              90:16(float16_t) GroupFMin 28 Reduce 89
-              91:16(float16_t) CompositeExtract 86 2
-              92:16(float16_t) GroupFMin 28 Reduce 91
-              93: 17(f16vec3) CompositeConstruct 88 90 92
-              94:     84(ptr) AccessChain 23 83
-                              Store 94 93
-              97:     96(ptr) AccessChain 23 95
-              98: 19(i16vec4) Load 97
-              99: 18(int16_t) CompositeExtract 98 0
-             100: 18(int16_t) GroupSMin 28 Reduce 99
-             101: 18(int16_t) CompositeExtract 98 1
-             102: 18(int16_t) GroupSMin 28 Reduce 101
-             103: 18(int16_t) CompositeExtract 98 2
-             104: 18(int16_t) GroupSMin 28 Reduce 103
-             105: 18(int16_t) CompositeExtract 98 3
-             106: 18(int16_t) GroupSMin 28 Reduce 105
-             107: 19(i16vec4) CompositeConstruct 100 102 104 106
-             108:     96(ptr) AccessChain 23 95
-                              Store 108 107
-             111:    110(ptr) AccessChain 23 109
-             112: 20(int16_t) Load 111
-             113: 20(int16_t) GroupUMin 28 Reduce 112
-             114:    110(ptr) AccessChain 23 109
-                              Store 114 113
-             115:     25(ptr) AccessChain 23 24
-             116:      6(int) Load 115
-             117:      6(int) GroupSMax 28 Reduce 116
-             118:     25(ptr) AccessChain 23 24
-                              Store 118 117
-             119:     32(ptr) AccessChain 23 31
-             120:    8(ivec2) Load 119
-             121:      7(int) CompositeExtract 120 0
-             122:      7(int) GroupUMax 28 Reduce 121
-             123:      7(int) CompositeExtract 120 1
-             124:      7(int) GroupUMax 28 Reduce 123
-             125:    8(ivec2) CompositeConstruct 122 124
-             126:     32(ptr) AccessChain 23 31
-                              Store 126 125
-             127:     42(ptr) AccessChain 23 41
-             128:   10(fvec3) Load 127
-             129:    9(float) CompositeExtract 128 0
-             130:    9(float) GroupFMax 28 Reduce 129
-             131:    9(float) CompositeExtract 128 1
-             132:    9(float) GroupFMax 28 Reduce 131
-             133:    9(float) CompositeExtract 128 2
-             134:    9(float) GroupFMax 28 Reduce 133
-             135:   10(fvec3) CompositeConstruct 130 132 134
-             136:     42(ptr) AccessChain 23 41
-                              Store 136 135
-             137:     54(ptr) AccessChain 23 53
-             138: 12(f64vec4) Load 137
-             139:11(float64_t) CompositeExtract 138 0
-             140:11(float64_t) GroupFMax 28 Reduce 139
-             141:11(float64_t) CompositeExtract 138 1
-             142:11(float64_t) GroupFMax 28 Reduce 141
-             143:11(float64_t) CompositeExtract 138 2
-             144:11(float64_t) GroupFMax 28 Reduce 143
-             145:11(float64_t) CompositeExtract 138 3
-             146:11(float64_t) GroupFMax 28 Reduce 145
-             147: 12(f64vec4) CompositeConstruct 140 142 144 146
-             148:     54(ptr) AccessChain 23 53
-                              Store 148 147
-             149:     68(ptr) AccessChain 23 67
-             150: 13(int64_t) Load 149
-             151: 13(int64_t) GroupSMax 28 Reduce 150
-             152:     68(ptr) AccessChain 23 67
-                              Store 152 151
-             153:     74(ptr) AccessChain 23 73
-             154: 15(i64vec2) Load 153
-             155: 14(int64_t) CompositeExtract 154 0
-             156: 14(int64_t) GroupUMax 28 Reduce 155
-             157: 14(int64_t) CompositeExtract 154 1
-             158: 14(int64_t) GroupUMax 28 Reduce 157
-             159: 15(i64vec2) CompositeConstruct 156 158
-             160:     74(ptr) AccessChain 23 73
-                              Store 160 159
-             161:     84(ptr) AccessChain 23 83
-             162: 17(f16vec3) Load 161
-             163:16(float16_t) CompositeExtract 162 0
-             164:16(float16_t) GroupFMax 28 Reduce 163
-             165:16(float16_t) CompositeExtract 162 1
-             166:16(float16_t) GroupFMax 28 Reduce 165
-             167:16(float16_t) CompositeExtract 162 2
-             168:16(float16_t) GroupFMax 28 Reduce 167
-             169: 17(f16vec3) CompositeConstruct 164 166 168
-             170:     84(ptr) AccessChain 23 83
-                              Store 170 169
-             171:     96(ptr) AccessChain 23 95
-             172: 19(i16vec4) Load 171
-             173: 18(int16_t) CompositeExtract 172 0
-             174: 18(int16_t) GroupSMax 28 Reduce 173
-             175: 18(int16_t) CompositeExtract 172 1
-             176: 18(int16_t) GroupSMax 28 Reduce 175
-             177: 18(int16_t) CompositeExtract 172 2
-             178: 18(int16_t) GroupSMax 28 Reduce 177
-             179: 18(int16_t) CompositeExtract 172 3
-             180: 18(int16_t) GroupSMax 28 Reduce 179
-             181: 19(i16vec4) CompositeConstruct 174 176 178 180
-             182:     96(ptr) AccessChain 23 95
-                              Store 182 181
-             183:    110(ptr) AccessChain 23 109
-             184: 20(int16_t) Load 183
-             185: 20(int16_t) GroupUMax 28 Reduce 184
-             186:    110(ptr) AccessChain 23 109
-                              Store 186 185
-             187:     25(ptr) AccessChain 23 24
-             188:      6(int) Load 187
-             189:      6(int) GroupIAdd 28 Reduce 188
-             190:     25(ptr) AccessChain 23 24
-                              Store 190 189
-             191:     32(ptr) AccessChain 23 31
-             192:    8(ivec2) Load 191
-             193:      7(int) CompositeExtract 192 0
-             194:      7(int) GroupIAdd 28 Reduce 193
-             195:      7(int) CompositeExtract 192 1
-             196:      7(int) GroupIAdd 28 Reduce 195
-             197:    8(ivec2) CompositeConstruct 194 196
-             198:     32(ptr) AccessChain 23 31
-                              Store 198 197
-             199:     42(ptr) AccessChain 23 41
-             200:   10(fvec3) Load 199
-             201:    9(float) CompositeExtract 200 0
-             202:    9(float) GroupFAdd 28 Reduce 201
-             203:    9(float) CompositeExtract 200 1
-             204:    9(float) GroupFAdd 28 Reduce 203
-             205:    9(float) CompositeExtract 200 2
-             206:    9(float) GroupFAdd 28 Reduce 205
-             207:   10(fvec3) CompositeConstruct 202 204 206
-             208:     42(ptr) AccessChain 23 41
-                              Store 208 207
-             209:     54(ptr) AccessChain 23 53
-             210: 12(f64vec4) Load 209
-             211:11(float64_t) CompositeExtract 210 0
-             212:11(float64_t) GroupFAdd 28 Reduce 211
-             213:11(float64_t) CompositeExtract 210 1
-             214:11(float64_t) GroupFAdd 28 Reduce 213
-             215:11(float64_t) CompositeExtract 210 2
-             216:11(float64_t) GroupFAdd 28 Reduce 215
-             217:11(float64_t) CompositeExtract 210 3
-             218:11(float64_t) GroupFAdd 28 Reduce 217
-             219: 12(f64vec4) CompositeConstruct 212 214 216 218
-             220:     54(ptr) AccessChain 23 53
-                              Store 220 219
-             221:     68(ptr) AccessChain 23 67
-             222: 13(int64_t) Load 221
-             223: 13(int64_t) GroupIAdd 28 Reduce 222
-             224:     68(ptr) AccessChain 23 67
-                              Store 224 223
-             225:     74(ptr) AccessChain 23 73
-             226: 15(i64vec2) Load 225
-             227: 14(int64_t) CompositeExtract 226 0
-             228: 14(int64_t) GroupIAdd 28 Reduce 227
-             229: 14(int64_t) CompositeExtract 226 1
-             230: 14(int64_t) GroupIAdd 28 Reduce 229
-             231: 15(i64vec2) CompositeConstruct 228 230
-             232:     74(ptr) AccessChain 23 73
-                              Store 232 231
-             233:     84(ptr) AccessChain 23 83
-             234: 17(f16vec3) Load 233
-             235:16(float16_t) CompositeExtract 234 0
-             236:16(float16_t) GroupFAdd 28 Reduce 235
-             237:16(float16_t) CompositeExtract 234 1
-             238:16(float16_t) GroupFAdd 28 Reduce 237
-             239:16(float16_t) CompositeExtract 234 2
-             240:16(float16_t) GroupFAdd 28 Reduce 239
-             241: 17(f16vec3) CompositeConstruct 236 238 240
-             242:     84(ptr) AccessChain 23 83
-                              Store 242 241
-             243:     96(ptr) AccessChain 23 95
-             244: 19(i16vec4) Load 243
-             245: 18(int16_t) CompositeExtract 244 0
-             246: 18(int16_t) GroupIAdd 28 Reduce 245
-             247: 18(int16_t) CompositeExtract 244 1
-             248: 18(int16_t) GroupIAdd 28 Reduce 247
-             249: 18(int16_t) CompositeExtract 244 2
-             250: 18(int16_t) GroupIAdd 28 Reduce 249
-             251: 18(int16_t) CompositeExtract 244 3
-             252: 18(int16_t) GroupIAdd 28 Reduce 251
-             253: 19(i16vec4) CompositeConstruct 246 248 250 252
-             254:     96(ptr) AccessChain 23 95
-                              Store 254 253
-             255:    110(ptr) AccessChain 23 109
-             256: 20(int16_t) Load 255
-             257: 20(int16_t) GroupIAdd 28 Reduce 256
-             258:    110(ptr) AccessChain 23 109
-                              Store 258 257
-             259:     25(ptr) AccessChain 23 24
-             260:      6(int) Load 259
-             261:      6(int) GroupSMinNonUniformAMD 28 Reduce 260
-             262:     25(ptr) AccessChain 23 24
-                              Store 262 261
-             263:     32(ptr) AccessChain 23 31
-             264:    8(ivec2) Load 263
-             265:      7(int) CompositeExtract 264 0
-             266:      7(int) GroupUMinNonUniformAMD 28 Reduce 265
-             267:      7(int) CompositeExtract 264 1
-             268:      7(int) GroupUMinNonUniformAMD 28 Reduce 267
-             269:    8(ivec2) CompositeConstruct 266 268
-             270:     32(ptr) AccessChain 23 31
-                              Store 270 269
-             271:     42(ptr) AccessChain 23 41
-             272:   10(fvec3) Load 271
-             273:    9(float) CompositeExtract 272 0
-             274:    9(float) GroupFMinNonUniformAMD 28 Reduce 273
-             275:    9(float) CompositeExtract 272 1
-             276:    9(float) GroupFMinNonUniformAMD 28 Reduce 275
-             277:    9(float) CompositeExtract 272 2
-             278:    9(float) GroupFMinNonUniformAMD 28 Reduce 277
-             279:   10(fvec3) CompositeConstruct 274 276 278
-             280:     42(ptr) AccessChain 23 41
-                              Store 280 279
-             281:     54(ptr) AccessChain 23 53
-             282: 12(f64vec4) Load 281
-             283:11(float64_t) CompositeExtract 282 0
-             284:11(float64_t) GroupFMinNonUniformAMD 28 Reduce 283
-             285:11(float64_t) CompositeExtract 282 1
-             286:11(float64_t) GroupFMinNonUniformAMD 28 Reduce 285
-             287:11(float64_t) CompositeExtract 282 2
-             288:11(float64_t) GroupFMinNonUniformAMD 28 Reduce 287
-             289:11(float64_t) CompositeExtract 282 3
-             290:11(float64_t) GroupFMinNonUniformAMD 28 Reduce 289
-             291: 12(f64vec4) CompositeConstruct 284 286 288 290
-             292:     54(ptr) AccessChain 23 53
-                              Store 292 291
-             293:     68(ptr) AccessChain 23 67
-             294: 13(int64_t) Load 293
-             295: 13(int64_t) GroupSMinNonUniformAMD 28 Reduce 294
-             296:     68(ptr) AccessChain 23 67
-                              Store 296 295
-             297:     74(ptr) AccessChain 23 73
-             298: 15(i64vec2) Load 297
-             299: 14(int64_t) CompositeExtract 298 0
-             300: 14(int64_t) GroupUMinNonUniformAMD 28 Reduce 299
-             301: 14(int64_t) CompositeExtract 298 1
-             302: 14(int64_t) GroupUMinNonUniformAMD 28 Reduce 301
-             303: 15(i64vec2) CompositeConstruct 300 302
-             304:     74(ptr) AccessChain 23 73
-                              Store 304 303
-             305:     84(ptr) AccessChain 23 83
-             306: 17(f16vec3) Load 305
-             307:16(float16_t) CompositeExtract 306 0
-             308:16(float16_t) GroupFMinNonUniformAMD 28 Reduce 307
-             309:16(float16_t) CompositeExtract 306 1
-             310:16(float16_t) GroupFMinNonUniformAMD 28 Reduce 309
-             311:16(float16_t) CompositeExtract 306 2
-             312:16(float16_t) GroupFMinNonUniformAMD 28 Reduce 311
-             313: 17(f16vec3) CompositeConstruct 308 310 312
-             314:     84(ptr) AccessChain 23 83
-                              Store 314 313
-             315:     96(ptr) AccessChain 23 95
-             316: 19(i16vec4) Load 315
-             317: 18(int16_t) CompositeExtract 316 0
-             318: 18(int16_t) GroupSMinNonUniformAMD 28 Reduce 317
-             319: 18(int16_t) CompositeExtract 316 1
-             320: 18(int16_t) GroupSMinNonUniformAMD 28 Reduce 319
-             321: 18(int16_t) CompositeExtract 316 2
-             322: 18(int16_t) GroupSMinNonUniformAMD 28 Reduce 321
-             323: 18(int16_t) CompositeExtract 316 3
-             324: 18(int16_t) GroupSMinNonUniformAMD 28 Reduce 323
-             325: 19(i16vec4) CompositeConstruct 318 320 322 324
-             326:     96(ptr) AccessChain 23 95
-                              Store 326 325
-             327:    110(ptr) AccessChain 23 109
-             328: 20(int16_t) Load 327
-             329: 20(int16_t) GroupUMinNonUniformAMD 28 Reduce 328
-             330:    110(ptr) AccessChain 23 109
-                              Store 330 329
-             331:     25(ptr) AccessChain 23 24
-             332:      6(int) Load 331
-             333:      6(int) GroupSMaxNonUniformAMD 28 Reduce 332
-             334:     25(ptr) AccessChain 23 24
-                              Store 334 333
-             335:     32(ptr) AccessChain 23 31
-             336:    8(ivec2) Load 335
-             337:      7(int) CompositeExtract 336 0
-             338:      7(int) GroupUMaxNonUniformAMD 28 Reduce 337
-             339:      7(int) CompositeExtract 336 1
-             340:      7(int) GroupUMaxNonUniformAMD 28 Reduce 339
-             341:    8(ivec2) CompositeConstruct 338 340
-             342:     32(ptr) AccessChain 23 31
-                              Store 342 341
-             343:     42(ptr) AccessChain 23 41
-             344:   10(fvec3) Load 343
-             345:    9(float) CompositeExtract 344 0
-             346:    9(float) GroupFMaxNonUniformAMD 28 Reduce 345
-             347:    9(float) CompositeExtract 344 1
-             348:    9(float) GroupFMaxNonUniformAMD 28 Reduce 347
-             349:    9(float) CompositeExtract 344 2
-             350:    9(float) GroupFMaxNonUniformAMD 28 Reduce 349
-             351:   10(fvec3) CompositeConstruct 346 348 350
-             352:     42(ptr) AccessChain 23 41
-                              Store 352 351
-             353:     54(ptr) AccessChain 23 53
-             354: 12(f64vec4) Load 353
-             355:11(float64_t) CompositeExtract 354 0
-             356:11(float64_t) GroupFMaxNonUniformAMD 28 Reduce 355
-             357:11(float64_t) CompositeExtract 354 1
-             358:11(float64_t) GroupFMaxNonUniformAMD 28 Reduce 357
-             359:11(float64_t) CompositeExtract 354 2
-             360:11(float64_t) GroupFMaxNonUniformAMD 28 Reduce 359
-             361:11(float64_t) CompositeExtract 354 3
-             362:11(float64_t) GroupFMaxNonUniformAMD 28 Reduce 361
-             363: 12(f64vec4) CompositeConstruct 356 358 360 362
-             364:     54(ptr) AccessChain 23 53
-                              Store 364 363
-             365:     68(ptr) AccessChain 23 67
-             366: 13(int64_t) Load 365
-             367: 13(int64_t) GroupSMaxNonUniformAMD 28 Reduce 366
-             368:     68(ptr) AccessChain 23 67
-                              Store 368 367
-             369:     74(ptr) AccessChain 23 73
-             370: 15(i64vec2) Load 369
-             371: 14(int64_t) CompositeExtract 370 0
-             372: 14(int64_t) GroupUMaxNonUniformAMD 28 Reduce 371
-             373: 14(int64_t) CompositeExtract 370 1
-             374: 14(int64_t) GroupUMaxNonUniformAMD 28 Reduce 373
-             375: 15(i64vec2) CompositeConstruct 372 374
-             376:     74(ptr) AccessChain 23 73
-                              Store 376 375
-             377:     84(ptr) AccessChain 23 83
-             378: 17(f16vec3) Load 377
-             379:16(float16_t) CompositeExtract 378 0
-             380:16(float16_t) GroupFMaxNonUniformAMD 28 Reduce 379
-             381:16(float16_t) CompositeExtract 378 1
-             382:16(float16_t) GroupFMaxNonUniformAMD 28 Reduce 381
-             383:16(float16_t) CompositeExtract 378 2
-             384:16(float16_t) GroupFMaxNonUniformAMD 28 Reduce 383
-             385: 17(f16vec3) CompositeConstruct 380 382 384
-             386:     84(ptr) AccessChain 23 83
-                              Store 386 385
-             387:     96(ptr) AccessChain 23 95
-             388: 19(i16vec4) Load 387
-             389: 18(int16_t) CompositeExtract 388 0
-             390: 18(int16_t) GroupSMaxNonUniformAMD 28 Reduce 389
-             391: 18(int16_t) CompositeExtract 388 1
-             392: 18(int16_t) GroupSMaxNonUniformAMD 28 Reduce 391
-             393: 18(int16_t) CompositeExtract 388 2
-             394: 18(int16_t) GroupSMaxNonUniformAMD 28 Reduce 393
-             395: 18(int16_t) CompositeExtract 388 3
-             396: 18(int16_t) GroupSMaxNonUniformAMD 28 Reduce 395
-             397: 19(i16vec4) CompositeConstruct 390 392 394 396
-             398:     96(ptr) AccessChain 23 95
-                              Store 398 397
-             399:    110(ptr) AccessChain 23 109
-             400: 20(int16_t) Load 399
-             401: 20(int16_t) GroupUMaxNonUniformAMD 28 Reduce 400
-             402:    110(ptr) AccessChain 23 109
-                              Store 402 401
-             403:     25(ptr) AccessChain 23 24
-             404:      6(int) Load 403
-             405:      6(int) GroupIAddNonUniformAMD 28 Reduce 404
-             406:     25(ptr) AccessChain 23 24
-                              Store 406 405
-             407:     32(ptr) AccessChain 23 31
-             408:    8(ivec2) Load 407
-             409:      7(int) CompositeExtract 408 0
-             410:      7(int) GroupIAddNonUniformAMD 28 Reduce 409
-             411:      7(int) CompositeExtract 408 1
-             412:      7(int) GroupIAddNonUniformAMD 28 Reduce 411
-             413:    8(ivec2) CompositeConstruct 410 412
-             414:     32(ptr) AccessChain 23 31
-                              Store 414 413
-             415:     42(ptr) AccessChain 23 41
-             416:   10(fvec3) Load 415
-             417:    9(float) CompositeExtract 416 0
-             418:    9(float) GroupFAddNonUniformAMD 28 Reduce 417
-             419:    9(float) CompositeExtract 416 1
-             420:    9(float) GroupFAddNonUniformAMD 28 Reduce 419
-             421:    9(float) CompositeExtract 416 2
-             422:    9(float) GroupFAddNonUniformAMD 28 Reduce 421
-             423:   10(fvec3) CompositeConstruct 418 420 422
-             424:     42(ptr) AccessChain 23 41
-                              Store 424 423
-             425:     54(ptr) AccessChain 23 53
-             426: 12(f64vec4) Load 425
-             427:11(float64_t) CompositeExtract 426 0
-             428:11(float64_t) GroupFAddNonUniformAMD 28 Reduce 427
-             429:11(float64_t) CompositeExtract 426 1
-             430:11(float64_t) GroupFAddNonUniformAMD 28 Reduce 429
-             431:11(float64_t) CompositeExtract 426 2
-             432:11(float64_t) GroupFAddNonUniformAMD 28 Reduce 431
-             433:11(float64_t) CompositeExtract 426 3
-             434:11(float64_t) GroupFAddNonUniformAMD 28 Reduce 433
-             435: 12(f64vec4) CompositeConstruct 428 430 432 434
-             436:     54(ptr) AccessChain 23 53
-                              Store 436 435
-             437:     68(ptr) AccessChain 23 67
-             438: 13(int64_t) Load 437
-             439: 13(int64_t) GroupIAddNonUniformAMD 28 Reduce 438
-             440:     68(ptr) AccessChain 23 67
-                              Store 440 439
-             441:     74(ptr) AccessChain 23 73
-             442: 15(i64vec2) Load 441
-             443: 14(int64_t) CompositeExtract 442 0
-             444: 14(int64_t) GroupIAddNonUniformAMD 28 Reduce 443
-             445: 14(int64_t) CompositeExtract 442 1
-             446: 14(int64_t) GroupIAddNonUniformAMD 28 Reduce 445
-             447: 15(i64vec2) CompositeConstruct 444 446
-             448:     74(ptr) AccessChain 23 73
-                              Store 448 447
-             449:     84(ptr) AccessChain 23 83
-             450: 17(f16vec3) Load 449
-             451:16(float16_t) CompositeExtract 450 0
-             452:16(float16_t) GroupFAddNonUniformAMD 28 Reduce 451
-             453:16(float16_t) CompositeExtract 450 1
-             454:16(float16_t) GroupFAddNonUniformAMD 28 Reduce 453
-             455:16(float16_t) CompositeExtract 450 2
-             456:16(float16_t) GroupFAddNonUniformAMD 28 Reduce 455
-             457: 17(f16vec3) CompositeConstruct 452 454 456
-             458:     84(ptr) AccessChain 23 83
-                              Store 458 457
-             459:     96(ptr) AccessChain 23 95
-             460: 19(i16vec4) Load 459
-             461: 18(int16_t) CompositeExtract 460 0
-             462: 18(int16_t) GroupIAddNonUniformAMD 28 Reduce 461
-             463: 18(int16_t) CompositeExtract 460 1
-             464: 18(int16_t) GroupIAddNonUniformAMD 28 Reduce 463
-             465: 18(int16_t) CompositeExtract 460 2
-             466: 18(int16_t) GroupIAddNonUniformAMD 28 Reduce 465
-             467: 18(int16_t) CompositeExtract 460 3
-             468: 18(int16_t) GroupIAddNonUniformAMD 28 Reduce 467
-             469: 19(i16vec4) CompositeConstruct 462 464 466 468
-             470:     96(ptr) AccessChain 23 95
-                              Store 470 469
-             471:    110(ptr) AccessChain 23 109
-             472: 20(int16_t) Load 471
-             473: 20(int16_t) GroupIAddNonUniformAMD 28 Reduce 472
-             474:    110(ptr) AccessChain 23 109
-                              Store 474 473
-             475:     25(ptr) AccessChain 23 24
-             476:      6(int) Load 475
-             477:      6(int) GroupSMin 28 InclusiveScan 476
-             478:     25(ptr) AccessChain 23 24
-                              Store 478 477
-             479:     32(ptr) AccessChain 23 31
-             480:    8(ivec2) Load 479
-             481:      7(int) CompositeExtract 480 0
-             482:      7(int) GroupUMin 28 InclusiveScan 481
-             483:      7(int) CompositeExtract 480 1
-             484:      7(int) GroupUMin 28 InclusiveScan 483
-             485:    8(ivec2) CompositeConstruct 482 484
-             486:     32(ptr) AccessChain 23 31
-                              Store 486 485
-             487:     42(ptr) AccessChain 23 41
-             488:   10(fvec3) Load 487
-             489:    9(float) CompositeExtract 488 0
-             490:    9(float) GroupFMin 28 InclusiveScan 489
-             491:    9(float) CompositeExtract 488 1
-             492:    9(float) GroupFMin 28 InclusiveScan 491
-             493:    9(float) CompositeExtract 488 2
-             494:    9(float) GroupFMin 28 InclusiveScan 493
-             495:   10(fvec3) CompositeConstruct 490 492 494
-             496:     42(ptr) AccessChain 23 41
-                              Store 496 495
-             497:     54(ptr) AccessChain 23 53
-             498: 12(f64vec4) Load 497
-             499:11(float64_t) CompositeExtract 498 0
-             500:11(float64_t) GroupFMin 28 InclusiveScan 499
-             501:11(float64_t) CompositeExtract 498 1
-             502:11(float64_t) GroupFMin 28 InclusiveScan 501
-             503:11(float64_t) CompositeExtract 498 2
-             504:11(float64_t) GroupFMin 28 InclusiveScan 503
-             505:11(float64_t) CompositeExtract 498 3
-             506:11(float64_t) GroupFMin 28 InclusiveScan 505
-             507: 12(f64vec4) CompositeConstruct 500 502 504 506
-             508:     54(ptr) AccessChain 23 53
-                              Store 508 507
-             509:     68(ptr) AccessChain 23 67
-             510: 13(int64_t) Load 509
-             511: 13(int64_t) GroupSMin 28 InclusiveScan 510
-             512:     68(ptr) AccessChain 23 67
-                              Store 512 511
-             513:     74(ptr) AccessChain 23 73
-             514: 15(i64vec2) Load 513
-             515: 14(int64_t) CompositeExtract 514 0
-             516: 14(int64_t) GroupUMin 28 InclusiveScan 515
-             517: 14(int64_t) CompositeExtract 514 1
-             518: 14(int64_t) GroupUMin 28 InclusiveScan 517
-             519: 15(i64vec2) CompositeConstruct 516 518
-             520:     74(ptr) AccessChain 23 73
-                              Store 520 519
-             521:     84(ptr) AccessChain 23 83
-             522: 17(f16vec3) Load 521
-             523:16(float16_t) CompositeExtract 522 0
-             524:16(float16_t) GroupFMin 28 InclusiveScan 523
-             525:16(float16_t) CompositeExtract 522 1
-             526:16(float16_t) GroupFMin 28 InclusiveScan 525
-             527:16(float16_t) CompositeExtract 522 2
-             528:16(float16_t) GroupFMin 28 InclusiveScan 527
-             529: 17(f16vec3) CompositeConstruct 524 526 528
-             530:     84(ptr) AccessChain 23 83
-                              Store 530 529
-             531:     96(ptr) AccessChain 23 95
-             532: 19(i16vec4) Load 531
-             533: 18(int16_t) CompositeExtract 532 0
-             534: 18(int16_t) GroupSMin 28 InclusiveScan 533
-             535: 18(int16_t) CompositeExtract 532 1
-             536: 18(int16_t) GroupSMin 28 InclusiveScan 535
-             537: 18(int16_t) CompositeExtract 532 2
-             538: 18(int16_t) GroupSMin 28 InclusiveScan 537
-             539: 18(int16_t) CompositeExtract 532 3
-             540: 18(int16_t) GroupSMin 28 InclusiveScan 539
-             541: 19(i16vec4) CompositeConstruct 534 536 538 540
-             542:     96(ptr) AccessChain 23 95
-                              Store 542 541
-             543:    110(ptr) AccessChain 23 109
-             544: 20(int16_t) Load 543
-             545: 20(int16_t) GroupUMin 28 InclusiveScan 544
-             546:    110(ptr) AccessChain 23 109
-                              Store 546 545
-             547:     25(ptr) AccessChain 23 24
-             548:      6(int) Load 547
-             549:      6(int) GroupSMax 28 InclusiveScan 548
-             550:     25(ptr) AccessChain 23 24
-                              Store 550 549
-             551:     32(ptr) AccessChain 23 31
-             552:    8(ivec2) Load 551
-             553:      7(int) CompositeExtract 552 0
-             554:      7(int) GroupUMax 28 InclusiveScan 553
-             555:      7(int) CompositeExtract 552 1
-             556:      7(int) GroupUMax 28 InclusiveScan 555
-             557:    8(ivec2) CompositeConstruct 554 556
-             558:     32(ptr) AccessChain 23 31
-                              Store 558 557
-             559:     42(ptr) AccessChain 23 41
-             560:   10(fvec3) Load 559
-             561:    9(float) CompositeExtract 560 0
-             562:    9(float) GroupFMax 28 InclusiveScan 561
-             563:    9(float) CompositeExtract 560 1
-             564:    9(float) GroupFMax 28 InclusiveScan 563
-             565:    9(float) CompositeExtract 560 2
-             566:    9(float) GroupFMax 28 InclusiveScan 565
-             567:   10(fvec3) CompositeConstruct 562 564 566
-             568:     42(ptr) AccessChain 23 41
-                              Store 568 567
-             569:     54(ptr) AccessChain 23 53
-             570: 12(f64vec4) Load 569
-             571:11(float64_t) CompositeExtract 570 0
-             572:11(float64_t) GroupFMax 28 InclusiveScan 571
-             573:11(float64_t) CompositeExtract 570 1
-             574:11(float64_t) GroupFMax 28 InclusiveScan 573
-             575:11(float64_t) CompositeExtract 570 2
-             576:11(float64_t) GroupFMax 28 InclusiveScan 575
-             577:11(float64_t) CompositeExtract 570 3
-             578:11(float64_t) GroupFMax 28 InclusiveScan 577
-             579: 12(f64vec4) CompositeConstruct 572 574 576 578
-             580:     54(ptr) AccessChain 23 53
-                              Store 580 579
-             581:     68(ptr) AccessChain 23 67
-             582: 13(int64_t) Load 581
-             583: 13(int64_t) GroupSMax 28 InclusiveScan 582
-             584:     68(ptr) AccessChain 23 67
-                              Store 584 583
-             585:     74(ptr) AccessChain 23 73
-             586: 15(i64vec2) Load 585
-             587: 14(int64_t) CompositeExtract 586 0
-             588: 14(int64_t) GroupUMax 28 InclusiveScan 587
-             589: 14(int64_t) CompositeExtract 586 1
-             590: 14(int64_t) GroupUMax 28 InclusiveScan 589
-             591: 15(i64vec2) CompositeConstruct 588 590
-             592:     74(ptr) AccessChain 23 73
-                              Store 592 591
-             593:     84(ptr) AccessChain 23 83
-             594: 17(f16vec3) Load 593
-             595:16(float16_t) CompositeExtract 594 0
-             596:16(float16_t) GroupFMax 28 InclusiveScan 595
-             597:16(float16_t) CompositeExtract 594 1
-             598:16(float16_t) GroupFMax 28 InclusiveScan 597
-             599:16(float16_t) CompositeExtract 594 2
-             600:16(float16_t) GroupFMax 28 InclusiveScan 599
-             601: 17(f16vec3) CompositeConstruct 596 598 600
-             602:     84(ptr) AccessChain 23 83
-                              Store 602 601
-             603:     96(ptr) AccessChain 23 95
-             604: 19(i16vec4) Load 603
-             605: 18(int16_t) CompositeExtract 604 0
-             606: 18(int16_t) GroupSMax 28 InclusiveScan 605
-             607: 18(int16_t) CompositeExtract 604 1
-             608: 18(int16_t) GroupSMax 28 InclusiveScan 607
-             609: 18(int16_t) CompositeExtract 604 2
-             610: 18(int16_t) GroupSMax 28 InclusiveScan 609
-             611: 18(int16_t) CompositeExtract 604 3
-             612: 18(int16_t) GroupSMax 28 InclusiveScan 611
-             613: 19(i16vec4) CompositeConstruct 606 608 610 612
-             614:     96(ptr) AccessChain 23 95
-                              Store 614 613
-             615:    110(ptr) AccessChain 23 109
-             616: 20(int16_t) Load 615
-             617: 20(int16_t) GroupUMax 28 InclusiveScan 616
-             618:    110(ptr) AccessChain 23 109
-                              Store 618 617
-             619:     25(ptr) AccessChain 23 24
-             620:      6(int) Load 619
-             621:      6(int) GroupIAdd 28 InclusiveScan 620
-             622:     25(ptr) AccessChain 23 24
-                              Store 622 621
-             623:     32(ptr) AccessChain 23 31
-             624:    8(ivec2) Load 623
-             625:      7(int) CompositeExtract 624 0
-             626:      7(int) GroupIAdd 28 InclusiveScan 625
-             627:      7(int) CompositeExtract 624 1
-             628:      7(int) GroupIAdd 28 InclusiveScan 627
-             629:    8(ivec2) CompositeConstruct 626 628
-             630:     32(ptr) AccessChain 23 31
-                              Store 630 629
-             631:     42(ptr) AccessChain 23 41
-             632:   10(fvec3) Load 631
-             633:    9(float) CompositeExtract 632 0
-             634:    9(float) GroupFAdd 28 InclusiveScan 633
-             635:    9(float) CompositeExtract 632 1
-             636:    9(float) GroupFAdd 28 InclusiveScan 635
-             637:    9(float) CompositeExtract 632 2
-             638:    9(float) GroupFAdd 28 InclusiveScan 637
-             639:   10(fvec3) CompositeConstruct 634 636 638
-             640:     42(ptr) AccessChain 23 41
-                              Store 640 639
-             641:     54(ptr) AccessChain 23 53
-             642: 12(f64vec4) Load 641
-             643:11(float64_t) CompositeExtract 642 0
-             644:11(float64_t) GroupFAdd 28 InclusiveScan 643
-             645:11(float64_t) CompositeExtract 642 1
-             646:11(float64_t) GroupFAdd 28 InclusiveScan 645
-             647:11(float64_t) CompositeExtract 642 2
-             648:11(float64_t) GroupFAdd 28 InclusiveScan 647
-             649:11(float64_t) CompositeExtract 642 3
-             650:11(float64_t) GroupFAdd 28 InclusiveScan 649
-             651: 12(f64vec4) CompositeConstruct 644 646 648 650
-             652:     54(ptr) AccessChain 23 53
-                              Store 652 651
-             653:     68(ptr) AccessChain 23 67
-             654: 13(int64_t) Load 653
-             655: 13(int64_t) GroupIAdd 28 InclusiveScan 654
-             656:     68(ptr) AccessChain 23 67
-                              Store 656 655
-             657:     74(ptr) AccessChain 23 73
-             658: 15(i64vec2) Load 657
-             659: 14(int64_t) CompositeExtract 658 0
-             660: 14(int64_t) GroupIAdd 28 InclusiveScan 659
-             661: 14(int64_t) CompositeExtract 658 1
-             662: 14(int64_t) GroupIAdd 28 InclusiveScan 661
-             663: 15(i64vec2) CompositeConstruct 660 662
-             664:     74(ptr) AccessChain 23 73
-                              Store 664 663
-             665:     84(ptr) AccessChain 23 83
-             666: 17(f16vec3) Load 665
-             667:16(float16_t) CompositeExtract 666 0
-             668:16(float16_t) GroupFAdd 28 InclusiveScan 667
-             669:16(float16_t) CompositeExtract 666 1
-             670:16(float16_t) GroupFAdd 28 InclusiveScan 669
-             671:16(float16_t) CompositeExtract 666 2
-             672:16(float16_t) GroupFAdd 28 InclusiveScan 671
-             673: 17(f16vec3) CompositeConstruct 668 670 672
-             674:     84(ptr) AccessChain 23 83
-                              Store 674 673
-             675:     96(ptr) AccessChain 23 95
-             676: 19(i16vec4) Load 675
-             677: 18(int16_t) CompositeExtract 676 0
-             678: 18(int16_t) GroupIAdd 28 InclusiveScan 677
-             679: 18(int16_t) CompositeExtract 676 1
-             680: 18(int16_t) GroupIAdd 28 InclusiveScan 679
-             681: 18(int16_t) CompositeExtract 676 2
-             682: 18(int16_t) GroupIAdd 28 InclusiveScan 681
-             683: 18(int16_t) CompositeExtract 676 3
-             684: 18(int16_t) GroupIAdd 28 InclusiveScan 683
-             685: 19(i16vec4) CompositeConstruct 678 680 682 684
-             686:     96(ptr) AccessChain 23 95
-                              Store 686 685
-             687:    110(ptr) AccessChain 23 109
-             688: 20(int16_t) Load 687
-             689: 20(int16_t) GroupIAdd 28 InclusiveScan 688
-             690:    110(ptr) AccessChain 23 109
-                              Store 690 689
-             691:     25(ptr) AccessChain 23 24
-             692:      6(int) Load 691
-             693:      6(int) GroupSMin 28 ExclusiveScan 692
-             694:     25(ptr) AccessChain 23 24
-                              Store 694 693
-             695:     32(ptr) AccessChain 23 31
-             696:    8(ivec2) Load 695
-             697:      7(int) CompositeExtract 696 0
-             698:      7(int) GroupUMin 28 ExclusiveScan 697
-             699:      7(int) CompositeExtract 696 1
-             700:      7(int) GroupUMin 28 ExclusiveScan 699
-             701:    8(ivec2) CompositeConstruct 698 700
-             702:     32(ptr) AccessChain 23 31
-                              Store 702 701
-             703:     42(ptr) AccessChain 23 41
-             704:   10(fvec3) Load 703
-             705:    9(float) CompositeExtract 704 0
-             706:    9(float) GroupFMin 28 ExclusiveScan 705
-             707:    9(float) CompositeExtract 704 1
-             708:    9(float) GroupFMin 28 ExclusiveScan 707
-             709:    9(float) CompositeExtract 704 2
-             710:    9(float) GroupFMin 28 ExclusiveScan 709
-             711:   10(fvec3) CompositeConstruct 706 708 710
-             712:     42(ptr) AccessChain 23 41
-                              Store 712 711
-             713:     54(ptr) AccessChain 23 53
-             714: 12(f64vec4) Load 713
-             715:11(float64_t) CompositeExtract 714 0
-             716:11(float64_t) GroupFMin 28 ExclusiveScan 715
-             717:11(float64_t) CompositeExtract 714 1
-             718:11(float64_t) GroupFMin 28 ExclusiveScan 717
-             719:11(float64_t) CompositeExtract 714 2
-             720:11(float64_t) GroupFMin 28 ExclusiveScan 719
-             721:11(float64_t) CompositeExtract 714 3
-             722:11(float64_t) GroupFMin 28 ExclusiveScan 721
-             723: 12(f64vec4) CompositeConstruct 716 718 720 722
-             724:     54(ptr) AccessChain 23 53
-                              Store 724 723
-             725:     68(ptr) AccessChain 23 67
-             726: 13(int64_t) Load 725
-             727: 13(int64_t) GroupSMin 28 ExclusiveScan 726
-             728:     68(ptr) AccessChain 23 67
-                              Store 728 727
-             729:     74(ptr) AccessChain 23 73
-             730: 15(i64vec2) Load 729
-             731: 14(int64_t) CompositeExtract 730 0
-             732: 14(int64_t) GroupUMin 28 ExclusiveScan 731
-             733: 14(int64_t) CompositeExtract 730 1
-             734: 14(int64_t) GroupUMin 28 ExclusiveScan 733
-             735: 15(i64vec2) CompositeConstruct 732 734
-             736:     74(ptr) AccessChain 23 73
-                              Store 736 735
-             737:     84(ptr) AccessChain 23 83
-             738: 17(f16vec3) Load 737
-             739:16(float16_t) CompositeExtract 738 0
-             740:16(float16_t) GroupFMin 28 ExclusiveScan 739
-             741:16(float16_t) CompositeExtract 738 1
-             742:16(float16_t) GroupFMin 28 ExclusiveScan 741
-             743:16(float16_t) CompositeExtract 738 2
-             744:16(float16_t) GroupFMin 28 ExclusiveScan 743
-             745: 17(f16vec3) CompositeConstruct 740 742 744
-             746:     84(ptr) AccessChain 23 83
-                              Store 746 745
-             747:     96(ptr) AccessChain 23 95
-             748: 19(i16vec4) Load 747
-             749: 18(int16_t) CompositeExtract 748 0
-             750: 18(int16_t) GroupSMin 28 ExclusiveScan 749
-             751: 18(int16_t) CompositeExtract 748 1
-             752: 18(int16_t) GroupSMin 28 ExclusiveScan 751
-             753: 18(int16_t) CompositeExtract 748 2
-             754: 18(int16_t) GroupSMin 28 ExclusiveScan 753
-             755: 18(int16_t) CompositeExtract 748 3
-             756: 18(int16_t) GroupSMin 28 ExclusiveScan 755
-             757: 19(i16vec4) CompositeConstruct 750 752 754 756
-             758:     96(ptr) AccessChain 23 95
-                              Store 758 757
-             759:    110(ptr) AccessChain 23 109
-             760: 20(int16_t) Load 759
-             761: 20(int16_t) GroupUMin 28 ExclusiveScan 760
-             762:    110(ptr) AccessChain 23 109
-                              Store 762 761
-             763:     25(ptr) AccessChain 23 24
-             764:      6(int) Load 763
-             765:      6(int) GroupSMax 28 ExclusiveScan 764
-             766:     25(ptr) AccessChain 23 24
-                              Store 766 765
-             767:     32(ptr) AccessChain 23 31
-             768:    8(ivec2) Load 767
-             769:      7(int) CompositeExtract 768 0
-             770:      7(int) GroupUMax 28 ExclusiveScan 769
-             771:      7(int) CompositeExtract 768 1
-             772:      7(int) GroupUMax 28 ExclusiveScan 771
-             773:    8(ivec2) CompositeConstruct 770 772
-             774:     32(ptr) AccessChain 23 31
-                              Store 774 773
-             775:     42(ptr) AccessChain 23 41
-             776:   10(fvec3) Load 775
-             777:    9(float) CompositeExtract 776 0
-             778:    9(float) GroupFMax 28 ExclusiveScan 777
-             779:    9(float) CompositeExtract 776 1
-             780:    9(float) GroupFMax 28 ExclusiveScan 779
-             781:    9(float) CompositeExtract 776 2
-             782:    9(float) GroupFMax 28 ExclusiveScan 781
-             783:   10(fvec3) CompositeConstruct 778 780 782
-             784:     42(ptr) AccessChain 23 41
-                              Store 784 783
-             785:     54(ptr) AccessChain 23 53
-             786: 12(f64vec4) Load 785
-             787:11(float64_t) CompositeExtract 786 0
-             788:11(float64_t) GroupFMax 28 ExclusiveScan 787
-             789:11(float64_t) CompositeExtract 786 1
-             790:11(float64_t) GroupFMax 28 ExclusiveScan 789
-             791:11(float64_t) CompositeExtract 786 2
-             792:11(float64_t) GroupFMax 28 ExclusiveScan 791
-             793:11(float64_t) CompositeExtract 786 3
-             794:11(float64_t) GroupFMax 28 ExclusiveScan 793
-             795: 12(f64vec4) CompositeConstruct 788 790 792 794
-             796:     54(ptr) AccessChain 23 53
-                              Store 796 795
-             797:     68(ptr) AccessChain 23 67
-             798: 13(int64_t) Load 797
-             799: 13(int64_t) GroupSMax 28 ExclusiveScan 798
-             800:     68(ptr) AccessChain 23 67
-                              Store 800 799
-             801:     74(ptr) AccessChain 23 73
-             802: 15(i64vec2) Load 801
-             803: 14(int64_t) CompositeExtract 802 0
-             804: 14(int64_t) GroupUMax 28 ExclusiveScan 803
-             805: 14(int64_t) CompositeExtract 802 1
-             806: 14(int64_t) GroupUMax 28 ExclusiveScan 805
-             807: 15(i64vec2) CompositeConstruct 804 806
-             808:     74(ptr) AccessChain 23 73
-                              Store 808 807
-             809:     84(ptr) AccessChain 23 83
-             810: 17(f16vec3) Load 809
-             811:16(float16_t) CompositeExtract 810 0
-             812:16(float16_t) GroupFMax 28 ExclusiveScan 811
-             813:16(float16_t) CompositeExtract 810 1
-             814:16(float16_t) GroupFMax 28 ExclusiveScan 813
-             815:16(float16_t) CompositeExtract 810 2
-             816:16(float16_t) GroupFMax 28 ExclusiveScan 815
-             817: 17(f16vec3) CompositeConstruct 812 814 816
-             818:     84(ptr) AccessChain 23 83
-                              Store 818 817
-             819:     96(ptr) AccessChain 23 95
-             820: 19(i16vec4) Load 819
-             821: 18(int16_t) CompositeExtract 820 0
-             822: 18(int16_t) GroupSMax 28 ExclusiveScan 821
-             823: 18(int16_t) CompositeExtract 820 1
-             824: 18(int16_t) GroupSMax 28 ExclusiveScan 823
-             825: 18(int16_t) CompositeExtract 820 2
-             826: 18(int16_t) GroupSMax 28 ExclusiveScan 825
-             827: 18(int16_t) CompositeExtract 820 3
-             828: 18(int16_t) GroupSMax 28 ExclusiveScan 827
-             829: 19(i16vec4) CompositeConstruct 822 824 826 828
-             830:     96(ptr) AccessChain 23 95
-                              Store 830 829
-             831:    110(ptr) AccessChain 23 109
-             832: 20(int16_t) Load 831
-             833: 20(int16_t) GroupUMax 28 ExclusiveScan 832
-             834:    110(ptr) AccessChain 23 109
-                              Store 834 833
-             835:     25(ptr) AccessChain 23 24
-             836:      6(int) Load 835
-             837:      6(int) GroupIAdd 28 ExclusiveScan 836
-             838:     25(ptr) AccessChain 23 24
-                              Store 838 837
-             839:     32(ptr) AccessChain 23 31
-             840:    8(ivec2) Load 839
-             841:      7(int) CompositeExtract 840 0
-             842:      7(int) GroupIAdd 28 ExclusiveScan 841
-             843:      7(int) CompositeExtract 840 1
-             844:      7(int) GroupIAdd 28 ExclusiveScan 843
-             845:    8(ivec2) CompositeConstruct 842 844
-             846:     32(ptr) AccessChain 23 31
-                              Store 846 845
-             847:     42(ptr) AccessChain 23 41
-             848:   10(fvec3) Load 847
-             849:    9(float) CompositeExtract 848 0
-             850:    9(float) GroupFAdd 28 ExclusiveScan 849
-             851:    9(float) CompositeExtract 848 1
-             852:    9(float) GroupFAdd 28 ExclusiveScan 851
-             853:    9(float) CompositeExtract 848 2
-             854:    9(float) GroupFAdd 28 ExclusiveScan 853
-             855:   10(fvec3) CompositeConstruct 850 852 854
-             856:     42(ptr) AccessChain 23 41
-                              Store 856 855
-             857:     54(ptr) AccessChain 23 53
-             858: 12(f64vec4) Load 857
-             859:11(float64_t) CompositeExtract 858 0
-             860:11(float64_t) GroupFAdd 28 ExclusiveScan 859
-             861:11(float64_t) CompositeExtract 858 1
-             862:11(float64_t) GroupFAdd 28 ExclusiveScan 861
-             863:11(float64_t) CompositeExtract 858 2
-             864:11(float64_t) GroupFAdd 28 ExclusiveScan 863
-             865:11(float64_t) CompositeExtract 858 3
-             866:11(float64_t) GroupFAdd 28 ExclusiveScan 865
-             867: 12(f64vec4) CompositeConstruct 860 862 864 866
-             868:     54(ptr) AccessChain 23 53
-                              Store 868 867
-             869:     68(ptr) AccessChain 23 67
-             870: 13(int64_t) Load 869
-             871: 13(int64_t) GroupIAdd 28 ExclusiveScan 870
-             872:     68(ptr) AccessChain 23 67
-                              Store 872 871
-             873:     74(ptr) AccessChain 23 73
-             874: 15(i64vec2) Load 873
-             875: 14(int64_t) CompositeExtract 874 0
-             876: 14(int64_t) GroupIAdd 28 ExclusiveScan 875
-             877: 14(int64_t) CompositeExtract 874 1
-             878: 14(int64_t) GroupIAdd 28 ExclusiveScan 877
-             879: 15(i64vec2) CompositeConstruct 876 878
-             880:     74(ptr) AccessChain 23 73
-                              Store 880 879
-             881:     84(ptr) AccessChain 23 83
-             882: 17(f16vec3) Load 881
-             883:16(float16_t) CompositeExtract 882 0
-             884:16(float16_t) GroupFAdd 28 ExclusiveScan 883
-             885:16(float16_t) CompositeExtract 882 1
-             886:16(float16_t) GroupFAdd 28 ExclusiveScan 885
-             887:16(float16_t) CompositeExtract 882 2
-             888:16(float16_t) GroupFAdd 28 ExclusiveScan 887
-             889: 17(f16vec3) CompositeConstruct 884 886 888
-             890:     84(ptr) AccessChain 23 83
-                              Store 890 889
-             891:     96(ptr) AccessChain 23 95
-             892: 19(i16vec4) Load 891
-             893: 18(int16_t) CompositeExtract 892 0
-             894: 18(int16_t) GroupIAdd 28 ExclusiveScan 893
-             895: 18(int16_t) CompositeExtract 892 1
-             896: 18(int16_t) GroupIAdd 28 ExclusiveScan 895
-             897: 18(int16_t) CompositeExtract 892 2
-             898: 18(int16_t) GroupIAdd 28 ExclusiveScan 897
-             899: 18(int16_t) CompositeExtract 892 3
-             900: 18(int16_t) GroupIAdd 28 ExclusiveScan 899
-             901: 19(i16vec4) CompositeConstruct 894 896 898 900
-             902:     96(ptr) AccessChain 23 95
-                              Store 902 901
-             903:    110(ptr) AccessChain 23 109
-             904: 20(int16_t) Load 903
-             905: 20(int16_t) GroupIAdd 28 ExclusiveScan 904
-             906:    110(ptr) AccessChain 23 109
-                              Store 906 905
-             907:     25(ptr) AccessChain 23 24
-             908:      6(int) Load 907
-             909:      6(int) GroupSMinNonUniformAMD 28 InclusiveScan 908
-             910:     25(ptr) AccessChain 23 24
-                              Store 910 909
-             911:     32(ptr) AccessChain 23 31
-             912:    8(ivec2) Load 911
-             913:      7(int) CompositeExtract 912 0
-             914:      7(int) GroupUMinNonUniformAMD 28 InclusiveScan 913
-             915:      7(int) CompositeExtract 912 1
-             916:      7(int) GroupUMinNonUniformAMD 28 InclusiveScan 915
-             917:    8(ivec2) CompositeConstruct 914 916
-             918:     32(ptr) AccessChain 23 31
-                              Store 918 917
-             919:     42(ptr) AccessChain 23 41
-             920:   10(fvec3) Load 919
-             921:    9(float) CompositeExtract 920 0
-             922:    9(float) GroupFMinNonUniformAMD 28 InclusiveScan 921
-             923:    9(float) CompositeExtract 920 1
-             924:    9(float) GroupFMinNonUniformAMD 28 InclusiveScan 923
-             925:    9(float) CompositeExtract 920 2
-             926:    9(float) GroupFMinNonUniformAMD 28 InclusiveScan 925
-             927:   10(fvec3) CompositeConstruct 922 924 926
-             928:     42(ptr) AccessChain 23 41
-                              Store 928 927
-             929:     54(ptr) AccessChain 23 53
-             930: 12(f64vec4) Load 929
-             931:11(float64_t) CompositeExtract 930 0
-             932:11(float64_t) GroupFMinNonUniformAMD 28 InclusiveScan 931
-             933:11(float64_t) CompositeExtract 930 1
-             934:11(float64_t) GroupFMinNonUniformAMD 28 InclusiveScan 933
-             935:11(float64_t) CompositeExtract 930 2
-             936:11(float64_t) GroupFMinNonUniformAMD 28 InclusiveScan 935
-             937:11(float64_t) CompositeExtract 930 3
-             938:11(float64_t) GroupFMinNonUniformAMD 28 InclusiveScan 937
-             939: 12(f64vec4) CompositeConstruct 932 934 936 938
-             940:     54(ptr) AccessChain 23 53
-                              Store 940 939
-             941:     68(ptr) AccessChain 23 67
-             942: 13(int64_t) Load 941
-             943: 13(int64_t) GroupSMinNonUniformAMD 28 InclusiveScan 942
-             944:     68(ptr) AccessChain 23 67
-                              Store 944 943
-             945:     74(ptr) AccessChain 23 73
-             946: 15(i64vec2) Load 945
-             947: 14(int64_t) CompositeExtract 946 0
-             948: 14(int64_t) GroupUMinNonUniformAMD 28 InclusiveScan 947
-             949: 14(int64_t) CompositeExtract 946 1
-             950: 14(int64_t) GroupUMinNonUniformAMD 28 InclusiveScan 949
-             951: 15(i64vec2) CompositeConstruct 948 950
-             952:     74(ptr) AccessChain 23 73
-                              Store 952 951
-             953:     84(ptr) AccessChain 23 83
-             954: 17(f16vec3) Load 953
-             955:16(float16_t) CompositeExtract 954 0
-             956:16(float16_t) GroupFMinNonUniformAMD 28 InclusiveScan 955
-             957:16(float16_t) CompositeExtract 954 1
-             958:16(float16_t) GroupFMinNonUniformAMD 28 InclusiveScan 957
-             959:16(float16_t) CompositeExtract 954 2
-             960:16(float16_t) GroupFMinNonUniformAMD 28 InclusiveScan 959
-             961: 17(f16vec3) CompositeConstruct 956 958 960
-             962:     84(ptr) AccessChain 23 83
-                              Store 962 961
-             963:     96(ptr) AccessChain 23 95
-             964: 19(i16vec4) Load 963
-             965: 18(int16_t) CompositeExtract 964 0
-             966: 18(int16_t) GroupSMinNonUniformAMD 28 InclusiveScan 965
-             967: 18(int16_t) CompositeExtract 964 1
-             968: 18(int16_t) GroupSMinNonUniformAMD 28 InclusiveScan 967
-             969: 18(int16_t) CompositeExtract 964 2
-             970: 18(int16_t) GroupSMinNonUniformAMD 28 InclusiveScan 969
-             971: 18(int16_t) CompositeExtract 964 3
-             972: 18(int16_t) GroupSMinNonUniformAMD 28 InclusiveScan 971
-             973: 19(i16vec4) CompositeConstruct 966 968 970 972
-             974:     96(ptr) AccessChain 23 95
-                              Store 974 973
-             975:    110(ptr) AccessChain 23 109
-             976: 20(int16_t) Load 975
-             977: 20(int16_t) GroupUMinNonUniformAMD 28 InclusiveScan 976
-             978:    110(ptr) AccessChain 23 109
-                              Store 978 977
-             979:     25(ptr) AccessChain 23 24
-             980:      6(int) Load 979
-             981:      6(int) GroupSMaxNonUniformAMD 28 InclusiveScan 980
-             982:     25(ptr) AccessChain 23 24
-                              Store 982 981
-             983:     32(ptr) AccessChain 23 31
-             984:    8(ivec2) Load 983
-             985:      7(int) CompositeExtract 984 0
-             986:      7(int) GroupUMaxNonUniformAMD 28 InclusiveScan 985
-             987:      7(int) CompositeExtract 984 1
-             988:      7(int) GroupUMaxNonUniformAMD 28 InclusiveScan 987
-             989:    8(ivec2) CompositeConstruct 986 988
-             990:     32(ptr) AccessChain 23 31
-                              Store 990 989
-             991:     42(ptr) AccessChain 23 41
-             992:   10(fvec3) Load 991
-             993:    9(float) CompositeExtract 992 0
-             994:    9(float) GroupFMaxNonUniformAMD 28 InclusiveScan 993
-             995:    9(float) CompositeExtract 992 1
-             996:    9(float) GroupFMaxNonUniformAMD 28 InclusiveScan 995
-             997:    9(float) CompositeExtract 992 2
-             998:    9(float) GroupFMaxNonUniformAMD 28 InclusiveScan 997
-             999:   10(fvec3) CompositeConstruct 994 996 998
-            1000:     42(ptr) AccessChain 23 41
-                              Store 1000 999
-            1001:     54(ptr) AccessChain 23 53
-            1002: 12(f64vec4) Load 1001
-            1003:11(float64_t) CompositeExtract 1002 0
-            1004:11(float64_t) GroupFMaxNonUniformAMD 28 InclusiveScan 1003
-            1005:11(float64_t) CompositeExtract 1002 1
-            1006:11(float64_t) GroupFMaxNonUniformAMD 28 InclusiveScan 1005
-            1007:11(float64_t) CompositeExtract 1002 2
-            1008:11(float64_t) GroupFMaxNonUniformAMD 28 InclusiveScan 1007
-            1009:11(float64_t) CompositeExtract 1002 3
-            1010:11(float64_t) GroupFMaxNonUniformAMD 28 InclusiveScan 1009
-            1011: 12(f64vec4) CompositeConstruct 1004 1006 1008 1010
-            1012:     54(ptr) AccessChain 23 53
-                              Store 1012 1011
-            1013:     68(ptr) AccessChain 23 67
-            1014: 13(int64_t) Load 1013
-            1015: 13(int64_t) GroupSMaxNonUniformAMD 28 InclusiveScan 1014
-            1016:     68(ptr) AccessChain 23 67
-                              Store 1016 1015
-            1017:     74(ptr) AccessChain 23 73
-            1018: 15(i64vec2) Load 1017
-            1019: 14(int64_t) CompositeExtract 1018 0
-            1020: 14(int64_t) GroupUMaxNonUniformAMD 28 InclusiveScan 1019
-            1021: 14(int64_t) CompositeExtract 1018 1
-            1022: 14(int64_t) GroupUMaxNonUniformAMD 28 InclusiveScan 1021
-            1023: 15(i64vec2) CompositeConstruct 1020 1022
-            1024:     74(ptr) AccessChain 23 73
-                              Store 1024 1023
-            1025:     84(ptr) AccessChain 23 83
-            1026: 17(f16vec3) Load 1025
-            1027:16(float16_t) CompositeExtract 1026 0
-            1028:16(float16_t) GroupFMaxNonUniformAMD 28 InclusiveScan 1027
-            1029:16(float16_t) CompositeExtract 1026 1
-            1030:16(float16_t) GroupFMaxNonUniformAMD 28 InclusiveScan 1029
-            1031:16(float16_t) CompositeExtract 1026 2
-            1032:16(float16_t) GroupFMaxNonUniformAMD 28 InclusiveScan 1031
-            1033: 17(f16vec3) CompositeConstruct 1028 1030 1032
-            1034:     84(ptr) AccessChain 23 83
-                              Store 1034 1033
-            1035:     96(ptr) AccessChain 23 95
-            1036: 19(i16vec4) Load 1035
-            1037: 18(int16_t) CompositeExtract 1036 0
-            1038: 18(int16_t) GroupSMaxNonUniformAMD 28 InclusiveScan 1037
-            1039: 18(int16_t) CompositeExtract 1036 1
-            1040: 18(int16_t) GroupSMaxNonUniformAMD 28 InclusiveScan 1039
-            1041: 18(int16_t) CompositeExtract 1036 2
-            1042: 18(int16_t) GroupSMaxNonUniformAMD 28 InclusiveScan 1041
-            1043: 18(int16_t) CompositeExtract 1036 3
-            1044: 18(int16_t) GroupSMaxNonUniformAMD 28 InclusiveScan 1043
-            1045: 19(i16vec4) CompositeConstruct 1038 1040 1042 1044
-            1046:     96(ptr) AccessChain 23 95
-                              Store 1046 1045
-            1047:    110(ptr) AccessChain 23 109
-            1048: 20(int16_t) Load 1047
-            1049: 20(int16_t) GroupUMaxNonUniformAMD 28 InclusiveScan 1048
-            1050:    110(ptr) AccessChain 23 109
-                              Store 1050 1049
-            1051:     25(ptr) AccessChain 23 24
-            1052:      6(int) Load 1051
-            1053:      6(int) GroupIAddNonUniformAMD 28 InclusiveScan 1052
-            1054:     25(ptr) AccessChain 23 24
-                              Store 1054 1053
-            1055:     32(ptr) AccessChain 23 31
-            1056:    8(ivec2) Load 1055
-            1057:      7(int) CompositeExtract 1056 0
-            1058:      7(int) GroupIAddNonUniformAMD 28 InclusiveScan 1057
-            1059:      7(int) CompositeExtract 1056 1
-            1060:      7(int) GroupIAddNonUniformAMD 28 InclusiveScan 1059
-            1061:    8(ivec2) CompositeConstruct 1058 1060
-            1062:     32(ptr) AccessChain 23 31
-                              Store 1062 1061
-            1063:     42(ptr) AccessChain 23 41
-            1064:   10(fvec3) Load 1063
-            1065:    9(float) CompositeExtract 1064 0
-            1066:    9(float) GroupFAddNonUniformAMD 28 InclusiveScan 1065
-            1067:    9(float) CompositeExtract 1064 1
-            1068:    9(float) GroupFAddNonUniformAMD 28 InclusiveScan 1067
-            1069:    9(float) CompositeExtract 1064 2
-            1070:    9(float) GroupFAddNonUniformAMD 28 InclusiveScan 1069
-            1071:   10(fvec3) CompositeConstruct 1066 1068 1070
-            1072:     42(ptr) AccessChain 23 41
-                              Store 1072 1071
-            1073:     54(ptr) AccessChain 23 53
-            1074: 12(f64vec4) Load 1073
-            1075:11(float64_t) CompositeExtract 1074 0
-            1076:11(float64_t) GroupFAddNonUniformAMD 28 InclusiveScan 1075
-            1077:11(float64_t) CompositeExtract 1074 1
-            1078:11(float64_t) GroupFAddNonUniformAMD 28 InclusiveScan 1077
-            1079:11(float64_t) CompositeExtract 1074 2
-            1080:11(float64_t) GroupFAddNonUniformAMD 28 InclusiveScan 1079
-            1081:11(float64_t) CompositeExtract 1074 3
-            1082:11(float64_t) GroupFAddNonUniformAMD 28 InclusiveScan 1081
-            1083: 12(f64vec4) CompositeConstruct 1076 1078 1080 1082
-            1084:     54(ptr) AccessChain 23 53
-                              Store 1084 1083
-            1085:     68(ptr) AccessChain 23 67
-            1086: 13(int64_t) Load 1085
-            1087: 13(int64_t) GroupIAddNonUniformAMD 28 InclusiveScan 1086
-            1088:     68(ptr) AccessChain 23 67
-                              Store 1088 1087
-            1089:     74(ptr) AccessChain 23 73
-            1090: 15(i64vec2) Load 1089
-            1091: 14(int64_t) CompositeExtract 1090 0
-            1092: 14(int64_t) GroupIAddNonUniformAMD 28 InclusiveScan 1091
-            1093: 14(int64_t) CompositeExtract 1090 1
-            1094: 14(int64_t) GroupIAddNonUniformAMD 28 InclusiveScan 1093
-            1095: 15(i64vec2) CompositeConstruct 1092 1094
-            1096:     74(ptr) AccessChain 23 73
-                              Store 1096 1095
-            1097:     84(ptr) AccessChain 23 83
-            1098: 17(f16vec3) Load 1097
-            1099:16(float16_t) CompositeExtract 1098 0
-            1100:16(float16_t) GroupFAddNonUniformAMD 28 InclusiveScan 1099
-            1101:16(float16_t) CompositeExtract 1098 1
-            1102:16(float16_t) GroupFAddNonUniformAMD 28 InclusiveScan 1101
-            1103:16(float16_t) CompositeExtract 1098 2
-            1104:16(float16_t) GroupFAddNonUniformAMD 28 InclusiveScan 1103
-            1105: 17(f16vec3) CompositeConstruct 1100 1102 1104
-            1106:     84(ptr) AccessChain 23 83
-                              Store 1106 1105
-            1107:     96(ptr) AccessChain 23 95
-            1108: 19(i16vec4) Load 1107
-            1109: 18(int16_t) CompositeExtract 1108 0
-            1110: 18(int16_t) GroupIAddNonUniformAMD 28 InclusiveScan 1109
-            1111: 18(int16_t) CompositeExtract 1108 1
-            1112: 18(int16_t) GroupIAddNonUniformAMD 28 InclusiveScan 1111
-            1113: 18(int16_t) CompositeExtract 1108 2
-            1114: 18(int16_t) GroupIAddNonUniformAMD 28 InclusiveScan 1113
-            1115: 18(int16_t) CompositeExtract 1108 3
-            1116: 18(int16_t) GroupIAddNonUniformAMD 28 InclusiveScan 1115
-            1117: 19(i16vec4) CompositeConstruct 1110 1112 1114 1116
-            1118:     96(ptr) AccessChain 23 95
-                              Store 1118 1117
-            1119:    110(ptr) AccessChain 23 109
-            1120: 20(int16_t) Load 1119
-            1121: 20(int16_t) GroupIAddNonUniformAMD 28 InclusiveScan 1120
-            1122:    110(ptr) AccessChain 23 109
-                              Store 1122 1121
-            1123:     25(ptr) AccessChain 23 24
-            1124:      6(int) Load 1123
-            1125:      6(int) GroupSMinNonUniformAMD 28 ExclusiveScan 1124
-            1126:     25(ptr) AccessChain 23 24
-                              Store 1126 1125
-            1127:     32(ptr) AccessChain 23 31
-            1128:    8(ivec2) Load 1127
-            1129:      7(int) CompositeExtract 1128 0
-            1130:      7(int) GroupUMinNonUniformAMD 28 ExclusiveScan 1129
-            1131:      7(int) CompositeExtract 1128 1
-            1132:      7(int) GroupUMinNonUniformAMD 28 ExclusiveScan 1131
-            1133:    8(ivec2) CompositeConstruct 1130 1132
-            1134:     32(ptr) AccessChain 23 31
-                              Store 1134 1133
-            1135:     42(ptr) AccessChain 23 41
-            1136:   10(fvec3) Load 1135
-            1137:    9(float) CompositeExtract 1136 0
-            1138:    9(float) GroupFMinNonUniformAMD 28 ExclusiveScan 1137
-            1139:    9(float) CompositeExtract 1136 1
-            1140:    9(float) GroupFMinNonUniformAMD 28 ExclusiveScan 1139
-            1141:    9(float) CompositeExtract 1136 2
-            1142:    9(float) GroupFMinNonUniformAMD 28 ExclusiveScan 1141
-            1143:   10(fvec3) CompositeConstruct 1138 1140 1142
-            1144:     42(ptr) AccessChain 23 41
-                              Store 1144 1143
-            1145:     54(ptr) AccessChain 23 53
-            1146: 12(f64vec4) Load 1145
-            1147:11(float64_t) CompositeExtract 1146 0
-            1148:11(float64_t) GroupFMinNonUniformAMD 28 ExclusiveScan 1147
-            1149:11(float64_t) CompositeExtract 1146 1
-            1150:11(float64_t) GroupFMinNonUniformAMD 28 ExclusiveScan 1149
-            1151:11(float64_t) CompositeExtract 1146 2
-            1152:11(float64_t) GroupFMinNonUniformAMD 28 ExclusiveScan 1151
-            1153:11(float64_t) CompositeExtract 1146 3
-            1154:11(float64_t) GroupFMinNonUniformAMD 28 ExclusiveScan 1153
-            1155: 12(f64vec4) CompositeConstruct 1148 1150 1152 1154
-            1156:     54(ptr) AccessChain 23 53
-                              Store 1156 1155
-            1157:     68(ptr) AccessChain 23 67
-            1158: 13(int64_t) Load 1157
-            1159: 13(int64_t) GroupSMinNonUniformAMD 28 ExclusiveScan 1158
-            1160:     68(ptr) AccessChain 23 67
-                              Store 1160 1159
-            1161:     74(ptr) AccessChain 23 73
-            1162: 15(i64vec2) Load 1161
-            1163: 14(int64_t) CompositeExtract 1162 0
-            1164: 14(int64_t) GroupUMinNonUniformAMD 28 ExclusiveScan 1163
-            1165: 14(int64_t) CompositeExtract 1162 1
-            1166: 14(int64_t) GroupUMinNonUniformAMD 28 ExclusiveScan 1165
-            1167: 15(i64vec2) CompositeConstruct 1164 1166
-            1168:     74(ptr) AccessChain 23 73
-                              Store 1168 1167
-            1169:     84(ptr) AccessChain 23 83
-            1170: 17(f16vec3) Load 1169
-            1171:16(float16_t) CompositeExtract 1170 0
-            1172:16(float16_t) GroupFMinNonUniformAMD 28 ExclusiveScan 1171
-            1173:16(float16_t) CompositeExtract 1170 1
-            1174:16(float16_t) GroupFMinNonUniformAMD 28 ExclusiveScan 1173
-            1175:16(float16_t) CompositeExtract 1170 2
-            1176:16(float16_t) GroupFMinNonUniformAMD 28 ExclusiveScan 1175
-            1177: 17(f16vec3) CompositeConstruct 1172 1174 1176
-            1178:     84(ptr) AccessChain 23 83
-                              Store 1178 1177
-            1179:     96(ptr) AccessChain 23 95
-            1180: 19(i16vec4) Load 1179
-            1181: 18(int16_t) CompositeExtract 1180 0
-            1182: 18(int16_t) GroupSMinNonUniformAMD 28 ExclusiveScan 1181
-            1183: 18(int16_t) CompositeExtract 1180 1
-            1184: 18(int16_t) GroupSMinNonUniformAMD 28 ExclusiveScan 1183
-            1185: 18(int16_t) CompositeExtract 1180 2
-            1186: 18(int16_t) GroupSMinNonUniformAMD 28 ExclusiveScan 1185
-            1187: 18(int16_t) CompositeExtract 1180 3
-            1188: 18(int16_t) GroupSMinNonUniformAMD 28 ExclusiveScan 1187
-            1189: 19(i16vec4) CompositeConstruct 1182 1184 1186 1188
-            1190:     96(ptr) AccessChain 23 95
-                              Store 1190 1189
-            1191:    110(ptr) AccessChain 23 109
-            1192: 20(int16_t) Load 1191
-            1193: 20(int16_t) GroupUMinNonUniformAMD 28 ExclusiveScan 1192
-            1194:    110(ptr) AccessChain 23 109
-                              Store 1194 1193
-            1195:     25(ptr) AccessChain 23 24
-            1196:      6(int) Load 1195
-            1197:      6(int) GroupSMaxNonUniformAMD 28 ExclusiveScan 1196
-            1198:     25(ptr) AccessChain 23 24
-                              Store 1198 1197
-            1199:     32(ptr) AccessChain 23 31
-            1200:    8(ivec2) Load 1199
-            1201:      7(int) CompositeExtract 1200 0
-            1202:      7(int) GroupUMaxNonUniformAMD 28 ExclusiveScan 1201
-            1203:      7(int) CompositeExtract 1200 1
-            1204:      7(int) GroupUMaxNonUniformAMD 28 ExclusiveScan 1203
-            1205:    8(ivec2) CompositeConstruct 1202 1204
-            1206:     32(ptr) AccessChain 23 31
-                              Store 1206 1205
-            1207:     42(ptr) AccessChain 23 41
-            1208:   10(fvec3) Load 1207
-            1209:    9(float) CompositeExtract 1208 0
-            1210:    9(float) GroupFMaxNonUniformAMD 28 ExclusiveScan 1209
-            1211:    9(float) CompositeExtract 1208 1
-            1212:    9(float) GroupFMaxNonUniformAMD 28 ExclusiveScan 1211
-            1213:    9(float) CompositeExtract 1208 2
-            1214:    9(float) GroupFMaxNonUniformAMD 28 ExclusiveScan 1213
-            1215:   10(fvec3) CompositeConstruct 1210 1212 1214
-            1216:     42(ptr) AccessChain 23 41
-                              Store 1216 1215
-            1217:     54(ptr) AccessChain 23 53
-            1218: 12(f64vec4) Load 1217
-            1219:11(float64_t) CompositeExtract 1218 0
-            1220:11(float64_t) GroupFMaxNonUniformAMD 28 ExclusiveScan 1219
-            1221:11(float64_t) CompositeExtract 1218 1
-            1222:11(float64_t) GroupFMaxNonUniformAMD 28 ExclusiveScan 1221
-            1223:11(float64_t) CompositeExtract 1218 2
-            1224:11(float64_t) GroupFMaxNonUniformAMD 28 ExclusiveScan 1223
-            1225:11(float64_t) CompositeExtract 1218 3
-            1226:11(float64_t) GroupFMaxNonUniformAMD 28 ExclusiveScan 1225
-            1227: 12(f64vec4) CompositeConstruct 1220 1222 1224 1226
-            1228:     54(ptr) AccessChain 23 53
-                              Store 1228 1227
-            1229:     68(ptr) AccessChain 23 67
-            1230: 13(int64_t) Load 1229
-            1231: 13(int64_t) GroupSMaxNonUniformAMD 28 ExclusiveScan 1230
-            1232:     68(ptr) AccessChain 23 67
-                              Store 1232 1231
-            1233:     74(ptr) AccessChain 23 73
-            1234: 15(i64vec2) Load 1233
-            1235: 14(int64_t) CompositeExtract 1234 0
-            1236: 14(int64_t) GroupUMaxNonUniformAMD 28 ExclusiveScan 1235
-            1237: 14(int64_t) CompositeExtract 1234 1
-            1238: 14(int64_t) GroupUMaxNonUniformAMD 28 ExclusiveScan 1237
-            1239: 15(i64vec2) CompositeConstruct 1236 1238
-            1240:     74(ptr) AccessChain 23 73
-                              Store 1240 1239
-            1241:     84(ptr) AccessChain 23 83
-            1242: 17(f16vec3) Load 1241
-            1243:16(float16_t) CompositeExtract 1242 0
-            1244:16(float16_t) GroupFMaxNonUniformAMD 28 ExclusiveScan 1243
-            1245:16(float16_t) CompositeExtract 1242 1
-            1246:16(float16_t) GroupFMaxNonUniformAMD 28 ExclusiveScan 1245
-            1247:16(float16_t) CompositeExtract 1242 2
-            1248:16(float16_t) GroupFMaxNonUniformAMD 28 ExclusiveScan 1247
-            1249: 17(f16vec3) CompositeConstruct 1244 1246 1248
-            1250:     84(ptr) AccessChain 23 83
-                              Store 1250 1249
-            1251:     96(ptr) AccessChain 23 95
-            1252: 19(i16vec4) Load 1251
-            1253: 18(int16_t) CompositeExtract 1252 0
-            1254: 18(int16_t) GroupSMaxNonUniformAMD 28 ExclusiveScan 1253
-            1255: 18(int16_t) CompositeExtract 1252 1
-            1256: 18(int16_t) GroupSMaxNonUniformAMD 28 ExclusiveScan 1255
-            1257: 18(int16_t) CompositeExtract 1252 2
-            1258: 18(int16_t) GroupSMaxNonUniformAMD 28 ExclusiveScan 1257
-            1259: 18(int16_t) CompositeExtract 1252 3
-            1260: 18(int16_t) GroupSMaxNonUniformAMD 28 ExclusiveScan 1259
-            1261: 19(i16vec4) CompositeConstruct 1254 1256 1258 1260
-            1262:     96(ptr) AccessChain 23 95
-                              Store 1262 1261
-            1263:    110(ptr) AccessChain 23 109
-            1264: 20(int16_t) Load 1263
-            1265: 20(int16_t) GroupUMaxNonUniformAMD 28 ExclusiveScan 1264
-            1266:    110(ptr) AccessChain 23 109
-                              Store 1266 1265
-            1267:     25(ptr) AccessChain 23 24
-            1268:      6(int) Load 1267
-            1269:      6(int) GroupIAddNonUniformAMD 28 ExclusiveScan 1268
-            1270:     25(ptr) AccessChain 23 24
-                              Store 1270 1269
-            1271:     32(ptr) AccessChain 23 31
-            1272:    8(ivec2) Load 1271
-            1273:      7(int) CompositeExtract 1272 0
-            1274:      7(int) GroupIAddNonUniformAMD 28 ExclusiveScan 1273
-            1275:      7(int) CompositeExtract 1272 1
-            1276:      7(int) GroupIAddNonUniformAMD 28 ExclusiveScan 1275
-            1277:    8(ivec2) CompositeConstruct 1274 1276
-            1278:     32(ptr) AccessChain 23 31
-                              Store 1278 1277
-            1279:     42(ptr) AccessChain 23 41
-            1280:   10(fvec3) Load 1279
-            1281:    9(float) CompositeExtract 1280 0
-            1282:    9(float) GroupFAddNonUniformAMD 28 ExclusiveScan 1281
-            1283:    9(float) CompositeExtract 1280 1
-            1284:    9(float) GroupFAddNonUniformAMD 28 ExclusiveScan 1283
-            1285:    9(float) CompositeExtract 1280 2
-            1286:    9(float) GroupFAddNonUniformAMD 28 ExclusiveScan 1285
-            1287:   10(fvec3) CompositeConstruct 1282 1284 1286
-            1288:     42(ptr) AccessChain 23 41
-                              Store 1288 1287
-            1289:     54(ptr) AccessChain 23 53
-            1290: 12(f64vec4) Load 1289
-            1291:11(float64_t) CompositeExtract 1290 0
-            1292:11(float64_t) GroupFAddNonUniformAMD 28 ExclusiveScan 1291
-            1293:11(float64_t) CompositeExtract 1290 1
-            1294:11(float64_t) GroupFAddNonUniformAMD 28 ExclusiveScan 1293
-            1295:11(float64_t) CompositeExtract 1290 2
-            1296:11(float64_t) GroupFAddNonUniformAMD 28 ExclusiveScan 1295
-            1297:11(float64_t) CompositeExtract 1290 3
-            1298:11(float64_t) GroupFAddNonUniformAMD 28 ExclusiveScan 1297
-            1299: 12(f64vec4) CompositeConstruct 1292 1294 1296 1298
-            1300:     54(ptr) AccessChain 23 53
-                              Store 1300 1299
-            1301:     68(ptr) AccessChain 23 67
-            1302: 13(int64_t) Load 1301
-            1303: 13(int64_t) GroupIAddNonUniformAMD 28 ExclusiveScan 1302
-            1304:     68(ptr) AccessChain 23 67
-                              Store 1304 1303
-            1305:     74(ptr) AccessChain 23 73
-            1306: 15(i64vec2) Load 1305
-            1307: 14(int64_t) CompositeExtract 1306 0
-            1308: 14(int64_t) GroupIAddNonUniformAMD 28 ExclusiveScan 1307
-            1309: 14(int64_t) CompositeExtract 1306 1
-            1310: 14(int64_t) GroupIAddNonUniformAMD 28 ExclusiveScan 1309
-            1311: 15(i64vec2) CompositeConstruct 1308 1310
-            1312:     74(ptr) AccessChain 23 73
-                              Store 1312 1311
-            1313:     84(ptr) AccessChain 23 83
-            1314: 17(f16vec3) Load 1313
-            1315:16(float16_t) CompositeExtract 1314 0
-            1316:16(float16_t) GroupFAddNonUniformAMD 28 ExclusiveScan 1315
-            1317:16(float16_t) CompositeExtract 1314 1
-            1318:16(float16_t) GroupFAddNonUniformAMD 28 ExclusiveScan 1317
-            1319:16(float16_t) CompositeExtract 1314 2
-            1320:16(float16_t) GroupFAddNonUniformAMD 28 ExclusiveScan 1319
-            1321: 17(f16vec3) CompositeConstruct 1316 1318 1320
-            1322:     84(ptr) AccessChain 23 83
-                              Store 1322 1321
-            1323:     96(ptr) AccessChain 23 95
-            1324: 19(i16vec4) Load 1323
-            1325: 18(int16_t) CompositeExtract 1324 0
-            1326: 18(int16_t) GroupIAddNonUniformAMD 28 ExclusiveScan 1325
-            1327: 18(int16_t) CompositeExtract 1324 1
-            1328: 18(int16_t) GroupIAddNonUniformAMD 28 ExclusiveScan 1327
-            1329: 18(int16_t) CompositeExtract 1324 2
-            1330: 18(int16_t) GroupIAddNonUniformAMD 28 ExclusiveScan 1329
-            1331: 18(int16_t) CompositeExtract 1324 3
-            1332: 18(int16_t) GroupIAddNonUniformAMD 28 ExclusiveScan 1331
-            1333: 19(i16vec4) CompositeConstruct 1326 1328 1330 1332
-            1334:     96(ptr) AccessChain 23 95
-                              Store 1334 1333
-            1335:    110(ptr) AccessChain 23 109
-            1336: 20(int16_t) Load 1335
-            1337: 20(int16_t) GroupIAddNonUniformAMD 28 ExclusiveScan 1336
-            1338:    110(ptr) AccessChain 23 109
-                              Store 1338 1337
+                              Name 54_1  "main"
+                              Name 30_1  "Buffers"
+                              MemberName 30_1(Buffers) 0  "i"
+                              MemberName 30_1(Buffers) 1  "uv"
+                              MemberName 30_1(Buffers) 2  "fv"
+                              MemberName 30_1(Buffers) 3  "dv"
+                              MemberName 30_1(Buffers) 4  "i64"
+                              MemberName 30_1(Buffers) 5  "u64v"
+                              MemberName 30_1(Buffers) 6  "f16v"
+                              MemberName 30_1(Buffers) 7  "i16v"
+                              MemberName 30_1(Buffers) 8  "u16"
+                              Name 59_1  ""
+                              Decorate 30_1(Buffers) BufferBlock
+                              MemberDecorate 30_1(Buffers) 0 Offset 0
+                              MemberDecorate 30_1(Buffers) 1 Offset 8
+                              MemberDecorate 30_1(Buffers) 2 Offset 16
+                              MemberDecorate 30_1(Buffers) 3 Offset 32
+                              MemberDecorate 30_1(Buffers) 4 Offset 64
+                              MemberDecorate 30_1(Buffers) 5 Offset 80
+                              MemberDecorate 30_1(Buffers) 6 Offset 96
+                              MemberDecorate 30_1(Buffers) 7 Offset 104
+                              MemberDecorate 30_1(Buffers) 8 Offset 112
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 44_1 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            21_2:             TypeInt 32 0
+            23_1:             TypeVector 21_2(int) 2
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 3
+            22_2:             TypeFloat 64
+            23_3:             TypeVector 22_2(float64_t) 4
+            21_3:             TypeInt 64 1
+            21_4:             TypeInt 64 0
+            23_4:             TypeVector 21_4(int64_t) 2
+            22_3:             TypeFloat 16
+            23_5:             TypeVector 22_3(float16_t) 3
+            21_5:             TypeInt 16 1
+            23_6:             TypeVector 21_5(int16_t) 4
+            21_6:             TypeInt 16 0
+   30_1(Buffers):             TypeStruct 21_1(int) 23_1(ivec2) 23_2(fvec3) 23_3(f64vec4) 21_3(int64_t) 23_4(i64vec2) 23_5(f16vec3) 23_6(i16vec4) 21_6(int16_t)
+            32_1:             TypePointer Uniform 30_1(Buffers)
+            59_1:   32_1(ptr) Variable Uniform
+            43_1:   21_1(int) Constant 0
+            32_2:             TypePointer Uniform 21_1(int)
+         uint(3):   21_2(int) Constant 3
+            43_2:   21_1(int) Constant 1
+            32_3:             TypePointer Uniform 23_1(ivec2)
+            43_3:   21_1(int) Constant 2
+            32_4:             TypePointer Uniform 23_2(fvec3)
+            43_4:   21_1(int) Constant 3
+            32_5:             TypePointer Uniform 23_3(f64vec4)
+            43_5:   21_1(int) Constant 4
+            32_6:             TypePointer Uniform 21_3(int64_t)
+            43_6:   21_1(int) Constant 5
+            32_7:             TypePointer Uniform 23_4(i64vec2)
+            43_7:   21_1(int) Constant 6
+            32_8:             TypePointer Uniform 23_5(f16vec3)
+            43_8:   21_1(int) Constant 7
+            32_9:             TypePointer Uniform 23_6(i16vec4)
+            43_9:   21_1(int) Constant 8
+           32_10:             TypePointer Uniform 21_6(int16_t)
+            23_7:             TypeVector 21_2(int) 3
+         uint(8):   21_2(int) Constant 8
+         uint(1):   21_2(int) Constant 1
+            44_1: 23_7(ivec3) ConstantComposite uint(8) uint(8) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 43_1
+            61_1:   21_1(int) Load 65_1
+           268_1:   21_1(int) GroupSMin uint(3) Reduce 61_1
+            65_2:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_2 268_1
+            65_3:   32_3(ptr) AccessChain 59_1 43_2
+            61_2: 23_1(ivec2) Load 65_3
+            81_1:   21_2(int) CompositeExtract 61_2 0
+           267_1:   21_2(int) GroupUMin uint(3) Reduce 81_1
+            81_2:   21_2(int) CompositeExtract 61_2 1
+           267_2:   21_2(int) GroupUMin uint(3) Reduce 81_2
+            80_1: 23_1(ivec2) CompositeConstruct 267_1 267_2
+            65_4:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_4 80_1
+            65_5:   32_4(ptr) AccessChain 59_1 43_3
+            61_3: 23_2(fvec3) Load 65_5
+            81_3: 22_1(float) CompositeExtract 61_3 0
+           266_1: 22_1(float) GroupFMin uint(3) Reduce 81_3
+            81_4: 22_1(float) CompositeExtract 61_3 1
+           266_2: 22_1(float) GroupFMin uint(3) Reduce 81_4
+            81_5: 22_1(float) CompositeExtract 61_3 2
+           266_3: 22_1(float) GroupFMin uint(3) Reduce 81_5
+            80_2: 23_2(fvec3) CompositeConstruct 266_1 266_2 266_3
+            65_6:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_6 80_2
+            65_7:   32_5(ptr) AccessChain 59_1 43_4
+            61_4:23_3(f64vec4) Load 65_7
+            81_6:22_2(float64_t) CompositeExtract 61_4 0
+           266_4:22_2(float64_t) GroupFMin uint(3) Reduce 81_6
+            81_7:22_2(float64_t) CompositeExtract 61_4 1
+           266_5:22_2(float64_t) GroupFMin uint(3) Reduce 81_7
+            81_8:22_2(float64_t) CompositeExtract 61_4 2
+           266_6:22_2(float64_t) GroupFMin uint(3) Reduce 81_8
+            81_9:22_2(float64_t) CompositeExtract 61_4 3
+           266_7:22_2(float64_t) GroupFMin uint(3) Reduce 81_9
+            80_3:23_3(f64vec4) CompositeConstruct 266_4 266_5 266_6 266_7
+            65_8:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_8 80_3
+            65_9:   32_6(ptr) AccessChain 59_1 43_5
+            61_5:21_3(int64_t) Load 65_9
+           268_2:21_3(int64_t) GroupSMin uint(3) Reduce 61_5
+           65_10:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_10 268_2
+           65_11:   32_7(ptr) AccessChain 59_1 43_6
+            61_6:23_4(i64vec2) Load 65_11
+           81_10:21_4(int64_t) CompositeExtract 61_6 0
+           267_3:21_4(int64_t) GroupUMin uint(3) Reduce 81_10
+           81_11:21_4(int64_t) CompositeExtract 61_6 1
+           267_4:21_4(int64_t) GroupUMin uint(3) Reduce 81_11
+            80_4:23_4(i64vec2) CompositeConstruct 267_3 267_4
+           65_12:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_12 80_4
+           65_13:   32_8(ptr) AccessChain 59_1 43_7
+            61_7:23_5(f16vec3) Load 65_13
+           81_12:22_3(float16_t) CompositeExtract 61_7 0
+           266_8:22_3(float16_t) GroupFMin uint(3) Reduce 81_12
+           81_13:22_3(float16_t) CompositeExtract 61_7 1
+           266_9:22_3(float16_t) GroupFMin uint(3) Reduce 81_13
+           81_14:22_3(float16_t) CompositeExtract 61_7 2
+          266_10:22_3(float16_t) GroupFMin uint(3) Reduce 81_14
+            80_5:23_5(f16vec3) CompositeConstruct 266_8 266_9 266_10
+           65_14:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_14 80_5
+           65_15:   32_9(ptr) AccessChain 59_1 43_8
+            61_8:23_6(i16vec4) Load 65_15
+           81_15:21_5(int16_t) CompositeExtract 61_8 0
+           268_3:21_5(int16_t) GroupSMin uint(3) Reduce 81_15
+           81_16:21_5(int16_t) CompositeExtract 61_8 1
+           268_4:21_5(int16_t) GroupSMin uint(3) Reduce 81_16
+           81_17:21_5(int16_t) CompositeExtract 61_8 2
+           268_5:21_5(int16_t) GroupSMin uint(3) Reduce 81_17
+           81_18:21_5(int16_t) CompositeExtract 61_8 3
+           268_6:21_5(int16_t) GroupSMin uint(3) Reduce 81_18
+            80_6:23_6(i16vec4) CompositeConstruct 268_3 268_4 268_5 268_6
+           65_16:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_16 80_6
+           65_17:  32_10(ptr) AccessChain 59_1 43_9
+            61_9:21_6(int16_t) Load 65_17
+           267_5:21_6(int16_t) GroupUMin uint(3) Reduce 61_9
+           65_18:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_18 267_5
+           65_19:   32_2(ptr) AccessChain 59_1 43_1
+           61_10:   21_1(int) Load 65_19
+           271_1:   21_1(int) GroupSMax uint(3) Reduce 61_10
+           65_20:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_20 271_1
+           65_21:   32_3(ptr) AccessChain 59_1 43_2
+           61_11: 23_1(ivec2) Load 65_21
+           81_19:   21_2(int) CompositeExtract 61_11 0
+           270_1:   21_2(int) GroupUMax uint(3) Reduce 81_19
+           81_20:   21_2(int) CompositeExtract 61_11 1
+           270_2:   21_2(int) GroupUMax uint(3) Reduce 81_20
+            80_7: 23_1(ivec2) CompositeConstruct 270_1 270_2
+           65_22:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_22 80_7
+           65_23:   32_4(ptr) AccessChain 59_1 43_3
+           61_12: 23_2(fvec3) Load 65_23
+           81_21: 22_1(float) CompositeExtract 61_12 0
+           269_1: 22_1(float) GroupFMax uint(3) Reduce 81_21
+           81_22: 22_1(float) CompositeExtract 61_12 1
+           269_2: 22_1(float) GroupFMax uint(3) Reduce 81_22
+           81_23: 22_1(float) CompositeExtract 61_12 2
+           269_3: 22_1(float) GroupFMax uint(3) Reduce 81_23
+            80_8: 23_2(fvec3) CompositeConstruct 269_1 269_2 269_3
+           65_24:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_24 80_8
+           65_25:   32_5(ptr) AccessChain 59_1 43_4
+           61_13:23_3(f64vec4) Load 65_25
+           81_24:22_2(float64_t) CompositeExtract 61_13 0
+           269_4:22_2(float64_t) GroupFMax uint(3) Reduce 81_24
+           81_25:22_2(float64_t) CompositeExtract 61_13 1
+           269_5:22_2(float64_t) GroupFMax uint(3) Reduce 81_25
+           81_26:22_2(float64_t) CompositeExtract 61_13 2
+           269_6:22_2(float64_t) GroupFMax uint(3) Reduce 81_26
+           81_27:22_2(float64_t) CompositeExtract 61_13 3
+           269_7:22_2(float64_t) GroupFMax uint(3) Reduce 81_27
+            80_9:23_3(f64vec4) CompositeConstruct 269_4 269_5 269_6 269_7
+           65_26:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_26 80_9
+           65_27:   32_6(ptr) AccessChain 59_1 43_5
+           61_14:21_3(int64_t) Load 65_27
+           271_2:21_3(int64_t) GroupSMax uint(3) Reduce 61_14
+           65_28:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_28 271_2
+           65_29:   32_7(ptr) AccessChain 59_1 43_6
+           61_15:23_4(i64vec2) Load 65_29
+           81_28:21_4(int64_t) CompositeExtract 61_15 0
+           270_3:21_4(int64_t) GroupUMax uint(3) Reduce 81_28
+           81_29:21_4(int64_t) CompositeExtract 61_15 1
+           270_4:21_4(int64_t) GroupUMax uint(3) Reduce 81_29
+           80_10:23_4(i64vec2) CompositeConstruct 270_3 270_4
+           65_30:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_30 80_10
+           65_31:   32_8(ptr) AccessChain 59_1 43_7
+           61_16:23_5(f16vec3) Load 65_31
+           81_30:22_3(float16_t) CompositeExtract 61_16 0
+           269_8:22_3(float16_t) GroupFMax uint(3) Reduce 81_30
+           81_31:22_3(float16_t) CompositeExtract 61_16 1
+           269_9:22_3(float16_t) GroupFMax uint(3) Reduce 81_31
+           81_32:22_3(float16_t) CompositeExtract 61_16 2
+          269_10:22_3(float16_t) GroupFMax uint(3) Reduce 81_32
+           80_11:23_5(f16vec3) CompositeConstruct 269_8 269_9 269_10
+           65_32:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_32 80_11
+           65_33:   32_9(ptr) AccessChain 59_1 43_8
+           61_17:23_6(i16vec4) Load 65_33
+           81_33:21_5(int16_t) CompositeExtract 61_17 0
+           271_3:21_5(int16_t) GroupSMax uint(3) Reduce 81_33
+           81_34:21_5(int16_t) CompositeExtract 61_17 1
+           271_4:21_5(int16_t) GroupSMax uint(3) Reduce 81_34
+           81_35:21_5(int16_t) CompositeExtract 61_17 2
+           271_5:21_5(int16_t) GroupSMax uint(3) Reduce 81_35
+           81_36:21_5(int16_t) CompositeExtract 61_17 3
+           271_6:21_5(int16_t) GroupSMax uint(3) Reduce 81_36
+           80_12:23_6(i16vec4) CompositeConstruct 271_3 271_4 271_5 271_6
+           65_34:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_34 80_12
+           65_35:  32_10(ptr) AccessChain 59_1 43_9
+           61_18:21_6(int16_t) Load 65_35
+           270_5:21_6(int16_t) GroupUMax uint(3) Reduce 61_18
+           65_36:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_36 270_5
+           65_37:   32_2(ptr) AccessChain 59_1 43_1
+           61_19:   21_1(int) Load 65_37
+           264_1:   21_1(int) GroupIAdd uint(3) Reduce 61_19
+           65_38:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_38 264_1
+           65_39:   32_3(ptr) AccessChain 59_1 43_2
+           61_20: 23_1(ivec2) Load 65_39
+           81_37:   21_2(int) CompositeExtract 61_20 0
+           264_2:   21_2(int) GroupIAdd uint(3) Reduce 81_37
+           81_38:   21_2(int) CompositeExtract 61_20 1
+           264_3:   21_2(int) GroupIAdd uint(3) Reduce 81_38
+           80_13: 23_1(ivec2) CompositeConstruct 264_2 264_3
+           65_40:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_40 80_13
+           65_41:   32_4(ptr) AccessChain 59_1 43_3
+           61_21: 23_2(fvec3) Load 65_41
+           81_39: 22_1(float) CompositeExtract 61_21 0
+           265_1: 22_1(float) GroupFAdd uint(3) Reduce 81_39
+           81_40: 22_1(float) CompositeExtract 61_21 1
+           265_2: 22_1(float) GroupFAdd uint(3) Reduce 81_40
+           81_41: 22_1(float) CompositeExtract 61_21 2
+           265_3: 22_1(float) GroupFAdd uint(3) Reduce 81_41
+           80_14: 23_2(fvec3) CompositeConstruct 265_1 265_2 265_3
+           65_42:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_42 80_14
+           65_43:   32_5(ptr) AccessChain 59_1 43_4
+           61_22:23_3(f64vec4) Load 65_43
+           81_42:22_2(float64_t) CompositeExtract 61_22 0
+           265_4:22_2(float64_t) GroupFAdd uint(3) Reduce 81_42
+           81_43:22_2(float64_t) CompositeExtract 61_22 1
+           265_5:22_2(float64_t) GroupFAdd uint(3) Reduce 81_43
+           81_44:22_2(float64_t) CompositeExtract 61_22 2
+           265_6:22_2(float64_t) GroupFAdd uint(3) Reduce 81_44
+           81_45:22_2(float64_t) CompositeExtract 61_22 3
+           265_7:22_2(float64_t) GroupFAdd uint(3) Reduce 81_45
+           80_15:23_3(f64vec4) CompositeConstruct 265_4 265_5 265_6 265_7
+           65_44:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_44 80_15
+           65_45:   32_6(ptr) AccessChain 59_1 43_5
+           61_23:21_3(int64_t) Load 65_45
+           264_4:21_3(int64_t) GroupIAdd uint(3) Reduce 61_23
+           65_46:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_46 264_4
+           65_47:   32_7(ptr) AccessChain 59_1 43_6
+           61_24:23_4(i64vec2) Load 65_47
+           81_46:21_4(int64_t) CompositeExtract 61_24 0
+           264_5:21_4(int64_t) GroupIAdd uint(3) Reduce 81_46
+           81_47:21_4(int64_t) CompositeExtract 61_24 1
+           264_6:21_4(int64_t) GroupIAdd uint(3) Reduce 81_47
+           80_16:23_4(i64vec2) CompositeConstruct 264_5 264_6
+           65_48:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_48 80_16
+           65_49:   32_8(ptr) AccessChain 59_1 43_7
+           61_25:23_5(f16vec3) Load 65_49
+           81_48:22_3(float16_t) CompositeExtract 61_25 0
+           265_8:22_3(float16_t) GroupFAdd uint(3) Reduce 81_48
+           81_49:22_3(float16_t) CompositeExtract 61_25 1
+           265_9:22_3(float16_t) GroupFAdd uint(3) Reduce 81_49
+           81_50:22_3(float16_t) CompositeExtract 61_25 2
+          265_10:22_3(float16_t) GroupFAdd uint(3) Reduce 81_50
+           80_17:23_5(f16vec3) CompositeConstruct 265_8 265_9 265_10
+           65_50:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_50 80_17
+           65_51:   32_9(ptr) AccessChain 59_1 43_8
+           61_26:23_6(i16vec4) Load 65_51
+           81_51:21_5(int16_t) CompositeExtract 61_26 0
+           264_7:21_5(int16_t) GroupIAdd uint(3) Reduce 81_51
+           81_52:21_5(int16_t) CompositeExtract 61_26 1
+           264_8:21_5(int16_t) GroupIAdd uint(3) Reduce 81_52
+           81_53:21_5(int16_t) CompositeExtract 61_26 2
+           264_9:21_5(int16_t) GroupIAdd uint(3) Reduce 81_53
+           81_54:21_5(int16_t) CompositeExtract 61_26 3
+          264_10:21_5(int16_t) GroupIAdd uint(3) Reduce 81_54
+           80_18:23_6(i16vec4) CompositeConstruct 264_7 264_8 264_9 264_10
+           65_52:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_52 80_18
+           65_53:  32_10(ptr) AccessChain 59_1 43_9
+           61_27:21_6(int16_t) Load 65_53
+          264_11:21_6(int16_t) GroupIAdd uint(3) Reduce 61_27
+           65_54:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_54 264_11
+           65_55:   32_2(ptr) AccessChain 59_1 43_1
+           61_28:   21_1(int) Load 65_55
+          5004_1:   21_1(int) GroupSMinNonUniformAMD uint(3) Reduce 61_28
+           65_56:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_56 5004_1
+           65_57:   32_3(ptr) AccessChain 59_1 43_2
+           61_29: 23_1(ivec2) Load 65_57
+           81_55:   21_2(int) CompositeExtract 61_29 0
+          5003_1:   21_2(int) GroupUMinNonUniformAMD uint(3) Reduce 81_55
+           81_56:   21_2(int) CompositeExtract 61_29 1
+          5003_2:   21_2(int) GroupUMinNonUniformAMD uint(3) Reduce 81_56
+           80_19: 23_1(ivec2) CompositeConstruct 5003_1 5003_2
+           65_58:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_58 80_19
+           65_59:   32_4(ptr) AccessChain 59_1 43_3
+           61_30: 23_2(fvec3) Load 65_59
+           81_57: 22_1(float) CompositeExtract 61_30 0
+          5002_1: 22_1(float) GroupFMinNonUniformAMD uint(3) Reduce 81_57
+           81_58: 22_1(float) CompositeExtract 61_30 1
+          5002_2: 22_1(float) GroupFMinNonUniformAMD uint(3) Reduce 81_58
+           81_59: 22_1(float) CompositeExtract 61_30 2
+          5002_3: 22_1(float) GroupFMinNonUniformAMD uint(3) Reduce 81_59
+           80_20: 23_2(fvec3) CompositeConstruct 5002_1 5002_2 5002_3
+           65_60:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_60 80_20
+           65_61:   32_5(ptr) AccessChain 59_1 43_4
+           61_31:23_3(f64vec4) Load 65_61
+           81_60:22_2(float64_t) CompositeExtract 61_31 0
+          5002_4:22_2(float64_t) GroupFMinNonUniformAMD uint(3) Reduce 81_60
+           81_61:22_2(float64_t) CompositeExtract 61_31 1
+          5002_5:22_2(float64_t) GroupFMinNonUniformAMD uint(3) Reduce 81_61
+           81_62:22_2(float64_t) CompositeExtract 61_31 2
+          5002_6:22_2(float64_t) GroupFMinNonUniformAMD uint(3) Reduce 81_62
+           81_63:22_2(float64_t) CompositeExtract 61_31 3
+          5002_7:22_2(float64_t) GroupFMinNonUniformAMD uint(3) Reduce 81_63
+           80_21:23_3(f64vec4) CompositeConstruct 5002_4 5002_5 5002_6 5002_7
+           65_62:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_62 80_21
+           65_63:   32_6(ptr) AccessChain 59_1 43_5
+           61_32:21_3(int64_t) Load 65_63
+          5004_2:21_3(int64_t) GroupSMinNonUniformAMD uint(3) Reduce 61_32
+           65_64:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_64 5004_2
+           65_65:   32_7(ptr) AccessChain 59_1 43_6
+           61_33:23_4(i64vec2) Load 65_65
+           81_64:21_4(int64_t) CompositeExtract 61_33 0
+          5003_3:21_4(int64_t) GroupUMinNonUniformAMD uint(3) Reduce 81_64
+           81_65:21_4(int64_t) CompositeExtract 61_33 1
+          5003_4:21_4(int64_t) GroupUMinNonUniformAMD uint(3) Reduce 81_65
+           80_22:23_4(i64vec2) CompositeConstruct 5003_3 5003_4
+           65_66:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_66 80_22
+           65_67:   32_8(ptr) AccessChain 59_1 43_7
+           61_34:23_5(f16vec3) Load 65_67
+           81_66:22_3(float16_t) CompositeExtract 61_34 0
+          5002_8:22_3(float16_t) GroupFMinNonUniformAMD uint(3) Reduce 81_66
+           81_67:22_3(float16_t) CompositeExtract 61_34 1
+          5002_9:22_3(float16_t) GroupFMinNonUniformAMD uint(3) Reduce 81_67
+           81_68:22_3(float16_t) CompositeExtract 61_34 2
+         5002_10:22_3(float16_t) GroupFMinNonUniformAMD uint(3) Reduce 81_68
+           80_23:23_5(f16vec3) CompositeConstruct 5002_8 5002_9 5002_10
+           65_68:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_68 80_23
+           65_69:   32_9(ptr) AccessChain 59_1 43_8
+           61_35:23_6(i16vec4) Load 65_69
+           81_69:21_5(int16_t) CompositeExtract 61_35 0
+          5004_3:21_5(int16_t) GroupSMinNonUniformAMD uint(3) Reduce 81_69
+           81_70:21_5(int16_t) CompositeExtract 61_35 1
+          5004_4:21_5(int16_t) GroupSMinNonUniformAMD uint(3) Reduce 81_70
+           81_71:21_5(int16_t) CompositeExtract 61_35 2
+          5004_5:21_5(int16_t) GroupSMinNonUniformAMD uint(3) Reduce 81_71
+           81_72:21_5(int16_t) CompositeExtract 61_35 3
+          5004_6:21_5(int16_t) GroupSMinNonUniformAMD uint(3) Reduce 81_72
+           80_24:23_6(i16vec4) CompositeConstruct 5004_3 5004_4 5004_5 5004_6
+           65_70:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_70 80_24
+           65_71:  32_10(ptr) AccessChain 59_1 43_9
+           61_36:21_6(int16_t) Load 65_71
+          5003_5:21_6(int16_t) GroupUMinNonUniformAMD uint(3) Reduce 61_36
+           65_72:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_72 5003_5
+           65_73:   32_2(ptr) AccessChain 59_1 43_1
+           61_37:   21_1(int) Load 65_73
+          5007_1:   21_1(int) GroupSMaxNonUniformAMD uint(3) Reduce 61_37
+           65_74:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_74 5007_1
+           65_75:   32_3(ptr) AccessChain 59_1 43_2
+           61_38: 23_1(ivec2) Load 65_75
+           81_73:   21_2(int) CompositeExtract 61_38 0
+          5006_1:   21_2(int) GroupUMaxNonUniformAMD uint(3) Reduce 81_73
+           81_74:   21_2(int) CompositeExtract 61_38 1
+          5006_2:   21_2(int) GroupUMaxNonUniformAMD uint(3) Reduce 81_74
+           80_25: 23_1(ivec2) CompositeConstruct 5006_1 5006_2
+           65_76:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_76 80_25
+           65_77:   32_4(ptr) AccessChain 59_1 43_3
+           61_39: 23_2(fvec3) Load 65_77
+           81_75: 22_1(float) CompositeExtract 61_39 0
+          5005_1: 22_1(float) GroupFMaxNonUniformAMD uint(3) Reduce 81_75
+           81_76: 22_1(float) CompositeExtract 61_39 1
+          5005_2: 22_1(float) GroupFMaxNonUniformAMD uint(3) Reduce 81_76
+           81_77: 22_1(float) CompositeExtract 61_39 2
+          5005_3: 22_1(float) GroupFMaxNonUniformAMD uint(3) Reduce 81_77
+           80_26: 23_2(fvec3) CompositeConstruct 5005_1 5005_2 5005_3
+           65_78:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_78 80_26
+           65_79:   32_5(ptr) AccessChain 59_1 43_4
+           61_40:23_3(f64vec4) Load 65_79
+           81_78:22_2(float64_t) CompositeExtract 61_40 0
+          5005_4:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) Reduce 81_78
+           81_79:22_2(float64_t) CompositeExtract 61_40 1
+          5005_5:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) Reduce 81_79
+           81_80:22_2(float64_t) CompositeExtract 61_40 2
+          5005_6:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) Reduce 81_80
+           81_81:22_2(float64_t) CompositeExtract 61_40 3
+          5005_7:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) Reduce 81_81
+           80_27:23_3(f64vec4) CompositeConstruct 5005_4 5005_5 5005_6 5005_7
+           65_80:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_80 80_27
+           65_81:   32_6(ptr) AccessChain 59_1 43_5
+           61_41:21_3(int64_t) Load 65_81
+          5007_2:21_3(int64_t) GroupSMaxNonUniformAMD uint(3) Reduce 61_41
+           65_82:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_82 5007_2
+           65_83:   32_7(ptr) AccessChain 59_1 43_6
+           61_42:23_4(i64vec2) Load 65_83
+           81_82:21_4(int64_t) CompositeExtract 61_42 0
+          5006_3:21_4(int64_t) GroupUMaxNonUniformAMD uint(3) Reduce 81_82
+           81_83:21_4(int64_t) CompositeExtract 61_42 1
+          5006_4:21_4(int64_t) GroupUMaxNonUniformAMD uint(3) Reduce 81_83
+           80_28:23_4(i64vec2) CompositeConstruct 5006_3 5006_4
+           65_84:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_84 80_28
+           65_85:   32_8(ptr) AccessChain 59_1 43_7
+           61_43:23_5(f16vec3) Load 65_85
+           81_84:22_3(float16_t) CompositeExtract 61_43 0
+          5005_8:22_3(float16_t) GroupFMaxNonUniformAMD uint(3) Reduce 81_84
+           81_85:22_3(float16_t) CompositeExtract 61_43 1
+          5005_9:22_3(float16_t) GroupFMaxNonUniformAMD uint(3) Reduce 81_85
+           81_86:22_3(float16_t) CompositeExtract 61_43 2
+         5005_10:22_3(float16_t) GroupFMaxNonUniformAMD uint(3) Reduce 81_86
+           80_29:23_5(f16vec3) CompositeConstruct 5005_8 5005_9 5005_10
+           65_86:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_86 80_29
+           65_87:   32_9(ptr) AccessChain 59_1 43_8
+           61_44:23_6(i16vec4) Load 65_87
+           81_87:21_5(int16_t) CompositeExtract 61_44 0
+          5007_3:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) Reduce 81_87
+           81_88:21_5(int16_t) CompositeExtract 61_44 1
+          5007_4:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) Reduce 81_88
+           81_89:21_5(int16_t) CompositeExtract 61_44 2
+          5007_5:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) Reduce 81_89
+           81_90:21_5(int16_t) CompositeExtract 61_44 3
+          5007_6:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) Reduce 81_90
+           80_30:23_6(i16vec4) CompositeConstruct 5007_3 5007_4 5007_5 5007_6
+           65_88:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_88 80_30
+           65_89:  32_10(ptr) AccessChain 59_1 43_9
+           61_45:21_6(int16_t) Load 65_89
+          5006_5:21_6(int16_t) GroupUMaxNonUniformAMD uint(3) Reduce 61_45
+           65_90:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_90 5006_5
+           65_91:   32_2(ptr) AccessChain 59_1 43_1
+           61_46:   21_1(int) Load 65_91
+          5000_1:   21_1(int) GroupIAddNonUniformAMD uint(3) Reduce 61_46
+           65_92:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_92 5000_1
+           65_93:   32_3(ptr) AccessChain 59_1 43_2
+           61_47: 23_1(ivec2) Load 65_93
+           81_91:   21_2(int) CompositeExtract 61_47 0
+          5000_2:   21_2(int) GroupIAddNonUniformAMD uint(3) Reduce 81_91
+           81_92:   21_2(int) CompositeExtract 61_47 1
+          5000_3:   21_2(int) GroupIAddNonUniformAMD uint(3) Reduce 81_92
+           80_31: 23_1(ivec2) CompositeConstruct 5000_2 5000_3
+           65_94:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_94 80_31
+           65_95:   32_4(ptr) AccessChain 59_1 43_3
+           61_48: 23_2(fvec3) Load 65_95
+           81_93: 22_1(float) CompositeExtract 61_48 0
+          5001_1: 22_1(float) GroupFAddNonUniformAMD uint(3) Reduce 81_93
+           81_94: 22_1(float) CompositeExtract 61_48 1
+          5001_2: 22_1(float) GroupFAddNonUniformAMD uint(3) Reduce 81_94
+           81_95: 22_1(float) CompositeExtract 61_48 2
+          5001_3: 22_1(float) GroupFAddNonUniformAMD uint(3) Reduce 81_95
+           80_32: 23_2(fvec3) CompositeConstruct 5001_1 5001_2 5001_3
+           65_96:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_96 80_32
+           65_97:   32_5(ptr) AccessChain 59_1 43_4
+           61_49:23_3(f64vec4) Load 65_97
+           81_96:22_2(float64_t) CompositeExtract 61_49 0
+          5001_4:22_2(float64_t) GroupFAddNonUniformAMD uint(3) Reduce 81_96
+           81_97:22_2(float64_t) CompositeExtract 61_49 1
+          5001_5:22_2(float64_t) GroupFAddNonUniformAMD uint(3) Reduce 81_97
+           81_98:22_2(float64_t) CompositeExtract 61_49 2
+          5001_6:22_2(float64_t) GroupFAddNonUniformAMD uint(3) Reduce 81_98
+           81_99:22_2(float64_t) CompositeExtract 61_49 3
+          5001_7:22_2(float64_t) GroupFAddNonUniformAMD uint(3) Reduce 81_99
+           80_33:23_3(f64vec4) CompositeConstruct 5001_4 5001_5 5001_6 5001_7
+           65_98:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_98 80_33
+           65_99:   32_6(ptr) AccessChain 59_1 43_5
+           61_50:21_3(int64_t) Load 65_99
+          5000_4:21_3(int64_t) GroupIAddNonUniformAMD uint(3) Reduce 61_50
+          65_100:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_100 5000_4
+          65_101:   32_7(ptr) AccessChain 59_1 43_6
+           61_51:23_4(i64vec2) Load 65_101
+          81_100:21_4(int64_t) CompositeExtract 61_51 0
+          5000_5:21_4(int64_t) GroupIAddNonUniformAMD uint(3) Reduce 81_100
+          81_101:21_4(int64_t) CompositeExtract 61_51 1
+          5000_6:21_4(int64_t) GroupIAddNonUniformAMD uint(3) Reduce 81_101
+           80_34:23_4(i64vec2) CompositeConstruct 5000_5 5000_6
+          65_102:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_102 80_34
+          65_103:   32_8(ptr) AccessChain 59_1 43_7
+           61_52:23_5(f16vec3) Load 65_103
+          81_102:22_3(float16_t) CompositeExtract 61_52 0
+          5001_8:22_3(float16_t) GroupFAddNonUniformAMD uint(3) Reduce 81_102
+          81_103:22_3(float16_t) CompositeExtract 61_52 1
+          5001_9:22_3(float16_t) GroupFAddNonUniformAMD uint(3) Reduce 81_103
+          81_104:22_3(float16_t) CompositeExtract 61_52 2
+         5001_10:22_3(float16_t) GroupFAddNonUniformAMD uint(3) Reduce 81_104
+           80_35:23_5(f16vec3) CompositeConstruct 5001_8 5001_9 5001_10
+          65_104:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_104 80_35
+          65_105:   32_9(ptr) AccessChain 59_1 43_8
+           61_53:23_6(i16vec4) Load 65_105
+          81_105:21_5(int16_t) CompositeExtract 61_53 0
+          5000_7:21_5(int16_t) GroupIAddNonUniformAMD uint(3) Reduce 81_105
+          81_106:21_5(int16_t) CompositeExtract 61_53 1
+          5000_8:21_5(int16_t) GroupIAddNonUniformAMD uint(3) Reduce 81_106
+          81_107:21_5(int16_t) CompositeExtract 61_53 2
+          5000_9:21_5(int16_t) GroupIAddNonUniformAMD uint(3) Reduce 81_107
+          81_108:21_5(int16_t) CompositeExtract 61_53 3
+         5000_10:21_5(int16_t) GroupIAddNonUniformAMD uint(3) Reduce 81_108
+           80_36:23_6(i16vec4) CompositeConstruct 5000_7 5000_8 5000_9 5000_10
+          65_106:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_106 80_36
+          65_107:  32_10(ptr) AccessChain 59_1 43_9
+           61_54:21_6(int16_t) Load 65_107
+         5000_11:21_6(int16_t) GroupIAddNonUniformAMD uint(3) Reduce 61_54
+          65_108:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_108 5000_11
+          65_109:   32_2(ptr) AccessChain 59_1 43_1
+           61_55:   21_1(int) Load 65_109
+           268_7:   21_1(int) GroupSMin uint(3) InclusiveScan 61_55
+          65_110:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_110 268_7
+          65_111:   32_3(ptr) AccessChain 59_1 43_2
+           61_56: 23_1(ivec2) Load 65_111
+          81_109:   21_2(int) CompositeExtract 61_56 0
+           267_6:   21_2(int) GroupUMin uint(3) InclusiveScan 81_109
+          81_110:   21_2(int) CompositeExtract 61_56 1
+           267_7:   21_2(int) GroupUMin uint(3) InclusiveScan 81_110
+           80_37: 23_1(ivec2) CompositeConstruct 267_6 267_7
+          65_112:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_112 80_37
+          65_113:   32_4(ptr) AccessChain 59_1 43_3
+           61_57: 23_2(fvec3) Load 65_113
+          81_111: 22_1(float) CompositeExtract 61_57 0
+          266_11: 22_1(float) GroupFMin uint(3) InclusiveScan 81_111
+          81_112: 22_1(float) CompositeExtract 61_57 1
+          266_12: 22_1(float) GroupFMin uint(3) InclusiveScan 81_112
+          81_113: 22_1(float) CompositeExtract 61_57 2
+          266_13: 22_1(float) GroupFMin uint(3) InclusiveScan 81_113
+           80_38: 23_2(fvec3) CompositeConstruct 266_11 266_12 266_13
+          65_114:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_114 80_38
+          65_115:   32_5(ptr) AccessChain 59_1 43_4
+           61_58:23_3(f64vec4) Load 65_115
+          81_114:22_2(float64_t) CompositeExtract 61_58 0
+          266_14:22_2(float64_t) GroupFMin uint(3) InclusiveScan 81_114
+          81_115:22_2(float64_t) CompositeExtract 61_58 1
+          266_15:22_2(float64_t) GroupFMin uint(3) InclusiveScan 81_115
+          81_116:22_2(float64_t) CompositeExtract 61_58 2
+          266_16:22_2(float64_t) GroupFMin uint(3) InclusiveScan 81_116
+          81_117:22_2(float64_t) CompositeExtract 61_58 3
+          266_17:22_2(float64_t) GroupFMin uint(3) InclusiveScan 81_117
+           80_39:23_3(f64vec4) CompositeConstruct 266_14 266_15 266_16 266_17
+          65_116:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_116 80_39
+          65_117:   32_6(ptr) AccessChain 59_1 43_5
+           61_59:21_3(int64_t) Load 65_117
+           268_8:21_3(int64_t) GroupSMin uint(3) InclusiveScan 61_59
+          65_118:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_118 268_8
+          65_119:   32_7(ptr) AccessChain 59_1 43_6
+           61_60:23_4(i64vec2) Load 65_119
+          81_118:21_4(int64_t) CompositeExtract 61_60 0
+           267_8:21_4(int64_t) GroupUMin uint(3) InclusiveScan 81_118
+          81_119:21_4(int64_t) CompositeExtract 61_60 1
+           267_9:21_4(int64_t) GroupUMin uint(3) InclusiveScan 81_119
+           80_40:23_4(i64vec2) CompositeConstruct 267_8 267_9
+          65_120:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_120 80_40
+          65_121:   32_8(ptr) AccessChain 59_1 43_7
+           61_61:23_5(f16vec3) Load 65_121
+          81_120:22_3(float16_t) CompositeExtract 61_61 0
+          266_18:22_3(float16_t) GroupFMin uint(3) InclusiveScan 81_120
+          81_121:22_3(float16_t) CompositeExtract 61_61 1
+          266_19:22_3(float16_t) GroupFMin uint(3) InclusiveScan 81_121
+          81_122:22_3(float16_t) CompositeExtract 61_61 2
+          266_20:22_3(float16_t) GroupFMin uint(3) InclusiveScan 81_122
+           80_41:23_5(f16vec3) CompositeConstruct 266_18 266_19 266_20
+          65_122:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_122 80_41
+          65_123:   32_9(ptr) AccessChain 59_1 43_8
+           61_62:23_6(i16vec4) Load 65_123
+          81_123:21_5(int16_t) CompositeExtract 61_62 0
+           268_9:21_5(int16_t) GroupSMin uint(3) InclusiveScan 81_123
+          81_124:21_5(int16_t) CompositeExtract 61_62 1
+          268_10:21_5(int16_t) GroupSMin uint(3) InclusiveScan 81_124
+          81_125:21_5(int16_t) CompositeExtract 61_62 2
+          268_11:21_5(int16_t) GroupSMin uint(3) InclusiveScan 81_125
+          81_126:21_5(int16_t) CompositeExtract 61_62 3
+          268_12:21_5(int16_t) GroupSMin uint(3) InclusiveScan 81_126
+           80_42:23_6(i16vec4) CompositeConstruct 268_9 268_10 268_11 268_12
+          65_124:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_124 80_42
+          65_125:  32_10(ptr) AccessChain 59_1 43_9
+           61_63:21_6(int16_t) Load 65_125
+          267_10:21_6(int16_t) GroupUMin uint(3) InclusiveScan 61_63
+          65_126:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_126 267_10
+          65_127:   32_2(ptr) AccessChain 59_1 43_1
+           61_64:   21_1(int) Load 65_127
+           271_7:   21_1(int) GroupSMax uint(3) InclusiveScan 61_64
+          65_128:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_128 271_7
+          65_129:   32_3(ptr) AccessChain 59_1 43_2
+           61_65: 23_1(ivec2) Load 65_129
+          81_127:   21_2(int) CompositeExtract 61_65 0
+           270_6:   21_2(int) GroupUMax uint(3) InclusiveScan 81_127
+          81_128:   21_2(int) CompositeExtract 61_65 1
+           270_7:   21_2(int) GroupUMax uint(3) InclusiveScan 81_128
+           80_43: 23_1(ivec2) CompositeConstruct 270_6 270_7
+          65_130:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_130 80_43
+          65_131:   32_4(ptr) AccessChain 59_1 43_3
+           61_66: 23_2(fvec3) Load 65_131
+          81_129: 22_1(float) CompositeExtract 61_66 0
+          269_11: 22_1(float) GroupFMax uint(3) InclusiveScan 81_129
+          81_130: 22_1(float) CompositeExtract 61_66 1
+          269_12: 22_1(float) GroupFMax uint(3) InclusiveScan 81_130
+          81_131: 22_1(float) CompositeExtract 61_66 2
+          269_13: 22_1(float) GroupFMax uint(3) InclusiveScan 81_131
+           80_44: 23_2(fvec3) CompositeConstruct 269_11 269_12 269_13
+          65_132:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_132 80_44
+          65_133:   32_5(ptr) AccessChain 59_1 43_4
+           61_67:23_3(f64vec4) Load 65_133
+          81_132:22_2(float64_t) CompositeExtract 61_67 0
+          269_14:22_2(float64_t) GroupFMax uint(3) InclusiveScan 81_132
+          81_133:22_2(float64_t) CompositeExtract 61_67 1
+          269_15:22_2(float64_t) GroupFMax uint(3) InclusiveScan 81_133
+          81_134:22_2(float64_t) CompositeExtract 61_67 2
+          269_16:22_2(float64_t) GroupFMax uint(3) InclusiveScan 81_134
+          81_135:22_2(float64_t) CompositeExtract 61_67 3
+          269_17:22_2(float64_t) GroupFMax uint(3) InclusiveScan 81_135
+           80_45:23_3(f64vec4) CompositeConstruct 269_14 269_15 269_16 269_17
+          65_134:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_134 80_45
+          65_135:   32_6(ptr) AccessChain 59_1 43_5
+           61_68:21_3(int64_t) Load 65_135
+           271_8:21_3(int64_t) GroupSMax uint(3) InclusiveScan 61_68
+          65_136:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_136 271_8
+          65_137:   32_7(ptr) AccessChain 59_1 43_6
+           61_69:23_4(i64vec2) Load 65_137
+          81_136:21_4(int64_t) CompositeExtract 61_69 0
+           270_8:21_4(int64_t) GroupUMax uint(3) InclusiveScan 81_136
+          81_137:21_4(int64_t) CompositeExtract 61_69 1
+           270_9:21_4(int64_t) GroupUMax uint(3) InclusiveScan 81_137
+           80_46:23_4(i64vec2) CompositeConstruct 270_8 270_9
+          65_138:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_138 80_46
+          65_139:   32_8(ptr) AccessChain 59_1 43_7
+           61_70:23_5(f16vec3) Load 65_139
+          81_138:22_3(float16_t) CompositeExtract 61_70 0
+          269_18:22_3(float16_t) GroupFMax uint(3) InclusiveScan 81_138
+          81_139:22_3(float16_t) CompositeExtract 61_70 1
+          269_19:22_3(float16_t) GroupFMax uint(3) InclusiveScan 81_139
+          81_140:22_3(float16_t) CompositeExtract 61_70 2
+          269_20:22_3(float16_t) GroupFMax uint(3) InclusiveScan 81_140
+           80_47:23_5(f16vec3) CompositeConstruct 269_18 269_19 269_20
+          65_140:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_140 80_47
+          65_141:   32_9(ptr) AccessChain 59_1 43_8
+           61_71:23_6(i16vec4) Load 65_141
+          81_141:21_5(int16_t) CompositeExtract 61_71 0
+           271_9:21_5(int16_t) GroupSMax uint(3) InclusiveScan 81_141
+          81_142:21_5(int16_t) CompositeExtract 61_71 1
+          271_10:21_5(int16_t) GroupSMax uint(3) InclusiveScan 81_142
+          81_143:21_5(int16_t) CompositeExtract 61_71 2
+          271_11:21_5(int16_t) GroupSMax uint(3) InclusiveScan 81_143
+          81_144:21_5(int16_t) CompositeExtract 61_71 3
+          271_12:21_5(int16_t) GroupSMax uint(3) InclusiveScan 81_144
+           80_48:23_6(i16vec4) CompositeConstruct 271_9 271_10 271_11 271_12
+          65_142:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_142 80_48
+          65_143:  32_10(ptr) AccessChain 59_1 43_9
+           61_72:21_6(int16_t) Load 65_143
+          270_10:21_6(int16_t) GroupUMax uint(3) InclusiveScan 61_72
+          65_144:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_144 270_10
+          65_145:   32_2(ptr) AccessChain 59_1 43_1
+           61_73:   21_1(int) Load 65_145
+          264_12:   21_1(int) GroupIAdd uint(3) InclusiveScan 61_73
+          65_146:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_146 264_12
+          65_147:   32_3(ptr) AccessChain 59_1 43_2
+           61_74: 23_1(ivec2) Load 65_147
+          81_145:   21_2(int) CompositeExtract 61_74 0
+          264_13:   21_2(int) GroupIAdd uint(3) InclusiveScan 81_145
+          81_146:   21_2(int) CompositeExtract 61_74 1
+          264_14:   21_2(int) GroupIAdd uint(3) InclusiveScan 81_146
+           80_49: 23_1(ivec2) CompositeConstruct 264_13 264_14
+          65_148:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_148 80_49
+          65_149:   32_4(ptr) AccessChain 59_1 43_3
+           61_75: 23_2(fvec3) Load 65_149
+          81_147: 22_1(float) CompositeExtract 61_75 0
+          265_11: 22_1(float) GroupFAdd uint(3) InclusiveScan 81_147
+          81_148: 22_1(float) CompositeExtract 61_75 1
+          265_12: 22_1(float) GroupFAdd uint(3) InclusiveScan 81_148
+          81_149: 22_1(float) CompositeExtract 61_75 2
+          265_13: 22_1(float) GroupFAdd uint(3) InclusiveScan 81_149
+           80_50: 23_2(fvec3) CompositeConstruct 265_11 265_12 265_13
+          65_150:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_150 80_50
+          65_151:   32_5(ptr) AccessChain 59_1 43_4
+           61_76:23_3(f64vec4) Load 65_151
+          81_150:22_2(float64_t) CompositeExtract 61_76 0
+          265_14:22_2(float64_t) GroupFAdd uint(3) InclusiveScan 81_150
+          81_151:22_2(float64_t) CompositeExtract 61_76 1
+          265_15:22_2(float64_t) GroupFAdd uint(3) InclusiveScan 81_151
+          81_152:22_2(float64_t) CompositeExtract 61_76 2
+          265_16:22_2(float64_t) GroupFAdd uint(3) InclusiveScan 81_152
+          81_153:22_2(float64_t) CompositeExtract 61_76 3
+          265_17:22_2(float64_t) GroupFAdd uint(3) InclusiveScan 81_153
+           80_51:23_3(f64vec4) CompositeConstruct 265_14 265_15 265_16 265_17
+          65_152:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_152 80_51
+          65_153:   32_6(ptr) AccessChain 59_1 43_5
+           61_77:21_3(int64_t) Load 65_153
+          264_15:21_3(int64_t) GroupIAdd uint(3) InclusiveScan 61_77
+          65_154:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_154 264_15
+          65_155:   32_7(ptr) AccessChain 59_1 43_6
+           61_78:23_4(i64vec2) Load 65_155
+          81_154:21_4(int64_t) CompositeExtract 61_78 0
+          264_16:21_4(int64_t) GroupIAdd uint(3) InclusiveScan 81_154
+          81_155:21_4(int64_t) CompositeExtract 61_78 1
+          264_17:21_4(int64_t) GroupIAdd uint(3) InclusiveScan 81_155
+           80_52:23_4(i64vec2) CompositeConstruct 264_16 264_17
+          65_156:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_156 80_52
+          65_157:   32_8(ptr) AccessChain 59_1 43_7
+           61_79:23_5(f16vec3) Load 65_157
+          81_156:22_3(float16_t) CompositeExtract 61_79 0
+          265_18:22_3(float16_t) GroupFAdd uint(3) InclusiveScan 81_156
+          81_157:22_3(float16_t) CompositeExtract 61_79 1
+          265_19:22_3(float16_t) GroupFAdd uint(3) InclusiveScan 81_157
+          81_158:22_3(float16_t) CompositeExtract 61_79 2
+          265_20:22_3(float16_t) GroupFAdd uint(3) InclusiveScan 81_158
+           80_53:23_5(f16vec3) CompositeConstruct 265_18 265_19 265_20
+          65_158:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_158 80_53
+          65_159:   32_9(ptr) AccessChain 59_1 43_8
+           61_80:23_6(i16vec4) Load 65_159
+          81_159:21_5(int16_t) CompositeExtract 61_80 0
+          264_18:21_5(int16_t) GroupIAdd uint(3) InclusiveScan 81_159
+          81_160:21_5(int16_t) CompositeExtract 61_80 1
+          264_19:21_5(int16_t) GroupIAdd uint(3) InclusiveScan 81_160
+          81_161:21_5(int16_t) CompositeExtract 61_80 2
+          264_20:21_5(int16_t) GroupIAdd uint(3) InclusiveScan 81_161
+          81_162:21_5(int16_t) CompositeExtract 61_80 3
+          264_21:21_5(int16_t) GroupIAdd uint(3) InclusiveScan 81_162
+           80_54:23_6(i16vec4) CompositeConstruct 264_18 264_19 264_20 264_21
+          65_160:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_160 80_54
+          65_161:  32_10(ptr) AccessChain 59_1 43_9
+           61_81:21_6(int16_t) Load 65_161
+          264_22:21_6(int16_t) GroupIAdd uint(3) InclusiveScan 61_81
+          65_162:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_162 264_22
+          65_163:   32_2(ptr) AccessChain 59_1 43_1
+           61_82:   21_1(int) Load 65_163
+          268_13:   21_1(int) GroupSMin uint(3) ExclusiveScan 61_82
+          65_164:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_164 268_13
+          65_165:   32_3(ptr) AccessChain 59_1 43_2
+           61_83: 23_1(ivec2) Load 65_165
+          81_163:   21_2(int) CompositeExtract 61_83 0
+          267_11:   21_2(int) GroupUMin uint(3) ExclusiveScan 81_163
+          81_164:   21_2(int) CompositeExtract 61_83 1
+          267_12:   21_2(int) GroupUMin uint(3) ExclusiveScan 81_164
+           80_55: 23_1(ivec2) CompositeConstruct 267_11 267_12
+          65_166:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_166 80_55
+          65_167:   32_4(ptr) AccessChain 59_1 43_3
+           61_84: 23_2(fvec3) Load 65_167
+          81_165: 22_1(float) CompositeExtract 61_84 0
+          266_21: 22_1(float) GroupFMin uint(3) ExclusiveScan 81_165
+          81_166: 22_1(float) CompositeExtract 61_84 1
+          266_22: 22_1(float) GroupFMin uint(3) ExclusiveScan 81_166
+          81_167: 22_1(float) CompositeExtract 61_84 2
+          266_23: 22_1(float) GroupFMin uint(3) ExclusiveScan 81_167
+           80_56: 23_2(fvec3) CompositeConstruct 266_21 266_22 266_23
+          65_168:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_168 80_56
+          65_169:   32_5(ptr) AccessChain 59_1 43_4
+           61_85:23_3(f64vec4) Load 65_169
+          81_168:22_2(float64_t) CompositeExtract 61_85 0
+          266_24:22_2(float64_t) GroupFMin uint(3) ExclusiveScan 81_168
+          81_169:22_2(float64_t) CompositeExtract 61_85 1
+          266_25:22_2(float64_t) GroupFMin uint(3) ExclusiveScan 81_169
+          81_170:22_2(float64_t) CompositeExtract 61_85 2
+          266_26:22_2(float64_t) GroupFMin uint(3) ExclusiveScan 81_170
+          81_171:22_2(float64_t) CompositeExtract 61_85 3
+          266_27:22_2(float64_t) GroupFMin uint(3) ExclusiveScan 81_171
+           80_57:23_3(f64vec4) CompositeConstruct 266_24 266_25 266_26 266_27
+          65_170:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_170 80_57
+          65_171:   32_6(ptr) AccessChain 59_1 43_5
+           61_86:21_3(int64_t) Load 65_171
+          268_14:21_3(int64_t) GroupSMin uint(3) ExclusiveScan 61_86
+          65_172:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_172 268_14
+          65_173:   32_7(ptr) AccessChain 59_1 43_6
+           61_87:23_4(i64vec2) Load 65_173
+          81_172:21_4(int64_t) CompositeExtract 61_87 0
+          267_13:21_4(int64_t) GroupUMin uint(3) ExclusiveScan 81_172
+          81_173:21_4(int64_t) CompositeExtract 61_87 1
+          267_14:21_4(int64_t) GroupUMin uint(3) ExclusiveScan 81_173
+           80_58:23_4(i64vec2) CompositeConstruct 267_13 267_14
+          65_174:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_174 80_58
+          65_175:   32_8(ptr) AccessChain 59_1 43_7
+           61_88:23_5(f16vec3) Load 65_175
+          81_174:22_3(float16_t) CompositeExtract 61_88 0
+          266_28:22_3(float16_t) GroupFMin uint(3) ExclusiveScan 81_174
+          81_175:22_3(float16_t) CompositeExtract 61_88 1
+          266_29:22_3(float16_t) GroupFMin uint(3) ExclusiveScan 81_175
+          81_176:22_3(float16_t) CompositeExtract 61_88 2
+          266_30:22_3(float16_t) GroupFMin uint(3) ExclusiveScan 81_176
+           80_59:23_5(f16vec3) CompositeConstruct 266_28 266_29 266_30
+          65_176:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_176 80_59
+          65_177:   32_9(ptr) AccessChain 59_1 43_8
+           61_89:23_6(i16vec4) Load 65_177
+          81_177:21_5(int16_t) CompositeExtract 61_89 0
+          268_15:21_5(int16_t) GroupSMin uint(3) ExclusiveScan 81_177
+          81_178:21_5(int16_t) CompositeExtract 61_89 1
+          268_16:21_5(int16_t) GroupSMin uint(3) ExclusiveScan 81_178
+          81_179:21_5(int16_t) CompositeExtract 61_89 2
+          268_17:21_5(int16_t) GroupSMin uint(3) ExclusiveScan 81_179
+          81_180:21_5(int16_t) CompositeExtract 61_89 3
+          268_18:21_5(int16_t) GroupSMin uint(3) ExclusiveScan 81_180
+           80_60:23_6(i16vec4) CompositeConstruct 268_15 268_16 268_17 268_18
+          65_178:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_178 80_60
+          65_179:  32_10(ptr) AccessChain 59_1 43_9
+           61_90:21_6(int16_t) Load 65_179
+          267_15:21_6(int16_t) GroupUMin uint(3) ExclusiveScan 61_90
+          65_180:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_180 267_15
+          65_181:   32_2(ptr) AccessChain 59_1 43_1
+           61_91:   21_1(int) Load 65_181
+          271_13:   21_1(int) GroupSMax uint(3) ExclusiveScan 61_91
+          65_182:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_182 271_13
+          65_183:   32_3(ptr) AccessChain 59_1 43_2
+           61_92: 23_1(ivec2) Load 65_183
+          81_181:   21_2(int) CompositeExtract 61_92 0
+          270_11:   21_2(int) GroupUMax uint(3) ExclusiveScan 81_181
+          81_182:   21_2(int) CompositeExtract 61_92 1
+          270_12:   21_2(int) GroupUMax uint(3) ExclusiveScan 81_182
+           80_61: 23_1(ivec2) CompositeConstruct 270_11 270_12
+          65_184:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_184 80_61
+          65_185:   32_4(ptr) AccessChain 59_1 43_3
+           61_93: 23_2(fvec3) Load 65_185
+          81_183: 22_1(float) CompositeExtract 61_93 0
+          269_21: 22_1(float) GroupFMax uint(3) ExclusiveScan 81_183
+          81_184: 22_1(float) CompositeExtract 61_93 1
+          269_22: 22_1(float) GroupFMax uint(3) ExclusiveScan 81_184
+          81_185: 22_1(float) CompositeExtract 61_93 2
+          269_23: 22_1(float) GroupFMax uint(3) ExclusiveScan 81_185
+           80_62: 23_2(fvec3) CompositeConstruct 269_21 269_22 269_23
+          65_186:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_186 80_62
+          65_187:   32_5(ptr) AccessChain 59_1 43_4
+           61_94:23_3(f64vec4) Load 65_187
+          81_186:22_2(float64_t) CompositeExtract 61_94 0
+          269_24:22_2(float64_t) GroupFMax uint(3) ExclusiveScan 81_186
+          81_187:22_2(float64_t) CompositeExtract 61_94 1
+          269_25:22_2(float64_t) GroupFMax uint(3) ExclusiveScan 81_187
+          81_188:22_2(float64_t) CompositeExtract 61_94 2
+          269_26:22_2(float64_t) GroupFMax uint(3) ExclusiveScan 81_188
+          81_189:22_2(float64_t) CompositeExtract 61_94 3
+          269_27:22_2(float64_t) GroupFMax uint(3) ExclusiveScan 81_189
+           80_63:23_3(f64vec4) CompositeConstruct 269_24 269_25 269_26 269_27
+          65_188:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_188 80_63
+          65_189:   32_6(ptr) AccessChain 59_1 43_5
+           61_95:21_3(int64_t) Load 65_189
+          271_14:21_3(int64_t) GroupSMax uint(3) ExclusiveScan 61_95
+          65_190:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_190 271_14
+          65_191:   32_7(ptr) AccessChain 59_1 43_6
+           61_96:23_4(i64vec2) Load 65_191
+          81_190:21_4(int64_t) CompositeExtract 61_96 0
+          270_13:21_4(int64_t) GroupUMax uint(3) ExclusiveScan 81_190
+          81_191:21_4(int64_t) CompositeExtract 61_96 1
+          270_14:21_4(int64_t) GroupUMax uint(3) ExclusiveScan 81_191
+           80_64:23_4(i64vec2) CompositeConstruct 270_13 270_14
+          65_192:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_192 80_64
+          65_193:   32_8(ptr) AccessChain 59_1 43_7
+           61_97:23_5(f16vec3) Load 65_193
+          81_192:22_3(float16_t) CompositeExtract 61_97 0
+          269_28:22_3(float16_t) GroupFMax uint(3) ExclusiveScan 81_192
+          81_193:22_3(float16_t) CompositeExtract 61_97 1
+          269_29:22_3(float16_t) GroupFMax uint(3) ExclusiveScan 81_193
+          81_194:22_3(float16_t) CompositeExtract 61_97 2
+          269_30:22_3(float16_t) GroupFMax uint(3) ExclusiveScan 81_194
+           80_65:23_5(f16vec3) CompositeConstruct 269_28 269_29 269_30
+          65_194:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_194 80_65
+          65_195:   32_9(ptr) AccessChain 59_1 43_8
+           61_98:23_6(i16vec4) Load 65_195
+          81_195:21_5(int16_t) CompositeExtract 61_98 0
+          271_15:21_5(int16_t) GroupSMax uint(3) ExclusiveScan 81_195
+          81_196:21_5(int16_t) CompositeExtract 61_98 1
+          271_16:21_5(int16_t) GroupSMax uint(3) ExclusiveScan 81_196
+          81_197:21_5(int16_t) CompositeExtract 61_98 2
+          271_17:21_5(int16_t) GroupSMax uint(3) ExclusiveScan 81_197
+          81_198:21_5(int16_t) CompositeExtract 61_98 3
+          271_18:21_5(int16_t) GroupSMax uint(3) ExclusiveScan 81_198
+           80_66:23_6(i16vec4) CompositeConstruct 271_15 271_16 271_17 271_18
+          65_196:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_196 80_66
+          65_197:  32_10(ptr) AccessChain 59_1 43_9
+           61_99:21_6(int16_t) Load 65_197
+          270_15:21_6(int16_t) GroupUMax uint(3) ExclusiveScan 61_99
+          65_198:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_198 270_15
+          65_199:   32_2(ptr) AccessChain 59_1 43_1
+          61_100:   21_1(int) Load 65_199
+          264_23:   21_1(int) GroupIAdd uint(3) ExclusiveScan 61_100
+          65_200:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_200 264_23
+          65_201:   32_3(ptr) AccessChain 59_1 43_2
+          61_101: 23_1(ivec2) Load 65_201
+          81_199:   21_2(int) CompositeExtract 61_101 0
+          264_24:   21_2(int) GroupIAdd uint(3) ExclusiveScan 81_199
+          81_200:   21_2(int) CompositeExtract 61_101 1
+          264_25:   21_2(int) GroupIAdd uint(3) ExclusiveScan 81_200
+           80_67: 23_1(ivec2) CompositeConstruct 264_24 264_25
+          65_202:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_202 80_67
+          65_203:   32_4(ptr) AccessChain 59_1 43_3
+          61_102: 23_2(fvec3) Load 65_203
+          81_201: 22_1(float) CompositeExtract 61_102 0
+          265_21: 22_1(float) GroupFAdd uint(3) ExclusiveScan 81_201
+          81_202: 22_1(float) CompositeExtract 61_102 1
+          265_22: 22_1(float) GroupFAdd uint(3) ExclusiveScan 81_202
+          81_203: 22_1(float) CompositeExtract 61_102 2
+          265_23: 22_1(float) GroupFAdd uint(3) ExclusiveScan 81_203
+           80_68: 23_2(fvec3) CompositeConstruct 265_21 265_22 265_23
+          65_204:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_204 80_68
+          65_205:   32_5(ptr) AccessChain 59_1 43_4
+          61_103:23_3(f64vec4) Load 65_205
+          81_204:22_2(float64_t) CompositeExtract 61_103 0
+          265_24:22_2(float64_t) GroupFAdd uint(3) ExclusiveScan 81_204
+          81_205:22_2(float64_t) CompositeExtract 61_103 1
+          265_25:22_2(float64_t) GroupFAdd uint(3) ExclusiveScan 81_205
+          81_206:22_2(float64_t) CompositeExtract 61_103 2
+          265_26:22_2(float64_t) GroupFAdd uint(3) ExclusiveScan 81_206
+          81_207:22_2(float64_t) CompositeExtract 61_103 3
+          265_27:22_2(float64_t) GroupFAdd uint(3) ExclusiveScan 81_207
+           80_69:23_3(f64vec4) CompositeConstruct 265_24 265_25 265_26 265_27
+          65_206:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_206 80_69
+          65_207:   32_6(ptr) AccessChain 59_1 43_5
+          61_104:21_3(int64_t) Load 65_207
+          264_26:21_3(int64_t) GroupIAdd uint(3) ExclusiveScan 61_104
+          65_208:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_208 264_26
+          65_209:   32_7(ptr) AccessChain 59_1 43_6
+          61_105:23_4(i64vec2) Load 65_209
+          81_208:21_4(int64_t) CompositeExtract 61_105 0
+          264_27:21_4(int64_t) GroupIAdd uint(3) ExclusiveScan 81_208
+          81_209:21_4(int64_t) CompositeExtract 61_105 1
+          264_28:21_4(int64_t) GroupIAdd uint(3) ExclusiveScan 81_209
+           80_70:23_4(i64vec2) CompositeConstruct 264_27 264_28
+          65_210:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_210 80_70
+          65_211:   32_8(ptr) AccessChain 59_1 43_7
+          61_106:23_5(f16vec3) Load 65_211
+          81_210:22_3(float16_t) CompositeExtract 61_106 0
+          265_28:22_3(float16_t) GroupFAdd uint(3) ExclusiveScan 81_210
+          81_211:22_3(float16_t) CompositeExtract 61_106 1
+          265_29:22_3(float16_t) GroupFAdd uint(3) ExclusiveScan 81_211
+          81_212:22_3(float16_t) CompositeExtract 61_106 2
+          265_30:22_3(float16_t) GroupFAdd uint(3) ExclusiveScan 81_212
+           80_71:23_5(f16vec3) CompositeConstruct 265_28 265_29 265_30
+          65_212:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_212 80_71
+          65_213:   32_9(ptr) AccessChain 59_1 43_8
+          61_107:23_6(i16vec4) Load 65_213
+          81_213:21_5(int16_t) CompositeExtract 61_107 0
+          264_29:21_5(int16_t) GroupIAdd uint(3) ExclusiveScan 81_213
+          81_214:21_5(int16_t) CompositeExtract 61_107 1
+          264_30:21_5(int16_t) GroupIAdd uint(3) ExclusiveScan 81_214
+          81_215:21_5(int16_t) CompositeExtract 61_107 2
+          264_31:21_5(int16_t) GroupIAdd uint(3) ExclusiveScan 81_215
+          81_216:21_5(int16_t) CompositeExtract 61_107 3
+          264_32:21_5(int16_t) GroupIAdd uint(3) ExclusiveScan 81_216
+           80_72:23_6(i16vec4) CompositeConstruct 264_29 264_30 264_31 264_32
+          65_214:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_214 80_72
+          65_215:  32_10(ptr) AccessChain 59_1 43_9
+          61_108:21_6(int16_t) Load 65_215
+          264_33:21_6(int16_t) GroupIAdd uint(3) ExclusiveScan 61_108
+          65_216:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_216 264_33
+          65_217:   32_2(ptr) AccessChain 59_1 43_1
+          61_109:   21_1(int) Load 65_217
+          5004_7:   21_1(int) GroupSMinNonUniformAMD uint(3) InclusiveScan 61_109
+          65_218:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_218 5004_7
+          65_219:   32_3(ptr) AccessChain 59_1 43_2
+          61_110: 23_1(ivec2) Load 65_219
+          81_217:   21_2(int) CompositeExtract 61_110 0
+          5003_6:   21_2(int) GroupUMinNonUniformAMD uint(3) InclusiveScan 81_217
+          81_218:   21_2(int) CompositeExtract 61_110 1
+          5003_7:   21_2(int) GroupUMinNonUniformAMD uint(3) InclusiveScan 81_218
+           80_73: 23_1(ivec2) CompositeConstruct 5003_6 5003_7
+          65_220:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_220 80_73
+          65_221:   32_4(ptr) AccessChain 59_1 43_3
+          61_111: 23_2(fvec3) Load 65_221
+          81_219: 22_1(float) CompositeExtract 61_111 0
+         5002_11: 22_1(float) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_219
+          81_220: 22_1(float) CompositeExtract 61_111 1
+         5002_12: 22_1(float) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_220
+          81_221: 22_1(float) CompositeExtract 61_111 2
+         5002_13: 22_1(float) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_221
+           80_74: 23_2(fvec3) CompositeConstruct 5002_11 5002_12 5002_13
+          65_222:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_222 80_74
+          65_223:   32_5(ptr) AccessChain 59_1 43_4
+          61_112:23_3(f64vec4) Load 65_223
+          81_222:22_2(float64_t) CompositeExtract 61_112 0
+         5002_14:22_2(float64_t) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_222
+          81_223:22_2(float64_t) CompositeExtract 61_112 1
+         5002_15:22_2(float64_t) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_223
+          81_224:22_2(float64_t) CompositeExtract 61_112 2
+         5002_16:22_2(float64_t) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_224
+          81_225:22_2(float64_t) CompositeExtract 61_112 3
+         5002_17:22_2(float64_t) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_225
+           80_75:23_3(f64vec4) CompositeConstruct 5002_14 5002_15 5002_16 5002_17
+          65_224:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_224 80_75
+          65_225:   32_6(ptr) AccessChain 59_1 43_5
+          61_113:21_3(int64_t) Load 65_225
+          5004_8:21_3(int64_t) GroupSMinNonUniformAMD uint(3) InclusiveScan 61_113
+          65_226:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_226 5004_8
+          65_227:   32_7(ptr) AccessChain 59_1 43_6
+          61_114:23_4(i64vec2) Load 65_227
+          81_226:21_4(int64_t) CompositeExtract 61_114 0
+          5003_8:21_4(int64_t) GroupUMinNonUniformAMD uint(3) InclusiveScan 81_226
+          81_227:21_4(int64_t) CompositeExtract 61_114 1
+          5003_9:21_4(int64_t) GroupUMinNonUniformAMD uint(3) InclusiveScan 81_227
+           80_76:23_4(i64vec2) CompositeConstruct 5003_8 5003_9
+          65_228:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_228 80_76
+          65_229:   32_8(ptr) AccessChain 59_1 43_7
+          61_115:23_5(f16vec3) Load 65_229
+          81_228:22_3(float16_t) CompositeExtract 61_115 0
+         5002_18:22_3(float16_t) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_228
+          81_229:22_3(float16_t) CompositeExtract 61_115 1
+         5002_19:22_3(float16_t) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_229
+          81_230:22_3(float16_t) CompositeExtract 61_115 2
+         5002_20:22_3(float16_t) GroupFMinNonUniformAMD uint(3) InclusiveScan 81_230
+           80_77:23_5(f16vec3) CompositeConstruct 5002_18 5002_19 5002_20
+          65_230:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_230 80_77
+          65_231:   32_9(ptr) AccessChain 59_1 43_8
+          61_116:23_6(i16vec4) Load 65_231
+          81_231:21_5(int16_t) CompositeExtract 61_116 0
+          5004_9:21_5(int16_t) GroupSMinNonUniformAMD uint(3) InclusiveScan 81_231
+          81_232:21_5(int16_t) CompositeExtract 61_116 1
+         5004_10:21_5(int16_t) GroupSMinNonUniformAMD uint(3) InclusiveScan 81_232
+          81_233:21_5(int16_t) CompositeExtract 61_116 2
+         5004_11:21_5(int16_t) GroupSMinNonUniformAMD uint(3) InclusiveScan 81_233
+          81_234:21_5(int16_t) CompositeExtract 61_116 3
+         5004_12:21_5(int16_t) GroupSMinNonUniformAMD uint(3) InclusiveScan 81_234
+           80_78:23_6(i16vec4) CompositeConstruct 5004_9 5004_10 5004_11 5004_12
+          65_232:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_232 80_78
+          65_233:  32_10(ptr) AccessChain 59_1 43_9
+          61_117:21_6(int16_t) Load 65_233
+         5003_10:21_6(int16_t) GroupUMinNonUniformAMD uint(3) InclusiveScan 61_117
+          65_234:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_234 5003_10
+          65_235:   32_2(ptr) AccessChain 59_1 43_1
+          61_118:   21_1(int) Load 65_235
+          5007_7:   21_1(int) GroupSMaxNonUniformAMD uint(3) InclusiveScan 61_118
+          65_236:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_236 5007_7
+          65_237:   32_3(ptr) AccessChain 59_1 43_2
+          61_119: 23_1(ivec2) Load 65_237
+          81_235:   21_2(int) CompositeExtract 61_119 0
+          5006_6:   21_2(int) GroupUMaxNonUniformAMD uint(3) InclusiveScan 81_235
+          81_236:   21_2(int) CompositeExtract 61_119 1
+          5006_7:   21_2(int) GroupUMaxNonUniformAMD uint(3) InclusiveScan 81_236
+           80_79: 23_1(ivec2) CompositeConstruct 5006_6 5006_7
+          65_238:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_238 80_79
+          65_239:   32_4(ptr) AccessChain 59_1 43_3
+          61_120: 23_2(fvec3) Load 65_239
+          81_237: 22_1(float) CompositeExtract 61_120 0
+         5005_11: 22_1(float) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_237
+          81_238: 22_1(float) CompositeExtract 61_120 1
+         5005_12: 22_1(float) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_238
+          81_239: 22_1(float) CompositeExtract 61_120 2
+         5005_13: 22_1(float) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_239
+           80_80: 23_2(fvec3) CompositeConstruct 5005_11 5005_12 5005_13
+          65_240:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_240 80_80
+          65_241:   32_5(ptr) AccessChain 59_1 43_4
+          61_121:23_3(f64vec4) Load 65_241
+          81_240:22_2(float64_t) CompositeExtract 61_121 0
+         5005_14:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_240
+          81_241:22_2(float64_t) CompositeExtract 61_121 1
+         5005_15:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_241
+          81_242:22_2(float64_t) CompositeExtract 61_121 2
+         5005_16:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_242
+          81_243:22_2(float64_t) CompositeExtract 61_121 3
+         5005_17:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_243
+           80_81:23_3(f64vec4) CompositeConstruct 5005_14 5005_15 5005_16 5005_17
+          65_242:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_242 80_81
+          65_243:   32_6(ptr) AccessChain 59_1 43_5
+          61_122:21_3(int64_t) Load 65_243
+          5007_8:21_3(int64_t) GroupSMaxNonUniformAMD uint(3) InclusiveScan 61_122
+          65_244:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_244 5007_8
+          65_245:   32_7(ptr) AccessChain 59_1 43_6
+          61_123:23_4(i64vec2) Load 65_245
+          81_244:21_4(int64_t) CompositeExtract 61_123 0
+          5006_8:21_4(int64_t) GroupUMaxNonUniformAMD uint(3) InclusiveScan 81_244
+          81_245:21_4(int64_t) CompositeExtract 61_123 1
+          5006_9:21_4(int64_t) GroupUMaxNonUniformAMD uint(3) InclusiveScan 81_245
+           80_82:23_4(i64vec2) CompositeConstruct 5006_8 5006_9
+          65_246:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_246 80_82
+          65_247:   32_8(ptr) AccessChain 59_1 43_7
+          61_124:23_5(f16vec3) Load 65_247
+          81_246:22_3(float16_t) CompositeExtract 61_124 0
+         5005_18:22_3(float16_t) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_246
+          81_247:22_3(float16_t) CompositeExtract 61_124 1
+         5005_19:22_3(float16_t) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_247
+          81_248:22_3(float16_t) CompositeExtract 61_124 2
+         5005_20:22_3(float16_t) GroupFMaxNonUniformAMD uint(3) InclusiveScan 81_248
+           80_83:23_5(f16vec3) CompositeConstruct 5005_18 5005_19 5005_20
+          65_248:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_248 80_83
+          65_249:   32_9(ptr) AccessChain 59_1 43_8
+          61_125:23_6(i16vec4) Load 65_249
+          81_249:21_5(int16_t) CompositeExtract 61_125 0
+          5007_9:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) InclusiveScan 81_249
+          81_250:21_5(int16_t) CompositeExtract 61_125 1
+         5007_10:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) InclusiveScan 81_250
+          81_251:21_5(int16_t) CompositeExtract 61_125 2
+         5007_11:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) InclusiveScan 81_251
+          81_252:21_5(int16_t) CompositeExtract 61_125 3
+         5007_12:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) InclusiveScan 81_252
+           80_84:23_6(i16vec4) CompositeConstruct 5007_9 5007_10 5007_11 5007_12
+          65_250:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_250 80_84
+          65_251:  32_10(ptr) AccessChain 59_1 43_9
+          61_126:21_6(int16_t) Load 65_251
+         5006_10:21_6(int16_t) GroupUMaxNonUniformAMD uint(3) InclusiveScan 61_126
+          65_252:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_252 5006_10
+          65_253:   32_2(ptr) AccessChain 59_1 43_1
+          61_127:   21_1(int) Load 65_253
+         5000_12:   21_1(int) GroupIAddNonUniformAMD uint(3) InclusiveScan 61_127
+          65_254:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_254 5000_12
+          65_255:   32_3(ptr) AccessChain 59_1 43_2
+          61_128: 23_1(ivec2) Load 65_255
+          81_253:   21_2(int) CompositeExtract 61_128 0
+         5000_13:   21_2(int) GroupIAddNonUniformAMD uint(3) InclusiveScan 81_253
+          81_254:   21_2(int) CompositeExtract 61_128 1
+         5000_14:   21_2(int) GroupIAddNonUniformAMD uint(3) InclusiveScan 81_254
+           80_85: 23_1(ivec2) CompositeConstruct 5000_13 5000_14
+          65_256:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_256 80_85
+          65_257:   32_4(ptr) AccessChain 59_1 43_3
+          61_129: 23_2(fvec3) Load 65_257
+          81_255: 22_1(float) CompositeExtract 61_129 0
+         5001_11: 22_1(float) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_255
+          81_256: 22_1(float) CompositeExtract 61_129 1
+         5001_12: 22_1(float) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_256
+          81_257: 22_1(float) CompositeExtract 61_129 2
+         5001_13: 22_1(float) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_257
+           80_86: 23_2(fvec3) CompositeConstruct 5001_11 5001_12 5001_13
+          65_258:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_258 80_86
+          65_259:   32_5(ptr) AccessChain 59_1 43_4
+          61_130:23_3(f64vec4) Load 65_259
+          81_258:22_2(float64_t) CompositeExtract 61_130 0
+         5001_14:22_2(float64_t) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_258
+          81_259:22_2(float64_t) CompositeExtract 61_130 1
+         5001_15:22_2(float64_t) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_259
+          81_260:22_2(float64_t) CompositeExtract 61_130 2
+         5001_16:22_2(float64_t) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_260
+          81_261:22_2(float64_t) CompositeExtract 61_130 3
+         5001_17:22_2(float64_t) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_261
+           80_87:23_3(f64vec4) CompositeConstruct 5001_14 5001_15 5001_16 5001_17
+          65_260:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_260 80_87
+          65_261:   32_6(ptr) AccessChain 59_1 43_5
+          61_131:21_3(int64_t) Load 65_261
+         5000_15:21_3(int64_t) GroupIAddNonUniformAMD uint(3) InclusiveScan 61_131
+          65_262:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_262 5000_15
+          65_263:   32_7(ptr) AccessChain 59_1 43_6
+          61_132:23_4(i64vec2) Load 65_263
+          81_262:21_4(int64_t) CompositeExtract 61_132 0
+         5000_16:21_4(int64_t) GroupIAddNonUniformAMD uint(3) InclusiveScan 81_262
+          81_263:21_4(int64_t) CompositeExtract 61_132 1
+         5000_17:21_4(int64_t) GroupIAddNonUniformAMD uint(3) InclusiveScan 81_263
+           80_88:23_4(i64vec2) CompositeConstruct 5000_16 5000_17
+          65_264:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_264 80_88
+          65_265:   32_8(ptr) AccessChain 59_1 43_7
+          61_133:23_5(f16vec3) Load 65_265
+          81_264:22_3(float16_t) CompositeExtract 61_133 0
+         5001_18:22_3(float16_t) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_264
+          81_265:22_3(float16_t) CompositeExtract 61_133 1
+         5001_19:22_3(float16_t) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_265
+          81_266:22_3(float16_t) CompositeExtract 61_133 2
+         5001_20:22_3(float16_t) GroupFAddNonUniformAMD uint(3) InclusiveScan 81_266
+           80_89:23_5(f16vec3) CompositeConstruct 5001_18 5001_19 5001_20
+          65_266:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_266 80_89
+          65_267:   32_9(ptr) AccessChain 59_1 43_8
+          61_134:23_6(i16vec4) Load 65_267
+          81_267:21_5(int16_t) CompositeExtract 61_134 0
+         5000_18:21_5(int16_t) GroupIAddNonUniformAMD uint(3) InclusiveScan 81_267
+          81_268:21_5(int16_t) CompositeExtract 61_134 1
+         5000_19:21_5(int16_t) GroupIAddNonUniformAMD uint(3) InclusiveScan 81_268
+          81_269:21_5(int16_t) CompositeExtract 61_134 2
+         5000_20:21_5(int16_t) GroupIAddNonUniformAMD uint(3) InclusiveScan 81_269
+          81_270:21_5(int16_t) CompositeExtract 61_134 3
+         5000_21:21_5(int16_t) GroupIAddNonUniformAMD uint(3) InclusiveScan 81_270
+           80_90:23_6(i16vec4) CompositeConstruct 5000_18 5000_19 5000_20 5000_21
+          65_268:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_268 80_90
+          65_269:  32_10(ptr) AccessChain 59_1 43_9
+          61_135:21_6(int16_t) Load 65_269
+         5000_22:21_6(int16_t) GroupIAddNonUniformAMD uint(3) InclusiveScan 61_135
+          65_270:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_270 5000_22
+          65_271:   32_2(ptr) AccessChain 59_1 43_1
+          61_136:   21_1(int) Load 65_271
+         5004_13:   21_1(int) GroupSMinNonUniformAMD uint(3) ExclusiveScan 61_136
+          65_272:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_272 5004_13
+          65_273:   32_3(ptr) AccessChain 59_1 43_2
+          61_137: 23_1(ivec2) Load 65_273
+          81_271:   21_2(int) CompositeExtract 61_137 0
+         5003_11:   21_2(int) GroupUMinNonUniformAMD uint(3) ExclusiveScan 81_271
+          81_272:   21_2(int) CompositeExtract 61_137 1
+         5003_12:   21_2(int) GroupUMinNonUniformAMD uint(3) ExclusiveScan 81_272
+           80_91: 23_1(ivec2) CompositeConstruct 5003_11 5003_12
+          65_274:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_274 80_91
+          65_275:   32_4(ptr) AccessChain 59_1 43_3
+          61_138: 23_2(fvec3) Load 65_275
+          81_273: 22_1(float) CompositeExtract 61_138 0
+         5002_21: 22_1(float) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_273
+          81_274: 22_1(float) CompositeExtract 61_138 1
+         5002_22: 22_1(float) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_274
+          81_275: 22_1(float) CompositeExtract 61_138 2
+         5002_23: 22_1(float) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_275
+           80_92: 23_2(fvec3) CompositeConstruct 5002_21 5002_22 5002_23
+          65_276:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_276 80_92
+          65_277:   32_5(ptr) AccessChain 59_1 43_4
+          61_139:23_3(f64vec4) Load 65_277
+          81_276:22_2(float64_t) CompositeExtract 61_139 0
+         5002_24:22_2(float64_t) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_276
+          81_277:22_2(float64_t) CompositeExtract 61_139 1
+         5002_25:22_2(float64_t) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_277
+          81_278:22_2(float64_t) CompositeExtract 61_139 2
+         5002_26:22_2(float64_t) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_278
+          81_279:22_2(float64_t) CompositeExtract 61_139 3
+         5002_27:22_2(float64_t) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_279
+           80_93:23_3(f64vec4) CompositeConstruct 5002_24 5002_25 5002_26 5002_27
+          65_278:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_278 80_93
+          65_279:   32_6(ptr) AccessChain 59_1 43_5
+          61_140:21_3(int64_t) Load 65_279
+         5004_14:21_3(int64_t) GroupSMinNonUniformAMD uint(3) ExclusiveScan 61_140
+          65_280:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_280 5004_14
+          65_281:   32_7(ptr) AccessChain 59_1 43_6
+          61_141:23_4(i64vec2) Load 65_281
+          81_280:21_4(int64_t) CompositeExtract 61_141 0
+         5003_13:21_4(int64_t) GroupUMinNonUniformAMD uint(3) ExclusiveScan 81_280
+          81_281:21_4(int64_t) CompositeExtract 61_141 1
+         5003_14:21_4(int64_t) GroupUMinNonUniformAMD uint(3) ExclusiveScan 81_281
+           80_94:23_4(i64vec2) CompositeConstruct 5003_13 5003_14
+          65_282:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_282 80_94
+          65_283:   32_8(ptr) AccessChain 59_1 43_7
+          61_142:23_5(f16vec3) Load 65_283
+          81_282:22_3(float16_t) CompositeExtract 61_142 0
+         5002_28:22_3(float16_t) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_282
+          81_283:22_3(float16_t) CompositeExtract 61_142 1
+         5002_29:22_3(float16_t) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_283
+          81_284:22_3(float16_t) CompositeExtract 61_142 2
+         5002_30:22_3(float16_t) GroupFMinNonUniformAMD uint(3) ExclusiveScan 81_284
+           80_95:23_5(f16vec3) CompositeConstruct 5002_28 5002_29 5002_30
+          65_284:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_284 80_95
+          65_285:   32_9(ptr) AccessChain 59_1 43_8
+          61_143:23_6(i16vec4) Load 65_285
+          81_285:21_5(int16_t) CompositeExtract 61_143 0
+         5004_15:21_5(int16_t) GroupSMinNonUniformAMD uint(3) ExclusiveScan 81_285
+          81_286:21_5(int16_t) CompositeExtract 61_143 1
+         5004_16:21_5(int16_t) GroupSMinNonUniformAMD uint(3) ExclusiveScan 81_286
+          81_287:21_5(int16_t) CompositeExtract 61_143 2
+         5004_17:21_5(int16_t) GroupSMinNonUniformAMD uint(3) ExclusiveScan 81_287
+          81_288:21_5(int16_t) CompositeExtract 61_143 3
+         5004_18:21_5(int16_t) GroupSMinNonUniformAMD uint(3) ExclusiveScan 81_288
+           80_96:23_6(i16vec4) CompositeConstruct 5004_15 5004_16 5004_17 5004_18
+          65_286:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_286 80_96
+          65_287:  32_10(ptr) AccessChain 59_1 43_9
+          61_144:21_6(int16_t) Load 65_287
+         5003_15:21_6(int16_t) GroupUMinNonUniformAMD uint(3) ExclusiveScan 61_144
+          65_288:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_288 5003_15
+          65_289:   32_2(ptr) AccessChain 59_1 43_1
+          61_145:   21_1(int) Load 65_289
+         5007_13:   21_1(int) GroupSMaxNonUniformAMD uint(3) ExclusiveScan 61_145
+          65_290:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_290 5007_13
+          65_291:   32_3(ptr) AccessChain 59_1 43_2
+          61_146: 23_1(ivec2) Load 65_291
+          81_289:   21_2(int) CompositeExtract 61_146 0
+         5006_11:   21_2(int) GroupUMaxNonUniformAMD uint(3) ExclusiveScan 81_289
+          81_290:   21_2(int) CompositeExtract 61_146 1
+         5006_12:   21_2(int) GroupUMaxNonUniformAMD uint(3) ExclusiveScan 81_290
+           80_97: 23_1(ivec2) CompositeConstruct 5006_11 5006_12
+          65_292:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_292 80_97
+          65_293:   32_4(ptr) AccessChain 59_1 43_3
+          61_147: 23_2(fvec3) Load 65_293
+          81_291: 22_1(float) CompositeExtract 61_147 0
+         5005_21: 22_1(float) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_291
+          81_292: 22_1(float) CompositeExtract 61_147 1
+         5005_22: 22_1(float) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_292
+          81_293: 22_1(float) CompositeExtract 61_147 2
+         5005_23: 22_1(float) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_293
+           80_98: 23_2(fvec3) CompositeConstruct 5005_21 5005_22 5005_23
+          65_294:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_294 80_98
+          65_295:   32_5(ptr) AccessChain 59_1 43_4
+          61_148:23_3(f64vec4) Load 65_295
+          81_294:22_2(float64_t) CompositeExtract 61_148 0
+         5005_24:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_294
+          81_295:22_2(float64_t) CompositeExtract 61_148 1
+         5005_25:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_295
+          81_296:22_2(float64_t) CompositeExtract 61_148 2
+         5005_26:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_296
+          81_297:22_2(float64_t) CompositeExtract 61_148 3
+         5005_27:22_2(float64_t) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_297
+           80_99:23_3(f64vec4) CompositeConstruct 5005_24 5005_25 5005_26 5005_27
+          65_296:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_296 80_99
+          65_297:   32_6(ptr) AccessChain 59_1 43_5
+          61_149:21_3(int64_t) Load 65_297
+         5007_14:21_3(int64_t) GroupSMaxNonUniformAMD uint(3) ExclusiveScan 61_149
+          65_298:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_298 5007_14
+          65_299:   32_7(ptr) AccessChain 59_1 43_6
+          61_150:23_4(i64vec2) Load 65_299
+          81_298:21_4(int64_t) CompositeExtract 61_150 0
+         5006_13:21_4(int64_t) GroupUMaxNonUniformAMD uint(3) ExclusiveScan 81_298
+          81_299:21_4(int64_t) CompositeExtract 61_150 1
+         5006_14:21_4(int64_t) GroupUMaxNonUniformAMD uint(3) ExclusiveScan 81_299
+          80_100:23_4(i64vec2) CompositeConstruct 5006_13 5006_14
+          65_300:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_300 80_100
+          65_301:   32_8(ptr) AccessChain 59_1 43_7
+          61_151:23_5(f16vec3) Load 65_301
+          81_300:22_3(float16_t) CompositeExtract 61_151 0
+         5005_28:22_3(float16_t) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_300
+          81_301:22_3(float16_t) CompositeExtract 61_151 1
+         5005_29:22_3(float16_t) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_301
+          81_302:22_3(float16_t) CompositeExtract 61_151 2
+         5005_30:22_3(float16_t) GroupFMaxNonUniformAMD uint(3) ExclusiveScan 81_302
+          80_101:23_5(f16vec3) CompositeConstruct 5005_28 5005_29 5005_30
+          65_302:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_302 80_101
+          65_303:   32_9(ptr) AccessChain 59_1 43_8
+          61_152:23_6(i16vec4) Load 65_303
+          81_303:21_5(int16_t) CompositeExtract 61_152 0
+         5007_15:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) ExclusiveScan 81_303
+          81_304:21_5(int16_t) CompositeExtract 61_152 1
+         5007_16:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) ExclusiveScan 81_304
+          81_305:21_5(int16_t) CompositeExtract 61_152 2
+         5007_17:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) ExclusiveScan 81_305
+          81_306:21_5(int16_t) CompositeExtract 61_152 3
+         5007_18:21_5(int16_t) GroupSMaxNonUniformAMD uint(3) ExclusiveScan 81_306
+          80_102:23_6(i16vec4) CompositeConstruct 5007_15 5007_16 5007_17 5007_18
+          65_304:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_304 80_102
+          65_305:  32_10(ptr) AccessChain 59_1 43_9
+          61_153:21_6(int16_t) Load 65_305
+         5006_15:21_6(int16_t) GroupUMaxNonUniformAMD uint(3) ExclusiveScan 61_153
+          65_306:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_306 5006_15
+          65_307:   32_2(ptr) AccessChain 59_1 43_1
+          61_154:   21_1(int) Load 65_307
+         5000_23:   21_1(int) GroupIAddNonUniformAMD uint(3) ExclusiveScan 61_154
+          65_308:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_308 5000_23
+          65_309:   32_3(ptr) AccessChain 59_1 43_2
+          61_155: 23_1(ivec2) Load 65_309
+          81_307:   21_2(int) CompositeExtract 61_155 0
+         5000_24:   21_2(int) GroupIAddNonUniformAMD uint(3) ExclusiveScan 81_307
+          81_308:   21_2(int) CompositeExtract 61_155 1
+         5000_25:   21_2(int) GroupIAddNonUniformAMD uint(3) ExclusiveScan 81_308
+          80_103: 23_1(ivec2) CompositeConstruct 5000_24 5000_25
+          65_310:   32_3(ptr) AccessChain 59_1 43_2
+                              Store 65_310 80_103
+          65_311:   32_4(ptr) AccessChain 59_1 43_3
+          61_156: 23_2(fvec3) Load 65_311
+          81_309: 22_1(float) CompositeExtract 61_156 0
+         5001_21: 22_1(float) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_309
+          81_310: 22_1(float) CompositeExtract 61_156 1
+         5001_22: 22_1(float) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_310
+          81_311: 22_1(float) CompositeExtract 61_156 2
+         5001_23: 22_1(float) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_311
+          80_104: 23_2(fvec3) CompositeConstruct 5001_21 5001_22 5001_23
+          65_312:   32_4(ptr) AccessChain 59_1 43_3
+                              Store 65_312 80_104
+          65_313:   32_5(ptr) AccessChain 59_1 43_4
+          61_157:23_3(f64vec4) Load 65_313
+          81_312:22_2(float64_t) CompositeExtract 61_157 0
+         5001_24:22_2(float64_t) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_312
+          81_313:22_2(float64_t) CompositeExtract 61_157 1
+         5001_25:22_2(float64_t) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_313
+          81_314:22_2(float64_t) CompositeExtract 61_157 2
+         5001_26:22_2(float64_t) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_314
+          81_315:22_2(float64_t) CompositeExtract 61_157 3
+         5001_27:22_2(float64_t) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_315
+          80_105:23_3(f64vec4) CompositeConstruct 5001_24 5001_25 5001_26 5001_27
+          65_314:   32_5(ptr) AccessChain 59_1 43_4
+                              Store 65_314 80_105
+          65_315:   32_6(ptr) AccessChain 59_1 43_5
+          61_158:21_3(int64_t) Load 65_315
+         5000_26:21_3(int64_t) GroupIAddNonUniformAMD uint(3) ExclusiveScan 61_158
+          65_316:   32_6(ptr) AccessChain 59_1 43_5
+                              Store 65_316 5000_26
+          65_317:   32_7(ptr) AccessChain 59_1 43_6
+          61_159:23_4(i64vec2) Load 65_317
+          81_316:21_4(int64_t) CompositeExtract 61_159 0
+         5000_27:21_4(int64_t) GroupIAddNonUniformAMD uint(3) ExclusiveScan 81_316
+          81_317:21_4(int64_t) CompositeExtract 61_159 1
+         5000_28:21_4(int64_t) GroupIAddNonUniformAMD uint(3) ExclusiveScan 81_317
+          80_106:23_4(i64vec2) CompositeConstruct 5000_27 5000_28
+          65_318:   32_7(ptr) AccessChain 59_1 43_6
+                              Store 65_318 80_106
+          65_319:   32_8(ptr) AccessChain 59_1 43_7
+          61_160:23_5(f16vec3) Load 65_319
+          81_318:22_3(float16_t) CompositeExtract 61_160 0
+         5001_28:22_3(float16_t) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_318
+          81_319:22_3(float16_t) CompositeExtract 61_160 1
+         5001_29:22_3(float16_t) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_319
+          81_320:22_3(float16_t) CompositeExtract 61_160 2
+         5001_30:22_3(float16_t) GroupFAddNonUniformAMD uint(3) ExclusiveScan 81_320
+          80_107:23_5(f16vec3) CompositeConstruct 5001_28 5001_29 5001_30
+          65_320:   32_8(ptr) AccessChain 59_1 43_7
+                              Store 65_320 80_107
+          65_321:   32_9(ptr) AccessChain 59_1 43_8
+          61_161:23_6(i16vec4) Load 65_321
+          81_321:21_5(int16_t) CompositeExtract 61_161 0
+         5000_29:21_5(int16_t) GroupIAddNonUniformAMD uint(3) ExclusiveScan 81_321
+          81_322:21_5(int16_t) CompositeExtract 61_161 1
+         5000_30:21_5(int16_t) GroupIAddNonUniformAMD uint(3) ExclusiveScan 81_322
+          81_323:21_5(int16_t) CompositeExtract 61_161 2
+         5000_31:21_5(int16_t) GroupIAddNonUniformAMD uint(3) ExclusiveScan 81_323
+          81_324:21_5(int16_t) CompositeExtract 61_161 3
+         5000_32:21_5(int16_t) GroupIAddNonUniformAMD uint(3) ExclusiveScan 81_324
+          80_108:23_6(i16vec4) CompositeConstruct 5000_29 5000_30 5000_31 5000_32
+          65_322:   32_9(ptr) AccessChain 59_1 43_8
+                              Store 65_322 80_108
+          65_323:  32_10(ptr) AccessChain 59_1 43_9
+          61_162:21_6(int16_t) Load 65_323
+         5000_33:21_6(int16_t) GroupIAddNonUniformAMD uint(3) ExclusiveScan 61_162
+          65_324:  32_10(ptr) AccessChain 59_1 43_9
+                              Store 65_324 5000_33
                               Return
                               FunctionEnd

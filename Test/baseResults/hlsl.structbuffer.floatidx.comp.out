@@ -184,147 +184,147 @@ local_size = (1, 1, 1)
 // Id's are bound by 85
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 80
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_5
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 11  "@main(vu3;"
-                              Name 10  "nThreadId"
-                              Name 16  "sb_t"
-                              MemberName 16(sb_t) 0  "color"
-                              MemberName 16(sb_t) 1  "threadId"
-                              Name 18  "data"
-                              Name 19  "sb_t"
-                              MemberName 19(sb_t) 0  "color"
-                              MemberName 19(sb_t) 1  "threadId"
-                              Name 21  "csb"
-                              MemberName 21(csb) 0  "@data"
-                              Name 23  "csb"
-                              Name 26  "csb@count"
-                              MemberName 26(csb@count) 0  "@count"
-                              Name 28  "csb@count"
-                              Name 49  "coord"
-                              Name 53  "storeTemp"
-                              Name 58  "outtx"
-                              Name 64  "rwsb"
-                              MemberName 64(rwsb) 0  "@data"
-                              Name 66  "rwsb"
-                              Name 78  "nThreadId"
-                              Name 80  "nThreadId"
-                              Name 82  "param"
-                              MemberDecorate 19(sb_t) 0 Offset 0
-                              MemberDecorate 19(sb_t) 1 Offset 16
-                              Decorate 20 ArrayStride 32
-                              Decorate 21(csb) BufferBlock
-                              MemberDecorate 21(csb) 0 Offset 0
-                              Decorate 23(csb) Binding 1
-                              Decorate 23(csb) DescriptorSet 0
-                              Decorate 26(csb@count) BufferBlock
-                              MemberDecorate 26(csb@count) 0 Offset 0
-                              Decorate 28(csb@count) Binding 2
-                              Decorate 28(csb@count) DescriptorSet 0
-                              Decorate 58(outtx) Binding 0
-                              Decorate 58(outtx) DescriptorSet 0
-                              Decorate 63 ArrayStride 16
-                              Decorate 64(rwsb) BufferBlock
-                              MemberDecorate 64(rwsb) 0 Offset 0
-                              Decorate 66(rwsb) Binding 3
-                              Decorate 66(rwsb) DescriptorSet 0
-                              Decorate 80(nThreadId) BuiltIn GlobalInvocationId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 3
-               8:             TypePointer Function 7(ivec3)
-               9:             TypeFunction 2 8(ptr)
-              13:             TypeFloat 32
-              14:             TypeVector 13(float) 4
-              15:             TypeVector 6(int) 2
-        16(sb_t):             TypeStruct 14(fvec4) 15(ivec2)
-              17:             TypePointer Function 16(sb_t)
-        19(sb_t):             TypeStruct 14(fvec4) 15(ivec2)
-              20:             TypeRuntimeArray 19(sb_t)
-         21(csb):             TypeStruct 20
-              22:             TypePointer Uniform 21(csb)
-         23(csb):     22(ptr) Variable Uniform
-              24:             TypeInt 32 1
-              25:     24(int) Constant 0
-   26(csb@count):             TypeStruct 6(int)
-              27:             TypePointer Uniform 26(csb@count)
-   28(csb@count):     27(ptr) Variable Uniform
-              29:             TypePointer Uniform 6(int)
-              31:      6(int) Constant 4294967295
-              32:      6(int) Constant 1
-              33:      6(int) Constant 0
-              35:     24(int) Constant 4294967295
-              37:             TypePointer Uniform 19(sb_t)
-              41:             TypePointer Function 14(fvec4)
-              44:     24(int) Constant 1
-              45:             TypePointer Function 15(ivec2)
-              47:             TypeVector 13(float) 2
-              48:             TypePointer Function 47(fvec2)
-              56:             TypeImage 13(float) 2D nonsampled format:Rgba32f
-              57:             TypePointer UniformConstant 56
-       58(outtx):     57(ptr) Variable UniformConstant
-              63:             TypeRuntimeArray 14(fvec4)
-        64(rwsb):             TypeStruct 63
-              65:             TypePointer Uniform 64(rwsb)
-        66(rwsb):     65(ptr) Variable Uniform
-              67:             TypePointer Function 13(float)
-              74:             TypePointer Uniform 14(fvec4)
-              79:             TypePointer Input 7(ivec3)
-   80(nThreadId):     79(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-   78(nThreadId):      8(ptr) Variable Function
-       82(param):      8(ptr) Variable Function
-              81:    7(ivec3) Load 80(nThreadId)
-                              Store 78(nThreadId) 81
-              83:    7(ivec3) Load 78(nThreadId)
-                              Store 82(param) 83
-              84:           2 FunctionCall 11(@main(vu3;) 82(param)
+                              Name 54_1  "main"
+                              Name 54_2  "@main(vu3;"
+                              Name 55_1  "nThreadId"
+                              Name 30_1  "sb_t"
+                              MemberName 30_1(sb_t) 0  "color"
+                              MemberName 30_1(sb_t) 1  "threadId"
+                              Name 59_8  "data"
+                              Name 30_2  "sb_t"
+                              MemberName 30_2(sb_t) 0  "color"
+                              MemberName 30_2(sb_t) 1  "threadId"
+                              Name 30_3  "csb"
+                              MemberName 30_3(csb) 0  "@data"
+                              Name 59_1  "csb"
+                              Name 30_4  "csb@count"
+                              MemberName 30_4(csb@count) 0  "@count"
+                              Name 59_2  "csb@count"
+                              Name 59_9  "coord"
+                              Name 59_10  "storeTemp"
+                              Name 59_3  "outtx"
+                              Name 30_5  "rwsb"
+                              MemberName 30_5(rwsb) 0  "@data"
+                              Name 59_4  "rwsb"
+                              Name 59_6  "nThreadId"
+                              Name 59_5  "nThreadId"
+                              Name 59_7  "param"
+                              MemberDecorate 30_2(sb_t) 0 Offset 0
+                              MemberDecorate 30_2(sb_t) 1 Offset 16
+                              Decorate 29_1 ArrayStride 32
+                              Decorate 30_3(csb) BufferBlock
+                              MemberDecorate 30_3(csb) 0 Offset 0
+                              Decorate 59_1(csb) Binding 1
+                              Decorate 59_1(csb) DescriptorSet 0
+                              Decorate 30_4(csb@count) BufferBlock
+                              MemberDecorate 30_4(csb@count) 0 Offset 0
+                              Decorate 59_2(csb@count) Binding 2
+                              Decorate 59_2(csb@count) DescriptorSet 0
+                              Decorate 59_3(outtx) Binding 0
+                              Decorate 59_3(outtx) DescriptorSet 0
+                              Decorate 29_2 ArrayStride 16
+                              Decorate 30_5(rwsb) BufferBlock
+                              MemberDecorate 30_5(rwsb) 0 Offset 0
+                              Decorate 59_4(rwsb) Binding 3
+                              Decorate 59_4(rwsb) DescriptorSet 0
+                              Decorate 59_5(nThreadId) BuiltIn GlobalInvocationId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 3
+            32_1:             TypePointer Function 23_1(ivec3)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 4
+            23_3:             TypeVector 21_1(int) 2
+      30_1(sb_t):             TypeStruct 23_2(fvec4) 23_3(ivec2)
+            32_2:             TypePointer Function 30_1(sb_t)
+      30_2(sb_t):             TypeStruct 23_2(fvec4) 23_3(ivec2)
+            29_1:             TypeRuntimeArray 30_2(sb_t)
+       30_3(csb):             TypeStruct 29_1
+            32_3:             TypePointer Uniform 30_3(csb)
+       59_1(csb):   32_3(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+ 30_4(csb@count):             TypeStruct 21_1(int)
+            32_4:             TypePointer Uniform 30_4(csb@count)
+ 59_2(csb@count):   32_4(ptr) Variable Uniform
+            32_5:             TypePointer Uniform 21_1(int)
+uint(4294967295):   21_1(int) Constant 4294967295
+         uint(1):   21_1(int) Constant 1
+         uint(0):   21_1(int) Constant 0
+            43_2:   21_2(int) Constant 4294967295
+            32_6:             TypePointer Uniform 30_2(sb_t)
+            32_7:             TypePointer Function 23_2(fvec4)
+            43_3:   21_2(int) Constant 1
+            32_8:             TypePointer Function 23_3(ivec2)
+            23_4:             TypeVector 22_1(float) 2
+            32_9:             TypePointer Function 23_4(fvec2)
+            25_1:             TypeImage 22_1(float) 2D nonsampled format:Rgba32f
+           32_10:             TypePointer UniformConstant 25_1
+     59_3(outtx):  32_10(ptr) Variable UniformConstant
+            29_2:             TypeRuntimeArray 23_2(fvec4)
+      30_5(rwsb):             TypeStruct 29_2
+           32_11:             TypePointer Uniform 30_5(rwsb)
+      59_4(rwsb):  32_11(ptr) Variable Uniform
+           32_12:             TypePointer Function 22_1(float)
+           32_13:             TypePointer Uniform 23_2(fvec4)
+           32_14:             TypePointer Input 23_1(ivec3)
+ 59_5(nThreadId):  32_14(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+ 59_6(nThreadId):   32_1(ptr) Variable Function
+     59_7(param):   32_1(ptr) Variable Function
+            61_1: 23_1(ivec3) Load 59_5(nThreadId)
+                              Store 59_6(nThreadId) 61_1
+            61_2: 23_1(ivec3) Load 59_6(nThreadId)
+                              Store 59_7(param) 61_2
+            57_1:        19_1 FunctionCall 54_2(@main(vu3;) 59_7(param)
                               Return
                               FunctionEnd
-  11(@main(vu3;):           2 Function None 9
-   10(nThreadId):      8(ptr) FunctionParameter
-              12:             Label
-        18(data):     17(ptr) Variable Function
-       49(coord):     48(ptr) Variable Function
-   53(storeTemp):     41(ptr) Variable Function
-              30:     29(ptr) AccessChain 28(csb@count) 25
-              34:      6(int) AtomicIAdd 30 32 33 31
-              36:      6(int) IAdd 34 35
-              38:     37(ptr) AccessChain 23(csb) 25 36
-              39:    19(sb_t) Load 38
-              40:   14(fvec4) CompositeExtract 39 0
-              42:     41(ptr) AccessChain 18(data) 25
-                              Store 42 40
-              43:   15(ivec2) CompositeExtract 39 1
-              46:     45(ptr) AccessChain 18(data) 44
-                              Store 46 43
-              50:     45(ptr) AccessChain 18(data) 44
-              51:   15(ivec2) Load 50
-              52:   47(fvec2) ConvertUToF 51
-                              Store 49(coord) 52
-              54:     41(ptr) AccessChain 18(data) 25
-              55:   14(fvec4) Load 54
-                              Store 53(storeTemp) 55
-              59:          56 Load 58(outtx)
-              60:   47(fvec2) Load 49(coord)
-              61:   15(ivec2) ConvertFToU 60
-              62:   14(fvec4) Load 53(storeTemp)
-                              ImageWrite 59 61 62
-              68:     67(ptr) AccessChain 49(coord) 33
-              69:   13(float) Load 68
-              70:      6(int) ConvertFToU 69
-              71:     67(ptr) AccessChain 49(coord) 32
-              72:   13(float) Load 71
-              73:      6(int) ConvertFToU 72
-              75:     74(ptr) AccessChain 66(rwsb) 25 73
-              76:   14(fvec4) Load 75
-              77:     74(ptr) AccessChain 66(rwsb) 25 70
-                              Store 77 76
+54_2(@main(vu3;):        19_1 Function None 33_2
+ 55_1(nThreadId):   32_1(ptr) FunctionParameter
+           248_2:             Label
+      59_8(data):   32_2(ptr) Variable Function
+     59_9(coord):   32_9(ptr) Variable Function
+59_10(storeTemp):   32_7(ptr) Variable Function
+            65_1:   32_5(ptr) AccessChain 59_2(csb@count) 43_1
+           234_1:   21_1(int) AtomicIAdd 65_1 uint(1) uint(0) uint(4294967295)
+           128_1:   21_1(int) IAdd 234_1 43_2
+            65_2:   32_6(ptr) AccessChain 59_1(csb) 43_1 128_1
+            61_3:  30_2(sb_t) Load 65_2
+            81_1: 23_2(fvec4) CompositeExtract 61_3 0
+            65_3:   32_7(ptr) AccessChain 59_8(data) 43_1
+                              Store 65_3 81_1
+            81_2: 23_3(ivec2) CompositeExtract 61_3 1
+            65_4:   32_8(ptr) AccessChain 59_8(data) 43_3
+                              Store 65_4 81_2
+            65_5:   32_8(ptr) AccessChain 59_8(data) 43_3
+            61_4: 23_3(ivec2) Load 65_5
+           112_1: 23_4(fvec2) ConvertUToF 61_4
+                              Store 59_9(coord) 112_1
+            65_6:   32_7(ptr) AccessChain 59_8(data) 43_1
+            61_5: 23_2(fvec4) Load 65_6
+                              Store 59_10(storeTemp) 61_5
+            61_6:        25_1 Load 59_3(outtx)
+            61_7: 23_4(fvec2) Load 59_9(coord)
+           109_1: 23_3(ivec2) ConvertFToU 61_7
+            61_8: 23_2(fvec4) Load 59_10(storeTemp)
+                              ImageWrite 61_6 109_1 61_8
+            65_7:  32_12(ptr) AccessChain 59_9(coord) uint(0)
+            61_9: 22_1(float) Load 65_7
+           109_2:   21_1(int) ConvertFToU 61_9
+            65_8:  32_12(ptr) AccessChain 59_9(coord) uint(1)
+           61_10: 22_1(float) Load 65_8
+           109_3:   21_1(int) ConvertFToU 61_10
+            65_9:  32_13(ptr) AccessChain 59_4(rwsb) 43_1 109_3
+           61_11: 23_2(fvec4) Load 65_9
+           65_10:  32_13(ptr) AccessChain 59_4(rwsb) 43_1 109_2
+                              Store 65_10 61_11
                               Return
                               FunctionEnd

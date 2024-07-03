@@ -4,95 +4,95 @@ spv.structure.frag
 // Id's are bound by 60
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 45 54
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 8  "scale"
-                              Name 18  "lunarStruct1"
-                              MemberName 18(lunarStruct1) 0  "i"
-                              MemberName 18(lunarStruct1) 1  "f"
-                              MemberName 18(lunarStruct1) 2  "color"
-                              Name 21  "lunarStruct2"
-                              MemberName 21(lunarStruct2) 0  "i"
-                              MemberName 21(lunarStruct2) 1  "f"
-                              MemberName 21(lunarStruct2) 2  "s1_1"
-                              Name 24  "foo2"
-                              Name 45  "gl_FragColor"
-                              Name 50  "samp2D"
-                              Name 54  "coord"
-                              Name 59  "foo"
-                              Decorate 45(gl_FragColor) Location 0
-                              Decorate 50(samp2D) Binding 0
-                              Decorate 50(samp2D) DescriptorSet 0
-                              Decorate 54(coord) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               9:    6(float) Constant 0
-              10:             TypeInt 32 1
-              11:             TypeInt 32 0
-              12:     11(int) Constant 5
-              13:             TypeArray 10(int) 12
-              14:     11(int) Constant 4
-              15:             TypeArray 6(float) 14
-              16:             TypeVector 6(float) 4
-              17:             TypeArray 16(fvec4) 12
-18(lunarStruct1):             TypeStruct 10(int) 15 17
-              19:     11(int) Constant 7
-              20:             TypeArray 18(lunarStruct1) 19
-21(lunarStruct2):             TypeStruct 13 6(float) 20
-              22:             TypeArray 21(lunarStruct2) 12
-              23:             TypePointer Private 22
-        24(foo2):     23(ptr) Variable Private
-              25:     10(int) Constant 3
-              26:     10(int) Constant 0
-              27:     10(int) Constant 4
-              28:             TypePointer Private 10(int)
-              31:             TypeBool
-              35:     10(int) Constant 2
-              36:     11(int) Constant 0
-              37:             TypePointer Private 6(float)
-              41:     10(int) Constant 1
-              44:             TypePointer Output 16(fvec4)
-45(gl_FragColor):     44(ptr) Variable Output
-              47:             TypeImage 6(float) 2D sampled format:Unknown
-              48:             TypeSampledImage 47
-              49:             TypePointer UniformConstant 48
-      50(samp2D):     49(ptr) Variable UniformConstant
-              52:             TypeVector 6(float) 2
-              53:             TypePointer Input 52(fvec2)
-       54(coord):     53(ptr) Variable Input
-              58:             TypePointer Private 18(lunarStruct1)
-         59(foo):     58(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-        8(scale):      7(ptr) Variable Function
-                              Store 8(scale) 9
-              29:     28(ptr) AccessChain 24(foo2) 25 26 27
-              30:     10(int) Load 29
-              32:    31(bool) SGreaterThan 30 26
-                              SelectionMerge 34 None
-                              BranchConditional 32 33 40
-              33:               Label
-              38:     37(ptr)   AccessChain 24(foo2) 25 35 35 35 25 36
-              39:    6(float)   Load 38
-                                Store 8(scale) 39
-                                Branch 34
-              40:               Label
-              42:     37(ptr)   AccessChain 24(foo2) 25 35 35 41 25
-              43:    6(float)   Load 42
-                                Store 8(scale) 43
-                                Branch 34
-              34:             Label
-              46:    6(float) Load 8(scale)
-              51:          48 Load 50(samp2D)
-              55:   52(fvec2) Load 54(coord)
-              56:   16(fvec4) ImageSampleImplicitLod 51 55
-              57:   16(fvec4) VectorTimesScalar 56 46
-                              Store 45(gl_FragColor) 57
+                              Name 54_1  "main"
+                              Name 59_6  "scale"
+                              Name 30_1  "lunarStruct1"
+                              MemberName 30_1(lunarStruct1) 0  "i"
+                              MemberName 30_1(lunarStruct1) 1  "f"
+                              MemberName 30_1(lunarStruct1) 2  "color"
+                              Name 30_2  "lunarStruct2"
+                              MemberName 30_2(lunarStruct2) 0  "i"
+                              MemberName 30_2(lunarStruct2) 1  "f"
+                              MemberName 30_2(lunarStruct2) 2  "s1_1"
+                              Name 59_1  "foo2"
+                              Name 59_2  "gl_FragColor"
+                              Name 59_3  "samp2D"
+                              Name 59_4  "coord"
+                              Name 59_5  "foo"
+                              Decorate 59_2(gl_FragColor) Location 0
+                              Decorate 59_3(samp2D) Binding 0
+                              Decorate 59_3(samp2D) DescriptorSet 0
+                              Decorate 59_4(coord) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            43_1: 22_1(float) Constant 0
+            21_1:             TypeInt 32 1
+            21_2:             TypeInt 32 0
+         uint(5):   21_2(int) Constant 5
+            28_1:             TypeArray 21_1(int) uint(5)
+         uint(4):   21_2(int) Constant 4
+            28_2:             TypeArray 22_1(float) uint(4)
+            23_1:             TypeVector 22_1(float) 4
+            28_3:             TypeArray 23_1(fvec4) uint(5)
+30_1(lunarStruct1):             TypeStruct 21_1(int) 28_2 28_3
+         uint(7):   21_2(int) Constant 7
+            28_4:             TypeArray 30_1(lunarStruct1) uint(7)
+30_2(lunarStruct2):             TypeStruct 28_1 22_1(float) 28_4
+            28_5:             TypeArray 30_2(lunarStruct2) uint(5)
+            32_2:             TypePointer Private 28_5
+      59_1(foo2):   32_2(ptr) Variable Private
+            43_2:   21_1(int) Constant 3
+            43_3:   21_1(int) Constant 0
+            43_4:   21_1(int) Constant 4
+            32_3:             TypePointer Private 21_1(int)
+            20_1:             TypeBool
+            43_5:   21_1(int) Constant 2
+         uint(0):   21_2(int) Constant 0
+            32_4:             TypePointer Private 22_1(float)
+            43_6:   21_1(int) Constant 1
+            32_5:             TypePointer Output 23_1(fvec4)
+59_2(gl_FragColor):   32_5(ptr) Variable Output
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_6:             TypePointer UniformConstant 27_1
+    59_3(samp2D):   32_6(ptr) Variable UniformConstant
+            23_2:             TypeVector 22_1(float) 2
+            32_7:             TypePointer Input 23_2(fvec2)
+     59_4(coord):   32_7(ptr) Variable Input
+            32_8:             TypePointer Private 30_1(lunarStruct1)
+       59_5(foo):   32_8(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_6(scale):   32_1(ptr) Variable Function
+                              Store 59_6(scale) 43_1
+            65_1:   32_3(ptr) AccessChain 59_1(foo2) 43_2 43_3 43_4
+            61_1:   21_1(int) Load 65_1
+           173_1:  20_1(bool) SGreaterThan 61_1 43_3
+                              SelectionMerge 248_4 None
+                              BranchConditional 173_1 248_2 248_3
+           248_2:               Label
+            65_2:   32_4(ptr)   AccessChain 59_1(foo2) 43_2 43_5 43_5 43_5 43_2 uint(0)
+            61_2: 22_1(float)   Load 65_2
+                                Store 59_6(scale) 61_2
+                                Branch 248_4
+           248_3:               Label
+            65_3:   32_4(ptr)   AccessChain 59_1(foo2) 43_2 43_5 43_5 43_6 43_2
+            61_3: 22_1(float)   Load 65_3
+                                Store 59_6(scale) 61_3
+                                Branch 248_4
+           248_4:             Label
+            61_4: 22_1(float) Load 59_6(scale)
+            61_5:        27_1 Load 59_3(samp2D)
+            61_6: 23_2(fvec2) Load 59_4(coord)
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 61_5 61_6
+           142_1: 23_1(fvec4) VectorTimesScalar 87_1 61_4
+                              Store 59_2(gl_FragColor) 142_1
                               Return
                               FunctionEnd

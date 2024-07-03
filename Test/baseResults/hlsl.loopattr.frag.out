@@ -140,94 +140,94 @@ gl_FragCoord origin is upper left
 // Id's are bound by 54
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 52
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "@main("
-                              Name 13  "x"
-                              Name 27  "y"
-                              Name 37  "z"
-                              Name 52  "@entryPointOutput"
-                              Decorate 52(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypeInt 32 1
-              12:             TypePointer Function 11(int)
-              14:     11(int) Constant 0
-              21:     11(int) Constant 5
-              22:             TypeBool
-              25:     11(int) Constant 1
-              47:    6(float) Constant 0
-              48:    7(fvec4) ConstantComposite 47 47 47 47
-              51:             TypePointer Output 7(fvec4)
-52(@entryPointOutput):     51(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              53:    7(fvec4) FunctionCall 9(@main()
-                              Store 52(@entryPointOutput) 53
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 59_2  "x"
+                              Name 59_3  "y"
+                              Name 59_4  "z"
+                              Name 59_1  "@entryPointOutput"
+                              Decorate 59_1(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 5
+            20_1:             TypeBool
+            43_3:   21_1(int) Constant 1
+            43_4: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_4 43_4 43_4 43_4
+            32_2:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput):   32_2(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main()
+                              Store 59_1(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       9(@main():    7(fvec4) Function None 8
-              10:             Label
-           13(x):     12(ptr) Variable Function
-           27(y):     12(ptr) Variable Function
-           37(z):     12(ptr) Variable Function
-                              Store 13(x) 14
-                              Branch 15
-              15:             Label
-                              LoopMerge 17 18 Unroll 
-                              Branch 19
-              19:             Label
-              20:     11(int) Load 13(x)
-              23:    22(bool) SLessThan 20 21
-                              BranchConditional 23 16 17
-              16:               Label
-                                Branch 18
-              18:               Label
-              24:     11(int)   Load 13(x)
-              26:     11(int)   IAdd 24 25
-                                Store 13(x) 26
-                                Branch 15
-              17:             Label
-                              Store 27(y) 14
-                              Branch 28
-              28:             Label
-                              LoopMerge 30 31 DontUnroll 
-                              Branch 32
-              32:             Label
-              33:     11(int) Load 27(y)
-              34:    22(bool) SLessThan 33 21
-                              BranchConditional 34 29 30
-              29:               Label
-                                Branch 31
-              31:               Label
-              35:     11(int)   Load 27(y)
-              36:     11(int)   IAdd 35 25
-                                Store 27(y) 36
-                                Branch 28
-              30:             Label
-                              Store 37(z) 14
-                              Branch 38
-              38:             Label
-                              LoopMerge 40 41 None
-                              Branch 42
-              42:             Label
-              43:     11(int) Load 37(z)
-              44:    22(bool) SLessThan 43 21
-                              BranchConditional 44 39 40
-              39:               Label
-                                Branch 41
-              41:               Label
-              45:     11(int)   Load 37(z)
-              46:     11(int)   IAdd 45 25
-                                Store 37(z) 46
-                                Branch 38
-              40:             Label
-                              ReturnValue 48
+    54_2(@main(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+         59_2(x):   32_1(ptr) Variable Function
+         59_3(y):   32_1(ptr) Variable Function
+         59_4(z):   32_1(ptr) Variable Function
+                              Store 59_2(x) 43_1
+                              Branch 248_3
+           248_3:             Label
+                              LoopMerge 248_7 248_6 Unroll 
+                              Branch 248_4
+           248_4:             Label
+            61_1:   21_1(int) Load 59_2(x)
+           177_1:  20_1(bool) SLessThan 61_1 43_2
+                              BranchConditional 177_1 248_5 248_7
+           248_5:               Label
+                                Branch 248_6
+           248_6:               Label
+            61_2:   21_1(int)   Load 59_2(x)
+           128_1:   21_1(int)   IAdd 61_2 43_3
+                                Store 59_2(x) 128_1
+                                Branch 248_3
+           248_7:             Label
+                              Store 59_3(y) 43_1
+                              Branch 248_8
+           248_8:             Label
+                              LoopMerge 248_12 248_11 DontUnroll 
+                              Branch 248_9
+           248_9:             Label
+            61_3:   21_1(int) Load 59_3(y)
+           177_2:  20_1(bool) SLessThan 61_3 43_2
+                              BranchConditional 177_2 248_10 248_12
+          248_10:               Label
+                                Branch 248_11
+          248_11:               Label
+            61_4:   21_1(int)   Load 59_3(y)
+           128_2:   21_1(int)   IAdd 61_4 43_3
+                                Store 59_3(y) 128_2
+                                Branch 248_8
+          248_12:             Label
+                              Store 59_4(z) 43_1
+                              Branch 248_13
+          248_13:             Label
+                              LoopMerge 248_17 248_16 None
+                              Branch 248_14
+          248_14:             Label
+            61_5:   21_1(int) Load 59_4(z)
+           177_3:  20_1(bool) SLessThan 61_5 43_2
+                              BranchConditional 177_3 248_15 248_17
+          248_15:               Label
+                                Branch 248_16
+          248_16:               Label
+            61_6:   21_1(int)   Load 59_4(z)
+           128_3:   21_1(int)   IAdd 61_6 43_3
+                                Store 59_4(z) 128_3
+                                Branch 248_13
+          248_17:             Label
+                              ReturnValue 44_1
                               FunctionEnd

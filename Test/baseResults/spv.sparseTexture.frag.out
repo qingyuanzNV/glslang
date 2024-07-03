@@ -10,596 +10,596 @@ Validation failed
                               Capability SampledRect
                               Capability SparseResidency
                               Capability SampledCubeArray
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 33 48 89 389 401 419
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2 59_4 59_8 59_17 59_19 59_21
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_ARB_sparse_texture2"
-                              Name 4  "main"
-                              Name 8  "resident"
-                              Name 13  "texel"
-                              Name 18  "itexel"
-                              Name 23  "utexel"
-                              Name 29  "s2D"
-                              Name 33  "c2"
-                              Name 35  "ResType"
-                              Name 44  "s3D"
-                              Name 48  "c3"
-                              Name 59  "isCube"
-                              Name 62  "ResType"
-                              Name 71  "s2DShadow"
-                              Name 77  "ResType"
-                              Name 86  "sCubeArrayShadow"
-                              Name 89  "c4"
-                              Name 108  "usCubeArray"
-                              Name 111  "ResType"
-                              Name 140  "us2DRect"
-                              Name 154  "s2DArrayShadow"
-                              Name 188  "s2DMS"
-                              Name 228  "is2DArray"
-                              Name 259  "sCubeShadow"
-                              Name 288  "s2DRectShadow"
-                              Name 386  "i2D"
-                              Name 389  "ic2"
-                              Name 398  "ii3D"
-                              Name 401  "ic3"
-                              Name 410  "i2DMS"
-                              Name 419  "outColor"
-                              Decorate 29(s2D) Binding 0
-                              Decorate 29(s2D) DescriptorSet 0
-                              Decorate 33(c2) Location 0
-                              Decorate 44(s3D) Binding 1
-                              Decorate 44(s3D) DescriptorSet 0
-                              Decorate 48(c3) Location 1
-                              Decorate 59(isCube) Binding 8
-                              Decorate 59(isCube) DescriptorSet 0
-                              Decorate 71(s2DShadow) Binding 2
-                              Decorate 71(s2DShadow) DescriptorSet 0
-                              Decorate 86(sCubeArrayShadow) Binding 6
-                              Decorate 86(sCubeArrayShadow) DescriptorSet 0
-                              Decorate 89(c4) Location 2
-                              Decorate 108(usCubeArray) Binding 10
-                              Decorate 108(usCubeArray) DescriptorSet 0
-                              Decorate 140(us2DRect) Binding 11
-                              Decorate 140(us2DRect) DescriptorSet 0
-                              Decorate 154(s2DArrayShadow) Binding 4
-                              Decorate 154(s2DArrayShadow) DescriptorSet 0
-                              Decorate 188(s2DMS) Binding 7
-                              Decorate 188(s2DMS) DescriptorSet 0
-                              Decorate 228(is2DArray) Binding 9
-                              Decorate 228(is2DArray) DescriptorSet 0
-                              Decorate 259(sCubeShadow) Binding 3
-                              Decorate 259(sCubeShadow) DescriptorSet 0
-                              Decorate 288(s2DRectShadow) Binding 5
-                              Decorate 288(s2DRectShadow) DescriptorSet 0
-                              Decorate 386(i2D) Binding 12
-                              Decorate 386(i2D) DescriptorSet 0
-                              Decorate 389(ic2) Flat
-                              Decorate 389(ic2) Location 3
-                              Decorate 398(ii3D) Binding 13
-                              Decorate 398(ii3D) DescriptorSet 0
-                              Decorate 401(ic3) Flat
-                              Decorate 401(ic3) Location 4
-                              Decorate 410(i2DMS) Binding 14
-                              Decorate 410(i2DMS) DescriptorSet 0
-                              Decorate 419(outColor) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:      6(int) Constant 0
-              10:             TypeFloat 32
-              11:             TypeVector 10(float) 4
-              12:             TypePointer Function 11(fvec4)
-              14:   10(float) Constant 0
-              15:   11(fvec4) ConstantComposite 14 14 14 14
-              16:             TypeVector 6(int) 4
-              17:             TypePointer Function 16(ivec4)
-              19:   16(ivec4) ConstantComposite 9 9 9 9
-              20:             TypeInt 32 0
-              21:             TypeVector 20(int) 4
-              22:             TypePointer Function 21(ivec4)
-              24:     20(int) Constant 0
-              25:   21(ivec4) ConstantComposite 24 24 24 24
-              26:             TypeImage 10(float) 2D sampled format:Unknown
-              27:             TypeSampledImage 26
-              28:             TypePointer UniformConstant 27
-         29(s2D):     28(ptr) Variable UniformConstant
-              31:             TypeVector 10(float) 2
-              32:             TypePointer Input 31(fvec2)
-          33(c2):     32(ptr) Variable Input
-     35(ResType):             TypeStruct 6(int) 11(fvec4)
-              41:             TypeImage 10(float) 3D sampled format:Unknown
-              42:             TypeSampledImage 41
-              43:             TypePointer UniformConstant 42
-         44(s3D):     43(ptr) Variable UniformConstant
-              46:             TypeVector 10(float) 3
-              47:             TypePointer Input 46(fvec3)
-          48(c3):     47(ptr) Variable Input
-              50:   10(float) Constant 1073741824
-              56:             TypeImage 6(int) Cube sampled format:Unknown
-              57:             TypeSampledImage 56
-              58:             TypePointer UniformConstant 57
-      59(isCube):     58(ptr) Variable UniformConstant
-     62(ResType):             TypeStruct 6(int) 16(ivec4)
-              68:             TypeImage 10(float) 2D depth sampled format:Unknown
-              69:             TypeSampledImage 68
-              70:             TypePointer UniformConstant 69
-   71(s2DShadow):     70(ptr) Variable UniformConstant
-              74:             TypePointer Function 10(float)
-     77(ResType):             TypeStruct 6(int) 10(float)
-              83:             TypeImage 10(float) Cube depth array sampled format:Unknown
-              84:             TypeSampledImage 83
-              85:             TypePointer UniformConstant 84
-86(sCubeArrayShadow):     85(ptr) Variable UniformConstant
-              88:             TypePointer Input 11(fvec4)
-          89(c4):     88(ptr) Variable Input
-              91:   10(float) Constant 1065353216
-             105:             TypeImage 20(int) Cube array sampled format:Unknown
-             106:             TypeSampledImage 105
-             107:             TypePointer UniformConstant 106
-108(usCubeArray):    107(ptr) Variable UniformConstant
-    111(ResType):             TypeStruct 6(int) 21(ivec4)
-             119:     20(int) Constant 1
-             129:             TypeVector 6(int) 3
-             130:      6(int) Constant 2
-             131:  129(ivec3) ConstantComposite 130 130 130
-             137:             TypeImage 20(int) Rect sampled format:Unknown
-             138:             TypeSampledImage 137
-             139:             TypePointer UniformConstant 138
-   140(us2DRect):    139(ptr) Variable UniformConstant
-             143:             TypeVector 6(int) 2
-             144:      6(int) Constant 3
-             145:  143(ivec2) ConstantComposite 144 144
-             151:             TypeImage 10(float) 2D depth array sampled format:Unknown
-             152:             TypeSampledImage 151
-             153:             TypePointer UniformConstant 152
-154(s2DArrayShadow):    153(ptr) Variable UniformConstant
-             157:      6(int) Constant 5
-             158:  143(ivec2) ConstantComposite 157 157
-             159:     20(int) Constant 2
-             185:             TypeImage 10(float) 2D multi-sampled sampled format:Unknown
-             186:             TypeSampledImage 185
-             187:             TypePointer UniformConstant 186
-      188(s2DMS):    187(ptr) Variable UniformConstant
-             192:      6(int) Constant 4
-             202:  129(ivec3) ConstantComposite 192 192 192
-             225:             TypeImage 6(int) 2D array sampled format:Unknown
-             226:             TypeSampledImage 225
-             227:             TypePointer UniformConstant 226
-  228(is2DArray):    227(ptr) Variable UniformConstant
-             231:      6(int) Constant 6
-             232:  143(ivec2) ConstantComposite 231 231
-             240:      6(int) Constant 7
-             241:  143(ivec2) ConstantComposite 240 240
-             256:             TypeImage 10(float) Cube depth sampled format:Unknown
-             257:             TypeSampledImage 256
-             258:             TypePointer UniformConstant 257
-259(sCubeShadow):    258(ptr) Variable UniformConstant
-             285:             TypeImage 10(float) Rect depth sampled format:Unknown
-             286:             TypeSampledImage 285
-             287:             TypePointer UniformConstant 286
-288(s2DRectShadow):    287(ptr) Variable UniformConstant
-             292:     20(int) Constant 3
-             303:  143(ivec2) ConstantComposite 130 130
-             332:  143(ivec2) ConstantComposite 192 192
-             354:     20(int) Constant 4
-             355:             TypeArray 143(ivec2) 354
-             356:      6(int) Constant 1
-             357:  143(ivec2) ConstantComposite 356 130
-             358:  143(ivec2) ConstantComposite 144 192
-             359:      6(int) Constant 15
-             360:      6(int) Constant 16
-             361:  143(ivec2) ConstantComposite 359 360
-             362:      6(int) Constant 4294967294
-             363:  143(ivec2) ConstantComposite 362 9
-             364:         355 ConstantComposite 357 358 361 363
-             384:             TypeImage 10(float) 2D nonsampled format:Rgba32f
-             385:             TypePointer UniformConstant 384
-        386(i2D):    385(ptr) Variable UniformConstant
-             388:             TypePointer Input 143(ivec2)
-        389(ic2):    388(ptr) Variable Input
-             396:             TypeImage 6(int) 3D nonsampled format:Rgba32i
-             397:             TypePointer UniformConstant 396
-       398(ii3D):    397(ptr) Variable UniformConstant
-             400:             TypePointer Input 129(ivec3)
-        401(ic3):    400(ptr) Variable Input
-             408:             TypeImage 10(float) 2D multi-sampled nonsampled format:Rgba32f
-             409:             TypePointer UniformConstant 408
-      410(i2DMS):    409(ptr) Variable UniformConstant
-             418:             TypePointer Output 11(fvec4)
-   419(outColor):    418(ptr) Variable Output
-             421:             TypeBool
-         4(main):           2 Function None 3
-               5:             Label
-     8(resident):      7(ptr) Variable Function
-       13(texel):     12(ptr) Variable Function
-      18(itexel):     17(ptr) Variable Function
-      23(utexel):     22(ptr) Variable Function
-             423:     12(ptr) Variable Function
-                              Store 8(resident) 9
-                              Store 13(texel) 15
-                              Store 18(itexel) 19
-                              Store 23(utexel) 25
-              30:          27 Load 29(s2D)
-              34:   31(fvec2) Load 33(c2)
-              36: 35(ResType) ImageSparseSampleImplicitLod 30 34
-              37:   11(fvec4) CompositeExtract 36 1
-                              Store 13(texel) 37
-              38:      6(int) CompositeExtract 36 0
-              39:      6(int) Load 8(resident)
-              40:      6(int) BitwiseOr 39 38
-                              Store 8(resident) 40
-              45:          42 Load 44(s3D)
-              49:   46(fvec3) Load 48(c3)
-              51: 35(ResType) ImageSparseSampleImplicitLod 45 49 Bias 50
-              52:   11(fvec4) CompositeExtract 51 1
-                              Store 13(texel) 52
-              53:      6(int) CompositeExtract 51 0
-              54:      6(int) Load 8(resident)
-              55:      6(int) BitwiseOr 54 53
-                              Store 8(resident) 55
-              60:          57 Load 59(isCube)
-              61:   46(fvec3) Load 48(c3)
-              63: 62(ResType) ImageSparseSampleImplicitLod 60 61
-              64:   16(ivec4) CompositeExtract 63 1
-                              Store 18(itexel) 64
-              65:      6(int) CompositeExtract 63 0
-              66:      6(int) Load 8(resident)
-              67:      6(int) BitwiseOr 66 65
-                              Store 8(resident) 67
-              72:          69 Load 71(s2DShadow)
-              73:   46(fvec3) Load 48(c3)
-              75:     74(ptr) AccessChain 13(texel) 24
-              76:   10(float) CompositeExtract 73 2
-              78: 77(ResType) ImageSparseSampleDrefImplicitLod 72 73 76
-              79:   10(float) CompositeExtract 78 1
-                              Store 75 79
-              80:      6(int) CompositeExtract 78 0
-              81:      6(int) Load 8(resident)
-              82:      6(int) BitwiseOr 81 80
-                              Store 8(resident) 82
-              87:          84 Load 86(sCubeArrayShadow)
-              90:   11(fvec4) Load 89(c4)
-              92:     74(ptr) AccessChain 13(texel) 24
-              93: 77(ResType) ImageSparseSampleDrefImplicitLod 87 90 91
-              94:   10(float) CompositeExtract 93 1
-                              Store 92 94
-              95:      6(int) CompositeExtract 93 0
-              96:      6(int) Load 8(resident)
-              97:      6(int) BitwiseOr 96 95
-                              Store 8(resident) 97
-              98:          27 Load 29(s2D)
-              99:   31(fvec2) Load 33(c2)
-             100: 35(ResType) ImageSparseSampleExplicitLod 98 99 Lod 50
-             101:   11(fvec4) CompositeExtract 100 1
-                              Store 13(texel) 101
-             102:      6(int) CompositeExtract 100 0
-             103:      6(int) Load 8(resident)
-             104:      6(int) BitwiseOr 103 102
-                              Store 8(resident) 104
-             109:         106 Load 108(usCubeArray)
-             110:   11(fvec4) Load 89(c4)
-             112:111(ResType) ImageSparseSampleExplicitLod 109 110 Lod 91
-             113:   21(ivec4) CompositeExtract 112 1
-                              Store 23(utexel) 113
-             114:      6(int) CompositeExtract 112 0
-             115:      6(int) Load 8(resident)
-             116:      6(int) BitwiseOr 115 114
-                              Store 8(resident) 116
-             117:          69 Load 71(s2DShadow)
-             118:   46(fvec3) Load 48(c3)
-             120:     74(ptr) AccessChain 13(texel) 119
-             121:   10(float) CompositeExtract 118 2
-             122: 77(ResType) ImageSparseSampleDrefExplicitLod 117 118 121 Lod 50
-             123:   10(float) CompositeExtract 122 1
-                              Store 120 123
-             124:      6(int) CompositeExtract 122 0
-             125:      6(int) Load 8(resident)
-             126:      6(int) BitwiseOr 125 124
-                              Store 8(resident) 126
-             127:          42 Load 44(s3D)
-             128:   46(fvec3) Load 48(c3)
-             132: 35(ResType) ImageSparseSampleImplicitLod 127 128 Bias ConstOffset 50 131
-             133:   11(fvec4) CompositeExtract 132 1
-                              Store 13(texel) 133
-             134:      6(int) CompositeExtract 132 0
-             135:      6(int) Load 8(resident)
-             136:      6(int) BitwiseOr 135 134
-                              Store 8(resident) 136
-             141:         138 Load 140(us2DRect)
-             142:   31(fvec2) Load 33(c2)
-             146:111(ResType) ImageSparseSampleImplicitLod 141 142 ConstOffset 145
-             147:   21(ivec4) CompositeExtract 146 1
-                              Store 23(utexel) 147
-             148:      6(int) CompositeExtract 146 0
-             149:      6(int) Load 8(resident)
-             150:      6(int) BitwiseOr 149 148
-                              Store 8(resident) 150
-             155:         152 Load 154(s2DArrayShadow)
-             156:   11(fvec4) Load 89(c4)
-             160:     74(ptr) AccessChain 13(texel) 159
-             161:   10(float) CompositeExtract 156 3
-             162: 77(ResType) ImageSparseSampleDrefImplicitLod 155 156 161 ConstOffset 158
-             163:   10(float) CompositeExtract 162 1
-                              Store 160 163
-             164:      6(int) CompositeExtract 162 0
-             165:      6(int) Load 8(resident)
-             166:      6(int) BitwiseOr 165 164
-                              Store 8(resident) 166
-             167:          27 Load 29(s2D)
-             168:   31(fvec2) Load 33(c2)
-             169:  143(ivec2) ConvertFToS 168
-             170:          26 Image 167
-             171: 35(ResType) ImageSparseFetch 170 169 Lod 130
-             172:   11(fvec4) CompositeExtract 171 1
-                              Store 13(texel) 172
-             173:      6(int) CompositeExtract 171 0
-             174:      6(int) Load 8(resident)
-             175:      6(int) BitwiseOr 174 173
-                              Store 8(resident) 175
-             176:         138 Load 140(us2DRect)
-             177:   31(fvec2) Load 33(c2)
-             178:  143(ivec2) ConvertFToS 177
-             179:         137 Image 176
-             180:111(ResType) ImageSparseFetch 179 178
-             181:   21(ivec4) CompositeExtract 180 1
-                              Store 23(utexel) 181
-             182:      6(int) CompositeExtract 180 0
-             183:      6(int) Load 8(resident)
-             184:      6(int) BitwiseOr 183 182
-                              Store 8(resident) 184
-             189:         186 Load 188(s2DMS)
-             190:   31(fvec2) Load 33(c2)
-             191:  143(ivec2) ConvertFToS 190
-             193:         185 Image 189
-             194: 35(ResType) ImageSparseFetch 193 191 Sample 192
-             195:   11(fvec4) CompositeExtract 194 1
-                              Store 13(texel) 195
-             196:      6(int) CompositeExtract 194 0
-             197:      6(int) Load 8(resident)
-             198:      6(int) BitwiseOr 197 196
-                              Store 8(resident) 198
-             199:          42 Load 44(s3D)
-             200:   46(fvec3) Load 48(c3)
-             201:  129(ivec3) ConvertFToS 200
-             203:          41 Image 199
-             204: 35(ResType) ImageSparseFetch 203 201 Lod ConstOffset 130 202
-             205:   11(fvec4) CompositeExtract 204 1
-                              Store 13(texel) 205
-             206:      6(int) CompositeExtract 204 0
-             207:      6(int) Load 8(resident)
-             208:      6(int) BitwiseOr 207 206
-                              Store 8(resident) 208
-             209:         138 Load 140(us2DRect)
-             210:   31(fvec2) Load 33(c2)
-             211:  143(ivec2) ConvertFToS 210
-             212:         137 Image 209
-             213:111(ResType) ImageSparseFetch 212 211 ConstOffset 145
-             214:   21(ivec4) CompositeExtract 213 1
-                              Store 23(utexel) 214
-             215:      6(int) CompositeExtract 213 0
-             216:      6(int) Load 8(resident)
-             217:      6(int) BitwiseOr 216 215
-                              Store 8(resident) 217
-             218:          27 Load 29(s2D)
-             219:   31(fvec2) Load 33(c2)
-             220: 35(ResType) ImageSparseSampleExplicitLod 218 219 Lod ConstOffset 50 158
-             221:   11(fvec4) CompositeExtract 220 1
-                              Store 13(texel) 221
-             222:      6(int) CompositeExtract 220 0
-             223:      6(int) Load 8(resident)
-             224:      6(int) BitwiseOr 223 222
-                              Store 8(resident) 224
-             229:         226 Load 228(is2DArray)
-             230:   46(fvec3) Load 48(c3)
-             233: 62(ResType) ImageSparseSampleExplicitLod 229 230 Lod ConstOffset 50 232
-             234:   16(ivec4) CompositeExtract 233 1
-                              Store 18(itexel) 234
-             235:      6(int) CompositeExtract 233 0
-             236:      6(int) Load 8(resident)
-             237:      6(int) BitwiseOr 236 235
-                              Store 8(resident) 237
-             238:          69 Load 71(s2DShadow)
-             239:   46(fvec3) Load 48(c3)
-             242:     74(ptr) AccessChain 13(texel) 159
-             243:   10(float) CompositeExtract 239 2
-             244: 77(ResType) ImageSparseSampleDrefExplicitLod 238 239 243 Lod ConstOffset 50 241
-             245:   10(float) CompositeExtract 244 1
-                              Store 242 245
-             246:      6(int) CompositeExtract 244 0
-             247:      6(int) Load 8(resident)
-             248:      6(int) BitwiseOr 247 246
-                              Store 8(resident) 248
-             249:          42 Load 44(s3D)
-             250:   46(fvec3) Load 48(c3)
-             251: 35(ResType) ImageSparseSampleExplicitLod 249 250 Grad 250 250
-             252:   11(fvec4) CompositeExtract 251 1
-                              Store 13(texel) 252
-             253:      6(int) CompositeExtract 251 0
-             254:      6(int) Load 8(resident)
-             255:      6(int) BitwiseOr 254 253
-                              Store 8(resident) 255
-             260:         257 Load 259(sCubeShadow)
-             261:   11(fvec4) Load 89(c4)
-             262:   46(fvec3) Load 48(c3)
-             263:     74(ptr) AccessChain 13(texel) 119
-             264:   10(float) CompositeExtract 261 3
-             265: 77(ResType) ImageSparseSampleDrefExplicitLod 260 261 264 Grad 262 262
-             266:   10(float) CompositeExtract 265 1
-                              Store 263 266
-             267:      6(int) CompositeExtract 265 0
-             268:      6(int) Load 8(resident)
-             269:      6(int) BitwiseOr 268 267
-                              Store 8(resident) 269
-             270:         106 Load 108(usCubeArray)
-             271:   11(fvec4) Load 89(c4)
-             272:   46(fvec3) Load 48(c3)
-             273:111(ResType) ImageSparseSampleExplicitLod 270 271 Grad 272 272
-             274:   21(ivec4) CompositeExtract 273 1
-                              Store 23(utexel) 274
-             275:      6(int) CompositeExtract 273 0
-             276:      6(int) Load 8(resident)
-             277:      6(int) BitwiseOr 276 275
-                              Store 8(resident) 277
-             278:          27 Load 29(s2D)
-             279:   31(fvec2) Load 33(c2)
-             280: 35(ResType) ImageSparseSampleExplicitLod 278 279 Grad ConstOffset 279 279 158
-             281:   11(fvec4) CompositeExtract 280 1
-                              Store 13(texel) 281
-             282:      6(int) CompositeExtract 280 0
-             283:      6(int) Load 8(resident)
-             284:      6(int) BitwiseOr 283 282
-                              Store 8(resident) 284
-             289:         286 Load 288(s2DRectShadow)
-             290:   46(fvec3) Load 48(c3)
-             291:   31(fvec2) Load 33(c2)
-             293:     74(ptr) AccessChain 13(texel) 292
-             294:   10(float) CompositeExtract 290 2
-             295: 77(ResType) ImageSparseSampleDrefExplicitLod 289 290 294 Grad ConstOffset 291 291 232
-             296:   10(float) CompositeExtract 295 1
-                              Store 293 296
-             297:      6(int) CompositeExtract 295 0
-             298:      6(int) Load 8(resident)
-             299:      6(int) BitwiseOr 298 297
-                              Store 8(resident) 299
-             300:         226 Load 228(is2DArray)
-             301:   46(fvec3) Load 48(c3)
-             302:   31(fvec2) Load 33(c2)
-             304: 62(ResType) ImageSparseSampleExplicitLod 300 301 Grad ConstOffset 302 302 303
-             305:   16(ivec4) CompositeExtract 304 1
-                              Store 18(itexel) 305
-             306:      6(int) CompositeExtract 304 0
-             307:      6(int) Load 8(resident)
-             308:      6(int) BitwiseOr 307 306
-                              Store 8(resident) 308
-             309:          27 Load 29(s2D)
-             310:   31(fvec2) Load 33(c2)
-             311: 35(ResType) ImageSparseGather 309 310 9
-             312:   11(fvec4) CompositeExtract 311 1
-                              Store 13(texel) 312
-             313:      6(int) CompositeExtract 311 0
-             314:      6(int) Load 8(resident)
-             315:      6(int) BitwiseOr 314 313
-                              Store 8(resident) 315
-             316:         226 Load 228(is2DArray)
-             317:   46(fvec3) Load 48(c3)
-             318: 62(ResType) ImageSparseGather 316 317 130
-             319:   16(ivec4) CompositeExtract 318 1
-                              Store 18(itexel) 319
-             320:      6(int) CompositeExtract 318 0
-             321:      6(int) Load 8(resident)
-             322:      6(int) BitwiseOr 321 320
-                              Store 8(resident) 322
-             323:         152 Load 154(s2DArrayShadow)
-             324:   46(fvec3) Load 48(c3)
-             325: 35(ResType) ImageSparseDrefGather 323 324 50
-             326:   11(fvec4) CompositeExtract 325 1
-                              Store 13(texel) 326
-             327:      6(int) CompositeExtract 325 0
-             328:      6(int) Load 8(resident)
-             329:      6(int) BitwiseOr 328 327
-                              Store 8(resident) 329
-             330:          27 Load 29(s2D)
-             331:   31(fvec2) Load 33(c2)
-             333: 35(ResType) ImageSparseGather 330 331 9 ConstOffset 332
-             334:   11(fvec4) CompositeExtract 333 1
-                              Store 13(texel) 334
-             335:      6(int) CompositeExtract 333 0
-             336:      6(int) Load 8(resident)
-             337:      6(int) BitwiseOr 336 335
-                              Store 8(resident) 337
-             338:         226 Load 228(is2DArray)
-             339:   46(fvec3) Load 48(c3)
-             340: 62(ResType) ImageSparseGather 338 339 130 ConstOffset 158
-             341:   16(ivec4) CompositeExtract 340 1
-                              Store 18(itexel) 341
-             342:      6(int) CompositeExtract 340 0
-             343:      6(int) Load 8(resident)
-             344:      6(int) BitwiseOr 343 342
-                              Store 8(resident) 344
-             345:         286 Load 288(s2DRectShadow)
-             346:   31(fvec2) Load 33(c2)
-             347: 35(ResType) ImageSparseDrefGather 345 346 50 ConstOffset 241
-             348:   11(fvec4) CompositeExtract 347 1
-                              Store 13(texel) 348
-             349:      6(int) CompositeExtract 347 0
-             350:      6(int) Load 8(resident)
-             351:      6(int) BitwiseOr 350 349
-                              Store 8(resident) 351
-             352:          27 Load 29(s2D)
-             353:   31(fvec2) Load 33(c2)
-             365: 35(ResType) ImageSparseGather 352 353 9 ConstOffsets 364
-             366:   11(fvec4) CompositeExtract 365 1
-                              Store 13(texel) 366
-             367:      6(int) CompositeExtract 365 0
-             368:      6(int) Load 8(resident)
-             369:      6(int) BitwiseOr 368 367
-                              Store 8(resident) 369
-             370:         226 Load 228(is2DArray)
-             371:   46(fvec3) Load 48(c3)
-             372: 62(ResType) ImageSparseGather 370 371 130 ConstOffsets 364
-             373:   16(ivec4) CompositeExtract 372 1
-                              Store 18(itexel) 373
-             374:      6(int) CompositeExtract 372 0
-             375:      6(int) Load 8(resident)
-             376:      6(int) BitwiseOr 375 374
-                              Store 8(resident) 376
-             377:         286 Load 288(s2DRectShadow)
-             378:   31(fvec2) Load 33(c2)
-             379: 35(ResType) ImageSparseDrefGather 377 378 50 ConstOffsets 364
-             380:   11(fvec4) CompositeExtract 379 1
-                              Store 13(texel) 380
-             381:      6(int) CompositeExtract 379 0
-             382:      6(int) Load 8(resident)
-             383:      6(int) BitwiseOr 382 381
-                              Store 8(resident) 383
-             387:         384 Load 386(i2D)
-             390:  143(ivec2) Load 389(ic2)
-             391: 35(ResType) ImageSparseRead 387 390
-             392:   11(fvec4) CompositeExtract 391 1
-                              Store 13(texel) 392
-             393:      6(int) CompositeExtract 391 0
-             394:      6(int) Load 8(resident)
-             395:      6(int) BitwiseOr 394 393
-                              Store 8(resident) 395
-             399:         396 Load 398(ii3D)
-             402:  129(ivec3) Load 401(ic3)
-             403: 62(ResType) ImageSparseRead 399 402
-             404:   16(ivec4) CompositeExtract 403 1
-                              Store 18(itexel) 404
-             405:      6(int) CompositeExtract 403 0
-             406:      6(int) Load 8(resident)
-             407:      6(int) BitwiseOr 406 405
-                              Store 8(resident) 407
-             411:         408 Load 410(i2DMS)
-             412:  143(ivec2) Load 389(ic2)
-             413: 35(ResType) ImageSparseRead 411 412 Sample 144
-             414:   11(fvec4) CompositeExtract 413 1
-                              Store 13(texel) 414
-             415:      6(int) CompositeExtract 413 0
-             416:      6(int) Load 8(resident)
-             417:      6(int) BitwiseOr 416 415
-                              Store 8(resident) 417
-             420:      6(int) Load 8(resident)
-             422:   421(bool) ImageSparseTexelsResident 420
-                              SelectionMerge 425 None
-                              BranchConditional 422 424 427
-             424:               Label
-             426:   11(fvec4)   Load 13(texel)
-                                Store 423 426
-                                Branch 425
-             427:               Label
-             428:   16(ivec4)   Load 18(itexel)
-             429:   11(fvec4)   ConvertSToF 428
-             430:   21(ivec4)   Load 23(utexel)
-             431:   11(fvec4)   ConvertUToF 430
-             432:   11(fvec4)   FAdd 429 431
-                                Store 423 432
-                                Branch 425
-             425:             Label
-             433:   11(fvec4) Load 423
-                              Store 419(outColor) 433
+                              Name 54_1  "main"
+                              Name 59_22  "resident"
+                              Name 59_23  "texel"
+                              Name 59_24  "itexel"
+                              Name 59_25  "utexel"
+                              Name 59_1  "s2D"
+                              Name 59_2  "c2"
+                              Name 30_1  "ResType"
+                              Name 59_3  "s3D"
+                              Name 59_4  "c3"
+                              Name 59_5  "isCube"
+                              Name 30_2  "ResType"
+                              Name 59_6  "s2DShadow"
+                              Name 30_3  "ResType"
+                              Name 59_7  "sCubeArrayShadow"
+                              Name 59_8  "c4"
+                              Name 59_9  "usCubeArray"
+                              Name 30_4  "ResType"
+                              Name 59_10  "us2DRect"
+                              Name 59_11  "s2DArrayShadow"
+                              Name 59_12  "s2DMS"
+                              Name 59_13  "is2DArray"
+                              Name 59_14  "sCubeShadow"
+                              Name 59_15  "s2DRectShadow"
+                              Name 59_16  "i2D"
+                              Name 59_17  "ic2"
+                              Name 59_18  "ii3D"
+                              Name 59_19  "ic3"
+                              Name 59_20  "i2DMS"
+                              Name 59_21  "outColor"
+                              Decorate 59_1(s2D) Binding 0
+                              Decorate 59_1(s2D) DescriptorSet 0
+                              Decorate 59_2(c2) Location 0
+                              Decorate 59_3(s3D) Binding 1
+                              Decorate 59_3(s3D) DescriptorSet 0
+                              Decorate 59_4(c3) Location 1
+                              Decorate 59_5(isCube) Binding 8
+                              Decorate 59_5(isCube) DescriptorSet 0
+                              Decorate 59_6(s2DShadow) Binding 2
+                              Decorate 59_6(s2DShadow) DescriptorSet 0
+                              Decorate 59_7(sCubeArrayShadow) Binding 6
+                              Decorate 59_7(sCubeArrayShadow) DescriptorSet 0
+                              Decorate 59_8(c4) Location 2
+                              Decorate 59_9(usCubeArray) Binding 10
+                              Decorate 59_9(usCubeArray) DescriptorSet 0
+                              Decorate 59_10(us2DRect) Binding 11
+                              Decorate 59_10(us2DRect) DescriptorSet 0
+                              Decorate 59_11(s2DArrayShadow) Binding 4
+                              Decorate 59_11(s2DArrayShadow) DescriptorSet 0
+                              Decorate 59_12(s2DMS) Binding 7
+                              Decorate 59_12(s2DMS) DescriptorSet 0
+                              Decorate 59_13(is2DArray) Binding 9
+                              Decorate 59_13(is2DArray) DescriptorSet 0
+                              Decorate 59_14(sCubeShadow) Binding 3
+                              Decorate 59_14(sCubeShadow) DescriptorSet 0
+                              Decorate 59_15(s2DRectShadow) Binding 5
+                              Decorate 59_15(s2DRectShadow) DescriptorSet 0
+                              Decorate 59_16(i2D) Binding 12
+                              Decorate 59_16(i2D) DescriptorSet 0
+                              Decorate 59_17(ic2) Flat
+                              Decorate 59_17(ic2) Location 3
+                              Decorate 59_18(ii3D) Binding 13
+                              Decorate 59_18(ii3D) DescriptorSet 0
+                              Decorate 59_19(ic3) Flat
+                              Decorate 59_19(ic3) Location 4
+                              Decorate 59_20(i2DMS) Binding 14
+                              Decorate 59_20(i2DMS) DescriptorSet 0
+                              Decorate 59_21(outColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Function 23_1(fvec4)
+            43_2: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+            23_2:             TypeVector 21_1(int) 4
+            32_3:             TypePointer Function 23_2(ivec4)
+            44_2: 23_2(ivec4) ConstantComposite 43_1 43_1 43_1 43_1
+            21_2:             TypeInt 32 0
+            23_3:             TypeVector 21_2(int) 4
+            32_4:             TypePointer Function 23_3(ivec4)
+         uint(0):   21_2(int) Constant 0
+            44_3: 23_3(ivec4) ConstantComposite uint(0) uint(0) uint(0) uint(0)
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_5:             TypePointer UniformConstant 27_1
+       59_1(s2D):   32_5(ptr) Variable UniformConstant
+            23_4:             TypeVector 22_1(float) 2
+            32_6:             TypePointer Input 23_4(fvec2)
+        59_2(c2):   32_6(ptr) Variable Input
+   30_1(ResType):             TypeStruct 21_1(int) 23_1(fvec4)
+            25_2:             TypeImage 22_1(float) 3D sampled format:Unknown
+            27_2:             TypeSampledImage 25_2
+            32_7:             TypePointer UniformConstant 27_2
+       59_3(s3D):   32_7(ptr) Variable UniformConstant
+            23_5:             TypeVector 22_1(float) 3
+            32_8:             TypePointer Input 23_5(fvec3)
+        59_4(c3):   32_8(ptr) Variable Input
+            43_3: 22_1(float) Constant 1073741824
+            25_3:             TypeImage 21_1(int) Cube sampled format:Unknown
+            27_3:             TypeSampledImage 25_3
+            32_9:             TypePointer UniformConstant 27_3
+    59_5(isCube):   32_9(ptr) Variable UniformConstant
+   30_2(ResType):             TypeStruct 21_1(int) 23_2(ivec4)
+            25_4:             TypeImage 22_1(float) 2D depth sampled format:Unknown
+            27_4:             TypeSampledImage 25_4
+           32_10:             TypePointer UniformConstant 27_4
+ 59_6(s2DShadow):  32_10(ptr) Variable UniformConstant
+           32_11:             TypePointer Function 22_1(float)
+   30_3(ResType):             TypeStruct 21_1(int) 22_1(float)
+            25_5:             TypeImage 22_1(float) Cube depth array sampled format:Unknown
+            27_5:             TypeSampledImage 25_5
+           32_12:             TypePointer UniformConstant 27_5
+59_7(sCubeArrayShadow):  32_12(ptr) Variable UniformConstant
+           32_13:             TypePointer Input 23_1(fvec4)
+        59_8(c4):  32_13(ptr) Variable Input
+            43_4: 22_1(float) Constant 1065353216
+            25_6:             TypeImage 21_2(int) Cube array sampled format:Unknown
+            27_6:             TypeSampledImage 25_6
+           32_14:             TypePointer UniformConstant 27_6
+59_9(usCubeArray):  32_14(ptr) Variable UniformConstant
+   30_4(ResType):             TypeStruct 21_1(int) 23_3(ivec4)
+         uint(1):   21_2(int) Constant 1
+            23_6:             TypeVector 21_1(int) 3
+            43_5:   21_1(int) Constant 2
+            44_4: 23_6(ivec3) ConstantComposite 43_5 43_5 43_5
+            25_7:             TypeImage 21_2(int) Rect sampled format:Unknown
+            27_7:             TypeSampledImage 25_7
+           32_15:             TypePointer UniformConstant 27_7
+ 59_10(us2DRect):  32_15(ptr) Variable UniformConstant
+            23_7:             TypeVector 21_1(int) 2
+            43_6:   21_1(int) Constant 3
+            44_5: 23_7(ivec2) ConstantComposite 43_6 43_6
+            25_8:             TypeImage 22_1(float) 2D depth array sampled format:Unknown
+            27_8:             TypeSampledImage 25_8
+           32_16:             TypePointer UniformConstant 27_8
+59_11(s2DArrayShadow):  32_16(ptr) Variable UniformConstant
+            43_7:   21_1(int) Constant 5
+            44_6: 23_7(ivec2) ConstantComposite 43_7 43_7
+         uint(2):   21_2(int) Constant 2
+            25_9:             TypeImage 22_1(float) 2D multi-sampled sampled format:Unknown
+            27_9:             TypeSampledImage 25_9
+           32_17:             TypePointer UniformConstant 27_9
+    59_12(s2DMS):  32_17(ptr) Variable UniformConstant
+            43_8:   21_1(int) Constant 4
+            44_7: 23_6(ivec3) ConstantComposite 43_8 43_8 43_8
+           25_10:             TypeImage 21_1(int) 2D array sampled format:Unknown
+           27_10:             TypeSampledImage 25_10
+           32_18:             TypePointer UniformConstant 27_10
+59_13(is2DArray):  32_18(ptr) Variable UniformConstant
+            43_9:   21_1(int) Constant 6
+            44_8: 23_7(ivec2) ConstantComposite 43_9 43_9
+           43_10:   21_1(int) Constant 7
+            44_9: 23_7(ivec2) ConstantComposite 43_10 43_10
+           25_11:             TypeImage 22_1(float) Cube depth sampled format:Unknown
+           27_11:             TypeSampledImage 25_11
+           32_19:             TypePointer UniformConstant 27_11
+59_14(sCubeShadow):  32_19(ptr) Variable UniformConstant
+           25_12:             TypeImage 22_1(float) Rect depth sampled format:Unknown
+           27_12:             TypeSampledImage 25_12
+           32_20:             TypePointer UniformConstant 27_12
+59_15(s2DRectShadow):  32_20(ptr) Variable UniformConstant
+         uint(3):   21_2(int) Constant 3
+           44_10: 23_7(ivec2) ConstantComposite 43_5 43_5
+           44_11: 23_7(ivec2) ConstantComposite 43_8 43_8
+         uint(4):   21_2(int) Constant 4
+            28_1:             TypeArray 23_7(ivec2) uint(4)
+           43_11:   21_1(int) Constant 1
+           44_12: 23_7(ivec2) ConstantComposite 43_11 43_5
+           44_13: 23_7(ivec2) ConstantComposite 43_6 43_8
+           43_12:   21_1(int) Constant 15
+           43_13:   21_1(int) Constant 16
+           44_14: 23_7(ivec2) ConstantComposite 43_12 43_13
+           43_14:   21_1(int) Constant 4294967294
+           44_15: 23_7(ivec2) ConstantComposite 43_14 43_1
+           44_16:        28_1 ConstantComposite 44_12 44_13 44_14 44_15
+           25_13:             TypeImage 22_1(float) 2D nonsampled format:Rgba32f
+           32_21:             TypePointer UniformConstant 25_13
+      59_16(i2D):  32_21(ptr) Variable UniformConstant
+           32_22:             TypePointer Input 23_7(ivec2)
+      59_17(ic2):  32_22(ptr) Variable Input
+           25_14:             TypeImage 21_1(int) 3D nonsampled format:Rgba32i
+           32_23:             TypePointer UniformConstant 25_14
+     59_18(ii3D):  32_23(ptr) Variable UniformConstant
+           32_24:             TypePointer Input 23_6(ivec3)
+      59_19(ic3):  32_24(ptr) Variable Input
+           25_15:             TypeImage 22_1(float) 2D multi-sampled nonsampled format:Rgba32f
+           32_25:             TypePointer UniformConstant 25_15
+    59_20(i2DMS):  32_25(ptr) Variable UniformConstant
+           32_26:             TypePointer Output 23_1(fvec4)
+ 59_21(outColor):  32_26(ptr) Variable Output
+            20_1:             TypeBool
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+ 59_22(resident):   32_1(ptr) Variable Function
+    59_23(texel):   32_2(ptr) Variable Function
+   59_24(itexel):   32_3(ptr) Variable Function
+   59_25(utexel):   32_4(ptr) Variable Function
+           59_26:   32_2(ptr) Variable Function
+                              Store 59_22(resident) 43_1
+                              Store 59_23(texel) 44_1
+                              Store 59_24(itexel) 44_2
+                              Store 59_25(utexel) 44_3
+            61_1:        27_1 Load 59_1(s2D)
+            61_2: 23_4(fvec2) Load 59_2(c2)
+           305_1:30_1(ResType) ImageSparseSampleImplicitLod 61_1 61_2
+            81_1: 23_1(fvec4) CompositeExtract 305_1 1
+                              Store 59_23(texel) 81_1
+            81_2:   21_1(int) CompositeExtract 305_1 0
+            61_3:   21_1(int) Load 59_22(resident)
+           197_1:   21_1(int) BitwiseOr 61_3 81_2
+                              Store 59_22(resident) 197_1
+            61_4:        27_2 Load 59_3(s3D)
+            61_5: 23_5(fvec3) Load 59_4(c3)
+           305_2:30_1(ResType) ImageSparseSampleImplicitLod 61_4 61_5 Bias 43_3
+            81_3: 23_1(fvec4) CompositeExtract 305_2 1
+                              Store 59_23(texel) 81_3
+            81_4:   21_1(int) CompositeExtract 305_2 0
+            61_6:   21_1(int) Load 59_22(resident)
+           197_2:   21_1(int) BitwiseOr 61_6 81_4
+                              Store 59_22(resident) 197_2
+            61_7:        27_3 Load 59_5(isCube)
+            61_8: 23_5(fvec3) Load 59_4(c3)
+           305_3:30_2(ResType) ImageSparseSampleImplicitLod 61_7 61_8
+            81_5: 23_2(ivec4) CompositeExtract 305_3 1
+                              Store 59_24(itexel) 81_5
+            81_6:   21_1(int) CompositeExtract 305_3 0
+            61_9:   21_1(int) Load 59_22(resident)
+           197_3:   21_1(int) BitwiseOr 61_9 81_6
+                              Store 59_22(resident) 197_3
+           61_10:        27_4 Load 59_6(s2DShadow)
+           61_11: 23_5(fvec3) Load 59_4(c3)
+            65_1:  32_11(ptr) AccessChain 59_23(texel) uint(0)
+            81_7: 22_1(float) CompositeExtract 61_11 2
+           307_1:30_3(ResType) ImageSparseSampleDrefImplicitLod 61_10 61_11 81_7
+            81_8: 22_1(float) CompositeExtract 307_1 1
+                              Store 65_1 81_8
+            81_9:   21_1(int) CompositeExtract 307_1 0
+           61_12:   21_1(int) Load 59_22(resident)
+           197_4:   21_1(int) BitwiseOr 61_12 81_9
+                              Store 59_22(resident) 197_4
+           61_13:        27_5 Load 59_7(sCubeArrayShadow)
+           61_14: 23_1(fvec4) Load 59_8(c4)
+            65_2:  32_11(ptr) AccessChain 59_23(texel) uint(0)
+           307_2:30_3(ResType) ImageSparseSampleDrefImplicitLod 61_13 61_14 43_4
+           81_10: 22_1(float) CompositeExtract 307_2 1
+                              Store 65_2 81_10
+           81_11:   21_1(int) CompositeExtract 307_2 0
+           61_15:   21_1(int) Load 59_22(resident)
+           197_5:   21_1(int) BitwiseOr 61_15 81_11
+                              Store 59_22(resident) 197_5
+           61_16:        27_1 Load 59_1(s2D)
+           61_17: 23_4(fvec2) Load 59_2(c2)
+           306_1:30_1(ResType) ImageSparseSampleExplicitLod 61_16 61_17 Lod 43_3
+           81_12: 23_1(fvec4) CompositeExtract 306_1 1
+                              Store 59_23(texel) 81_12
+           81_13:   21_1(int) CompositeExtract 306_1 0
+           61_18:   21_1(int) Load 59_22(resident)
+           197_6:   21_1(int) BitwiseOr 61_18 81_13
+                              Store 59_22(resident) 197_6
+           61_19:        27_6 Load 59_9(usCubeArray)
+           61_20: 23_1(fvec4) Load 59_8(c4)
+           306_2:30_4(ResType) ImageSparseSampleExplicitLod 61_19 61_20 Lod 43_4
+           81_14: 23_3(ivec4) CompositeExtract 306_2 1
+                              Store 59_25(utexel) 81_14
+           81_15:   21_1(int) CompositeExtract 306_2 0
+           61_21:   21_1(int) Load 59_22(resident)
+           197_7:   21_1(int) BitwiseOr 61_21 81_15
+                              Store 59_22(resident) 197_7
+           61_22:        27_4 Load 59_6(s2DShadow)
+           61_23: 23_5(fvec3) Load 59_4(c3)
+            65_3:  32_11(ptr) AccessChain 59_23(texel) uint(1)
+           81_16: 22_1(float) CompositeExtract 61_23 2
+           308_1:30_3(ResType) ImageSparseSampleDrefExplicitLod 61_22 61_23 81_16 Lod 43_3
+           81_17: 22_1(float) CompositeExtract 308_1 1
+                              Store 65_3 81_17
+           81_18:   21_1(int) CompositeExtract 308_1 0
+           61_24:   21_1(int) Load 59_22(resident)
+           197_8:   21_1(int) BitwiseOr 61_24 81_18
+                              Store 59_22(resident) 197_8
+           61_25:        27_2 Load 59_3(s3D)
+           61_26: 23_5(fvec3) Load 59_4(c3)
+           305_4:30_1(ResType) ImageSparseSampleImplicitLod 61_25 61_26 Bias ConstOffset 43_3 44_4
+           81_19: 23_1(fvec4) CompositeExtract 305_4 1
+                              Store 59_23(texel) 81_19
+           81_20:   21_1(int) CompositeExtract 305_4 0
+           61_27:   21_1(int) Load 59_22(resident)
+           197_9:   21_1(int) BitwiseOr 61_27 81_20
+                              Store 59_22(resident) 197_9
+           61_28:        27_7 Load 59_10(us2DRect)
+           61_29: 23_4(fvec2) Load 59_2(c2)
+           305_5:30_4(ResType) ImageSparseSampleImplicitLod 61_28 61_29 ConstOffset 44_5
+           81_21: 23_3(ivec4) CompositeExtract 305_5 1
+                              Store 59_25(utexel) 81_21
+           81_22:   21_1(int) CompositeExtract 305_5 0
+           61_30:   21_1(int) Load 59_22(resident)
+          197_10:   21_1(int) BitwiseOr 61_30 81_22
+                              Store 59_22(resident) 197_10
+           61_31:        27_8 Load 59_11(s2DArrayShadow)
+           61_32: 23_1(fvec4) Load 59_8(c4)
+            65_4:  32_11(ptr) AccessChain 59_23(texel) uint(2)
+           81_23: 22_1(float) CompositeExtract 61_32 3
+           307_3:30_3(ResType) ImageSparseSampleDrefImplicitLod 61_31 61_32 81_23 ConstOffset 44_6
+           81_24: 22_1(float) CompositeExtract 307_3 1
+                              Store 65_4 81_24
+           81_25:   21_1(int) CompositeExtract 307_3 0
+           61_33:   21_1(int) Load 59_22(resident)
+          197_11:   21_1(int) BitwiseOr 61_33 81_25
+                              Store 59_22(resident) 197_11
+           61_34:        27_1 Load 59_1(s2D)
+           61_35: 23_4(fvec2) Load 59_2(c2)
+           110_1: 23_7(ivec2) ConvertFToS 61_35
+           100_1:        25_1 Image 61_34
+           313_1:30_1(ResType) ImageSparseFetch 100_1 110_1 Lod 43_5
+           81_26: 23_1(fvec4) CompositeExtract 313_1 1
+                              Store 59_23(texel) 81_26
+           81_27:   21_1(int) CompositeExtract 313_1 0
+           61_36:   21_1(int) Load 59_22(resident)
+          197_12:   21_1(int) BitwiseOr 61_36 81_27
+                              Store 59_22(resident) 197_12
+           61_37:        27_7 Load 59_10(us2DRect)
+           61_38: 23_4(fvec2) Load 59_2(c2)
+           110_2: 23_7(ivec2) ConvertFToS 61_38
+           100_2:        25_7 Image 61_37
+           313_2:30_4(ResType) ImageSparseFetch 100_2 110_2
+           81_28: 23_3(ivec4) CompositeExtract 313_2 1
+                              Store 59_25(utexel) 81_28
+           81_29:   21_1(int) CompositeExtract 313_2 0
+           61_39:   21_1(int) Load 59_22(resident)
+          197_13:   21_1(int) BitwiseOr 61_39 81_29
+                              Store 59_22(resident) 197_13
+           61_40:        27_9 Load 59_12(s2DMS)
+           61_41: 23_4(fvec2) Load 59_2(c2)
+           110_3: 23_7(ivec2) ConvertFToS 61_41
+           100_3:        25_9 Image 61_40
+           313_3:30_1(ResType) ImageSparseFetch 100_3 110_3 Sample 43_8
+           81_30: 23_1(fvec4) CompositeExtract 313_3 1
+                              Store 59_23(texel) 81_30
+           81_31:   21_1(int) CompositeExtract 313_3 0
+           61_42:   21_1(int) Load 59_22(resident)
+          197_14:   21_1(int) BitwiseOr 61_42 81_31
+                              Store 59_22(resident) 197_14
+           61_43:        27_2 Load 59_3(s3D)
+           61_44: 23_5(fvec3) Load 59_4(c3)
+           110_4: 23_6(ivec3) ConvertFToS 61_44
+           100_4:        25_2 Image 61_43
+           313_4:30_1(ResType) ImageSparseFetch 100_4 110_4 Lod ConstOffset 43_5 44_7
+           81_32: 23_1(fvec4) CompositeExtract 313_4 1
+                              Store 59_23(texel) 81_32
+           81_33:   21_1(int) CompositeExtract 313_4 0
+           61_45:   21_1(int) Load 59_22(resident)
+          197_15:   21_1(int) BitwiseOr 61_45 81_33
+                              Store 59_22(resident) 197_15
+           61_46:        27_7 Load 59_10(us2DRect)
+           61_47: 23_4(fvec2) Load 59_2(c2)
+           110_5: 23_7(ivec2) ConvertFToS 61_47
+           100_5:        25_7 Image 61_46
+           313_5:30_4(ResType) ImageSparseFetch 100_5 110_5 ConstOffset 44_5
+           81_34: 23_3(ivec4) CompositeExtract 313_5 1
+                              Store 59_25(utexel) 81_34
+           81_35:   21_1(int) CompositeExtract 313_5 0
+           61_48:   21_1(int) Load 59_22(resident)
+          197_16:   21_1(int) BitwiseOr 61_48 81_35
+                              Store 59_22(resident) 197_16
+           61_49:        27_1 Load 59_1(s2D)
+           61_50: 23_4(fvec2) Load 59_2(c2)
+           306_3:30_1(ResType) ImageSparseSampleExplicitLod 61_49 61_50 Lod ConstOffset 43_3 44_6
+           81_36: 23_1(fvec4) CompositeExtract 306_3 1
+                              Store 59_23(texel) 81_36
+           81_37:   21_1(int) CompositeExtract 306_3 0
+           61_51:   21_1(int) Load 59_22(resident)
+          197_17:   21_1(int) BitwiseOr 61_51 81_37
+                              Store 59_22(resident) 197_17
+           61_52:       27_10 Load 59_13(is2DArray)
+           61_53: 23_5(fvec3) Load 59_4(c3)
+           306_4:30_2(ResType) ImageSparseSampleExplicitLod 61_52 61_53 Lod ConstOffset 43_3 44_8
+           81_38: 23_2(ivec4) CompositeExtract 306_4 1
+                              Store 59_24(itexel) 81_38
+           81_39:   21_1(int) CompositeExtract 306_4 0
+           61_54:   21_1(int) Load 59_22(resident)
+          197_18:   21_1(int) BitwiseOr 61_54 81_39
+                              Store 59_22(resident) 197_18
+           61_55:        27_4 Load 59_6(s2DShadow)
+           61_56: 23_5(fvec3) Load 59_4(c3)
+            65_5:  32_11(ptr) AccessChain 59_23(texel) uint(2)
+           81_40: 22_1(float) CompositeExtract 61_56 2
+           308_2:30_3(ResType) ImageSparseSampleDrefExplicitLod 61_55 61_56 81_40 Lod ConstOffset 43_3 44_9
+           81_41: 22_1(float) CompositeExtract 308_2 1
+                              Store 65_5 81_41
+           81_42:   21_1(int) CompositeExtract 308_2 0
+           61_57:   21_1(int) Load 59_22(resident)
+          197_19:   21_1(int) BitwiseOr 61_57 81_42
+                              Store 59_22(resident) 197_19
+           61_58:        27_2 Load 59_3(s3D)
+           61_59: 23_5(fvec3) Load 59_4(c3)
+           306_5:30_1(ResType) ImageSparseSampleExplicitLod 61_58 61_59 Grad 61_59 61_59
+           81_43: 23_1(fvec4) CompositeExtract 306_5 1
+                              Store 59_23(texel) 81_43
+           81_44:   21_1(int) CompositeExtract 306_5 0
+           61_60:   21_1(int) Load 59_22(resident)
+          197_20:   21_1(int) BitwiseOr 61_60 81_44
+                              Store 59_22(resident) 197_20
+           61_61:       27_11 Load 59_14(sCubeShadow)
+           61_62: 23_1(fvec4) Load 59_8(c4)
+           61_63: 23_5(fvec3) Load 59_4(c3)
+            65_6:  32_11(ptr) AccessChain 59_23(texel) uint(1)
+           81_45: 22_1(float) CompositeExtract 61_62 3
+           308_3:30_3(ResType) ImageSparseSampleDrefExplicitLod 61_61 61_62 81_45 Grad 61_63 61_63
+           81_46: 22_1(float) CompositeExtract 308_3 1
+                              Store 65_6 81_46
+           81_47:   21_1(int) CompositeExtract 308_3 0
+           61_64:   21_1(int) Load 59_22(resident)
+          197_21:   21_1(int) BitwiseOr 61_64 81_47
+                              Store 59_22(resident) 197_21
+           61_65:        27_6 Load 59_9(usCubeArray)
+           61_66: 23_1(fvec4) Load 59_8(c4)
+           61_67: 23_5(fvec3) Load 59_4(c3)
+           306_6:30_4(ResType) ImageSparseSampleExplicitLod 61_65 61_66 Grad 61_67 61_67
+           81_48: 23_3(ivec4) CompositeExtract 306_6 1
+                              Store 59_25(utexel) 81_48
+           81_49:   21_1(int) CompositeExtract 306_6 0
+           61_68:   21_1(int) Load 59_22(resident)
+          197_22:   21_1(int) BitwiseOr 61_68 81_49
+                              Store 59_22(resident) 197_22
+           61_69:        27_1 Load 59_1(s2D)
+           61_70: 23_4(fvec2) Load 59_2(c2)
+           306_7:30_1(ResType) ImageSparseSampleExplicitLod 61_69 61_70 Grad ConstOffset 61_70 61_70 44_6
+           81_50: 23_1(fvec4) CompositeExtract 306_7 1
+                              Store 59_23(texel) 81_50
+           81_51:   21_1(int) CompositeExtract 306_7 0
+           61_71:   21_1(int) Load 59_22(resident)
+          197_23:   21_1(int) BitwiseOr 61_71 81_51
+                              Store 59_22(resident) 197_23
+           61_72:       27_12 Load 59_15(s2DRectShadow)
+           61_73: 23_5(fvec3) Load 59_4(c3)
+           61_74: 23_4(fvec2) Load 59_2(c2)
+            65_7:  32_11(ptr) AccessChain 59_23(texel) uint(3)
+           81_52: 22_1(float) CompositeExtract 61_73 2
+           308_4:30_3(ResType) ImageSparseSampleDrefExplicitLod 61_72 61_73 81_52 Grad ConstOffset 61_74 61_74 44_8
+           81_53: 22_1(float) CompositeExtract 308_4 1
+                              Store 65_7 81_53
+           81_54:   21_1(int) CompositeExtract 308_4 0
+           61_75:   21_1(int) Load 59_22(resident)
+          197_24:   21_1(int) BitwiseOr 61_75 81_54
+                              Store 59_22(resident) 197_24
+           61_76:       27_10 Load 59_13(is2DArray)
+           61_77: 23_5(fvec3) Load 59_4(c3)
+           61_78: 23_4(fvec2) Load 59_2(c2)
+           306_8:30_2(ResType) ImageSparseSampleExplicitLod 61_76 61_77 Grad ConstOffset 61_78 61_78 44_10
+           81_55: 23_2(ivec4) CompositeExtract 306_8 1
+                              Store 59_24(itexel) 81_55
+           81_56:   21_1(int) CompositeExtract 306_8 0
+           61_79:   21_1(int) Load 59_22(resident)
+          197_25:   21_1(int) BitwiseOr 61_79 81_56
+                              Store 59_22(resident) 197_25
+           61_80:        27_1 Load 59_1(s2D)
+           61_81: 23_4(fvec2) Load 59_2(c2)
+           314_1:30_1(ResType) ImageSparseGather 61_80 61_81 43_1
+           81_57: 23_1(fvec4) CompositeExtract 314_1 1
+                              Store 59_23(texel) 81_57
+           81_58:   21_1(int) CompositeExtract 314_1 0
+           61_82:   21_1(int) Load 59_22(resident)
+          197_26:   21_1(int) BitwiseOr 61_82 81_58
+                              Store 59_22(resident) 197_26
+           61_83:       27_10 Load 59_13(is2DArray)
+           61_84: 23_5(fvec3) Load 59_4(c3)
+           314_2:30_2(ResType) ImageSparseGather 61_83 61_84 43_5
+           81_59: 23_2(ivec4) CompositeExtract 314_2 1
+                              Store 59_24(itexel) 81_59
+           81_60:   21_1(int) CompositeExtract 314_2 0
+           61_85:   21_1(int) Load 59_22(resident)
+          197_27:   21_1(int) BitwiseOr 61_85 81_60
+                              Store 59_22(resident) 197_27
+           61_86:        27_8 Load 59_11(s2DArrayShadow)
+           61_87: 23_5(fvec3) Load 59_4(c3)
+           315_1:30_1(ResType) ImageSparseDrefGather 61_86 61_87 43_3
+           81_61: 23_1(fvec4) CompositeExtract 315_1 1
+                              Store 59_23(texel) 81_61
+           81_62:   21_1(int) CompositeExtract 315_1 0
+           61_88:   21_1(int) Load 59_22(resident)
+          197_28:   21_1(int) BitwiseOr 61_88 81_62
+                              Store 59_22(resident) 197_28
+           61_89:        27_1 Load 59_1(s2D)
+           61_90: 23_4(fvec2) Load 59_2(c2)
+           314_3:30_1(ResType) ImageSparseGather 61_89 61_90 43_1 ConstOffset 44_11
+           81_63: 23_1(fvec4) CompositeExtract 314_3 1
+                              Store 59_23(texel) 81_63
+           81_64:   21_1(int) CompositeExtract 314_3 0
+           61_91:   21_1(int) Load 59_22(resident)
+          197_29:   21_1(int) BitwiseOr 61_91 81_64
+                              Store 59_22(resident) 197_29
+           61_92:       27_10 Load 59_13(is2DArray)
+           61_93: 23_5(fvec3) Load 59_4(c3)
+           314_4:30_2(ResType) ImageSparseGather 61_92 61_93 43_5 ConstOffset 44_6
+           81_65: 23_2(ivec4) CompositeExtract 314_4 1
+                              Store 59_24(itexel) 81_65
+           81_66:   21_1(int) CompositeExtract 314_4 0
+           61_94:   21_1(int) Load 59_22(resident)
+          197_30:   21_1(int) BitwiseOr 61_94 81_66
+                              Store 59_22(resident) 197_30
+           61_95:       27_12 Load 59_15(s2DRectShadow)
+           61_96: 23_4(fvec2) Load 59_2(c2)
+           315_2:30_1(ResType) ImageSparseDrefGather 61_95 61_96 43_3 ConstOffset 44_9
+           81_67: 23_1(fvec4) CompositeExtract 315_2 1
+                              Store 59_23(texel) 81_67
+           81_68:   21_1(int) CompositeExtract 315_2 0
+           61_97:   21_1(int) Load 59_22(resident)
+          197_31:   21_1(int) BitwiseOr 61_97 81_68
+                              Store 59_22(resident) 197_31
+           61_98:        27_1 Load 59_1(s2D)
+           61_99: 23_4(fvec2) Load 59_2(c2)
+           314_5:30_1(ResType) ImageSparseGather 61_98 61_99 43_1 ConstOffsets 44_16
+           81_69: 23_1(fvec4) CompositeExtract 314_5 1
+                              Store 59_23(texel) 81_69
+           81_70:   21_1(int) CompositeExtract 314_5 0
+          61_100:   21_1(int) Load 59_22(resident)
+          197_32:   21_1(int) BitwiseOr 61_100 81_70
+                              Store 59_22(resident) 197_32
+          61_101:       27_10 Load 59_13(is2DArray)
+          61_102: 23_5(fvec3) Load 59_4(c3)
+           314_6:30_2(ResType) ImageSparseGather 61_101 61_102 43_5 ConstOffsets 44_16
+           81_71: 23_2(ivec4) CompositeExtract 314_6 1
+                              Store 59_24(itexel) 81_71
+           81_72:   21_1(int) CompositeExtract 314_6 0
+          61_103:   21_1(int) Load 59_22(resident)
+          197_33:   21_1(int) BitwiseOr 61_103 81_72
+                              Store 59_22(resident) 197_33
+          61_104:       27_12 Load 59_15(s2DRectShadow)
+          61_105: 23_4(fvec2) Load 59_2(c2)
+           315_3:30_1(ResType) ImageSparseDrefGather 61_104 61_105 43_3 ConstOffsets 44_16
+           81_73: 23_1(fvec4) CompositeExtract 315_3 1
+                              Store 59_23(texel) 81_73
+           81_74:   21_1(int) CompositeExtract 315_3 0
+          61_106:   21_1(int) Load 59_22(resident)
+          197_34:   21_1(int) BitwiseOr 61_106 81_74
+                              Store 59_22(resident) 197_34
+          61_107:       25_13 Load 59_16(i2D)
+          61_108: 23_7(ivec2) Load 59_17(ic2)
+           320_1:30_1(ResType) ImageSparseRead 61_107 61_108
+           81_75: 23_1(fvec4) CompositeExtract 320_1 1
+                              Store 59_23(texel) 81_75
+           81_76:   21_1(int) CompositeExtract 320_1 0
+          61_109:   21_1(int) Load 59_22(resident)
+          197_35:   21_1(int) BitwiseOr 61_109 81_76
+                              Store 59_22(resident) 197_35
+          61_110:       25_14 Load 59_18(ii3D)
+          61_111: 23_6(ivec3) Load 59_19(ic3)
+           320_2:30_2(ResType) ImageSparseRead 61_110 61_111
+           81_77: 23_2(ivec4) CompositeExtract 320_2 1
+                              Store 59_24(itexel) 81_77
+           81_78:   21_1(int) CompositeExtract 320_2 0
+          61_112:   21_1(int) Load 59_22(resident)
+          197_36:   21_1(int) BitwiseOr 61_112 81_78
+                              Store 59_22(resident) 197_36
+          61_113:       25_15 Load 59_20(i2DMS)
+          61_114: 23_7(ivec2) Load 59_17(ic2)
+           320_3:30_1(ResType) ImageSparseRead 61_113 61_114 Sample 43_6
+           81_79: 23_1(fvec4) CompositeExtract 320_3 1
+                              Store 59_23(texel) 81_79
+           81_80:   21_1(int) CompositeExtract 320_3 0
+          61_115:   21_1(int) Load 59_22(resident)
+          197_37:   21_1(int) BitwiseOr 61_115 81_80
+                              Store 59_22(resident) 197_37
+          61_116:   21_1(int) Load 59_22(resident)
+           316_1:  20_1(bool) ImageSparseTexelsResident 61_116
+                              SelectionMerge 248_4 None
+                              BranchConditional 316_1 248_2 248_3
+           248_2:               Label
+          61_117: 23_1(fvec4)   Load 59_23(texel)
+                                Store 59_26 61_117
+                                Branch 248_4
+           248_3:               Label
+          61_118: 23_2(ivec4)   Load 59_24(itexel)
+           111_1: 23_1(fvec4)   ConvertSToF 61_118
+          61_119: 23_3(ivec4)   Load 59_25(utexel)
+           112_1: 23_1(fvec4)   ConvertUToF 61_119
+           129_1: 23_1(fvec4)   FAdd 111_1 112_1
+                                Store 59_26 129_1
+                                Branch 248_4
+           248_4:             Label
+          61_120: 23_1(fvec4) Load 59_26
+                              Store 59_21(outColor) 61_120
                               Return
                               FunctionEnd

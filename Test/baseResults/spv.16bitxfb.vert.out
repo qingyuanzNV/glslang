@@ -9,112 +9,112 @@ spv.16bitxfb.vert
                               Capability TransformFeedback
                               Capability StorageInputOutput16
                               Extension  "SPV_KHR_16bit_storage"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 9 12 18 36 39 46 49
-                              ExecutionMode 4 Xfb
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7
+                              ExecutionMode 54_1 Xfb
                               Source GLSL 450
                               SourceExtension  "GL_AMD_gpu_shader_half_float"
                               SourceExtension  "GL_AMD_gpu_shader_int16"
-                              Name 4  "main"
-                              Name 9  "of16v3"
-                              Name 12  "if16v4"
-                              Name 16  "F16Out"
-                              MemberName 16(F16Out) 0  "of16"
-                              MemberName 16(F16Out) 1  "of16v2"
-                              Name 18  ""
-                              Name 36  "oi16v3"
-                              Name 39  "ii16v4"
-                              Name 44  "I16Out"
-                              MemberName 44(I16Out) 0  "ou16"
-                              MemberName 44(I16Out) 1  "ou16v2"
-                              Name 46  ""
-                              Name 49  "iu16v4"
-                              Decorate 9(of16v3) Location 0
-                              Decorate 9(of16v3) Offset 0
-                              Decorate 9(of16v3) XfbBuffer 0
-                              Decorate 9(of16v3) XfbStride 6
-                              Decorate 12(if16v4) Location 0
-                              Decorate 16(F16Out) Block
-                              MemberDecorate 16(F16Out) 0 Offset 0
-                              MemberDecorate 16(F16Out) 1 Offset 2
-                              Decorate 18 Location 1
-                              Decorate 18 XfbBuffer 1
-                              Decorate 18 XfbStride 6
-                              Decorate 36(oi16v3) Location 5
-                              Decorate 36(oi16v3) Offset 0
-                              Decorate 36(oi16v3) XfbBuffer 2
-                              Decorate 36(oi16v3) XfbStride 6
-                              Decorate 39(ii16v4) Location 1
-                              Decorate 44(I16Out) Block
-                              MemberDecorate 44(I16Out) 0 Offset 0
-                              MemberDecorate 44(I16Out) 1 Offset 2
-                              Decorate 46 Location 6
-                              Decorate 46 XfbBuffer 3
-                              Decorate 46 XfbStride 6
-                              Decorate 49(iu16v4) Location 2
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 16
-               7:             TypeVector 6(float16_t) 3
-               8:             TypePointer Output 7(f16vec3)
-       9(of16v3):      8(ptr) Variable Output
-              10:             TypeVector 6(float16_t) 4
-              11:             TypePointer Input 10(f16vec4)
-      12(if16v4):     11(ptr) Variable Input
-              15:             TypeVector 6(float16_t) 2
-      16(F16Out):             TypeStruct 6(float16_t) 15(f16vec2)
-              17:             TypePointer Output 16(F16Out)
-              18:     17(ptr) Variable Output
-              19:             TypeInt 32 1
-              20:     19(int) Constant 0
-              21:             TypeInt 32 0
-              22:     21(int) Constant 0
-              23:             TypePointer Input 6(float16_t)
-              26:             TypePointer Output 6(float16_t)
-              28:     19(int) Constant 1
-              31:             TypePointer Output 15(f16vec2)
-              33:             TypeInt 16 1
-              34:             TypeVector 33(int16_t) 3
-              35:             TypePointer Output 34(i16vec3)
-      36(oi16v3):     35(ptr) Variable Output
-              37:             TypeVector 33(int16_t) 4
-              38:             TypePointer Input 37(i16vec4)
-      39(ii16v4):     38(ptr) Variable Input
-              42:             TypeInt 16 0
-              43:             TypeVector 42(int16_t) 2
-      44(I16Out):             TypeStruct 42(int16_t) 43(i16vec2)
-              45:             TypePointer Output 44(I16Out)
-              46:     45(ptr) Variable Output
-              47:             TypeVector 42(int16_t) 4
-              48:             TypePointer Input 47(i16vec4)
-      49(iu16v4):     48(ptr) Variable Input
-              50:             TypePointer Input 42(int16_t)
-              53:             TypePointer Output 42(int16_t)
-              57:             TypePointer Output 43(i16vec2)
-         4(main):           2 Function None 3
-               5:             Label
-              13: 10(f16vec4) Load 12(if16v4)
-              14:  7(f16vec3) VectorShuffle 13 13 0 1 2
-                              Store 9(of16v3) 14
-              24:     23(ptr) AccessChain 12(if16v4) 22
-              25:6(float16_t) Load 24
-              27:     26(ptr) AccessChain 18 20
-                              Store 27 25
-              29: 10(f16vec4) Load 12(if16v4)
-              30: 15(f16vec2) VectorShuffle 29 29 0 1
-              32:     31(ptr) AccessChain 18 28
-                              Store 32 30
-              40: 37(i16vec4) Load 39(ii16v4)
-              41: 34(i16vec3) VectorShuffle 40 40 0 1 2
-                              Store 36(oi16v3) 41
-              51:     50(ptr) AccessChain 49(iu16v4) 22
-              52: 42(int16_t) Load 51
-              54:     53(ptr) AccessChain 46 20
-                              Store 54 52
-              55: 47(i16vec4) Load 49(iu16v4)
-              56: 43(i16vec2) VectorShuffle 55 55 0 1
-              58:     57(ptr) AccessChain 46 28
-                              Store 58 56
+                              Name 54_1  "main"
+                              Name 59_1  "of16v3"
+                              Name 59_2  "if16v4"
+                              Name 30_1  "F16Out"
+                              MemberName 30_1(F16Out) 0  "of16"
+                              MemberName 30_1(F16Out) 1  "of16v2"
+                              Name 59_3  ""
+                              Name 59_4  "oi16v3"
+                              Name 59_5  "ii16v4"
+                              Name 30_2  "I16Out"
+                              MemberName 30_2(I16Out) 0  "ou16"
+                              MemberName 30_2(I16Out) 1  "ou16v2"
+                              Name 59_6  ""
+                              Name 59_7  "iu16v4"
+                              Decorate 59_1(of16v3) Location 0
+                              Decorate 59_1(of16v3) Offset 0
+                              Decorate 59_1(of16v3) XfbBuffer 0
+                              Decorate 59_1(of16v3) XfbStride 6
+                              Decorate 59_2(if16v4) Location 0
+                              Decorate 30_1(F16Out) Block
+                              MemberDecorate 30_1(F16Out) 0 Offset 0
+                              MemberDecorate 30_1(F16Out) 1 Offset 2
+                              Decorate 59_3 Location 1
+                              Decorate 59_3 XfbBuffer 1
+                              Decorate 59_3 XfbStride 6
+                              Decorate 59_4(oi16v3) Location 5
+                              Decorate 59_4(oi16v3) Offset 0
+                              Decorate 59_4(oi16v3) XfbBuffer 2
+                              Decorate 59_4(oi16v3) XfbStride 6
+                              Decorate 59_5(ii16v4) Location 1
+                              Decorate 30_2(I16Out) Block
+                              MemberDecorate 30_2(I16Out) 0 Offset 0
+                              MemberDecorate 30_2(I16Out) 1 Offset 2
+                              Decorate 59_6 Location 6
+                              Decorate 59_6 XfbBuffer 3
+                              Decorate 59_6 XfbStride 6
+                              Decorate 59_7(iu16v4) Location 2
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 16
+            23_1:             TypeVector 22_1(float16_t) 3
+            32_1:             TypePointer Output 23_1(f16vec3)
+    59_1(of16v3):   32_1(ptr) Variable Output
+            23_2:             TypeVector 22_1(float16_t) 4
+            32_2:             TypePointer Input 23_2(f16vec4)
+    59_2(if16v4):   32_2(ptr) Variable Input
+            23_3:             TypeVector 22_1(float16_t) 2
+    30_1(F16Out):             TypeStruct 22_1(float16_t) 23_3(f16vec2)
+            32_3:             TypePointer Output 30_1(F16Out)
+            59_3:   32_3(ptr) Variable Output
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            21_2:             TypeInt 32 0
+         uint(0):   21_2(int) Constant 0
+            32_4:             TypePointer Input 22_1(float16_t)
+            32_5:             TypePointer Output 22_1(float16_t)
+            43_2:   21_1(int) Constant 1
+            32_6:             TypePointer Output 23_3(f16vec2)
+            21_3:             TypeInt 16 1
+            23_4:             TypeVector 21_3(int16_t) 3
+            32_7:             TypePointer Output 23_4(i16vec3)
+    59_4(oi16v3):   32_7(ptr) Variable Output
+            23_5:             TypeVector 21_3(int16_t) 4
+            32_8:             TypePointer Input 23_5(i16vec4)
+    59_5(ii16v4):   32_8(ptr) Variable Input
+            21_4:             TypeInt 16 0
+            23_6:             TypeVector 21_4(int16_t) 2
+    30_2(I16Out):             TypeStruct 21_4(int16_t) 23_6(i16vec2)
+            32_9:             TypePointer Output 30_2(I16Out)
+            59_6:   32_9(ptr) Variable Output
+            23_7:             TypeVector 21_4(int16_t) 4
+           32_10:             TypePointer Input 23_7(i16vec4)
+    59_7(iu16v4):  32_10(ptr) Variable Input
+           32_11:             TypePointer Input 21_4(int16_t)
+           32_12:             TypePointer Output 21_4(int16_t)
+           32_13:             TypePointer Output 23_6(i16vec2)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:23_2(f16vec4) Load 59_2(if16v4)
+            79_1:23_1(f16vec3) VectorShuffle 61_1 61_1 0 1 2
+                              Store 59_1(of16v3) 79_1
+            65_1:   32_4(ptr) AccessChain 59_2(if16v4) uint(0)
+            61_2:22_1(float16_t) Load 65_1
+            65_2:   32_5(ptr) AccessChain 59_3 43_1
+                              Store 65_2 61_2
+            61_3:23_2(f16vec4) Load 59_2(if16v4)
+            79_2:23_3(f16vec2) VectorShuffle 61_3 61_3 0 1
+            65_3:   32_6(ptr) AccessChain 59_3 43_2
+                              Store 65_3 79_2
+            61_4:23_5(i16vec4) Load 59_5(ii16v4)
+            79_3:23_4(i16vec3) VectorShuffle 61_4 61_4 0 1 2
+                              Store 59_4(oi16v3) 79_3
+            65_4:  32_11(ptr) AccessChain 59_7(iu16v4) uint(0)
+            61_5:21_4(int16_t) Load 65_4
+            65_5:  32_12(ptr) AccessChain 59_6 43_1
+                              Store 65_5 61_5
+            61_6:23_7(i16vec4) Load 59_7(iu16v4)
+            79_4:23_6(i16vec2) VectorShuffle 61_6 61_6 0 1
+            65_6:  32_13(ptr) AccessChain 59_6 43_2
+                              Store 65_6 79_4
                               Return
                               FunctionEnd

@@ -138,88 +138,88 @@ gl_FragCoord origin is upper left
 // Id's are bound by 57
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 54
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_OUTPUT"
-                              MemberName 8(PS_OUTPUT) 0  "Color"
-                              Name 10  "@main("
-                              Name 18  "float4_array_1"
-                              Name 27  "$Global"
-                              MemberName 27($Global) 0  "float_array"
-                              Name 29  ""
-                              Name 40  "float4_array_2"
-                              Name 46  "psout"
-                              Name 54  "@entryPointOutput.Color"
-                              Decorate 22 ArrayStride 16
-                              Decorate 24 ArrayStride 48
-                              Decorate 26 ArrayStride 192
-                              Decorate 27($Global) Block
-                              MemberDecorate 27($Global) 0 Offset 0
-                              Decorate 29 Binding 0
-                              Decorate 29 DescriptorSet 0
-                              Decorate 54(@entryPointOutput.Color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(PS_OUTPUT):             TypeStruct 7(fvec4)
-               9:             TypeFunction 8(PS_OUTPUT)
-              12:             TypeInt 32 0
-              13:     12(int) Constant 3
-              14:             TypeArray 7(fvec4) 13
-              15:     12(int) Constant 2
-              16:             TypeArray 14 15
-              17:             TypePointer Function 16
-              19:             TypeInt 32 1
-              20:     19(int) Constant 1
-              21:     19(int) Constant 2
-              22:             TypeArray 6(float) 13
-              23:     12(int) Constant 4
-              24:             TypeArray 22 23
-              25:     12(int) Constant 5
-              26:             TypeArray 24 25
-     27($Global):             TypeStruct 26
-              28:             TypePointer Uniform 27($Global)
-              29:     28(ptr) Variable Uniform
-              30:     19(int) Constant 0
-              31:     19(int) Constant 3
-              32:             TypePointer Uniform 6(float)
-              36:             TypePointer Function 7(fvec4)
-              38:             TypeArray 14 25
-              39:             TypePointer Function 38
-              41:             TypePointer Function 14
-              45:             TypePointer Function 8(PS_OUTPUT)
-              53:             TypePointer Output 7(fvec4)
-54(@entryPointOutput.Color):     53(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              55:8(PS_OUTPUT) FunctionCall 10(@main()
-              56:    7(fvec4) CompositeExtract 55 0
-                              Store 54(@entryPointOutput.Color) 56
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              Name 54_2  "@main("
+                              Name 59_3  "float4_array_1"
+                              Name 30_2  "$Global"
+                              MemberName 30_2($Global) 0  "float_array"
+                              Name 59_1  ""
+                              Name 59_4  "float4_array_2"
+                              Name 59_5  "psout"
+                              Name 59_2  "@entryPointOutput.Color"
+                              Decorate 28_3 ArrayStride 16
+                              Decorate 28_4 ArrayStride 48
+                              Decorate 28_5 ArrayStride 192
+                              Decorate 30_2($Global) Block
+                              MemberDecorate 30_2($Global) 0 Offset 0
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(@entryPointOutput.Color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 23_1(fvec4) uint(3)
+         uint(2):   21_1(int) Constant 2
+            28_2:             TypeArray 28_1 uint(2)
+            32_1:             TypePointer Function 28_2
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 1
+            43_2:   21_2(int) Constant 2
+            28_3:             TypeArray 22_1(float) uint(3)
+         uint(4):   21_1(int) Constant 4
+            28_4:             TypeArray 28_3 uint(4)
+         uint(5):   21_1(int) Constant 5
+            28_5:             TypeArray 28_4 uint(5)
+   30_2($Global):             TypeStruct 28_5
+            32_2:             TypePointer Uniform 30_2($Global)
+            59_1:   32_2(ptr) Variable Uniform
+            43_3:   21_2(int) Constant 0
+            43_4:   21_2(int) Constant 3
+            32_3:             TypePointer Uniform 22_1(float)
+            32_4:             TypePointer Function 23_1(fvec4)
+            28_6:             TypeArray 28_1 uint(5)
+            32_5:             TypePointer Function 28_6
+            32_6:             TypePointer Function 28_1
+            32_7:             TypePointer Function 30_1(PS_OUTPUT)
+            32_8:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput.Color):   32_8(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_2(@main()
+            81_1: 23_1(fvec4) CompositeExtract 57_1 0
+                              Store 59_2(@entryPointOutput.Color) 81_1
                               Return
                               FunctionEnd
-      10(@main():8(PS_OUTPUT) Function None 9
-              11:             Label
-18(float4_array_1):     17(ptr) Variable Function
-40(float4_array_2):     39(ptr) Variable Function
-       46(psout):     45(ptr) Variable Function
-              33:     32(ptr) AccessChain 29 30 21 31 20
-              34:    6(float) Load 33
-              35:    7(fvec4) CompositeConstruct 34 34 34 34
-              37:     36(ptr) AccessChain 18(float4_array_1) 20 21
-                              Store 37 35
-              42:     41(ptr) AccessChain 18(float4_array_1) 30
-              43:          14 Load 42
-              44:     41(ptr) AccessChain 40(float4_array_2) 20
-                              Store 44 43
-              47:     36(ptr) AccessChain 18(float4_array_1) 20 21
-              48:    7(fvec4) Load 47
-              49:     36(ptr) AccessChain 46(psout) 30
-                              Store 49 48
-              50:8(PS_OUTPUT) Load 46(psout)
-                              ReturnValue 50
+    54_2(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_2:             Label
+59_3(float4_array_1):   32_1(ptr) Variable Function
+59_4(float4_array_2):   32_5(ptr) Variable Function
+     59_5(psout):   32_7(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1 43_3 43_2 43_4 43_1
+            61_1: 22_1(float) Load 65_1
+            80_1: 23_1(fvec4) CompositeConstruct 61_1 61_1 61_1 61_1
+            65_2:   32_4(ptr) AccessChain 59_3(float4_array_1) 43_1 43_2
+                              Store 65_2 80_1
+            65_3:   32_6(ptr) AccessChain 59_3(float4_array_1) 43_3
+            61_2:        28_1 Load 65_3
+            65_4:   32_6(ptr) AccessChain 59_4(float4_array_2) 43_1
+                              Store 65_4 61_2
+            65_5:   32_4(ptr) AccessChain 59_3(float4_array_1) 43_1 43_2
+            61_3: 23_1(fvec4) Load 65_5
+            65_6:   32_4(ptr) AccessChain 59_5(psout) 43_3
+                              Store 65_6 61_3
+            61_4:30_1(PS_OUTPUT) Load 59_5(psout)
+                              ReturnValue 61_4
                               FunctionEnd

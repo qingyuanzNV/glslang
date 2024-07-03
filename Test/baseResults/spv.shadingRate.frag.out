@@ -6,43 +6,43 @@ spv.shadingRate.frag
                               Capability Shader
                               Capability FragmentDensityEXT
                               Extension  "SPV_NV_shading_rate"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 9 13 17 19
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_NV_shading_rate_image"
-                              Name 4  "main"
-                              Name 9  "FragmentSize"
-                              Name 13  "gl_FragmentSizeNV"
-                              Name 17  "InvocationsPerPixel"
-                              Name 19  "gl_InvocationsPerPixelNV"
-                              Decorate 9(FragmentSize) Location 0
-                              Decorate 13(gl_FragmentSizeNV) BuiltIn FragSizeEXT
-                              Decorate 13(gl_FragmentSizeNV) Flat
-                              Decorate 17(InvocationsPerPixel) Location 2
-                              Decorate 19(gl_InvocationsPerPixelNV) BuiltIn FragInvocationCountEXT
-                              Decorate 19(gl_InvocationsPerPixelNV) Flat
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypePointer Output 7(fvec2)
- 9(FragmentSize):      8(ptr) Variable Output
-              10:             TypeInt 32 1
-              11:             TypeVector 10(int) 2
-              12:             TypePointer Input 11(ivec2)
-13(gl_FragmentSizeNV):     12(ptr) Variable Input
-              16:             TypePointer Output 10(int)
-17(InvocationsPerPixel):     16(ptr) Variable Output
-              18:             TypePointer Input 10(int)
-19(gl_InvocationsPerPixelNV):     18(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              14:   11(ivec2) Load 13(gl_FragmentSizeNV)
-              15:    7(fvec2) ConvertSToF 14
-                              Store 9(FragmentSize) 15
-              20:     10(int) Load 19(gl_InvocationsPerPixelNV)
-                              Store 17(InvocationsPerPixel) 20
+                              Name 54_1  "main"
+                              Name 59_1  "FragmentSize"
+                              Name 59_2  "gl_FragmentSizeNV"
+                              Name 59_3  "InvocationsPerPixel"
+                              Name 59_4  "gl_InvocationsPerPixelNV"
+                              Decorate 59_1(FragmentSize) Location 0
+                              Decorate 59_2(gl_FragmentSizeNV) BuiltIn FragSizeEXT
+                              Decorate 59_2(gl_FragmentSizeNV) Flat
+                              Decorate 59_3(InvocationsPerPixel) Location 2
+                              Decorate 59_4(gl_InvocationsPerPixelNV) BuiltIn FragInvocationCountEXT
+                              Decorate 59_4(gl_InvocationsPerPixelNV) Flat
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            32_1:             TypePointer Output 23_1(fvec2)
+59_1(FragmentSize):   32_1(ptr) Variable Output
+            21_1:             TypeInt 32 1
+            23_2:             TypeVector 21_1(int) 2
+            32_2:             TypePointer Input 23_2(ivec2)
+59_2(gl_FragmentSizeNV):   32_2(ptr) Variable Input
+            32_3:             TypePointer Output 21_1(int)
+59_3(InvocationsPerPixel):   32_3(ptr) Variable Output
+            32_4:             TypePointer Input 21_1(int)
+59_4(gl_InvocationsPerPixelNV):   32_4(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1: 23_2(ivec2) Load 59_2(gl_FragmentSizeNV)
+           111_1: 23_1(fvec2) ConvertSToF 61_1
+                              Store 59_1(FragmentSize) 111_1
+            61_2:   21_1(int) Load 59_4(gl_InvocationsPerPixelNV)
+                              Store 59_3(InvocationsPerPixel) 61_2
                               Return
                               FunctionEnd

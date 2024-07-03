@@ -6,64 +6,64 @@ spv.fragmentShaderBarycentric3.frag
                               Capability Shader
                               Capability FragmentBarycentricKHR
                               Extension  "SPV_KHR_fragment_shader_barycentric"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 8 11 21
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_fragment_shader_barycentric"
-                              Name 4  "main"
-                              Name 8  "value"
-                              Name 11  "gl_BaryCoordEXT"
-                              Name 17  "vertices"
-                              MemberName 17(vertices) 0  "attrib"
-                              Name 21  "v"
-                              Decorate 8(value) Location 1
-                              Decorate 11(gl_BaryCoordEXT) BuiltIn BaryCoordKHR
-                              Decorate 17(vertices) Block
-                              Decorate 21(v) Location 0
-                              Decorate 21(v) PerVertexKHR
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Output 6(float)
-        8(value):      7(ptr) Variable Output
-               9:             TypeVector 6(float) 3
-              10:             TypePointer Input 9(fvec3)
-11(gl_BaryCoordEXT):     10(ptr) Variable Input
-              12:             TypeInt 32 0
-              13:     12(int) Constant 0
-              14:             TypePointer Input 6(float)
-    17(vertices):             TypeStruct 6(float)
-              18:     12(int) Constant 3
-              19:             TypeArray 17(vertices) 18
-              20:             TypePointer Input 19
-           21(v):     20(ptr) Variable Input
-              22:             TypeInt 32 1
-              23:     22(int) Constant 0
-              27:     12(int) Constant 1
-              30:     22(int) Constant 1
-              35:     12(int) Constant 2
-              38:     22(int) Constant 2
-         4(main):           2 Function None 3
-               5:             Label
-              15:     14(ptr) AccessChain 11(gl_BaryCoordEXT) 13
-              16:    6(float) Load 15
-              24:     14(ptr) AccessChain 21(v) 23 23
-              25:    6(float) Load 24
-              26:    6(float) FMul 16 25
-              28:     14(ptr) AccessChain 11(gl_BaryCoordEXT) 27
-              29:    6(float) Load 28
-              31:     14(ptr) AccessChain 21(v) 30 23
-              32:    6(float) Load 31
-              33:    6(float) FMul 29 32
-              34:    6(float) FAdd 26 33
-              36:     14(ptr) AccessChain 11(gl_BaryCoordEXT) 35
-              37:    6(float) Load 36
-              39:     14(ptr) AccessChain 21(v) 38 23
-              40:    6(float) Load 39
-              41:    6(float) FMul 37 40
-              42:    6(float) FAdd 34 41
-                              Store 8(value) 42
+                              Name 54_1  "main"
+                              Name 59_1  "value"
+                              Name 59_2  "gl_BaryCoordEXT"
+                              Name 30_1  "vertices"
+                              MemberName 30_1(vertices) 0  "attrib"
+                              Name 59_3  "v"
+                              Decorate 59_1(value) Location 1
+                              Decorate 59_2(gl_BaryCoordEXT) BuiltIn BaryCoordKHR
+                              Decorate 30_1(vertices) Block
+                              Decorate 59_3(v) Location 0
+                              Decorate 59_3(v) PerVertexKHR
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Output 22_1(float)
+     59_1(value):   32_1(ptr) Variable Output
+            23_1:             TypeVector 22_1(float) 3
+            32_2:             TypePointer Input 23_1(fvec3)
+59_2(gl_BaryCoordEXT):   32_2(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Input 22_1(float)
+  30_1(vertices):             TypeStruct 22_1(float)
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 30_1(vertices) uint(3)
+            32_4:             TypePointer Input 28_1
+         59_3(v):   32_4(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+            43_2:   21_2(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+            43_3:   21_2(int) Constant 2
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2(gl_BaryCoordEXT) uint(0)
+            61_1: 22_1(float) Load 65_1
+            65_2:   32_3(ptr) AccessChain 59_3(v) 43_1 43_1
+            61_2: 22_1(float) Load 65_2
+           133_1: 22_1(float) FMul 61_1 61_2
+            65_3:   32_3(ptr) AccessChain 59_2(gl_BaryCoordEXT) uint(1)
+            61_3: 22_1(float) Load 65_3
+            65_4:   32_3(ptr) AccessChain 59_3(v) 43_2 43_1
+            61_4: 22_1(float) Load 65_4
+           133_2: 22_1(float) FMul 61_3 61_4
+           129_1: 22_1(float) FAdd 133_1 133_2
+            65_5:   32_3(ptr) AccessChain 59_2(gl_BaryCoordEXT) uint(2)
+            61_5: 22_1(float) Load 65_5
+            65_6:   32_3(ptr) AccessChain 59_3(v) 43_3 43_1
+            61_6: 22_1(float) Load 65_6
+           133_3: 22_1(float) FMul 61_5 61_6
+           129_2: 22_1(float) FAdd 129_1 133_3
+                              Store 59_1(value) 129_2
                               Return
                               FunctionEnd

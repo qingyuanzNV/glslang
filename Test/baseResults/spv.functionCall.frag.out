@@ -8,119 +8,119 @@ WARNING: 0:5: varying deprecated in version 130; may be removed in future releas
 // Id's are bound by 76
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 35 58 69 75
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2 59_3 59_4 59_5
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 11  "foo(vf4;"
-                              Name 10  "bar"
-                              Name 13  "bar("
-                              Name 16  "unreachableReturn("
-                              Name 18  "missingReturn("
-                              Name 21  "h"
-                              Name 35  "d"
-                              Name 56  "color"
-                              Name 58  "BaseColor"
-                              Name 59  "param"
-                              Name 64  "f"
-                              Name 66  "g"
-                              Name 69  "gl_FragColor"
-                              Name 75  "bigColor"
-                              Decorate 35(d) Location 2
-                              Decorate 58(BaseColor) Location 1
-                              Decorate 69(gl_FragColor) Location 0
-                              Decorate 75(bigColor) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeFunction 6(float) 8(ptr)
-              15:             TypeFunction 6(float)
-              20:             TypePointer Private 6(float)
-           21(h):     20(ptr) Variable Private
-              22:    6(float) Constant 0
-              23:             TypeInt 32 0
-              24:     23(int) Constant 0
-              25:             TypePointer Function 6(float)
-              28:     23(int) Constant 1
-              34:             TypePointer Input 6(float)
-           35(d):     34(ptr) Variable Input
-              37:    6(float) Constant 1082549862
-              38:             TypeBool
-              42:    6(float) Constant 1067030938
-              45:    6(float) Constant 1083179008
-              53:    6(float) Constant 1081711002
-              57:             TypePointer Input 7(fvec4)
-   58(BaseColor):     57(ptr) Variable Input
-              68:             TypePointer Output 7(fvec4)
-69(gl_FragColor):     68(ptr) Variable Output
-    75(bigColor):     57(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-       56(color):      8(ptr) Variable Function
-       59(param):      8(ptr) Variable Function
-           64(f):     25(ptr) Variable Function
-           66(g):     25(ptr) Variable Function
-                              Store 21(h) 22
-              60:    7(fvec4) Load 58(BaseColor)
-                              Store 59(param) 60
-              61:    6(float) FunctionCall 11(foo(vf4;) 59(param)
-              62:    7(fvec4) CompositeConstruct 61 61 61 61
-                              Store 56(color) 62
-              63:           2 FunctionCall 13(bar()
-              65:    6(float) FunctionCall 16(unreachableReturn()
-                              Store 64(f) 65
-              67:    6(float) FunctionCall 18(missingReturn()
-                              Store 66(g) 67
-              70:    7(fvec4) Load 56(color)
-              71:    6(float) Load 64(f)
-              72:    7(fvec4) VectorTimesScalar 70 71
-              73:    6(float) Load 21(h)
-              74:    7(fvec4) VectorTimesScalar 72 73
-                              Store 69(gl_FragColor) 74
+                              Name 54_1  "main"
+                              Name 54_2  "foo(vf4;"
+                              Name 55_1  "bar"
+                              Name 54_3  "bar("
+                              Name 54_4  "unreachableReturn("
+                              Name 54_5  "missingReturn("
+                              Name 59_1  "h"
+                              Name 59_2  "d"
+                              Name 59_6  "color"
+                              Name 59_3  "BaseColor"
+                              Name 59_7  "param"
+                              Name 59_8  "f"
+                              Name 59_9  "g"
+                              Name 59_4  "gl_FragColor"
+                              Name 59_5  "bigColor"
+                              Decorate 59_2(d) Location 2
+                              Decorate 59_3(BaseColor) Location 1
+                              Decorate 59_4(gl_FragColor) Location 0
+                              Decorate 59_5(bigColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            33_2:             TypeFunction 22_1(float) 32_1(ptr)
+            33_3:             TypeFunction 22_1(float)
+            32_2:             TypePointer Private 22_1(float)
+         59_1(h):   32_2(ptr) Variable Private
+            43_1: 22_1(float) Constant 0
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Function 22_1(float)
+         uint(1):   21_1(int) Constant 1
+            32_4:             TypePointer Input 22_1(float)
+         59_2(d):   32_4(ptr) Variable Input
+            43_2: 22_1(float) Constant 1082549862
+            20_1:             TypeBool
+            43_3: 22_1(float) Constant 1067030938
+            43_4: 22_1(float) Constant 1083179008
+            43_5: 22_1(float) Constant 1081711002
+            32_5:             TypePointer Input 23_1(fvec4)
+ 59_3(BaseColor):   32_5(ptr) Variable Input
+            32_6:             TypePointer Output 23_1(fvec4)
+59_4(gl_FragColor):   32_6(ptr) Variable Output
+  59_5(bigColor):   32_5(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_6(color):   32_1(ptr) Variable Function
+     59_7(param):   32_1(ptr) Variable Function
+         59_8(f):   32_3(ptr) Variable Function
+         59_9(g):   32_3(ptr) Variable Function
+                              Store 59_1(h) 43_1
+            61_1: 23_1(fvec4) Load 59_3(BaseColor)
+                              Store 59_7(param) 61_1
+            57_1: 22_1(float) FunctionCall 54_2(foo(vf4;) 59_7(param)
+            80_1: 23_1(fvec4) CompositeConstruct 57_1 57_1 57_1 57_1
+                              Store 59_6(color) 80_1
+            57_2:        19_1 FunctionCall 54_3(bar()
+            57_3: 22_1(float) FunctionCall 54_4(unreachableReturn()
+                              Store 59_8(f) 57_3
+            57_4: 22_1(float) FunctionCall 54_5(missingReturn()
+                              Store 59_9(g) 57_4
+            61_2: 23_1(fvec4) Load 59_6(color)
+            61_3: 22_1(float) Load 59_8(f)
+           142_1: 23_1(fvec4) VectorTimesScalar 61_2 61_3
+            61_4: 22_1(float) Load 59_1(h)
+           142_2: 23_1(fvec4) VectorTimesScalar 142_1 61_4
+                              Store 59_4(gl_FragColor) 142_2
                               Return
                               FunctionEnd
-    11(foo(vf4;):    6(float) Function None 9
-         10(bar):      8(ptr) FunctionParameter
-              12:             Label
-              26:     25(ptr) AccessChain 10(bar) 24
-              27:    6(float) Load 26
-              29:     25(ptr) AccessChain 10(bar) 28
-              30:    6(float) Load 29
-              31:    6(float) FAdd 27 30
-                              ReturnValue 31
+  54_2(foo(vf4;): 22_1(float) Function None 33_2
+       55_1(bar):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            65_1:   32_3(ptr) AccessChain 55_1(bar) uint(0)
+            61_5: 22_1(float) Load 65_1
+            65_2:   32_3(ptr) AccessChain 55_1(bar) uint(1)
+            61_6: 22_1(float) Load 65_2
+           129_1: 22_1(float) FAdd 61_5 61_6
+                              ReturnValue 129_1
                               FunctionEnd
-        13(bar():           2 Function None 3
-              14:             Label
+      54_3(bar():        19_1 Function None 33_1
+           248_3:             Label
                               Return
                               FunctionEnd
-16(unreachableReturn():    6(float) Function None 15
-              17:             Label
-              36:    6(float) Load 35(d)
-              39:    38(bool) FOrdLessThan 36 37
-                              SelectionMerge 41 None
-                              BranchConditional 39 40 44
-              40:               Label
-                                ReturnValue 42
-              44:               Label
-                                ReturnValue 45
-              41:             Label
+54_4(unreachableReturn(): 22_1(float) Function None 33_3
+           248_4:             Label
+            61_7: 22_1(float) Load 59_2(d)
+           184_1:  20_1(bool) FOrdLessThan 61_7 43_2
+                              SelectionMerge 248_7 None
+                              BranchConditional 184_1 248_5 248_6
+           248_5:               Label
+                                ReturnValue 43_3
+           248_6:               Label
+                                ReturnValue 43_4
+           248_7:             Label
                               Unreachable
                               FunctionEnd
-18(missingReturn():    6(float) Function None 15
-              19:             Label
-              48:    6(float) Load 35(d)
-              49:    38(bool) FOrdLessThan 48 45
-                              SelectionMerge 51 None
-                              BranchConditional 49 50 51
-              50:               Label
-              52:    6(float)   Load 35(d)
-                                Store 21(h) 52
-                                ReturnValue 53
-              51:             Label
-              55:    6(float) Undef
-                              ReturnValue 55
+54_5(missingReturn(): 22_1(float) Function None 33_3
+           248_8:             Label
+            61_8: 22_1(float) Load 59_2(d)
+           184_2:  20_1(bool) FOrdLessThan 61_8 43_4
+                              SelectionMerge 248_10 None
+                              BranchConditional 184_2 248_9 248_10
+           248_9:               Label
+            61_9: 22_1(float)   Load 59_2(d)
+                                Store 59_1(h) 61_9
+                                ReturnValue 43_5
+          248_10:             Label
+             1_1: 22_1(float) Undef
+                              ReturnValue 1_1
                               FunctionEnd

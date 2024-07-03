@@ -4,62 +4,62 @@ spv.branch-return.vert
 // Id's are bound by 38
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 8 20
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2
                               Source ESSL 310
-                              Name 4  "main"
-                              Name 8  "gl_InstanceIndex"
-                              Name 18  "gl_PerVertex"
-                              MemberName 18(gl_PerVertex) 0  "gl_Position"
-                              MemberName 18(gl_PerVertex) 1  "gl_PointSize"
-                              Name 20  ""
-                              Decorate 8(gl_InstanceIndex) BuiltIn InstanceIndex
-                              Decorate 18(gl_PerVertex) Block
-                              MemberDecorate 18(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 18(gl_PerVertex) 1 BuiltIn PointSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Input 6(int)
-8(gl_InstanceIndex):      7(ptr) Variable Input
-              16:             TypeFloat 32
-              17:             TypeVector 16(float) 4
-18(gl_PerVertex):             TypeStruct 17(fvec4) 16(float)
-              19:             TypePointer Output 18(gl_PerVertex)
-              20:     19(ptr) Variable Output
-              21:      6(int) Constant 0
-              22:   16(float) Constant 0
-              23:   17(fvec4) ConstantComposite 22 22 22 22
-              24:             TypePointer Output 17(fvec4)
-              30:   16(float) Constant 1039918957
-              31:             TypeInt 32 0
-              32:     31(int) Constant 0
-              33:             TypePointer Output 16(float)
-         4(main):           2 Function None 3
-               5:             Label
-               9:      6(int) Load 8(gl_InstanceIndex)
-                              SelectionMerge 14 None
-                              Switch 9 14 
-                                     case 0: 10
-                                     case 1: 11
-                                     case 2: 12
-                                     case 3: 13
-              10:               Label
+                              Name 54_1  "main"
+                              Name 59_1  "gl_InstanceIndex"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_1(gl_PerVertex) 1  "gl_PointSize"
+                              Name 59_2  ""
+                              Decorate 59_1(gl_InstanceIndex) BuiltIn InstanceIndex
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_1(gl_PerVertex) 1 BuiltIn PointSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Input 21_1(int)
+59_1(gl_InstanceIndex):   32_1(ptr) Variable Input
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+30_1(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float)
+            32_2:             TypePointer Output 30_1(gl_PerVertex)
+            59_2:   32_2(ptr) Variable Output
+            43_1:   21_1(int) Constant 0
+            43_2: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+            32_3:             TypePointer Output 23_1(fvec4)
+            43_3: 22_1(float) Constant 1039918957
+            21_2:             TypeInt 32 0
+         uint(0):   21_2(int) Constant 0
+            32_4:             TypePointer Output 22_1(float)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_1(gl_InstanceIndex)
+                              SelectionMerge 248_6 None
+                              Switch 61_1 248_6 
+                                     case 0: 248_2
+                                     case 1: 248_3
+                                     case 2: 248_4
+                                     case 3: 248_5
+           248_2:               Label
                                 Return
-              11:               Label
-              25:     24(ptr)   AccessChain 20 21
-                                Store 25 23
-                                Branch 14
-              12:               Label
+           248_3:               Label
+            65_1:   32_3(ptr)   AccessChain 59_2 43_1
+                                Store 65_1 44_1
+                                Branch 248_6
+           248_4:               Label
                                 Return
-              13:               Label
+           248_5:               Label
                                 Return
-              14:             Label
-              34:     33(ptr) AccessChain 20 21 32
-              35:   16(float) Load 34
-              36:   16(float) FAdd 35 30
-              37:     33(ptr) AccessChain 20 21 32
-                              Store 37 36
+           248_6:             Label
+            65_2:   32_4(ptr) AccessChain 59_2 43_1 uint(0)
+            61_2: 22_1(float) Load 65_2
+           129_1: 22_1(float) FAdd 61_2 43_3
+            65_3:   32_4(ptr) AccessChain 59_2 43_1 uint(0)
+                              Store 65_3 129_1
                               Return
                               FunctionEnd

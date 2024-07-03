@@ -5,80 +5,80 @@ spv.subgroupBasic.comp
 
                               Capability Shader
                               Capability GroupNonUniform
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 14 19 22 25
-                              ExecutionMode 4 LocalSize 8 8 1
+                              EntryPoint GLCompute 54_1  "main" 59_2 59_3 59_4 59_5
+                              ExecutionMode 54_1 LocalSize 8 8 1
                               Source GLSL 450
                               SourceExtension  "GL_KHR_shader_subgroup_basic"
-                              Name 4  "main"
-                              Name 8  "Buffer"
-                              MemberName 8(Buffer) 0  "a"
-                              Name 10  "data"
-                              Name 14  "gl_SubgroupSize"
-                              Name 19  "gl_SubgroupInvocationID"
-                              Name 22  "gl_NumSubgroups"
-                              Name 25  "gl_SubgroupID"
-                              Decorate 7 ArrayStride 4
-                              Decorate 8(Buffer) Block
-                              MemberDecorate 8(Buffer) 0 Offset 0
-                              Decorate 10(data) Binding 0
-                              Decorate 10(data) DescriptorSet 0
-                              Decorate 14(gl_SubgroupSize) RelaxedPrecision
-                              Decorate 14(gl_SubgroupSize) BuiltIn SubgroupSize
-                              Decorate 15 RelaxedPrecision
-                              Decorate 19(gl_SubgroupInvocationID) RelaxedPrecision
-                              Decorate 19(gl_SubgroupInvocationID) BuiltIn SubgroupLocalInvocationId
-                              Decorate 20 RelaxedPrecision
-                              Decorate 22(gl_NumSubgroups) BuiltIn NumSubgroups
-                              Decorate 25(gl_SubgroupID) BuiltIn SubgroupId
-                              Decorate 39 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeRuntimeArray 6(int)
-       8(Buffer):             TypeStruct 7
-               9:             TypePointer StorageBuffer 8(Buffer)
-        10(data):      9(ptr) Variable StorageBuffer
-              11:      6(int) Constant 0
-              12:             TypeInt 32 0
-              13:             TypePointer Input 12(int)
-14(gl_SubgroupSize):     13(ptr) Variable Input
-              16:      6(int) Constant 1
-              17:             TypePointer StorageBuffer 6(int)
-19(gl_SubgroupInvocationID):     13(ptr) Variable Input
-22(gl_NumSubgroups):     13(ptr) Variable Input
-25(gl_SubgroupID):     13(ptr) Variable Input
-              27:             TypeBool
-              28:     12(int) Constant 3
-              32:     12(int) Constant 3400
-              33:     12(int) Constant 72
-              34:     12(int) Constant 264
-              35:     12(int) Constant 2056
-              36:             TypeVector 12(int) 3
-              37:     12(int) Constant 8
-              38:     12(int) Constant 1
-              39:   36(ivec3) ConstantComposite 37 37 38
-         4(main):           2 Function None 3
-               5:             Label
-              15:     12(int) Load 14(gl_SubgroupSize)
-              18:     17(ptr) AccessChain 10(data) 11 15
-                              Store 18 16
-              20:     12(int) Load 19(gl_SubgroupInvocationID)
-              21:     17(ptr) AccessChain 10(data) 11 20
-                              Store 21 16
-              23:     12(int) Load 22(gl_NumSubgroups)
-              24:     17(ptr) AccessChain 10(data) 11 23
-                              Store 24 16
-              26:     12(int) Load 25(gl_SubgroupID)
-              29:    27(bool) GroupNonUniformElect 28
-              30:      6(int) Select 29 16 11
-              31:     17(ptr) AccessChain 10(data) 11 26
-                              Store 31 30
-                              ControlBarrier 28 28 32
-                              MemoryBarrier 28 32
-                              MemoryBarrier 28 33
-                              MemoryBarrier 28 34
-                              MemoryBarrier 28 35
+                              Name 54_1  "main"
+                              Name 30_1  "Buffer"
+                              MemberName 30_1(Buffer) 0  "a"
+                              Name 59_1  "data"
+                              Name 59_2  "gl_SubgroupSize"
+                              Name 59_3  "gl_SubgroupInvocationID"
+                              Name 59_4  "gl_NumSubgroups"
+                              Name 59_5  "gl_SubgroupID"
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_1(Buffer) Block
+                              MemberDecorate 30_1(Buffer) 0 Offset 0
+                              Decorate 59_1(data) Binding 0
+                              Decorate 59_1(data) DescriptorSet 0
+                              Decorate 59_2(gl_SubgroupSize) RelaxedPrecision
+                              Decorate 59_2(gl_SubgroupSize) BuiltIn SubgroupSize
+                              Decorate 61_1 RelaxedPrecision
+                              Decorate 59_3(gl_SubgroupInvocationID) RelaxedPrecision
+                              Decorate 59_3(gl_SubgroupInvocationID) BuiltIn SubgroupLocalInvocationId
+                              Decorate 61_2 RelaxedPrecision
+                              Decorate 59_4(gl_NumSubgroups) BuiltIn NumSubgroups
+                              Decorate 59_5(gl_SubgroupID) BuiltIn SubgroupId
+                              Decorate 44_1 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            29_1:             TypeRuntimeArray 21_1(int)
+    30_1(Buffer):             TypeStruct 29_1
+            32_1:             TypePointer StorageBuffer 30_1(Buffer)
+      59_1(data):   32_1(ptr) Variable StorageBuffer
+            43_1:   21_1(int) Constant 0
+            21_2:             TypeInt 32 0
+            32_2:             TypePointer Input 21_2(int)
+59_2(gl_SubgroupSize):   32_2(ptr) Variable Input
+            43_2:   21_1(int) Constant 1
+            32_3:             TypePointer StorageBuffer 21_1(int)
+59_3(gl_SubgroupInvocationID):   32_2(ptr) Variable Input
+59_4(gl_NumSubgroups):   32_2(ptr) Variable Input
+59_5(gl_SubgroupID):   32_2(ptr) Variable Input
+            20_1:             TypeBool
+         uint(3):   21_2(int) Constant 3
+      uint(3400):   21_2(int) Constant 3400
+        uint(72):   21_2(int) Constant 72
+       uint(264):   21_2(int) Constant 264
+      uint(2056):   21_2(int) Constant 2056
+            23_1:             TypeVector 21_2(int) 3
+         uint(8):   21_2(int) Constant 8
+         uint(1):   21_2(int) Constant 1
+            44_1: 23_1(ivec3) ConstantComposite uint(8) uint(8) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_2(int) Load 59_2(gl_SubgroupSize)
+            65_1:   32_3(ptr) AccessChain 59_1(data) 43_1 61_1
+                              Store 65_1 43_2
+            61_2:   21_2(int) Load 59_3(gl_SubgroupInvocationID)
+            65_2:   32_3(ptr) AccessChain 59_1(data) 43_1 61_2
+                              Store 65_2 43_2
+            61_3:   21_2(int) Load 59_4(gl_NumSubgroups)
+            65_3:   32_3(ptr) AccessChain 59_1(data) 43_1 61_3
+                              Store 65_3 43_2
+            61_4:   21_2(int) Load 59_5(gl_SubgroupID)
+           333_1:  20_1(bool) GroupNonUniformElect uint(3)
+           169_1:   21_1(int) Select 333_1 43_2 43_1
+            65_4:   32_3(ptr) AccessChain 59_1(data) 43_1 61_4
+                              Store 65_4 169_1
+                              ControlBarrier uint(3) uint(3) uint(3400)
+                              MemoryBarrier uint(3) uint(3400)
+                              MemoryBarrier uint(3) uint(72)
+                              MemoryBarrier uint(3) uint(264)
+                              MemoryBarrier uint(3) uint(2056)
                               Return
                               FunctionEnd

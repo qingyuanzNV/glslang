@@ -8,51 +8,51 @@ spv.imageAtomic64.comp
                               Capability Int64Atomics
                               Capability Int64ImageEXT
                               Extension  "SPV_EXT_shader_image_int64"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 450
                               SourceExtension  "GL_EXT_shader_explicit_arithmetic_types_int64"
                               SourceExtension  "GL_EXT_shader_image_int64"
                               SourceExtension  "GL_KHR_memory_scope_semantics"
-                              Name 4  "main"
-                              Name 9  "z"
-                              Name 14  "ssbo"
-                              MemberName 14(ssbo) 0  "y"
-                              Name 16  ""
-                              Decorate 9(z) Binding 1
-                              Decorate 9(z) DescriptorSet 0
-                              Decorate 14(ssbo) BufferBlock
-                              MemberDecorate 14(ssbo) 0 Offset 0
-                              Decorate 16 Binding 0
-                              Decorate 16 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 64 0
-               7:             TypeImage 6(int64_t) 2D nonsampled format:R64ui
-               8:             TypePointer UniformConstant 7
-            9(z):      8(ptr) Variable UniformConstant
-              10:             TypeInt 32 1
-              11:             TypeVector 10(int) 2
-              12:     10(int) Constant 1
-              13:   11(ivec2) ConstantComposite 12 12
-        14(ssbo):             TypeStruct 6(int64_t)
-              15:             TypePointer Uniform 14(ssbo)
-              16:     15(ptr) Variable Uniform
-              17:     10(int) Constant 0
-              18:             TypePointer Uniform 6(int64_t)
-              21:     10(int) Constant 2048
-              22:             TypeInt 32 0
-              23:     22(int) Constant 0
-              24:             TypePointer Image 6(int64_t)
-              26:     22(int) Constant 1
-              27:     22(int) Constant 2048
-         4(main):           2 Function None 3
-               5:             Label
-              19:     18(ptr) AccessChain 16 17
-              20:  6(int64_t) Load 19
-              25:     24(ptr) ImageTexelPointer 9(z) 13 23
-                              AtomicStore 25 12 27 20
+                              Name 54_1  "main"
+                              Name 59_1  "z"
+                              Name 30_1  "ssbo"
+                              MemberName 30_1(ssbo) 0  "y"
+                              Name 59_2  ""
+                              Decorate 59_1(z) Binding 1
+                              Decorate 59_1(z) DescriptorSet 0
+                              Decorate 30_1(ssbo) BufferBlock
+                              MemberDecorate 30_1(ssbo) 0 Offset 0
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 64 0
+            25_1:             TypeImage 21_1(int64_t) 2D nonsampled format:R64ui
+            32_1:             TypePointer UniformConstant 25_1
+         59_1(z):   32_1(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 1
+            23_1:             TypeVector 21_2(int) 2
+            43_1:   21_2(int) Constant 1
+            44_1: 23_1(ivec2) ConstantComposite 43_1 43_1
+      30_1(ssbo):             TypeStruct 21_1(int64_t)
+            32_2:             TypePointer Uniform 30_1(ssbo)
+            59_2:   32_2(ptr) Variable Uniform
+            43_2:   21_2(int) Constant 0
+            32_3:             TypePointer Uniform 21_1(int64_t)
+            43_3:   21_2(int) Constant 2048
+            21_3:             TypeInt 32 0
+         uint(0):   21_3(int) Constant 0
+            32_4:             TypePointer Image 21_1(int64_t)
+         uint(1):   21_3(int) Constant 1
+      uint(2048):   21_3(int) Constant 2048
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2 43_2
+            61_1:21_1(int64_t) Load 65_1
+            60_1:   32_4(ptr) ImageTexelPointer 59_1(z) 44_1 uint(0)
+                              AtomicStore 60_1 43_1 uint(2048) 61_1
                               Return
                               FunctionEnd

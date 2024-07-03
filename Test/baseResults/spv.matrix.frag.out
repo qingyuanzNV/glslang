@@ -5,336 +5,336 @@ spv.matrix.frag
 
                               Capability Shader
                               Capability Float64
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 12 14 28 161 169 187
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 420
-                              Name 4  "main"
-                              Name 10  "sum34"
-                              Name 12  "m1"
-                              Name 14  "m2"
-                              Name 28  "f"
-                              Name 140  "dm"
-                              Name 159  "sum3"
-                              Name 161  "v4"
-                              Name 166  "sum4"
-                              Name 169  "v3"
-                              Name 174  "m43"
-                              Name 179  "m4"
-                              Name 187  "color"
-                              Decorate 12(m1) Location 0
-                              Decorate 14(m2) Location 3
-                              Decorate 28(f) Location 6
-                              Decorate 161(v4) Location 8
-                              Decorate 169(v3) Location 7
-                              Decorate 187(color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeMatrix 7(fvec4) 3
-               9:             TypePointer Function 8
-              11:             TypePointer Input 8
-          12(m1):     11(ptr) Variable Input
-          14(m2):     11(ptr) Variable Input
-              27:             TypePointer Input 6(float)
-           28(f):     27(ptr) Variable Input
-              81:    6(float) Constant 1065353216
-             136:             TypeFloat 64
-             137:             TypeVector 136(float64_t) 4
-             138:             TypeMatrix 137(f64vec4) 3
-             139:             TypePointer Function 138
-             157:             TypeVector 6(float) 3
-             158:             TypePointer Function 157(fvec3)
-             160:             TypePointer Input 7(fvec4)
-         161(v4):    160(ptr) Variable Input
-             165:             TypePointer Function 7(fvec4)
-             168:             TypePointer Input 157(fvec3)
-         169(v3):    168(ptr) Variable Input
-             172:             TypeMatrix 157(fvec3) 4
-             173:             TypePointer Function 172
-             177:             TypeMatrix 7(fvec4) 4
-             178:             TypePointer Function 177
-             186:             TypePointer Output 7(fvec4)
-      187(color):    186(ptr) Variable Output
-             208:    6(float) Constant 0
-             270:             TypeVector 6(float) 2
-             271:             TypeMatrix 270(fvec2) 2
-             279:    6(float) Constant 1088841318
-         4(main):           2 Function None 3
-               5:             Label
-       10(sum34):      9(ptr) Variable Function
-         140(dm):    139(ptr) Variable Function
-       159(sum3):    158(ptr) Variable Function
-       166(sum4):    165(ptr) Variable Function
-        174(m43):    173(ptr) Variable Function
-         179(m4):    178(ptr) Variable Function
-              13:           8 Load 12(m1)
-              15:           8 Load 14(m2)
-              16:    7(fvec4) CompositeExtract 13 0
-              17:    7(fvec4) CompositeExtract 15 0
-              18:    7(fvec4) FSub 16 17
-              19:    7(fvec4) CompositeExtract 13 1
-              20:    7(fvec4) CompositeExtract 15 1
-              21:    7(fvec4) FSub 19 20
-              22:    7(fvec4) CompositeExtract 13 2
-              23:    7(fvec4) CompositeExtract 15 2
-              24:    7(fvec4) FSub 22 23
-              25:           8 CompositeConstruct 18 21 24
-                              Store 10(sum34) 25
-              26:           8 Load 12(m1)
-              29:    6(float) Load 28(f)
-              30:           8 MatrixTimesScalar 26 29
-              31:           8 Load 10(sum34)
-              32:    7(fvec4) CompositeExtract 31 0
-              33:    7(fvec4) CompositeExtract 30 0
-              34:    7(fvec4) FAdd 32 33
-              35:    7(fvec4) CompositeExtract 31 1
-              36:    7(fvec4) CompositeExtract 30 1
-              37:    7(fvec4) FAdd 35 36
-              38:    7(fvec4) CompositeExtract 31 2
-              39:    7(fvec4) CompositeExtract 30 2
-              40:    7(fvec4) FAdd 38 39
-              41:           8 CompositeConstruct 34 37 40
-                              Store 10(sum34) 41
-              42:    6(float) Load 28(f)
-              43:           8 Load 12(m1)
-              44:           8 MatrixTimesScalar 43 42
-              45:           8 Load 10(sum34)
-              46:    7(fvec4) CompositeExtract 45 0
-              47:    7(fvec4) CompositeExtract 44 0
-              48:    7(fvec4) FAdd 46 47
-              49:    7(fvec4) CompositeExtract 45 1
-              50:    7(fvec4) CompositeExtract 44 1
-              51:    7(fvec4) FAdd 49 50
-              52:    7(fvec4) CompositeExtract 45 2
-              53:    7(fvec4) CompositeExtract 44 2
-              54:    7(fvec4) FAdd 52 53
-              55:           8 CompositeConstruct 48 51 54
-                              Store 10(sum34) 55
-              56:           8 Load 12(m1)
-              57:           8 Load 14(m2)
-              58:    7(fvec4) CompositeExtract 56 0
-              59:    7(fvec4) CompositeExtract 57 0
-              60:    7(fvec4) FMul 58 59
-              61:    7(fvec4) CompositeExtract 56 1
-              62:    7(fvec4) CompositeExtract 57 1
-              63:    7(fvec4) FMul 61 62
-              64:    7(fvec4) CompositeExtract 56 2
-              65:    7(fvec4) CompositeExtract 57 2
-              66:    7(fvec4) FMul 64 65
-              67:           8 CompositeConstruct 60 63 66
-              68:           8 Load 10(sum34)
-              69:    7(fvec4) CompositeExtract 68 0
-              70:    7(fvec4) CompositeExtract 67 0
-              71:    7(fvec4) FDiv 69 70
-              72:    7(fvec4) CompositeExtract 68 1
-              73:    7(fvec4) CompositeExtract 67 1
-              74:    7(fvec4) FDiv 72 73
-              75:    7(fvec4) CompositeExtract 68 2
-              76:    7(fvec4) CompositeExtract 67 2
-              77:    7(fvec4) FDiv 75 76
-              78:           8 CompositeConstruct 71 74 77
-                              Store 10(sum34) 78
-              79:           8 Load 12(m1)
-              80:    6(float) Load 28(f)
-              82:    6(float) FDiv 81 80
-              83:           8 MatrixTimesScalar 79 82
-              84:           8 Load 10(sum34)
-              85:    7(fvec4) CompositeExtract 84 0
-              86:    7(fvec4) CompositeExtract 83 0
-              87:    7(fvec4) FAdd 85 86
-              88:    7(fvec4) CompositeExtract 84 1
-              89:    7(fvec4) CompositeExtract 83 1
-              90:    7(fvec4) FAdd 88 89
-              91:    7(fvec4) CompositeExtract 84 2
-              92:    7(fvec4) CompositeExtract 83 2
-              93:    7(fvec4) FAdd 91 92
-              94:           8 CompositeConstruct 87 90 93
-                              Store 10(sum34) 94
-              95:    6(float) Load 28(f)
-              96:           8 Load 12(m1)
-              97:    7(fvec4) CompositeConstruct 95 95 95 95
-              98:    7(fvec4) CompositeExtract 96 0
-              99:    7(fvec4) FDiv 97 98
-             100:    7(fvec4) CompositeExtract 96 1
-             101:    7(fvec4) FDiv 97 100
-             102:    7(fvec4) CompositeExtract 96 2
-             103:    7(fvec4) FDiv 97 102
-             104:           8 CompositeConstruct 99 101 103
-             105:           8 Load 10(sum34)
-             106:    7(fvec4) CompositeExtract 105 0
-             107:    7(fvec4) CompositeExtract 104 0
-             108:    7(fvec4) FAdd 106 107
-             109:    7(fvec4) CompositeExtract 105 1
-             110:    7(fvec4) CompositeExtract 104 1
-             111:    7(fvec4) FAdd 109 110
-             112:    7(fvec4) CompositeExtract 105 2
-             113:    7(fvec4) CompositeExtract 104 2
-             114:    7(fvec4) FAdd 112 113
-             115:           8 CompositeConstruct 108 111 114
-                              Store 10(sum34) 115
-             116:    6(float) Load 28(f)
-             117:           8 Load 10(sum34)
-             118:    7(fvec4) CompositeConstruct 116 116 116 116
-             119:    7(fvec4) CompositeExtract 117 0
-             120:    7(fvec4) FAdd 119 118
-             121:    7(fvec4) CompositeExtract 117 1
-             122:    7(fvec4) FAdd 121 118
-             123:    7(fvec4) CompositeExtract 117 2
-             124:    7(fvec4) FAdd 123 118
-             125:           8 CompositeConstruct 120 122 124
-                              Store 10(sum34) 125
-             126:    6(float) Load 28(f)
-             127:           8 Load 10(sum34)
-             128:    7(fvec4) CompositeConstruct 126 126 126 126
-             129:    7(fvec4) CompositeExtract 127 0
-             130:    7(fvec4) FSub 129 128
-             131:    7(fvec4) CompositeExtract 127 1
-             132:    7(fvec4) FSub 131 128
-             133:    7(fvec4) CompositeExtract 127 2
-             134:    7(fvec4) FSub 133 128
-             135:           8 CompositeConstruct 130 132 134
-                              Store 10(sum34) 135
-             141:           8 Load 10(sum34)
-             142:    7(fvec4) CompositeExtract 141 0
-             143:137(f64vec4) FConvert 142
-             144:    7(fvec4) CompositeExtract 141 1
-             145:137(f64vec4) FConvert 144
-             146:    7(fvec4) CompositeExtract 141 2
-             147:137(f64vec4) FConvert 146
-             148:         138 CompositeConstruct 143 145 147
-                              Store 140(dm) 148
-             149:         138 Load 140(dm)
-             150:137(f64vec4) CompositeExtract 149 0
-             151:    7(fvec4) FConvert 150
-             152:137(f64vec4) CompositeExtract 149 1
-             153:    7(fvec4) FConvert 152
-             154:137(f64vec4) CompositeExtract 149 2
-             155:    7(fvec4) FConvert 154
-             156:           8 CompositeConstruct 151 153 155
-                              Store 10(sum34) 156
-             162:    7(fvec4) Load 161(v4)
-             163:           8 Load 14(m2)
-             164:  157(fvec3) VectorTimesMatrix 162 163
-                              Store 159(sum3) 164
-             167:           8 Load 14(m2)
-             170:  157(fvec3) Load 169(v3)
-             171:    7(fvec4) MatrixTimesVector 167 170
-                              Store 166(sum4) 171
-             175:           8 Load 10(sum34)
-             176:         172 Transpose 175
-                              Store 174(m43) 176
-             180:           8 Load 12(m1)
-             181:         172 Load 174(m43)
-             182:         177 MatrixTimesMatrix 180 181
-                              Store 179(m4) 182
-             183:    7(fvec4) Load 161(v4)
-             184:         177 Load 179(m4)
-             185:    7(fvec4) VectorTimesMatrix 183 184
-                              Store 166(sum4) 185
-             188:    7(fvec4) Load 166(sum4)
-                              Store 187(color) 188
-             189:           8 Load 10(sum34)
-             190:    7(fvec4) CompositeConstruct 81 81 81 81
-             191:    7(fvec4) CompositeExtract 189 0
-             192:    7(fvec4) FAdd 191 190
-             193:    7(fvec4) CompositeExtract 189 1
-             194:    7(fvec4) FAdd 193 190
-             195:    7(fvec4) CompositeExtract 189 2
-             196:    7(fvec4) FAdd 195 190
-             197:           8 CompositeConstruct 192 194 196
-                              Store 10(sum34) 197
-             198:           8 Load 10(sum34)
-             199:    7(fvec4) CompositeConstruct 81 81 81 81
-             200:    7(fvec4) CompositeExtract 198 0
-             201:    7(fvec4) FSub 200 199
-             202:    7(fvec4) CompositeExtract 198 1
-             203:    7(fvec4) FSub 202 199
-             204:    7(fvec4) CompositeExtract 198 2
-             205:    7(fvec4) FSub 204 199
-             206:           8 CompositeConstruct 201 203 205
-                              Store 10(sum34) 206
-             207:    6(float) Load 28(f)
-             209:    7(fvec4) CompositeConstruct 207 208 208 208
-             210:    7(fvec4) CompositeConstruct 208 207 208 208
-             211:    7(fvec4) CompositeConstruct 208 208 207 208
-             212:           8 CompositeConstruct 209 210 211
-             213:           8 Load 10(sum34)
-             214:    7(fvec4) CompositeExtract 213 0
-             215:    7(fvec4) CompositeExtract 212 0
-             216:    7(fvec4) FAdd 214 215
-             217:    7(fvec4) CompositeExtract 213 1
-             218:    7(fvec4) CompositeExtract 212 1
-             219:    7(fvec4) FAdd 217 218
-             220:    7(fvec4) CompositeExtract 213 2
-             221:    7(fvec4) CompositeExtract 212 2
-             222:    7(fvec4) FAdd 220 221
-             223:           8 CompositeConstruct 216 219 222
-                              Store 10(sum34) 223
-             224:  157(fvec3) Load 169(v3)
-             225:    6(float) Load 28(f)
-             226:  157(fvec3) Load 169(v3)
-             227:    6(float) Load 28(f)
-             228:  157(fvec3) Load 169(v3)
-             229:    6(float) Load 28(f)
-             230:    6(float) CompositeExtract 224 0
-             231:    6(float) CompositeExtract 224 1
-             232:    6(float) CompositeExtract 224 2
-             233:    6(float) CompositeExtract 226 0
-             234:    6(float) CompositeExtract 226 1
-             235:    6(float) CompositeExtract 226 2
-             236:    6(float) CompositeExtract 228 0
-             237:    6(float) CompositeExtract 228 1
-             238:    6(float) CompositeExtract 228 2
-             239:    7(fvec4) CompositeConstruct 230 231 232 225
-             240:    7(fvec4) CompositeConstruct 233 234 235 227
-             241:    7(fvec4) CompositeConstruct 236 237 238 229
-             242:           8 CompositeConstruct 239 240 241
-             243:           8 Load 10(sum34)
-             244:    7(fvec4) CompositeExtract 243 0
-             245:    7(fvec4) CompositeExtract 242 0
-             246:    7(fvec4) FAdd 244 245
-             247:    7(fvec4) CompositeExtract 243 1
-             248:    7(fvec4) CompositeExtract 242 1
-             249:    7(fvec4) FAdd 247 248
-             250:    7(fvec4) CompositeExtract 243 2
-             251:    7(fvec4) CompositeExtract 242 2
-             252:    7(fvec4) FAdd 250 251
-             253:           8 CompositeConstruct 246 249 252
-                              Store 10(sum34) 253
-             254:  157(fvec3) Load 159(sum3)
-             255:         172 Load 174(m43)
-             256:    7(fvec4) VectorTimesMatrix 254 255
-             257:    7(fvec4) Load 166(sum4)
-             258:    7(fvec4) FAdd 256 257
-             259:    7(fvec4) Load 187(color)
-             260:    7(fvec4) FAdd 259 258
-                              Store 187(color) 260
-             261:         172 Load 174(m43)
-             262:    6(float) CompositeExtract 261 0 0
-             263:    6(float) CompositeExtract 261 0 1
-             264:    6(float) CompositeExtract 261 0 2
-             265:    6(float) CompositeExtract 261 1 0
-             266:    7(fvec4) CompositeConstruct 262 263 264 265
-             267:    7(fvec4) Load 187(color)
-             268:    7(fvec4) FAdd 267 266
-                              Store 187(color) 268
-             269:    6(float) Load 28(f)
-             272:  270(fvec2) CompositeConstruct 269 208
-             273:  270(fvec2) CompositeConstruct 208 269
-             274:         271 CompositeConstruct 272 273
-             275:    6(float) CompositeExtract 274 0 0
-             276:    6(float) CompositeExtract 274 0 1
-             277:    6(float) CompositeExtract 274 1 0
-             278:  157(fvec3) CompositeConstruct 275 276 277
-             280:    6(float) CompositeExtract 278 0
-             281:    6(float) CompositeExtract 278 1
-             282:    6(float) CompositeExtract 278 2
-             283:    7(fvec4) CompositeConstruct 280 281 282 279
-             284:    7(fvec4) Load 187(color)
-             285:    7(fvec4) FAdd 284 283
-                              Store 187(color) 285
+                              Name 54_1  "main"
+                              Name 59_7  "sum34"
+                              Name 59_1  "m1"
+                              Name 59_2  "m2"
+                              Name 59_3  "f"
+                              Name 59_8  "dm"
+                              Name 59_9  "sum3"
+                              Name 59_4  "v4"
+                              Name 59_10  "sum4"
+                              Name 59_5  "v3"
+                              Name 59_11  "m43"
+                              Name 59_12  "m4"
+                              Name 59_6  "color"
+                              Decorate 59_1(m1) Location 0
+                              Decorate 59_2(m2) Location 3
+                              Decorate 59_3(f) Location 6
+                              Decorate 59_4(v4) Location 8
+                              Decorate 59_5(v3) Location 7
+                              Decorate 59_6(color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            24_1:             TypeMatrix 23_1(fvec4) 3
+            32_1:             TypePointer Function 24_1
+            32_2:             TypePointer Input 24_1
+        59_1(m1):   32_2(ptr) Variable Input
+        59_2(m2):   32_2(ptr) Variable Input
+            32_3:             TypePointer Input 22_1(float)
+         59_3(f):   32_3(ptr) Variable Input
+            43_1: 22_1(float) Constant 1065353216
+            22_2:             TypeFloat 64
+            23_2:             TypeVector 22_2(float64_t) 4
+            24_2:             TypeMatrix 23_2(f64vec4) 3
+            32_4:             TypePointer Function 24_2
+            23_3:             TypeVector 22_1(float) 3
+            32_5:             TypePointer Function 23_3(fvec3)
+            32_6:             TypePointer Input 23_1(fvec4)
+        59_4(v4):   32_6(ptr) Variable Input
+            32_7:             TypePointer Function 23_1(fvec4)
+            32_8:             TypePointer Input 23_3(fvec3)
+        59_5(v3):   32_8(ptr) Variable Input
+            24_3:             TypeMatrix 23_3(fvec3) 4
+            32_9:             TypePointer Function 24_3
+            24_4:             TypeMatrix 23_1(fvec4) 4
+           32_10:             TypePointer Function 24_4
+           32_11:             TypePointer Output 23_1(fvec4)
+     59_6(color):  32_11(ptr) Variable Output
+            43_2: 22_1(float) Constant 0
+            23_4:             TypeVector 22_1(float) 2
+            24_5:             TypeMatrix 23_4(fvec2) 2
+            43_3: 22_1(float) Constant 1088841318
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_7(sum34):   32_1(ptr) Variable Function
+        59_8(dm):   32_4(ptr) Variable Function
+      59_9(sum3):   32_5(ptr) Variable Function
+     59_10(sum4):   32_7(ptr) Variable Function
+      59_11(m43):   32_9(ptr) Variable Function
+       59_12(m4):  32_10(ptr) Variable Function
+            61_1:        24_1 Load 59_1(m1)
+            61_2:        24_1 Load 59_2(m2)
+            81_1: 23_1(fvec4) CompositeExtract 61_1 0
+            81_2: 23_1(fvec4) CompositeExtract 61_2 0
+           131_1: 23_1(fvec4) FSub 81_1 81_2
+            81_3: 23_1(fvec4) CompositeExtract 61_1 1
+            81_4: 23_1(fvec4) CompositeExtract 61_2 1
+           131_2: 23_1(fvec4) FSub 81_3 81_4
+            81_5: 23_1(fvec4) CompositeExtract 61_1 2
+            81_6: 23_1(fvec4) CompositeExtract 61_2 2
+           131_3: 23_1(fvec4) FSub 81_5 81_6
+            80_1:        24_1 CompositeConstruct 131_1 131_2 131_3
+                              Store 59_7(sum34) 80_1
+            61_3:        24_1 Load 59_1(m1)
+            61_4: 22_1(float) Load 59_3(f)
+           143_1:        24_1 MatrixTimesScalar 61_3 61_4
+            61_5:        24_1 Load 59_7(sum34)
+            81_7: 23_1(fvec4) CompositeExtract 61_5 0
+            81_8: 23_1(fvec4) CompositeExtract 143_1 0
+           129_1: 23_1(fvec4) FAdd 81_7 81_8
+            81_9: 23_1(fvec4) CompositeExtract 61_5 1
+           81_10: 23_1(fvec4) CompositeExtract 143_1 1
+           129_2: 23_1(fvec4) FAdd 81_9 81_10
+           81_11: 23_1(fvec4) CompositeExtract 61_5 2
+           81_12: 23_1(fvec4) CompositeExtract 143_1 2
+           129_3: 23_1(fvec4) FAdd 81_11 81_12
+            80_2:        24_1 CompositeConstruct 129_1 129_2 129_3
+                              Store 59_7(sum34) 80_2
+            61_6: 22_1(float) Load 59_3(f)
+            61_7:        24_1 Load 59_1(m1)
+           143_2:        24_1 MatrixTimesScalar 61_7 61_6
+            61_8:        24_1 Load 59_7(sum34)
+           81_13: 23_1(fvec4) CompositeExtract 61_8 0
+           81_14: 23_1(fvec4) CompositeExtract 143_2 0
+           129_4: 23_1(fvec4) FAdd 81_13 81_14
+           81_15: 23_1(fvec4) CompositeExtract 61_8 1
+           81_16: 23_1(fvec4) CompositeExtract 143_2 1
+           129_5: 23_1(fvec4) FAdd 81_15 81_16
+           81_17: 23_1(fvec4) CompositeExtract 61_8 2
+           81_18: 23_1(fvec4) CompositeExtract 143_2 2
+           129_6: 23_1(fvec4) FAdd 81_17 81_18
+            80_3:        24_1 CompositeConstruct 129_4 129_5 129_6
+                              Store 59_7(sum34) 80_3
+            61_9:        24_1 Load 59_1(m1)
+           61_10:        24_1 Load 59_2(m2)
+           81_19: 23_1(fvec4) CompositeExtract 61_9 0
+           81_20: 23_1(fvec4) CompositeExtract 61_10 0
+           133_1: 23_1(fvec4) FMul 81_19 81_20
+           81_21: 23_1(fvec4) CompositeExtract 61_9 1
+           81_22: 23_1(fvec4) CompositeExtract 61_10 1
+           133_2: 23_1(fvec4) FMul 81_21 81_22
+           81_23: 23_1(fvec4) CompositeExtract 61_9 2
+           81_24: 23_1(fvec4) CompositeExtract 61_10 2
+           133_3: 23_1(fvec4) FMul 81_23 81_24
+            80_4:        24_1 CompositeConstruct 133_1 133_2 133_3
+           61_11:        24_1 Load 59_7(sum34)
+           81_25: 23_1(fvec4) CompositeExtract 61_11 0
+           81_26: 23_1(fvec4) CompositeExtract 80_4 0
+           136_1: 23_1(fvec4) FDiv 81_25 81_26
+           81_27: 23_1(fvec4) CompositeExtract 61_11 1
+           81_28: 23_1(fvec4) CompositeExtract 80_4 1
+           136_2: 23_1(fvec4) FDiv 81_27 81_28
+           81_29: 23_1(fvec4) CompositeExtract 61_11 2
+           81_30: 23_1(fvec4) CompositeExtract 80_4 2
+           136_3: 23_1(fvec4) FDiv 81_29 81_30
+            80_5:        24_1 CompositeConstruct 136_1 136_2 136_3
+                              Store 59_7(sum34) 80_5
+           61_12:        24_1 Load 59_1(m1)
+           61_13: 22_1(float) Load 59_3(f)
+           136_4: 22_1(float) FDiv 43_1 61_13
+           143_3:        24_1 MatrixTimesScalar 61_12 136_4
+           61_14:        24_1 Load 59_7(sum34)
+           81_31: 23_1(fvec4) CompositeExtract 61_14 0
+           81_32: 23_1(fvec4) CompositeExtract 143_3 0
+           129_7: 23_1(fvec4) FAdd 81_31 81_32
+           81_33: 23_1(fvec4) CompositeExtract 61_14 1
+           81_34: 23_1(fvec4) CompositeExtract 143_3 1
+           129_8: 23_1(fvec4) FAdd 81_33 81_34
+           81_35: 23_1(fvec4) CompositeExtract 61_14 2
+           81_36: 23_1(fvec4) CompositeExtract 143_3 2
+           129_9: 23_1(fvec4) FAdd 81_35 81_36
+            80_6:        24_1 CompositeConstruct 129_7 129_8 129_9
+                              Store 59_7(sum34) 80_6
+           61_15: 22_1(float) Load 59_3(f)
+           61_16:        24_1 Load 59_1(m1)
+            80_7: 23_1(fvec4) CompositeConstruct 61_15 61_15 61_15 61_15
+           81_37: 23_1(fvec4) CompositeExtract 61_16 0
+           136_5: 23_1(fvec4) FDiv 80_7 81_37
+           81_38: 23_1(fvec4) CompositeExtract 61_16 1
+           136_6: 23_1(fvec4) FDiv 80_7 81_38
+           81_39: 23_1(fvec4) CompositeExtract 61_16 2
+           136_7: 23_1(fvec4) FDiv 80_7 81_39
+            80_8:        24_1 CompositeConstruct 136_5 136_6 136_7
+           61_17:        24_1 Load 59_7(sum34)
+           81_40: 23_1(fvec4) CompositeExtract 61_17 0
+           81_41: 23_1(fvec4) CompositeExtract 80_8 0
+          129_10: 23_1(fvec4) FAdd 81_40 81_41
+           81_42: 23_1(fvec4) CompositeExtract 61_17 1
+           81_43: 23_1(fvec4) CompositeExtract 80_8 1
+          129_11: 23_1(fvec4) FAdd 81_42 81_43
+           81_44: 23_1(fvec4) CompositeExtract 61_17 2
+           81_45: 23_1(fvec4) CompositeExtract 80_8 2
+          129_12: 23_1(fvec4) FAdd 81_44 81_45
+            80_9:        24_1 CompositeConstruct 129_10 129_11 129_12
+                              Store 59_7(sum34) 80_9
+           61_18: 22_1(float) Load 59_3(f)
+           61_19:        24_1 Load 59_7(sum34)
+           80_10: 23_1(fvec4) CompositeConstruct 61_18 61_18 61_18 61_18
+           81_46: 23_1(fvec4) CompositeExtract 61_19 0
+          129_13: 23_1(fvec4) FAdd 81_46 80_10
+           81_47: 23_1(fvec4) CompositeExtract 61_19 1
+          129_14: 23_1(fvec4) FAdd 81_47 80_10
+           81_48: 23_1(fvec4) CompositeExtract 61_19 2
+          129_15: 23_1(fvec4) FAdd 81_48 80_10
+           80_11:        24_1 CompositeConstruct 129_13 129_14 129_15
+                              Store 59_7(sum34) 80_11
+           61_20: 22_1(float) Load 59_3(f)
+           61_21:        24_1 Load 59_7(sum34)
+           80_12: 23_1(fvec4) CompositeConstruct 61_20 61_20 61_20 61_20
+           81_49: 23_1(fvec4) CompositeExtract 61_21 0
+           131_4: 23_1(fvec4) FSub 81_49 80_12
+           81_50: 23_1(fvec4) CompositeExtract 61_21 1
+           131_5: 23_1(fvec4) FSub 81_50 80_12
+           81_51: 23_1(fvec4) CompositeExtract 61_21 2
+           131_6: 23_1(fvec4) FSub 81_51 80_12
+           80_13:        24_1 CompositeConstruct 131_4 131_5 131_6
+                              Store 59_7(sum34) 80_13
+           61_22:        24_1 Load 59_7(sum34)
+           81_52: 23_1(fvec4) CompositeExtract 61_22 0
+           115_1:23_2(f64vec4) FConvert 81_52
+           81_53: 23_1(fvec4) CompositeExtract 61_22 1
+           115_2:23_2(f64vec4) FConvert 81_53
+           81_54: 23_1(fvec4) CompositeExtract 61_22 2
+           115_3:23_2(f64vec4) FConvert 81_54
+           80_14:        24_2 CompositeConstruct 115_1 115_2 115_3
+                              Store 59_8(dm) 80_14
+           61_23:        24_2 Load 59_8(dm)
+           81_55:23_2(f64vec4) CompositeExtract 61_23 0
+           115_4: 23_1(fvec4) FConvert 81_55
+           81_56:23_2(f64vec4) CompositeExtract 61_23 1
+           115_5: 23_1(fvec4) FConvert 81_56
+           81_57:23_2(f64vec4) CompositeExtract 61_23 2
+           115_6: 23_1(fvec4) FConvert 81_57
+           80_15:        24_1 CompositeConstruct 115_4 115_5 115_6
+                              Store 59_7(sum34) 80_15
+           61_24: 23_1(fvec4) Load 59_4(v4)
+           61_25:        24_1 Load 59_2(m2)
+           144_1: 23_3(fvec3) VectorTimesMatrix 61_24 61_25
+                              Store 59_9(sum3) 144_1
+           61_26:        24_1 Load 59_2(m2)
+           61_27: 23_3(fvec3) Load 59_5(v3)
+           145_1: 23_1(fvec4) MatrixTimesVector 61_26 61_27
+                              Store 59_10(sum4) 145_1
+           61_28:        24_1 Load 59_7(sum34)
+            84_1:        24_3 Transpose 61_28
+                              Store 59_11(m43) 84_1
+           61_29:        24_1 Load 59_1(m1)
+           61_30:        24_3 Load 59_11(m43)
+           146_1:        24_4 MatrixTimesMatrix 61_29 61_30
+                              Store 59_12(m4) 146_1
+           61_31: 23_1(fvec4) Load 59_4(v4)
+           61_32:        24_4 Load 59_12(m4)
+           144_2: 23_1(fvec4) VectorTimesMatrix 61_31 61_32
+                              Store 59_10(sum4) 144_2
+           61_33: 23_1(fvec4) Load 59_10(sum4)
+                              Store 59_6(color) 61_33
+           61_34:        24_1 Load 59_7(sum34)
+           80_16: 23_1(fvec4) CompositeConstruct 43_1 43_1 43_1 43_1
+           81_58: 23_1(fvec4) CompositeExtract 61_34 0
+          129_16: 23_1(fvec4) FAdd 81_58 80_16
+           81_59: 23_1(fvec4) CompositeExtract 61_34 1
+          129_17: 23_1(fvec4) FAdd 81_59 80_16
+           81_60: 23_1(fvec4) CompositeExtract 61_34 2
+          129_18: 23_1(fvec4) FAdd 81_60 80_16
+           80_17:        24_1 CompositeConstruct 129_16 129_17 129_18
+                              Store 59_7(sum34) 80_17
+           61_35:        24_1 Load 59_7(sum34)
+           80_18: 23_1(fvec4) CompositeConstruct 43_1 43_1 43_1 43_1
+           81_61: 23_1(fvec4) CompositeExtract 61_35 0
+           131_7: 23_1(fvec4) FSub 81_61 80_18
+           81_62: 23_1(fvec4) CompositeExtract 61_35 1
+           131_8: 23_1(fvec4) FSub 81_62 80_18
+           81_63: 23_1(fvec4) CompositeExtract 61_35 2
+           131_9: 23_1(fvec4) FSub 81_63 80_18
+           80_19:        24_1 CompositeConstruct 131_7 131_8 131_9
+                              Store 59_7(sum34) 80_19
+           61_36: 22_1(float) Load 59_3(f)
+           80_20: 23_1(fvec4) CompositeConstruct 61_36 43_2 43_2 43_2
+           80_21: 23_1(fvec4) CompositeConstruct 43_2 61_36 43_2 43_2
+           80_22: 23_1(fvec4) CompositeConstruct 43_2 43_2 61_36 43_2
+           80_23:        24_1 CompositeConstruct 80_20 80_21 80_22
+           61_37:        24_1 Load 59_7(sum34)
+           81_64: 23_1(fvec4) CompositeExtract 61_37 0
+           81_65: 23_1(fvec4) CompositeExtract 80_23 0
+          129_19: 23_1(fvec4) FAdd 81_64 81_65
+           81_66: 23_1(fvec4) CompositeExtract 61_37 1
+           81_67: 23_1(fvec4) CompositeExtract 80_23 1
+          129_20: 23_1(fvec4) FAdd 81_66 81_67
+           81_68: 23_1(fvec4) CompositeExtract 61_37 2
+           81_69: 23_1(fvec4) CompositeExtract 80_23 2
+          129_21: 23_1(fvec4) FAdd 81_68 81_69
+           80_24:        24_1 CompositeConstruct 129_19 129_20 129_21
+                              Store 59_7(sum34) 80_24
+           61_38: 23_3(fvec3) Load 59_5(v3)
+           61_39: 22_1(float) Load 59_3(f)
+           61_40: 23_3(fvec3) Load 59_5(v3)
+           61_41: 22_1(float) Load 59_3(f)
+           61_42: 23_3(fvec3) Load 59_5(v3)
+           61_43: 22_1(float) Load 59_3(f)
+           81_70: 22_1(float) CompositeExtract 61_38 0
+           81_71: 22_1(float) CompositeExtract 61_38 1
+           81_72: 22_1(float) CompositeExtract 61_38 2
+           81_73: 22_1(float) CompositeExtract 61_40 0
+           81_74: 22_1(float) CompositeExtract 61_40 1
+           81_75: 22_1(float) CompositeExtract 61_40 2
+           81_76: 22_1(float) CompositeExtract 61_42 0
+           81_77: 22_1(float) CompositeExtract 61_42 1
+           81_78: 22_1(float) CompositeExtract 61_42 2
+           80_25: 23_1(fvec4) CompositeConstruct 81_70 81_71 81_72 61_39
+           80_26: 23_1(fvec4) CompositeConstruct 81_73 81_74 81_75 61_41
+           80_27: 23_1(fvec4) CompositeConstruct 81_76 81_77 81_78 61_43
+           80_28:        24_1 CompositeConstruct 80_25 80_26 80_27
+           61_44:        24_1 Load 59_7(sum34)
+           81_79: 23_1(fvec4) CompositeExtract 61_44 0
+           81_80: 23_1(fvec4) CompositeExtract 80_28 0
+          129_22: 23_1(fvec4) FAdd 81_79 81_80
+           81_81: 23_1(fvec4) CompositeExtract 61_44 1
+           81_82: 23_1(fvec4) CompositeExtract 80_28 1
+          129_23: 23_1(fvec4) FAdd 81_81 81_82
+           81_83: 23_1(fvec4) CompositeExtract 61_44 2
+           81_84: 23_1(fvec4) CompositeExtract 80_28 2
+          129_24: 23_1(fvec4) FAdd 81_83 81_84
+           80_29:        24_1 CompositeConstruct 129_22 129_23 129_24
+                              Store 59_7(sum34) 80_29
+           61_45: 23_3(fvec3) Load 59_9(sum3)
+           61_46:        24_3 Load 59_11(m43)
+           144_3: 23_1(fvec4) VectorTimesMatrix 61_45 61_46
+           61_47: 23_1(fvec4) Load 59_10(sum4)
+          129_25: 23_1(fvec4) FAdd 144_3 61_47
+           61_48: 23_1(fvec4) Load 59_6(color)
+          129_26: 23_1(fvec4) FAdd 61_48 129_25
+                              Store 59_6(color) 129_26
+           61_49:        24_3 Load 59_11(m43)
+           81_85: 22_1(float) CompositeExtract 61_49 0 0
+           81_86: 22_1(float) CompositeExtract 61_49 0 1
+           81_87: 22_1(float) CompositeExtract 61_49 0 2
+           81_88: 22_1(float) CompositeExtract 61_49 1 0
+           80_30: 23_1(fvec4) CompositeConstruct 81_85 81_86 81_87 81_88
+           61_50: 23_1(fvec4) Load 59_6(color)
+          129_27: 23_1(fvec4) FAdd 61_50 80_30
+                              Store 59_6(color) 129_27
+           61_51: 22_1(float) Load 59_3(f)
+           80_31: 23_4(fvec2) CompositeConstruct 61_51 43_2
+           80_32: 23_4(fvec2) CompositeConstruct 43_2 61_51
+           80_33:        24_5 CompositeConstruct 80_31 80_32
+           81_89: 22_1(float) CompositeExtract 80_33 0 0
+           81_90: 22_1(float) CompositeExtract 80_33 0 1
+           81_91: 22_1(float) CompositeExtract 80_33 1 0
+           80_34: 23_3(fvec3) CompositeConstruct 81_89 81_90 81_91
+           81_92: 22_1(float) CompositeExtract 80_34 0
+           81_93: 22_1(float) CompositeExtract 80_34 1
+           81_94: 22_1(float) CompositeExtract 80_34 2
+           80_35: 23_1(fvec4) CompositeConstruct 81_92 81_93 81_94 43_3
+           61_52: 23_1(fvec4) Load 59_6(color)
+          129_28: 23_1(fvec4) FAdd 61_52 80_35
+                              Store 59_6(color) 129_28
                               Return
                               FunctionEnd

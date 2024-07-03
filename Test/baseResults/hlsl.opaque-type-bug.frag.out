@@ -62,51 +62,51 @@ gl_FragCoord origin is upper left
 // Id's are bound by 27
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 13  "TexFunc(t21;vf3;"
-                              Name 11  "t2D"
-                              Name 12  "RGB"
-                              Name 15  "@main("
-                              Name 20  "MyTexture"
-                              Name 22  "final_RGB"
-                              Name 23  "param"
-                              Decorate 20(MyTexture) Binding 0
-                              Decorate 20(MyTexture) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeImage 6(float) 2D sampled format:Unknown
-               8:             TypeVector 6(float) 3
-               9:             TypePointer Function 8(fvec3)
-              10:             TypeFunction 2 7 9(ptr)
-              17:    6(float) Constant 0
-              18:    8(fvec3) ConstantComposite 17 17 17
-              19:             TypePointer UniformConstant 7
-   20(MyTexture):     19(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-              26:           2 FunctionCall 15(@main()
+                              Name 54_1  "main"
+                              Name 54_2  "TexFunc(t21;vf3;"
+                              Name 55_1  "t2D"
+                              Name 55_2  "RGB"
+                              Name 54_3  "@main("
+                              Name 59_1  "MyTexture"
+                              Name 59_2  "final_RGB"
+                              Name 59_3  "param"
+                              Decorate 59_1(MyTexture) Binding 0
+                              Decorate 59_1(MyTexture) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            23_1:             TypeVector 22_1(float) 3
+            32_1:             TypePointer Function 23_1(fvec3)
+            33_2:             TypeFunction 19_1 25_1 32_1(ptr)
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec3) ConstantComposite 43_1 43_1 43_1
+            32_2:             TypePointer UniformConstant 25_1
+ 59_1(MyTexture):   32_2(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:        19_1 FunctionCall 54_3(@main()
                               Return
                               FunctionEnd
-13(TexFunc(t21;vf3;):           2 Function None 10
-         11(t2D):           7 FunctionParameter
-         12(RGB):      9(ptr) FunctionParameter
-              14:             Label
-                              Store 12(RGB) 18
+54_2(TexFunc(t21;vf3;):        19_1 Function None 33_2
+       55_1(t2D):        25_1 FunctionParameter
+       55_2(RGB):   32_1(ptr) FunctionParameter
+           248_2:             Label
+                              Store 55_2(RGB) 44_1
                               Return
                               FunctionEnd
-      15(@main():           2 Function None 3
-              16:             Label
-   22(final_RGB):      9(ptr) Variable Function
-       23(param):      9(ptr) Variable Function
-              21:           7 Load 20(MyTexture)
-              24:           2 FunctionCall 13(TexFunc(t21;vf3;) 21 23(param)
-              25:    8(fvec3) Load 23(param)
-                              Store 22(final_RGB) 25
+    54_3(@main():        19_1 Function None 33_1
+           248_3:             Label
+ 59_2(final_RGB):   32_1(ptr) Variable Function
+     59_3(param):   32_1(ptr) Variable Function
+            61_1:        25_1 Load 59_1(MyTexture)
+            57_2:        19_1 FunctionCall 54_2(TexFunc(t21;vf3;) 61_1 59_3(param)
+            61_2: 23_1(fvec3) Load 59_3(param)
+                              Store 59_2(final_RGB) 61_2
                               Return
                               FunctionEnd

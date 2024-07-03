@@ -112,78 +112,78 @@ using early_fragment_tests
 // Id's are bound by 50
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 41 46
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 EarlyFragmentTests
+                              EntryPoint Fragment 54_1  "main" 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 EarlyFragmentTests
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "InputStruct"
-                              MemberName 8(InputStruct) 0  "Position"
-                              Name 13  "@main(struct-InputStruct-vf41;"
-                              Name 12  "input"
-                              Name 16  "oldVal"
-                              Name 19  "Values"
-                              Name 39  "input"
-                              Name 41  "input.Position"
-                              Name 46  "@entryPointOutput"
-                              Name 47  "param"
-                              Decorate 19(Values) Binding 0
-                              Decorate 19(Values) DescriptorSet 0
-                              Decorate 41(input.Position) BuiltIn FragCoord
-                              Decorate 46(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-  8(InputStruct):             TypeStruct 7(fvec4)
-               9:             TypePointer Function 8(InputStruct)
-              10:             TypeInt 32 0
-              11:             TypeFunction 10(int) 9(ptr)
-              15:             TypePointer Function 10(int)
-              17:             TypeImage 10(int) 2D nonsampled format:R32ui
-              18:             TypePointer UniformConstant 17
-      19(Values):     18(ptr) Variable UniformConstant
-              20:             TypeInt 32 1
-              21:     20(int) Constant 0
-              22:     10(int) Constant 0
-              23:             TypePointer Function 6(float)
-              27:     10(int) Constant 1
-              31:             TypeVector 10(int) 2
-              33:             TypePointer Image 10(int)
-              40:             TypePointer Input 7(fvec4)
-41(input.Position):     40(ptr) Variable Input
-              43:             TypePointer Function 7(fvec4)
-              45:             TypePointer Output 10(int)
-46(@entryPointOutput):     45(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-       39(input):      9(ptr) Variable Function
-       47(param):      9(ptr) Variable Function
-              42:    7(fvec4) Load 41(input.Position)
-              44:     43(ptr) AccessChain 39(input) 21
-                              Store 44 42
-              48:8(InputStruct) Load 39(input)
-                              Store 47(param) 48
-              49:     10(int) FunctionCall 13(@main(struct-InputStruct-vf41;) 47(param)
-                              Store 46(@entryPointOutput) 49
+                              Name 54_1  "main"
+                              Name 30_1  "InputStruct"
+                              MemberName 30_1(InputStruct) 0  "Position"
+                              Name 54_2  "@main(struct-InputStruct-vf41;"
+                              Name 55_1  "input"
+                              Name 59_6  "oldVal"
+                              Name 59_1  "Values"
+                              Name 59_4  "input"
+                              Name 59_2  "input.Position"
+                              Name 59_3  "@entryPointOutput"
+                              Name 59_5  "param"
+                              Decorate 59_1(Values) Binding 0
+                              Decorate 59_1(Values) DescriptorSet 0
+                              Decorate 59_2(input.Position) BuiltIn FragCoord
+                              Decorate 59_3(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+30_1(InputStruct):             TypeStruct 23_1(fvec4)
+            32_1:             TypePointer Function 30_1(InputStruct)
+            21_1:             TypeInt 32 0
+            33_2:             TypeFunction 21_1(int) 32_1(ptr)
+            32_2:             TypePointer Function 21_1(int)
+            25_1:             TypeImage 21_1(int) 2D nonsampled format:R32ui
+            32_3:             TypePointer UniformConstant 25_1
+    59_1(Values):   32_3(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+         uint(0):   21_1(int) Constant 0
+            32_4:             TypePointer Function 22_1(float)
+         uint(1):   21_1(int) Constant 1
+            23_2:             TypeVector 21_1(int) 2
+            32_5:             TypePointer Image 21_1(int)
+            32_6:             TypePointer Input 23_1(fvec4)
+59_2(input.Position):   32_6(ptr) Variable Input
+            32_7:             TypePointer Function 23_1(fvec4)
+            32_8:             TypePointer Output 21_1(int)
+59_3(@entryPointOutput):   32_8(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_4(input):   32_1(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_2(input.Position)
+            65_1:   32_7(ptr) AccessChain 59_4(input) 43_1
+                              Store 65_1 61_1
+            61_2:30_1(InputStruct) Load 59_4(input)
+                              Store 59_5(param) 61_2
+            57_1:   21_1(int) FunctionCall 54_2(@main(struct-InputStruct-vf41;) 59_5(param)
+                              Store 59_3(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-13(@main(struct-InputStruct-vf41;):     10(int) Function None 11
-       12(input):      9(ptr) FunctionParameter
-              14:             Label
-      16(oldVal):     15(ptr) Variable Function
-              24:     23(ptr) AccessChain 12(input) 21 22
-              25:    6(float) Load 24
-              26:     10(int) ConvertFToU 25
-              28:     23(ptr) AccessChain 12(input) 21 27
-              29:    6(float) Load 28
-              30:     10(int) ConvertFToU 29
-              32:   31(ivec2) CompositeConstruct 26 30
-              34:     33(ptr) ImageTexelPointer 19(Values) 32 22
-              35:     10(int) AtomicExchange 34 27 22 27
-                              Store 16(oldVal) 35
-              36:     10(int) Load 16(oldVal)
-                              ReturnValue 36
+54_2(@main(struct-InputStruct-vf41;):   21_1(int) Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+           248_2:             Label
+    59_6(oldVal):   32_2(ptr) Variable Function
+            65_2:   32_4(ptr) AccessChain 55_1(input) 43_1 uint(0)
+            61_3: 22_1(float) Load 65_2
+           109_1:   21_1(int) ConvertFToU 61_3
+            65_3:   32_4(ptr) AccessChain 55_1(input) 43_1 uint(1)
+            61_4: 22_1(float) Load 65_3
+           109_2:   21_1(int) ConvertFToU 61_4
+            80_1: 23_2(ivec2) CompositeConstruct 109_1 109_2
+            60_1:   32_5(ptr) ImageTexelPointer 59_1(Values) 80_1 uint(0)
+           229_1:   21_1(int) AtomicExchange 60_1 uint(1) uint(0) uint(1)
+                              Store 59_6(oldVal) 229_1
+            61_5:   21_1(int) Load 59_6(oldVal)
+                              ReturnValue 61_5
                               FunctionEnd

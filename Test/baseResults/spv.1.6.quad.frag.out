@@ -8,69 +8,69 @@ spv.1.6.quad.frag
                               Capability GroupNonUniformVote
                               Capability QuadControlKHR
                               Extension  "SPV_KHR_quad_control"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 16 33
-                              ExecutionMode 4 QuadDerivativesKHR
-                              ExecutionMode 4 RequireFullQuadsKHR
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 QuadDerivativesKHR
+                              ExecutionMode 54_1 RequireFullQuadsKHR
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 460
                               SourceExtension  "GL_EXT_shader_quad_control"
                               SourceExtension  "GL_KHR_shader_subgroup_basic"
                               SourceExtension  "GL_KHR_shader_subgroup_vote"
-                              Name 4  "main"
-                              Name 8  "bTemp"
-                              Name 16  "iInput"
-                              Name 33  "bOut"
-                              Decorate 16(iInput) Flat
-                              Decorate 16(iInput) Location 0
-                              Decorate 33(bOut) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeBool
-               7:             TypePointer Function 6(bool)
-               9:     6(bool) ConstantFalse
-              14:             TypeInt 32 1
-              15:             TypePointer Input 14(int)
-      16(iInput):     15(ptr) Variable Input
-              18:     14(int) Constant 0
-              20:             TypeInt 32 0
-              21:     20(int) Constant 3
-              32:             TypePointer Output 14(int)
-        33(bOut):     32(ptr) Variable Output
-              35:     6(bool) ConstantTrue
-              37:     14(int) Constant 1
-         4(main):           2 Function None 3
-               5:             Label
-        8(bTemp):      7(ptr) Variable Function
-                              Store 8(bTemp) 9
-              10:     6(bool) Load 8(bTemp)
-              11:     6(bool) LogicalNot 10
-                              SelectionMerge 13 None
-                              BranchConditional 11 12 13
-              12:               Label
-              17:     14(int)   Load 16(iInput)
-              19:     6(bool)   SGreaterThan 17 18
-              22:     6(bool)   GroupNonUniformQuadAllKHR 19
-                                Branch 13
-              13:             Label
-              23:     6(bool) Phi 10 5 22 12
-                              Store 8(bTemp) 23
-              24:     6(bool) Load 8(bTemp)
-              25:     6(bool) LogicalNot 24
-                              SelectionMerge 27 None
-                              BranchConditional 25 26 27
-              26:               Label
-              28:     14(int)   Load 16(iInput)
-              29:     6(bool)   SGreaterThan 28 18
-              30:     6(bool)   GroupNonUniformQuadAnyKHR 29
-                                Branch 27
-              27:             Label
-              31:     6(bool) Phi 24 13 30 26
-                              Store 8(bTemp) 31
-              34:     6(bool) Load 8(bTemp)
-              36:     6(bool) LogicalEqual 34 35
-              38:     14(int) Select 36 37 18
-                              Store 33(bOut) 38
+                              Name 54_1  "main"
+                              Name 59_3  "bTemp"
+                              Name 59_1  "iInput"
+                              Name 59_2  "bOut"
+                              Decorate 59_1(iInput) Flat
+                              Decorate 59_1(iInput) Location 0
+                              Decorate 59_2(bOut) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            20_1:             TypeBool
+            32_1:             TypePointer Function 20_1(bool)
+            42_1:  20_1(bool) ConstantFalse
+            21_1:             TypeInt 32 1
+            32_2:             TypePointer Input 21_1(int)
+    59_1(iInput):   32_2(ptr) Variable Input
+            43_1:   21_1(int) Constant 0
+            21_2:             TypeInt 32 0
+         uint(3):   21_2(int) Constant 3
+            32_3:             TypePointer Output 21_1(int)
+      59_2(bOut):   32_3(ptr) Variable Output
+            41_1:  20_1(bool) ConstantTrue
+            43_2:   21_1(int) Constant 1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(bTemp):   32_1(ptr) Variable Function
+                              Store 59_3(bTemp) 42_1
+            61_1:  20_1(bool) Load 59_3(bTemp)
+           168_1:  20_1(bool) LogicalNot 61_1
+                              SelectionMerge 248_3 None
+                              BranchConditional 168_1 248_2 248_3
+           248_2:               Label
+            61_2:   21_1(int)   Load 59_1(iInput)
+           173_1:  20_1(bool)   SGreaterThan 61_2 43_1
+          5110_1:  20_1(bool)   GroupNonUniformQuadAllKHR 173_1
+                                Branch 248_3
+           248_3:             Label
+           245_1:  20_1(bool) Phi 61_1 248_1 5110_1 248_2
+                              Store 59_3(bTemp) 245_1
+            61_3:  20_1(bool) Load 59_3(bTemp)
+           168_2:  20_1(bool) LogicalNot 61_3
+                              SelectionMerge 248_5 None
+                              BranchConditional 168_2 248_4 248_5
+           248_4:               Label
+            61_4:   21_1(int)   Load 59_1(iInput)
+           173_2:  20_1(bool)   SGreaterThan 61_4 43_1
+          5111_1:  20_1(bool)   GroupNonUniformQuadAnyKHR 173_2
+                                Branch 248_5
+           248_5:             Label
+           245_2:  20_1(bool) Phi 61_3 248_3 5111_1 248_4
+                              Store 59_3(bTemp) 245_2
+            61_5:  20_1(bool) Load 59_3(bTemp)
+           164_1:  20_1(bool) LogicalEqual 61_5 41_1
+           169_1:   21_1(int) Select 164_1 43_2 43_1
+                              Store 59_2(bOut) 169_1
                               Return
                               FunctionEnd

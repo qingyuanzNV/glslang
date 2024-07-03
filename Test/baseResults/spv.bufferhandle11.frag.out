@@ -12,108 +12,108 @@ WARNING: 0:6: '' : all default precisions are highp; use precision statements to
                               Extension  "SPV_KHR_8bit_storage"
                               Extension  "SPV_KHR_physical_storage_buffer"
                               Extension  "SPV_KHR_storage_buffer_storage_class"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_buffer_reference"
                               SourceExtension  "GL_EXT_shader_16bit_storage"
                               SourceExtension  "GL_EXT_shader_8bit_storage"
-                              Name 4  "main"
-                              Name 12  "compare_uint8_t(u1;u1;"
-                              Name 10  "a"
-                              Name 11  "b"
-                              Name 20  "allOk"
-                              Name 26  "PC"
-                              MemberName 26(PC) 0  "block"
-                              Name 28  "Block"
-                              MemberName 28(Block) 0  "var"
-                              Name 30  ""
-                              Name 41  "param"
-                              Name 42  "param"
-                              Name 48  "AcBlock"
-                              MemberName 48(AcBlock) 0  "ac_numPassed"
-                              Name 50  ""
-                              Decorate 26(PC) Block
-                              MemberDecorate 26(PC) 0 Offset 0
-                              Decorate 28(Block) Block
-                              MemberDecorate 28(Block) 0 Offset 0
-                              Decorate 48(AcBlock) Block
-                              MemberDecorate 48(AcBlock) 0 Offset 0
-                              Decorate 50 Binding 0
-                              Decorate 50 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               8:             TypeBool
-               9:             TypeFunction 8(bool) 7(ptr) 7(ptr)
-              19:             TypePointer Function 8(bool)
-              21:     8(bool) ConstantTrue
-                              TypeForwardPointer 25 PhysicalStorageBufferEXT
-          26(PC):             TypeStruct 25
-              27:             TypeInt 8 0
-       28(Block):             TypeStruct 27(int8_t)
-              25:             TypePointer PhysicalStorageBufferEXT 28(Block)
-              29:             TypePointer PushConstant 26(PC)
-              30:     29(ptr) Variable PushConstant
-              31:             TypeInt 32 1
-              32:     31(int) Constant 0
-              33:             TypePointer PushConstant 25(ptr)
-              36:             TypePointer PhysicalStorageBufferEXT 27(int8_t)
-              40:      6(int) Constant 7
-     48(AcBlock):             TypeStruct 6(int)
-              49:             TypePointer StorageBuffer 48(AcBlock)
-              50:     49(ptr) Variable StorageBuffer
-              51:             TypePointer StorageBuffer 6(int)
-              54:     31(int) Constant 1
-              58:      6(int) Constant 9
-         4(main):           2 Function None 3
-               5:             Label
-       20(allOk):     19(ptr) Variable Function
-       41(param):      7(ptr) Variable Function
-       42(param):      7(ptr) Variable Function
-                              Store 20(allOk) 21
-              22:     8(bool) Load 20(allOk)
-                              SelectionMerge 24 None
-                              BranchConditional 22 23 24
-              23:               Label
-              34:     33(ptr)   AccessChain 30 32
-              35:     25(ptr)   Load 34
-              37:     36(ptr)   AccessChain 35 32
-              38:  27(int8_t)   Load 37 Aligned 16
-              39:      6(int)   UConvert 38
-                                Store 41(param) 39
-                                Store 42(param) 40
-              43:     8(bool)   FunctionCall 12(compare_uint8_t(u1;u1;) 41(param) 42(param)
-                                Branch 24
-              24:             Label
-              44:     8(bool) Phi 22 5 43 23
-                              Store 20(allOk) 44
-              45:     8(bool) Load 20(allOk)
-                              SelectionMerge 47 None
-                              BranchConditional 45 46 47
-              46:               Label
-              52:     51(ptr)   AccessChain 50 32
-              53:      6(int)   Load 52
-              55:      6(int)   IAdd 53 54
-                                Store 52 55
-                                Branch 47
-              47:             Label
-              56:     33(ptr) AccessChain 30 32
-              57:     25(ptr) Load 56
-              59:  27(int8_t) UConvert 58
-              60:     36(ptr) AccessChain 57 32
-                              Store 60 59 Aligned 16
+                              Name 54_1  "main"
+                              Name 54_2  "compare_uint8_t(u1;u1;"
+                              Name 55_1  "a"
+                              Name 55_2  "b"
+                              Name 59_3  "allOk"
+                              Name 30_1  "PC"
+                              MemberName 30_1(PC) 0  "block"
+                              Name 30_2  "Block"
+                              MemberName 30_2(Block) 0  "var"
+                              Name 59_1  ""
+                              Name 59_4  "param"
+                              Name 59_5  "param"
+                              Name 30_3  "AcBlock"
+                              MemberName 30_3(AcBlock) 0  "ac_numPassed"
+                              Name 59_2  ""
+                              Decorate 30_1(PC) Block
+                              MemberDecorate 30_1(PC) 0 Offset 0
+                              Decorate 30_2(Block) Block
+                              MemberDecorate 30_2(Block) 0 Offset 0
+                              Decorate 30_3(AcBlock) Block
+                              MemberDecorate 30_3(AcBlock) 0 Offset 0
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            20_1:             TypeBool
+            33_2:             TypeFunction 20_1(bool) 32_1(ptr) 32_1(ptr)
+            32_2:             TypePointer Function 20_1(bool)
+            41_1:  20_1(bool) ConstantTrue
+                              TypeForwardPointer 32_3 PhysicalStorageBufferEXT
+        30_1(PC):             TypeStruct 32_3
+            21_2:             TypeInt 8 0
+     30_2(Block):             TypeStruct 21_2(int8_t)
+            32_3:             TypePointer PhysicalStorageBufferEXT 30_2(Block)
+            32_4:             TypePointer PushConstant 30_1(PC)
+            59_1:   32_4(ptr) Variable PushConstant
+            21_3:             TypeInt 32 1
+            43_1:   21_3(int) Constant 0
+            32_5:             TypePointer PushConstant 32_3(ptr)
+            32_6:             TypePointer PhysicalStorageBufferEXT 21_2(int8_t)
+         uint(7):   21_1(int) Constant 7
+   30_3(AcBlock):             TypeStruct 21_1(int)
+            32_7:             TypePointer StorageBuffer 30_3(AcBlock)
+            59_2:   32_7(ptr) Variable StorageBuffer
+            32_8:             TypePointer StorageBuffer 21_1(int)
+            43_2:   21_3(int) Constant 1
+         uint(9):   21_1(int) Constant 9
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(allOk):   32_2(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+     59_5(param):   32_1(ptr) Variable Function
+                              Store 59_3(allOk) 41_1
+            61_1:  20_1(bool) Load 59_3(allOk)
+                              SelectionMerge 248_3 None
+                              BranchConditional 61_1 248_2 248_3
+           248_2:               Label
+            65_1:   32_5(ptr)   AccessChain 59_1 43_1
+            61_2:   32_3(ptr)   Load 65_1
+            65_2:   32_6(ptr)   AccessChain 61_2 43_1
+            61_3:21_2(int8_t)   Load 65_2 Aligned 16
+           113_1:   21_1(int)   UConvert 61_3
+                                Store 59_4(param) 113_1
+                                Store 59_5(param) uint(7)
+            57_1:  20_1(bool)   FunctionCall 54_2(compare_uint8_t(u1;u1;) 59_4(param) 59_5(param)
+                                Branch 248_3
+           248_3:             Label
+           245_1:  20_1(bool) Phi 61_1 248_1 57_1 248_2
+                              Store 59_3(allOk) 245_1
+            61_4:  20_1(bool) Load 59_3(allOk)
+                              SelectionMerge 248_5 None
+                              BranchConditional 61_4 248_4 248_5
+           248_4:               Label
+            65_3:   32_8(ptr)   AccessChain 59_2 43_1
+            61_5:   21_1(int)   Load 65_3
+           128_1:   21_1(int)   IAdd 61_5 43_2
+                                Store 65_3 128_1
+                                Branch 248_5
+           248_5:             Label
+            65_4:   32_5(ptr) AccessChain 59_1 43_1
+            61_6:   32_3(ptr) Load 65_4
+           113_2:21_2(int8_t) UConvert uint(9)
+            65_5:   32_6(ptr) AccessChain 61_6 43_1
+                              Store 65_5 113_2 Aligned 16
                               Return
                               FunctionEnd
-12(compare_uint8_t(u1;u1;):     8(bool) Function None 9
-           10(a):      7(ptr) FunctionParameter
-           11(b):      7(ptr) FunctionParameter
-              13:             Label
-              14:      6(int) Load 10(a)
-              15:      6(int) Load 11(b)
-              16:     8(bool) IEqual 14 15
-                              ReturnValue 16
+54_2(compare_uint8_t(u1;u1;):  20_1(bool) Function None 33_2
+         55_1(a):   32_1(ptr) FunctionParameter
+         55_2(b):   32_1(ptr) FunctionParameter
+           248_6:             Label
+            61_7:   21_1(int) Load 55_1(a)
+            61_8:   21_1(int) Load 55_2(b)
+           170_1:  20_1(bool) IEqual 61_7 61_8
+                              ReturnValue 170_1
                               FunctionEnd

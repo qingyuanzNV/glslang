@@ -669,356 +669,356 @@ gl_FragCoord origin is upper left
 // Id's are bound by 216
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 190
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_8
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 460
-                              Name 4  "main"
-                              Name 8  "bar("
-                              Name 13  "foo("
-                              Name 18  "SamplerArray"
-                              MemberName 18(SamplerArray) 0  "/*tn*/"
-                              Name 29  "baz(struct-SamplerArray-s21[4]1;s21;s21;s21;s21;"
-                              Name 24  "samplers"
-                              Name 25  "samplers.tn[0]"
-                              Name 26  "samplers.tn[1]"
-                              Name 27  "samplers.tn[2]"
-                              Name 28  "samplers.tn[3]"
-                              Name 32  "j"
-                              Name 34  "gl_AtomicCounterBlock_0"
-                              MemberName 34(gl_AtomicCounterBlock_0) 0  "counter1"
-                              MemberName 34(gl_AtomicCounterBlock_0) 1  "counter2"
-                              Name 36  ""
-                              Name 78  "gl_AtomicCounterBlock_1"
-                              MemberName 78(gl_AtomicCounterBlock_1) 0  "counter3"
-                              Name 80  ""
-                              Name 88  "f"
-                              Name 89  "UniformBlock"
-                              MemberName 89(UniformBlock) 0  "j"
-                              MemberName 89(UniformBlock) 1  "k"
-                              Name 91  ""
-                              Name 95  "BufferBlock"
-                              MemberName 95(BufferBlock) 0  "j"
-                              MemberName 95(BufferBlock) 1  "k"
-                              Name 97  "bufferInstance"
-                              Name 105  "SamplerArray"
-                              MemberName 105(SamplerArray) 0  "/*tn*/"
-                              Name 106  "e"
-                              MemberName 106(e) 0  "x"
-                              MemberName 106(e) 1  "y"
-                              MemberName 106(e) 2  "z"
-                              MemberName 106(e) 3  "/*t0*/"
-                              MemberName 106(e) 4  "samplers"
-                              Name 107  "gl_DefaultUniformBlock"
-                              MemberName 107(gl_DefaultUniformBlock) 0  "a"
-                              MemberName 107(gl_DefaultUniformBlock) 1  "b"
-                              MemberName 107(gl_DefaultUniformBlock) 2  "c"
-                              MemberName 107(gl_DefaultUniformBlock) 3  "d"
-                              MemberName 107(gl_DefaultUniformBlock) 4  "structUniform"
-                              Name 109  ""
-                              Name 120  "v2"
-                              Name 131  "v4"
-                              Name 151  "t1"
-                              Name 157  "structUniform.t0"
-                              Name 186  "j"
-                              Name 190  "o"
-                              Name 194  "structUniform.samplers.tn[0]"
-                              Name 195  "structUniform.samplers.tn[1]"
-                              Name 196  "structUniform.samplers.tn[2]"
-                              Name 197  "structUniform.samplers.tn[3]"
-                              Name 198  "param"
-                              Decorate 34(gl_AtomicCounterBlock_0) BufferBlock
-                              MemberDecorate 34(gl_AtomicCounterBlock_0) 0 Volatile
-                              MemberDecorate 34(gl_AtomicCounterBlock_0) 0 Coherent
-                              MemberDecorate 34(gl_AtomicCounterBlock_0) 0 Offset 0
-                              MemberDecorate 34(gl_AtomicCounterBlock_0) 1 Volatile
-                              MemberDecorate 34(gl_AtomicCounterBlock_0) 1 Coherent
-                              MemberDecorate 34(gl_AtomicCounterBlock_0) 1 Offset 4
-                              Decorate 36 Binding 9
-                              Decorate 36 DescriptorSet 0
-                              Decorate 78(gl_AtomicCounterBlock_1) BufferBlock
-                              MemberDecorate 78(gl_AtomicCounterBlock_1) 0 Volatile
-                              MemberDecorate 78(gl_AtomicCounterBlock_1) 0 Coherent
-                              MemberDecorate 78(gl_AtomicCounterBlock_1) 0 Offset 0
-                              Decorate 80 Binding 10
-                              Decorate 80 DescriptorSet 0
-                              Decorate 89(UniformBlock) Block
-                              MemberDecorate 89(UniformBlock) 0 Offset 0
-                              MemberDecorate 89(UniformBlock) 1 Offset 16
-                              Decorate 91 Binding 7
-                              Decorate 91 DescriptorSet 0
-                              Decorate 95(BufferBlock) BufferBlock
-                              MemberDecorate 95(BufferBlock) 0 Offset 0
-                              MemberDecorate 95(BufferBlock) 1 Offset 16
-                              Decorate 97(bufferInstance) Binding 8
-                              Decorate 97(bufferInstance) DescriptorSet 0
-                              Decorate 103 ArrayStride 16
-                              Decorate 104 ArrayStride 16
-                              MemberDecorate 105(SamplerArray) 0 Offset 0
-                              MemberDecorate 106(e) 0 Offset 0
-                              MemberDecorate 106(e) 1 Offset 8
-                              MemberDecorate 106(e) 2 Offset 12
-                              MemberDecorate 106(e) 3 Offset 16
-                              MemberDecorate 106(e) 4 Offset 32
-                              Decorate 107(gl_DefaultUniformBlock) Block
-                              MemberDecorate 107(gl_DefaultUniformBlock) 0 Offset 0
-                              MemberDecorate 107(gl_DefaultUniformBlock) 1 Offset 16
-                              MemberDecorate 107(gl_DefaultUniformBlock) 2 Offset 24
-                              MemberDecorate 107(gl_DefaultUniformBlock) 3 Offset 32
-                              MemberDecorate 107(gl_DefaultUniformBlock) 4 Offset 192
-                              Decorate 109 Binding 0
-                              Decorate 109 DescriptorSet 0
-                              Decorate 151(t1) Binding 6
-                              Decorate 151(t1) DescriptorSet 0
-                              Decorate 157(structUniform.t0) Binding 1
-                              Decorate 157(structUniform.t0) DescriptorSet 0
-                              Decorate 190(o) Location 0
-                              Decorate 194(structUniform.samplers.tn[0]) Binding 2
-                              Decorate 194(structUniform.samplers.tn[0]) DescriptorSet 0
-                              Decorate 195(structUniform.samplers.tn[1]) Binding 3
-                              Decorate 195(structUniform.samplers.tn[1]) DescriptorSet 0
-                              Decorate 196(structUniform.samplers.tn[2]) Binding 4
-                              Decorate 196(structUniform.samplers.tn[2]) DescriptorSet 0
-                              Decorate 197(structUniform.samplers.tn[3]) Binding 5
-                              Decorate 197(structUniform.samplers.tn[3]) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeFunction 6(int)
-              10:             TypeFloat 32
-              11:             TypeVector 10(float) 4
-              12:             TypeFunction 11(fvec4)
-              15:             TypeInt 32 1
-              16:      6(int) Constant 4
-              17:             TypeArray 15(int) 16
-18(SamplerArray):             TypeStruct 17
-              19:             TypePointer Function 18(SamplerArray)
-              20:             TypeImage 10(float) 2D sampled format:Unknown
-              21:             TypeSampledImage 20
-              22:             TypePointer UniformConstant 21
-              23:             TypeFunction 11(fvec4) 19(ptr) 22(ptr) 22(ptr) 22(ptr) 22(ptr)
-              31:             TypePointer Function 6(int)
-              33:      6(int) Constant 0
-34(gl_AtomicCounterBlock_0):             TypeStruct 6(int) 6(int)
-              35:             TypePointer Uniform 34(gl_AtomicCounterBlock_0)
-              36:     35(ptr) Variable Uniform
-              37:     15(int) Constant 0
-              38:             TypePointer Uniform 6(int)
-              40:      6(int) Constant 1
-              43:      6(int) Constant 4294967295
-              75:     15(int) Constant 1
-78(gl_AtomicCounterBlock_1):             TypeStruct 6(int)
-              79:             TypePointer Uniform 78(gl_AtomicCounterBlock_1)
-              80:     79(ptr) Variable Uniform
-              83:      6(int) Constant 72
-              87:             TypePointer Function 10(float)
-89(UniformBlock):             TypeStruct 10(float) 11(fvec4)
-              90:             TypePointer Uniform 89(UniformBlock)
-              91:     90(ptr) Variable Uniform
-              92:             TypePointer Uniform 10(float)
- 95(BufferBlock):             TypeStruct 10(float) 11(fvec4)
-              96:             TypePointer Uniform 95(BufferBlock)
-97(bufferInstance):     96(ptr) Variable Uniform
-             101:             TypeVector 10(float) 2
-             102:      6(int) Constant 10
-             103:             TypeArray 11(fvec4) 102
-             104:             TypeArray 15(int) 16
-105(SamplerArray):             TypeStruct 104
-          106(e):             TypeStruct 101(fvec2) 10(float) 6(int) 15(int) 105(SamplerArray)
-107(gl_DefaultUniformBlock):             TypeStruct 11(fvec4) 101(fvec2) 101(fvec2) 103 106(e)
-             108:             TypePointer Uniform 107(gl_DefaultUniformBlock)
-             109:    108(ptr) Variable Uniform
-             110:     15(int) Constant 4
-             114:     15(int) Constant 2
-             119:             TypePointer Function 101(fvec2)
-             121:             TypePointer Uniform 101(fvec2)
-             130:             TypePointer Function 11(fvec4)
-             132:             TypePointer Uniform 11(fvec4)
-             135:     15(int) Constant 3
-         151(t1):     22(ptr) Variable UniformConstant
-             153:   10(float) Constant 0
-             154:  101(fvec2) ConstantComposite 153 153
-157(structUniform.t0):     22(ptr) Variable UniformConstant
-             164:   10(float) Constant 1065353216
-             189:             TypePointer Output 11(fvec4)
-          190(o):    189(ptr) Variable Output
-194(structUniform.samplers.tn[0]):     22(ptr) Variable UniformConstant
-195(structUniform.samplers.tn[1]):     22(ptr) Variable UniformConstant
-196(structUniform.samplers.tn[2]):     22(ptr) Variable UniformConstant
-197(structUniform.samplers.tn[3]):     22(ptr) Variable UniformConstant
-             199:             TypePointer Uniform 105(SamplerArray)
-             203:             TypePointer Function 17
-             206:             TypePointer Function 15(int)
-         4(main):           2 Function None 3
-               5:             Label
-          186(j):     87(ptr) Variable Function
-      198(param):     19(ptr) Variable Function
-             187:      6(int) FunctionCall 8(bar()
-             188:   10(float) ConvertUToF 187
-                              Store 186(j) 188
-             191:   10(float) Load 186(j)
-             192:   11(fvec4) FunctionCall 13(foo()
-             193:   11(fvec4) VectorTimesScalar 192 191
-             200:    199(ptr) AccessChain 109 110 110
-             201:105(SamplerArray) Load 200
-             202:         104 CompositeExtract 201 0
-             204:    203(ptr) AccessChain 198(param) 37
-             205:     15(int) CompositeExtract 202 0
-             207:    206(ptr) AccessChain 204 37
-                              Store 207 205
-             208:     15(int) CompositeExtract 202 1
-             209:    206(ptr) AccessChain 204 75
-                              Store 209 208
-             210:     15(int) CompositeExtract 202 2
-             211:    206(ptr) AccessChain 204 114
-                              Store 211 210
-             212:     15(int) CompositeExtract 202 3
-             213:    206(ptr) AccessChain 204 135
-                              Store 213 212
-             214:   11(fvec4) FunctionCall 29(baz(struct-SamplerArray-s21[4]1;s21;s21;s21;s21;) 198(param) 194(structUniform.samplers.tn[0]) 195(structUniform.samplers.tn[1]) 196(structUniform.samplers.tn[2]) 197(structUniform.samplers.tn[3])
-             215:   11(fvec4) FAdd 193 214
-                              Store 190(o) 215
+                              Name 54_1  "main"
+                              Name 54_2  "bar("
+                              Name 54_3  "foo("
+                              Name 30_1  "SamplerArray"
+                              MemberName 30_1(SamplerArray) 0  "/*tn*/"
+                              Name 54_4  "baz(struct-SamplerArray-s21[4]1;s21;s21;s21;s21;"
+                              Name 55_1  "samplers"
+                              Name 55_2  "samplers.tn[0]"
+                              Name 55_3  "samplers.tn[1]"
+                              Name 55_4  "samplers.tn[2]"
+                              Name 55_5  "samplers.tn[3]"
+                              Name 59_15  "j"
+                              Name 30_2  "gl_AtomicCounterBlock_0"
+                              MemberName 30_2(gl_AtomicCounterBlock_0) 0  "counter1"
+                              MemberName 30_2(gl_AtomicCounterBlock_0) 1  "counter2"
+                              Name 59_1  ""
+                              Name 30_3  "gl_AtomicCounterBlock_1"
+                              MemberName 30_3(gl_AtomicCounterBlock_1) 0  "counter3"
+                              Name 59_2  ""
+                              Name 59_16  "f"
+                              Name 30_4  "UniformBlock"
+                              MemberName 30_4(UniformBlock) 0  "j"
+                              MemberName 30_4(UniformBlock) 1  "k"
+                              Name 59_3  ""
+                              Name 30_5  "BufferBlock"
+                              MemberName 30_5(BufferBlock) 0  "j"
+                              MemberName 30_5(BufferBlock) 1  "k"
+                              Name 59_4  "bufferInstance"
+                              Name 30_6  "SamplerArray"
+                              MemberName 30_6(SamplerArray) 0  "/*tn*/"
+                              Name 30_7  "e"
+                              MemberName 30_7(e) 0  "x"
+                              MemberName 30_7(e) 1  "y"
+                              MemberName 30_7(e) 2  "z"
+                              MemberName 30_7(e) 3  "/*t0*/"
+                              MemberName 30_7(e) 4  "samplers"
+                              Name 30_8  "gl_DefaultUniformBlock"
+                              MemberName 30_8(gl_DefaultUniformBlock) 0  "a"
+                              MemberName 30_8(gl_DefaultUniformBlock) 1  "b"
+                              MemberName 30_8(gl_DefaultUniformBlock) 2  "c"
+                              MemberName 30_8(gl_DefaultUniformBlock) 3  "d"
+                              MemberName 30_8(gl_DefaultUniformBlock) 4  "structUniform"
+                              Name 59_5  ""
+                              Name 59_17  "v2"
+                              Name 59_18  "v4"
+                              Name 59_6  "t1"
+                              Name 59_7  "structUniform.t0"
+                              Name 59_13  "j"
+                              Name 59_8  "o"
+                              Name 59_9  "structUniform.samplers.tn[0]"
+                              Name 59_10  "structUniform.samplers.tn[1]"
+                              Name 59_11  "structUniform.samplers.tn[2]"
+                              Name 59_12  "structUniform.samplers.tn[3]"
+                              Name 59_14  "param"
+                              Decorate 30_2(gl_AtomicCounterBlock_0) BufferBlock
+                              MemberDecorate 30_2(gl_AtomicCounterBlock_0) 0 Volatile
+                              MemberDecorate 30_2(gl_AtomicCounterBlock_0) 0 Coherent
+                              MemberDecorate 30_2(gl_AtomicCounterBlock_0) 0 Offset 0
+                              MemberDecorate 30_2(gl_AtomicCounterBlock_0) 1 Volatile
+                              MemberDecorate 30_2(gl_AtomicCounterBlock_0) 1 Coherent
+                              MemberDecorate 30_2(gl_AtomicCounterBlock_0) 1 Offset 4
+                              Decorate 59_1 Binding 9
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 30_3(gl_AtomicCounterBlock_1) BufferBlock
+                              MemberDecorate 30_3(gl_AtomicCounterBlock_1) 0 Volatile
+                              MemberDecorate 30_3(gl_AtomicCounterBlock_1) 0 Coherent
+                              MemberDecorate 30_3(gl_AtomicCounterBlock_1) 0 Offset 0
+                              Decorate 59_2 Binding 10
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 30_4(UniformBlock) Block
+                              MemberDecorate 30_4(UniformBlock) 0 Offset 0
+                              MemberDecorate 30_4(UniformBlock) 1 Offset 16
+                              Decorate 59_3 Binding 7
+                              Decorate 59_3 DescriptorSet 0
+                              Decorate 30_5(BufferBlock) BufferBlock
+                              MemberDecorate 30_5(BufferBlock) 0 Offset 0
+                              MemberDecorate 30_5(BufferBlock) 1 Offset 16
+                              Decorate 59_4(bufferInstance) Binding 8
+                              Decorate 59_4(bufferInstance) DescriptorSet 0
+                              Decorate 28_2 ArrayStride 16
+                              Decorate 28_3 ArrayStride 16
+                              MemberDecorate 30_6(SamplerArray) 0 Offset 0
+                              MemberDecorate 30_7(e) 0 Offset 0
+                              MemberDecorate 30_7(e) 1 Offset 8
+                              MemberDecorate 30_7(e) 2 Offset 12
+                              MemberDecorate 30_7(e) 3 Offset 16
+                              MemberDecorate 30_7(e) 4 Offset 32
+                              Decorate 30_8(gl_DefaultUniformBlock) Block
+                              MemberDecorate 30_8(gl_DefaultUniformBlock) 0 Offset 0
+                              MemberDecorate 30_8(gl_DefaultUniformBlock) 1 Offset 16
+                              MemberDecorate 30_8(gl_DefaultUniformBlock) 2 Offset 24
+                              MemberDecorate 30_8(gl_DefaultUniformBlock) 3 Offset 32
+                              MemberDecorate 30_8(gl_DefaultUniformBlock) 4 Offset 192
+                              Decorate 59_5 Binding 0
+                              Decorate 59_5 DescriptorSet 0
+                              Decorate 59_6(t1) Binding 6
+                              Decorate 59_6(t1) DescriptorSet 0
+                              Decorate 59_7(structUniform.t0) Binding 1
+                              Decorate 59_7(structUniform.t0) DescriptorSet 0
+                              Decorate 59_8(o) Location 0
+                              Decorate 59_9(structUniform.samplers.tn[0]) Binding 2
+                              Decorate 59_9(structUniform.samplers.tn[0]) DescriptorSet 0
+                              Decorate 59_10(structUniform.samplers.tn[1]) Binding 3
+                              Decorate 59_10(structUniform.samplers.tn[1]) DescriptorSet 0
+                              Decorate 59_11(structUniform.samplers.tn[2]) Binding 4
+                              Decorate 59_11(structUniform.samplers.tn[2]) DescriptorSet 0
+                              Decorate 59_12(structUniform.samplers.tn[3]) Binding 5
+                              Decorate 59_12(structUniform.samplers.tn[3]) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            33_2:             TypeFunction 21_1(int)
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_3:             TypeFunction 23_1(fvec4)
+            21_2:             TypeInt 32 1
+         uint(4):   21_1(int) Constant 4
+            28_1:             TypeArray 21_2(int) uint(4)
+30_1(SamplerArray):             TypeStruct 28_1
+            32_1:             TypePointer Function 30_1(SamplerArray)
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_2:             TypePointer UniformConstant 27_1
+            33_4:             TypeFunction 23_1(fvec4) 32_1(ptr) 32_2(ptr) 32_2(ptr) 32_2(ptr) 32_2(ptr)
+            32_3:             TypePointer Function 21_1(int)
+         uint(0):   21_1(int) Constant 0
+30_2(gl_AtomicCounterBlock_0):             TypeStruct 21_1(int) 21_1(int)
+            32_4:             TypePointer Uniform 30_2(gl_AtomicCounterBlock_0)
+            59_1:   32_4(ptr) Variable Uniform
+            43_1:   21_2(int) Constant 0
+            32_5:             TypePointer Uniform 21_1(int)
+         uint(1):   21_1(int) Constant 1
+uint(4294967295):   21_1(int) Constant 4294967295
+            43_2:   21_2(int) Constant 1
+30_3(gl_AtomicCounterBlock_1):             TypeStruct 21_1(int)
+            32_6:             TypePointer Uniform 30_3(gl_AtomicCounterBlock_1)
+            59_2:   32_6(ptr) Variable Uniform
+        uint(72):   21_1(int) Constant 72
+            32_7:             TypePointer Function 22_1(float)
+30_4(UniformBlock):             TypeStruct 22_1(float) 23_1(fvec4)
+            32_8:             TypePointer Uniform 30_4(UniformBlock)
+            59_3:   32_8(ptr) Variable Uniform
+            32_9:             TypePointer Uniform 22_1(float)
+30_5(BufferBlock):             TypeStruct 22_1(float) 23_1(fvec4)
+           32_10:             TypePointer Uniform 30_5(BufferBlock)
+59_4(bufferInstance):  32_10(ptr) Variable Uniform
+            23_2:             TypeVector 22_1(float) 2
+        uint(10):   21_1(int) Constant 10
+            28_2:             TypeArray 23_1(fvec4) uint(10)
+            28_3:             TypeArray 21_2(int) uint(4)
+30_6(SamplerArray):             TypeStruct 28_3
+         30_7(e):             TypeStruct 23_2(fvec2) 22_1(float) 21_1(int) 21_2(int) 30_6(SamplerArray)
+30_8(gl_DefaultUniformBlock):             TypeStruct 23_1(fvec4) 23_2(fvec2) 23_2(fvec2) 28_2 30_7(e)
+           32_11:             TypePointer Uniform 30_8(gl_DefaultUniformBlock)
+            59_5:  32_11(ptr) Variable Uniform
+            43_3:   21_2(int) Constant 4
+            43_4:   21_2(int) Constant 2
+           32_12:             TypePointer Function 23_2(fvec2)
+           32_13:             TypePointer Uniform 23_2(fvec2)
+           32_14:             TypePointer Function 23_1(fvec4)
+           32_15:             TypePointer Uniform 23_1(fvec4)
+            43_5:   21_2(int) Constant 3
+        59_6(t1):   32_2(ptr) Variable UniformConstant
+            43_6: 22_1(float) Constant 0
+            44_1: 23_2(fvec2) ConstantComposite 43_6 43_6
+59_7(structUniform.t0):   32_2(ptr) Variable UniformConstant
+            43_7: 22_1(float) Constant 1065353216
+           32_16:             TypePointer Output 23_1(fvec4)
+         59_8(o):  32_16(ptr) Variable Output
+59_9(structUniform.samplers.tn[0]):   32_2(ptr) Variable UniformConstant
+59_10(structUniform.samplers.tn[1]):   32_2(ptr) Variable UniformConstant
+59_11(structUniform.samplers.tn[2]):   32_2(ptr) Variable UniformConstant
+59_12(structUniform.samplers.tn[3]):   32_2(ptr) Variable UniformConstant
+           32_17:             TypePointer Uniform 30_6(SamplerArray)
+           32_18:             TypePointer Function 28_1
+           32_19:             TypePointer Function 21_2(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_13(j):   32_7(ptr) Variable Function
+    59_14(param):   32_1(ptr) Variable Function
+            57_1:   21_1(int) FunctionCall 54_2(bar()
+           112_1: 22_1(float) ConvertUToF 57_1
+                              Store 59_13(j) 112_1
+            61_1: 22_1(float) Load 59_13(j)
+            57_2: 23_1(fvec4) FunctionCall 54_3(foo()
+           142_1: 23_1(fvec4) VectorTimesScalar 57_2 61_1
+            65_1:  32_17(ptr) AccessChain 59_5 43_3 43_3
+            61_2:30_6(SamplerArray) Load 65_1
+            81_1:        28_3 CompositeExtract 61_2 0
+            65_2:  32_18(ptr) AccessChain 59_14(param) 43_1
+            81_2:   21_2(int) CompositeExtract 81_1 0
+            65_3:  32_19(ptr) AccessChain 65_2 43_1
+                              Store 65_3 81_2
+            81_3:   21_2(int) CompositeExtract 81_1 1
+            65_4:  32_19(ptr) AccessChain 65_2 43_2
+                              Store 65_4 81_3
+            81_4:   21_2(int) CompositeExtract 81_1 2
+            65_5:  32_19(ptr) AccessChain 65_2 43_4
+                              Store 65_5 81_4
+            81_5:   21_2(int) CompositeExtract 81_1 3
+            65_6:  32_19(ptr) AccessChain 65_2 43_5
+                              Store 65_6 81_5
+            57_3: 23_1(fvec4) FunctionCall 54_4(baz(struct-SamplerArray-s21[4]1;s21;s21;s21;s21;) 59_14(param) 59_9(structUniform.samplers.tn[0]) 59_10(structUniform.samplers.tn[1]) 59_11(structUniform.samplers.tn[2]) 59_12(structUniform.samplers.tn[3])
+           129_1: 23_1(fvec4) FAdd 142_1 57_3
+                              Store 59_8(o) 129_1
                               Return
                               FunctionEnd
-         8(bar():      6(int) Function None 7
-               9:             Label
-           32(j):     31(ptr) Variable Function
-                              Store 32(j) 33
-              39:     38(ptr) AccessChain 36 37
-              41:      6(int) AtomicIAdd 39 40 33 40
-                              Store 32(j) 41
-              42:     38(ptr) AccessChain 36 37
-              44:      6(int) AtomicIAdd 42 40 33 43
-              45:      6(int) ISub 44 40
-                              Store 32(j) 45
-              46:     38(ptr) AccessChain 36 37
-              47:      6(int) Load 46
-                              Store 32(j) 47
-              48:     38(ptr) AccessChain 36 37
-              49:      6(int) AtomicIAdd 48 40 33 40
-                              Store 32(j) 49
-              50:     38(ptr) AccessChain 36 37
-              51:      6(int) AtomicIAdd 50 40 33 43
-                              Store 32(j) 51
-              52:     38(ptr) AccessChain 36 37
-              53:      6(int) AtomicISub 52 40 33 40
-                              Store 32(j) 53
-              54:     38(ptr) AccessChain 36 37
-              55:      6(int) Load 32(j)
-              56:      6(int) AtomicUMin 54 40 33 55
-                              Store 32(j) 56
-              57:     38(ptr) AccessChain 36 37
-              58:      6(int) Load 32(j)
-              59:      6(int) AtomicUMax 57 40 33 58
-                              Store 32(j) 59
-              60:     38(ptr) AccessChain 36 37
-              61:      6(int) Load 32(j)
-              62:      6(int) AtomicAnd 60 40 33 61
-                              Store 32(j) 62
-              63:     38(ptr) AccessChain 36 37
-              64:      6(int) Load 32(j)
-              65:      6(int) AtomicOr 63 40 33 64
-                              Store 32(j) 65
-              66:     38(ptr) AccessChain 36 37
-              67:      6(int) Load 32(j)
-              68:      6(int) AtomicXor 66 40 33 67
-                              Store 32(j) 68
-              69:     38(ptr) AccessChain 36 37
-              70:      6(int) Load 32(j)
-              71:      6(int) AtomicExchange 69 40 33 70
-                              Store 32(j) 71
-              72:     38(ptr) AccessChain 36 37
-              73:      6(int) Load 32(j)
-              74:      6(int) AtomicCompareExchange 72 40 33 33 73 33
-                              Store 32(j) 74
-              76:     38(ptr) AccessChain 36 75
-              77:      6(int) AtomicIAdd 76 40 33 40
-              81:     38(ptr) AccessChain 80 37
-              82:      6(int) AtomicIAdd 81 40 33 40
-                              MemoryBarrier 40 83
-              84:      6(int) Load 32(j)
-                              ReturnValue 84
+      54_2(bar():   21_1(int) Function None 33_2
+           248_2:             Label
+        59_15(j):   32_3(ptr) Variable Function
+                              Store 59_15(j) uint(0)
+            65_7:   32_5(ptr) AccessChain 59_1 43_1
+           234_1:   21_1(int) AtomicIAdd 65_7 uint(1) uint(0) uint(1)
+                              Store 59_15(j) 234_1
+            65_8:   32_5(ptr) AccessChain 59_1 43_1
+           234_2:   21_1(int) AtomicIAdd 65_8 uint(1) uint(0) uint(4294967295)
+           130_1:   21_1(int) ISub 234_2 uint(1)
+                              Store 59_15(j) 130_1
+            65_9:   32_5(ptr) AccessChain 59_1 43_1
+            61_3:   21_1(int) Load 65_9
+                              Store 59_15(j) 61_3
+           65_10:   32_5(ptr) AccessChain 59_1 43_1
+           234_3:   21_1(int) AtomicIAdd 65_10 uint(1) uint(0) uint(1)
+                              Store 59_15(j) 234_3
+           65_11:   32_5(ptr) AccessChain 59_1 43_1
+           234_4:   21_1(int) AtomicIAdd 65_11 uint(1) uint(0) uint(4294967295)
+                              Store 59_15(j) 234_4
+           65_12:   32_5(ptr) AccessChain 59_1 43_1
+           235_1:   21_1(int) AtomicISub 65_12 uint(1) uint(0) uint(1)
+                              Store 59_15(j) 235_1
+           65_13:   32_5(ptr) AccessChain 59_1 43_1
+            61_4:   21_1(int) Load 59_15(j)
+           237_1:   21_1(int) AtomicUMin 65_13 uint(1) uint(0) 61_4
+                              Store 59_15(j) 237_1
+           65_14:   32_5(ptr) AccessChain 59_1 43_1
+            61_5:   21_1(int) Load 59_15(j)
+           239_1:   21_1(int) AtomicUMax 65_14 uint(1) uint(0) 61_5
+                              Store 59_15(j) 239_1
+           65_15:   32_5(ptr) AccessChain 59_1 43_1
+            61_6:   21_1(int) Load 59_15(j)
+           240_1:   21_1(int) AtomicAnd 65_15 uint(1) uint(0) 61_6
+                              Store 59_15(j) 240_1
+           65_16:   32_5(ptr) AccessChain 59_1 43_1
+            61_7:   21_1(int) Load 59_15(j)
+           241_1:   21_1(int) AtomicOr 65_16 uint(1) uint(0) 61_7
+                              Store 59_15(j) 241_1
+           65_17:   32_5(ptr) AccessChain 59_1 43_1
+            61_8:   21_1(int) Load 59_15(j)
+           242_1:   21_1(int) AtomicXor 65_17 uint(1) uint(0) 61_8
+                              Store 59_15(j) 242_1
+           65_18:   32_5(ptr) AccessChain 59_1 43_1
+            61_9:   21_1(int) Load 59_15(j)
+           229_1:   21_1(int) AtomicExchange 65_18 uint(1) uint(0) 61_9
+                              Store 59_15(j) 229_1
+           65_19:   32_5(ptr) AccessChain 59_1 43_1
+           61_10:   21_1(int) Load 59_15(j)
+           230_1:   21_1(int) AtomicCompareExchange 65_19 uint(1) uint(0) uint(0) 61_10 uint(0)
+                              Store 59_15(j) 230_1
+           65_20:   32_5(ptr) AccessChain 59_1 43_2
+           234_5:   21_1(int) AtomicIAdd 65_20 uint(1) uint(0) uint(1)
+           65_21:   32_5(ptr) AccessChain 59_2 43_1
+           234_6:   21_1(int) AtomicIAdd 65_21 uint(1) uint(0) uint(1)
+                              MemoryBarrier uint(1) uint(72)
+           61_11:   21_1(int) Load 59_15(j)
+                              ReturnValue 61_11
                               FunctionEnd
-        13(foo():   11(fvec4) Function None 12
-              14:             Label
-           88(f):     87(ptr) Variable Function
-         120(v2):    119(ptr) Variable Function
-         131(v4):    130(ptr) Variable Function
-              93:     92(ptr) AccessChain 91 37
-              94:   10(float) Load 93
-              98:     92(ptr) AccessChain 97(bufferInstance) 37
-              99:   10(float) Load 98
-             100:   10(float) FAdd 94 99
-             111:     92(ptr) AccessChain 109 110 75
-             112:   10(float) Load 111
-             113:   10(float) FAdd 100 112
-             115:     38(ptr) AccessChain 109 110 114
-             116:      6(int) Load 115
-             117:   10(float) ConvertUToF 116
-             118:   10(float) FAdd 113 117
-                              Store 88(f) 118
-             122:    121(ptr) AccessChain 109 75
-             123:  101(fvec2) Load 122
-             124:    121(ptr) AccessChain 109 114
-             125:  101(fvec2) Load 124
-             126:  101(fvec2) FAdd 123 125
-             127:    121(ptr) AccessChain 109 110 37
-             128:  101(fvec2) Load 127
-             129:  101(fvec2) FAdd 126 128
-                              Store 120(v2) 129
-             133:    132(ptr) AccessChain 109 37
-             134:   11(fvec4) Load 133
-             136:    132(ptr) AccessChain 109 135 37
-             137:   11(fvec4) Load 136
-             138:   11(fvec4) FAdd 134 137
-             139:    132(ptr) AccessChain 109 135 75
-             140:   11(fvec4) Load 139
-             141:   11(fvec4) FAdd 138 140
-             142:    132(ptr) AccessChain 109 135 114
-             143:   11(fvec4) Load 142
-             144:   11(fvec4) FAdd 141 143
-             145:    132(ptr) AccessChain 91 75
-             146:   11(fvec4) Load 145
-             147:   11(fvec4) FAdd 144 146
-             148:    132(ptr) AccessChain 97(bufferInstance) 75
-             149:   11(fvec4) Load 148
-             150:   11(fvec4) FAdd 147 149
-             152:          21 Load 151(t1)
-             155:   11(fvec4) ImageSampleImplicitLod 152 154
-             156:   11(fvec4) FAdd 150 155
-             158:          21 Load 157(structUniform.t0)
-             159:   11(fvec4) ImageSampleImplicitLod 158 154
-             160:   11(fvec4) FAdd 156 159
-                              Store 131(v4) 160
-             161:   10(float) Load 88(f)
-             162:   11(fvec4) CompositeConstruct 161 161 161 161
-             163:  101(fvec2) Load 120(v2)
-             165:   10(float) CompositeExtract 163 0
-             166:   10(float) CompositeExtract 163 1
-             167:   11(fvec4) CompositeConstruct 165 166 164 164
-             168:   11(fvec4) FMul 162 167
-             169:   11(fvec4) Load 131(v4)
-             170:   11(fvec4) FMul 168 169
-                              ReturnValue 170
+      54_3(foo(): 23_1(fvec4) Function None 33_3
+           248_3:             Label
+        59_16(f):   32_7(ptr) Variable Function
+       59_17(v2):  32_12(ptr) Variable Function
+       59_18(v4):  32_14(ptr) Variable Function
+           65_22:   32_9(ptr) AccessChain 59_3 43_1
+           61_12: 22_1(float) Load 65_22
+           65_23:   32_9(ptr) AccessChain 59_4(bufferInstance) 43_1
+           61_13: 22_1(float) Load 65_23
+           129_2: 22_1(float) FAdd 61_12 61_13
+           65_24:   32_9(ptr) AccessChain 59_5 43_3 43_2
+           61_14: 22_1(float) Load 65_24
+           129_3: 22_1(float) FAdd 129_2 61_14
+           65_25:   32_5(ptr) AccessChain 59_5 43_3 43_4
+           61_15:   21_1(int) Load 65_25
+           112_2: 22_1(float) ConvertUToF 61_15
+           129_4: 22_1(float) FAdd 129_3 112_2
+                              Store 59_16(f) 129_4
+           65_26:  32_13(ptr) AccessChain 59_5 43_2
+           61_16: 23_2(fvec2) Load 65_26
+           65_27:  32_13(ptr) AccessChain 59_5 43_4
+           61_17: 23_2(fvec2) Load 65_27
+           129_5: 23_2(fvec2) FAdd 61_16 61_17
+           65_28:  32_13(ptr) AccessChain 59_5 43_3 43_1
+           61_18: 23_2(fvec2) Load 65_28
+           129_6: 23_2(fvec2) FAdd 129_5 61_18
+                              Store 59_17(v2) 129_6
+           65_29:  32_15(ptr) AccessChain 59_5 43_1
+           61_19: 23_1(fvec4) Load 65_29
+           65_30:  32_15(ptr) AccessChain 59_5 43_5 43_1
+           61_20: 23_1(fvec4) Load 65_30
+           129_7: 23_1(fvec4) FAdd 61_19 61_20
+           65_31:  32_15(ptr) AccessChain 59_5 43_5 43_2
+           61_21: 23_1(fvec4) Load 65_31
+           129_8: 23_1(fvec4) FAdd 129_7 61_21
+           65_32:  32_15(ptr) AccessChain 59_5 43_5 43_4
+           61_22: 23_1(fvec4) Load 65_32
+           129_9: 23_1(fvec4) FAdd 129_8 61_22
+           65_33:  32_15(ptr) AccessChain 59_3 43_2
+           61_23: 23_1(fvec4) Load 65_33
+          129_10: 23_1(fvec4) FAdd 129_9 61_23
+           65_34:  32_15(ptr) AccessChain 59_4(bufferInstance) 43_2
+           61_24: 23_1(fvec4) Load 65_34
+          129_11: 23_1(fvec4) FAdd 129_10 61_24
+           61_25:        27_1 Load 59_6(t1)
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 61_25 44_1
+          129_12: 23_1(fvec4) FAdd 129_11 87_1
+           61_26:        27_1 Load 59_7(structUniform.t0)
+            87_2: 23_1(fvec4) ImageSampleImplicitLod 61_26 44_1
+          129_13: 23_1(fvec4) FAdd 129_12 87_2
+                              Store 59_18(v4) 129_13
+           61_27: 22_1(float) Load 59_16(f)
+            80_1: 23_1(fvec4) CompositeConstruct 61_27 61_27 61_27 61_27
+           61_28: 23_2(fvec2) Load 59_17(v2)
+            81_6: 22_1(float) CompositeExtract 61_28 0
+            81_7: 22_1(float) CompositeExtract 61_28 1
+            80_2: 23_1(fvec4) CompositeConstruct 81_6 81_7 43_7 43_7
+           133_1: 23_1(fvec4) FMul 80_1 80_2
+           61_29: 23_1(fvec4) Load 59_18(v4)
+           133_2: 23_1(fvec4) FMul 133_1 61_29
+                              ReturnValue 133_2
                               FunctionEnd
-29(baz(struct-SamplerArray-s21[4]1;s21;s21;s21;s21;):   11(fvec4) Function None 23
-    24(samplers):     19(ptr) FunctionParameter
-25(samplers.tn[0]):     22(ptr) FunctionParameter
-26(samplers.tn[1]):     22(ptr) FunctionParameter
-27(samplers.tn[2]):     22(ptr) FunctionParameter
-28(samplers.tn[3]):     22(ptr) FunctionParameter
-              30:             Label
-             173:          21 Load 25(samplers.tn[0])
-             174:   11(fvec4) ImageSampleImplicitLod 173 154
-             175:          21 Load 26(samplers.tn[1])
-             176:   11(fvec4) ImageSampleImplicitLod 175 154
-             177:   11(fvec4) FAdd 174 176
-             178:          21 Load 27(samplers.tn[2])
-             179:   11(fvec4) ImageSampleImplicitLod 178 154
-             180:   11(fvec4) FAdd 177 179
-             181:          21 Load 28(samplers.tn[3])
-             182:   11(fvec4) ImageSampleImplicitLod 181 154
-             183:   11(fvec4) FAdd 180 182
-                              ReturnValue 183
+54_4(baz(struct-SamplerArray-s21[4]1;s21;s21;s21;s21;): 23_1(fvec4) Function None 33_4
+  55_1(samplers):   32_1(ptr) FunctionParameter
+55_2(samplers.tn[0]):   32_2(ptr) FunctionParameter
+55_3(samplers.tn[1]):   32_2(ptr) FunctionParameter
+55_4(samplers.tn[2]):   32_2(ptr) FunctionParameter
+55_5(samplers.tn[3]):   32_2(ptr) FunctionParameter
+           248_4:             Label
+           61_30:        27_1 Load 55_2(samplers.tn[0])
+            87_3: 23_1(fvec4) ImageSampleImplicitLod 61_30 44_1
+           61_31:        27_1 Load 55_3(samplers.tn[1])
+            87_4: 23_1(fvec4) ImageSampleImplicitLod 61_31 44_1
+          129_14: 23_1(fvec4) FAdd 87_3 87_4
+           61_32:        27_1 Load 55_4(samplers.tn[2])
+            87_5: 23_1(fvec4) ImageSampleImplicitLod 61_32 44_1
+          129_15: 23_1(fvec4) FAdd 129_14 87_5
+           61_33:        27_1 Load 55_5(samplers.tn[3])
+            87_6: 23_1(fvec4) ImageSampleImplicitLod 61_33 44_1
+          129_16: 23_1(fvec4) FAdd 129_15 87_6
+                              ReturnValue 129_16
                               FunctionEnd

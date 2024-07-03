@@ -74,61 +74,61 @@ gl_FragCoord origin is upper left
 // Id's are bound by 34
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 25
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_OUTPUT"
-                              MemberName 8(PS_OUTPUT) 0  "Color"
-                              Name 10  "@main("
-                              Name 13  "psout"
-                              Name 25  "@entryPointOutput.Color"
-                              Name 30  "TestTexture"
-                              Name 31  "$Global"
-                              MemberName 31($Global) 0  "TestUF"
-                              Name 33  ""
-                              Decorate 25(@entryPointOutput.Color) Location 0
-                              Decorate 30(TestTexture) Binding 0
-                              Decorate 30(TestTexture) DescriptorSet 0
-                              Decorate 31($Global) Block
-                              MemberDecorate 31($Global) 0 Offset 0
-                              Decorate 33 Binding 0
-                              Decorate 33 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(PS_OUTPUT):             TypeStruct 7(fvec4)
-               9:             TypeFunction 8(PS_OUTPUT)
-              12:             TypePointer Function 8(PS_OUTPUT)
-              14:             TypeInt 32 1
-              15:     14(int) Constant 0
-              16:    6(float) Constant 0
-              17:    6(float) Constant 1065353216
-              18:    7(fvec4) ConstantComposite 16 16 16 17
-              19:             TypePointer Function 7(fvec4)
-              24:             TypePointer Output 7(fvec4)
-25(@entryPointOutput.Color):     24(ptr) Variable Output
-              28:             TypeImage 6(float) 2D sampled format:Unknown
-              29:             TypePointer UniformConstant 28
- 30(TestTexture):     29(ptr) Variable UniformConstant
-     31($Global):             TypeStruct 7(fvec4)
-              32:             TypePointer Uniform 31($Global)
-              33:     32(ptr) Variable Uniform
-         4(main):           2 Function None 3
-               5:             Label
-              26:8(PS_OUTPUT) FunctionCall 10(@main()
-              27:    7(fvec4) CompositeExtract 26 0
-                              Store 25(@entryPointOutput.Color) 27
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              Name 54_2  "@main("
+                              Name 59_4  "psout"
+                              Name 59_1  "@entryPointOutput.Color"
+                              Name 59_2  "TestTexture"
+                              Name 30_2  "$Global"
+                              MemberName 30_2($Global) 0  "TestUF"
+                              Name 59_3  ""
+                              Decorate 59_1(@entryPointOutput.Color) Location 0
+                              Decorate 59_2(TestTexture) Binding 0
+                              Decorate 59_2(TestTexture) DescriptorSet 0
+                              Decorate 30_2($Global) Block
+                              MemberDecorate 30_2($Global) 0 Offset 0
+                              Decorate 59_3 Binding 0
+                              Decorate 59_3 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            32_1:             TypePointer Function 30_1(PS_OUTPUT)
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            43_2: 22_1(float) Constant 0
+            43_3: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_3
+            32_2:             TypePointer Function 23_1(fvec4)
+            32_3:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput.Color):   32_3(ptr) Variable Output
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            32_4:             TypePointer UniformConstant 25_1
+59_2(TestTexture):   32_4(ptr) Variable UniformConstant
+   30_2($Global):             TypeStruct 23_1(fvec4)
+            32_5:             TypePointer Uniform 30_2($Global)
+            59_3:   32_5(ptr) Variable Uniform
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_2(@main()
+            81_1: 23_1(fvec4) CompositeExtract 57_1 0
+                              Store 59_1(@entryPointOutput.Color) 81_1
                               Return
                               FunctionEnd
-      10(@main():8(PS_OUTPUT) Function None 9
-              11:             Label
-       13(psout):     12(ptr) Variable Function
-              20:     19(ptr) AccessChain 13(psout) 15
-                              Store 20 18
-              21:8(PS_OUTPUT) Load 13(psout)
-                              ReturnValue 21
+    54_2(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_2:             Label
+     59_4(psout):   32_1(ptr) Variable Function
+            65_1:   32_2(ptr) AccessChain 59_4(psout) 43_1
+                              Store 65_1 44_1
+            61_1:30_1(PS_OUTPUT) Load 59_4(psout)
+                              ReturnValue 61_1
                               FunctionEnd

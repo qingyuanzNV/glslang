@@ -74,54 +74,54 @@ gl_FragCoord origin is upper left
 // Id's are bound by 34
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "PixelShaderFunction" 27 30
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "PixelShaderFunction" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "PixelShaderFunction"
-                              Name 11  "@PixelShaderFunction(vf4;"
-                              Name 10  "input"
-                              Name 25  "input"
-                              Name 27  "input"
-                              Name 30  "@entryPointOutput"
-                              Name 31  "param"
-                              Decorate 27(input) Location 0
-                              Decorate 30(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeFunction 7(fvec4) 8(ptr)
-              15:             TypeInt 32 1
-              16:             TypeVector 15(int) 4
-              20:    6(float) Constant 1067014160
-              21:    7(fvec4) ConstantComposite 20 20 20 20
-              26:             TypePointer Input 7(fvec4)
-       27(input):     26(ptr) Variable Input
-              29:             TypePointer Output 7(fvec4)
-30(@entryPointOutput):     29(ptr) Variable Output
-4(PixelShaderFunction):           2 Function None 3
-               5:             Label
-       25(input):      8(ptr) Variable Function
-       31(param):      8(ptr) Variable Function
-              28:    7(fvec4) Load 27(input)
-                              Store 25(input) 28
-              32:    7(fvec4) Load 25(input)
-                              Store 31(param) 32
-              33:    7(fvec4) FunctionCall 11(@PixelShaderFunction(vf4;) 31(param)
-                              Store 30(@entryPointOutput) 33
+                              Name 54_1  "PixelShaderFunction"
+                              Name 54_2  "@PixelShaderFunction(vf4;"
+                              Name 55_1  "input"
+                              Name 59_3  "input"
+                              Name 59_1  "input"
+                              Name 59_2  "@entryPointOutput"
+                              Name 59_4  "param"
+                              Decorate 59_1(input) Location 0
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            21_1:             TypeInt 32 1
+            23_2:             TypeVector 21_1(int) 4
+            43_1: 22_1(float) Constant 1067014160
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            32_2:             TypePointer Input 23_1(fvec4)
+     59_1(input):   32_2(ptr) Variable Input
+            32_3:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput):   32_3(ptr) Variable Output
+54_1(PixelShaderFunction):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(input):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(input)
+                              Store 59_3(input) 61_1
+            61_2: 23_1(fvec4) Load 59_3(input)
+                              Store 59_4(param) 61_2
+            57_1: 23_1(fvec4) FunctionCall 54_2(@PixelShaderFunction(vf4;) 59_4(param)
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-11(@PixelShaderFunction(vf4;):    7(fvec4) Function None 9
-       10(input):      8(ptr) FunctionParameter
-              12:             Label
-              13:    7(fvec4) Load 10(input)
-              14:    7(fvec4) Load 10(input)
-              17:   16(ivec4) ConvertFToS 14
-              18:    7(fvec4) ConvertSToF 17
-              19:    7(fvec4) FAdd 13 18
-              22:    7(fvec4) FAdd 19 21
-                              ReturnValue 22
+54_2(@PixelShaderFunction(vf4;): 23_1(fvec4) Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            61_3: 23_1(fvec4) Load 55_1(input)
+            61_4: 23_1(fvec4) Load 55_1(input)
+           110_1: 23_2(ivec4) ConvertFToS 61_4
+           111_1: 23_1(fvec4) ConvertSToF 110_1
+           129_1: 23_1(fvec4) FAdd 61_3 111_1
+           129_2: 23_1(fvec4) FAdd 129_1 44_1
+                              ReturnValue 129_2
                               FunctionEnd

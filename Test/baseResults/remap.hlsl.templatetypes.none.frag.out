@@ -5,236 +5,236 @@ remap.hlsl.templatetypes.none.frag
 
                               Capability Shader
                               Capability Float64
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 153 156
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 11  "@main(vf4;"
-                              Name 10  "input"
-                              Name 13  "r00"
-                              Name 19  "r01"
-                              Name 24  "r12"
-                              Name 28  "r13"
-                              Name 31  "r14"
-                              Name 34  "r15"
-                              Name 38  "r16"
-                              Name 42  "r20"
-                              Name 47  "r21"
-                              Name 52  "r22"
-                              Name 56  "r23"
-                              Name 61  "r24"
-                              Name 66  "r30"
-                              Name 70  "r31"
-                              Name 75  "r32"
-                              Name 79  "r33"
-                              Name 84  "r34"
-                              Name 89  "r40"
-                              Name 93  "r41"
-                              Name 96  "r42"
-                              Name 99  "r43"
-                              Name 104  "r44"
-                              Name 109  "r50"
-                              Name 126  "r51"
-                              Name 129  "r61"
-                              Name 134  "r62"
-                              Name 140  "r65"
-                              Name 145  "r66"
-                              Name 151  "input"
-                              Name 153  "input"
-                              Name 156  "@entryPointOutput"
-                              Name 157  "param"
-                              Decorate 153(input) Location 0
-                              Decorate 156(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeFunction 6(float) 8(ptr)
-              14:    6(float) Constant 1065353216
-              15:    6(float) Constant 1073741824
-              16:    6(float) Constant 1077936128
-              17:    6(float) Constant 1082130432
-              18:    7(fvec4) ConstantComposite 14 15 16 17
-              20:    6(float) Constant 1084227584
-              21:    7(fvec4) ConstantComposite 15 16 17 20
-              22:             TypeBool
-              23:             TypePointer Function 22(bool)
-              25:    22(bool) ConstantFalse
-              26:             TypeInt 32 1
-              27:             TypePointer Function 26(int)
-              29:     26(int) Constant 1
-              30:             TypePointer Function 6(float)
-              32:             TypeFloat 64
-              33:             TypePointer Function 32(float64_t)
-              35:32(float64_t) Constant 0 1072693248
-              36:             TypeInt 32 0
-              37:             TypePointer Function 36(int)
-              39:     36(int) Constant 1
-              40:             TypeVector 22(bool) 2
-              41:             TypePointer Function 40(bvec2)
-              43:    22(bool) ConstantTrue
-              44:   40(bvec2) ConstantComposite 25 43
-              45:             TypeVector 26(int) 2
-              46:             TypePointer Function 45(ivec2)
-              48:     26(int) Constant 2
-              49:   45(ivec2) ConstantComposite 29 48
-              50:             TypeVector 6(float) 2
-              51:             TypePointer Function 50(fvec2)
-              53:   50(fvec2) ConstantComposite 14 15
-              54:             TypeVector 32(float64_t) 2
-              55:             TypePointer Function 54(f64vec2)
-              57:32(float64_t) Constant 0 1073741824
-              58: 54(f64vec2) ConstantComposite 35 57
-              59:             TypeVector 36(int) 2
-              60:             TypePointer Function 59(ivec2)
-              62:     36(int) Constant 2
-              63:   59(ivec2) ConstantComposite 39 62
-              64:             TypeVector 22(bool) 3
-              65:             TypePointer Function 64(bvec3)
-              67:   64(bvec3) ConstantComposite 25 43 43
-              68:             TypeVector 26(int) 3
-              69:             TypePointer Function 68(ivec3)
-              71:     26(int) Constant 3
-              72:   68(ivec3) ConstantComposite 29 48 71
-              73:             TypeVector 6(float) 3
-              74:             TypePointer Function 73(fvec3)
-              76:   73(fvec3) ConstantComposite 14 15 16
-              77:             TypeVector 32(float64_t) 3
-              78:             TypePointer Function 77(f64vec3)
-              80:32(float64_t) Constant 0 1074266112
-              81: 77(f64vec3) ConstantComposite 35 57 80
-              82:             TypeVector 36(int) 3
-              83:             TypePointer Function 82(ivec3)
-              85:     36(int) Constant 3
-              86:   82(ivec3) ConstantComposite 39 62 85
-              87:             TypeVector 22(bool) 4
-              88:             TypePointer Function 87(bvec4)
-              90:   87(bvec4) ConstantComposite 25 43 43 25
-              91:             TypeVector 26(int) 4
-              92:             TypePointer Function 91(ivec4)
-              94:     26(int) Constant 4
-              95:   91(ivec4) ConstantComposite 29 48 71 94
-              97:             TypeVector 32(float64_t) 4
-              98:             TypePointer Function 97(f64vec4)
-             100:32(float64_t) Constant 0 1074790400
-             101: 97(f64vec4) ConstantComposite 35 57 80 100
-             102:             TypeVector 36(int) 4
-             103:             TypePointer Function 102(ivec4)
-             105:     36(int) Constant 4
-             106:  102(ivec4) ConstantComposite 39 62 85 105
-             107:             TypeMatrix 7(fvec4) 4
-             108:             TypePointer Function 107
-             110:    6(float) Constant 0
-             111:    7(fvec4) ConstantComposite 110 14 15 16
-             112:    6(float) Constant 1086324736
-             113:    6(float) Constant 1088421888
-             114:    7(fvec4) ConstantComposite 17 20 112 113
-             115:    6(float) Constant 1090519040
-             116:    6(float) Constant 1091567616
-             117:    6(float) Constant 1092616192
-             118:    6(float) Constant 1093664768
-             119:    7(fvec4) ConstantComposite 115 116 117 118
-             120:    6(float) Constant 1094713344
-             121:    6(float) Constant 1095761920
-             122:    6(float) Constant 1096810496
-             123:    6(float) Constant 1097859072
-             124:    7(fvec4) ConstantComposite 120 121 122 123
-             125:         107 ConstantComposite 111 114 119 124
-             127:             TypeMatrix 73(fvec3) 2
-             128:             TypePointer Function 127
-             130:   73(fvec3) ConstantComposite 17 20 112
-             131:         127 ConstantComposite 76 130
-             132:             TypeMatrix 50(fvec2) 3
-             133:             TypePointer Function 132
-             135:   50(fvec2) ConstantComposite 16 17
-             136:   50(fvec2) ConstantComposite 20 112
-             137:         132 ConstantComposite 53 135 136
-             138:             TypeMatrix 50(fvec2) 4
-             139:             TypePointer Function 138
-             141:   50(fvec2) ConstantComposite 113 115
-             142:         138 ConstantComposite 53 135 136 141
-             143:             TypeMatrix 73(fvec3) 4
-             144:             TypePointer Function 143
-             146:   73(fvec3) ConstantComposite 113 115 116
-             147:   73(fvec3) ConstantComposite 117 118 120
-             148:         143 ConstantComposite 76 130 146 147
-             152:             TypePointer Input 7(fvec4)
-      153(input):    152(ptr) Variable Input
-             155:             TypePointer Output 6(float)
-156(@entryPointOutput):    155(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-      151(input):      8(ptr) Variable Function
-      157(param):      8(ptr) Variable Function
-             154:    7(fvec4) Load 153(input)
-                              Store 151(input) 154
-             158:    7(fvec4) Load 151(input)
-                              Store 157(param) 158
-             159:    6(float) FunctionCall 11(@main(vf4;) 157(param)
-                              Store 156(@entryPointOutput) 159
+                              Name 54_1  "main"
+                              Name 54_2  "@main(vf4;"
+                              Name 55_1  "input"
+                              Name 59_5  "r00"
+                              Name 59_6  "r01"
+                              Name 59_7  "r12"
+                              Name 59_8  "r13"
+                              Name 59_9  "r14"
+                              Name 59_10  "r15"
+                              Name 59_11  "r16"
+                              Name 59_12  "r20"
+                              Name 59_13  "r21"
+                              Name 59_14  "r22"
+                              Name 59_15  "r23"
+                              Name 59_16  "r24"
+                              Name 59_17  "r30"
+                              Name 59_18  "r31"
+                              Name 59_19  "r32"
+                              Name 59_20  "r33"
+                              Name 59_21  "r34"
+                              Name 59_22  "r40"
+                              Name 59_23  "r41"
+                              Name 59_24  "r42"
+                              Name 59_25  "r43"
+                              Name 59_26  "r44"
+                              Name 59_27  "r50"
+                              Name 59_28  "r51"
+                              Name 59_29  "r61"
+                              Name 59_30  "r62"
+                              Name 59_31  "r65"
+                              Name 59_32  "r66"
+                              Name 59_3  "input"
+                              Name 59_1  "input"
+                              Name 59_2  "@entryPointOutput"
+                              Name 59_4  "param"
+                              Decorate 59_1(input) Location 0
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            33_2:             TypeFunction 22_1(float) 32_1(ptr)
+            43_1: 22_1(float) Constant 1065353216
+            43_2: 22_1(float) Constant 1073741824
+            43_3: 22_1(float) Constant 1077936128
+            43_4: 22_1(float) Constant 1082130432
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_2 43_3 43_4
+            43_5: 22_1(float) Constant 1084227584
+            44_2: 23_1(fvec4) ConstantComposite 43_2 43_3 43_4 43_5
+            20_1:             TypeBool
+            32_2:             TypePointer Function 20_1(bool)
+            42_1:  20_1(bool) ConstantFalse
+            21_1:             TypeInt 32 1
+            32_3:             TypePointer Function 21_1(int)
+            43_6:   21_1(int) Constant 1
+            32_4:             TypePointer Function 22_1(float)
+            22_2:             TypeFloat 64
+            32_5:             TypePointer Function 22_2(float64_t)
+            43_7:22_2(float64_t) Constant 0 1072693248
+            21_2:             TypeInt 32 0
+            32_6:             TypePointer Function 21_2(int)
+         uint(1):   21_2(int) Constant 1
+            23_2:             TypeVector 20_1(bool) 2
+            32_7:             TypePointer Function 23_2(bvec2)
+            41_1:  20_1(bool) ConstantTrue
+            44_3: 23_2(bvec2) ConstantComposite 42_1 41_1
+            23_3:             TypeVector 21_1(int) 2
+            32_8:             TypePointer Function 23_3(ivec2)
+            43_8:   21_1(int) Constant 2
+            44_4: 23_3(ivec2) ConstantComposite 43_6 43_8
+            23_4:             TypeVector 22_1(float) 2
+            32_9:             TypePointer Function 23_4(fvec2)
+            44_5: 23_4(fvec2) ConstantComposite 43_1 43_2
+            23_5:             TypeVector 22_2(float64_t) 2
+           32_10:             TypePointer Function 23_5(f64vec2)
+            43_9:22_2(float64_t) Constant 0 1073741824
+            44_6:23_5(f64vec2) ConstantComposite 43_7 43_9
+            23_6:             TypeVector 21_2(int) 2
+           32_11:             TypePointer Function 23_6(ivec2)
+         uint(2):   21_2(int) Constant 2
+            44_7: 23_6(ivec2) ConstantComposite uint(1) uint(2)
+            23_7:             TypeVector 20_1(bool) 3
+           32_12:             TypePointer Function 23_7(bvec3)
+            44_8: 23_7(bvec3) ConstantComposite 42_1 41_1 41_1
+            23_8:             TypeVector 21_1(int) 3
+           32_13:             TypePointer Function 23_8(ivec3)
+           43_10:   21_1(int) Constant 3
+            44_9: 23_8(ivec3) ConstantComposite 43_6 43_8 43_10
+            23_9:             TypeVector 22_1(float) 3
+           32_14:             TypePointer Function 23_9(fvec3)
+           44_10: 23_9(fvec3) ConstantComposite 43_1 43_2 43_3
+           23_10:             TypeVector 22_2(float64_t) 3
+           32_15:             TypePointer Function 23_10(f64vec3)
+           43_11:22_2(float64_t) Constant 0 1074266112
+           44_11:23_10(f64vec3) ConstantComposite 43_7 43_9 43_11
+           23_11:             TypeVector 21_2(int) 3
+           32_16:             TypePointer Function 23_11(ivec3)
+         uint(3):   21_2(int) Constant 3
+           44_12:23_11(ivec3) ConstantComposite uint(1) uint(2) uint(3)
+           23_12:             TypeVector 20_1(bool) 4
+           32_17:             TypePointer Function 23_12(bvec4)
+           44_13:23_12(bvec4) ConstantComposite 42_1 41_1 41_1 42_1
+           23_13:             TypeVector 21_1(int) 4
+           32_18:             TypePointer Function 23_13(ivec4)
+           43_12:   21_1(int) Constant 4
+           44_14:23_13(ivec4) ConstantComposite 43_6 43_8 43_10 43_12
+           23_14:             TypeVector 22_2(float64_t) 4
+           32_19:             TypePointer Function 23_14(f64vec4)
+           43_13:22_2(float64_t) Constant 0 1074790400
+           44_15:23_14(f64vec4) ConstantComposite 43_7 43_9 43_11 43_13
+           23_15:             TypeVector 21_2(int) 4
+           32_20:             TypePointer Function 23_15(ivec4)
+         uint(4):   21_2(int) Constant 4
+           44_16:23_15(ivec4) ConstantComposite uint(1) uint(2) uint(3) uint(4)
+            24_1:             TypeMatrix 23_1(fvec4) 4
+           32_21:             TypePointer Function 24_1
+           43_14: 22_1(float) Constant 0
+           44_17: 23_1(fvec4) ConstantComposite 43_14 43_1 43_2 43_3
+           43_15: 22_1(float) Constant 1086324736
+           43_16: 22_1(float) Constant 1088421888
+           44_18: 23_1(fvec4) ConstantComposite 43_4 43_5 43_15 43_16
+           43_17: 22_1(float) Constant 1090519040
+           43_18: 22_1(float) Constant 1091567616
+           43_19: 22_1(float) Constant 1092616192
+           43_20: 22_1(float) Constant 1093664768
+           44_19: 23_1(fvec4) ConstantComposite 43_17 43_18 43_19 43_20
+           43_21: 22_1(float) Constant 1094713344
+           43_22: 22_1(float) Constant 1095761920
+           43_23: 22_1(float) Constant 1096810496
+           43_24: 22_1(float) Constant 1097859072
+           44_20: 23_1(fvec4) ConstantComposite 43_21 43_22 43_23 43_24
+           44_21:        24_1 ConstantComposite 44_17 44_18 44_19 44_20
+            24_2:             TypeMatrix 23_9(fvec3) 2
+           32_22:             TypePointer Function 24_2
+           44_22: 23_9(fvec3) ConstantComposite 43_4 43_5 43_15
+           44_23:        24_2 ConstantComposite 44_10 44_22
+            24_3:             TypeMatrix 23_4(fvec2) 3
+           32_23:             TypePointer Function 24_3
+           44_24: 23_4(fvec2) ConstantComposite 43_3 43_4
+           44_25: 23_4(fvec2) ConstantComposite 43_5 43_15
+           44_26:        24_3 ConstantComposite 44_5 44_24 44_25
+            24_4:             TypeMatrix 23_4(fvec2) 4
+           32_24:             TypePointer Function 24_4
+           44_27: 23_4(fvec2) ConstantComposite 43_16 43_17
+           44_28:        24_4 ConstantComposite 44_5 44_24 44_25 44_27
+            24_5:             TypeMatrix 23_9(fvec3) 4
+           32_25:             TypePointer Function 24_5
+           44_29: 23_9(fvec3) ConstantComposite 43_16 43_17 43_18
+           44_30: 23_9(fvec3) ConstantComposite 43_19 43_20 43_21
+           44_31:        24_5 ConstantComposite 44_10 44_22 44_29 44_30
+           32_26:             TypePointer Input 23_1(fvec4)
+     59_1(input):  32_26(ptr) Variable Input
+           32_27:             TypePointer Output 22_1(float)
+59_2(@entryPointOutput):  32_27(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(input):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(input)
+                              Store 59_3(input) 61_1
+            61_2: 23_1(fvec4) Load 59_3(input)
+                              Store 59_4(param) 61_2
+            57_1: 22_1(float) FunctionCall 54_2(@main(vf4;) 59_4(param)
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-  11(@main(vf4;):    6(float) Function None 9
-       10(input):      8(ptr) FunctionParameter
-              12:             Label
-         13(r00):      8(ptr) Variable Function
-         19(r01):      8(ptr) Variable Function
-         24(r12):     23(ptr) Variable Function
-         28(r13):     27(ptr) Variable Function
-         31(r14):     30(ptr) Variable Function
-         34(r15):     33(ptr) Variable Function
-         38(r16):     37(ptr) Variable Function
-         42(r20):     41(ptr) Variable Function
-         47(r21):     46(ptr) Variable Function
-         52(r22):     51(ptr) Variable Function
-         56(r23):     55(ptr) Variable Function
-         61(r24):     60(ptr) Variable Function
-         66(r30):     65(ptr) Variable Function
-         70(r31):     69(ptr) Variable Function
-         75(r32):     74(ptr) Variable Function
-         79(r33):     78(ptr) Variable Function
-         84(r34):     83(ptr) Variable Function
-         89(r40):     88(ptr) Variable Function
-         93(r41):     92(ptr) Variable Function
-         96(r42):      8(ptr) Variable Function
-         99(r43):     98(ptr) Variable Function
-        104(r44):    103(ptr) Variable Function
-        109(r50):    108(ptr) Variable Function
-        126(r51):    108(ptr) Variable Function
-        129(r61):    128(ptr) Variable Function
-        134(r62):    133(ptr) Variable Function
-        140(r65):    139(ptr) Variable Function
-        145(r66):    144(ptr) Variable Function
-                              Store 13(r00) 18
-                              Store 19(r01) 21
-                              Store 24(r12) 25
-                              Store 28(r13) 29
-                              Store 31(r14) 14
-                              Store 34(r15) 35
-                              Store 38(r16) 39
-                              Store 42(r20) 44
-                              Store 47(r21) 49
-                              Store 52(r22) 53
-                              Store 56(r23) 58
-                              Store 61(r24) 63
-                              Store 66(r30) 67
-                              Store 70(r31) 72
-                              Store 75(r32) 76
-                              Store 79(r33) 81
-                              Store 84(r34) 86
-                              Store 89(r40) 90
-                              Store 93(r41) 95
-                              Store 96(r42) 18
-                              Store 99(r43) 101
-                              Store 104(r44) 106
-                              Store 109(r50) 125
-                              Store 126(r51) 125
-                              Store 129(r61) 131
-                              Store 134(r62) 137
-                              Store 140(r65) 142
-                              Store 145(r66) 148
-                              ReturnValue 110
+54_2(@main(vf4;): 22_1(float) Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+           248_2:             Label
+       59_5(r00):   32_1(ptr) Variable Function
+       59_6(r01):   32_1(ptr) Variable Function
+       59_7(r12):   32_2(ptr) Variable Function
+       59_8(r13):   32_3(ptr) Variable Function
+       59_9(r14):   32_4(ptr) Variable Function
+      59_10(r15):   32_5(ptr) Variable Function
+      59_11(r16):   32_6(ptr) Variable Function
+      59_12(r20):   32_7(ptr) Variable Function
+      59_13(r21):   32_8(ptr) Variable Function
+      59_14(r22):   32_9(ptr) Variable Function
+      59_15(r23):  32_10(ptr) Variable Function
+      59_16(r24):  32_11(ptr) Variable Function
+      59_17(r30):  32_12(ptr) Variable Function
+      59_18(r31):  32_13(ptr) Variable Function
+      59_19(r32):  32_14(ptr) Variable Function
+      59_20(r33):  32_15(ptr) Variable Function
+      59_21(r34):  32_16(ptr) Variable Function
+      59_22(r40):  32_17(ptr) Variable Function
+      59_23(r41):  32_18(ptr) Variable Function
+      59_24(r42):   32_1(ptr) Variable Function
+      59_25(r43):  32_19(ptr) Variable Function
+      59_26(r44):  32_20(ptr) Variable Function
+      59_27(r50):  32_21(ptr) Variable Function
+      59_28(r51):  32_21(ptr) Variable Function
+      59_29(r61):  32_22(ptr) Variable Function
+      59_30(r62):  32_23(ptr) Variable Function
+      59_31(r65):  32_24(ptr) Variable Function
+      59_32(r66):  32_25(ptr) Variable Function
+                              Store 59_5(r00) 44_1
+                              Store 59_6(r01) 44_2
+                              Store 59_7(r12) 42_1
+                              Store 59_8(r13) 43_6
+                              Store 59_9(r14) 43_1
+                              Store 59_10(r15) 43_7
+                              Store 59_11(r16) uint(1)
+                              Store 59_12(r20) 44_3
+                              Store 59_13(r21) 44_4
+                              Store 59_14(r22) 44_5
+                              Store 59_15(r23) 44_6
+                              Store 59_16(r24) 44_7
+                              Store 59_17(r30) 44_8
+                              Store 59_18(r31) 44_9
+                              Store 59_19(r32) 44_10
+                              Store 59_20(r33) 44_11
+                              Store 59_21(r34) 44_12
+                              Store 59_22(r40) 44_13
+                              Store 59_23(r41) 44_14
+                              Store 59_24(r42) 44_1
+                              Store 59_25(r43) 44_15
+                              Store 59_26(r44) 44_16
+                              Store 59_27(r50) 44_21
+                              Store 59_28(r51) 44_21
+                              Store 59_29(r61) 44_23
+                              Store 59_30(r62) 44_26
+                              Store 59_31(r65) 44_28
+                              Store 59_32(r66) 44_31
+                              ReturnValue 43_14
                               FunctionEnd

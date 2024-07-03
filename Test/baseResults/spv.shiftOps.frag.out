@@ -4,67 +4,67 @@ spv.shiftOps.frag
 // Id's are bound by 38
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 9 11 15 25 27 30
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "icolor"
-                              Name 11  "i3"
-                              Name 15  "u1"
-                              Name 25  "ucolor"
-                              Name 27  "u3"
-                              Name 30  "i1"
-                              Decorate 9(icolor) Location 0
-                              Decorate 11(i3) Flat
-                              Decorate 11(i3) Location 2
-                              Decorate 15(u1) Flat
-                              Decorate 15(u1) Location 1
-                              Decorate 25(ucolor) Location 1
-                              Decorate 27(u3) Flat
-                              Decorate 27(u3) Location 3
-                              Decorate 30(i1) Flat
-                              Decorate 30(i1) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeVector 6(int) 3
-               8:             TypePointer Output 7(ivec3)
-       9(icolor):      8(ptr) Variable Output
-              10:             TypePointer Input 7(ivec3)
-          11(i3):     10(ptr) Variable Input
-              13:             TypeInt 32 0
-              14:             TypePointer Input 13(int)
-          15(u1):     14(ptr) Variable Input
-              17:             TypeVector 13(int) 3
-              20:     13(int) Constant 4
-              24:             TypePointer Output 17(ivec3)
-      25(ucolor):     24(ptr) Variable Output
-              26:             TypePointer Input 17(ivec3)
-          27(u3):     26(ptr) Variable Input
-              29:             TypePointer Input 6(int)
-          30(i1):     29(ptr) Variable Input
-              34:      6(int) Constant 5
-         4(main):           2 Function None 3
-               5:             Label
-              12:    7(ivec3) Load 11(i3)
-              16:     13(int) Load 15(u1)
-              18:   17(ivec3) CompositeConstruct 16 16 16
-              19:    7(ivec3) ShiftLeftLogical 12 18
-                              Store 9(icolor) 19
-              21:    7(ivec3) Load 9(icolor)
-              22:   17(ivec3) CompositeConstruct 20 20 20
-              23:    7(ivec3) ShiftLeftLogical 21 22
-                              Store 9(icolor) 23
-              28:   17(ivec3) Load 27(u3)
-              31:      6(int) Load 30(i1)
-              32:    7(ivec3) CompositeConstruct 31 31 31
-              33:   17(ivec3) ShiftRightLogical 28 32
-                              Store 25(ucolor) 33
-              35:   17(ivec3) Load 25(ucolor)
-              36:    7(ivec3) CompositeConstruct 34 34 34
-              37:   17(ivec3) ShiftRightLogical 35 36
-                              Store 25(ucolor) 37
+                              Name 54_1  "main"
+                              Name 59_1  "icolor"
+                              Name 59_2  "i3"
+                              Name 59_3  "u1"
+                              Name 59_4  "ucolor"
+                              Name 59_5  "u3"
+                              Name 59_6  "i1"
+                              Decorate 59_1(icolor) Location 0
+                              Decorate 59_2(i3) Flat
+                              Decorate 59_2(i3) Location 2
+                              Decorate 59_3(u1) Flat
+                              Decorate 59_3(u1) Location 1
+                              Decorate 59_4(ucolor) Location 1
+                              Decorate 59_5(u3) Flat
+                              Decorate 59_5(u3) Location 3
+                              Decorate 59_6(i1) Flat
+                              Decorate 59_6(i1) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            23_1:             TypeVector 21_1(int) 3
+            32_1:             TypePointer Output 23_1(ivec3)
+    59_1(icolor):   32_1(ptr) Variable Output
+            32_2:             TypePointer Input 23_1(ivec3)
+        59_2(i3):   32_2(ptr) Variable Input
+            21_2:             TypeInt 32 0
+            32_3:             TypePointer Input 21_2(int)
+        59_3(u1):   32_3(ptr) Variable Input
+            23_2:             TypeVector 21_2(int) 3
+         uint(4):   21_2(int) Constant 4
+            32_4:             TypePointer Output 23_2(ivec3)
+    59_4(ucolor):   32_4(ptr) Variable Output
+            32_5:             TypePointer Input 23_2(ivec3)
+        59_5(u3):   32_5(ptr) Variable Input
+            32_6:             TypePointer Input 21_1(int)
+        59_6(i1):   32_6(ptr) Variable Input
+            43_1:   21_1(int) Constant 5
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1: 23_1(ivec3) Load 59_2(i3)
+            61_2:   21_2(int) Load 59_3(u1)
+            80_1: 23_2(ivec3) CompositeConstruct 61_2 61_2 61_2
+           196_1: 23_1(ivec3) ShiftLeftLogical 61_1 80_1
+                              Store 59_1(icolor) 196_1
+            61_3: 23_1(ivec3) Load 59_1(icolor)
+            80_2: 23_2(ivec3) CompositeConstruct uint(4) uint(4) uint(4)
+           196_2: 23_1(ivec3) ShiftLeftLogical 61_3 80_2
+                              Store 59_1(icolor) 196_2
+            61_4: 23_2(ivec3) Load 59_5(u3)
+            61_5:   21_1(int) Load 59_6(i1)
+            80_3: 23_1(ivec3) CompositeConstruct 61_5 61_5 61_5
+           194_1: 23_2(ivec3) ShiftRightLogical 61_4 80_3
+                              Store 59_4(ucolor) 194_1
+            61_6: 23_2(ivec3) Load 59_4(ucolor)
+            80_4: 23_1(ivec3) CompositeConstruct 43_1 43_1 43_1
+           194_2: 23_2(ivec3) ShiftRightLogical 61_6 80_4
+                              Store 59_4(ucolor) 194_2
                               Return
                               FunctionEnd

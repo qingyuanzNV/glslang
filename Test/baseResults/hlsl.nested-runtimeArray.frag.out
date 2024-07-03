@@ -68,52 +68,52 @@ gl_FragCoord origin is upper left
 // Id's are bound by 26
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 24
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "@main("
-                              Name 11  "A"
-                              MemberName 11(A) 0  "a"
-                              Name 13  "B"
-                              MemberName 13(B) 0  "@data"
-                              Name 15  "B"
-                              Name 24  "@entryPointOutput"
-                              Decorate 10 ArrayStride 4
-                              Decorate 11(A) BufferBlock
-                              MemberDecorate 11(A) 0 Offset 0
-                              Decorate 12 ArrayStride 4
-                              Decorate 13(B) BufferBlock
-                              MemberDecorate 13(B) 0 Offset 0
-                              Decorate 15(B) Binding 0
-                              Decorate 15(B) DescriptorSet 0
-                              Decorate 24(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeFunction 6(float)
-              10:             TypeRuntimeArray 6(float)
-           11(A):             TypeStruct 10
-              12:             TypeRuntimeArray 11(A)
-           13(B):             TypeStruct 12
-              14:             TypePointer Uniform 13(B)
-           15(B):     14(ptr) Variable Uniform
-              16:             TypeInt 32 1
-              17:     16(int) Constant 0
-              18:             TypePointer Uniform 6(float)
-              23:             TypePointer Output 6(float)
-24(@entryPointOutput):     23(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              25:    6(float) FunctionCall 8(@main()
-                              Store 24(@entryPointOutput) 25
+                              Name 54_1  "main"
+                              Name 54_2  "@main("
+                              Name 30_1  "A"
+                              MemberName 30_1(A) 0  "a"
+                              Name 30_2  "B"
+                              MemberName 30_2(B) 0  "@data"
+                              Name 59_1  "B"
+                              Name 59_2  "@entryPointOutput"
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_1(A) BufferBlock
+                              MemberDecorate 30_1(A) 0 Offset 0
+                              Decorate 29_2 ArrayStride 4
+                              Decorate 30_2(B) BufferBlock
+                              MemberDecorate 30_2(B) 0 Offset 0
+                              Decorate 59_1(B) Binding 0
+                              Decorate 59_1(B) DescriptorSet 0
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            33_2:             TypeFunction 22_1(float)
+            29_1:             TypeRuntimeArray 22_1(float)
+         30_1(A):             TypeStruct 29_1
+            29_2:             TypeRuntimeArray 30_1(A)
+         30_2(B):             TypeStruct 29_2
+            32_1:             TypePointer Uniform 30_2(B)
+         59_1(B):   32_1(ptr) Variable Uniform
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            32_2:             TypePointer Uniform 22_1(float)
+            32_3:             TypePointer Output 22_1(float)
+59_2(@entryPointOutput):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 22_1(float) FunctionCall 54_2(@main()
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-       8(@main():    6(float) Function None 7
-               9:             Label
-              19:     18(ptr) AccessChain 15(B) 17 17 17 17
-              20:    6(float) Load 19
-                              ReturnValue 20
+    54_2(@main(): 22_1(float) Function None 33_2
+           248_2:             Label
+            65_1:   32_2(ptr) AccessChain 59_1(B) 43_1 43_1 43_1 43_1
+            61_1: 22_1(float) Load 65_1
+                              ReturnValue 61_1
                               FunctionEnd

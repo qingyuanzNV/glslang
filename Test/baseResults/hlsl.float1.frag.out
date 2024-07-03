@@ -69,43 +69,43 @@ gl_FragCoord origin is upper left
 // Id's are bound by 27
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "PixelShaderFunction"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "PixelShaderFunction"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "PixelShaderFunction"
-                              Name 11  "ShaderFunction(vf1;f1;"
-                              Name 9  "inFloat1"
-                              Name 10  "inScalar"
-                              Name 14  "f1"
-                              Name 16  "scalar"
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               8:             TypeFunction 6(float) 7(ptr) 7(ptr)
-              13:             TypePointer Private 6(float)
-          14(f1):     13(ptr) Variable Private
-              15:    6(float) Constant 1065353216
-      16(scalar):     13(ptr) Variable Private
-              17:    6(float) Constant 1073741824
-4(PixelShaderFunction):           2 Function None 3
-               5:             Label
-                              Store 14(f1) 15
-                              Store 16(scalar) 17
+                              Name 54_1  "PixelShaderFunction"
+                              Name 54_2  "ShaderFunction(vf1;f1;"
+                              Name 55_1  "inFloat1"
+                              Name 55_2  "inScalar"
+                              Name 59_1  "f1"
+                              Name 59_2  "scalar"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            33_2:             TypeFunction 22_1(float) 32_1(ptr) 32_1(ptr)
+            32_2:             TypePointer Private 22_1(float)
+        59_1(f1):   32_2(ptr) Variable Private
+            43_1: 22_1(float) Constant 1065353216
+    59_2(scalar):   32_2(ptr) Variable Private
+            43_2: 22_1(float) Constant 1073741824
+54_1(PixelShaderFunction):        19_1 Function None 33_1
+           248_1:             Label
+                              Store 59_1(f1) 43_1
+                              Store 59_2(scalar) 43_2
                               Return
                               FunctionEnd
-11(ShaderFunction(vf1;f1;):    6(float) Function None 8
-     9(inFloat1):      7(ptr) FunctionParameter
-    10(inScalar):      7(ptr) FunctionParameter
-              12:             Label
-              18:    6(float) Load 14(f1)
-              19:    6(float) Load 16(scalar)
-              20:    6(float) FMul 18 19
-              21:    6(float) Load 9(inFloat1)
-              22:    6(float) Load 10(inScalar)
-              23:    6(float) FMul 21 22
-              24:    6(float) FAdd 20 23
-                              ReturnValue 24
+54_2(ShaderFunction(vf1;f1;): 22_1(float) Function None 33_2
+  55_1(inFloat1):   32_1(ptr) FunctionParameter
+  55_2(inScalar):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            61_1: 22_1(float) Load 59_1(f1)
+            61_2: 22_1(float) Load 59_2(scalar)
+           133_1: 22_1(float) FMul 61_1 61_2
+            61_3: 22_1(float) Load 55_1(inFloat1)
+            61_4: 22_1(float) Load 55_2(inScalar)
+           133_2: 22_1(float) FMul 61_3 61_4
+           129_1: 22_1(float) FAdd 133_1 133_2
+                              ReturnValue 129_1
                               FunctionEnd

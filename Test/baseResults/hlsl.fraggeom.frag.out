@@ -68,45 +68,45 @@ gl_FragCoord origin is upper left
 // Id's are bound by 25
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 23
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "myVertex"
-                              MemberName 8(myVertex) 0  "pos"
-                              Name 13  "GS_Draw(struct-myVertex-vf41;struct-myVertex-vf41;"
-                              Name 11  "IN"
-                              Name 12  "OutputStream"
-                              Name 16  "@main("
-                              Name 23  "@entryPointOutput"
-                              Decorate 23(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-     8(myVertex):             TypeStruct 7(fvec4)
-               9:             TypePointer Function 8(myVertex)
-              10:             TypeFunction 2 9(ptr) 9(ptr)
-              15:             TypeFunction 7(fvec4)
-              18:    6(float) Constant 0
-              19:    7(fvec4) ConstantComposite 18 18 18 18
-              22:             TypePointer Output 7(fvec4)
-23(@entryPointOutput):     22(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              24:    7(fvec4) FunctionCall 16(@main()
-                              Store 23(@entryPointOutput) 24
+                              Name 54_1  "main"
+                              Name 30_1  "myVertex"
+                              MemberName 30_1(myVertex) 0  "pos"
+                              Name 54_2  "GS_Draw(struct-myVertex-vf41;struct-myVertex-vf41;"
+                              Name 55_1  "IN"
+                              Name 55_2  "OutputStream"
+                              Name 54_3  "@main("
+                              Name 59_1  "@entryPointOutput"
+                              Decorate 59_1(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+  30_1(myVertex):             TypeStruct 23_1(fvec4)
+            32_1:             TypePointer Function 30_1(myVertex)
+            33_2:             TypeFunction 19_1 32_1(ptr) 32_1(ptr)
+            33_3:             TypeFunction 23_1(fvec4)
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            32_2:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput):   32_2(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 23_1(fvec4) FunctionCall 54_3(@main()
+                              Store 59_1(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-13(GS_Draw(struct-myVertex-vf41;struct-myVertex-vf41;):           2 Function None 10
-          11(IN):      9(ptr) FunctionParameter
-12(OutputStream):      9(ptr) FunctionParameter
-              14:             Label
+54_2(GS_Draw(struct-myVertex-vf41;struct-myVertex-vf41;):        19_1 Function None 33_2
+        55_1(IN):   32_1(ptr) FunctionParameter
+55_2(OutputStream):   32_1(ptr) FunctionParameter
+           248_2:             Label
                               Return
                               FunctionEnd
-      16(@main():    7(fvec4) Function None 15
-              17:             Label
-                              ReturnValue 19
+    54_3(@main(): 23_1(fvec4) Function None 33_3
+           248_3:             Label
+                              ReturnValue 44_1
                               FunctionEnd

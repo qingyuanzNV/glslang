@@ -6,40 +6,40 @@ spv.460.vert
                               Capability Shader
                               Capability DrawParameters
                               Extension  "SPV_KHR_shader_draw_parameters"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 10 12 15 18 19
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4 59_5
                               Source GLSL 460
-                              Name 4  "main"
-                              Name 8  "a"
-                              Name 10  "gl_BaseVertex"
-                              Name 12  "gl_BaseInstance"
-                              Name 15  "gl_DrawID"
-                              Name 18  "gl_VertexID"
-                              Name 19  "gl_InstanceID"
-                              Decorate 10(gl_BaseVertex) BuiltIn BaseVertex
-                              Decorate 12(gl_BaseInstance) BuiltIn BaseInstance
-                              Decorate 15(gl_DrawID) BuiltIn DrawIndex
-                              Decorate 18(gl_VertexID) BuiltIn VertexId
-                              Decorate 19(gl_InstanceID) BuiltIn InstanceId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:             TypePointer Input 6(int)
-10(gl_BaseVertex):      9(ptr) Variable Input
-12(gl_BaseInstance):      9(ptr) Variable Input
-   15(gl_DrawID):      9(ptr) Variable Input
- 18(gl_VertexID):      9(ptr) Variable Input
-19(gl_InstanceID):      9(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-            8(a):      7(ptr) Variable Function
-              11:      6(int) Load 10(gl_BaseVertex)
-              13:      6(int) Load 12(gl_BaseInstance)
-              14:      6(int) IAdd 11 13
-              16:      6(int) Load 15(gl_DrawID)
-              17:      6(int) IAdd 14 16
-                              Store 8(a) 17
+                              Name 54_1  "main"
+                              Name 59_6  "a"
+                              Name 59_1  "gl_BaseVertex"
+                              Name 59_2  "gl_BaseInstance"
+                              Name 59_3  "gl_DrawID"
+                              Name 59_4  "gl_VertexID"
+                              Name 59_5  "gl_InstanceID"
+                              Decorate 59_1(gl_BaseVertex) BuiltIn BaseVertex
+                              Decorate 59_2(gl_BaseInstance) BuiltIn BaseInstance
+                              Decorate 59_3(gl_DrawID) BuiltIn DrawIndex
+                              Decorate 59_4(gl_VertexID) BuiltIn VertexId
+                              Decorate 59_5(gl_InstanceID) BuiltIn InstanceId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            32_2:             TypePointer Input 21_1(int)
+59_1(gl_BaseVertex):   32_2(ptr) Variable Input
+59_2(gl_BaseInstance):   32_2(ptr) Variable Input
+ 59_3(gl_DrawID):   32_2(ptr) Variable Input
+59_4(gl_VertexID):   32_2(ptr) Variable Input
+59_5(gl_InstanceID):   32_2(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_6(a):   32_1(ptr) Variable Function
+            61_1:   21_1(int) Load 59_1(gl_BaseVertex)
+            61_2:   21_1(int) Load 59_2(gl_BaseInstance)
+           128_1:   21_1(int) IAdd 61_1 61_2
+            61_3:   21_1(int) Load 59_3(gl_DrawID)
+           128_2:   21_1(int) IAdd 128_1 61_3
+                              Store 59_6(a) 128_2
                               Return
                               FunctionEnd

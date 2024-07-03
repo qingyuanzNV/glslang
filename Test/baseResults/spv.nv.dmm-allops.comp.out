@@ -8,89 +8,89 @@ spv.nv.dmm-allops.comp
                               Capability DisplacementMicromapNV
                               Extension  "SPV_KHR_ray_query"
                               Extension  "SPV_NV_displacement_micromap"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 11 16
-                              ExecutionMode 4 LocalSize 16 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 LocalSize 16 1 1
                               Source GLSL 460
                               SourceExtension  "GL_EXT_ray_query"
                               SourceExtension  "GL_NV_displacement_micromap"
-                              Name 4  "main"
-                              Name 9  "block"
-                              MemberName 9(block) 0  "op_pos"
-                              MemberName 9(block) 1  "op_bary"
-                              Name 11  ""
-                              Name 16  "as"
-                              Decorate 9(block) Block
-                              MemberDecorate 9(block) 0 Offset 0
-                              MemberDecorate 9(block) 1 Offset 16
-                              Decorate 11 Binding 0
-                              Decorate 11 DescriptorSet 0
-                              Decorate 16(as) Binding 1
-                              Decorate 16(as) DescriptorSet 0
-                              Decorate 58 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 3
-               8:             TypeVector 6(float) 2
-        9(block):             TypeStruct 7(fvec3) 8(fvec2)
-              10:             TypePointer StorageBuffer 9(block)
-              11:     10(ptr) Variable StorageBuffer
-              12:             TypeInt 32 1
-              13:     12(int) Constant 0
-              14:             TypeAccelerationStructureKHR
-              15:             TypePointer UniformConstant 14
-          16(as):     15(ptr) Variable UniformConstant
-              18:     12(int) Constant 1
-              19:             TypeVector 12(int) 2
-              20:   19(ivec2) ConstantComposite 13 13
-              22:             TypePointer StorageBuffer 7(fvec3)
-              25:   19(ivec2) ConstantComposite 13 18
-              32:   19(ivec2) ConstantComposite 18 13
-              40:             TypePointer StorageBuffer 8(fvec2)
-              54:             TypeInt 32 0
-              55:             TypeVector 54(int) 3
-              56:     54(int) Constant 16
-              57:     54(int) Constant 1
-              58:   55(ivec3) ConstantComposite 56 57 57
-         4(main):           2 Function None 3
-               5:             Label
-              17:          14 Load 16(as)
-              21:    7(fvec3) FetchMicroTriangleVertexPositionNV 17 18 18 18 20
-              23:     22(ptr) AccessChain 11 13
-                              Store 23 21
-              24:          14 Load 16(as)
-              26:    7(fvec3) FetchMicroTriangleVertexPositionNV 24 18 18 18 25
-              27:     22(ptr) AccessChain 11 13
-              28:    7(fvec3) Load 27
-              29:    7(fvec3) FAdd 28 26
-              30:     22(ptr) AccessChain 11 13
-                              Store 30 29
-              31:          14 Load 16(as)
-              33:    7(fvec3) FetchMicroTriangleVertexPositionNV 31 18 18 18 32
-              34:     22(ptr) AccessChain 11 13
-              35:    7(fvec3) Load 34
-              36:    7(fvec3) FAdd 35 33
-              37:     22(ptr) AccessChain 11 13
-                              Store 37 36
-              38:          14 Load 16(as)
-              39:    8(fvec2) FetchMicroTriangleVertexBarycentricNV 38 18 18 18 20
-              41:     40(ptr) AccessChain 11 18
-                              Store 41 39
-              42:          14 Load 16(as)
-              43:    8(fvec2) FetchMicroTriangleVertexBarycentricNV 42 18 18 18 25
-              44:     40(ptr) AccessChain 11 18
-              45:    8(fvec2) Load 44
-              46:    8(fvec2) FAdd 45 43
-              47:     40(ptr) AccessChain 11 18
-                              Store 47 46
-              48:          14 Load 16(as)
-              49:    8(fvec2) FetchMicroTriangleVertexBarycentricNV 48 18 18 18 32
-              50:     40(ptr) AccessChain 11 18
-              51:    8(fvec2) Load 50
-              52:    8(fvec2) FAdd 51 49
-              53:     40(ptr) AccessChain 11 18
-                              Store 53 52
+                              Name 54_1  "main"
+                              Name 30_1  "block"
+                              MemberName 30_1(block) 0  "op_pos"
+                              MemberName 30_1(block) 1  "op_bary"
+                              Name 59_1  ""
+                              Name 59_2  "as"
+                              Decorate 30_1(block) Block
+                              MemberDecorate 30_1(block) 0 Offset 0
+                              MemberDecorate 30_1(block) 1 Offset 16
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(as) Binding 1
+                              Decorate 59_2(as) DescriptorSet 0
+                              Decorate 44_4 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            23_2:             TypeVector 22_1(float) 2
+     30_1(block):             TypeStruct 23_1(fvec3) 23_2(fvec2)
+            32_1:             TypePointer StorageBuffer 30_1(block)
+            59_1:   32_1(ptr) Variable StorageBuffer
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+          5341_1:             TypeAccelerationStructureKHR
+            32_2:             TypePointer UniformConstant 5341_1
+        59_2(as):   32_2(ptr) Variable UniformConstant
+            43_2:   21_1(int) Constant 1
+            23_3:             TypeVector 21_1(int) 2
+            44_1: 23_3(ivec2) ConstantComposite 43_1 43_1
+            32_3:             TypePointer StorageBuffer 23_1(fvec3)
+            44_2: 23_3(ivec2) ConstantComposite 43_1 43_2
+            44_3: 23_3(ivec2) ConstantComposite 43_2 43_1
+            32_4:             TypePointer StorageBuffer 23_2(fvec2)
+            21_2:             TypeInt 32 0
+            23_4:             TypeVector 21_2(int) 3
+        uint(16):   21_2(int) Constant 16
+         uint(1):   21_2(int) Constant 1
+            44_4: 23_4(ivec3) ConstantComposite uint(16) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:      5341_1 Load 59_2(as)
+          5300_1: 23_1(fvec3) FetchMicroTriangleVertexPositionNV 61_1 43_2 43_2 43_2 44_1
+            65_1:   32_3(ptr) AccessChain 59_1 43_1
+                              Store 65_1 5300_1
+            61_2:      5341_1 Load 59_2(as)
+          5300_2: 23_1(fvec3) FetchMicroTriangleVertexPositionNV 61_2 43_2 43_2 43_2 44_2
+            65_2:   32_3(ptr) AccessChain 59_1 43_1
+            61_3: 23_1(fvec3) Load 65_2
+           129_1: 23_1(fvec3) FAdd 61_3 5300_2
+            65_3:   32_3(ptr) AccessChain 59_1 43_1
+                              Store 65_3 129_1
+            61_4:      5341_1 Load 59_2(as)
+          5300_3: 23_1(fvec3) FetchMicroTriangleVertexPositionNV 61_4 43_2 43_2 43_2 44_3
+            65_4:   32_3(ptr) AccessChain 59_1 43_1
+            61_5: 23_1(fvec3) Load 65_4
+           129_2: 23_1(fvec3) FAdd 61_5 5300_3
+            65_5:   32_3(ptr) AccessChain 59_1 43_1
+                              Store 65_5 129_2
+            61_6:      5341_1 Load 59_2(as)
+          5301_1: 23_2(fvec2) FetchMicroTriangleVertexBarycentricNV 61_6 43_2 43_2 43_2 44_1
+            65_6:   32_4(ptr) AccessChain 59_1 43_2
+                              Store 65_6 5301_1
+            61_7:      5341_1 Load 59_2(as)
+          5301_2: 23_2(fvec2) FetchMicroTriangleVertexBarycentricNV 61_7 43_2 43_2 43_2 44_2
+            65_7:   32_4(ptr) AccessChain 59_1 43_2
+            61_8: 23_2(fvec2) Load 65_7
+           129_3: 23_2(fvec2) FAdd 61_8 5301_2
+            65_8:   32_4(ptr) AccessChain 59_1 43_2
+                              Store 65_8 129_3
+            61_9:      5341_1 Load 59_2(as)
+          5301_3: 23_2(fvec2) FetchMicroTriangleVertexBarycentricNV 61_9 43_2 43_2 43_2 44_3
+            65_9:   32_4(ptr) AccessChain 59_1 43_2
+           61_10: 23_2(fvec2) Load 65_9
+           129_4: 23_2(fvec2) FAdd 61_10 5301_3
+           65_10:   32_4(ptr) AccessChain 59_1 43_2
+                              Store 65_10 129_4
                               Return
                               FunctionEnd

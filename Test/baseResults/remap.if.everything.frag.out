@@ -4,40 +4,40 @@ remap.if.everything.frag
 // Id's are bound by 22855
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 5663  "main" 3773 4539
-                              ExecutionMode 5663 OriginUpperLeft
-                              Decorate 3773 Location 0
-                              Decorate 4539 Location 0
-               8:             TypeVoid
-            1282:             TypeFunction 8
-              13:             TypeFloat 32
-             650:             TypePointer Input 13(float)
-            3773:    650(ptr) Variable Input
-              24:   13(float) Constant 1073741824
-               9:             TypeBool
-              29:             TypeVector 13(float) 4
-             666:             TypePointer Output 29(fvec4)
-            4539:    666(ptr) Variable Output
-             947:   13(float) Constant 3204448256
-            5663:           8 Function None 1282
-            7911:             Label
-           21734:   13(float) Load 3773
-           13508:     9(bool) FOrdGreaterThan 21734 24
-                              SelectionMerge 19578 None
-                              BranchConditional 13508 13182 10142
-           13182:               Label
-            9496:   13(float)   Load 3773
-           17615:   29(fvec4)   CompositeConstruct 9496 9496 9496 9496
-                                Store 4539 17615
-                                Branch 19578
-           10142:               Label
-           22854:   13(float)   Load 3773
-            9982:   13(float)   FAdd 22854 947
-           12421:   29(fvec4)   CompositeConstruct 9982 9982 9982 9982
-                                Store 4539 12421
-                                Branch 19578
-           19578:             Label
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
+                              Decorate 59_1 Location 0
+                              Decorate 59_2 Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Input 22_1(float)
+            59_1:   32_1(ptr) Variable Input
+            43_1: 22_1(float) Constant 1073741824
+            20_1:             TypeBool
+            23_1:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Output 23_1(fvec4)
+            59_2:   32_2(ptr) Variable Output
+            43_2: 22_1(float) Constant 3204448256
+            54_1:        19_1 Function None 33_1
+           248_1:             Label
+            61_1: 22_1(float) Load 59_1
+           186_1:  20_1(bool) FOrdGreaterThan 61_1 43_1
+                              SelectionMerge 248_4 None
+                              BranchConditional 186_1 248_2 248_3
+           248_2:               Label
+            61_2: 22_1(float)   Load 59_1
+            80_1: 23_1(fvec4)   CompositeConstruct 61_2 61_2 61_2 61_2
+                                Store 59_2 80_1
+                                Branch 248_4
+           248_3:               Label
+            61_3: 22_1(float)   Load 59_1
+           129_1: 22_1(float)   FAdd 61_3 43_2
+            80_2: 23_1(fvec4)   CompositeConstruct 129_1 129_1 129_1 129_1
+                                Store 59_2 80_2
+                                Branch 248_4
+           248_4:             Label
                               Return
                               FunctionEnd

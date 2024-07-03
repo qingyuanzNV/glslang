@@ -7,70 +7,70 @@ rayQuery-global.rgen
                               Capability RayTracingKHR
                               Extension  "SPV_KHR_ray_query"
                               Extension  "SPV_KHR_ray_tracing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint RayGenerationKHR 4  "main"
+                              EntryPoint RayGenerationKHR 54_1  "main"
                               Source GLSL 460
                               SourceExtension  "GL_EXT_ray_flags_primitive_culling"
                               SourceExtension  "GL_EXT_ray_query"
-                              Name 4  "main"
-                              Name 10  "otherWrapper(rq1;"
-                              Name 9  "rq"
-                              Name 13  "wrapper(rq1;"
-                              Name 12  "rq"
-                              Name 17  "rqGlobal"
-                              Name 22  "rq2"
-                              Name 27  "rtas"
-                              Name 40  "rq2"
-                              Decorate 27(rtas) Binding 1
-                              Decorate 27(rtas) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeRayQueryKHR
-               7:             TypePointer Private 6
-               8:             TypeFunction 2 7(ptr)
-              15:             TypeBool
-    17(rqGlobal):      7(ptr) Variable Private
-         22(rq2):      7(ptr) Variable Private
-              25:             TypeAccelerationStructureKHR
-              26:             TypePointer UniformConstant 25
-        27(rtas):     26(ptr) Variable UniformConstant
-              29:             TypeInt 32 0
-              30:     29(int) Constant 0
-              31:     29(int) Constant 255
-              32:             TypeFloat 32
-              33:             TypeVector 32(float) 3
-              34:   32(float) Constant 0
-              35:   33(fvec3) ConstantComposite 34 34 34
-              36:   32(float) Constant 1065353216
-              37:   33(fvec3) ConstantComposite 36 34 34
-         40(rq2):      7(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-              28:          25 Load 27(rtas)
-                              RayQueryInitializeKHR 17(rqGlobal) 28 30 31 35 34 37 36
-              38:           2 FunctionCall 13(wrapper(rq1;) 17(rqGlobal)
-              39:           2 FunctionCall 10(otherWrapper(rq1;) 17(rqGlobal)
-              41:          25 Load 27(rtas)
-                              RayQueryInitializeKHR 40(rq2) 41 30 31 35 34 37 36
-              42:           2 FunctionCall 13(wrapper(rq1;) 40(rq2)
-              43:           2 FunctionCall 10(otherWrapper(rq1;) 40(rq2)
+                              Name 54_1  "main"
+                              Name 54_2  "otherWrapper(rq1;"
+                              Name 55_1  "rq"
+                              Name 54_3  "wrapper(rq1;"
+                              Name 55_2  "rq"
+                              Name 59_1  "rqGlobal"
+                              Name 59_2  "rq2"
+                              Name 59_3  "rtas"
+                              Name 59_4  "rq2"
+                              Decorate 59_3(rtas) Binding 1
+                              Decorate 59_3(rtas) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+          4472_1:             TypeRayQueryKHR
+            32_1:             TypePointer Private 4472_1
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            20_1:             TypeBool
+  59_1(rqGlobal):   32_1(ptr) Variable Private
+       59_2(rq2):   32_1(ptr) Variable Private
+          5341_1:             TypeAccelerationStructureKHR
+            32_2:             TypePointer UniformConstant 5341_1
+      59_3(rtas):   32_2(ptr) Variable UniformConstant
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+       uint(255):   21_1(int) Constant 255
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec3) ConstantComposite 43_1 43_1 43_1
+            43_2: 22_1(float) Constant 1065353216
+            44_2: 23_1(fvec3) ConstantComposite 43_2 43_1 43_1
+       59_4(rq2):   32_1(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:      5341_1 Load 59_3(rtas)
+                              RayQueryInitializeKHR 59_1(rqGlobal) 61_1 uint(0) uint(255) 44_1 43_1 44_2 43_2
+            57_1:        19_1 FunctionCall 54_3(wrapper(rq1;) 59_1(rqGlobal)
+            57_2:        19_1 FunctionCall 54_2(otherWrapper(rq1;) 59_1(rqGlobal)
+            61_2:      5341_1 Load 59_3(rtas)
+                              RayQueryInitializeKHR 59_4(rq2) 61_2 uint(0) uint(255) 44_1 43_1 44_2 43_2
+            57_3:        19_1 FunctionCall 54_3(wrapper(rq1;) 59_4(rq2)
+            57_4:        19_1 FunctionCall 54_2(otherWrapper(rq1;) 59_4(rq2)
                               Return
                               FunctionEnd
-10(otherWrapper(rq1;):           2 Function None 8
-           9(rq):      7(ptr) FunctionParameter
-              11:             Label
-              16:    15(bool) RayQueryProceedKHR 9(rq)
-              18:    15(bool) RayQueryProceedKHR 17(rqGlobal)
+54_2(otherWrapper(rq1;):        19_1 Function None 33_2
+        55_1(rq):   32_1(ptr) FunctionParameter
+           248_2:             Label
+          4477_1:  20_1(bool) RayQueryProceedKHR 55_1(rq)
+          4477_2:  20_1(bool) RayQueryProceedKHR 59_1(rqGlobal)
                               Return
                               FunctionEnd
-13(wrapper(rq1;):           2 Function None 8
-          12(rq):      7(ptr) FunctionParameter
-              14:             Label
-              19:    15(bool) RayQueryProceedKHR 12(rq)
-              20:    15(bool) RayQueryProceedKHR 17(rqGlobal)
-              21:           2 FunctionCall 10(otherWrapper(rq1;) 12(rq)
-              23:           2 FunctionCall 10(otherWrapper(rq1;) 22(rq2)
-              24:           2 FunctionCall 10(otherWrapper(rq1;) 17(rqGlobal)
+54_3(wrapper(rq1;):        19_1 Function None 33_2
+        55_2(rq):   32_1(ptr) FunctionParameter
+           248_3:             Label
+          4477_3:  20_1(bool) RayQueryProceedKHR 55_2(rq)
+          4477_4:  20_1(bool) RayQueryProceedKHR 59_1(rqGlobal)
+            57_5:        19_1 FunctionCall 54_2(otherWrapper(rq1;) 55_2(rq)
+            57_6:        19_1 FunctionCall 54_2(otherWrapper(rq1;) 59_2(rq2)
+            57_7:        19_1 FunctionCall 54_2(otherWrapper(rq1;) 59_1(rqGlobal)
                               Return
                               FunctionEnd

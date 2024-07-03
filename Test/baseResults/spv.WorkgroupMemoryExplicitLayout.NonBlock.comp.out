@@ -4,32 +4,32 @@ spv.WorkgroupMemoryExplicitLayout.NonBlock.comp
 // Id's are bound by 17
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 8 10
-                              ExecutionMode 4 LocalSize 8 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 LocalSize 8 1 1
                               Source GLSL 430
                               SourceExtension  "GL_EXT_shared_memory_block"
-                              Name 4  "main"
-                              Name 8  "a"
-                              Name 10  "b"
-                              Decorate 16 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Workgroup 6(int)
-            8(a):      7(ptr) Variable Workgroup
-               9:      6(int) Constant 2
-           10(b):      7(ptr) Variable Workgroup
-              11:      6(int) Constant 3
-              12:             TypeInt 32 0
-              13:             TypeVector 12(int) 3
-              14:     12(int) Constant 8
-              15:     12(int) Constant 1
-              16:   13(ivec3) ConstantComposite 14 15 15
-         4(main):           2 Function None 3
-               5:             Label
-                              Store 8(a) 9
-                              Store 10(b) 11
+                              Name 54_1  "main"
+                              Name 59_1  "a"
+                              Name 59_2  "b"
+                              Decorate 44_1 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Workgroup 21_1(int)
+         59_1(a):   32_1(ptr) Variable Workgroup
+            43_1:   21_1(int) Constant 2
+         59_2(b):   32_1(ptr) Variable Workgroup
+            43_2:   21_1(int) Constant 3
+            21_2:             TypeInt 32 0
+            23_1:             TypeVector 21_2(int) 3
+         uint(8):   21_2(int) Constant 8
+         uint(1):   21_2(int) Constant 1
+            44_1: 23_1(ivec3) ConstantComposite uint(8) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+                              Store 59_1(a) 43_1
+                              Store 59_2(b) 43_2
                               Return
                               FunctionEnd

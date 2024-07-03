@@ -192,117 +192,117 @@ output primitive = line_strip
 // Id's are bound by 68
 
                               Capability Geometry
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Geometry 4  "main" 42 46 55 58
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 Invocations 1
-                              ExecutionMode 4 OutputLineStrip
-                              ExecutionMode 4 OutputVertices 4
+                              EntryPoint Geometry 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 Invocations 1
+                              ExecutionMode 54_1 OutputLineStrip
+                              ExecutionMode 54_1 OutputVertices 4
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 12  "PSInput"
-                              MemberName 12(PSInput) 0  "myfloat"
-                              MemberName 12(PSInput) 1  "something"
-                              Name 18  "@main(u1[3];u1[3];struct-PSInput-f1-i11;"
-                              Name 15  "VertexID"
-                              Name 16  "test"
-                              Name 17  "OutputStream"
-                              Name 20  "Vert"
-                              Name 42  "OutputStream.myfloat"
-                              Name 46  "OutputStream.something"
-                              Name 53  "VertexID"
-                              Name 55  "VertexID"
-                              Name 57  "test"
-                              Name 58  "test"
-                              Name 60  "OutputStream"
-                              Name 61  "param"
-                              Name 63  "param"
-                              Name 65  "param"
-                              Decorate 42(OutputStream.myfloat) Location 0
-                              Decorate 46(OutputStream.something) Location 1
-                              Decorate 55(VertexID) Location 0
-                              Decorate 58(test) Location 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:      6(int) Constant 3
-               8:             TypeArray 6(int) 7
-               9:             TypePointer Function 8
-              10:             TypeFloat 32
-              11:             TypeInt 32 1
-     12(PSInput):             TypeStruct 10(float) 11(int)
-              13:             TypePointer Function 12(PSInput)
-              14:             TypeFunction 2 9(ptr) 9(ptr) 13(ptr)
-              21:     11(int) Constant 0
-              22:             TypePointer Function 6(int)
-              25:     11(int) Constant 1
-              29:     11(int) Constant 2
-              34:             TypePointer Function 10(float)
-              39:             TypePointer Function 11(int)
-              41:             TypePointer Output 10(float)
-42(OutputStream.myfloat):     41(ptr) Variable Output
-              45:             TypePointer Output 11(int)
-46(OutputStream.something):     45(ptr) Variable Output
-              54:             TypePointer Input 8
-    55(VertexID):     54(ptr) Variable Input
-        58(test):     54(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-    53(VertexID):      9(ptr) Variable Function
-        57(test):      9(ptr) Variable Function
-60(OutputStream):     13(ptr) Variable Function
-       61(param):      9(ptr) Variable Function
-       63(param):      9(ptr) Variable Function
-       65(param):     13(ptr) Variable Function
-              56:           8 Load 55(VertexID)
-                              Store 53(VertexID) 56
-              59:           8 Load 58(test)
-                              Store 57(test) 59
-              62:           8 Load 53(VertexID)
-                              Store 61(param) 62
-              64:           8 Load 57(test)
-                              Store 63(param) 64
-              66:           2 FunctionCall 18(@main(u1[3];u1[3];struct-PSInput-f1-i11;) 61(param) 63(param) 65(param)
-              67: 12(PSInput) Load 65(param)
-                              Store 60(OutputStream) 67
+                              Name 54_1  "main"
+                              Name 30_1  "PSInput"
+                              MemberName 30_1(PSInput) 0  "myfloat"
+                              MemberName 30_1(PSInput) 1  "something"
+                              Name 54_2  "@main(u1[3];u1[3];struct-PSInput-f1-i11;"
+                              Name 55_1  "VertexID"
+                              Name 55_2  "test"
+                              Name 55_3  "OutputStream"
+                              Name 59_11  "Vert"
+                              Name 59_1  "OutputStream.myfloat"
+                              Name 59_2  "OutputStream.something"
+                              Name 59_5  "VertexID"
+                              Name 59_3  "VertexID"
+                              Name 59_6  "test"
+                              Name 59_4  "test"
+                              Name 59_7  "OutputStream"
+                              Name 59_8  "param"
+                              Name 59_9  "param"
+                              Name 59_10  "param"
+                              Decorate 59_1(OutputStream.myfloat) Location 0
+                              Decorate 59_2(OutputStream.something) Location 1
+                              Decorate 59_3(VertexID) Location 0
+                              Decorate 59_4(test) Location 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 21_1(int) uint(3)
+            32_1:             TypePointer Function 28_1
+            22_1:             TypeFloat 32
+            21_2:             TypeInt 32 1
+   30_1(PSInput):             TypeStruct 22_1(float) 21_2(int)
+            32_2:             TypePointer Function 30_1(PSInput)
+            33_2:             TypeFunction 19_1 32_1(ptr) 32_1(ptr) 32_2(ptr)
+            43_1:   21_2(int) Constant 0
+            32_3:             TypePointer Function 21_1(int)
+            43_2:   21_2(int) Constant 1
+            43_3:   21_2(int) Constant 2
+            32_4:             TypePointer Function 22_1(float)
+            32_5:             TypePointer Function 21_2(int)
+            32_6:             TypePointer Output 22_1(float)
+59_1(OutputStream.myfloat):   32_6(ptr) Variable Output
+            32_7:             TypePointer Output 21_2(int)
+59_2(OutputStream.something):   32_7(ptr) Variable Output
+            32_8:             TypePointer Input 28_1
+  59_3(VertexID):   32_8(ptr) Variable Input
+      59_4(test):   32_8(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+  59_5(VertexID):   32_1(ptr) Variable Function
+      59_6(test):   32_1(ptr) Variable Function
+59_7(OutputStream):   32_2(ptr) Variable Function
+     59_8(param):   32_1(ptr) Variable Function
+     59_9(param):   32_1(ptr) Variable Function
+    59_10(param):   32_2(ptr) Variable Function
+            61_1:        28_1 Load 59_3(VertexID)
+                              Store 59_5(VertexID) 61_1
+            61_2:        28_1 Load 59_4(test)
+                              Store 59_6(test) 61_2
+            61_3:        28_1 Load 59_5(VertexID)
+                              Store 59_8(param) 61_3
+            61_4:        28_1 Load 59_6(test)
+                              Store 59_9(param) 61_4
+            57_1:        19_1 FunctionCall 54_2(@main(u1[3];u1[3];struct-PSInput-f1-i11;) 59_8(param) 59_9(param) 59_10(param)
+            61_5:30_1(PSInput) Load 59_10(param)
+                              Store 59_7(OutputStream) 61_5
                               Return
                               FunctionEnd
-18(@main(u1[3];u1[3];struct-PSInput-f1-i11;):           2 Function None 14
-    15(VertexID):      9(ptr) FunctionParameter
-        16(test):      9(ptr) FunctionParameter
-17(OutputStream):     13(ptr) FunctionParameter
-              19:             Label
-        20(Vert):     13(ptr) Variable Function
-              23:     22(ptr) AccessChain 16(test) 21
-              24:      6(int) Load 23
-              26:     22(ptr) AccessChain 16(test) 25
-              27:      6(int) Load 26
-              28:      6(int) IAdd 24 27
-              30:     22(ptr) AccessChain 16(test) 29
-              31:      6(int) Load 30
-              32:      6(int) IAdd 28 31
-              33:   10(float) ConvertUToF 32
-              35:     34(ptr) AccessChain 20(Vert) 21
-                              Store 35 33
-              36:     22(ptr) AccessChain 15(VertexID) 21
-              37:      6(int) Load 36
-              38:     11(int) Bitcast 37
-              40:     39(ptr) AccessChain 20(Vert) 25
-                              Store 40 38
-              43:     34(ptr) AccessChain 20(Vert) 21
-              44:   10(float) Load 43
-                              Store 42(OutputStream.myfloat) 44
-              47:     39(ptr) AccessChain 20(Vert) 25
-              48:     11(int) Load 47
-                              Store 46(OutputStream.something) 48
+54_2(@main(u1[3];u1[3];struct-PSInput-f1-i11;):        19_1 Function None 33_2
+  55_1(VertexID):   32_1(ptr) FunctionParameter
+      55_2(test):   32_1(ptr) FunctionParameter
+55_3(OutputStream):   32_2(ptr) FunctionParameter
+           248_2:             Label
+     59_11(Vert):   32_2(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 55_2(test) 43_1
+            61_6:   21_1(int) Load 65_1
+            65_2:   32_3(ptr) AccessChain 55_2(test) 43_2
+            61_7:   21_1(int) Load 65_2
+           128_1:   21_1(int) IAdd 61_6 61_7
+            65_3:   32_3(ptr) AccessChain 55_2(test) 43_3
+            61_8:   21_1(int) Load 65_3
+           128_2:   21_1(int) IAdd 128_1 61_8
+           112_1: 22_1(float) ConvertUToF 128_2
+            65_4:   32_4(ptr) AccessChain 59_11(Vert) 43_1
+                              Store 65_4 112_1
+            65_5:   32_3(ptr) AccessChain 55_1(VertexID) 43_1
+            61_9:   21_1(int) Load 65_5
+           124_1:   21_2(int) Bitcast 61_9
+            65_6:   32_5(ptr) AccessChain 59_11(Vert) 43_2
+                              Store 65_6 124_1
+            65_7:   32_4(ptr) AccessChain 59_11(Vert) 43_1
+           61_10: 22_1(float) Load 65_7
+                              Store 59_1(OutputStream.myfloat) 61_10
+            65_8:   32_5(ptr) AccessChain 59_11(Vert) 43_2
+           61_11:   21_2(int) Load 65_8
+                              Store 59_2(OutputStream.something) 61_11
                               EmitVertex
-              49:     34(ptr) AccessChain 20(Vert) 21
-              50:   10(float) Load 49
-                              Store 42(OutputStream.myfloat) 50
-              51:     39(ptr) AccessChain 20(Vert) 25
-              52:     11(int) Load 51
-                              Store 46(OutputStream.something) 52
+            65_9:   32_4(ptr) AccessChain 59_11(Vert) 43_1
+           61_12: 22_1(float) Load 65_9
+                              Store 59_1(OutputStream.myfloat) 61_12
+           65_10:   32_5(ptr) AccessChain 59_11(Vert) 43_2
+           61_13:   21_2(int) Load 65_10
+                              Store 59_2(OutputStream.something) 61_13
                               EmitVertex
                               EndPrimitive
                               Return

@@ -7,70 +7,70 @@ WARNING: 0:5: '' : all default precisions are highp; use precision statements to
 // Id's are bound by 23990
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 5663  "main" 3719 3994
-                              ExecutionMode 5663 OriginUpperLeft
-                              Decorate 3719 Location 0
-                              Decorate 3994 RelaxedPrecision
-                              Decorate 3994 Location 0
-                              Decorate 12421 RelaxedPrecision
-                              Decorate 12422 RelaxedPrecision
-                              Decorate 12423 RelaxedPrecision
-               8:             TypeVoid
-            1282:             TypeFunction 8
-              13:             TypeFloat 32
-              29:             TypeVector 13(float) 4
-             666:             TypePointer Input 29(fvec4)
-            3719:    666(ptr) Variable Input
-              11:             TypeInt 32 0
-            2579:     11(int) Constant 3
-             650:             TypePointer Input 13(float)
-              12:             TypeInt 32 1
-             667:             TypePointer Output 29(fvec4)
-            3994:    667(ptr) Variable Output
-            2570:     11(int) Constant 0
-            2572:   13(float) Constant 0
-            2573:     11(int) Constant 1
-             138:   13(float) Constant 1065353216
-            2576:     11(int) Constant 2
-              24:   13(float) Constant 1073741824
-             833:   13(float) Constant 3212836864
-            1284:   29(fvec4) ConstantComposite 833 833 833 833
-            5663:           8 Function None 1282
-           23915:             Label
-            7984:    650(ptr) AccessChain 3719 2579
-           11376:   13(float) Load 7984
-           16859:     12(int) ConvertFToS 11376
-                              SelectionMerge 19578 None
-                              Switch 16859 15971 
-                                     case 0: 8158
-                                     case 1: 8159
-                                     case 2: 8160
-           15971:               Label
-                                Store 3994 1284
-                                Branch 19578
-            8158:               Label
-           21848:    650(ptr)   AccessChain 3719 2570
-           23987:   13(float)   Load 21848
-           19989:   13(float)   FAdd 23987 2572
-           12421:   29(fvec4)   CompositeConstruct 19989 19989 19989 19989
-                                Store 3994 12421
-                                Branch 19578
-            8159:               Label
-           21849:    650(ptr)   AccessChain 3719 2573
-           23988:   13(float)   Load 21849
-           19990:   13(float)   FAdd 23988 138
-           12422:   29(fvec4)   CompositeConstruct 19990 19990 19990 19990
-                                Store 3994 12422
-                                Branch 19578
-            8160:               Label
-           21850:    650(ptr)   AccessChain 3719 2576
-           23989:   13(float)   Load 21850
-           19991:   13(float)   FAdd 23989 24
-           12423:   29(fvec4)   CompositeConstruct 19991 19991 19991 19991
-                                Store 3994 12423
-                                Branch 19578
-           19578:             Label
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
+                              Decorate 59_1 Location 0
+                              Decorate 59_2 RelaxedPrecision
+                              Decorate 59_2 Location 0
+                              Decorate 80_1 RelaxedPrecision
+                              Decorate 80_2 RelaxedPrecision
+                              Decorate 80_3 RelaxedPrecision
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Input 23_1(fvec4)
+            59_1:   32_1(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            32_2:             TypePointer Input 22_1(float)
+            21_2:             TypeInt 32 1
+            32_3:             TypePointer Output 23_1(fvec4)
+            59_2:   32_3(ptr) Variable Output
+         uint(0):   21_1(int) Constant 0
+            43_1: 22_1(float) Constant 0
+         uint(1):   21_1(int) Constant 1
+            43_2: 22_1(float) Constant 1065353216
+         uint(2):   21_1(int) Constant 2
+            43_3: 22_1(float) Constant 1073741824
+            43_4: 22_1(float) Constant 3212836864
+            44_1: 23_1(fvec4) ConstantComposite 43_4 43_4 43_4 43_4
+            54_1:        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 uint(3)
+            61_1: 22_1(float) Load 65_1
+           110_1:   21_2(int) ConvertFToS 61_1
+                              SelectionMerge 248_6 None
+                              Switch 110_1 248_2 
+                                     case 0: 248_3
+                                     case 1: 248_4
+                                     case 2: 248_5
+           248_2:               Label
+                                Store 59_2 44_1
+                                Branch 248_6
+           248_3:               Label
+            65_2:   32_2(ptr)   AccessChain 59_1 uint(0)
+            61_2: 22_1(float)   Load 65_2
+           129_1: 22_1(float)   FAdd 61_2 43_1
+            80_1: 23_1(fvec4)   CompositeConstruct 129_1 129_1 129_1 129_1
+                                Store 59_2 80_1
+                                Branch 248_6
+           248_4:               Label
+            65_3:   32_2(ptr)   AccessChain 59_1 uint(1)
+            61_3: 22_1(float)   Load 65_3
+           129_2: 22_1(float)   FAdd 61_3 43_2
+            80_2: 23_1(fvec4)   CompositeConstruct 129_2 129_2 129_2 129_2
+                                Store 59_2 80_2
+                                Branch 248_6
+           248_5:               Label
+            65_4:   32_2(ptr)   AccessChain 59_1 uint(2)
+            61_4: 22_1(float)   Load 65_4
+           129_3: 22_1(float)   FAdd 61_4 43_3
+            80_3: 23_1(fvec4)   CompositeConstruct 129_3 129_3 129_3 129_3
+                                Store 59_2 80_3
+                                Branch 248_6
+           248_6:             Label
                               Return
                               FunctionEnd

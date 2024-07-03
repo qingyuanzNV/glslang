@@ -8,101 +8,101 @@ spv.nv.dmm-allops.rgen
                               Capability CapabilityRayTracingDisplacementMicromapNV
                               Extension  "SPV_KHR_ray_tracing"
                               Extension  "SPV_NV_displacement_micromap"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint RayGenerationKHR 4  "main" 12 17 58 61
+                              EntryPoint RayGenerationKHR 54_1  "main" 59_1 59_2 59_3 59_4
                               Source GLSL 460
                               SourceExtension  "GL_EXT_ray_query"
                               SourceExtension  "GL_NV_displacement_micromap"
-                              Name 4  "main"
-                              Name 10  "block"
-                              MemberName 10(block) 0  "op_pos"
-                              MemberName 10(block) 1  "op_bary"
-                              MemberName 10(block) 2  "op_hitmask"
-                              Name 12  ""
-                              Name 17  "as"
-                              Name 58  "gl_HitKindFrontFacingMicroTriangleNV"
-                              Name 61  "gl_HitKindBackFacingMicroTriangleNV"
-                              Decorate 10(block) Block
-                              MemberDecorate 10(block) 0 Offset 0
-                              MemberDecorate 10(block) 1 Offset 16
-                              MemberDecorate 10(block) 2 Offset 24
-                              Decorate 12 Binding 0
-                              Decorate 12 DescriptorSet 0
-                              Decorate 17(as) Binding 1
-                              Decorate 17(as) DescriptorSet 0
-                              Decorate 58(gl_HitKindFrontFacingMicroTriangleNV) BuiltIn HitKindFrontFacingMicroTriangleNV
-                              Decorate 61(gl_HitKindBackFacingMicroTriangleNV) BuiltIn HitKindBackFacingMicroTriangleNV
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 3
-               8:             TypeVector 6(float) 2
-               9:             TypeInt 32 0
-       10(block):             TypeStruct 7(fvec3) 8(fvec2) 9(int)
-              11:             TypePointer StorageBuffer 10(block)
-              12:     11(ptr) Variable StorageBuffer
-              13:             TypeInt 32 1
-              14:     13(int) Constant 0
-              15:             TypeAccelerationStructureKHR
-              16:             TypePointer UniformConstant 15
-          17(as):     16(ptr) Variable UniformConstant
-              19:     13(int) Constant 1
-              20:             TypeVector 13(int) 2
-              21:   20(ivec2) ConstantComposite 14 14
-              23:             TypePointer StorageBuffer 7(fvec3)
-              26:   20(ivec2) ConstantComposite 14 19
-              33:   20(ivec2) ConstantComposite 19 14
-              41:             TypePointer StorageBuffer 8(fvec2)
-              55:     13(int) Constant 2
-              56:      9(int) Constant 255
-              57:             TypePointer Input 9(int)
-58(gl_HitKindFrontFacingMicroTriangleNV):     57(ptr) Variable Input
-61(gl_HitKindBackFacingMicroTriangleNV):     57(ptr) Variable Input
-              64:             TypePointer StorageBuffer 9(int)
-         4(main):           2 Function None 3
-               5:             Label
-              18:          15 Load 17(as)
-              22:    7(fvec3) FetchMicroTriangleVertexPositionNV 18 19 19 19 21
-              24:     23(ptr) AccessChain 12 14
-                              Store 24 22
-              25:          15 Load 17(as)
-              27:    7(fvec3) FetchMicroTriangleVertexPositionNV 25 19 19 19 26
-              28:     23(ptr) AccessChain 12 14
-              29:    7(fvec3) Load 28
-              30:    7(fvec3) FAdd 29 27
-              31:     23(ptr) AccessChain 12 14
-                              Store 31 30
-              32:          15 Load 17(as)
-              34:    7(fvec3) FetchMicroTriangleVertexPositionNV 32 19 19 19 33
-              35:     23(ptr) AccessChain 12 14
-              36:    7(fvec3) Load 35
-              37:    7(fvec3) FAdd 36 34
-              38:     23(ptr) AccessChain 12 14
-                              Store 38 37
-              39:          15 Load 17(as)
-              40:    8(fvec2) FetchMicroTriangleVertexBarycentricNV 39 19 19 19 21
-              42:     41(ptr) AccessChain 12 19
-                              Store 42 40
-              43:          15 Load 17(as)
-              44:    8(fvec2) FetchMicroTriangleVertexBarycentricNV 43 19 19 19 26
-              45:     41(ptr) AccessChain 12 19
-              46:    8(fvec2) Load 45
-              47:    8(fvec2) FAdd 46 44
-              48:     41(ptr) AccessChain 12 19
-                              Store 48 47
-              49:          15 Load 17(as)
-              50:    8(fvec2) FetchMicroTriangleVertexBarycentricNV 49 19 19 19 33
-              51:     41(ptr) AccessChain 12 19
-              52:    8(fvec2) Load 51
-              53:    8(fvec2) FAdd 52 50
-              54:     41(ptr) AccessChain 12 19
-                              Store 54 53
-              59:      9(int) Load 58(gl_HitKindFrontFacingMicroTriangleNV)
-              60:      9(int) BitwiseOr 56 59
-              62:      9(int) Load 61(gl_HitKindBackFacingMicroTriangleNV)
-              63:      9(int) BitwiseOr 60 62
-              65:     64(ptr) AccessChain 12 55
-                              Store 65 63
+                              Name 54_1  "main"
+                              Name 30_1  "block"
+                              MemberName 30_1(block) 0  "op_pos"
+                              MemberName 30_1(block) 1  "op_bary"
+                              MemberName 30_1(block) 2  "op_hitmask"
+                              Name 59_1  ""
+                              Name 59_2  "as"
+                              Name 59_3  "gl_HitKindFrontFacingMicroTriangleNV"
+                              Name 59_4  "gl_HitKindBackFacingMicroTriangleNV"
+                              Decorate 30_1(block) Block
+                              MemberDecorate 30_1(block) 0 Offset 0
+                              MemberDecorate 30_1(block) 1 Offset 16
+                              MemberDecorate 30_1(block) 2 Offset 24
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(as) Binding 1
+                              Decorate 59_2(as) DescriptorSet 0
+                              Decorate 59_3(gl_HitKindFrontFacingMicroTriangleNV) BuiltIn HitKindFrontFacingMicroTriangleNV
+                              Decorate 59_4(gl_HitKindBackFacingMicroTriangleNV) BuiltIn HitKindBackFacingMicroTriangleNV
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            23_2:             TypeVector 22_1(float) 2
+            21_1:             TypeInt 32 0
+     30_1(block):             TypeStruct 23_1(fvec3) 23_2(fvec2) 21_1(int)
+            32_1:             TypePointer StorageBuffer 30_1(block)
+            59_1:   32_1(ptr) Variable StorageBuffer
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+          5341_1:             TypeAccelerationStructureKHR
+            32_2:             TypePointer UniformConstant 5341_1
+        59_2(as):   32_2(ptr) Variable UniformConstant
+            43_2:   21_2(int) Constant 1
+            23_3:             TypeVector 21_2(int) 2
+            44_1: 23_3(ivec2) ConstantComposite 43_1 43_1
+            32_3:             TypePointer StorageBuffer 23_1(fvec3)
+            44_2: 23_3(ivec2) ConstantComposite 43_1 43_2
+            44_3: 23_3(ivec2) ConstantComposite 43_2 43_1
+            32_4:             TypePointer StorageBuffer 23_2(fvec2)
+            43_3:   21_2(int) Constant 2
+       uint(255):   21_1(int) Constant 255
+            32_5:             TypePointer Input 21_1(int)
+59_3(gl_HitKindFrontFacingMicroTriangleNV):   32_5(ptr) Variable Input
+59_4(gl_HitKindBackFacingMicroTriangleNV):   32_5(ptr) Variable Input
+            32_6:             TypePointer StorageBuffer 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:      5341_1 Load 59_2(as)
+          5300_1: 23_1(fvec3) FetchMicroTriangleVertexPositionNV 61_1 43_2 43_2 43_2 44_1
+            65_1:   32_3(ptr) AccessChain 59_1 43_1
+                              Store 65_1 5300_1
+            61_2:      5341_1 Load 59_2(as)
+          5300_2: 23_1(fvec3) FetchMicroTriangleVertexPositionNV 61_2 43_2 43_2 43_2 44_2
+            65_2:   32_3(ptr) AccessChain 59_1 43_1
+            61_3: 23_1(fvec3) Load 65_2
+           129_1: 23_1(fvec3) FAdd 61_3 5300_2
+            65_3:   32_3(ptr) AccessChain 59_1 43_1
+                              Store 65_3 129_1
+            61_4:      5341_1 Load 59_2(as)
+          5300_3: 23_1(fvec3) FetchMicroTriangleVertexPositionNV 61_4 43_2 43_2 43_2 44_3
+            65_4:   32_3(ptr) AccessChain 59_1 43_1
+            61_5: 23_1(fvec3) Load 65_4
+           129_2: 23_1(fvec3) FAdd 61_5 5300_3
+            65_5:   32_3(ptr) AccessChain 59_1 43_1
+                              Store 65_5 129_2
+            61_6:      5341_1 Load 59_2(as)
+          5301_1: 23_2(fvec2) FetchMicroTriangleVertexBarycentricNV 61_6 43_2 43_2 43_2 44_1
+            65_6:   32_4(ptr) AccessChain 59_1 43_2
+                              Store 65_6 5301_1
+            61_7:      5341_1 Load 59_2(as)
+          5301_2: 23_2(fvec2) FetchMicroTriangleVertexBarycentricNV 61_7 43_2 43_2 43_2 44_2
+            65_7:   32_4(ptr) AccessChain 59_1 43_2
+            61_8: 23_2(fvec2) Load 65_7
+           129_3: 23_2(fvec2) FAdd 61_8 5301_2
+            65_8:   32_4(ptr) AccessChain 59_1 43_2
+                              Store 65_8 129_3
+            61_9:      5341_1 Load 59_2(as)
+          5301_3: 23_2(fvec2) FetchMicroTriangleVertexBarycentricNV 61_9 43_2 43_2 43_2 44_3
+            65_9:   32_4(ptr) AccessChain 59_1 43_2
+           61_10: 23_2(fvec2) Load 65_9
+           129_4: 23_2(fvec2) FAdd 61_10 5301_3
+           65_10:   32_4(ptr) AccessChain 59_1 43_2
+                              Store 65_10 129_4
+           61_11:   21_1(int) Load 59_3(gl_HitKindFrontFacingMicroTriangleNV)
+           197_1:   21_1(int) BitwiseOr uint(255) 61_11
+           61_12:   21_1(int) Load 59_4(gl_HitKindBackFacingMicroTriangleNV)
+           197_2:   21_1(int) BitwiseOr 197_1 61_12
+           65_11:   32_6(ptr) AccessChain 59_1 43_3
+                              Store 65_11 197_2
                               Return
                               FunctionEnd

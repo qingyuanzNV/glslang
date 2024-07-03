@@ -116,98 +116,98 @@ local_size = (16, 16, 1)
 // Id's are bound by 54
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 49
-                              ExecutionMode 4 LocalSize 16 16 1
+                              EntryPoint GLCompute 54_1  "main" 59_6
+                              ExecutionMode 54_1 LocalSize 16 16 1
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 11  "@main(vu3;"
-                              Name 10  "tid"
-                              Name 16  "storeTemp"
-                              Name 19  "ResultInS"
-                              Name 25  "$Global"
-                              MemberName 25($Global) 0  "uf4"
-                              Name 27  ""
-                              Name 34  "ResultOutS"
-                              Name 38  "storeTemp"
-                              Name 39  "ResultInU"
-                              Name 43  "ResultOutU"
-                              Name 47  "tid"
-                              Name 49  "tid"
-                              Name 51  "param"
-                              Decorate 19(ResultInS) Binding 1
-                              Decorate 19(ResultInS) DescriptorSet 0
-                              Decorate 25($Global) Block
-                              MemberDecorate 25($Global) 0 Offset 0
-                              Decorate 27 Binding 2
-                              Decorate 27 DescriptorSet 0
-                              Decorate 34(ResultOutS) Binding 1
-                              Decorate 34(ResultOutS) DescriptorSet 0
-                              Decorate 39(ResultInU) Binding 0
-                              Decorate 39(ResultInU) DescriptorSet 0
-                              Decorate 43(ResultOutU) Binding 0
-                              Decorate 43(ResultOutU) DescriptorSet 0
-                              Decorate 49(tid) BuiltIn GlobalInvocationId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 3
-               8:             TypePointer Function 7(ivec3)
-               9:             TypeFunction 2 8(ptr)
-              13:             TypeFloat 32
-              14:             TypeVector 13(float) 4
-              15:             TypePointer Function 14(fvec4)
-              17:             TypeImage 13(float) 3D sampled format:Unknown
-              18:             TypePointer UniformConstant 17
-   19(ResultInS):     18(ptr) Variable UniformConstant
-              22:             TypeInt 32 1
-              23:     22(int) Constant 0
-     25($Global):             TypeStruct 14(fvec4)
-              26:             TypePointer Uniform 25($Global)
-              27:     26(ptr) Variable Uniform
-              28:             TypePointer Uniform 14(fvec4)
-              32:             TypeImage 13(float) 3D nonsampled format:Rgba32f
-              33:             TypePointer UniformConstant 32
-  34(ResultOutS):     33(ptr) Variable UniformConstant
-   39(ResultInU):     18(ptr) Variable UniformConstant
-  43(ResultOutU):     33(ptr) Variable UniformConstant
-              48:             TypePointer Input 7(ivec3)
-         49(tid):     48(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-         47(tid):      8(ptr) Variable Function
-       51(param):      8(ptr) Variable Function
-              50:    7(ivec3) Load 49(tid)
-                              Store 47(tid) 50
-              52:    7(ivec3) Load 47(tid)
-                              Store 51(param) 52
-              53:           2 FunctionCall 11(@main(vu3;) 51(param)
+                              Name 54_1  "main"
+                              Name 54_2  "@main(vu3;"
+                              Name 55_1  "tid"
+                              Name 59_9  "storeTemp"
+                              Name 59_1  "ResultInS"
+                              Name 30_1  "$Global"
+                              MemberName 30_1($Global) 0  "uf4"
+                              Name 59_2  ""
+                              Name 59_3  "ResultOutS"
+                              Name 59_10  "storeTemp"
+                              Name 59_4  "ResultInU"
+                              Name 59_5  "ResultOutU"
+                              Name 59_7  "tid"
+                              Name 59_6  "tid"
+                              Name 59_8  "param"
+                              Decorate 59_1(ResultInS) Binding 1
+                              Decorate 59_1(ResultInS) DescriptorSet 0
+                              Decorate 30_1($Global) Block
+                              MemberDecorate 30_1($Global) 0 Offset 0
+                              Decorate 59_2 Binding 2
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 59_3(ResultOutS) Binding 1
+                              Decorate 59_3(ResultOutS) DescriptorSet 0
+                              Decorate 59_4(ResultInU) Binding 0
+                              Decorate 59_4(ResultInU) DescriptorSet 0
+                              Decorate 59_5(ResultOutU) Binding 0
+                              Decorate 59_5(ResultOutU) DescriptorSet 0
+                              Decorate 59_6(tid) BuiltIn GlobalInvocationId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 3
+            32_1:             TypePointer Function 23_1(ivec3)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Function 23_2(fvec4)
+            25_1:             TypeImage 22_1(float) 3D sampled format:Unknown
+            32_3:             TypePointer UniformConstant 25_1
+ 59_1(ResultInS):   32_3(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+   30_1($Global):             TypeStruct 23_2(fvec4)
+            32_4:             TypePointer Uniform 30_1($Global)
+            59_2:   32_4(ptr) Variable Uniform
+            32_5:             TypePointer Uniform 23_2(fvec4)
+            25_2:             TypeImage 22_1(float) 3D nonsampled format:Rgba32f
+            32_6:             TypePointer UniformConstant 25_2
+59_3(ResultOutS):   32_6(ptr) Variable UniformConstant
+ 59_4(ResultInU):   32_3(ptr) Variable UniformConstant
+59_5(ResultOutU):   32_6(ptr) Variable UniformConstant
+            32_7:             TypePointer Input 23_1(ivec3)
+       59_6(tid):   32_7(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_7(tid):   32_1(ptr) Variable Function
+     59_8(param):   32_1(ptr) Variable Function
+            61_1: 23_1(ivec3) Load 59_6(tid)
+                              Store 59_7(tid) 61_1
+            61_2: 23_1(ivec3) Load 59_7(tid)
+                              Store 59_8(param) 61_2
+            57_1:        19_1 FunctionCall 54_2(@main(vu3;) 59_8(param)
                               Return
                               FunctionEnd
-  11(@main(vu3;):           2 Function None 9
-         10(tid):      8(ptr) FunctionParameter
-              12:             Label
-   16(storeTemp):     15(ptr) Variable Function
-   38(storeTemp):     15(ptr) Variable Function
-              20:          17 Load 19(ResultInS)
-              21:    7(ivec3) Load 10(tid)
-              24:   14(fvec4) ImageFetch 20 21 Lod 23
-              29:     28(ptr) AccessChain 27 23
-              30:   14(fvec4) Load 29
-              31:   14(fvec4) FAdd 24 30
-                              Store 16(storeTemp) 31
-              35:          32 Load 34(ResultOutS)
-              36:    7(ivec3) Load 10(tid)
-              37:   14(fvec4) Load 16(storeTemp)
-                              ImageWrite 35 36 37
-              40:          17 Load 39(ResultInU)
-              41:    7(ivec3) Load 10(tid)
-              42:   14(fvec4) ImageFetch 40 41 Lod 23
-                              Store 38(storeTemp) 42
-              44:          32 Load 43(ResultOutU)
-              45:    7(ivec3) Load 10(tid)
-              46:   14(fvec4) Load 38(storeTemp)
-                              ImageWrite 44 45 46
+54_2(@main(vu3;):        19_1 Function None 33_2
+       55_1(tid):   32_1(ptr) FunctionParameter
+           248_2:             Label
+ 59_9(storeTemp):   32_2(ptr) Variable Function
+59_10(storeTemp):   32_2(ptr) Variable Function
+            61_3:        25_1 Load 59_1(ResultInS)
+            61_4: 23_1(ivec3) Load 55_1(tid)
+            95_1: 23_2(fvec4) ImageFetch 61_3 61_4 Lod 43_1
+            65_1:   32_5(ptr) AccessChain 59_2 43_1
+            61_5: 23_2(fvec4) Load 65_1
+           129_1: 23_2(fvec4) FAdd 95_1 61_5
+                              Store 59_9(storeTemp) 129_1
+            61_6:        25_2 Load 59_3(ResultOutS)
+            61_7: 23_1(ivec3) Load 55_1(tid)
+            61_8: 23_2(fvec4) Load 59_9(storeTemp)
+                              ImageWrite 61_6 61_7 61_8
+            61_9:        25_1 Load 59_4(ResultInU)
+           61_10: 23_1(ivec3) Load 55_1(tid)
+            95_2: 23_2(fvec4) ImageFetch 61_9 61_10 Lod 43_1
+                              Store 59_10(storeTemp) 95_2
+           61_11:        25_2 Load 59_5(ResultOutU)
+           61_12: 23_1(ivec3) Load 55_1(tid)
+           61_13: 23_2(fvec4) Load 59_10(storeTemp)
+                              ImageWrite 61_11 61_12 61_13
                               Return
                               FunctionEnd

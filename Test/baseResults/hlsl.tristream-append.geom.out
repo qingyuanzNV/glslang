@@ -161,114 +161,114 @@ Validation failed
 // Id's are bound by 66
 
                               Capability Geometry
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Geometry 4  "main"
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 Invocations 1
-                              ExecutionMode 4 OutputTriangleStrip
-                              ExecutionMode 4 OutputVertices 3
+                              EntryPoint Geometry 54_1  "main"
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 Invocations 1
+                              ExecutionMode 54_1 OutputTriangleStrip
+                              ExecutionMode 54_1 OutputVertices 3
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 6  "GSPS_INPUT"
-                              Name 11  "EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;"
-                              Name 9  "output"
-                              Name 10  "TriStream"
-                              Name 20  "@main(struct-GSPS_INPUT1[3];struct-GSPS_INPUT1;"
-                              Name 18  "input"
-                              Name 19  "TriStream"
-                              Name 23  "TriStream"
-                              Name 27  "param"
-                              Name 30  "param"
-                              Name 34  "param"
-                              Name 37  "param"
-                              Name 41  "param"
-                              Name 44  "param"
-                              Name 47  "input"
-                              Name 49  "input"
-                              Name 60  "TriStream"
-                              Name 61  "param"
-                              Name 63  "param"
-               2:             TypeVoid
-               3:             TypeFunction 2
-   6(GSPS_INPUT):             TypeStruct
-               7:             TypePointer Function 6(GSPS_INPUT)
-               8:             TypeFunction 2 7(ptr) 7(ptr)
-              13:             TypeInt 32 0
-              14:     13(int) Constant 3
-              15:             TypeArray 6(GSPS_INPUT) 14
-              16:             TypePointer Function 15
-              17:             TypeFunction 2 16(ptr) 7(ptr)
-              22:             TypePointer Output 6(GSPS_INPUT)
-   23(TriStream):     22(ptr) Variable Output
-              25:             TypeInt 32 1
-              26:     25(int) Constant 0
-              33:     25(int) Constant 1
-              40:     25(int) Constant 2
-              48:             TypePointer Input 15
-       49(input):     48(ptr) Variable Input
-              50:             TypePointer Input 6(GSPS_INPUT)
-         4(main):           2 Function None 3
-               5:             Label
-       47(input):     16(ptr) Variable Function
-   60(TriStream):      7(ptr) Variable Function
-       61(param):     16(ptr) Variable Function
-       63(param):      7(ptr) Variable Function
-              51:     50(ptr) AccessChain 49(input) 26
-              52:6(GSPS_INPUT) Load 51
-              53:      7(ptr) AccessChain 47(input) 26
-                              Store 53 52
-              54:     50(ptr) AccessChain 49(input) 33
-              55:6(GSPS_INPUT) Load 54
-              56:      7(ptr) AccessChain 47(input) 33
-                              Store 56 55
-              57:     50(ptr) AccessChain 49(input) 40
-              58:6(GSPS_INPUT) Load 57
-              59:      7(ptr) AccessChain 47(input) 40
-                              Store 59 58
-              62:          15 Load 47(input)
-                              Store 61(param) 62
-              64:           2 FunctionCall 20(@main(struct-GSPS_INPUT1[3];struct-GSPS_INPUT1;) 61(param) 63(param)
-              65:6(GSPS_INPUT) Load 63(param)
-                              Store 60(TriStream) 65
+                              Name 54_1  "main"
+                              Name 30_1  "GSPS_INPUT"
+                              Name 54_2  "EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;"
+                              Name 55_1  "output"
+                              Name 55_2  "TriStream"
+                              Name 54_3  "@main(struct-GSPS_INPUT1[3];struct-GSPS_INPUT1;"
+                              Name 55_3  "input"
+                              Name 55_4  "TriStream"
+                              Name 59_1  "TriStream"
+                              Name 59_7  "param"
+                              Name 59_8  "param"
+                              Name 59_9  "param"
+                              Name 59_10  "param"
+                              Name 59_11  "param"
+                              Name 59_12  "param"
+                              Name 59_3  "input"
+                              Name 59_2  "input"
+                              Name 59_4  "TriStream"
+                              Name 59_5  "param"
+                              Name 59_6  "param"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+30_1(GSPS_INPUT):             TypeStruct
+            32_1:             TypePointer Function 30_1(GSPS_INPUT)
+            33_2:             TypeFunction 19_1 32_1(ptr) 32_1(ptr)
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 30_1(GSPS_INPUT) uint(3)
+            32_2:             TypePointer Function 28_1
+            33_3:             TypeFunction 19_1 32_2(ptr) 32_1(ptr)
+            32_3:             TypePointer Output 30_1(GSPS_INPUT)
+ 59_1(TriStream):   32_3(ptr) Variable Output
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            43_2:   21_2(int) Constant 1
+            43_3:   21_2(int) Constant 2
+            32_4:             TypePointer Input 28_1
+     59_2(input):   32_4(ptr) Variable Input
+            32_5:             TypePointer Input 30_1(GSPS_INPUT)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(input):   32_2(ptr) Variable Function
+ 59_4(TriStream):   32_1(ptr) Variable Function
+     59_5(param):   32_2(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+            65_1:   32_5(ptr) AccessChain 59_2(input) 43_1
+            61_1:30_1(GSPS_INPUT) Load 65_1
+            65_2:   32_1(ptr) AccessChain 59_3(input) 43_1
+                              Store 65_2 61_1
+            65_3:   32_5(ptr) AccessChain 59_2(input) 43_2
+            61_2:30_1(GSPS_INPUT) Load 65_3
+            65_4:   32_1(ptr) AccessChain 59_3(input) 43_2
+                              Store 65_4 61_2
+            65_5:   32_5(ptr) AccessChain 59_2(input) 43_3
+            61_3:30_1(GSPS_INPUT) Load 65_5
+            65_6:   32_1(ptr) AccessChain 59_3(input) 43_3
+                              Store 65_6 61_3
+            61_4:        28_1 Load 59_3(input)
+                              Store 59_5(param) 61_4
+            57_1:        19_1 FunctionCall 54_3(@main(struct-GSPS_INPUT1[3];struct-GSPS_INPUT1;) 59_5(param) 59_6(param)
+            61_5:30_1(GSPS_INPUT) Load 59_6(param)
+                              Store 59_4(TriStream) 61_5
                               Return
                               FunctionEnd
-11(EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;):           2 Function None 8
-       9(output):      7(ptr) FunctionParameter
-   10(TriStream):      7(ptr) FunctionParameter
-              12:             Label
-              24:6(GSPS_INPUT) Load 9(output)
-                              Store 23(TriStream) 24
+54_2(EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;):        19_1 Function None 33_2
+    55_1(output):   32_1(ptr) FunctionParameter
+ 55_2(TriStream):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            61_6:30_1(GSPS_INPUT) Load 55_1(output)
+                              Store 59_1(TriStream) 61_6
                               EmitVertex
                               Return
                               FunctionEnd
-20(@main(struct-GSPS_INPUT1[3];struct-GSPS_INPUT1;):           2 Function None 17
-       18(input):     16(ptr) FunctionParameter
-   19(TriStream):      7(ptr) FunctionParameter
-              21:             Label
-       27(param):      7(ptr) Variable Function
-       30(param):      7(ptr) Variable Function
-       34(param):      7(ptr) Variable Function
-       37(param):      7(ptr) Variable Function
-       41(param):      7(ptr) Variable Function
-       44(param):      7(ptr) Variable Function
-              28:      7(ptr) AccessChain 18(input) 26
-              29:6(GSPS_INPUT) Load 28
-                              Store 27(param) 29
-              31:           2 FunctionCall 11(EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;) 27(param) 30(param)
-              32:6(GSPS_INPUT) Load 30(param)
-                              Store 19(TriStream) 32
-              35:      7(ptr) AccessChain 18(input) 33
-              36:6(GSPS_INPUT) Load 35
-                              Store 34(param) 36
-              38:           2 FunctionCall 11(EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;) 34(param) 37(param)
-              39:6(GSPS_INPUT) Load 37(param)
-                              Store 19(TriStream) 39
-              42:      7(ptr) AccessChain 18(input) 40
-              43:6(GSPS_INPUT) Load 42
-                              Store 41(param) 43
-              45:           2 FunctionCall 11(EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;) 41(param) 44(param)
-              46:6(GSPS_INPUT) Load 44(param)
-                              Store 19(TriStream) 46
+54_3(@main(struct-GSPS_INPUT1[3];struct-GSPS_INPUT1;):        19_1 Function None 33_3
+     55_3(input):   32_2(ptr) FunctionParameter
+ 55_4(TriStream):   32_1(ptr) FunctionParameter
+           248_3:             Label
+     59_7(param):   32_1(ptr) Variable Function
+     59_8(param):   32_1(ptr) Variable Function
+     59_9(param):   32_1(ptr) Variable Function
+    59_10(param):   32_1(ptr) Variable Function
+    59_11(param):   32_1(ptr) Variable Function
+    59_12(param):   32_1(ptr) Variable Function
+            65_7:   32_1(ptr) AccessChain 55_3(input) 43_1
+            61_7:30_1(GSPS_INPUT) Load 65_7
+                              Store 59_7(param) 61_7
+            57_2:        19_1 FunctionCall 54_2(EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;) 59_7(param) 59_8(param)
+            61_8:30_1(GSPS_INPUT) Load 59_8(param)
+                              Store 55_4(TriStream) 61_8
+            65_8:   32_1(ptr) AccessChain 55_3(input) 43_2
+            61_9:30_1(GSPS_INPUT) Load 65_8
+                              Store 59_9(param) 61_9
+            57_3:        19_1 FunctionCall 54_2(EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;) 59_9(param) 59_10(param)
+           61_10:30_1(GSPS_INPUT) Load 59_10(param)
+                              Store 55_4(TriStream) 61_10
+            65_9:   32_1(ptr) AccessChain 55_3(input) 43_3
+           61_11:30_1(GSPS_INPUT) Load 65_9
+                              Store 59_11(param) 61_11
+            57_4:        19_1 FunctionCall 54_2(EmitVertex(struct-GSPS_INPUT1;struct-GSPS_INPUT1;) 59_11(param) 59_12(param)
+           61_12:30_1(GSPS_INPUT) Load 59_12(param)
+                              Store 55_4(TriStream) 61_12
                               Return
                               FunctionEnd

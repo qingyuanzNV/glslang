@@ -5,85 +5,85 @@ spv.ext.textureShadowLod.frag
 
                               Capability Shader
                               Capability SampledCubeArray
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 8 16
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_texture_shadow_lod"
-                              Name 4  "main"
-                              Name 8  "c"
-                              Name 12  "s2da"
-                              Name 16  "tc"
-                              Name 24  "sca"
-                              Name 43  "sc"
-                              Decorate 8(c) Location 0
-                              Decorate 12(s2da) Binding 0
-                              Decorate 12(s2da) DescriptorSet 0
-                              Decorate 16(tc) Location 0
-                              Decorate 24(sca) Binding 1
-                              Decorate 24(sca) DescriptorSet 0
-                              Decorate 43(sc) Binding 2
-                              Decorate 43(sc) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Output 6(float)
-            8(c):      7(ptr) Variable Output
-               9:             TypeImage 6(float) 2D depth array sampled format:Unknown
-              10:             TypeSampledImage 9
-              11:             TypePointer UniformConstant 10
-        12(s2da):     11(ptr) Variable UniformConstant
-              14:             TypeVector 6(float) 4
-              15:             TypePointer Input 14(fvec4)
-          16(tc):     15(ptr) Variable Input
-              18:    6(float) Constant 0
-              21:             TypeImage 6(float) Cube depth array sampled format:Unknown
-              22:             TypeSampledImage 21
-              23:             TypePointer UniformConstant 22
-         24(sca):     23(ptr) Variable UniformConstant
-              30:             TypeInt 32 1
-              31:             TypeVector 30(int) 2
-              32:     30(int) Constant 0
-              33:   31(ivec2) ConstantComposite 32 32
-              40:             TypeImage 6(float) Cube depth sampled format:Unknown
-              41:             TypeSampledImage 40
-              42:             TypePointer UniformConstant 41
-          43(sc):     42(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-              13:          10 Load 12(s2da)
-              17:   14(fvec4) Load 16(tc)
-              19:    6(float) CompositeExtract 17 3
-              20:    6(float) ImageSampleDrefImplicitLod 13 17 19 Bias 18
-                              Store 8(c) 20
-              25:          22 Load 24(sca)
-              26:   14(fvec4) Load 16(tc)
-              27:    6(float) ImageSampleDrefImplicitLod 25 26 18
-                              Store 8(c) 27
-              28:          10 Load 12(s2da)
-              29:   14(fvec4) Load 16(tc)
-              34:    6(float) CompositeExtract 29 3
-              35:    6(float) ImageSampleDrefImplicitLod 28 29 34 Bias ConstOffset 18 33
-                              Store 8(c) 35
-              36:          10 Load 12(s2da)
-              37:   14(fvec4) Load 16(tc)
-              38:    6(float) CompositeExtract 37 3
-              39:    6(float) ImageSampleDrefExplicitLod 36 37 38 Lod 18
-                              Store 8(c) 39
-              44:          41 Load 43(sc)
-              45:   14(fvec4) Load 16(tc)
-              46:    6(float) CompositeExtract 45 3
-              47:    6(float) ImageSampleDrefExplicitLod 44 45 46 Lod 18
-                              Store 8(c) 47
-              48:          22 Load 24(sca)
-              49:   14(fvec4) Load 16(tc)
-              50:    6(float) ImageSampleDrefExplicitLod 48 49 18 Lod 18
-                              Store 8(c) 50
-              51:          10 Load 12(s2da)
-              52:   14(fvec4) Load 16(tc)
-              53:    6(float) CompositeExtract 52 3
-              54:    6(float) ImageSampleDrefExplicitLod 51 52 53 Lod ConstOffset 18 33
-                              Store 8(c) 54
+                              Name 54_1  "main"
+                              Name 59_1  "c"
+                              Name 59_2  "s2da"
+                              Name 59_3  "tc"
+                              Name 59_4  "sca"
+                              Name 59_5  "sc"
+                              Decorate 59_1(c) Location 0
+                              Decorate 59_2(s2da) Binding 0
+                              Decorate 59_2(s2da) DescriptorSet 0
+                              Decorate 59_3(tc) Location 0
+                              Decorate 59_4(sca) Binding 1
+                              Decorate 59_4(sca) DescriptorSet 0
+                              Decorate 59_5(sc) Binding 2
+                              Decorate 59_5(sc) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Output 22_1(float)
+         59_1(c):   32_1(ptr) Variable Output
+            25_1:             TypeImage 22_1(float) 2D depth array sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_2:             TypePointer UniformConstant 27_1
+      59_2(s2da):   32_2(ptr) Variable UniformConstant
+            23_1:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Input 23_1(fvec4)
+        59_3(tc):   32_3(ptr) Variable Input
+            43_1: 22_1(float) Constant 0
+            25_2:             TypeImage 22_1(float) Cube depth array sampled format:Unknown
+            27_2:             TypeSampledImage 25_2
+            32_4:             TypePointer UniformConstant 27_2
+       59_4(sca):   32_4(ptr) Variable UniformConstant
+            21_1:             TypeInt 32 1
+            23_2:             TypeVector 21_1(int) 2
+            43_2:   21_1(int) Constant 0
+            44_1: 23_2(ivec2) ConstantComposite 43_2 43_2
+            25_3:             TypeImage 22_1(float) Cube depth sampled format:Unknown
+            27_3:             TypeSampledImage 25_3
+            32_5:             TypePointer UniformConstant 27_3
+        59_5(sc):   32_5(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:        27_1 Load 59_2(s2da)
+            61_2: 23_1(fvec4) Load 59_3(tc)
+            81_1: 22_1(float) CompositeExtract 61_2 3
+            89_1: 22_1(float) ImageSampleDrefImplicitLod 61_1 61_2 81_1 Bias 43_1
+                              Store 59_1(c) 89_1
+            61_3:        27_2 Load 59_4(sca)
+            61_4: 23_1(fvec4) Load 59_3(tc)
+            89_2: 22_1(float) ImageSampleDrefImplicitLod 61_3 61_4 43_1
+                              Store 59_1(c) 89_2
+            61_5:        27_1 Load 59_2(s2da)
+            61_6: 23_1(fvec4) Load 59_3(tc)
+            81_2: 22_1(float) CompositeExtract 61_6 3
+            89_3: 22_1(float) ImageSampleDrefImplicitLod 61_5 61_6 81_2 Bias ConstOffset 43_1 44_1
+                              Store 59_1(c) 89_3
+            61_7:        27_1 Load 59_2(s2da)
+            61_8: 23_1(fvec4) Load 59_3(tc)
+            81_3: 22_1(float) CompositeExtract 61_8 3
+            90_1: 22_1(float) ImageSampleDrefExplicitLod 61_7 61_8 81_3 Lod 43_1
+                              Store 59_1(c) 90_1
+            61_9:        27_3 Load 59_5(sc)
+           61_10: 23_1(fvec4) Load 59_3(tc)
+            81_4: 22_1(float) CompositeExtract 61_10 3
+            90_2: 22_1(float) ImageSampleDrefExplicitLod 61_9 61_10 81_4 Lod 43_1
+                              Store 59_1(c) 90_2
+           61_11:        27_2 Load 59_4(sca)
+           61_12: 23_1(fvec4) Load 59_3(tc)
+            90_3: 22_1(float) ImageSampleDrefExplicitLod 61_11 61_12 43_1 Lod 43_1
+                              Store 59_1(c) 90_3
+           61_13:        27_1 Load 59_2(s2da)
+           61_14: 23_1(fvec4) Load 59_3(tc)
+            81_5: 22_1(float) CompositeExtract 61_14 3
+            90_4: 22_1(float) ImageSampleDrefExplicitLod 61_13 61_14 81_5 Lod ConstOffset 43_1 44_1
+                              Store 59_1(c) 90_4
                               Return
                               FunctionEnd

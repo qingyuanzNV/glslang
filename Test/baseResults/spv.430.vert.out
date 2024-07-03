@@ -6,138 +6,138 @@ Validation failed
 
                               Capability Shader
                               Capability ClipDistance
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 12 23 34 38 41 42 62 65
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_12 59_13
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 10  "gl_PerVertex"
-                              MemberName 10(gl_PerVertex) 0  "gl_ClipDistance"
-                              Name 12  ""
-                              Name 23  "bad"
-                              Name 34  "badorder3"
-                              Name 38  "f"
-                              Name 41  "badorder"
-                              Name 42  "badorder2"
-                              Name 43  "boundblock"
-                              MemberName 43(boundblock) 0  "aoeu"
-                              Name 45  "boundInst"
-                              Name 46  "anonblock"
-                              MemberName 46(anonblock) 0  "aoeu"
-                              Name 48  ""
-                              Name 52  "sampb1"
-                              Name 55  "sampb2"
-                              Name 56  "sampb4"
-                              Name 59  "S"
-                              MemberName 59(S) 0  "a"
-                              MemberName 59(S) 1  "b"
-                              MemberName 59(S) 2  "c"
-                              Name 60  "SS"
-                              MemberName 60(SS) 0  "b"
-                              MemberName 60(SS) 1  "s"
-                              MemberName 60(SS) 2  "c"
-                              Name 62  "var"
-                              Name 63  "MS"
-                              MemberName 63(MS) 0  "f"
-                              Name 65  "outMS"
-                              Decorate 10(gl_PerVertex) Block
-                              MemberDecorate 10(gl_PerVertex) 0 BuiltIn ClipDistance
-                              Decorate 23(bad) Location 0
-                              Decorate 34(badorder3) Flat
-                              Decorate 34(badorder3) Location 1
-                              Decorate 38(f) Location 11
-                              Decorate 41(badorder) Location 10
-                              Decorate 42(badorder2) Invariant
-                              Decorate 42(badorder2) Location 0
-                              Decorate 43(boundblock) Block
-                              MemberDecorate 43(boundblock) 0 Offset 0
-                              Decorate 45(boundInst) Binding 3
-                              Decorate 45(boundInst) DescriptorSet 0
-                              Decorate 46(anonblock) Block
-                              MemberDecorate 46(anonblock) 0 Offset 0
-                              Decorate 48 Binding 7
-                              Decorate 48 DescriptorSet 0
-                              Decorate 52(sampb1) Binding 4
-                              Decorate 52(sampb1) DescriptorSet 0
-                              Decorate 55(sampb2) Binding 5
-                              Decorate 55(sampb2) DescriptorSet 0
-                              Decorate 56(sampb4) Binding 31
-                              Decorate 56(sampb4) DescriptorSet 0
-                              MemberDecorate 59(S) 0 RelaxedPrecision
-                              Decorate 62(var) Flat
-                              Decorate 62(var) Location 0
-                              Decorate 63(MS) Block
-                              MemberDecorate 63(MS) 0 Location 17
-                              Decorate 65(outMS) Location 2
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeInt 32 0
-               8:      7(int) Constant 3
-               9:             TypeArray 6(float) 8
-10(gl_PerVertex):             TypeStruct 9
-              11:             TypePointer Output 10(gl_PerVertex)
-              12:     11(ptr) Variable Output
-              13:             TypeInt 32 1
-              14:     13(int) Constant 0
-              15:     13(int) Constant 2
-              16:    6(float) Constant 1080872141
-              17:             TypePointer Output 6(float)
-              19:             TypeVector 6(float) 4
-              20:      7(int) Constant 10
-              21:             TypeArray 19(fvec4) 20
-              22:             TypePointer Input 21
-         23(bad):     22(ptr) Variable Input
-              24:      7(int) Constant 0
-              25:             TypePointer Input 6(float)
-              28:    6(float) Constant 1082549862
-              29:             TypeBool
-              33:             TypePointer Output 19(fvec4)
-   34(badorder3):     33(ptr) Variable Output
-              35:             TypePointer Input 19(fvec4)
-           38(f):     25(ptr) Variable Input
-    41(badorder):     35(ptr) Variable Input
-   42(badorder2):     33(ptr) Variable Output
-  43(boundblock):             TypeStruct 13(int)
-              44:             TypePointer Uniform 43(boundblock)
-   45(boundInst):     44(ptr) Variable Uniform
-   46(anonblock):             TypeStruct 13(int)
-              47:             TypePointer Uniform 46(anonblock)
-              48:     47(ptr) Variable Uniform
-              49:             TypeImage 6(float) 2D sampled format:Unknown
-              50:             TypeSampledImage 49
-              51:             TypePointer UniformConstant 50
-      52(sampb1):     51(ptr) Variable UniformConstant
-              53:             TypeArray 50 20
-              54:             TypePointer UniformConstant 53
-      55(sampb2):     54(ptr) Variable UniformConstant
-      56(sampb4):     51(ptr) Variable UniformConstant
-              57:             TypeVector 7(int) 2
-              58:             TypeVector 6(float) 3
-           59(S):             TypeStruct 6(float) 57(ivec2) 58(fvec3)
-          60(SS):             TypeStruct 19(fvec4) 59(S) 19(fvec4)
-              61:             TypePointer Output 60(SS)
-         62(var):     61(ptr) Variable Output
-          63(MS):             TypeStruct 6(float)
-              64:             TypePointer Output 63(MS)
-       65(outMS):     64(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              18:     17(ptr) AccessChain 12 14 15
-                              Store 18 16
-              26:     25(ptr) AccessChain 23(bad) 14 24
-              27:    6(float) Load 26
-              30:    29(bool) FOrdEqual 27 28
-                              SelectionMerge 32 None
-                              BranchConditional 30 31 32
-              31:               Label
-              36:     35(ptr)   AccessChain 23(bad) 14
-              37:   19(fvec4)   Load 36
-                                Store 34(badorder3) 37
-                                Branch 32
-              32:             Label
-              39:    6(float) Load 38(f)
-              40:     17(ptr) AccessChain 12 14 14
-                              Store 40 39
+                              Name 54_1  "main"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_ClipDistance"
+                              Name 59_1  ""
+                              Name 59_2  "bad"
+                              Name 59_3  "badorder3"
+                              Name 59_4  "f"
+                              Name 59_5  "badorder"
+                              Name 59_6  "badorder2"
+                              Name 30_2  "boundblock"
+                              MemberName 30_2(boundblock) 0  "aoeu"
+                              Name 59_7  "boundInst"
+                              Name 30_3  "anonblock"
+                              MemberName 30_3(anonblock) 0  "aoeu"
+                              Name 59_8  ""
+                              Name 59_9  "sampb1"
+                              Name 59_10  "sampb2"
+                              Name 59_11  "sampb4"
+                              Name 30_4  "S"
+                              MemberName 30_4(S) 0  "a"
+                              MemberName 30_4(S) 1  "b"
+                              MemberName 30_4(S) 2  "c"
+                              Name 30_5  "SS"
+                              MemberName 30_5(SS) 0  "b"
+                              MemberName 30_5(SS) 1  "s"
+                              MemberName 30_5(SS) 2  "c"
+                              Name 59_12  "var"
+                              Name 30_6  "MS"
+                              MemberName 30_6(MS) 0  "f"
+                              Name 59_13  "outMS"
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn ClipDistance
+                              Decorate 59_2(bad) Location 0
+                              Decorate 59_3(badorder3) Flat
+                              Decorate 59_3(badorder3) Location 1
+                              Decorate 59_4(f) Location 11
+                              Decorate 59_5(badorder) Location 10
+                              Decorate 59_6(badorder2) Invariant
+                              Decorate 59_6(badorder2) Location 0
+                              Decorate 30_2(boundblock) Block
+                              MemberDecorate 30_2(boundblock) 0 Offset 0
+                              Decorate 59_7(boundInst) Binding 3
+                              Decorate 59_7(boundInst) DescriptorSet 0
+                              Decorate 30_3(anonblock) Block
+                              MemberDecorate 30_3(anonblock) 0 Offset 0
+                              Decorate 59_8 Binding 7
+                              Decorate 59_8 DescriptorSet 0
+                              Decorate 59_9(sampb1) Binding 4
+                              Decorate 59_9(sampb1) DescriptorSet 0
+                              Decorate 59_10(sampb2) Binding 5
+                              Decorate 59_10(sampb2) DescriptorSet 0
+                              Decorate 59_11(sampb4) Binding 31
+                              Decorate 59_11(sampb4) DescriptorSet 0
+                              MemberDecorate 30_4(S) 0 RelaxedPrecision
+                              Decorate 59_12(var) Flat
+                              Decorate 59_12(var) Location 0
+                              Decorate 30_6(MS) Block
+                              MemberDecorate 30_6(MS) 0 Location 17
+                              Decorate 59_13(outMS) Location 2
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 22_1(float) uint(3)
+30_1(gl_PerVertex):             TypeStruct 28_1
+            32_1:             TypePointer Output 30_1(gl_PerVertex)
+            59_1:   32_1(ptr) Variable Output
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            43_2:   21_2(int) Constant 2
+            43_3: 22_1(float) Constant 1080872141
+            32_2:             TypePointer Output 22_1(float)
+            23_1:             TypeVector 22_1(float) 4
+        uint(10):   21_1(int) Constant 10
+            28_2:             TypeArray 23_1(fvec4) uint(10)
+            32_3:             TypePointer Input 28_2
+       59_2(bad):   32_3(ptr) Variable Input
+         uint(0):   21_1(int) Constant 0
+            32_4:             TypePointer Input 22_1(float)
+            43_4: 22_1(float) Constant 1082549862
+            20_1:             TypeBool
+            32_5:             TypePointer Output 23_1(fvec4)
+ 59_3(badorder3):   32_5(ptr) Variable Output
+            32_6:             TypePointer Input 23_1(fvec4)
+         59_4(f):   32_4(ptr) Variable Input
+  59_5(badorder):   32_6(ptr) Variable Input
+ 59_6(badorder2):   32_5(ptr) Variable Output
+30_2(boundblock):             TypeStruct 21_2(int)
+            32_7:             TypePointer Uniform 30_2(boundblock)
+ 59_7(boundInst):   32_7(ptr) Variable Uniform
+ 30_3(anonblock):             TypeStruct 21_2(int)
+            32_8:             TypePointer Uniform 30_3(anonblock)
+            59_8:   32_8(ptr) Variable Uniform
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_9:             TypePointer UniformConstant 27_1
+    59_9(sampb1):   32_9(ptr) Variable UniformConstant
+            28_3:             TypeArray 27_1 uint(10)
+           32_10:             TypePointer UniformConstant 28_3
+   59_10(sampb2):  32_10(ptr) Variable UniformConstant
+   59_11(sampb4):   32_9(ptr) Variable UniformConstant
+            23_2:             TypeVector 21_1(int) 2
+            23_3:             TypeVector 22_1(float) 3
+         30_4(S):             TypeStruct 22_1(float) 23_2(ivec2) 23_3(fvec3)
+        30_5(SS):             TypeStruct 23_1(fvec4) 30_4(S) 23_1(fvec4)
+           32_11:             TypePointer Output 30_5(SS)
+      59_12(var):  32_11(ptr) Variable Output
+        30_6(MS):             TypeStruct 22_1(float)
+           32_12:             TypePointer Output 30_6(MS)
+    59_13(outMS):  32_12(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 43_1 43_2
+                              Store 65_1 43_3
+            65_2:   32_4(ptr) AccessChain 59_2(bad) 43_1 uint(0)
+            61_1: 22_1(float) Load 65_2
+           180_1:  20_1(bool) FOrdEqual 61_1 43_4
+                              SelectionMerge 248_3 None
+                              BranchConditional 180_1 248_2 248_3
+           248_2:               Label
+            65_3:   32_6(ptr)   AccessChain 59_2(bad) 43_1
+            61_2: 23_1(fvec4)   Load 65_3
+                                Store 59_3(badorder3) 61_2
+                                Branch 248_3
+           248_3:             Label
+            61_3: 22_1(float) Load 59_4(f)
+            65_4:   32_2(ptr) AccessChain 59_1 43_1 43_1
+                              Store 65_4 61_3
                               Return
                               FunctionEnd

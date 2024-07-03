@@ -6,28 +6,28 @@ spv.460.comp
                               Capability Shader
                               Capability SubgroupVoteKHR
                               Extension  "SPV_KHR_subgroup_vote"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 460
-                              Name 4  "main"
-                              Name 8  "b1"
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeBool
-               7:             TypePointer Function 6(bool)
-         4(main):           2 Function None 3
-               5:             Label
-           8(b1):      7(ptr) Variable Function
-               9:     6(bool) Load 8(b1)
-              10:     6(bool) SubgroupAnyKHR 9
-                              Store 8(b1) 10
-              11:     6(bool) Load 8(b1)
-              12:     6(bool) SubgroupAllKHR 11
-                              Store 8(b1) 12
-              13:     6(bool) Load 8(b1)
-              14:     6(bool) SubgroupAllEqualKHR 13
-                              Store 8(b1) 14
+                              Name 54_1  "main"
+                              Name 59_1  "b1"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            20_1:             TypeBool
+            32_1:             TypePointer Function 20_1(bool)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_1(b1):   32_1(ptr) Variable Function
+            61_1:  20_1(bool) Load 59_1(b1)
+          4429_1:  20_1(bool) SubgroupAnyKHR 61_1
+                              Store 59_1(b1) 4429_1
+            61_2:  20_1(bool) Load 59_1(b1)
+          4428_1:  20_1(bool) SubgroupAllKHR 61_2
+                              Store 59_1(b1) 4428_1
+            61_3:  20_1(bool) Load 59_1(b1)
+          4430_1:  20_1(bool) SubgroupAllEqualKHR 61_3
+                              Store 59_1(b1) 4430_1
                               Return
                               FunctionEnd

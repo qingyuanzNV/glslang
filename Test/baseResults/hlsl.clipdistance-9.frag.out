@@ -149,102 +149,102 @@ gl_FragCoord origin is upper left
 
                               Capability Shader
                               Capability ClipDistance
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 32 38 60
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 16  "@main(vf4;vf3;f1;"
-                              Name 13  "Position"
-                              Name 14  "clip0"
-                              Name 15  "clip1"
-                              Name 30  "Position"
-                              Name 32  "Position"
-                              Name 34  "clip0"
-                              Name 38  "clip0"
-                              Name 55  "clip1"
-                              Name 60  "@entryPointOutput"
-                              Name 61  "param"
-                              Name 63  "param"
-                              Name 65  "param"
-                              Decorate 32(Position) BuiltIn FragCoord
-                              Decorate 38(clip0) BuiltIn ClipDistance
-                              Decorate 60(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeVector 6(float) 3
-              10:             TypePointer Function 9(fvec3)
-              11:             TypePointer Function 6(float)
-              12:             TypeFunction 7(fvec4) 8(ptr) 10(ptr) 11(ptr)
-              19:             TypeInt 32 0
-              20:     19(int) Constant 0
-              31:             TypePointer Input 7(fvec4)
-    32(Position):     31(ptr) Variable Input
-              35:     19(int) Constant 4
-              36:             TypeArray 6(float) 35
-              37:             TypePointer Input 36
-       38(clip0):     37(ptr) Variable Input
-              39:             TypeInt 32 1
-              40:     39(int) Constant 0
-              41:             TypePointer Input 6(float)
-              45:     39(int) Constant 1
-              48:     19(int) Constant 1
-              50:     39(int) Constant 2
-              53:     19(int) Constant 2
-              56:     39(int) Constant 3
-              59:             TypePointer Output 7(fvec4)
-60(@entryPointOutput):     59(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-    30(Position):      8(ptr) Variable Function
-       34(clip0):     10(ptr) Variable Function
-       55(clip1):     11(ptr) Variable Function
-       61(param):      8(ptr) Variable Function
-       63(param):     10(ptr) Variable Function
-       65(param):     11(ptr) Variable Function
-              33:    7(fvec4) Load 32(Position)
-                              Store 30(Position) 33
-              42:     41(ptr) AccessChain 38(clip0) 40
-              43:    6(float) Load 42
-              44:     11(ptr) AccessChain 34(clip0) 20
-                              Store 44 43
-              46:     41(ptr) AccessChain 38(clip0) 45
-              47:    6(float) Load 46
-              49:     11(ptr) AccessChain 34(clip0) 48
-                              Store 49 47
-              51:     41(ptr) AccessChain 38(clip0) 50
-              52:    6(float) Load 51
-              54:     11(ptr) AccessChain 34(clip0) 53
-                              Store 54 52
-              57:     41(ptr) AccessChain 38(clip0) 56
-              58:    6(float) Load 57
-                              Store 55(clip1) 58
-              62:    7(fvec4) Load 30(Position)
-                              Store 61(param) 62
-              64:    9(fvec3) Load 34(clip0)
-                              Store 63(param) 64
-              66:    6(float) Load 55(clip1)
-                              Store 65(param) 66
-              67:    7(fvec4) FunctionCall 16(@main(vf4;vf3;f1;) 61(param) 63(param) 65(param)
-                              Store 60(@entryPointOutput) 67
+                              Name 54_1  "main"
+                              Name 54_2  "@main(vf4;vf3;f1;"
+                              Name 55_1  "Position"
+                              Name 55_2  "clip0"
+                              Name 55_3  "clip1"
+                              Name 59_4  "Position"
+                              Name 59_1  "Position"
+                              Name 59_5  "clip0"
+                              Name 59_2  "clip0"
+                              Name 59_6  "clip1"
+                              Name 59_3  "@entryPointOutput"
+                              Name 59_7  "param"
+                              Name 59_8  "param"
+                              Name 59_9  "param"
+                              Decorate 59_1(Position) BuiltIn FragCoord
+                              Decorate 59_2(clip0) BuiltIn ClipDistance
+                              Decorate 59_3(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            23_2:             TypeVector 22_1(float) 3
+            32_2:             TypePointer Function 23_2(fvec3)
+            32_3:             TypePointer Function 22_1(float)
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr) 32_2(ptr) 32_3(ptr)
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+            32_4:             TypePointer Input 23_1(fvec4)
+  59_1(Position):   32_4(ptr) Variable Input
+         uint(4):   21_1(int) Constant 4
+            28_1:             TypeArray 22_1(float) uint(4)
+            32_5:             TypePointer Input 28_1
+     59_2(clip0):   32_5(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_6:             TypePointer Input 22_1(float)
+            43_2:   21_2(int) Constant 1
+         uint(1):   21_1(int) Constant 1
+            43_3:   21_2(int) Constant 2
+         uint(2):   21_1(int) Constant 2
+            43_4:   21_2(int) Constant 3
+            32_7:             TypePointer Output 23_1(fvec4)
+59_3(@entryPointOutput):   32_7(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+  59_4(Position):   32_1(ptr) Variable Function
+     59_5(clip0):   32_2(ptr) Variable Function
+     59_6(clip1):   32_3(ptr) Variable Function
+     59_7(param):   32_1(ptr) Variable Function
+     59_8(param):   32_2(ptr) Variable Function
+     59_9(param):   32_3(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(Position)
+                              Store 59_4(Position) 61_1
+            65_1:   32_6(ptr) AccessChain 59_2(clip0) 43_1
+            61_2: 22_1(float) Load 65_1
+            65_2:   32_3(ptr) AccessChain 59_5(clip0) uint(0)
+                              Store 65_2 61_2
+            65_3:   32_6(ptr) AccessChain 59_2(clip0) 43_2
+            61_3: 22_1(float) Load 65_3
+            65_4:   32_3(ptr) AccessChain 59_5(clip0) uint(1)
+                              Store 65_4 61_3
+            65_5:   32_6(ptr) AccessChain 59_2(clip0) 43_3
+            61_4: 22_1(float) Load 65_5
+            65_6:   32_3(ptr) AccessChain 59_5(clip0) uint(2)
+                              Store 65_6 61_4
+            65_7:   32_6(ptr) AccessChain 59_2(clip0) 43_4
+            61_5: 22_1(float) Load 65_7
+                              Store 59_6(clip1) 61_5
+            61_6: 23_1(fvec4) Load 59_4(Position)
+                              Store 59_7(param) 61_6
+            61_7: 23_2(fvec3) Load 59_5(clip0)
+                              Store 59_8(param) 61_7
+            61_8: 22_1(float) Load 59_6(clip1)
+                              Store 59_9(param) 61_8
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main(vf4;vf3;f1;) 59_7(param) 59_8(param) 59_9(param)
+                              Store 59_3(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-16(@main(vf4;vf3;f1;):    7(fvec4) Function None 12
-    13(Position):      8(ptr) FunctionParameter
-       14(clip0):     10(ptr) FunctionParameter
-       15(clip1):     11(ptr) FunctionParameter
-              17:             Label
-              18:    7(fvec4) Load 13(Position)
-              21:     11(ptr) AccessChain 14(clip0) 20
-              22:    6(float) Load 21
-              23:    7(fvec4) CompositeConstruct 22 22 22 22
-              24:    7(fvec4) FAdd 18 23
-              25:    6(float) Load 15(clip1)
-              26:    7(fvec4) CompositeConstruct 25 25 25 25
-              27:    7(fvec4) FAdd 24 26
-                              ReturnValue 27
+54_2(@main(vf4;vf3;f1;): 23_1(fvec4) Function None 33_2
+  55_1(Position):   32_1(ptr) FunctionParameter
+     55_2(clip0):   32_2(ptr) FunctionParameter
+     55_3(clip1):   32_3(ptr) FunctionParameter
+           248_2:             Label
+            61_9: 23_1(fvec4) Load 55_1(Position)
+            65_8:   32_3(ptr) AccessChain 55_2(clip0) uint(0)
+           61_10: 22_1(float) Load 65_8
+            80_1: 23_1(fvec4) CompositeConstruct 61_10 61_10 61_10 61_10
+           129_1: 23_1(fvec4) FAdd 61_9 80_1
+           61_11: 22_1(float) Load 55_3(clip1)
+            80_2: 23_1(fvec4) CompositeConstruct 61_11 61_11 61_11 61_11
+           129_2: 23_1(fvec4) FAdd 129_1 80_2
+                              ReturnValue 129_2
                               FunctionEnd

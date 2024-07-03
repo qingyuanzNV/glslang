@@ -5,56 +5,56 @@ spv.RayCallable.rcall
 
                               Capability RayTracingNV
                               Extension  "SPV_NV_ray_tracing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint CallableKHR 4  "main" 11 14
+                              EntryPoint CallableKHR 54_1  "main" 59_1 59_2
                               Source GLSL 460
                               SourceExtension  "GL_NV_ray_tracing"
-                              Name 4  "main"
-                              Name 9  "id"
-                              Name 11  "gl_LaunchIDNV"
-                              Name 13  "size"
-                              Name 14  "gl_LaunchSizeNV"
-                              Name 16  "dataBlock"
-                              MemberName 16(dataBlock) 0  "data1"
-                              Name 18  ""
-                              Name 29  "data0"
-                              Decorate 11(gl_LaunchIDNV) BuiltIn LaunchIdKHR
-                              Decorate 14(gl_LaunchSizeNV) BuiltIn LaunchSizeKHR
-                              Decorate 16(dataBlock) Block
-                              Decorate 18 Location 1
-                              Decorate 29(data0) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 3
-               8:             TypePointer Function 7(ivec3)
-              10:             TypePointer Input 7(ivec3)
-11(gl_LaunchIDNV):     10(ptr) Variable Input
-14(gl_LaunchSizeNV):     10(ptr) Variable Input
-   16(dataBlock):             TypeStruct 6(int)
-              17:             TypePointer IncomingCallableDataKHR 16(dataBlock)
-              18:     17(ptr) Variable IncomingCallableDataKHR
-              19:             TypeInt 32 1
-              20:     19(int) Constant 0
-              21:      6(int) Constant 256
-              22:             TypePointer IncomingCallableDataKHR 6(int)
-              24:      6(int) Constant 2
-              25:     19(int) Constant 1
-              26:             TypeFloat 32
-              27:             TypeVector 26(float) 4
-              28:             TypePointer CallableDataKHR 27(fvec4)
-       29(data0):     28(ptr) Variable CallableDataKHR
-         4(main):           2 Function None 3
-               5:             Label
-           9(id):      8(ptr) Variable Function
-        13(size):      8(ptr) Variable Function
-              12:    7(ivec3) Load 11(gl_LaunchIDNV)
-                              Store 9(id) 12
-              15:    7(ivec3) Load 14(gl_LaunchSizeNV)
-                              Store 13(size) 15
-              23:     22(ptr) AccessChain 18 20
-                              Store 23 21
-                              ExecuteCallableNV 24 25
+                              Name 54_1  "main"
+                              Name 59_5  "id"
+                              Name 59_1  "gl_LaunchIDNV"
+                              Name 59_6  "size"
+                              Name 59_2  "gl_LaunchSizeNV"
+                              Name 30_1  "dataBlock"
+                              MemberName 30_1(dataBlock) 0  "data1"
+                              Name 59_3  ""
+                              Name 59_4  "data0"
+                              Decorate 59_1(gl_LaunchIDNV) BuiltIn LaunchIdKHR
+                              Decorate 59_2(gl_LaunchSizeNV) BuiltIn LaunchSizeKHR
+                              Decorate 30_1(dataBlock) Block
+                              Decorate 59_3 Location 1
+                              Decorate 59_4(data0) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 3
+            32_1:             TypePointer Function 23_1(ivec3)
+            32_2:             TypePointer Input 23_1(ivec3)
+59_1(gl_LaunchIDNV):   32_2(ptr) Variable Input
+59_2(gl_LaunchSizeNV):   32_2(ptr) Variable Input
+ 30_1(dataBlock):             TypeStruct 21_1(int)
+            32_3:             TypePointer IncomingCallableDataKHR 30_1(dataBlock)
+            59_3:   32_3(ptr) Variable IncomingCallableDataKHR
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+       uint(256):   21_1(int) Constant 256
+            32_4:             TypePointer IncomingCallableDataKHR 21_1(int)
+         uint(2):   21_1(int) Constant 2
+            43_2:   21_2(int) Constant 1
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 4
+            32_5:             TypePointer CallableDataKHR 23_2(fvec4)
+     59_4(data0):   32_5(ptr) Variable CallableDataKHR
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_5(id):   32_1(ptr) Variable Function
+      59_6(size):   32_1(ptr) Variable Function
+            61_1: 23_1(ivec3) Load 59_1(gl_LaunchIDNV)
+                              Store 59_5(id) 61_1
+            61_2: 23_1(ivec3) Load 59_2(gl_LaunchSizeNV)
+                              Store 59_6(size) 61_2
+            65_1:   32_4(ptr) AccessChain 59_3 43_1
+                              Store 65_1 uint(256)
+                              ExecuteCallableNV uint(2) 43_2
                               Return
                               FunctionEnd

@@ -16,619 +16,619 @@ Validation failed
                               Capability ImageMSArray
                               Capability Int64ImageEXT
                               Extension  "SPV_EXT_shader_image_int64"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_ARB_gpu_shader_int64"
                               SourceExtension  "GL_ARB_sparse_texture2"
                               SourceExtension  "GL_EXT_shader_image_int64"
                               SourceExtension  "GL_KHR_memory_scope_semantics"
-                              Name 4  "main"
-                              Name 12  "Buf"
-                              MemberName 12(Buf) 0  "i64"
-                              MemberName 12(Buf) 1  "u64"
-                              MemberName 12(Buf) 2  "i64v4"
-                              MemberName 12(Buf) 3  "u64v4"
-                              MemberName 12(Buf) 4  "i32v4"
-                              Name 14  ""
-                              Name 18  "i1D"
-                              Name 35  "i3D"
-                              Name 48  "iBuf"
-                              Name 58  "i2DArray"
-                              Name 69  "i2DRect"
-                              Name 81  "i2DMSArray"
-                              Name 194  "u2D"
-                              Name 207  "uCube"
-                              Name 218  "u1DArray"
-                              Name 229  "uCubeArray"
-                              Name 240  "u2DMS"
-                              Name 458  "ResType"
-                              Name 483  "ResType"
-                              Decorate 12(Buf) BufferBlock
-                              MemberDecorate 12(Buf) 0 Offset 0
-                              MemberDecorate 12(Buf) 1 Offset 8
-                              MemberDecorate 12(Buf) 2 Offset 32
-                              MemberDecorate 12(Buf) 3 Offset 64
-                              MemberDecorate 12(Buf) 4 Offset 96
-                              Decorate 14 Binding 11
-                              Decorate 14 DescriptorSet 0
-                              Decorate 18(i1D) Binding 0
-                              Decorate 18(i1D) DescriptorSet 0
-                              Decorate 35(i3D) Binding 2
-                              Decorate 35(i3D) DescriptorSet 0
-                              Decorate 48(iBuf) Binding 4
-                              Decorate 48(iBuf) DescriptorSet 0
-                              Decorate 58(i2DArray) Binding 6
-                              Decorate 58(i2DArray) DescriptorSet 0
-                              Decorate 69(i2DRect) Binding 8
-                              Decorate 69(i2DRect) DescriptorSet 0
-                              Decorate 81(i2DMSArray) Binding 10
-                              Decorate 81(i2DMSArray) DescriptorSet 0
-                              Decorate 194(u2D) Binding 1
-                              Decorate 194(u2D) DescriptorSet 0
-                              Decorate 207(uCube) Binding 3
-                              Decorate 207(uCube) DescriptorSet 0
-                              Decorate 218(u1DArray) Binding 5
-                              Decorate 218(u1DArray) DescriptorSet 0
-                              Decorate 229(uCubeArray) Binding 7
-                              Decorate 229(uCubeArray) DescriptorSet 0
-                              Decorate 240(u2DMS) Binding 9
-                              Decorate 240(u2DMS) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 64 1
-               7:             TypeInt 64 0
-               8:             TypeVector 6(int64_t) 4
-               9:             TypeVector 7(int64_t) 4
-              10:             TypeInt 32 1
-              11:             TypeVector 10(int) 4
-         12(Buf):             TypeStruct 6(int64_t) 7(int64_t) 8(i64vec4) 9(i64vec4) 11(ivec4)
-              13:             TypePointer Uniform 12(Buf)
-              14:     13(ptr) Variable Uniform
-              15:     10(int) Constant 0
-              16:             TypeImage 6(int64_t) 1D nonsampled format:R64i
-              17:             TypePointer UniformConstant 16
-         18(i1D):     17(ptr) Variable UniformConstant
-              19:     10(int) Constant 4
-              20:             TypeInt 32 0
-              21:     20(int) Constant 0
-              22:             TypePointer Uniform 10(int)
-              25:             TypePointer Uniform 6(int64_t)
-              28:             TypePointer Image 6(int64_t)
-              30:     20(int) Constant 1
-              33:             TypeImage 6(int64_t) 3D nonsampled format:R64i
-              34:             TypePointer UniformConstant 33
-         35(i3D):     34(ptr) Variable UniformConstant
-              36:             TypeVector 10(int) 3
-              37:             TypePointer Uniform 11(ivec4)
-              46:             TypeImage 6(int64_t) Buffer nonsampled format:R64i
-              47:             TypePointer UniformConstant 46
-        48(iBuf):     47(ptr) Variable UniformConstant
-              56:             TypeImage 6(int64_t) 2D array nonsampled format:R64i
-              57:             TypePointer UniformConstant 56
-    58(i2DArray):     57(ptr) Variable UniformConstant
-              67:             TypeImage 6(int64_t) Rect nonsampled format:R64i
-              68:             TypePointer UniformConstant 67
-     69(i2DRect):     68(ptr) Variable UniformConstant
-              70:             TypeVector 10(int) 2
-              79:             TypeImage 6(int64_t) 2D array multi-sampled nonsampled format:R64i
-              80:             TypePointer UniformConstant 79
-  81(i2DMSArray):     80(ptr) Variable UniformConstant
-              85:     20(int) Constant 3
-             107:  6(int64_t) Constant 1 0
-             116:     10(int) Constant 1
-             117:     10(int) Constant 2048
-             119:     20(int) Constant 2048
-             192:             TypeImage 7(int64_t) 2D nonsampled format:R64ui
-             193:             TypePointer UniformConstant 192
-        194(u2D):    193(ptr) Variable UniformConstant
-             198:             TypePointer Uniform 7(int64_t)
-             201:             TypePointer Image 7(int64_t)
-             205:             TypeImage 7(int64_t) Cube nonsampled format:R64ui
-             206:             TypePointer UniformConstant 205
-      207(uCube):    206(ptr) Variable UniformConstant
-             216:             TypeImage 7(int64_t) 1D array nonsampled format:R64ui
-             217:             TypePointer UniformConstant 216
-   218(u1DArray):    217(ptr) Variable UniformConstant
-             227:             TypeImage 7(int64_t) Cube array nonsampled format:R64ui
-             228:             TypePointer UniformConstant 227
- 229(uCubeArray):    228(ptr) Variable UniformConstant
-             238:             TypeImage 7(int64_t) 2D multi-sampled nonsampled format:R64ui
-             239:             TypePointer UniformConstant 238
-      240(u2DMS):    239(ptr) Variable UniformConstant
-             244:     20(int) Constant 2
-             275:  7(int64_t) Constant 1 0
-             363:     10(int) Constant 2
-             368:             TypePointer Uniform 8(i64vec4)
-             423:     10(int) Constant 3
-             424:             TypePointer Uniform 9(i64vec4)
-    458(ResType):             TypeStruct 10(int) 8(i64vec4)
-    483(ResType):             TypeStruct 10(int) 9(i64vec4)
-         4(main):           2 Function None 3
-               5:             Label
-              23:     22(ptr) AccessChain 14 19 21
-              24:     10(int) Load 23
-              26:     25(ptr) AccessChain 14 15
-              27:  6(int64_t) Load 26
-              29:     28(ptr) ImageTexelPointer 18(i1D) 24 21
-              31:  6(int64_t) AtomicIAdd 29 30 21 27
-              32:     25(ptr) AccessChain 14 15
-                              Store 32 31
-              38:     37(ptr) AccessChain 14 19
-              39:   11(ivec4) Load 38
-              40:   36(ivec3) VectorShuffle 39 39 0 1 2
-              41:     25(ptr) AccessChain 14 15
-              42:  6(int64_t) Load 41
-              43:     28(ptr) ImageTexelPointer 35(i3D) 40 21
-              44:  6(int64_t) AtomicSMin 43 30 21 42
-              45:     25(ptr) AccessChain 14 15
-                              Store 45 44
-              49:     22(ptr) AccessChain 14 19 21
-              50:     10(int) Load 49
-              51:     25(ptr) AccessChain 14 15
-              52:  6(int64_t) Load 51
-              53:     28(ptr) ImageTexelPointer 48(iBuf) 50 21
-              54:  6(int64_t) AtomicSMax 53 30 21 52
-              55:     25(ptr) AccessChain 14 15
-                              Store 55 54
-              59:     37(ptr) AccessChain 14 19
-              60:   11(ivec4) Load 59
-              61:   36(ivec3) VectorShuffle 60 60 0 1 2
-              62:     25(ptr) AccessChain 14 15
-              63:  6(int64_t) Load 62
-              64:     28(ptr) ImageTexelPointer 58(i2DArray) 61 21
-              65:  6(int64_t) AtomicAnd 64 30 21 63
-              66:     25(ptr) AccessChain 14 15
-                              Store 66 65
-              71:     37(ptr) AccessChain 14 19
-              72:   11(ivec4) Load 71
-              73:   70(ivec2) VectorShuffle 72 72 0 1
-              74:     25(ptr) AccessChain 14 15
-              75:  6(int64_t) Load 74
-              76:     28(ptr) ImageTexelPointer 69(i2DRect) 73 21
-              77:  6(int64_t) AtomicOr 76 30 21 75
-              78:     25(ptr) AccessChain 14 15
-                              Store 78 77
-              82:     37(ptr) AccessChain 14 19
-              83:   11(ivec4) Load 82
-              84:   36(ivec3) VectorShuffle 83 83 0 1 2
-              86:     22(ptr) AccessChain 14 19 85
-              87:     10(int) Load 86
-              88:     25(ptr) AccessChain 14 15
-              89:  6(int64_t) Load 88
-              90:     28(ptr) ImageTexelPointer 81(i2DMSArray) 84 87
-              91:  6(int64_t) AtomicXor 90 30 21 89
-              92:     25(ptr) AccessChain 14 15
-                              Store 92 91
-              93:     22(ptr) AccessChain 14 19 21
-              94:     10(int) Load 93
-              95:     25(ptr) AccessChain 14 15
-              96:  6(int64_t) Load 95
-              97:     28(ptr) ImageTexelPointer 18(i1D) 94 21
-              98:  6(int64_t) AtomicExchange 97 30 21 96
-              99:     25(ptr) AccessChain 14 15
-                              Store 99 98
-             100:     37(ptr) AccessChain 14 19
-             101:   11(ivec4) Load 100
-             102:   36(ivec3) VectorShuffle 101 101 0 1 2
-             103:     25(ptr) AccessChain 14 15
-             104:  6(int64_t) Load 103
-             105:     25(ptr) AccessChain 14 15
-             106:  6(int64_t) Load 105
-             108:  6(int64_t) IAdd 106 107
-             109:     28(ptr) ImageTexelPointer 35(i3D) 102 21
-             110:  6(int64_t) AtomicCompareExchange 109 30 21 21 108 104
-             111:     25(ptr) AccessChain 14 15
-                              Store 111 110
-             112:     22(ptr) AccessChain 14 19 21
-             113:     10(int) Load 112
-             114:     25(ptr) AccessChain 14 15
-             115:  6(int64_t) Load 114
-             118:     28(ptr) ImageTexelPointer 18(i1D) 113 21
-             120:  6(int64_t) AtomicIAdd 118 116 119 115
-             121:     25(ptr) AccessChain 14 15
-                              Store 121 120
-             122:     37(ptr) AccessChain 14 19
-             123:   11(ivec4) Load 122
-             124:   36(ivec3) VectorShuffle 123 123 0 1 2
-             125:     25(ptr) AccessChain 14 15
-             126:  6(int64_t) Load 125
-             127:     28(ptr) ImageTexelPointer 35(i3D) 124 21
-             128:  6(int64_t) AtomicSMin 127 116 119 126
-             129:     25(ptr) AccessChain 14 15
-                              Store 129 128
-             130:     22(ptr) AccessChain 14 19 21
-             131:     10(int) Load 130
-             132:     25(ptr) AccessChain 14 15
-             133:  6(int64_t) Load 132
-             134:     28(ptr) ImageTexelPointer 48(iBuf) 131 21
-             135:  6(int64_t) AtomicSMax 134 116 119 133
-             136:     25(ptr) AccessChain 14 15
-                              Store 136 135
-             137:     37(ptr) AccessChain 14 19
-             138:   11(ivec4) Load 137
-             139:   36(ivec3) VectorShuffle 138 138 0 1 2
-             140:     25(ptr) AccessChain 14 15
-             141:  6(int64_t) Load 140
-             142:     28(ptr) ImageTexelPointer 58(i2DArray) 139 21
-             143:  6(int64_t) AtomicAnd 142 116 119 141
-             144:     25(ptr) AccessChain 14 15
-                              Store 144 143
-             145:     37(ptr) AccessChain 14 19
-             146:   11(ivec4) Load 145
-             147:   70(ivec2) VectorShuffle 146 146 0 1
-             148:     25(ptr) AccessChain 14 15
-             149:  6(int64_t) Load 148
-             150:     28(ptr) ImageTexelPointer 69(i2DRect) 147 21
-             151:  6(int64_t) AtomicOr 150 116 119 149
-             152:     25(ptr) AccessChain 14 15
-                              Store 152 151
-             153:     37(ptr) AccessChain 14 19
-             154:   11(ivec4) Load 153
-             155:   36(ivec3) VectorShuffle 154 154 0 1 2
-             156:     22(ptr) AccessChain 14 19 85
-             157:     10(int) Load 156
-             158:     25(ptr) AccessChain 14 15
-             159:  6(int64_t) Load 158
-             160:     28(ptr) ImageTexelPointer 81(i2DMSArray) 155 157
-             161:  6(int64_t) AtomicXor 160 116 119 159
-             162:     25(ptr) AccessChain 14 15
-                              Store 162 161
-             163:     22(ptr) AccessChain 14 19 21
-             164:     10(int) Load 163
-             165:     25(ptr) AccessChain 14 15
-             166:  6(int64_t) Load 165
-             167:     28(ptr) ImageTexelPointer 18(i1D) 164 21
-             168:  6(int64_t) AtomicExchange 167 116 119 166
-             169:     25(ptr) AccessChain 14 15
-                              Store 169 168
-             170:     37(ptr) AccessChain 14 19
-             171:   11(ivec4) Load 170
-             172:   36(ivec3) VectorShuffle 171 171 0 1 2
-             173:     25(ptr) AccessChain 14 15
-             174:  6(int64_t) Load 173
-             175:     25(ptr) AccessChain 14 15
-             176:  6(int64_t) Load 175
-             177:  6(int64_t) IAdd 176 107
-             178:     28(ptr) ImageTexelPointer 35(i3D) 172 21
-             179:  6(int64_t) AtomicCompareExchange 178 116 119 119 177 174
-             180:     25(ptr) AccessChain 14 15
-                              Store 180 179
-             181:     22(ptr) AccessChain 14 19 21
-             182:     10(int) Load 181
-             183:     28(ptr) ImageTexelPointer 48(iBuf) 182 21
-             184:  6(int64_t) AtomicLoad 183 116 119
-             185:     25(ptr) AccessChain 14 15
-                              Store 185 184
-             186:     37(ptr) AccessChain 14 19
-             187:   11(ivec4) Load 186
-             188:   36(ivec3) VectorShuffle 187 187 0 1 2
-             189:     25(ptr) AccessChain 14 15
-             190:  6(int64_t) Load 189
-             191:     28(ptr) ImageTexelPointer 58(i2DArray) 188 21
-                              AtomicStore 191 116 119 190
-             195:     37(ptr) AccessChain 14 19
-             196:   11(ivec4) Load 195
-             197:   70(ivec2) VectorShuffle 196 196 0 1
-             199:    198(ptr) AccessChain 14 116
-             200:  7(int64_t) Load 199
-             202:    201(ptr) ImageTexelPointer 194(u2D) 197 21
-             203:  7(int64_t) AtomicIAdd 202 30 21 200
-             204:    198(ptr) AccessChain 14 116
-                              Store 204 203
-             208:     37(ptr) AccessChain 14 19
-             209:   11(ivec4) Load 208
-             210:   36(ivec3) VectorShuffle 209 209 0 1 2
-             211:    198(ptr) AccessChain 14 116
-             212:  7(int64_t) Load 211
-             213:    201(ptr) ImageTexelPointer 207(uCube) 210 21
-             214:  7(int64_t) AtomicUMin 213 30 21 212
-             215:    198(ptr) AccessChain 14 116
-                              Store 215 214
-             219:     37(ptr) AccessChain 14 19
-             220:   11(ivec4) Load 219
-             221:   70(ivec2) VectorShuffle 220 220 0 1
-             222:    198(ptr) AccessChain 14 116
-             223:  7(int64_t) Load 222
-             224:    201(ptr) ImageTexelPointer 218(u1DArray) 221 21
-             225:  7(int64_t) AtomicUMax 224 30 21 223
-             226:    198(ptr) AccessChain 14 116
-                              Store 226 225
-             230:     37(ptr) AccessChain 14 19
-             231:   11(ivec4) Load 230
-             232:   36(ivec3) VectorShuffle 231 231 0 1 2
-             233:    198(ptr) AccessChain 14 116
-             234:  7(int64_t) Load 233
-             235:    201(ptr) ImageTexelPointer 229(uCubeArray) 232 21
-             236:  7(int64_t) AtomicAnd 235 30 21 234
-             237:    198(ptr) AccessChain 14 116
-                              Store 237 236
-             241:     37(ptr) AccessChain 14 19
-             242:   11(ivec4) Load 241
-             243:   70(ivec2) VectorShuffle 242 242 0 1
-             245:     22(ptr) AccessChain 14 19 244
-             246:     10(int) Load 245
-             247:    198(ptr) AccessChain 14 116
-             248:  7(int64_t) Load 247
-             249:    201(ptr) ImageTexelPointer 240(u2DMS) 243 246
-             250:  7(int64_t) AtomicOr 249 30 21 248
-             251:    198(ptr) AccessChain 14 116
-                              Store 251 250
-             252:     37(ptr) AccessChain 14 19
-             253:   11(ivec4) Load 252
-             254:   70(ivec2) VectorShuffle 253 253 0 1
-             255:    198(ptr) AccessChain 14 116
-             256:  7(int64_t) Load 255
-             257:    201(ptr) ImageTexelPointer 194(u2D) 254 21
-             258:  7(int64_t) AtomicXor 257 30 21 256
-             259:    198(ptr) AccessChain 14 116
-                              Store 259 258
-             260:     37(ptr) AccessChain 14 19
-             261:   11(ivec4) Load 260
-             262:   36(ivec3) VectorShuffle 261 261 0 1 2
-             263:    198(ptr) AccessChain 14 116
-             264:  7(int64_t) Load 263
-             265:    201(ptr) ImageTexelPointer 207(uCube) 262 21
-             266:  7(int64_t) AtomicExchange 265 30 21 264
-             267:    198(ptr) AccessChain 14 116
-                              Store 267 266
-             268:     37(ptr) AccessChain 14 19
-             269:   11(ivec4) Load 268
-             270:   70(ivec2) VectorShuffle 269 269 0 1
-             271:    198(ptr) AccessChain 14 116
-             272:  7(int64_t) Load 271
-             273:    198(ptr) AccessChain 14 116
-             274:  7(int64_t) Load 273
-             276:  7(int64_t) IAdd 274 275
-             277:    201(ptr) ImageTexelPointer 218(u1DArray) 270 21
-             278:  7(int64_t) AtomicCompareExchange 277 30 21 21 276 272
-             279:    198(ptr) AccessChain 14 116
-                              Store 279 278
-             280:     37(ptr) AccessChain 14 19
-             281:   11(ivec4) Load 280
-             282:   70(ivec2) VectorShuffle 281 281 0 1
-             283:    198(ptr) AccessChain 14 116
-             284:  7(int64_t) Load 283
-             285:    201(ptr) ImageTexelPointer 194(u2D) 282 21
-             286:  7(int64_t) AtomicIAdd 285 116 119 284
-             287:    198(ptr) AccessChain 14 116
-                              Store 287 286
-             288:     37(ptr) AccessChain 14 19
-             289:   11(ivec4) Load 288
-             290:   36(ivec3) VectorShuffle 289 289 0 1 2
-             291:    198(ptr) AccessChain 14 116
-             292:  7(int64_t) Load 291
-             293:    201(ptr) ImageTexelPointer 207(uCube) 290 21
-             294:  7(int64_t) AtomicUMin 293 116 119 292
-             295:    198(ptr) AccessChain 14 116
-                              Store 295 294
-             296:     37(ptr) AccessChain 14 19
-             297:   11(ivec4) Load 296
-             298:   70(ivec2) VectorShuffle 297 297 0 1
-             299:    198(ptr) AccessChain 14 116
-             300:  7(int64_t) Load 299
-             301:    201(ptr) ImageTexelPointer 218(u1DArray) 298 21
-             302:  7(int64_t) AtomicUMax 301 116 119 300
-             303:    198(ptr) AccessChain 14 116
-                              Store 303 302
-             304:     37(ptr) AccessChain 14 19
-             305:   11(ivec4) Load 304
-             306:   36(ivec3) VectorShuffle 305 305 0 1 2
-             307:    198(ptr) AccessChain 14 116
-             308:  7(int64_t) Load 307
-             309:    201(ptr) ImageTexelPointer 229(uCubeArray) 306 21
-             310:  7(int64_t) AtomicAnd 309 116 119 308
-             311:    198(ptr) AccessChain 14 116
-                              Store 311 310
-             312:     37(ptr) AccessChain 14 19
-             313:   11(ivec4) Load 312
-             314:   70(ivec2) VectorShuffle 313 313 0 1
-             315:     22(ptr) AccessChain 14 19 244
-             316:     10(int) Load 315
-             317:    198(ptr) AccessChain 14 116
-             318:  7(int64_t) Load 317
-             319:    201(ptr) ImageTexelPointer 240(u2DMS) 314 316
-             320:  7(int64_t) AtomicOr 319 116 119 318
-             321:    198(ptr) AccessChain 14 116
-                              Store 321 320
-             322:     37(ptr) AccessChain 14 19
-             323:   11(ivec4) Load 322
-             324:   70(ivec2) VectorShuffle 323 323 0 1
-             325:    198(ptr) AccessChain 14 116
-             326:  7(int64_t) Load 325
-             327:    201(ptr) ImageTexelPointer 194(u2D) 324 21
-             328:  7(int64_t) AtomicXor 327 116 119 326
-             329:    198(ptr) AccessChain 14 116
-                              Store 329 328
-             330:     37(ptr) AccessChain 14 19
-             331:   11(ivec4) Load 330
-             332:   36(ivec3) VectorShuffle 331 331 0 1 2
-             333:    198(ptr) AccessChain 14 116
-             334:  7(int64_t) Load 333
-             335:    201(ptr) ImageTexelPointer 207(uCube) 332 21
-             336:  7(int64_t) AtomicExchange 335 116 119 334
-             337:    198(ptr) AccessChain 14 116
-                              Store 337 336
-             338:     37(ptr) AccessChain 14 19
-             339:   11(ivec4) Load 338
-             340:   70(ivec2) VectorShuffle 339 339 0 1
-             341:    198(ptr) AccessChain 14 116
-             342:  7(int64_t) Load 341
-             343:    198(ptr) AccessChain 14 116
-             344:  7(int64_t) Load 343
-             345:  7(int64_t) IAdd 344 275
-             346:    201(ptr) ImageTexelPointer 218(u1DArray) 340 21
-             347:  7(int64_t) AtomicCompareExchange 346 116 119 119 345 342
-             348:    198(ptr) AccessChain 14 116
-                              Store 348 347
-             349:     37(ptr) AccessChain 14 19
-             350:   11(ivec4) Load 349
-             351:   36(ivec3) VectorShuffle 350 350 0 1 2
-             352:    201(ptr) ImageTexelPointer 229(uCubeArray) 351 21
-             353:  7(int64_t) AtomicLoad 352 116 119
-             354:    198(ptr) AccessChain 14 116
-                              Store 354 353
-             355:     37(ptr) AccessChain 14 19
-             356:   11(ivec4) Load 355
-             357:   70(ivec2) VectorShuffle 356 356 0 1
-             358:     22(ptr) AccessChain 14 19 244
-             359:     10(int) Load 358
-             360:    198(ptr) AccessChain 14 116
-             361:  7(int64_t) Load 360
-             362:    201(ptr) ImageTexelPointer 240(u2DMS) 357 359
-                              AtomicStore 362 116 119 361
-             364:          16 Load 18(i1D)
-             365:     22(ptr) AccessChain 14 19 21
-             366:     10(int) Load 365
-             367:  8(i64vec4) ImageRead 364 366
-             369:    368(ptr) AccessChain 14 363
-             370:  8(i64vec4) Load 369
-             371:  8(i64vec4) IAdd 370 367
-             372:    368(ptr) AccessChain 14 363
-                              Store 372 371
-             373:          33 Load 35(i3D)
-             374:     37(ptr) AccessChain 14 19
-             375:   11(ivec4) Load 374
-             376:   36(ivec3) VectorShuffle 375 375 0 1 2
-             377:  8(i64vec4) ImageRead 373 376
-             378:    368(ptr) AccessChain 14 363
-             379:  8(i64vec4) Load 378
-             380:  8(i64vec4) IAdd 379 377
-             381:    368(ptr) AccessChain 14 363
-                              Store 381 380
-             382:          46 Load 48(iBuf)
-             383:     22(ptr) AccessChain 14 19 21
-             384:     10(int) Load 383
-             385:  8(i64vec4) ImageRead 382 384
-             386:    368(ptr) AccessChain 14 363
-             387:  8(i64vec4) Load 386
-             388:  8(i64vec4) IAdd 387 385
-             389:    368(ptr) AccessChain 14 363
-                              Store 389 388
-             390:          56 Load 58(i2DArray)
-             391:     37(ptr) AccessChain 14 19
-             392:   11(ivec4) Load 391
-             393:   36(ivec3) VectorShuffle 392 392 0 1 2
-             394:  8(i64vec4) ImageRead 390 393
-             395:    368(ptr) AccessChain 14 363
-             396:  8(i64vec4) Load 395
-             397:  8(i64vec4) IAdd 396 394
-             398:    368(ptr) AccessChain 14 363
-                              Store 398 397
-             399:          67 Load 69(i2DRect)
-             400:     37(ptr) AccessChain 14 19
-             401:   11(ivec4) Load 400
-             402:   70(ivec2) VectorShuffle 401 401 0 1
-             403:  8(i64vec4) ImageRead 399 402
-             404:    368(ptr) AccessChain 14 363
-             405:  8(i64vec4) Load 404
-             406:  8(i64vec4) IAdd 405 403
-             407:    368(ptr) AccessChain 14 363
-                              Store 407 406
-             408:          79 Load 81(i2DMSArray)
-             409:     37(ptr) AccessChain 14 19
-             410:   11(ivec4) Load 409
-             411:   36(ivec3) VectorShuffle 410 410 0 1 2
-             412:     22(ptr) AccessChain 14 19 85
-             413:     10(int) Load 412
-             414:  8(i64vec4) ImageRead 408 411 Sample 413
-             415:    368(ptr) AccessChain 14 363
-             416:  8(i64vec4) Load 415
-             417:  8(i64vec4) IAdd 416 414
-             418:    368(ptr) AccessChain 14 363
-                              Store 418 417
-             419:         192 Load 194(u2D)
-             420:     37(ptr) AccessChain 14 19
-             421:   11(ivec4) Load 420
-             422:   70(ivec2) VectorShuffle 421 421 0 1
-             425:    424(ptr) AccessChain 14 423
-             426:  9(i64vec4) Load 425
-                              ImageWrite 419 422 426
-             427:         205 Load 207(uCube)
-             428:     37(ptr) AccessChain 14 19
-             429:   11(ivec4) Load 428
-             430:   36(ivec3) VectorShuffle 429 429 0 1 2
-             431:    424(ptr) AccessChain 14 423
-             432:  9(i64vec4) Load 431
-                              ImageWrite 427 430 432
-             433:         216 Load 218(u1DArray)
-             434:     37(ptr) AccessChain 14 19
-             435:   11(ivec4) Load 434
-             436:   70(ivec2) VectorShuffle 435 435 0 1
-             437:    424(ptr) AccessChain 14 423
-             438:  9(i64vec4) Load 437
-                              ImageWrite 433 436 438
-             439:         227 Load 229(uCubeArray)
-             440:     37(ptr) AccessChain 14 19
-             441:   11(ivec4) Load 440
-             442:   36(ivec3) VectorShuffle 441 441 0 1 2
-             443:    424(ptr) AccessChain 14 423
-             444:  9(i64vec4) Load 443
-                              ImageWrite 439 442 444
-             445:         238 Load 240(u2DMS)
-             446:     37(ptr) AccessChain 14 19
-             447:   11(ivec4) Load 446
-             448:   70(ivec2) VectorShuffle 447 447 0 1
-             449:     22(ptr) AccessChain 14 19 244
-             450:     10(int) Load 449
-             451:    424(ptr) AccessChain 14 423
-             452:  9(i64vec4) Load 451
-                              ImageWrite 445 448 452 Sample 450
-             453:          33 Load 35(i3D)
-             454:     37(ptr) AccessChain 14 19
-             455:   11(ivec4) Load 454
-             456:   36(ivec3) VectorShuffle 455 455 0 1 2
-             457:    368(ptr) AccessChain 14 363
-             459:458(ResType) ImageSparseRead 453 456
-             460:  8(i64vec4) CompositeExtract 459 1
-                              Store 457 460
-             461:     10(int) CompositeExtract 459 0
-             462:          56 Load 58(i2DArray)
-             463:     37(ptr) AccessChain 14 19
-             464:   11(ivec4) Load 463
-             465:   36(ivec3) VectorShuffle 464 464 0 1 2
-             466:    368(ptr) AccessChain 14 363
-             467:458(ResType) ImageSparseRead 462 465
-             468:  8(i64vec4) CompositeExtract 467 1
-                              Store 466 468
-             469:     10(int) CompositeExtract 467 0
-             470:          67 Load 69(i2DRect)
-             471:     37(ptr) AccessChain 14 19
-             472:   11(ivec4) Load 471
-             473:   70(ivec2) VectorShuffle 472 472 0 1
-             474:    368(ptr) AccessChain 14 363
-             475:458(ResType) ImageSparseRead 470 473
-             476:  8(i64vec4) CompositeExtract 475 1
-                              Store 474 476
-             477:     10(int) CompositeExtract 475 0
-             478:         192 Load 194(u2D)
-             479:     37(ptr) AccessChain 14 19
-             480:   11(ivec4) Load 479
-             481:   70(ivec2) VectorShuffle 480 480 0 1
-             482:    424(ptr) AccessChain 14 423
-             484:483(ResType) ImageSparseRead 478 481
-             485:  9(i64vec4) CompositeExtract 484 1
-                              Store 482 485
-             486:     10(int) CompositeExtract 484 0
-             487:         205 Load 207(uCube)
-             488:     37(ptr) AccessChain 14 19
-             489:   11(ivec4) Load 488
-             490:   36(ivec3) VectorShuffle 489 489 0 1 2
-             491:    424(ptr) AccessChain 14 423
-             492:483(ResType) ImageSparseRead 487 490
-             493:  9(i64vec4) CompositeExtract 492 1
-                              Store 491 493
-             494:     10(int) CompositeExtract 492 0
-             495:         227 Load 229(uCubeArray)
-             496:     37(ptr) AccessChain 14 19
-             497:   11(ivec4) Load 496
-             498:   36(ivec3) VectorShuffle 497 497 0 1 2
-             499:    424(ptr) AccessChain 14 423
-             500:483(ResType) ImageSparseRead 495 498
-             501:  9(i64vec4) CompositeExtract 500 1
-                              Store 499 501
-             502:     10(int) CompositeExtract 500 0
+                              Name 54_1  "main"
+                              Name 30_1  "Buf"
+                              MemberName 30_1(Buf) 0  "i64"
+                              MemberName 30_1(Buf) 1  "u64"
+                              MemberName 30_1(Buf) 2  "i64v4"
+                              MemberName 30_1(Buf) 3  "u64v4"
+                              MemberName 30_1(Buf) 4  "i32v4"
+                              Name 59_1  ""
+                              Name 59_2  "i1D"
+                              Name 59_3  "i3D"
+                              Name 59_4  "iBuf"
+                              Name 59_5  "i2DArray"
+                              Name 59_6  "i2DRect"
+                              Name 59_7  "i2DMSArray"
+                              Name 59_8  "u2D"
+                              Name 59_9  "uCube"
+                              Name 59_10  "u1DArray"
+                              Name 59_11  "uCubeArray"
+                              Name 59_12  "u2DMS"
+                              Name 30_2  "ResType"
+                              Name 30_3  "ResType"
+                              Decorate 30_1(Buf) BufferBlock
+                              MemberDecorate 30_1(Buf) 0 Offset 0
+                              MemberDecorate 30_1(Buf) 1 Offset 8
+                              MemberDecorate 30_1(Buf) 2 Offset 32
+                              MemberDecorate 30_1(Buf) 3 Offset 64
+                              MemberDecorate 30_1(Buf) 4 Offset 96
+                              Decorate 59_1 Binding 11
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 59_2(i1D) Binding 0
+                              Decorate 59_2(i1D) DescriptorSet 0
+                              Decorate 59_3(i3D) Binding 2
+                              Decorate 59_3(i3D) DescriptorSet 0
+                              Decorate 59_4(iBuf) Binding 4
+                              Decorate 59_4(iBuf) DescriptorSet 0
+                              Decorate 59_5(i2DArray) Binding 6
+                              Decorate 59_5(i2DArray) DescriptorSet 0
+                              Decorate 59_6(i2DRect) Binding 8
+                              Decorate 59_6(i2DRect) DescriptorSet 0
+                              Decorate 59_7(i2DMSArray) Binding 10
+                              Decorate 59_7(i2DMSArray) DescriptorSet 0
+                              Decorate 59_8(u2D) Binding 1
+                              Decorate 59_8(u2D) DescriptorSet 0
+                              Decorate 59_9(uCube) Binding 3
+                              Decorate 59_9(uCube) DescriptorSet 0
+                              Decorate 59_10(u1DArray) Binding 5
+                              Decorate 59_10(u1DArray) DescriptorSet 0
+                              Decorate 59_11(uCubeArray) Binding 7
+                              Decorate 59_11(uCubeArray) DescriptorSet 0
+                              Decorate 59_12(u2DMS) Binding 9
+                              Decorate 59_12(u2DMS) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 64 1
+            21_2:             TypeInt 64 0
+            23_1:             TypeVector 21_1(int64_t) 4
+            23_2:             TypeVector 21_2(int64_t) 4
+            21_3:             TypeInt 32 1
+            23_3:             TypeVector 21_3(int) 4
+       30_1(Buf):             TypeStruct 21_1(int64_t) 21_2(int64_t) 23_1(i64vec4) 23_2(i64vec4) 23_3(ivec4)
+            32_1:             TypePointer Uniform 30_1(Buf)
+            59_1:   32_1(ptr) Variable Uniform
+            43_1:   21_3(int) Constant 0
+            25_1:             TypeImage 21_1(int64_t) 1D nonsampled format:R64i
+            32_2:             TypePointer UniformConstant 25_1
+       59_2(i1D):   32_2(ptr) Variable UniformConstant
+            43_2:   21_3(int) Constant 4
+            21_4:             TypeInt 32 0
+         uint(0):   21_4(int) Constant 0
+            32_3:             TypePointer Uniform 21_3(int)
+            32_4:             TypePointer Uniform 21_1(int64_t)
+            32_5:             TypePointer Image 21_1(int64_t)
+         uint(1):   21_4(int) Constant 1
+            25_2:             TypeImage 21_1(int64_t) 3D nonsampled format:R64i
+            32_6:             TypePointer UniformConstant 25_2
+       59_3(i3D):   32_6(ptr) Variable UniformConstant
+            23_4:             TypeVector 21_3(int) 3
+            32_7:             TypePointer Uniform 23_3(ivec4)
+            25_3:             TypeImage 21_1(int64_t) Buffer nonsampled format:R64i
+            32_8:             TypePointer UniformConstant 25_3
+      59_4(iBuf):   32_8(ptr) Variable UniformConstant
+            25_4:             TypeImage 21_1(int64_t) 2D array nonsampled format:R64i
+            32_9:             TypePointer UniformConstant 25_4
+  59_5(i2DArray):   32_9(ptr) Variable UniformConstant
+            25_5:             TypeImage 21_1(int64_t) Rect nonsampled format:R64i
+           32_10:             TypePointer UniformConstant 25_5
+   59_6(i2DRect):  32_10(ptr) Variable UniformConstant
+            23_5:             TypeVector 21_3(int) 2
+            25_6:             TypeImage 21_1(int64_t) 2D array multi-sampled nonsampled format:R64i
+           32_11:             TypePointer UniformConstant 25_6
+59_7(i2DMSArray):  32_11(ptr) Variable UniformConstant
+         uint(3):   21_4(int) Constant 3
+            43_3:21_1(int64_t) Constant 1 0
+            43_4:   21_3(int) Constant 1
+            43_5:   21_3(int) Constant 2048
+      uint(2048):   21_4(int) Constant 2048
+            25_7:             TypeImage 21_2(int64_t) 2D nonsampled format:R64ui
+           32_12:             TypePointer UniformConstant 25_7
+       59_8(u2D):  32_12(ptr) Variable UniformConstant
+           32_13:             TypePointer Uniform 21_2(int64_t)
+           32_14:             TypePointer Image 21_2(int64_t)
+            25_8:             TypeImage 21_2(int64_t) Cube nonsampled format:R64ui
+           32_15:             TypePointer UniformConstant 25_8
+     59_9(uCube):  32_15(ptr) Variable UniformConstant
+            25_9:             TypeImage 21_2(int64_t) 1D array nonsampled format:R64ui
+           32_16:             TypePointer UniformConstant 25_9
+ 59_10(u1DArray):  32_16(ptr) Variable UniformConstant
+           25_10:             TypeImage 21_2(int64_t) Cube array nonsampled format:R64ui
+           32_17:             TypePointer UniformConstant 25_10
+59_11(uCubeArray):  32_17(ptr) Variable UniformConstant
+           25_11:             TypeImage 21_2(int64_t) 2D multi-sampled nonsampled format:R64ui
+           32_18:             TypePointer UniformConstant 25_11
+    59_12(u2DMS):  32_18(ptr) Variable UniformConstant
+         uint(2):   21_4(int) Constant 2
+            43_6:21_2(int64_t) Constant 1 0
+            43_7:   21_3(int) Constant 2
+           32_19:             TypePointer Uniform 23_1(i64vec4)
+            43_8:   21_3(int) Constant 3
+           32_20:             TypePointer Uniform 23_2(i64vec4)
+   30_2(ResType):             TypeStruct 21_3(int) 23_1(i64vec4)
+   30_3(ResType):             TypeStruct 21_3(int) 23_2(i64vec4)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_1 43_2 uint(0)
+            61_1:   21_3(int) Load 65_1
+            65_2:   32_4(ptr) AccessChain 59_1 43_1
+            61_2:21_1(int64_t) Load 65_2
+            60_1:   32_5(ptr) ImageTexelPointer 59_2(i1D) 61_1 uint(0)
+           234_1:21_1(int64_t) AtomicIAdd 60_1 uint(1) uint(0) 61_2
+            65_3:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_3 234_1
+            65_4:   32_7(ptr) AccessChain 59_1 43_2
+            61_3: 23_3(ivec4) Load 65_4
+            79_1: 23_4(ivec3) VectorShuffle 61_3 61_3 0 1 2
+            65_5:   32_4(ptr) AccessChain 59_1 43_1
+            61_4:21_1(int64_t) Load 65_5
+            60_2:   32_5(ptr) ImageTexelPointer 59_3(i3D) 79_1 uint(0)
+           236_1:21_1(int64_t) AtomicSMin 60_2 uint(1) uint(0) 61_4
+            65_6:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_6 236_1
+            65_7:   32_3(ptr) AccessChain 59_1 43_2 uint(0)
+            61_5:   21_3(int) Load 65_7
+            65_8:   32_4(ptr) AccessChain 59_1 43_1
+            61_6:21_1(int64_t) Load 65_8
+            60_3:   32_5(ptr) ImageTexelPointer 59_4(iBuf) 61_5 uint(0)
+           238_1:21_1(int64_t) AtomicSMax 60_3 uint(1) uint(0) 61_6
+            65_9:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_9 238_1
+           65_10:   32_7(ptr) AccessChain 59_1 43_2
+            61_7: 23_3(ivec4) Load 65_10
+            79_2: 23_4(ivec3) VectorShuffle 61_7 61_7 0 1 2
+           65_11:   32_4(ptr) AccessChain 59_1 43_1
+            61_8:21_1(int64_t) Load 65_11
+            60_4:   32_5(ptr) ImageTexelPointer 59_5(i2DArray) 79_2 uint(0)
+           240_1:21_1(int64_t) AtomicAnd 60_4 uint(1) uint(0) 61_8
+           65_12:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_12 240_1
+           65_13:   32_7(ptr) AccessChain 59_1 43_2
+            61_9: 23_3(ivec4) Load 65_13
+            79_3: 23_5(ivec2) VectorShuffle 61_9 61_9 0 1
+           65_14:   32_4(ptr) AccessChain 59_1 43_1
+           61_10:21_1(int64_t) Load 65_14
+            60_5:   32_5(ptr) ImageTexelPointer 59_6(i2DRect) 79_3 uint(0)
+           241_1:21_1(int64_t) AtomicOr 60_5 uint(1) uint(0) 61_10
+           65_15:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_15 241_1
+           65_16:   32_7(ptr) AccessChain 59_1 43_2
+           61_11: 23_3(ivec4) Load 65_16
+            79_4: 23_4(ivec3) VectorShuffle 61_11 61_11 0 1 2
+           65_17:   32_3(ptr) AccessChain 59_1 43_2 uint(3)
+           61_12:   21_3(int) Load 65_17
+           65_18:   32_4(ptr) AccessChain 59_1 43_1
+           61_13:21_1(int64_t) Load 65_18
+            60_6:   32_5(ptr) ImageTexelPointer 59_7(i2DMSArray) 79_4 61_12
+           242_1:21_1(int64_t) AtomicXor 60_6 uint(1) uint(0) 61_13
+           65_19:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_19 242_1
+           65_20:   32_3(ptr) AccessChain 59_1 43_2 uint(0)
+           61_14:   21_3(int) Load 65_20
+           65_21:   32_4(ptr) AccessChain 59_1 43_1
+           61_15:21_1(int64_t) Load 65_21
+            60_7:   32_5(ptr) ImageTexelPointer 59_2(i1D) 61_14 uint(0)
+           229_1:21_1(int64_t) AtomicExchange 60_7 uint(1) uint(0) 61_15
+           65_22:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_22 229_1
+           65_23:   32_7(ptr) AccessChain 59_1 43_2
+           61_16: 23_3(ivec4) Load 65_23
+            79_5: 23_4(ivec3) VectorShuffle 61_16 61_16 0 1 2
+           65_24:   32_4(ptr) AccessChain 59_1 43_1
+           61_17:21_1(int64_t) Load 65_24
+           65_25:   32_4(ptr) AccessChain 59_1 43_1
+           61_18:21_1(int64_t) Load 65_25
+           128_1:21_1(int64_t) IAdd 61_18 43_3
+            60_8:   32_5(ptr) ImageTexelPointer 59_3(i3D) 79_5 uint(0)
+           230_1:21_1(int64_t) AtomicCompareExchange 60_8 uint(1) uint(0) uint(0) 128_1 61_17
+           65_26:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_26 230_1
+           65_27:   32_3(ptr) AccessChain 59_1 43_2 uint(0)
+           61_19:   21_3(int) Load 65_27
+           65_28:   32_4(ptr) AccessChain 59_1 43_1
+           61_20:21_1(int64_t) Load 65_28
+            60_9:   32_5(ptr) ImageTexelPointer 59_2(i1D) 61_19 uint(0)
+           234_2:21_1(int64_t) AtomicIAdd 60_9 43_4 uint(2048) 61_20
+           65_29:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_29 234_2
+           65_30:   32_7(ptr) AccessChain 59_1 43_2
+           61_21: 23_3(ivec4) Load 65_30
+            79_6: 23_4(ivec3) VectorShuffle 61_21 61_21 0 1 2
+           65_31:   32_4(ptr) AccessChain 59_1 43_1
+           61_22:21_1(int64_t) Load 65_31
+           60_10:   32_5(ptr) ImageTexelPointer 59_3(i3D) 79_6 uint(0)
+           236_2:21_1(int64_t) AtomicSMin 60_10 43_4 uint(2048) 61_22
+           65_32:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_32 236_2
+           65_33:   32_3(ptr) AccessChain 59_1 43_2 uint(0)
+           61_23:   21_3(int) Load 65_33
+           65_34:   32_4(ptr) AccessChain 59_1 43_1
+           61_24:21_1(int64_t) Load 65_34
+           60_11:   32_5(ptr) ImageTexelPointer 59_4(iBuf) 61_23 uint(0)
+           238_2:21_1(int64_t) AtomicSMax 60_11 43_4 uint(2048) 61_24
+           65_35:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_35 238_2
+           65_36:   32_7(ptr) AccessChain 59_1 43_2
+           61_25: 23_3(ivec4) Load 65_36
+            79_7: 23_4(ivec3) VectorShuffle 61_25 61_25 0 1 2
+           65_37:   32_4(ptr) AccessChain 59_1 43_1
+           61_26:21_1(int64_t) Load 65_37
+           60_12:   32_5(ptr) ImageTexelPointer 59_5(i2DArray) 79_7 uint(0)
+           240_2:21_1(int64_t) AtomicAnd 60_12 43_4 uint(2048) 61_26
+           65_38:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_38 240_2
+           65_39:   32_7(ptr) AccessChain 59_1 43_2
+           61_27: 23_3(ivec4) Load 65_39
+            79_8: 23_5(ivec2) VectorShuffle 61_27 61_27 0 1
+           65_40:   32_4(ptr) AccessChain 59_1 43_1
+           61_28:21_1(int64_t) Load 65_40
+           60_13:   32_5(ptr) ImageTexelPointer 59_6(i2DRect) 79_8 uint(0)
+           241_2:21_1(int64_t) AtomicOr 60_13 43_4 uint(2048) 61_28
+           65_41:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_41 241_2
+           65_42:   32_7(ptr) AccessChain 59_1 43_2
+           61_29: 23_3(ivec4) Load 65_42
+            79_9: 23_4(ivec3) VectorShuffle 61_29 61_29 0 1 2
+           65_43:   32_3(ptr) AccessChain 59_1 43_2 uint(3)
+           61_30:   21_3(int) Load 65_43
+           65_44:   32_4(ptr) AccessChain 59_1 43_1
+           61_31:21_1(int64_t) Load 65_44
+           60_14:   32_5(ptr) ImageTexelPointer 59_7(i2DMSArray) 79_9 61_30
+           242_2:21_1(int64_t) AtomicXor 60_14 43_4 uint(2048) 61_31
+           65_45:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_45 242_2
+           65_46:   32_3(ptr) AccessChain 59_1 43_2 uint(0)
+           61_32:   21_3(int) Load 65_46
+           65_47:   32_4(ptr) AccessChain 59_1 43_1
+           61_33:21_1(int64_t) Load 65_47
+           60_15:   32_5(ptr) ImageTexelPointer 59_2(i1D) 61_32 uint(0)
+           229_2:21_1(int64_t) AtomicExchange 60_15 43_4 uint(2048) 61_33
+           65_48:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_48 229_2
+           65_49:   32_7(ptr) AccessChain 59_1 43_2
+           61_34: 23_3(ivec4) Load 65_49
+           79_10: 23_4(ivec3) VectorShuffle 61_34 61_34 0 1 2
+           65_50:   32_4(ptr) AccessChain 59_1 43_1
+           61_35:21_1(int64_t) Load 65_50
+           65_51:   32_4(ptr) AccessChain 59_1 43_1
+           61_36:21_1(int64_t) Load 65_51
+           128_2:21_1(int64_t) IAdd 61_36 43_3
+           60_16:   32_5(ptr) ImageTexelPointer 59_3(i3D) 79_10 uint(0)
+           230_2:21_1(int64_t) AtomicCompareExchange 60_16 43_4 uint(2048) uint(2048) 128_2 61_35
+           65_52:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_52 230_2
+           65_53:   32_3(ptr) AccessChain 59_1 43_2 uint(0)
+           61_37:   21_3(int) Load 65_53
+           60_17:   32_5(ptr) ImageTexelPointer 59_4(iBuf) 61_37 uint(0)
+           227_1:21_1(int64_t) AtomicLoad 60_17 43_4 uint(2048)
+           65_54:   32_4(ptr) AccessChain 59_1 43_1
+                              Store 65_54 227_1
+           65_55:   32_7(ptr) AccessChain 59_1 43_2
+           61_38: 23_3(ivec4) Load 65_55
+           79_11: 23_4(ivec3) VectorShuffle 61_38 61_38 0 1 2
+           65_56:   32_4(ptr) AccessChain 59_1 43_1
+           61_39:21_1(int64_t) Load 65_56
+           60_18:   32_5(ptr) ImageTexelPointer 59_5(i2DArray) 79_11 uint(0)
+                              AtomicStore 60_18 43_4 uint(2048) 61_39
+           65_57:   32_7(ptr) AccessChain 59_1 43_2
+           61_40: 23_3(ivec4) Load 65_57
+           79_12: 23_5(ivec2) VectorShuffle 61_40 61_40 0 1
+           65_58:  32_13(ptr) AccessChain 59_1 43_4
+           61_41:21_2(int64_t) Load 65_58
+           60_19:  32_14(ptr) ImageTexelPointer 59_8(u2D) 79_12 uint(0)
+           234_3:21_2(int64_t) AtomicIAdd 60_19 uint(1) uint(0) 61_41
+           65_59:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_59 234_3
+           65_60:   32_7(ptr) AccessChain 59_1 43_2
+           61_42: 23_3(ivec4) Load 65_60
+           79_13: 23_4(ivec3) VectorShuffle 61_42 61_42 0 1 2
+           65_61:  32_13(ptr) AccessChain 59_1 43_4
+           61_43:21_2(int64_t) Load 65_61
+           60_20:  32_14(ptr) ImageTexelPointer 59_9(uCube) 79_13 uint(0)
+           237_1:21_2(int64_t) AtomicUMin 60_20 uint(1) uint(0) 61_43
+           65_62:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_62 237_1
+           65_63:   32_7(ptr) AccessChain 59_1 43_2
+           61_44: 23_3(ivec4) Load 65_63
+           79_14: 23_5(ivec2) VectorShuffle 61_44 61_44 0 1
+           65_64:  32_13(ptr) AccessChain 59_1 43_4
+           61_45:21_2(int64_t) Load 65_64
+           60_21:  32_14(ptr) ImageTexelPointer 59_10(u1DArray) 79_14 uint(0)
+           239_1:21_2(int64_t) AtomicUMax 60_21 uint(1) uint(0) 61_45
+           65_65:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_65 239_1
+           65_66:   32_7(ptr) AccessChain 59_1 43_2
+           61_46: 23_3(ivec4) Load 65_66
+           79_15: 23_4(ivec3) VectorShuffle 61_46 61_46 0 1 2
+           65_67:  32_13(ptr) AccessChain 59_1 43_4
+           61_47:21_2(int64_t) Load 65_67
+           60_22:  32_14(ptr) ImageTexelPointer 59_11(uCubeArray) 79_15 uint(0)
+           240_3:21_2(int64_t) AtomicAnd 60_22 uint(1) uint(0) 61_47
+           65_68:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_68 240_3
+           65_69:   32_7(ptr) AccessChain 59_1 43_2
+           61_48: 23_3(ivec4) Load 65_69
+           79_16: 23_5(ivec2) VectorShuffle 61_48 61_48 0 1
+           65_70:   32_3(ptr) AccessChain 59_1 43_2 uint(2)
+           61_49:   21_3(int) Load 65_70
+           65_71:  32_13(ptr) AccessChain 59_1 43_4
+           61_50:21_2(int64_t) Load 65_71
+           60_23:  32_14(ptr) ImageTexelPointer 59_12(u2DMS) 79_16 61_49
+           241_3:21_2(int64_t) AtomicOr 60_23 uint(1) uint(0) 61_50
+           65_72:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_72 241_3
+           65_73:   32_7(ptr) AccessChain 59_1 43_2
+           61_51: 23_3(ivec4) Load 65_73
+           79_17: 23_5(ivec2) VectorShuffle 61_51 61_51 0 1
+           65_74:  32_13(ptr) AccessChain 59_1 43_4
+           61_52:21_2(int64_t) Load 65_74
+           60_24:  32_14(ptr) ImageTexelPointer 59_8(u2D) 79_17 uint(0)
+           242_3:21_2(int64_t) AtomicXor 60_24 uint(1) uint(0) 61_52
+           65_75:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_75 242_3
+           65_76:   32_7(ptr) AccessChain 59_1 43_2
+           61_53: 23_3(ivec4) Load 65_76
+           79_18: 23_4(ivec3) VectorShuffle 61_53 61_53 0 1 2
+           65_77:  32_13(ptr) AccessChain 59_1 43_4
+           61_54:21_2(int64_t) Load 65_77
+           60_25:  32_14(ptr) ImageTexelPointer 59_9(uCube) 79_18 uint(0)
+           229_3:21_2(int64_t) AtomicExchange 60_25 uint(1) uint(0) 61_54
+           65_78:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_78 229_3
+           65_79:   32_7(ptr) AccessChain 59_1 43_2
+           61_55: 23_3(ivec4) Load 65_79
+           79_19: 23_5(ivec2) VectorShuffle 61_55 61_55 0 1
+           65_80:  32_13(ptr) AccessChain 59_1 43_4
+           61_56:21_2(int64_t) Load 65_80
+           65_81:  32_13(ptr) AccessChain 59_1 43_4
+           61_57:21_2(int64_t) Load 65_81
+           128_3:21_2(int64_t) IAdd 61_57 43_6
+           60_26:  32_14(ptr) ImageTexelPointer 59_10(u1DArray) 79_19 uint(0)
+           230_3:21_2(int64_t) AtomicCompareExchange 60_26 uint(1) uint(0) uint(0) 128_3 61_56
+           65_82:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_82 230_3
+           65_83:   32_7(ptr) AccessChain 59_1 43_2
+           61_58: 23_3(ivec4) Load 65_83
+           79_20: 23_5(ivec2) VectorShuffle 61_58 61_58 0 1
+           65_84:  32_13(ptr) AccessChain 59_1 43_4
+           61_59:21_2(int64_t) Load 65_84
+           60_27:  32_14(ptr) ImageTexelPointer 59_8(u2D) 79_20 uint(0)
+           234_4:21_2(int64_t) AtomicIAdd 60_27 43_4 uint(2048) 61_59
+           65_85:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_85 234_4
+           65_86:   32_7(ptr) AccessChain 59_1 43_2
+           61_60: 23_3(ivec4) Load 65_86
+           79_21: 23_4(ivec3) VectorShuffle 61_60 61_60 0 1 2
+           65_87:  32_13(ptr) AccessChain 59_1 43_4
+           61_61:21_2(int64_t) Load 65_87
+           60_28:  32_14(ptr) ImageTexelPointer 59_9(uCube) 79_21 uint(0)
+           237_2:21_2(int64_t) AtomicUMin 60_28 43_4 uint(2048) 61_61
+           65_88:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_88 237_2
+           65_89:   32_7(ptr) AccessChain 59_1 43_2
+           61_62: 23_3(ivec4) Load 65_89
+           79_22: 23_5(ivec2) VectorShuffle 61_62 61_62 0 1
+           65_90:  32_13(ptr) AccessChain 59_1 43_4
+           61_63:21_2(int64_t) Load 65_90
+           60_29:  32_14(ptr) ImageTexelPointer 59_10(u1DArray) 79_22 uint(0)
+           239_2:21_2(int64_t) AtomicUMax 60_29 43_4 uint(2048) 61_63
+           65_91:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_91 239_2
+           65_92:   32_7(ptr) AccessChain 59_1 43_2
+           61_64: 23_3(ivec4) Load 65_92
+           79_23: 23_4(ivec3) VectorShuffle 61_64 61_64 0 1 2
+           65_93:  32_13(ptr) AccessChain 59_1 43_4
+           61_65:21_2(int64_t) Load 65_93
+           60_30:  32_14(ptr) ImageTexelPointer 59_11(uCubeArray) 79_23 uint(0)
+           240_4:21_2(int64_t) AtomicAnd 60_30 43_4 uint(2048) 61_65
+           65_94:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_94 240_4
+           65_95:   32_7(ptr) AccessChain 59_1 43_2
+           61_66: 23_3(ivec4) Load 65_95
+           79_24: 23_5(ivec2) VectorShuffle 61_66 61_66 0 1
+           65_96:   32_3(ptr) AccessChain 59_1 43_2 uint(2)
+           61_67:   21_3(int) Load 65_96
+           65_97:  32_13(ptr) AccessChain 59_1 43_4
+           61_68:21_2(int64_t) Load 65_97
+           60_31:  32_14(ptr) ImageTexelPointer 59_12(u2DMS) 79_24 61_67
+           241_4:21_2(int64_t) AtomicOr 60_31 43_4 uint(2048) 61_68
+           65_98:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_98 241_4
+           65_99:   32_7(ptr) AccessChain 59_1 43_2
+           61_69: 23_3(ivec4) Load 65_99
+           79_25: 23_5(ivec2) VectorShuffle 61_69 61_69 0 1
+          65_100:  32_13(ptr) AccessChain 59_1 43_4
+           61_70:21_2(int64_t) Load 65_100
+           60_32:  32_14(ptr) ImageTexelPointer 59_8(u2D) 79_25 uint(0)
+           242_4:21_2(int64_t) AtomicXor 60_32 43_4 uint(2048) 61_70
+          65_101:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_101 242_4
+          65_102:   32_7(ptr) AccessChain 59_1 43_2
+           61_71: 23_3(ivec4) Load 65_102
+           79_26: 23_4(ivec3) VectorShuffle 61_71 61_71 0 1 2
+          65_103:  32_13(ptr) AccessChain 59_1 43_4
+           61_72:21_2(int64_t) Load 65_103
+           60_33:  32_14(ptr) ImageTexelPointer 59_9(uCube) 79_26 uint(0)
+           229_4:21_2(int64_t) AtomicExchange 60_33 43_4 uint(2048) 61_72
+          65_104:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_104 229_4
+          65_105:   32_7(ptr) AccessChain 59_1 43_2
+           61_73: 23_3(ivec4) Load 65_105
+           79_27: 23_5(ivec2) VectorShuffle 61_73 61_73 0 1
+          65_106:  32_13(ptr) AccessChain 59_1 43_4
+           61_74:21_2(int64_t) Load 65_106
+          65_107:  32_13(ptr) AccessChain 59_1 43_4
+           61_75:21_2(int64_t) Load 65_107
+           128_4:21_2(int64_t) IAdd 61_75 43_6
+           60_34:  32_14(ptr) ImageTexelPointer 59_10(u1DArray) 79_27 uint(0)
+           230_4:21_2(int64_t) AtomicCompareExchange 60_34 43_4 uint(2048) uint(2048) 128_4 61_74
+          65_108:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_108 230_4
+          65_109:   32_7(ptr) AccessChain 59_1 43_2
+           61_76: 23_3(ivec4) Load 65_109
+           79_28: 23_4(ivec3) VectorShuffle 61_76 61_76 0 1 2
+           60_35:  32_14(ptr) ImageTexelPointer 59_11(uCubeArray) 79_28 uint(0)
+           227_2:21_2(int64_t) AtomicLoad 60_35 43_4 uint(2048)
+          65_110:  32_13(ptr) AccessChain 59_1 43_4
+                              Store 65_110 227_2
+          65_111:   32_7(ptr) AccessChain 59_1 43_2
+           61_77: 23_3(ivec4) Load 65_111
+           79_29: 23_5(ivec2) VectorShuffle 61_77 61_77 0 1
+          65_112:   32_3(ptr) AccessChain 59_1 43_2 uint(2)
+           61_78:   21_3(int) Load 65_112
+          65_113:  32_13(ptr) AccessChain 59_1 43_4
+           61_79:21_2(int64_t) Load 65_113
+           60_36:  32_14(ptr) ImageTexelPointer 59_12(u2DMS) 79_29 61_78
+                              AtomicStore 60_36 43_4 uint(2048) 61_79
+           61_80:        25_1 Load 59_2(i1D)
+          65_114:   32_3(ptr) AccessChain 59_1 43_2 uint(0)
+           61_81:   21_3(int) Load 65_114
+            98_1:23_1(i64vec4) ImageRead 61_80 61_81
+          65_115:  32_19(ptr) AccessChain 59_1 43_7
+           61_82:23_1(i64vec4) Load 65_115
+           128_5:23_1(i64vec4) IAdd 61_82 98_1
+          65_116:  32_19(ptr) AccessChain 59_1 43_7
+                              Store 65_116 128_5
+           61_83:        25_2 Load 59_3(i3D)
+          65_117:   32_7(ptr) AccessChain 59_1 43_2
+           61_84: 23_3(ivec4) Load 65_117
+           79_30: 23_4(ivec3) VectorShuffle 61_84 61_84 0 1 2
+            98_2:23_1(i64vec4) ImageRead 61_83 79_30
+          65_118:  32_19(ptr) AccessChain 59_1 43_7
+           61_85:23_1(i64vec4) Load 65_118
+           128_6:23_1(i64vec4) IAdd 61_85 98_2
+          65_119:  32_19(ptr) AccessChain 59_1 43_7
+                              Store 65_119 128_6
+           61_86:        25_3 Load 59_4(iBuf)
+          65_120:   32_3(ptr) AccessChain 59_1 43_2 uint(0)
+           61_87:   21_3(int) Load 65_120
+            98_3:23_1(i64vec4) ImageRead 61_86 61_87
+          65_121:  32_19(ptr) AccessChain 59_1 43_7
+           61_88:23_1(i64vec4) Load 65_121
+           128_7:23_1(i64vec4) IAdd 61_88 98_3
+          65_122:  32_19(ptr) AccessChain 59_1 43_7
+                              Store 65_122 128_7
+           61_89:        25_4 Load 59_5(i2DArray)
+          65_123:   32_7(ptr) AccessChain 59_1 43_2
+           61_90: 23_3(ivec4) Load 65_123
+           79_31: 23_4(ivec3) VectorShuffle 61_90 61_90 0 1 2
+            98_4:23_1(i64vec4) ImageRead 61_89 79_31
+          65_124:  32_19(ptr) AccessChain 59_1 43_7
+           61_91:23_1(i64vec4) Load 65_124
+           128_8:23_1(i64vec4) IAdd 61_91 98_4
+          65_125:  32_19(ptr) AccessChain 59_1 43_7
+                              Store 65_125 128_8
+           61_92:        25_5 Load 59_6(i2DRect)
+          65_126:   32_7(ptr) AccessChain 59_1 43_2
+           61_93: 23_3(ivec4) Load 65_126
+           79_32: 23_5(ivec2) VectorShuffle 61_93 61_93 0 1
+            98_5:23_1(i64vec4) ImageRead 61_92 79_32
+          65_127:  32_19(ptr) AccessChain 59_1 43_7
+           61_94:23_1(i64vec4) Load 65_127
+           128_9:23_1(i64vec4) IAdd 61_94 98_5
+          65_128:  32_19(ptr) AccessChain 59_1 43_7
+                              Store 65_128 128_9
+           61_95:        25_6 Load 59_7(i2DMSArray)
+          65_129:   32_7(ptr) AccessChain 59_1 43_2
+           61_96: 23_3(ivec4) Load 65_129
+           79_33: 23_4(ivec3) VectorShuffle 61_96 61_96 0 1 2
+          65_130:   32_3(ptr) AccessChain 59_1 43_2 uint(3)
+           61_97:   21_3(int) Load 65_130
+            98_6:23_1(i64vec4) ImageRead 61_95 79_33 Sample 61_97
+          65_131:  32_19(ptr) AccessChain 59_1 43_7
+           61_98:23_1(i64vec4) Load 65_131
+          128_10:23_1(i64vec4) IAdd 61_98 98_6
+          65_132:  32_19(ptr) AccessChain 59_1 43_7
+                              Store 65_132 128_10
+           61_99:        25_7 Load 59_8(u2D)
+          65_133:   32_7(ptr) AccessChain 59_1 43_2
+          61_100: 23_3(ivec4) Load 65_133
+           79_34: 23_5(ivec2) VectorShuffle 61_100 61_100 0 1
+          65_134:  32_20(ptr) AccessChain 59_1 43_8
+          61_101:23_2(i64vec4) Load 65_134
+                              ImageWrite 61_99 79_34 61_101
+          61_102:        25_8 Load 59_9(uCube)
+          65_135:   32_7(ptr) AccessChain 59_1 43_2
+          61_103: 23_3(ivec4) Load 65_135
+           79_35: 23_4(ivec3) VectorShuffle 61_103 61_103 0 1 2
+          65_136:  32_20(ptr) AccessChain 59_1 43_8
+          61_104:23_2(i64vec4) Load 65_136
+                              ImageWrite 61_102 79_35 61_104
+          61_105:        25_9 Load 59_10(u1DArray)
+          65_137:   32_7(ptr) AccessChain 59_1 43_2
+          61_106: 23_3(ivec4) Load 65_137
+           79_36: 23_5(ivec2) VectorShuffle 61_106 61_106 0 1
+          65_138:  32_20(ptr) AccessChain 59_1 43_8
+          61_107:23_2(i64vec4) Load 65_138
+                              ImageWrite 61_105 79_36 61_107
+          61_108:       25_10 Load 59_11(uCubeArray)
+          65_139:   32_7(ptr) AccessChain 59_1 43_2
+          61_109: 23_3(ivec4) Load 65_139
+           79_37: 23_4(ivec3) VectorShuffle 61_109 61_109 0 1 2
+          65_140:  32_20(ptr) AccessChain 59_1 43_8
+          61_110:23_2(i64vec4) Load 65_140
+                              ImageWrite 61_108 79_37 61_110
+          61_111:       25_11 Load 59_12(u2DMS)
+          65_141:   32_7(ptr) AccessChain 59_1 43_2
+          61_112: 23_3(ivec4) Load 65_141
+           79_38: 23_5(ivec2) VectorShuffle 61_112 61_112 0 1
+          65_142:   32_3(ptr) AccessChain 59_1 43_2 uint(2)
+          61_113:   21_3(int) Load 65_142
+          65_143:  32_20(ptr) AccessChain 59_1 43_8
+          61_114:23_2(i64vec4) Load 65_143
+                              ImageWrite 61_111 79_38 61_114 Sample 61_113
+          61_115:        25_2 Load 59_3(i3D)
+          65_144:   32_7(ptr) AccessChain 59_1 43_2
+          61_116: 23_3(ivec4) Load 65_144
+           79_39: 23_4(ivec3) VectorShuffle 61_116 61_116 0 1 2
+          65_145:  32_19(ptr) AccessChain 59_1 43_7
+           320_1:30_2(ResType) ImageSparseRead 61_115 79_39
+            81_1:23_1(i64vec4) CompositeExtract 320_1 1
+                              Store 65_145 81_1
+            81_2:   21_3(int) CompositeExtract 320_1 0
+          61_117:        25_4 Load 59_5(i2DArray)
+          65_146:   32_7(ptr) AccessChain 59_1 43_2
+          61_118: 23_3(ivec4) Load 65_146
+           79_40: 23_4(ivec3) VectorShuffle 61_118 61_118 0 1 2
+          65_147:  32_19(ptr) AccessChain 59_1 43_7
+           320_2:30_2(ResType) ImageSparseRead 61_117 79_40
+            81_3:23_1(i64vec4) CompositeExtract 320_2 1
+                              Store 65_147 81_3
+            81_4:   21_3(int) CompositeExtract 320_2 0
+          61_119:        25_5 Load 59_6(i2DRect)
+          65_148:   32_7(ptr) AccessChain 59_1 43_2
+          61_120: 23_3(ivec4) Load 65_148
+           79_41: 23_5(ivec2) VectorShuffle 61_120 61_120 0 1
+          65_149:  32_19(ptr) AccessChain 59_1 43_7
+           320_3:30_2(ResType) ImageSparseRead 61_119 79_41
+            81_5:23_1(i64vec4) CompositeExtract 320_3 1
+                              Store 65_149 81_5
+            81_6:   21_3(int) CompositeExtract 320_3 0
+          61_121:        25_7 Load 59_8(u2D)
+          65_150:   32_7(ptr) AccessChain 59_1 43_2
+          61_122: 23_3(ivec4) Load 65_150
+           79_42: 23_5(ivec2) VectorShuffle 61_122 61_122 0 1
+          65_151:  32_20(ptr) AccessChain 59_1 43_8
+           320_4:30_3(ResType) ImageSparseRead 61_121 79_42
+            81_7:23_2(i64vec4) CompositeExtract 320_4 1
+                              Store 65_151 81_7
+            81_8:   21_3(int) CompositeExtract 320_4 0
+          61_123:        25_8 Load 59_9(uCube)
+          65_152:   32_7(ptr) AccessChain 59_1 43_2
+          61_124: 23_3(ivec4) Load 65_152
+           79_43: 23_4(ivec3) VectorShuffle 61_124 61_124 0 1 2
+          65_153:  32_20(ptr) AccessChain 59_1 43_8
+           320_5:30_3(ResType) ImageSparseRead 61_123 79_43
+            81_9:23_2(i64vec4) CompositeExtract 320_5 1
+                              Store 65_153 81_9
+           81_10:   21_3(int) CompositeExtract 320_5 0
+          61_125:       25_10 Load 59_11(uCubeArray)
+          65_154:   32_7(ptr) AccessChain 59_1 43_2
+          61_126: 23_3(ivec4) Load 65_154
+           79_44: 23_4(ivec3) VectorShuffle 61_126 61_126 0 1 2
+          65_155:  32_20(ptr) AccessChain 59_1 43_8
+           320_6:30_3(ResType) ImageSparseRead 61_125 79_44
+           81_11:23_2(i64vec4) CompositeExtract 320_6 1
+                              Store 65_155 81_11
+           81_12:   21_3(int) CompositeExtract 320_6 0
                               Return
                               FunctionEnd

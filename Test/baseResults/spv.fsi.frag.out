@@ -6,51 +6,51 @@ spv.fsi.frag
                               Capability Shader
                               Capability CapabilityFragmentShaderSampleInterlockEXT
                               Extension  "SPV_EXT_fragment_shader_interlock"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 SampleInterlockOrderedEXT
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 SampleInterlockOrderedEXT
                               Source GLSL 450
                               SourceExtension  "GL_ARB_fragment_shader_interlock"
-                              Name 4  "main"
-                              Name 7  "B1"
-                              MemberName 7(B1) 0  "x"
-                              Name 9  "b1"
-                              Name 17  "im"
-                              Decorate 7(B1) BufferBlock
-                              MemberDecorate 7(B1) 0 Coherent
-                              MemberDecorate 7(B1) 0 Offset 0
-                              Decorate 9(b1) Binding 0
-                              Decorate 9(b1) DescriptorSet 0
-                              Decorate 17(im) Coherent
-                              Decorate 17(im) Binding 1
-                              Decorate 17(im) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-           7(B1):             TypeStruct 6(int)
-               8:             TypePointer Uniform 7(B1)
-           9(b1):      8(ptr) Variable Uniform
-              10:      6(int) Constant 0
-              11:      6(int) Constant 1
-              12:             TypePointer Uniform 6(int)
-              14:             TypeFloat 32
-              15:             TypeImage 14(float) 2D nonsampled format:Rgba32f
-              16:             TypePointer UniformConstant 15
-          17(im):     16(ptr) Variable UniformConstant
-              19:             TypeVector 6(int) 2
-              20:   19(ivec2) ConstantComposite 10 10
-              21:             TypeVector 14(float) 4
-              22:   14(float) Constant 0
-              23:   21(fvec4) ConstantComposite 22 22 22 22
-         4(main):           2 Function None 3
-               5:             Label
+                              Name 54_1  "main"
+                              Name 30_1  "B1"
+                              MemberName 30_1(B1) 0  "x"
+                              Name 59_1  "b1"
+                              Name 59_2  "im"
+                              Decorate 30_1(B1) BufferBlock
+                              MemberDecorate 30_1(B1) 0 Coherent
+                              MemberDecorate 30_1(B1) 0 Offset 0
+                              Decorate 59_1(b1) Binding 0
+                              Decorate 59_1(b1) DescriptorSet 0
+                              Decorate 59_2(im) Coherent
+                              Decorate 59_2(im) Binding 1
+                              Decorate 59_2(im) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+        30_1(B1):             TypeStruct 21_1(int)
+            32_1:             TypePointer Uniform 30_1(B1)
+        59_1(b1):   32_1(ptr) Variable Uniform
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 1
+            32_2:             TypePointer Uniform 21_1(int)
+            22_1:             TypeFloat 32
+            25_1:             TypeImage 22_1(float) 2D nonsampled format:Rgba32f
+            32_3:             TypePointer UniformConstant 25_1
+        59_2(im):   32_3(ptr) Variable UniformConstant
+            23_1:             TypeVector 21_1(int) 2
+            44_1: 23_1(ivec2) ConstantComposite 43_1 43_1
+            23_2:             TypeVector 22_1(float) 4
+            43_3: 22_1(float) Constant 0
+            44_2: 23_2(fvec4) ConstantComposite 43_3 43_3 43_3 43_3
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
                               BeginInvocationInterlockEXT
-              13:     12(ptr) AccessChain 9(b1) 10
-                              Store 13 11
-              18:          15 Load 17(im)
-                              ImageWrite 18 20 23
+            65_1:   32_2(ptr) AccessChain 59_1(b1) 43_1
+                              Store 65_1 43_2
+            61_1:        25_1 Load 59_2(im)
+                              ImageWrite 61_1 44_1 44_2
                               EndInvocationInterlockEXT
                               Return
                               FunctionEnd

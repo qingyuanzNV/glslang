@@ -12,295 +12,295 @@ WARNING: 0:6: '' : all default precisions are highp; use precision statements to
                               Extension  "SPV_KHR_16bit_storage"
                               Extension  "SPV_KHR_physical_storage_buffer"
                               Extension  "SPV_KHR_storage_buffer_storage_class"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_buffer_reference"
                               SourceExtension  "GL_EXT_shader_16bit_storage"
                               SourceExtension  "GL_EXT_shader_8bit_storage"
-                              Name 4  "main"
-                              Name 12  "compare_float(f1;f1;"
-                              Name 10  "a"
-                              Name 11  "b"
-                              Name 19  "compare_vec3(vf3;vf3;"
-                              Name 17  "a"
-                              Name 18  "b"
-                              Name 26  "compare_mat2x3(mf23;mf23;"
-                              Name 24  "a"
-                              Name 25  "b"
-                              Name 34  "compare_ivec2(vi2;vi2;"
-                              Name 32  "a"
-                              Name 33  "b"
-                              Name 42  "compare_uvec3(vu3;vu3;"
-                              Name 40  "a"
-                              Name 41  "b"
-                              Name 46  "compare_float16_t(f1;f1;"
-                              Name 44  "a"
-                              Name 45  "b"
-                              Name 56  "param"
-                              Name 60  "param"
-                              Name 66  "param"
-                              Name 70  "param"
-                              Name 77  "param"
-                              Name 81  "param"
-                              Name 89  "param"
-                              Name 92  "param"
-                              Name 99  "param"
-                              Name 102  "param"
-                              Name 131  "allOk"
-                              Name 139  "PC"
-                              MemberName 139(PC) 0  "blockB"
-                              MemberName 139(PC) 1  "blockC"
-                              MemberName 139(PC) 2  "blockD"
-                              Name 141  "BlockB"
-                              MemberName 141(BlockB) 0  "a"
-                              MemberName 141(BlockB) 1  "b"
-                              Name 142  "BlockC"
-                              MemberName 142(BlockC) 0  "c"
-                              Name 143  "BlockD"
-                              MemberName 143(BlockD) 0  "d"
-                              Name 145  ""
-                              Name 157  "param"
-                              Name 161  "param"
-                              Name 167  "AcBlock"
-                              MemberName 167(AcBlock) 0  "ac_numPassed"
-                              Name 169  ""
-                              Decorate 139(PC) Block
-                              MemberDecorate 139(PC) 0 Offset 0
-                              MemberDecorate 139(PC) 1 Offset 8
-                              MemberDecorate 139(PC) 2 Offset 16
-                              Decorate 141(BlockB) Block
-                              MemberDecorate 141(BlockB) 0 Offset 0
-                              MemberDecorate 141(BlockB) 1 Offset 8
-                              Decorate 142(BlockC) Block
-                              MemberDecorate 142(BlockC) 0 RelaxedPrecision
-                              MemberDecorate 142(BlockC) 0 ColMajor
-                              MemberDecorate 142(BlockC) 0 MatrixStride 16
-                              MemberDecorate 142(BlockC) 0 Offset 0
-                              Decorate 143(BlockD) Block
-                              MemberDecorate 143(BlockD) 0 RelaxedPrecision
-                              MemberDecorate 143(BlockD) 0 Offset 0
-                              Decorate 160 RelaxedPrecision
-                              Decorate 167(AcBlock) Block
-                              MemberDecorate 167(AcBlock) 0 Offset 0
-                              Decorate 169 Binding 0
-                              Decorate 169 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               8:             TypeBool
-               9:             TypeFunction 8(bool) 7(ptr) 7(ptr)
-              14:             TypeVector 6(float) 3
-              15:             TypePointer Function 14(fvec3)
-              16:             TypeFunction 8(bool) 15(ptr) 15(ptr)
-              21:             TypeMatrix 14(fvec3) 2
-              22:             TypePointer Function 21
-              23:             TypeFunction 8(bool) 22(ptr) 22(ptr)
-              28:             TypeInt 32 1
-              29:             TypeVector 28(int) 2
-              30:             TypePointer Function 29(ivec2)
-              31:             TypeFunction 8(bool) 30(ptr) 30(ptr)
-              36:             TypeInt 32 0
-              37:             TypeVector 36(int) 3
-              38:             TypePointer Function 37(ivec3)
-              39:             TypeFunction 8(bool) 38(ptr) 38(ptr)
-              52:    6(float) Constant 1028443341
-              57:     36(int) Constant 0
-              67:     36(int) Constant 1
-              78:     36(int) Constant 2
-              88:     28(int) Constant 0
-              98:     28(int) Constant 1
-             111:             TypeVector 8(bool) 2
-             118:             TypeVector 8(bool) 3
-             130:             TypePointer Function 8(bool)
-             132:     8(bool) ConstantTrue
-                              TypeForwardPointer 136 PhysicalStorageBufferEXT
-                              TypeForwardPointer 137 PhysicalStorageBufferEXT
-                              TypeForwardPointer 138 PhysicalStorageBufferEXT
-         139(PC):             TypeStruct 136 137 138
-             140:             TypeFloat 16
-     141(BlockB):             TypeStruct 140(float16_t) 29(ivec2)
-             136:             TypePointer PhysicalStorageBufferEXT 141(BlockB)
-     142(BlockC):             TypeStruct 21
-             137:             TypePointer PhysicalStorageBufferEXT 142(BlockC)
-     143(BlockD):             TypeStruct 37(ivec3)
-             138:             TypePointer PhysicalStorageBufferEXT 143(BlockD)
-             144:             TypePointer PushConstant 139(PC)
-             145:    144(ptr) Variable PushConstant
-             146:             TypePointer PushConstant 137(ptr)
-             149:    6(float) Constant 3231711232
-             150:    6(float) Constant 1065353216
-             151:    6(float) Constant 3235905536
-             152:   14(fvec3) ConstantComposite 149 150 151
-             153:    6(float) Constant 1073741824
-             154:    6(float) Constant 1090519040
-             155:   14(fvec3) ConstantComposite 150 153 154
-             156:          21 ConstantComposite 152 155
-             158:             TypePointer PhysicalStorageBufferEXT 21
-    167(AcBlock):             TypeStruct 36(int)
-             168:             TypePointer StorageBuffer 167(AcBlock)
-             169:    168(ptr) Variable StorageBuffer
-             170:             TypePointer StorageBuffer 36(int)
-             174:     28(int) Constant 2
-             175:             TypePointer PushConstant 138(ptr)
-             178:     36(int) Constant 8
-             179:     36(int) Constant 5
-             180:   37(ivec3) ConstantComposite 178 67 179
-             181:             TypePointer PhysicalStorageBufferEXT 37(ivec3)
-         4(main):           2 Function None 3
-               5:             Label
-      131(allOk):    130(ptr) Variable Function
-      157(param):     22(ptr) Variable Function
-      161(param):     22(ptr) Variable Function
-                              Store 131(allOk) 132
-             133:     8(bool) Load 131(allOk)
-                              SelectionMerge 135 None
-                              BranchConditional 133 134 135
-             134:               Label
-             147:    146(ptr)   AccessChain 145 98
-             148:    137(ptr)   Load 147
-             159:    158(ptr)   AccessChain 148 88
-             160:          21   Load 159 Aligned 16
-                                Store 157(param) 160
-                                Store 161(param) 156
-             162:     8(bool)   FunctionCall 26(compare_mat2x3(mf23;mf23;) 157(param) 161(param)
-                                Branch 135
-             135:             Label
-             163:     8(bool) Phi 133 5 162 134
-                              Store 131(allOk) 163
-             164:     8(bool) Load 131(allOk)
-                              SelectionMerge 166 None
-                              BranchConditional 164 165 166
-             165:               Label
-             171:    170(ptr)   AccessChain 169 88
-             172:     36(int)   Load 171
-             173:     36(int)   IAdd 172 98
-                                Store 171 173
-                                Branch 166
-             166:             Label
-             176:    175(ptr) AccessChain 145 174
-             177:    138(ptr) Load 176
-             182:    181(ptr) AccessChain 177 88
-                              Store 182 180 Aligned 16
+                              Name 54_1  "main"
+                              Name 54_2  "compare_float(f1;f1;"
+                              Name 55_1  "a"
+                              Name 55_2  "b"
+                              Name 54_3  "compare_vec3(vf3;vf3;"
+                              Name 55_3  "a"
+                              Name 55_4  "b"
+                              Name 54_4  "compare_mat2x3(mf23;mf23;"
+                              Name 55_5  "a"
+                              Name 55_6  "b"
+                              Name 54_5  "compare_ivec2(vi2;vi2;"
+                              Name 55_7  "a"
+                              Name 55_8  "b"
+                              Name 54_6  "compare_uvec3(vu3;vu3;"
+                              Name 55_9  "a"
+                              Name 55_10  "b"
+                              Name 54_7  "compare_float16_t(f1;f1;"
+                              Name 55_11  "a"
+                              Name 55_12  "b"
+                              Name 59_6  "param"
+                              Name 59_7  "param"
+                              Name 59_8  "param"
+                              Name 59_9  "param"
+                              Name 59_10  "param"
+                              Name 59_11  "param"
+                              Name 59_12  "param"
+                              Name 59_13  "param"
+                              Name 59_14  "param"
+                              Name 59_15  "param"
+                              Name 59_3  "allOk"
+                              Name 30_1  "PC"
+                              MemberName 30_1(PC) 0  "blockB"
+                              MemberName 30_1(PC) 1  "blockC"
+                              MemberName 30_1(PC) 2  "blockD"
+                              Name 30_2  "BlockB"
+                              MemberName 30_2(BlockB) 0  "a"
+                              MemberName 30_2(BlockB) 1  "b"
+                              Name 30_3  "BlockC"
+                              MemberName 30_3(BlockC) 0  "c"
+                              Name 30_4  "BlockD"
+                              MemberName 30_4(BlockD) 0  "d"
+                              Name 59_1  ""
+                              Name 59_4  "param"
+                              Name 59_5  "param"
+                              Name 30_5  "AcBlock"
+                              MemberName 30_5(AcBlock) 0  "ac_numPassed"
+                              Name 59_2  ""
+                              Decorate 30_1(PC) Block
+                              MemberDecorate 30_1(PC) 0 Offset 0
+                              MemberDecorate 30_1(PC) 1 Offset 8
+                              MemberDecorate 30_1(PC) 2 Offset 16
+                              Decorate 30_2(BlockB) Block
+                              MemberDecorate 30_2(BlockB) 0 Offset 0
+                              MemberDecorate 30_2(BlockB) 1 Offset 8
+                              Decorate 30_3(BlockC) Block
+                              MemberDecorate 30_3(BlockC) 0 RelaxedPrecision
+                              MemberDecorate 30_3(BlockC) 0 ColMajor
+                              MemberDecorate 30_3(BlockC) 0 MatrixStride 16
+                              MemberDecorate 30_3(BlockC) 0 Offset 0
+                              Decorate 30_4(BlockD) Block
+                              MemberDecorate 30_4(BlockD) 0 RelaxedPrecision
+                              MemberDecorate 30_4(BlockD) 0 Offset 0
+                              Decorate 61_3 RelaxedPrecision
+                              Decorate 30_5(AcBlock) Block
+                              MemberDecorate 30_5(AcBlock) 0 Offset 0
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            20_1:             TypeBool
+            33_2:             TypeFunction 20_1(bool) 32_1(ptr) 32_1(ptr)
+            23_1:             TypeVector 22_1(float) 3
+            32_2:             TypePointer Function 23_1(fvec3)
+            33_3:             TypeFunction 20_1(bool) 32_2(ptr) 32_2(ptr)
+            24_1:             TypeMatrix 23_1(fvec3) 2
+            32_3:             TypePointer Function 24_1
+            33_4:             TypeFunction 20_1(bool) 32_3(ptr) 32_3(ptr)
+            21_1:             TypeInt 32 1
+            23_2:             TypeVector 21_1(int) 2
+            32_4:             TypePointer Function 23_2(ivec2)
+            33_5:             TypeFunction 20_1(bool) 32_4(ptr) 32_4(ptr)
+            21_2:             TypeInt 32 0
+            23_3:             TypeVector 21_2(int) 3
+            32_5:             TypePointer Function 23_3(ivec3)
+            33_6:             TypeFunction 20_1(bool) 32_5(ptr) 32_5(ptr)
+            43_1: 22_1(float) Constant 1028443341
+         uint(0):   21_2(int) Constant 0
+         uint(1):   21_2(int) Constant 1
+         uint(2):   21_2(int) Constant 2
+            43_2:   21_1(int) Constant 0
+            43_3:   21_1(int) Constant 1
+            23_4:             TypeVector 20_1(bool) 2
+            23_5:             TypeVector 20_1(bool) 3
+            32_6:             TypePointer Function 20_1(bool)
+            41_1:  20_1(bool) ConstantTrue
+                              TypeForwardPointer 32_7 PhysicalStorageBufferEXT
+                              TypeForwardPointer 32_8 PhysicalStorageBufferEXT
+                              TypeForwardPointer 32_9 PhysicalStorageBufferEXT
+        30_1(PC):             TypeStruct 32_7 32_8 32_9
+            22_2:             TypeFloat 16
+    30_2(BlockB):             TypeStruct 22_2(float16_t) 23_2(ivec2)
+            32_7:             TypePointer PhysicalStorageBufferEXT 30_2(BlockB)
+    30_3(BlockC):             TypeStruct 24_1
+            32_8:             TypePointer PhysicalStorageBufferEXT 30_3(BlockC)
+    30_4(BlockD):             TypeStruct 23_3(ivec3)
+            32_9:             TypePointer PhysicalStorageBufferEXT 30_4(BlockD)
+           32_10:             TypePointer PushConstant 30_1(PC)
+            59_1:  32_10(ptr) Variable PushConstant
+           32_11:             TypePointer PushConstant 32_8(ptr)
+            43_4: 22_1(float) Constant 3231711232
+            43_5: 22_1(float) Constant 1065353216
+            43_6: 22_1(float) Constant 3235905536
+            44_1: 23_1(fvec3) ConstantComposite 43_4 43_5 43_6
+            43_7: 22_1(float) Constant 1073741824
+            43_8: 22_1(float) Constant 1090519040
+            44_2: 23_1(fvec3) ConstantComposite 43_5 43_7 43_8
+            44_3:        24_1 ConstantComposite 44_1 44_2
+           32_12:             TypePointer PhysicalStorageBufferEXT 24_1
+   30_5(AcBlock):             TypeStruct 21_2(int)
+           32_13:             TypePointer StorageBuffer 30_5(AcBlock)
+            59_2:  32_13(ptr) Variable StorageBuffer
+           32_14:             TypePointer StorageBuffer 21_2(int)
+            43_9:   21_1(int) Constant 2
+           32_15:             TypePointer PushConstant 32_9(ptr)
+         uint(8):   21_2(int) Constant 8
+         uint(5):   21_2(int) Constant 5
+            44_4: 23_3(ivec3) ConstantComposite uint(8) uint(1) uint(5)
+           32_16:             TypePointer PhysicalStorageBufferEXT 23_3(ivec3)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(allOk):   32_6(ptr) Variable Function
+     59_4(param):   32_3(ptr) Variable Function
+     59_5(param):   32_3(ptr) Variable Function
+                              Store 59_3(allOk) 41_1
+            61_1:  20_1(bool) Load 59_3(allOk)
+                              SelectionMerge 248_3 None
+                              BranchConditional 61_1 248_2 248_3
+           248_2:               Label
+            65_1:  32_11(ptr)   AccessChain 59_1 43_3
+            61_2:   32_8(ptr)   Load 65_1
+            65_2:  32_12(ptr)   AccessChain 61_2 43_2
+            61_3:        24_1   Load 65_2 Aligned 16
+                                Store 59_4(param) 61_3
+                                Store 59_5(param) 44_3
+            57_1:  20_1(bool)   FunctionCall 54_4(compare_mat2x3(mf23;mf23;) 59_4(param) 59_5(param)
+                                Branch 248_3
+           248_3:             Label
+           245_1:  20_1(bool) Phi 61_1 248_1 57_1 248_2
+                              Store 59_3(allOk) 245_1
+            61_4:  20_1(bool) Load 59_3(allOk)
+                              SelectionMerge 248_5 None
+                              BranchConditional 61_4 248_4 248_5
+           248_4:               Label
+            65_3:  32_14(ptr)   AccessChain 59_2 43_2
+            61_5:   21_2(int)   Load 65_3
+           128_1:   21_2(int)   IAdd 61_5 43_3
+                                Store 65_3 128_1
+                                Branch 248_5
+           248_5:             Label
+            65_4:  32_15(ptr) AccessChain 59_1 43_9
+            61_6:   32_9(ptr) Load 65_4
+            65_5:  32_16(ptr) AccessChain 61_6 43_2
+                              Store 65_5 44_4 Aligned 16
                               Return
                               FunctionEnd
-12(compare_float(f1;f1;):     8(bool) Function None 9
-           10(a):      7(ptr) FunctionParameter
-           11(b):      7(ptr) FunctionParameter
-              13:             Label
-              48:    6(float) Load 10(a)
-              49:    6(float) Load 11(b)
-              50:    6(float) FSub 48 49
-              51:    6(float) ExtInst 1(GLSL.std.450) 4(FAbs) 50
-              53:     8(bool) FOrdLessThan 51 52
-                              ReturnValue 53
+54_2(compare_float(f1;f1;):  20_1(bool) Function None 33_2
+         55_1(a):   32_1(ptr) FunctionParameter
+         55_2(b):   32_1(ptr) FunctionParameter
+           248_6:             Label
+            61_7: 22_1(float) Load 55_1(a)
+            61_8: 22_1(float) Load 55_2(b)
+           131_1: 22_1(float) FSub 61_7 61_8
+           1-4_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 4(FAbs) 131_1
+           184_1:  20_1(bool) FOrdLessThan 1-4_1 43_1
+                              ReturnValue 184_1
                               FunctionEnd
-19(compare_vec3(vf3;vf3;):     8(bool) Function None 16
-           17(a):     15(ptr) FunctionParameter
-           18(b):     15(ptr) FunctionParameter
-              20:             Label
-       56(param):      7(ptr) Variable Function
-       60(param):      7(ptr) Variable Function
-       66(param):      7(ptr) Variable Function
-       70(param):      7(ptr) Variable Function
-       77(param):      7(ptr) Variable Function
-       81(param):      7(ptr) Variable Function
-              58:      7(ptr) AccessChain 17(a) 57
-              59:    6(float) Load 58
-                              Store 56(param) 59
-              61:      7(ptr) AccessChain 18(b) 57
-              62:    6(float) Load 61
-                              Store 60(param) 62
-              63:     8(bool) FunctionCall 12(compare_float(f1;f1;) 56(param) 60(param)
-                              SelectionMerge 65 None
-                              BranchConditional 63 64 65
-              64:               Label
-              68:      7(ptr)   AccessChain 17(a) 67
-              69:    6(float)   Load 68
-                                Store 66(param) 69
-              71:      7(ptr)   AccessChain 18(b) 67
-              72:    6(float)   Load 71
-                                Store 70(param) 72
-              73:     8(bool)   FunctionCall 12(compare_float(f1;f1;) 66(param) 70(param)
-                                Branch 65
-              65:             Label
-              74:     8(bool) Phi 63 20 73 64
-                              SelectionMerge 76 None
-                              BranchConditional 74 75 76
-              75:               Label
-              79:      7(ptr)   AccessChain 17(a) 78
-              80:    6(float)   Load 79
-                                Store 77(param) 80
-              82:      7(ptr)   AccessChain 18(b) 78
-              83:    6(float)   Load 82
-                                Store 81(param) 83
-              84:     8(bool)   FunctionCall 12(compare_float(f1;f1;) 77(param) 81(param)
-                                Branch 76
-              76:             Label
-              85:     8(bool) Phi 74 65 84 75
-                              ReturnValue 85
+54_3(compare_vec3(vf3;vf3;):  20_1(bool) Function None 33_3
+         55_3(a):   32_2(ptr) FunctionParameter
+         55_4(b):   32_2(ptr) FunctionParameter
+           248_7:             Label
+     59_6(param):   32_1(ptr) Variable Function
+     59_7(param):   32_1(ptr) Variable Function
+     59_8(param):   32_1(ptr) Variable Function
+     59_9(param):   32_1(ptr) Variable Function
+    59_10(param):   32_1(ptr) Variable Function
+    59_11(param):   32_1(ptr) Variable Function
+            65_6:   32_1(ptr) AccessChain 55_3(a) uint(0)
+            61_9: 22_1(float) Load 65_6
+                              Store 59_6(param) 61_9
+            65_7:   32_1(ptr) AccessChain 55_4(b) uint(0)
+           61_10: 22_1(float) Load 65_7
+                              Store 59_7(param) 61_10
+            57_2:  20_1(bool) FunctionCall 54_2(compare_float(f1;f1;) 59_6(param) 59_7(param)
+                              SelectionMerge 248_9 None
+                              BranchConditional 57_2 248_8 248_9
+           248_8:               Label
+            65_8:   32_1(ptr)   AccessChain 55_3(a) uint(1)
+           61_11: 22_1(float)   Load 65_8
+                                Store 59_8(param) 61_11
+            65_9:   32_1(ptr)   AccessChain 55_4(b) uint(1)
+           61_12: 22_1(float)   Load 65_9
+                                Store 59_9(param) 61_12
+            57_3:  20_1(bool)   FunctionCall 54_2(compare_float(f1;f1;) 59_8(param) 59_9(param)
+                                Branch 248_9
+           248_9:             Label
+           245_2:  20_1(bool) Phi 57_2 248_7 57_3 248_8
+                              SelectionMerge 248_11 None
+                              BranchConditional 245_2 248_10 248_11
+          248_10:               Label
+           65_10:   32_1(ptr)   AccessChain 55_3(a) uint(2)
+           61_13: 22_1(float)   Load 65_10
+                                Store 59_10(param) 61_13
+           65_11:   32_1(ptr)   AccessChain 55_4(b) uint(2)
+           61_14: 22_1(float)   Load 65_11
+                                Store 59_11(param) 61_14
+            57_4:  20_1(bool)   FunctionCall 54_2(compare_float(f1;f1;) 59_10(param) 59_11(param)
+                                Branch 248_11
+          248_11:             Label
+           245_3:  20_1(bool) Phi 245_2 248_9 57_4 248_10
+                              ReturnValue 245_3
                               FunctionEnd
-26(compare_mat2x3(mf23;mf23;):     8(bool) Function None 23
-           24(a):     22(ptr) FunctionParameter
-           25(b):     22(ptr) FunctionParameter
-              27:             Label
-       89(param):     15(ptr) Variable Function
-       92(param):     15(ptr) Variable Function
-       99(param):     15(ptr) Variable Function
-      102(param):     15(ptr) Variable Function
-              90:     15(ptr) AccessChain 24(a) 88
-              91:   14(fvec3) Load 90
-                              Store 89(param) 91
-              93:     15(ptr) AccessChain 25(b) 88
-              94:   14(fvec3) Load 93
-                              Store 92(param) 94
-              95:     8(bool) FunctionCall 19(compare_vec3(vf3;vf3;) 89(param) 92(param)
-                              SelectionMerge 97 None
-                              BranchConditional 95 96 97
-              96:               Label
-             100:     15(ptr)   AccessChain 24(a) 98
-             101:   14(fvec3)   Load 100
-                                Store 99(param) 101
-             103:     15(ptr)   AccessChain 25(b) 98
-             104:   14(fvec3)   Load 103
-                                Store 102(param) 104
-             105:     8(bool)   FunctionCall 19(compare_vec3(vf3;vf3;) 99(param) 102(param)
-                                Branch 97
-              97:             Label
-             106:     8(bool) Phi 95 27 105 96
-                              ReturnValue 106
+54_4(compare_mat2x3(mf23;mf23;):  20_1(bool) Function None 33_4
+         55_5(a):   32_3(ptr) FunctionParameter
+         55_6(b):   32_3(ptr) FunctionParameter
+          248_12:             Label
+    59_12(param):   32_2(ptr) Variable Function
+    59_13(param):   32_2(ptr) Variable Function
+    59_14(param):   32_2(ptr) Variable Function
+    59_15(param):   32_2(ptr) Variable Function
+           65_12:   32_2(ptr) AccessChain 55_5(a) 43_2
+           61_15: 23_1(fvec3) Load 65_12
+                              Store 59_12(param) 61_15
+           65_13:   32_2(ptr) AccessChain 55_6(b) 43_2
+           61_16: 23_1(fvec3) Load 65_13
+                              Store 59_13(param) 61_16
+            57_5:  20_1(bool) FunctionCall 54_3(compare_vec3(vf3;vf3;) 59_12(param) 59_13(param)
+                              SelectionMerge 248_14 None
+                              BranchConditional 57_5 248_13 248_14
+          248_13:               Label
+           65_14:   32_2(ptr)   AccessChain 55_5(a) 43_3
+           61_17: 23_1(fvec3)   Load 65_14
+                                Store 59_14(param) 61_17
+           65_15:   32_2(ptr)   AccessChain 55_6(b) 43_3
+           61_18: 23_1(fvec3)   Load 65_15
+                                Store 59_15(param) 61_18
+            57_6:  20_1(bool)   FunctionCall 54_3(compare_vec3(vf3;vf3;) 59_14(param) 59_15(param)
+                                Branch 248_14
+          248_14:             Label
+           245_4:  20_1(bool) Phi 57_5 248_12 57_6 248_13
+                              ReturnValue 245_4
                               FunctionEnd
-34(compare_ivec2(vi2;vi2;):     8(bool) Function None 31
-           32(a):     30(ptr) FunctionParameter
-           33(b):     30(ptr) FunctionParameter
-              35:             Label
-             109:   29(ivec2) Load 32(a)
-             110:   29(ivec2) Load 33(b)
-             112:  111(bvec2) IEqual 109 110
-             113:     8(bool) All 112
-                              ReturnValue 113
+54_5(compare_ivec2(vi2;vi2;):  20_1(bool) Function None 33_5
+         55_7(a):   32_4(ptr) FunctionParameter
+         55_8(b):   32_4(ptr) FunctionParameter
+          248_15:             Label
+           61_19: 23_2(ivec2) Load 55_7(a)
+           61_20: 23_2(ivec2) Load 55_8(b)
+           170_1: 23_4(bvec2) IEqual 61_19 61_20
+           155_1:  20_1(bool) All 170_1
+                              ReturnValue 155_1
                               FunctionEnd
-42(compare_uvec3(vu3;vu3;):     8(bool) Function None 39
-           40(a):     38(ptr) FunctionParameter
-           41(b):     38(ptr) FunctionParameter
-              43:             Label
-             116:   37(ivec3) Load 40(a)
-             117:   37(ivec3) Load 41(b)
-             119:  118(bvec3) IEqual 116 117
-             120:     8(bool) All 119
-                              ReturnValue 120
+54_6(compare_uvec3(vu3;vu3;):  20_1(bool) Function None 33_6
+         55_9(a):   32_5(ptr) FunctionParameter
+        55_10(b):   32_5(ptr) FunctionParameter
+          248_16:             Label
+           61_21: 23_3(ivec3) Load 55_9(a)
+           61_22: 23_3(ivec3) Load 55_10(b)
+           170_2: 23_5(bvec3) IEqual 61_21 61_22
+           155_2:  20_1(bool) All 170_2
+                              ReturnValue 155_2
                               FunctionEnd
-46(compare_float16_t(f1;f1;):     8(bool) Function None 9
-           44(a):      7(ptr) FunctionParameter
-           45(b):      7(ptr) FunctionParameter
-              47:             Label
-             123:    6(float) Load 44(a)
-             124:    6(float) Load 45(b)
-             125:    6(float) FSub 123 124
-             126:    6(float) ExtInst 1(GLSL.std.450) 4(FAbs) 125
-             127:     8(bool) FOrdLessThan 126 52
-                              ReturnValue 127
+54_7(compare_float16_t(f1;f1;):  20_1(bool) Function None 33_2
+        55_11(a):   32_1(ptr) FunctionParameter
+        55_12(b):   32_1(ptr) FunctionParameter
+          248_17:             Label
+           61_23: 22_1(float) Load 55_11(a)
+           61_24: 22_1(float) Load 55_12(b)
+           131_2: 22_1(float) FSub 61_23 61_24
+           1-4_2: 22_1(float) ExtInst 11_1(GLSL.std.450) 4(FAbs) 131_2
+           184_2:  20_1(bool) FOrdLessThan 1-4_2 43_1
+                              ReturnValue 184_2
                               FunctionEnd

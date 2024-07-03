@@ -350,250 +350,250 @@ gl_FragCoord origin is upper left
 
                               Capability Shader
                               Capability Sampled1D
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 134
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_9
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "TestFn1("
-                              Name 22  "TestFn2(t11[3];p1[3];"
-                              Name 20  "l_tex"
-                              Name 21  "l_samp"
-                              Name 24  "PS_OUTPUT"
-                              MemberName 24(PS_OUTPUT) 0  "color"
-                              Name 28  "@main(struct-PS_OUTPUT-vf41;"
-                              Name 27  "ps_output"
-                              Name 34  "not_flattened_a"
-                              Name 42  "g_tex[1]"
-                              Name 45  "g_samp[1]"
-                              Name 63  "local_sampler_array"
-                              Name 65  "g_samp[0]"
-                              Name 70  "g_samp[2]"
-                              Name 73  "local_texture_array"
-                              Name 74  "g_tex[0]"
-                              Name 79  "g_tex[2]"
-                              Name 85  "local_float_array"
-                              Name 91  "$Global"
-                              MemberName 91($Global) 0  "g_mats"
-                              MemberName 91($Global) 1  "g_mats_explicit"
-                              MemberName 91($Global) 2  "g_floats"
-                              Name 93  ""
-                              Name 107  "aggShadow"
-                              Name 114  "aggShadow"
-                              Name 121  "param"
-                              Name 123  "param"
-                              Name 129  "ps_output"
-                              Name 130  "param"
-                              Name 134  "ps_output.color"
-                              Name 137  "g_tex_explicit[0]"
-                              Name 138  "g_tex_explicit[1]"
-                              Name 139  "g_tex_explicit[2]"
-                              Name 140  "g_samp_explicit[0]"
-                              Name 141  "g_samp_explicit[1]"
-                              Name 142  "g_samp_explicit[2]"
-                              Decorate 42(g_tex[1]) Binding 4
-                              Decorate 42(g_tex[1]) DescriptorSet 0
-                              Decorate 45(g_samp[1]) Binding 10
-                              Decorate 45(g_samp[1]) DescriptorSet 0
-                              Decorate 65(g_samp[0]) Binding 9
-                              Decorate 65(g_samp[0]) DescriptorSet 0
-                              Decorate 70(g_samp[2]) Binding 11
-                              Decorate 70(g_samp[2]) DescriptorSet 0
-                              Decorate 74(g_tex[0]) Binding 0
-                              Decorate 74(g_tex[0]) DescriptorSet 0
-                              Decorate 79(g_tex[2]) Binding 8
-                              Decorate 79(g_tex[2]) DescriptorSet 0
-                              Decorate 88 ArrayStride 48
-                              Decorate 89 ArrayStride 48
-                              Decorate 90 ArrayStride 16
-                              Decorate 91($Global) Block
-                              MemberDecorate 91($Global) 0 RowMajor
-                              MemberDecorate 91($Global) 0 MatrixStride 16
-                              MemberDecorate 91($Global) 0 Offset 0
-                              MemberDecorate 91($Global) 1 RowMajor
-                              MemberDecorate 91($Global) 1 MatrixStride 16
-                              MemberDecorate 91($Global) 1 Offset 192
-                              MemberDecorate 91($Global) 2 Offset 384
-                              Decorate 93 Binding 12
-                              Decorate 93 DescriptorSet 0
-                              Decorate 134(ps_output.color) Location 0
-                              Decorate 137(g_tex_explicit[0]) Binding 1
-                              Decorate 137(g_tex_explicit[0]) DescriptorSet 0
-                              Decorate 138(g_tex_explicit[1]) Binding 2
-                              Decorate 138(g_tex_explicit[1]) DescriptorSet 0
-                              Decorate 139(g_tex_explicit[2]) Binding 3
-                              Decorate 139(g_tex_explicit[2]) DescriptorSet 0
-                              Decorate 140(g_samp_explicit[0]) Binding 5
-                              Decorate 140(g_samp_explicit[0]) DescriptorSet 0
-                              Decorate 141(g_samp_explicit[1]) Binding 6
-                              Decorate 141(g_samp_explicit[1]) DescriptorSet 0
-                              Decorate 142(g_samp_explicit[2]) Binding 7
-                              Decorate 142(g_samp_explicit[2]) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypeImage 6(float) 1D sampled format:Unknown
-              12:             TypeInt 32 0
-              13:     12(int) Constant 3
-              14:             TypeArray 11 13
-              15:             TypePointer Function 14
-              16:             TypeSampler
-              17:             TypeArray 16 13
-              18:             TypePointer Function 17
-              19:             TypeFunction 7(fvec4) 15(ptr) 18(ptr)
-   24(PS_OUTPUT):             TypeStruct 7(fvec4)
-              25:             TypePointer Function 24(PS_OUTPUT)
-              26:             TypeFunction 2 25(ptr)
-              30:             TypeInt 32 1
-              31:     12(int) Constant 5
-              32:             TypeArray 30(int) 31
-              33:             TypePointer Private 32
-34(not_flattened_a):     33(ptr) Variable Private
-              35:     30(int) Constant 1
-              36:     30(int) Constant 2
-              37:     30(int) Constant 3
-              38:     30(int) Constant 4
-              39:     30(int) Constant 5
-              40:          32 ConstantComposite 35 36 37 38 39
-              41:             TypePointer UniformConstant 11
-    42(g_tex[1]):     41(ptr) Variable UniformConstant
-              44:             TypePointer UniformConstant 16
-   45(g_samp[1]):     44(ptr) Variable UniformConstant
-              47:             TypeSampledImage 11
-              49:    6(float) Constant 1045220557
-              53:             TypePointer Function 11
-              56:             TypePointer Function 16
-              64:     30(int) Constant 0
-   65(g_samp[0]):     44(ptr) Variable UniformConstant
-   70(g_samp[2]):     44(ptr) Variable UniformConstant
-    74(g_tex[0]):     41(ptr) Variable UniformConstant
-    79(g_tex[2]):     41(ptr) Variable UniformConstant
-              82:     12(int) Constant 4
-              83:             TypeArray 6(float) 82
-              84:             TypePointer Function 83
-              86:             TypeVector 6(float) 3
-              87:             TypeMatrix 86(fvec3) 3
-              88:             TypeArray 87 82
-              89:             TypeArray 87 82
-              90:             TypeArray 6(float) 82
-     91($Global):             TypeStruct 88 89 90
-              92:             TypePointer Uniform 91($Global)
-              93:     92(ptr) Variable Uniform
-              94:             TypePointer Uniform 90
-              98:             TypePointer Function 6(float)
-             127:             TypePointer Function 7(fvec4)
-             133:             TypePointer Output 7(fvec4)
-134(ps_output.color):    133(ptr) Variable Output
-137(g_tex_explicit[0]):     41(ptr) Variable UniformConstant
-138(g_tex_explicit[1]):     41(ptr) Variable UniformConstant
-139(g_tex_explicit[2]):     41(ptr) Variable UniformConstant
-140(g_samp_explicit[0]):     44(ptr) Variable UniformConstant
-141(g_samp_explicit[1]):     44(ptr) Variable UniformConstant
-142(g_samp_explicit[2]):     44(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-  129(ps_output):     25(ptr) Variable Function
-      130(param):     25(ptr) Variable Function
-                              Store 34(not_flattened_a) 40
-             131:           2 FunctionCall 28(@main(struct-PS_OUTPUT-vf41;) 130(param)
-             132:24(PS_OUTPUT) Load 130(param)
-                              Store 129(ps_output) 132
-             135:    127(ptr) AccessChain 129(ps_output) 64
-             136:    7(fvec4) Load 135
-                              Store 134(ps_output.color) 136
+                              Name 54_1  "main"
+                              Name 54_2  "TestFn1("
+                              Name 54_3  "TestFn2(t11[3];p1[3];"
+                              Name 55_1  "l_tex"
+                              Name 55_2  "l_samp"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "color"
+                              Name 54_4  "@main(struct-PS_OUTPUT-vf41;"
+                              Name 55_3  "ps_output"
+                              Name 59_1  "not_flattened_a"
+                              Name 59_2  "g_tex[1]"
+                              Name 59_3  "g_samp[1]"
+                              Name 59_18  "local_sampler_array"
+                              Name 59_4  "g_samp[0]"
+                              Name 59_5  "g_samp[2]"
+                              Name 59_19  "local_texture_array"
+                              Name 59_6  "g_tex[0]"
+                              Name 59_7  "g_tex[2]"
+                              Name 59_20  "local_float_array"
+                              Name 30_2  "$Global"
+                              MemberName 30_2($Global) 0  "g_mats"
+                              MemberName 30_2($Global) 1  "g_mats_explicit"
+                              MemberName 30_2($Global) 2  "g_floats"
+                              Name 59_8  ""
+                              Name 59_21  "aggShadow"
+                              Name 59_22  "aggShadow"
+                              Name 59_23  "param"
+                              Name 59_24  "param"
+                              Name 59_16  "ps_output"
+                              Name 59_17  "param"
+                              Name 59_9  "ps_output.color"
+                              Name 59_10  "g_tex_explicit[0]"
+                              Name 59_11  "g_tex_explicit[1]"
+                              Name 59_12  "g_tex_explicit[2]"
+                              Name 59_13  "g_samp_explicit[0]"
+                              Name 59_14  "g_samp_explicit[1]"
+                              Name 59_15  "g_samp_explicit[2]"
+                              Decorate 59_2(g_tex[1]) Binding 4
+                              Decorate 59_2(g_tex[1]) DescriptorSet 0
+                              Decorate 59_3(g_samp[1]) Binding 10
+                              Decorate 59_3(g_samp[1]) DescriptorSet 0
+                              Decorate 59_4(g_samp[0]) Binding 9
+                              Decorate 59_4(g_samp[0]) DescriptorSet 0
+                              Decorate 59_5(g_samp[2]) Binding 11
+                              Decorate 59_5(g_samp[2]) DescriptorSet 0
+                              Decorate 59_6(g_tex[0]) Binding 0
+                              Decorate 59_6(g_tex[0]) DescriptorSet 0
+                              Decorate 59_7(g_tex[2]) Binding 8
+                              Decorate 59_7(g_tex[2]) DescriptorSet 0
+                              Decorate 28_5 ArrayStride 48
+                              Decorate 28_6 ArrayStride 48
+                              Decorate 28_7 ArrayStride 16
+                              Decorate 30_2($Global) Block
+                              MemberDecorate 30_2($Global) 0 RowMajor
+                              MemberDecorate 30_2($Global) 0 MatrixStride 16
+                              MemberDecorate 30_2($Global) 0 Offset 0
+                              MemberDecorate 30_2($Global) 1 RowMajor
+                              MemberDecorate 30_2($Global) 1 MatrixStride 16
+                              MemberDecorate 30_2($Global) 1 Offset 192
+                              MemberDecorate 30_2($Global) 2 Offset 384
+                              Decorate 59_8 Binding 12
+                              Decorate 59_8 DescriptorSet 0
+                              Decorate 59_9(ps_output.color) Location 0
+                              Decorate 59_10(g_tex_explicit[0]) Binding 1
+                              Decorate 59_10(g_tex_explicit[0]) DescriptorSet 0
+                              Decorate 59_11(g_tex_explicit[1]) Binding 2
+                              Decorate 59_11(g_tex_explicit[1]) DescriptorSet 0
+                              Decorate 59_12(g_tex_explicit[2]) Binding 3
+                              Decorate 59_12(g_tex_explicit[2]) DescriptorSet 0
+                              Decorate 59_13(g_samp_explicit[0]) Binding 5
+                              Decorate 59_13(g_samp_explicit[0]) DescriptorSet 0
+                              Decorate 59_14(g_samp_explicit[1]) Binding 6
+                              Decorate 59_14(g_samp_explicit[1]) DescriptorSet 0
+                              Decorate 59_15(g_samp_explicit[2]) Binding 7
+                              Decorate 59_15(g_samp_explicit[2]) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            25_1:             TypeImage 22_1(float) 1D sampled format:Unknown
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 25_1 uint(3)
+            32_1:             TypePointer Function 28_1
+            26_1:             TypeSampler
+            28_2:             TypeArray 26_1 uint(3)
+            32_2:             TypePointer Function 28_2
+            33_3:             TypeFunction 23_1(fvec4) 32_1(ptr) 32_2(ptr)
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4)
+            32_3:             TypePointer Function 30_1(PS_OUTPUT)
+            33_4:             TypeFunction 19_1 32_3(ptr)
+            21_2:             TypeInt 32 1
+         uint(5):   21_1(int) Constant 5
+            28_3:             TypeArray 21_2(int) uint(5)
+            32_4:             TypePointer Private 28_3
+59_1(not_flattened_a):   32_4(ptr) Variable Private
+            43_1:   21_2(int) Constant 1
+            43_2:   21_2(int) Constant 2
+            43_3:   21_2(int) Constant 3
+            43_4:   21_2(int) Constant 4
+            43_5:   21_2(int) Constant 5
+            44_1:        28_3 ConstantComposite 43_1 43_2 43_3 43_4 43_5
+            32_5:             TypePointer UniformConstant 25_1
+  59_2(g_tex[1]):   32_5(ptr) Variable UniformConstant
+            32_6:             TypePointer UniformConstant 26_1
+ 59_3(g_samp[1]):   32_6(ptr) Variable UniformConstant
+            27_1:             TypeSampledImage 25_1
+            43_6: 22_1(float) Constant 1045220557
+            32_7:             TypePointer Function 25_1
+            32_8:             TypePointer Function 26_1
+            43_7:   21_2(int) Constant 0
+ 59_4(g_samp[0]):   32_6(ptr) Variable UniformConstant
+ 59_5(g_samp[2]):   32_6(ptr) Variable UniformConstant
+  59_6(g_tex[0]):   32_5(ptr) Variable UniformConstant
+  59_7(g_tex[2]):   32_5(ptr) Variable UniformConstant
+         uint(4):   21_1(int) Constant 4
+            28_4:             TypeArray 22_1(float) uint(4)
+            32_9:             TypePointer Function 28_4
+            23_2:             TypeVector 22_1(float) 3
+            24_1:             TypeMatrix 23_2(fvec3) 3
+            28_5:             TypeArray 24_1 uint(4)
+            28_6:             TypeArray 24_1 uint(4)
+            28_7:             TypeArray 22_1(float) uint(4)
+   30_2($Global):             TypeStruct 28_5 28_6 28_7
+           32_10:             TypePointer Uniform 30_2($Global)
+            59_8:  32_10(ptr) Variable Uniform
+           32_11:             TypePointer Uniform 28_7
+           32_12:             TypePointer Function 22_1(float)
+           32_13:             TypePointer Function 23_1(fvec4)
+           32_14:             TypePointer Output 23_1(fvec4)
+59_9(ps_output.color):  32_14(ptr) Variable Output
+59_10(g_tex_explicit[0]):   32_5(ptr) Variable UniformConstant
+59_11(g_tex_explicit[1]):   32_5(ptr) Variable UniformConstant
+59_12(g_tex_explicit[2]):   32_5(ptr) Variable UniformConstant
+59_13(g_samp_explicit[0]):   32_6(ptr) Variable UniformConstant
+59_14(g_samp_explicit[1]):   32_6(ptr) Variable UniformConstant
+59_15(g_samp_explicit[2]):   32_6(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_16(ps_output):   32_3(ptr) Variable Function
+    59_17(param):   32_3(ptr) Variable Function
+                              Store 59_1(not_flattened_a) 44_1
+            57_1:        19_1 FunctionCall 54_4(@main(struct-PS_OUTPUT-vf41;) 59_17(param)
+            61_1:30_1(PS_OUTPUT) Load 59_17(param)
+                              Store 59_16(ps_output) 61_1
+            65_1:  32_13(ptr) AccessChain 59_16(ps_output) 43_7
+            61_2: 23_1(fvec4) Load 65_1
+                              Store 59_9(ps_output.color) 61_2
                               Return
                               FunctionEnd
-     9(TestFn1():    7(fvec4) Function None 8
-              10:             Label
-              43:          11 Load 42(g_tex[1])
-              46:          16 Load 45(g_samp[1])
-              48:          47 SampledImage 43 46
-              50:    7(fvec4) ImageSampleImplicitLod 48 49
-                              ReturnValue 50
+  54_2(TestFn1(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+            61_3:        25_1 Load 59_2(g_tex[1])
+            61_4:        26_1 Load 59_3(g_samp[1])
+            86_1:        27_1 SampledImage 61_3 61_4
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 86_1 43_6
+                              ReturnValue 87_1
                               FunctionEnd
-22(TestFn2(t11[3];p1[3];):    7(fvec4) Function None 19
-       20(l_tex):     15(ptr) FunctionParameter
-      21(l_samp):     18(ptr) FunctionParameter
-              23:             Label
-              54:     53(ptr) AccessChain 20(l_tex) 36
-              55:          11 Load 54
-              57:     56(ptr) AccessChain 21(l_samp) 36
-              58:          16 Load 57
-              59:          47 SampledImage 55 58
-              60:    7(fvec4) ImageSampleImplicitLod 59 49
-                              ReturnValue 60
+54_3(TestFn2(t11[3];p1[3];): 23_1(fvec4) Function None 33_3
+     55_1(l_tex):   32_1(ptr) FunctionParameter
+    55_2(l_samp):   32_2(ptr) FunctionParameter
+           248_3:             Label
+            65_2:   32_7(ptr) AccessChain 55_1(l_tex) 43_2
+            61_5:        25_1 Load 65_2
+            65_3:   32_8(ptr) AccessChain 55_2(l_samp) 43_2
+            61_6:        26_1 Load 65_3
+            86_2:        27_1 SampledImage 61_5 61_6
+            87_2: 23_1(fvec4) ImageSampleImplicitLod 86_2 43_6
+                              ReturnValue 87_2
                               FunctionEnd
-28(@main(struct-PS_OUTPUT-vf41;):           2 Function None 26
-   27(ps_output):     25(ptr) FunctionParameter
-              29:             Label
-63(local_sampler_array):     18(ptr) Variable Function
-73(local_texture_array):     15(ptr) Variable Function
-85(local_float_array):     84(ptr) Variable Function
-  107(aggShadow):     15(ptr) Variable Function
-  114(aggShadow):     18(ptr) Variable Function
-      121(param):     15(ptr) Variable Function
-      123(param):     18(ptr) Variable Function
-              66:          16 Load 65(g_samp[0])
-              67:     56(ptr) AccessChain 63(local_sampler_array) 64
-                              Store 67 66
-              68:          16 Load 45(g_samp[1])
-              69:     56(ptr) AccessChain 63(local_sampler_array) 35
-                              Store 69 68
-              71:          16 Load 70(g_samp[2])
-              72:     56(ptr) AccessChain 63(local_sampler_array) 36
-                              Store 72 71
-              75:          11 Load 74(g_tex[0])
-              76:     53(ptr) AccessChain 73(local_texture_array) 64
-                              Store 76 75
-              77:          11 Load 42(g_tex[1])
-              78:     53(ptr) AccessChain 73(local_texture_array) 35
-                              Store 78 77
-              80:          11 Load 79(g_tex[2])
-              81:     53(ptr) AccessChain 73(local_texture_array) 36
-                              Store 81 80
-              95:     94(ptr) AccessChain 93 36
-              96:          90 Load 95
-              97:    6(float) CompositeExtract 96 0
-              99:     98(ptr) AccessChain 85(local_float_array) 64
-                              Store 99 97
-             100:    6(float) CompositeExtract 96 1
-             101:     98(ptr) AccessChain 85(local_float_array) 35
-                              Store 101 100
-             102:    6(float) CompositeExtract 96 2
-             103:     98(ptr) AccessChain 85(local_float_array) 36
-                              Store 103 102
-             104:    6(float) CompositeExtract 96 3
-             105:     98(ptr) AccessChain 85(local_float_array) 37
-                              Store 105 104
-             106:    7(fvec4) FunctionCall 9(TestFn1()
-             108:          11 Load 74(g_tex[0])
-             109:     53(ptr) AccessChain 107(aggShadow) 64
-                              Store 109 108
-             110:          11 Load 42(g_tex[1])
-             111:     53(ptr) AccessChain 107(aggShadow) 35
-                              Store 111 110
-             112:          11 Load 79(g_tex[2])
-             113:     53(ptr) AccessChain 107(aggShadow) 36
-                              Store 113 112
-             115:          16 Load 65(g_samp[0])
-             116:     56(ptr) AccessChain 114(aggShadow) 64
-                              Store 116 115
-             117:          16 Load 45(g_samp[1])
-             118:     56(ptr) AccessChain 114(aggShadow) 35
-                              Store 118 117
-             119:          16 Load 70(g_samp[2])
-             120:     56(ptr) AccessChain 114(aggShadow) 36
-                              Store 120 119
-             122:          14 Load 107(aggShadow)
-                              Store 121(param) 122
-             124:          17 Load 114(aggShadow)
-                              Store 123(param) 124
-             125:    7(fvec4) FunctionCall 22(TestFn2(t11[3];p1[3];) 121(param) 123(param)
-             126:    7(fvec4) FAdd 106 125
-             128:    127(ptr) AccessChain 27(ps_output) 64
-                              Store 128 126
+54_4(@main(struct-PS_OUTPUT-vf41;):        19_1 Function None 33_4
+ 55_3(ps_output):   32_3(ptr) FunctionParameter
+           248_4:             Label
+59_18(local_sampler_array):   32_2(ptr) Variable Function
+59_19(local_texture_array):   32_1(ptr) Variable Function
+59_20(local_float_array):   32_9(ptr) Variable Function
+59_21(aggShadow):   32_1(ptr) Variable Function
+59_22(aggShadow):   32_2(ptr) Variable Function
+    59_23(param):   32_1(ptr) Variable Function
+    59_24(param):   32_2(ptr) Variable Function
+            61_7:        26_1 Load 59_4(g_samp[0])
+            65_4:   32_8(ptr) AccessChain 59_18(local_sampler_array) 43_7
+                              Store 65_4 61_7
+            61_8:        26_1 Load 59_3(g_samp[1])
+            65_5:   32_8(ptr) AccessChain 59_18(local_sampler_array) 43_1
+                              Store 65_5 61_8
+            61_9:        26_1 Load 59_5(g_samp[2])
+            65_6:   32_8(ptr) AccessChain 59_18(local_sampler_array) 43_2
+                              Store 65_6 61_9
+           61_10:        25_1 Load 59_6(g_tex[0])
+            65_7:   32_7(ptr) AccessChain 59_19(local_texture_array) 43_7
+                              Store 65_7 61_10
+           61_11:        25_1 Load 59_2(g_tex[1])
+            65_8:   32_7(ptr) AccessChain 59_19(local_texture_array) 43_1
+                              Store 65_8 61_11
+           61_12:        25_1 Load 59_7(g_tex[2])
+            65_9:   32_7(ptr) AccessChain 59_19(local_texture_array) 43_2
+                              Store 65_9 61_12
+           65_10:  32_11(ptr) AccessChain 59_8 43_2
+           61_13:        28_7 Load 65_10
+            81_1: 22_1(float) CompositeExtract 61_13 0
+           65_11:  32_12(ptr) AccessChain 59_20(local_float_array) 43_7
+                              Store 65_11 81_1
+            81_2: 22_1(float) CompositeExtract 61_13 1
+           65_12:  32_12(ptr) AccessChain 59_20(local_float_array) 43_1
+                              Store 65_12 81_2
+            81_3: 22_1(float) CompositeExtract 61_13 2
+           65_13:  32_12(ptr) AccessChain 59_20(local_float_array) 43_2
+                              Store 65_13 81_3
+            81_4: 22_1(float) CompositeExtract 61_13 3
+           65_14:  32_12(ptr) AccessChain 59_20(local_float_array) 43_3
+                              Store 65_14 81_4
+            57_2: 23_1(fvec4) FunctionCall 54_2(TestFn1()
+           61_14:        25_1 Load 59_6(g_tex[0])
+           65_15:   32_7(ptr) AccessChain 59_21(aggShadow) 43_7
+                              Store 65_15 61_14
+           61_15:        25_1 Load 59_2(g_tex[1])
+           65_16:   32_7(ptr) AccessChain 59_21(aggShadow) 43_1
+                              Store 65_16 61_15
+           61_16:        25_1 Load 59_7(g_tex[2])
+           65_17:   32_7(ptr) AccessChain 59_21(aggShadow) 43_2
+                              Store 65_17 61_16
+           61_17:        26_1 Load 59_4(g_samp[0])
+           65_18:   32_8(ptr) AccessChain 59_22(aggShadow) 43_7
+                              Store 65_18 61_17
+           61_18:        26_1 Load 59_3(g_samp[1])
+           65_19:   32_8(ptr) AccessChain 59_22(aggShadow) 43_1
+                              Store 65_19 61_18
+           61_19:        26_1 Load 59_5(g_samp[2])
+           65_20:   32_8(ptr) AccessChain 59_22(aggShadow) 43_2
+                              Store 65_20 61_19
+           61_20:        28_1 Load 59_21(aggShadow)
+                              Store 59_23(param) 61_20
+           61_21:        28_2 Load 59_22(aggShadow)
+                              Store 59_24(param) 61_21
+            57_3: 23_1(fvec4) FunctionCall 54_3(TestFn2(t11[3];p1[3];) 59_23(param) 59_24(param)
+           129_1: 23_1(fvec4) FAdd 57_2 57_3
+           65_21:  32_13(ptr) AccessChain 55_3(ps_output) 43_7
+                              Store 65_21 129_1
                               Return
                               FunctionEnd

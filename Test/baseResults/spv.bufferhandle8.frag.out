@@ -7,102 +7,102 @@ spv.bufferhandle8.frag
                               Capability PhysicalStorageBufferAddressesEXT
                               Extension  "SPV_KHR_physical_storage_buffer"
                               Extension  "SPV_KHR_storage_buffer_storage_class"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_buffer_reference"
-                              Name 4  "main"
-                              Name 8  "Blah"
-                              MemberName 8(Blah) 0  "t1"
-                              MemberName 8(Blah) 1  "t2"
-                              Name 10  "T1"
-                              MemberName 10(T1) 0  "x"
-                              Name 11  "T2"
-                              MemberName 11(T2) 0  "x"
-                              Name 13  "x"
-                              Name 14  "Blah"
-                              MemberName 14(Blah) 0  "t1"
-                              MemberName 14(Blah) 1  "t2"
-                              Name 16  "T3"
-                              MemberName 16(T3) 0  "Bindings"
-                              Name 18  "t3"
-                              Name 35  "t2"
-                              MemberName 35(t2) 0  "f"
-                              MemberName 35(t2) 1  "g"
-                              Name 36  "blockType"
-                              MemberName 36(blockType) 0  "a"
-                              MemberName 36(blockType) 1  "b"
-                              MemberName 36(blockType) 2  "c"
-                              MemberName 36(blockType) 3  "d"
-                              MemberName 36(blockType) 4  "e"
-                              Name 38  "t"
-                              Decorate 10(T1) Block
-                              MemberDecorate 10(T1) 0 Offset 0
-                              Decorate 11(T2) Block
-                              MemberDecorate 11(T2) 0 Offset 0
-                              Decorate 13(x) DecorationAliasedPointerEXT
-                              MemberDecorate 14(Blah) 0 Offset 0
-                              MemberDecorate 14(Blah) 1 Offset 8
-                              Decorate 15 ArrayStride 16
-                              Decorate 16(T3) Block
-                              MemberDecorate 16(T3) 0 Offset 0
-                              Decorate 18(t3) Binding 0
-                              Decorate 18(t3) DescriptorSet 0
-                              Decorate 35(t2) Block
-                              MemberDecorate 35(t2) 0 Offset 0
-                              MemberDecorate 35(t2) 1 Offset 8
-                              Decorate 36(blockType) Block
-                              MemberDecorate 36(blockType) 0 Offset 0
-                              MemberDecorate 36(blockType) 1 Offset 4
-                              MemberDecorate 36(blockType) 2 Offset 8
-                              MemberDecorate 36(blockType) 3 Offset 12
-                              MemberDecorate 36(blockType) 4 Offset 16
-                              Decorate 38(t) Binding 0
-                              Decorate 38(t) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-                              TypeForwardPointer 6 PhysicalStorageBufferEXT
-                              TypeForwardPointer 7 PhysicalStorageBufferEXT
-         8(Blah):             TypeStruct 6 7
-               9:             TypeInt 32 1
-          10(T1):             TypeStruct 9(int)
-               6:             TypePointer PhysicalStorageBufferEXT 10(T1)
-          11(T2):             TypeStruct 9(int)
-               7:             TypePointer PhysicalStorageBufferEXT 11(T2)
-              12:             TypePointer Function 8(Blah)
-        14(Blah):             TypeStruct 6(ptr) 7(ptr)
-              15:             TypeRuntimeArray 14(Blah)
-          16(T3):             TypeStruct 15
-              17:             TypePointer StorageBuffer 16(T3)
-          18(t3):     17(ptr) Variable StorageBuffer
-              19:      9(int) Constant 0
-              20:      9(int) Constant 2
-              21:             TypePointer StorageBuffer 14(Blah)
-              25:             TypePointer Function 6(ptr)
-              28:      9(int) Constant 1
-              29:             TypePointer Function 7(ptr)
-                              TypeForwardPointer 34 PhysicalStorageBufferEXT
-          35(t2):             TypeStruct 34 34
-   36(blockType):             TypeStruct 9(int) 9(int) 9(int) 9(int) 9(int)
-              34:             TypePointer PhysicalStorageBufferEXT 36(blockType)
-              37:             TypePointer StorageBuffer 35(t2)
-           38(t):     37(ptr) Variable StorageBuffer
-         4(main):           2 Function None 3
-               5:             Label
-           13(x):     12(ptr) Variable Function
-              22:     21(ptr) AccessChain 18(t3) 19 20
-              23:    14(Blah) Load 22
-              24:      6(ptr) CompositeExtract 23 0
-              26:     25(ptr) AccessChain 13(x) 19
-                              Store 26 24
-              27:      7(ptr) CompositeExtract 23 1
-              30:     29(ptr) AccessChain 13(x) 28
-                              Store 30 27
-              31:     21(ptr) AccessChain 18(t3) 19 28
-              32:    14(Blah) Load 31
-              33:     21(ptr) AccessChain 18(t3) 19 19
-                              Store 33 32
+                              Name 54_1  "main"
+                              Name 30_1  "Blah"
+                              MemberName 30_1(Blah) 0  "t1"
+                              MemberName 30_1(Blah) 1  "t2"
+                              Name 30_2  "T1"
+                              MemberName 30_2(T1) 0  "x"
+                              Name 30_3  "T2"
+                              MemberName 30_3(T2) 0  "x"
+                              Name 59_3  "x"
+                              Name 30_4  "Blah"
+                              MemberName 30_4(Blah) 0  "t1"
+                              MemberName 30_4(Blah) 1  "t2"
+                              Name 30_5  "T3"
+                              MemberName 30_5(T3) 0  "Bindings"
+                              Name 59_1  "t3"
+                              Name 30_6  "t2"
+                              MemberName 30_6(t2) 0  "f"
+                              MemberName 30_6(t2) 1  "g"
+                              Name 30_7  "blockType"
+                              MemberName 30_7(blockType) 0  "a"
+                              MemberName 30_7(blockType) 1  "b"
+                              MemberName 30_7(blockType) 2  "c"
+                              MemberName 30_7(blockType) 3  "d"
+                              MemberName 30_7(blockType) 4  "e"
+                              Name 59_2  "t"
+                              Decorate 30_2(T1) Block
+                              MemberDecorate 30_2(T1) 0 Offset 0
+                              Decorate 30_3(T2) Block
+                              MemberDecorate 30_3(T2) 0 Offset 0
+                              Decorate 59_3(x) DecorationAliasedPointerEXT
+                              MemberDecorate 30_4(Blah) 0 Offset 0
+                              MemberDecorate 30_4(Blah) 1 Offset 8
+                              Decorate 29_1 ArrayStride 16
+                              Decorate 30_5(T3) Block
+                              MemberDecorate 30_5(T3) 0 Offset 0
+                              Decorate 59_1(t3) Binding 0
+                              Decorate 59_1(t3) DescriptorSet 0
+                              Decorate 30_6(t2) Block
+                              MemberDecorate 30_6(t2) 0 Offset 0
+                              MemberDecorate 30_6(t2) 1 Offset 8
+                              Decorate 30_7(blockType) Block
+                              MemberDecorate 30_7(blockType) 0 Offset 0
+                              MemberDecorate 30_7(blockType) 1 Offset 4
+                              MemberDecorate 30_7(blockType) 2 Offset 8
+                              MemberDecorate 30_7(blockType) 3 Offset 12
+                              MemberDecorate 30_7(blockType) 4 Offset 16
+                              Decorate 59_2(t) Binding 0
+                              Decorate 59_2(t) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+                              TypeForwardPointer 32_1 PhysicalStorageBufferEXT
+                              TypeForwardPointer 32_2 PhysicalStorageBufferEXT
+      30_1(Blah):             TypeStruct 32_1 32_2
+            21_1:             TypeInt 32 1
+        30_2(T1):             TypeStruct 21_1(int)
+            32_1:             TypePointer PhysicalStorageBufferEXT 30_2(T1)
+        30_3(T2):             TypeStruct 21_1(int)
+            32_2:             TypePointer PhysicalStorageBufferEXT 30_3(T2)
+            32_3:             TypePointer Function 30_1(Blah)
+      30_4(Blah):             TypeStruct 32_1(ptr) 32_2(ptr)
+            29_1:             TypeRuntimeArray 30_4(Blah)
+        30_5(T3):             TypeStruct 29_1
+            32_4:             TypePointer StorageBuffer 30_5(T3)
+        59_1(t3):   32_4(ptr) Variable StorageBuffer
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 2
+            32_5:             TypePointer StorageBuffer 30_4(Blah)
+            32_6:             TypePointer Function 32_1(ptr)
+            43_3:   21_1(int) Constant 1
+            32_7:             TypePointer Function 32_2(ptr)
+                              TypeForwardPointer 32_8 PhysicalStorageBufferEXT
+        30_6(t2):             TypeStruct 32_8 32_8
+ 30_7(blockType):             TypeStruct 21_1(int) 21_1(int) 21_1(int) 21_1(int) 21_1(int)
+            32_8:             TypePointer PhysicalStorageBufferEXT 30_7(blockType)
+            32_9:             TypePointer StorageBuffer 30_6(t2)
+         59_2(t):   32_9(ptr) Variable StorageBuffer
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_3(x):   32_3(ptr) Variable Function
+            65_1:   32_5(ptr) AccessChain 59_1(t3) 43_1 43_2
+            61_1:  30_4(Blah) Load 65_1
+            81_1:   32_1(ptr) CompositeExtract 61_1 0
+            65_2:   32_6(ptr) AccessChain 59_3(x) 43_1
+                              Store 65_2 81_1
+            81_2:   32_2(ptr) CompositeExtract 61_1 1
+            65_3:   32_7(ptr) AccessChain 59_3(x) 43_3
+                              Store 65_3 81_2
+            65_4:   32_5(ptr) AccessChain 59_1(t3) 43_1 43_3
+            61_2:  30_4(Blah) Load 65_4
+            65_5:   32_5(ptr) AccessChain 59_1(t3) 43_1 43_1
+                              Store 65_5 61_2
                               Return
                               FunctionEnd

@@ -6,44 +6,44 @@ spv.430.frag
                               Capability Shader
                               Capability Geometry
                               Capability MultiViewport
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 9 14 19
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 430
-                              Name 4  "main"
-                              Name 9  "color"
-                              Name 14  "gl_Layer"
-                              Name 19  "gl_ViewportIndex"
-                              Decorate 9(color) Location 0
-                              Decorate 14(gl_Layer) BuiltIn Layer
-                              Decorate 14(gl_Layer) Flat
-                              Decorate 19(gl_ViewportIndex) BuiltIn ViewportIndex
-                              Decorate 19(gl_ViewportIndex) Flat
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Output 7(fvec4)
-        9(color):      8(ptr) Variable Output
-              10:    6(float) Constant 1065353216
-              11:    7(fvec4) ConstantComposite 10 10 10 10
-              12:             TypeInt 32 1
-              13:             TypePointer Input 12(int)
-    14(gl_Layer):     13(ptr) Variable Input
-19(gl_ViewportIndex):     13(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-                              Store 9(color) 11
-              15:     12(int) Load 14(gl_Layer)
-              16:    6(float) ConvertSToF 15
-              17:    7(fvec4) Load 9(color)
-              18:    7(fvec4) VectorTimesScalar 17 16
-                              Store 9(color) 18
-              20:     12(int) Load 19(gl_ViewportIndex)
-              21:    6(float) ConvertSToF 20
-              22:    7(fvec4) Load 9(color)
-              23:    7(fvec4) VectorTimesScalar 22 21
-                              Store 9(color) 23
+                              Name 54_1  "main"
+                              Name 59_1  "color"
+                              Name 59_2  "gl_Layer"
+                              Name 59_3  "gl_ViewportIndex"
+                              Decorate 59_1(color) Location 0
+                              Decorate 59_2(gl_Layer) BuiltIn Layer
+                              Decorate 59_2(gl_Layer) Flat
+                              Decorate 59_3(gl_ViewportIndex) BuiltIn ViewportIndex
+                              Decorate 59_3(gl_ViewportIndex) Flat
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Output 23_1(fvec4)
+     59_1(color):   32_1(ptr) Variable Output
+            43_1: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            21_1:             TypeInt 32 1
+            32_2:             TypePointer Input 21_1(int)
+  59_2(gl_Layer):   32_2(ptr) Variable Input
+59_3(gl_ViewportIndex):   32_2(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+                              Store 59_1(color) 44_1
+            61_1:   21_1(int) Load 59_2(gl_Layer)
+           111_1: 22_1(float) ConvertSToF 61_1
+            61_2: 23_1(fvec4) Load 59_1(color)
+           142_1: 23_1(fvec4) VectorTimesScalar 61_2 111_1
+                              Store 59_1(color) 142_1
+            61_3:   21_1(int) Load 59_3(gl_ViewportIndex)
+           111_2: 22_1(float) ConvertSToF 61_3
+            61_4: 23_1(fvec4) Load 59_1(color)
+           142_2: 23_1(fvec4) VectorTimesScalar 61_4 111_2
+                              Store 59_1(color) 142_2
                               Return
                               FunctionEnd

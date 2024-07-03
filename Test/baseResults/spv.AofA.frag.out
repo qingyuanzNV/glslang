@@ -7,154 +7,154 @@ Validation failed
 // Id's are bound by 104
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 39 44 68 70 72 78
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_3 59_5 59_6 59_7 59_8
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 430
-                              Name 4  "main"
-                              Name 17  "foo(f1[5][7];"
-                              Name 16  "a"
-                              Name 20  "r"
-                              Name 39  "outfloat"
-                              Name 42  "g4"
-                              Name 44  "g5"
-                              Name 45  "param"
-                              Name 48  "u"
-                              Name 52  "param"
-                              Name 66  "many"
-                              Name 68  "i"
-                              Name 70  "j"
-                              Name 72  "k"
-                              Name 78  "infloat"
-                              Name 94  "uAofA"
-                              MemberName 94(uAofA) 0  "f"
-                              Name 98  "nameAofA"
-                              Decorate 39(outfloat) Location 0
-                              Decorate 44(g5) Location 1
-                              Decorate 68(i) Flat
-                              Decorate 68(i) Location 36
-                              Decorate 70(j) Flat
-                              Decorate 70(j) Location 37
-                              Decorate 72(k) Flat
-                              Decorate 72(k) Location 38
-                              Decorate 78(infloat) Location 0
-                              Decorate 92 ArrayStride 16
-                              Decorate 93 ArrayStride 64
-                              Decorate 94(uAofA) Block
-                              MemberDecorate 94(uAofA) 0 Offset 0
-                              Decorate 98(nameAofA) Binding 0
-                              Decorate 98(nameAofA) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeInt 32 0
-               8:      7(int) Constant 7
-               9:             TypeArray 6(float) 8
-              10:      7(int) Constant 5
-              11:             TypeArray 9 10
-              12:             TypePointer Function 11
-              13:      7(int) Constant 4
-              14:             TypeArray 9 13
-              15:             TypeFunction 14 12(ptr)
-              19:             TypePointer Function 9
-              21:             TypeInt 32 1
-              22:     21(int) Constant 2
-              25:     21(int) Constant 0
-              28:     21(int) Constant 1
-              32:     21(int) Constant 3
-              38:             TypePointer Output 6(float)
-    39(outfloat):     38(ptr) Variable Output
-              40:    6(float) Constant 0
-              41:             TypePointer Private 14
-          42(g4):     41(ptr) Variable Private
-              43:             TypePointer Input 11
-          44(g5):     43(ptr) Variable Input
-              49:    6(float) Constant 1077936128
-              50:             TypePointer Function 6(float)
-              55:      7(int) Constant 6
-              56:             TypeArray 6(float) 55
-              57:             TypeArray 56 10
-              58:             TypeArray 57 13
-              59:      7(int) Constant 3
-              60:             TypeArray 58 59
-              61:      7(int) Constant 2
-              62:             TypeArray 60 61
-              63:      7(int) Constant 1
-              64:             TypeArray 62 63
-              65:             TypePointer Private 64
-        66(many):     65(ptr) Variable Private
-              67:             TypePointer Input 21(int)
-           68(i):     67(ptr) Variable Input
-           70(j):     67(ptr) Variable Input
-           72(k):     67(ptr) Variable Input
-              77:             TypePointer Input 6(float)
-     78(infloat):     77(ptr) Variable Input
-              80:             TypePointer Private 6(float)
-              92:             TypeArray 6(float) 13
-              93:             TypeArray 92 61
-       94(uAofA):             TypeStruct 93
-              95:             TypeArray 94(uAofA) 10
-              96:             TypeArray 95 59
-              97:             TypePointer Uniform 96
-    98(nameAofA):     97(ptr) Variable Uniform
-              99:             TypePointer Uniform 6(float)
-         4(main):           2 Function None 3
-               5:             Label
-       45(param):     12(ptr) Variable Function
-           48(u):     12(ptr) Variable Function
-       52(param):     12(ptr) Variable Function
-                              Store 39(outfloat) 40
-              46:          11 Load 44(g5)
-                              Store 45(param) 46
-              47:          14 FunctionCall 17(foo(f1[5][7];) 45(param)
-                              Store 42(g4) 47
-              51:     50(ptr) AccessChain 48(u) 22 22
-                              Store 51 49
-              53:          11 Load 48(u)
-                              Store 52(param) 53
-              54:          14 FunctionCall 17(foo(f1[5][7];) 52(param)
-              69:     21(int) Load 68(i)
-              71:     21(int) Load 70(j)
-              73:     21(int) Load 72(k)
-              74:     21(int) Load 68(i)
-              75:     21(int) Load 70(j)
-              76:     21(int) Load 72(k)
-              79:    6(float) Load 78(infloat)
-              81:     80(ptr) AccessChain 66(many) 69 71 73 74 75 76
-                              Store 81 79
-              82:     21(int) Load 70(j)
-              83:     21(int) Load 70(j)
-              84:     21(int) Load 70(j)
-              85:     21(int) Load 70(j)
-              86:     21(int) Load 70(j)
-              87:     21(int) Load 70(j)
-              88:     80(ptr) AccessChain 66(many) 82 83 84 85 86 87
-              89:    6(float) Load 88
-              90:    6(float) Load 39(outfloat)
-              91:    6(float) FAdd 90 89
-                              Store 39(outfloat) 91
-             100:     99(ptr) AccessChain 98(nameAofA) 28 22 25 25 32
-             101:    6(float) Load 100
-             102:    6(float) Load 39(outfloat)
-             103:    6(float) FAdd 102 101
-                              Store 39(outfloat) 103
+                              Name 54_1  "main"
+                              Name 54_2  "foo(f1[5][7];"
+                              Name 55_1  "a"
+                              Name 59_13  "r"
+                              Name 59_1  "outfloat"
+                              Name 59_2  "g4"
+                              Name 59_3  "g5"
+                              Name 59_10  "param"
+                              Name 59_11  "u"
+                              Name 59_12  "param"
+                              Name 59_4  "many"
+                              Name 59_5  "i"
+                              Name 59_6  "j"
+                              Name 59_7  "k"
+                              Name 59_8  "infloat"
+                              Name 30_1  "uAofA"
+                              MemberName 30_1(uAofA) 0  "f"
+                              Name 59_9  "nameAofA"
+                              Decorate 59_1(outfloat) Location 0
+                              Decorate 59_3(g5) Location 1
+                              Decorate 59_5(i) Flat
+                              Decorate 59_5(i) Location 36
+                              Decorate 59_6(j) Flat
+                              Decorate 59_6(j) Location 37
+                              Decorate 59_7(k) Flat
+                              Decorate 59_7(k) Location 38
+                              Decorate 59_8(infloat) Location 0
+                              Decorate 28_10 ArrayStride 16
+                              Decorate 28_11 ArrayStride 64
+                              Decorate 30_1(uAofA) Block
+                              MemberDecorate 30_1(uAofA) 0 Offset 0
+                              Decorate 59_9(nameAofA) Binding 0
+                              Decorate 59_9(nameAofA) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            21_1:             TypeInt 32 0
+         uint(7):   21_1(int) Constant 7
+            28_1:             TypeArray 22_1(float) uint(7)
+         uint(5):   21_1(int) Constant 5
+            28_2:             TypeArray 28_1 uint(5)
+            32_1:             TypePointer Function 28_2
+         uint(4):   21_1(int) Constant 4
+            28_3:             TypeArray 28_1 uint(4)
+            33_2:             TypeFunction 28_3 32_1(ptr)
+            32_2:             TypePointer Function 28_1
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 2
+            43_2:   21_2(int) Constant 0
+            43_3:   21_2(int) Constant 1
+            43_4:   21_2(int) Constant 3
+            32_3:             TypePointer Output 22_1(float)
+  59_1(outfloat):   32_3(ptr) Variable Output
+            43_5: 22_1(float) Constant 0
+            32_4:             TypePointer Private 28_3
+        59_2(g4):   32_4(ptr) Variable Private
+            32_5:             TypePointer Input 28_2
+        59_3(g5):   32_5(ptr) Variable Input
+            43_6: 22_1(float) Constant 1077936128
+            32_6:             TypePointer Function 22_1(float)
+         uint(6):   21_1(int) Constant 6
+            28_4:             TypeArray 22_1(float) uint(6)
+            28_5:             TypeArray 28_4 uint(5)
+            28_6:             TypeArray 28_5 uint(4)
+         uint(3):   21_1(int) Constant 3
+            28_7:             TypeArray 28_6 uint(3)
+         uint(2):   21_1(int) Constant 2
+            28_8:             TypeArray 28_7 uint(2)
+         uint(1):   21_1(int) Constant 1
+            28_9:             TypeArray 28_8 uint(1)
+            32_7:             TypePointer Private 28_9
+      59_4(many):   32_7(ptr) Variable Private
+            32_8:             TypePointer Input 21_2(int)
+         59_5(i):   32_8(ptr) Variable Input
+         59_6(j):   32_8(ptr) Variable Input
+         59_7(k):   32_8(ptr) Variable Input
+            32_9:             TypePointer Input 22_1(float)
+   59_8(infloat):   32_9(ptr) Variable Input
+           32_10:             TypePointer Private 22_1(float)
+           28_10:             TypeArray 22_1(float) uint(4)
+           28_11:             TypeArray 28_10 uint(2)
+     30_1(uAofA):             TypeStruct 28_11
+           28_12:             TypeArray 30_1(uAofA) uint(5)
+           28_13:             TypeArray 28_12 uint(3)
+           32_11:             TypePointer Uniform 28_13
+  59_9(nameAofA):  32_11(ptr) Variable Uniform
+           32_12:             TypePointer Uniform 22_1(float)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+    59_10(param):   32_1(ptr) Variable Function
+        59_11(u):   32_1(ptr) Variable Function
+    59_12(param):   32_1(ptr) Variable Function
+                              Store 59_1(outfloat) 43_5
+            61_1:        28_2 Load 59_3(g5)
+                              Store 59_10(param) 61_1
+            57_1:        28_3 FunctionCall 54_2(foo(f1[5][7];) 59_10(param)
+                              Store 59_2(g4) 57_1
+            65_1:   32_6(ptr) AccessChain 59_11(u) 43_1 43_1
+                              Store 65_1 43_6
+            61_2:        28_2 Load 59_11(u)
+                              Store 59_12(param) 61_2
+            57_2:        28_3 FunctionCall 54_2(foo(f1[5][7];) 59_12(param)
+            61_3:   21_2(int) Load 59_5(i)
+            61_4:   21_2(int) Load 59_6(j)
+            61_5:   21_2(int) Load 59_7(k)
+            61_6:   21_2(int) Load 59_5(i)
+            61_7:   21_2(int) Load 59_6(j)
+            61_8:   21_2(int) Load 59_7(k)
+            61_9: 22_1(float) Load 59_8(infloat)
+            65_2:  32_10(ptr) AccessChain 59_4(many) 61_3 61_4 61_5 61_6 61_7 61_8
+                              Store 65_2 61_9
+           61_10:   21_2(int) Load 59_6(j)
+           61_11:   21_2(int) Load 59_6(j)
+           61_12:   21_2(int) Load 59_6(j)
+           61_13:   21_2(int) Load 59_6(j)
+           61_14:   21_2(int) Load 59_6(j)
+           61_15:   21_2(int) Load 59_6(j)
+            65_3:  32_10(ptr) AccessChain 59_4(many) 61_10 61_11 61_12 61_13 61_14 61_15
+           61_16: 22_1(float) Load 65_3
+           61_17: 22_1(float) Load 59_1(outfloat)
+           129_1: 22_1(float) FAdd 61_17 61_16
+                              Store 59_1(outfloat) 129_1
+            65_4:  32_12(ptr) AccessChain 59_9(nameAofA) 43_3 43_1 43_2 43_2 43_4
+           61_18: 22_1(float) Load 65_4
+           61_19: 22_1(float) Load 59_1(outfloat)
+           129_2: 22_1(float) FAdd 61_19 61_18
+                              Store 59_1(outfloat) 129_2
                               Return
                               FunctionEnd
-17(foo(f1[5][7];):          14 Function None 15
-           16(a):     12(ptr) FunctionParameter
-              18:             Label
-           20(r):     19(ptr) Variable Function
-              23:     19(ptr) AccessChain 16(a) 22
-              24:           9 Load 23
-                              Store 20(r) 24
-              26:     19(ptr) AccessChain 16(a) 25
-              27:           9 Load 26
-              29:     19(ptr) AccessChain 16(a) 28
-              30:           9 Load 29
-              31:           9 Load 20(r)
-              33:     19(ptr) AccessChain 16(a) 32
-              34:           9 Load 33
-              35:          14 CompositeConstruct 27 30 31 34
-                              ReturnValue 35
+54_2(foo(f1[5][7];):        28_3 Function None 33_2
+         55_1(a):   32_1(ptr) FunctionParameter
+           248_2:             Label
+        59_13(r):   32_2(ptr) Variable Function
+            65_5:   32_2(ptr) AccessChain 55_1(a) 43_1
+           61_20:        28_1 Load 65_5
+                              Store 59_13(r) 61_20
+            65_6:   32_2(ptr) AccessChain 55_1(a) 43_2
+           61_21:        28_1 Load 65_6
+            65_7:   32_2(ptr) AccessChain 55_1(a) 43_3
+           61_22:        28_1 Load 65_7
+           61_23:        28_1 Load 59_13(r)
+            65_8:   32_2(ptr) AccessChain 55_1(a) 43_4
+           61_24:        28_1 Load 65_8
+            80_1:        28_3 CompositeConstruct 61_21 61_22 61_23 61_24
+                              ReturnValue 80_1
                               FunctionEnd

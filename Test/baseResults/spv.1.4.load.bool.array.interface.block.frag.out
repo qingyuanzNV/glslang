@@ -5,100 +5,100 @@ Validation failed
 // Id's are bound by 64
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 13 20 61
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 11  "ssbo"
-                              MemberName 11(ssbo) 0  "bo"
-                              Name 13  ""
-                              Name 18  "ub"
-                              MemberName 18(ub) 0  "bi"
-                              Name 20  ""
-                              Name 61  "color"
-                              Decorate 8 ArrayStride 4
-                              Decorate 10 ArrayStride 12
-                              Decorate 11(ssbo) Block
-                              MemberDecorate 11(ssbo) 0 Offset 0
-                              Decorate 13 Binding 1
-                              Decorate 13 DescriptorSet 0
-                              Decorate 16 ArrayStride 16
-                              Decorate 17 ArrayStride 48
-                              Decorate 18(ub) Block
-                              MemberDecorate 18(ub) 0 Offset 0
-                              Decorate 20 Binding 0
-                              Decorate 20 DescriptorSet 0
-                              Decorate 61(color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:      6(int) Constant 3
-               8:             TypeArray 6(int) 7
-               9:      6(int) Constant 2
-              10:             TypeArray 8 9
-        11(ssbo):             TypeStruct 10
-              12:             TypePointer StorageBuffer 11(ssbo)
-              13:     12(ptr) Variable StorageBuffer
-              14:             TypeInt 32 1
-              15:     14(int) Constant 0
-              16:             TypeArray 6(int) 7
-              17:             TypeArray 16 9
-          18(ub):             TypeStruct 17
-              19:             TypePointer Uniform 18(ub)
-              20:     19(ptr) Variable Uniform
-              21:             TypePointer Uniform 17
-              24:             TypeBool
-              25:             TypeArray 24(bool) 7
-              26:             TypeArray 25 9
-              28:             TypePointer StorageBuffer 10
-              31:             TypePointer StorageBuffer 8
-              34:      6(int) Constant 1
-              35:      6(int) Constant 0
-              37:             TypePointer StorageBuffer 6(int)
-              40:     14(int) Constant 1
-              44:     14(int) Constant 2
-              58:             TypeFloat 32
-              59:             TypeVector 58(float) 4
-              60:             TypePointer Output 59(fvec4)
-       61(color):     60(ptr) Variable Output
-              62:   58(float) Constant 0
-              63:   59(fvec4) ConstantComposite 62 62 62 62
-         4(main):           2 Function None 3
-               5:             Label
-              22:     21(ptr) AccessChain 20 15
-              23:          17 Load 22
-              27:          26 CopyLogical 23
-              29:     28(ptr) AccessChain 13 15
-              30:          25 CompositeExtract 27 0
-              32:     31(ptr) AccessChain 29 15
-              33:    24(bool) CompositeExtract 30 0
-              36:      6(int) Select 33 34 35
-              38:     37(ptr) AccessChain 32 15
-                              Store 38 36
-              39:    24(bool) CompositeExtract 30 1
-              41:      6(int) Select 39 34 35
-              42:     37(ptr) AccessChain 32 40
-                              Store 42 41
-              43:    24(bool) CompositeExtract 30 2
-              45:      6(int) Select 43 34 35
-              46:     37(ptr) AccessChain 32 44
-                              Store 46 45
-              47:          25 CompositeExtract 27 1
-              48:     31(ptr) AccessChain 29 40
-              49:    24(bool) CompositeExtract 47 0
-              50:      6(int) Select 49 34 35
-              51:     37(ptr) AccessChain 48 15
-                              Store 51 50
-              52:    24(bool) CompositeExtract 47 1
-              53:      6(int) Select 52 34 35
-              54:     37(ptr) AccessChain 48 40
-                              Store 54 53
-              55:    24(bool) CompositeExtract 47 2
-              56:      6(int) Select 55 34 35
-              57:     37(ptr) AccessChain 48 44
-                              Store 57 56
-                              Store 61(color) 63
+                              Name 54_1  "main"
+                              Name 30_1  "ssbo"
+                              MemberName 30_1(ssbo) 0  "bo"
+                              Name 59_1  ""
+                              Name 30_2  "ub"
+                              MemberName 30_2(ub) 0  "bi"
+                              Name 59_2  ""
+                              Name 59_3  "color"
+                              Decorate 28_1 ArrayStride 4
+                              Decorate 28_2 ArrayStride 12
+                              Decorate 30_1(ssbo) Block
+                              MemberDecorate 30_1(ssbo) 0 Offset 0
+                              Decorate 59_1 Binding 1
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 28_3 ArrayStride 16
+                              Decorate 28_4 ArrayStride 48
+                              Decorate 30_2(ub) Block
+                              MemberDecorate 30_2(ub) 0 Offset 0
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 59_3(color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 21_1(int) uint(3)
+         uint(2):   21_1(int) Constant 2
+            28_2:             TypeArray 28_1 uint(2)
+      30_1(ssbo):             TypeStruct 28_2
+            32_1:             TypePointer StorageBuffer 30_1(ssbo)
+            59_1:   32_1(ptr) Variable StorageBuffer
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            28_3:             TypeArray 21_1(int) uint(3)
+            28_4:             TypeArray 28_3 uint(2)
+        30_2(ub):             TypeStruct 28_4
+            32_2:             TypePointer Uniform 30_2(ub)
+            59_2:   32_2(ptr) Variable Uniform
+            32_3:             TypePointer Uniform 28_4
+            20_1:             TypeBool
+            28_5:             TypeArray 20_1(bool) uint(3)
+            28_6:             TypeArray 28_5 uint(2)
+            32_4:             TypePointer StorageBuffer 28_2
+            32_5:             TypePointer StorageBuffer 28_1
+         uint(1):   21_1(int) Constant 1
+         uint(0):   21_1(int) Constant 0
+            32_6:             TypePointer StorageBuffer 21_1(int)
+            43_2:   21_2(int) Constant 1
+            43_3:   21_2(int) Constant 2
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_7:             TypePointer Output 23_1(fvec4)
+     59_3(color):   32_7(ptr) Variable Output
+            43_4: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_4 43_4 43_4 43_4
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2 43_1
+            61_1:        28_4 Load 65_1
+           400_1:        28_6 CopyLogical 61_1
+            65_2:   32_4(ptr) AccessChain 59_1 43_1
+            81_1:        28_5 CompositeExtract 400_1 0
+            65_3:   32_5(ptr) AccessChain 65_2 43_1
+            81_2:  20_1(bool) CompositeExtract 81_1 0
+           169_1:   21_1(int) Select 81_2 uint(1) uint(0)
+            65_4:   32_6(ptr) AccessChain 65_3 43_1
+                              Store 65_4 169_1
+            81_3:  20_1(bool) CompositeExtract 81_1 1
+           169_2:   21_1(int) Select 81_3 uint(1) uint(0)
+            65_5:   32_6(ptr) AccessChain 65_3 43_2
+                              Store 65_5 169_2
+            81_4:  20_1(bool) CompositeExtract 81_1 2
+           169_3:   21_1(int) Select 81_4 uint(1) uint(0)
+            65_6:   32_6(ptr) AccessChain 65_3 43_3
+                              Store 65_6 169_3
+            81_5:        28_5 CompositeExtract 400_1 1
+            65_7:   32_5(ptr) AccessChain 65_2 43_2
+            81_6:  20_1(bool) CompositeExtract 81_5 0
+           169_4:   21_1(int) Select 81_6 uint(1) uint(0)
+            65_8:   32_6(ptr) AccessChain 65_7 43_1
+                              Store 65_8 169_4
+            81_7:  20_1(bool) CompositeExtract 81_5 1
+           169_5:   21_1(int) Select 81_7 uint(1) uint(0)
+            65_9:   32_6(ptr) AccessChain 65_7 43_2
+                              Store 65_9 169_5
+            81_8:  20_1(bool) CompositeExtract 81_5 2
+           169_6:   21_1(int) Select 81_8 uint(1) uint(0)
+           65_10:   32_6(ptr) AccessChain 65_7 43_3
+                              Store 65_10 169_6
+                              Store 59_3(color) 44_1
                               Return
                               FunctionEnd

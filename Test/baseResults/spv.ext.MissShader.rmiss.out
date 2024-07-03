@@ -14,9 +14,9 @@ spv.ext.MissShader.rmiss
                               Extension  "SPV_KHR_ray_tracing"
                               Extension  "SPV_KHR_shader_ballot"
                               Extension  "SPV_NV_shader_sm_builtins"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint MissKHR 4  "main" 11 14 21 24 29 32 37 41 56 57 62 67 78 82 87 91
+                              EntryPoint MissKHR 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8 59_9 59_10 59_11 59_12 59_13 59_14 59_15 59_16
                               Source GLSL 460
                               SourceExtension  "GL_ARB_shader_ballot"
                               SourceExtension  "GL_ARB_sparse_texture_clamp"
@@ -25,152 +25,152 @@ spv.ext.MissShader.rmiss
                               SourceExtension  "GL_KHR_shader_subgroup_ballot"
                               SourceExtension  "GL_KHR_shader_subgroup_basic"
                               SourceExtension  "GL_NV_shader_sm_builtins"
-                              Name 4  "main"
-                              Name 9  "v0"
-                              Name 11  "gl_LaunchIDEXT"
-                              Name 13  "v1"
-                              Name 14  "gl_LaunchSizeEXT"
-                              Name 19  "v2"
-                              Name 21  "gl_WorldRayOriginEXT"
-                              Name 23  "v3"
-                              Name 24  "gl_WorldRayDirectionEXT"
-                              Name 27  "v4"
-                              Name 29  "gl_RayTminEXT"
-                              Name 31  "v5"
-                              Name 32  "gl_RayTmaxEXT"
-                              Name 35  "v6"
-                              Name 37  "gl_CullMaskEXT"
-                              Name 41  "accEXT"
-                              Name 56  "incomingPayload"
-                              Name 57  "gl_SubGroupSizeARB"
-                              Name 62  "gl_SubgroupEqMask"
-                              Name 67  "gl_WarpIDNV"
-                              Name 74  "texel"
-                              Name 78  "s2D"
-                              Name 82  "c2"
-                              Name 87  "lodClamp"
-                              Name 91  "localPayload"
-                              Decorate 11(gl_LaunchIDEXT) BuiltIn LaunchIdKHR
-                              Decorate 14(gl_LaunchSizeEXT) BuiltIn LaunchSizeKHR
-                              Decorate 21(gl_WorldRayOriginEXT) BuiltIn WorldRayOriginKHR
-                              Decorate 24(gl_WorldRayDirectionEXT) BuiltIn WorldRayDirectionKHR
-                              Decorate 29(gl_RayTminEXT) BuiltIn RayTminKHR
-                              Decorate 32(gl_RayTmaxEXT) BuiltIn RayTmaxKHR
-                              Decorate 37(gl_CullMaskEXT) BuiltIn CullMaskKHR
-                              Decorate 41(accEXT) Binding 0
-                              Decorate 41(accEXT) DescriptorSet 0
-                              Decorate 57(gl_SubGroupSizeARB) BuiltIn SubgroupSize
-                              Decorate 57(gl_SubGroupSizeARB) Volatile
-                              Decorate 57(gl_SubGroupSizeARB) Coherent
-                              Decorate 62(gl_SubgroupEqMask) BuiltIn SubgroupEqMaskKHR
-                              Decorate 62(gl_SubgroupEqMask) Volatile
-                              Decorate 62(gl_SubgroupEqMask) Coherent
-                              Decorate 67(gl_WarpIDNV) BuiltIn WarpIDNV
-                              Decorate 67(gl_WarpIDNV) Volatile
-                              Decorate 67(gl_WarpIDNV) Coherent
-                              Decorate 78(s2D) Binding 1
-                              Decorate 78(s2D) DescriptorSet 0
-                              Decorate 82(c2) Location 2
-                              Decorate 87(lodClamp) Location 3
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 3
-               8:             TypePointer Function 7(ivec3)
-              10:             TypePointer Input 7(ivec3)
-11(gl_LaunchIDEXT):     10(ptr) Variable Input
-14(gl_LaunchSizeEXT):     10(ptr) Variable Input
-              16:             TypeFloat 32
-              17:             TypeVector 16(float) 3
-              18:             TypePointer Function 17(fvec3)
-              20:             TypePointer Input 17(fvec3)
-21(gl_WorldRayOriginEXT):     20(ptr) Variable Input
-24(gl_WorldRayDirectionEXT):     20(ptr) Variable Input
-              26:             TypePointer Function 16(float)
-              28:             TypePointer Input 16(float)
-29(gl_RayTminEXT):     28(ptr) Variable Input
-32(gl_RayTmaxEXT):     28(ptr) Variable Input
-              34:             TypePointer Function 6(int)
-              36:             TypePointer Input 6(int)
-37(gl_CullMaskEXT):     36(ptr) Variable Input
-              39:             TypeAccelerationStructureKHR
-              40:             TypePointer UniformConstant 39
-      41(accEXT):     40(ptr) Variable UniformConstant
-              43:      6(int) Constant 0
-              44:      6(int) Constant 1
-              45:      6(int) Constant 2
-              46:      6(int) Constant 3
-              47:   16(float) Constant 1056964608
-              48:   17(fvec3) ConstantComposite 47 47 47
-              49:   16(float) Constant 1065353216
-              50:   17(fvec3) ConstantComposite 49 49 49
-              51:   16(float) Constant 1061158912
-              52:             TypeInt 32 1
-              53:     52(int) Constant 1
-              54:             TypeVector 16(float) 4
-              55:             TypePointer IncomingRayPayloadKHR 54(fvec4)
-56(incomingPayload):     55(ptr) Variable IncomingRayPayloadKHR
-57(gl_SubGroupSizeARB):     36(ptr) Variable Input
-              60:             TypeVector 6(int) 4
-              61:             TypePointer Input 60(ivec4)
-62(gl_SubgroupEqMask):     61(ptr) Variable Input
- 67(gl_WarpIDNV):     36(ptr) Variable Input
-              71:             TypePointer IncomingRayPayloadKHR 16(float)
-              73:             TypePointer Function 54(fvec4)
-              75:             TypeImage 16(float) 2D sampled format:Unknown
-              76:             TypeSampledImage 75
-              77:             TypePointer UniformConstant 76
-         78(s2D):     77(ptr) Variable UniformConstant
-              80:             TypeVector 16(float) 2
-              81:             TypePointer Input 80(fvec2)
-          82(c2):     81(ptr) Variable Input
-              84:             TypeVector 52(int) 2
-              85:     52(int) Constant 5
-              86:   84(ivec2) ConstantComposite 85 85
-    87(lodClamp):     28(ptr) Variable Input
-              90:             TypePointer RayPayloadKHR 54(fvec4)
-91(localPayload):     90(ptr) Variable RayPayloadKHR
-         4(main):           2 Function None 3
-               5:             Label
-           9(v0):      8(ptr) Variable Function
-          13(v1):      8(ptr) Variable Function
-          19(v2):     18(ptr) Variable Function
-          23(v3):     18(ptr) Variable Function
-          27(v4):     26(ptr) Variable Function
-          31(v5):     26(ptr) Variable Function
-          35(v6):     34(ptr) Variable Function
-       74(texel):     73(ptr) Variable Function
-              12:    7(ivec3) Load 11(gl_LaunchIDEXT)
-                              Store 9(v0) 12
-              15:    7(ivec3) Load 14(gl_LaunchSizeEXT)
-                              Store 13(v1) 15
-              22:   17(fvec3) Load 21(gl_WorldRayOriginEXT)
-                              Store 19(v2) 22
-              25:   17(fvec3) Load 24(gl_WorldRayDirectionEXT)
-                              Store 23(v3) 25
-              30:   16(float) Load 29(gl_RayTminEXT)
-                              Store 27(v4) 30
-              33:   16(float) Load 32(gl_RayTmaxEXT)
-                              Store 31(v5) 33
-              38:      6(int) Load 37(gl_CullMaskEXT)
-                              Store 35(v6) 38
-              42:          39 Load 41(accEXT)
-                              TraceRayKHR 42 43 44 45 46 43 48 47 50 51 56(incomingPayload)
-              58:      6(int) Load 57(gl_SubGroupSizeARB)
-              59:   16(float) ConvertUToF 58
-              63:   60(ivec4) Load 62(gl_SubgroupEqMask)
-              64:   54(fvec4) ConvertUToF 63
-              65:   16(float) CompositeExtract 64 0
-              66:   16(float) FAdd 59 65
-              68:      6(int) Load 67(gl_WarpIDNV)
-              69:   16(float) ConvertUToF 68
-              70:   16(float) FAdd 66 69
-              72:     71(ptr) AccessChain 56(incomingPayload) 43
-                              Store 72 70
-              79:          76 Load 78(s2D)
-              83:   80(fvec2) Load 82(c2)
-              88:   16(float) Load 87(lodClamp)
-              89:   54(fvec4) ImageSampleExplicitLod 79 83 Grad ConstOffset MinLod 83 83 86 88
-                              Store 74(texel) 89
+                              Name 54_1  "main"
+                              Name 59_17  "v0"
+                              Name 59_1  "gl_LaunchIDEXT"
+                              Name 59_18  "v1"
+                              Name 59_2  "gl_LaunchSizeEXT"
+                              Name 59_19  "v2"
+                              Name 59_3  "gl_WorldRayOriginEXT"
+                              Name 59_20  "v3"
+                              Name 59_4  "gl_WorldRayDirectionEXT"
+                              Name 59_21  "v4"
+                              Name 59_5  "gl_RayTminEXT"
+                              Name 59_22  "v5"
+                              Name 59_6  "gl_RayTmaxEXT"
+                              Name 59_23  "v6"
+                              Name 59_7  "gl_CullMaskEXT"
+                              Name 59_8  "accEXT"
+                              Name 59_9  "incomingPayload"
+                              Name 59_10  "gl_SubGroupSizeARB"
+                              Name 59_11  "gl_SubgroupEqMask"
+                              Name 59_12  "gl_WarpIDNV"
+                              Name 59_24  "texel"
+                              Name 59_13  "s2D"
+                              Name 59_14  "c2"
+                              Name 59_15  "lodClamp"
+                              Name 59_16  "localPayload"
+                              Decorate 59_1(gl_LaunchIDEXT) BuiltIn LaunchIdKHR
+                              Decorate 59_2(gl_LaunchSizeEXT) BuiltIn LaunchSizeKHR
+                              Decorate 59_3(gl_WorldRayOriginEXT) BuiltIn WorldRayOriginKHR
+                              Decorate 59_4(gl_WorldRayDirectionEXT) BuiltIn WorldRayDirectionKHR
+                              Decorate 59_5(gl_RayTminEXT) BuiltIn RayTminKHR
+                              Decorate 59_6(gl_RayTmaxEXT) BuiltIn RayTmaxKHR
+                              Decorate 59_7(gl_CullMaskEXT) BuiltIn CullMaskKHR
+                              Decorate 59_8(accEXT) Binding 0
+                              Decorate 59_8(accEXT) DescriptorSet 0
+                              Decorate 59_10(gl_SubGroupSizeARB) BuiltIn SubgroupSize
+                              Decorate 59_10(gl_SubGroupSizeARB) Volatile
+                              Decorate 59_10(gl_SubGroupSizeARB) Coherent
+                              Decorate 59_11(gl_SubgroupEqMask) BuiltIn SubgroupEqMaskKHR
+                              Decorate 59_11(gl_SubgroupEqMask) Volatile
+                              Decorate 59_11(gl_SubgroupEqMask) Coherent
+                              Decorate 59_12(gl_WarpIDNV) BuiltIn WarpIDNV
+                              Decorate 59_12(gl_WarpIDNV) Volatile
+                              Decorate 59_12(gl_WarpIDNV) Coherent
+                              Decorate 59_13(s2D) Binding 1
+                              Decorate 59_13(s2D) DescriptorSet 0
+                              Decorate 59_14(c2) Location 2
+                              Decorate 59_15(lodClamp) Location 3
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 3
+            32_1:             TypePointer Function 23_1(ivec3)
+            32_2:             TypePointer Input 23_1(ivec3)
+59_1(gl_LaunchIDEXT):   32_2(ptr) Variable Input
+59_2(gl_LaunchSizeEXT):   32_2(ptr) Variable Input
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 3
+            32_3:             TypePointer Function 23_2(fvec3)
+            32_4:             TypePointer Input 23_2(fvec3)
+59_3(gl_WorldRayOriginEXT):   32_4(ptr) Variable Input
+59_4(gl_WorldRayDirectionEXT):   32_4(ptr) Variable Input
+            32_5:             TypePointer Function 22_1(float)
+            32_6:             TypePointer Input 22_1(float)
+59_5(gl_RayTminEXT):   32_6(ptr) Variable Input
+59_6(gl_RayTmaxEXT):   32_6(ptr) Variable Input
+            32_7:             TypePointer Function 21_1(int)
+            32_8:             TypePointer Input 21_1(int)
+59_7(gl_CullMaskEXT):   32_8(ptr) Variable Input
+          5341_1:             TypeAccelerationStructureKHR
+            32_9:             TypePointer UniformConstant 5341_1
+    59_8(accEXT):   32_9(ptr) Variable UniformConstant
+         uint(0):   21_1(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+         uint(3):   21_1(int) Constant 3
+            43_1: 22_1(float) Constant 1056964608
+            44_1: 23_2(fvec3) ConstantComposite 43_1 43_1 43_1
+            43_2: 22_1(float) Constant 1065353216
+            44_2: 23_2(fvec3) ConstantComposite 43_2 43_2 43_2
+            43_3: 22_1(float) Constant 1061158912
+            21_2:             TypeInt 32 1
+            43_4:   21_2(int) Constant 1
+            23_3:             TypeVector 22_1(float) 4
+           32_10:             TypePointer IncomingRayPayloadKHR 23_3(fvec4)
+59_9(incomingPayload):  32_10(ptr) Variable IncomingRayPayloadKHR
+59_10(gl_SubGroupSizeARB):   32_8(ptr) Variable Input
+            23_4:             TypeVector 21_1(int) 4
+           32_11:             TypePointer Input 23_4(ivec4)
+59_11(gl_SubgroupEqMask):  32_11(ptr) Variable Input
+59_12(gl_WarpIDNV):   32_8(ptr) Variable Input
+           32_12:             TypePointer IncomingRayPayloadKHR 22_1(float)
+           32_13:             TypePointer Function 23_3(fvec4)
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+           32_14:             TypePointer UniformConstant 27_1
+      59_13(s2D):  32_14(ptr) Variable UniformConstant
+            23_5:             TypeVector 22_1(float) 2
+           32_15:             TypePointer Input 23_5(fvec2)
+       59_14(c2):  32_15(ptr) Variable Input
+            23_6:             TypeVector 21_2(int) 2
+            43_5:   21_2(int) Constant 5
+            44_3: 23_6(ivec2) ConstantComposite 43_5 43_5
+ 59_15(lodClamp):   32_6(ptr) Variable Input
+           32_16:             TypePointer RayPayloadKHR 23_3(fvec4)
+59_16(localPayload):  32_16(ptr) Variable RayPayloadKHR
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_17(v0):   32_1(ptr) Variable Function
+       59_18(v1):   32_1(ptr) Variable Function
+       59_19(v2):   32_3(ptr) Variable Function
+       59_20(v3):   32_3(ptr) Variable Function
+       59_21(v4):   32_5(ptr) Variable Function
+       59_22(v5):   32_5(ptr) Variable Function
+       59_23(v6):   32_7(ptr) Variable Function
+    59_24(texel):  32_13(ptr) Variable Function
+            61_1: 23_1(ivec3) Load 59_1(gl_LaunchIDEXT)
+                              Store 59_17(v0) 61_1
+            61_2: 23_1(ivec3) Load 59_2(gl_LaunchSizeEXT)
+                              Store 59_18(v1) 61_2
+            61_3: 23_2(fvec3) Load 59_3(gl_WorldRayOriginEXT)
+                              Store 59_19(v2) 61_3
+            61_4: 23_2(fvec3) Load 59_4(gl_WorldRayDirectionEXT)
+                              Store 59_20(v3) 61_4
+            61_5: 22_1(float) Load 59_5(gl_RayTminEXT)
+                              Store 59_21(v4) 61_5
+            61_6: 22_1(float) Load 59_6(gl_RayTmaxEXT)
+                              Store 59_22(v5) 61_6
+            61_7:   21_1(int) Load 59_7(gl_CullMaskEXT)
+                              Store 59_23(v6) 61_7
+            61_8:      5341_1 Load 59_8(accEXT)
+                              TraceRayKHR 61_8 uint(0) uint(1) uint(2) uint(3) uint(0) 44_1 43_1 44_2 43_3 59_9(incomingPayload)
+            61_9:   21_1(int) Load 59_10(gl_SubGroupSizeARB)
+           112_1: 22_1(float) ConvertUToF 61_9
+           61_10: 23_4(ivec4) Load 59_11(gl_SubgroupEqMask)
+           112_2: 23_3(fvec4) ConvertUToF 61_10
+            81_1: 22_1(float) CompositeExtract 112_2 0
+           129_1: 22_1(float) FAdd 112_1 81_1
+           61_11:   21_1(int) Load 59_12(gl_WarpIDNV)
+           112_3: 22_1(float) ConvertUToF 61_11
+           129_2: 22_1(float) FAdd 129_1 112_3
+            65_1:  32_12(ptr) AccessChain 59_9(incomingPayload) uint(0)
+                              Store 65_1 129_2
+           61_12:        27_1 Load 59_13(s2D)
+           61_13: 23_5(fvec2) Load 59_14(c2)
+           61_14: 22_1(float) Load 59_15(lodClamp)
+            88_1: 23_3(fvec4) ImageSampleExplicitLod 61_12 61_13 Grad ConstOffset MinLod 61_13 61_13 44_3 61_14
+                              Store 59_24(texel) 88_1
                               Return
                               FunctionEnd

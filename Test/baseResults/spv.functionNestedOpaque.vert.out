@@ -5,64 +5,64 @@ Validation failed
 // Id's are bound by 39
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main"
+                              EntryPoint Vertex 54_1  "main"
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 12  "foo(s21;"
-                              Name 11  "t"
-                              Name 14  "S"
-                              MemberName 14(S) 0  "s"
-                              Name 18  "barc(struct-S-s211;"
-                              Name 17  "p"
-                              Name 21  "bar(struct-S-s211;"
-                              Name 20  "p"
-                              Name 36  "si"
-                              Decorate 36(si) Binding 0
-                              Decorate 36(si) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeImage 6(float) 2D sampled format:Unknown
-               8:             TypeSampledImage 7
-               9:             TypePointer UniformConstant 8
-              10:             TypeFunction 2 9(ptr)
-           14(S):             TypeStruct 8
-              15:             TypePointer UniformConstant 14(S)
-              16:             TypeFunction 2 15(ptr)
-              24:             TypeVector 6(float) 2
-              25:    6(float) Constant 1056964608
-              26:   24(fvec2) ConstantComposite 25 25
-              27:             TypeVector 6(float) 4
-              28:    6(float) Constant 0
-              30:             TypeInt 32 1
-              31:     30(int) Constant 0
-          36(si):     15(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-              37:           2 FunctionCall 18(barc(struct-S-s211;) 36(si)
-              38:           2 FunctionCall 21(bar(struct-S-s211;) 36(si)
+                              Name 54_1  "main"
+                              Name 54_2  "foo(s21;"
+                              Name 55_1  "t"
+                              Name 30_1  "S"
+                              MemberName 30_1(S) 0  "s"
+                              Name 54_3  "barc(struct-S-s211;"
+                              Name 55_2  "p"
+                              Name 54_4  "bar(struct-S-s211;"
+                              Name 55_3  "p"
+                              Name 59_1  "si"
+                              Decorate 59_1(si) Binding 0
+                              Decorate 59_1(si) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_1:             TypePointer UniformConstant 27_1
+            33_2:             TypeFunction 19_1 32_1(ptr)
+         30_1(S):             TypeStruct 27_1
+            32_2:             TypePointer UniformConstant 30_1(S)
+            33_3:             TypeFunction 19_1 32_2(ptr)
+            23_1:             TypeVector 22_1(float) 2
+            43_1: 22_1(float) Constant 1056964608
+            44_1: 23_1(fvec2) ConstantComposite 43_1 43_1
+            23_2:             TypeVector 22_1(float) 4
+            43_2: 22_1(float) Constant 0
+            21_1:             TypeInt 32 1
+            43_3:   21_1(int) Constant 0
+        59_1(si):   32_2(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:        19_1 FunctionCall 54_3(barc(struct-S-s211;) 59_1(si)
+            57_2:        19_1 FunctionCall 54_4(bar(struct-S-s211;) 59_1(si)
                               Return
                               FunctionEnd
-    12(foo(s21;):           2 Function None 10
-           11(t):      9(ptr) FunctionParameter
-              13:             Label
-              23:           8 Load 11(t)
-              29:   27(fvec4) ImageSampleExplicitLod 23 26 Lod 28
+  54_2(foo(s21;):        19_1 Function None 33_2
+         55_1(t):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            61_1:        27_1 Load 55_1(t)
+            88_1: 23_2(fvec4) ImageSampleExplicitLod 61_1 44_1 Lod 43_2
                               Return
                               FunctionEnd
-18(barc(struct-S-s211;):           2 Function None 16
-           17(p):     15(ptr) FunctionParameter
-              19:             Label
-              32:      9(ptr) AccessChain 17(p) 31
-              33:           2 FunctionCall 12(foo(s21;) 32
+54_3(barc(struct-S-s211;):        19_1 Function None 33_3
+         55_2(p):   32_2(ptr) FunctionParameter
+           248_3:             Label
+            65_1:   32_1(ptr) AccessChain 55_2(p) 43_3
+            57_3:        19_1 FunctionCall 54_2(foo(s21;) 65_1
                               Return
                               FunctionEnd
-21(bar(struct-S-s211;):           2 Function None 16
-           20(p):     15(ptr) FunctionParameter
-              22:             Label
-              34:      9(ptr) AccessChain 20(p) 31
-              35:           2 FunctionCall 12(foo(s21;) 34
+54_4(bar(struct-S-s211;):        19_1 Function None 33_3
+         55_3(p):   32_2(ptr) FunctionParameter
+           248_4:             Label
+            65_2:   32_1(ptr) AccessChain 55_3(p) 43_3
+            57_4:        19_1 FunctionCall 54_2(foo(s21;) 65_2
                               Return
                               FunctionEnd

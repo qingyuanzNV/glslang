@@ -4,155 +4,155 @@ spv.boolInBlock.frag
 // Id's are bound by 102
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 74
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 14  "foo(vb4;vb2;"
-                              Name 12  "paramb4"
-                              Name 13  "paramb2"
-                              Name 17  "b1"
-                              Name 25  "Buffer"
-                              MemberName 25(Buffer) 0  "b2"
-                              Name 27  ""
-                              Name 40  "Uniform"
-                              MemberName 40(Uniform) 0  "b4"
-                              Name 42  ""
-                              Name 60  "param"
-                              Name 66  "param"
-                              Name 74  "fragColor"
-                              Decorate 25(Buffer) BufferBlock
-                              MemberDecorate 25(Buffer) 0 Offset 0
-                              Decorate 27 Binding 1
-                              Decorate 27 DescriptorSet 0
-                              Decorate 40(Uniform) Block
-                              MemberDecorate 40(Uniform) 0 Offset 0
-                              Decorate 42 Binding 0
-                              Decorate 42 DescriptorSet 0
-                              Decorate 74(fragColor) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeBool
-               7:             TypeVector 6(bool) 4
-               8:             TypePointer Function 7(bvec4)
-               9:             TypeVector 6(bool) 2
-              10:             TypePointer Function 9(bvec2)
-              11:             TypeFunction 2 8(ptr) 10(ptr)
-              16:             TypePointer Function 6(bool)
-              18:             TypeInt 32 0
-              19:     18(int) Constant 2
-              24:             TypeVector 18(int) 2
-      25(Buffer):             TypeStruct 24(ivec2)
-              26:             TypePointer Uniform 25(Buffer)
-              27:     26(ptr) Variable Uniform
-              28:             TypeInt 32 1
-              29:     28(int) Constant 0
-              30:     6(bool) ConstantFalse
-              31:    9(bvec2) ConstantComposite 30 30
-              32:     18(int) Constant 1
-              33:   24(ivec2) ConstantComposite 32 32
-              34:     18(int) Constant 0
-              35:   24(ivec2) ConstantComposite 34 34
-              37:             TypePointer Uniform 24(ivec2)
-              39:             TypeVector 18(int) 4
-     40(Uniform):             TypeStruct 39(ivec4)
-              41:             TypePointer Uniform 40(Uniform)
-              42:     41(ptr) Variable Uniform
-              43:             TypePointer Uniform 18(int)
-              61:             TypePointer Uniform 39(ivec4)
-              64:   39(ivec4) ConstantComposite 34 34 34 34
-              71:             TypeFloat 32
-              72:             TypeVector 71(float) 4
-              73:             TypePointer Output 72(fvec4)
-   74(fragColor):     73(ptr) Variable Output
-              84:   71(float) Constant 0
-              85:   71(float) Constant 1065353216
-         4(main):           2 Function None 3
-               5:             Label
-       60(param):      8(ptr) Variable Function
-       66(param):     10(ptr) Variable Function
-              36:   24(ivec2) Select 31 33 35
-              38:     37(ptr) AccessChain 27 29
-                              Store 38 36
-              44:     43(ptr) AccessChain 42 29 19
-              45:     18(int) Load 44
-              46:     6(bool) INotEqual 45 34
-                              SelectionMerge 48 None
-                              BranchConditional 46 47 48
-              47:               Label
-              49:     43(ptr)   AccessChain 42 29 34
-              50:     18(int)   Load 49
-              51:     6(bool)   INotEqual 50 34
-              52:    9(bvec2)   CompositeConstruct 51 51
-              53:   24(ivec2)   Select 52 33 35
-              54:     37(ptr)   AccessChain 27 29
-                                Store 54 53
-                                Branch 48
-              48:             Label
-              55:     43(ptr) AccessChain 27 29 34
-              56:     18(int) Load 55
-              57:     6(bool) INotEqual 56 34
-                              SelectionMerge 59 None
-                              BranchConditional 57 58 59
-              58:               Label
-              62:     61(ptr)   AccessChain 42 29
-              63:   39(ivec4)   Load 62
-              65:    7(bvec4)   INotEqual 63 64
-                                Store 60(param) 65
-              67:           2   FunctionCall 14(foo(vb4;vb2;) 60(param) 66(param)
-              68:    9(bvec2)   Load 66(param)
-              69:   24(ivec2)   Select 68 33 35
-              70:     37(ptr)   AccessChain 27 29
-                                Store 70 69
-                                Branch 59
-              59:             Label
-              75:     43(ptr) AccessChain 42 29 34
-              76:     18(int) Load 75
-              77:     6(bool) INotEqual 76 34
-                              SelectionMerge 79 None
-                              BranchConditional 77 78 79
-              78:               Label
-              80:     43(ptr)   AccessChain 42 29 32
-              81:     18(int)   Load 80
-              82:     6(bool)   INotEqual 81 34
-                                Branch 79
-              79:             Label
-              83:     6(bool) Phi 77 59 82 78
-              86:   71(float) Select 83 85 84
-              87:   72(fvec4) CompositeConstruct 86 86 86 86
-                              Store 74(fragColor) 87
-              88:     43(ptr) AccessChain 42 29 34
-              89:     18(int) Load 88
-              90:     6(bool) INotEqual 89 34
-              91:     6(bool) LogicalNot 90
-                              SelectionMerge 93 None
-                              BranchConditional 91 92 93
-              92:               Label
-              94:     43(ptr)   AccessChain 42 29 32
-              95:     18(int)   Load 94
-              96:     6(bool)   INotEqual 95 34
-                                Branch 93
-              93:             Label
-              97:     6(bool) Phi 90 79 96 92
-              98:   71(float) Select 97 85 84
-              99:   72(fvec4) CompositeConstruct 98 98 98 98
-             100:   72(fvec4) Load 74(fragColor)
-             101:   72(fvec4) FSub 100 99
-                              Store 74(fragColor) 101
+                              Name 54_1  "main"
+                              Name 54_2  "foo(vb4;vb2;"
+                              Name 55_1  "paramb4"
+                              Name 55_2  "paramb2"
+                              Name 59_6  "b1"
+                              Name 30_1  "Buffer"
+                              MemberName 30_1(Buffer) 0  "b2"
+                              Name 59_1  ""
+                              Name 30_2  "Uniform"
+                              MemberName 30_2(Uniform) 0  "b4"
+                              Name 59_2  ""
+                              Name 59_4  "param"
+                              Name 59_5  "param"
+                              Name 59_3  "fragColor"
+                              Decorate 30_1(Buffer) BufferBlock
+                              MemberDecorate 30_1(Buffer) 0 Offset 0
+                              Decorate 59_1 Binding 1
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 30_2(Uniform) Block
+                              MemberDecorate 30_2(Uniform) 0 Offset 0
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 59_3(fragColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            20_1:             TypeBool
+            23_1:             TypeVector 20_1(bool) 4
+            32_1:             TypePointer Function 23_1(bvec4)
+            23_2:             TypeVector 20_1(bool) 2
+            32_2:             TypePointer Function 23_2(bvec2)
+            33_2:             TypeFunction 19_1 32_1(ptr) 32_2(ptr)
+            32_3:             TypePointer Function 20_1(bool)
+            21_1:             TypeInt 32 0
+         uint(2):   21_1(int) Constant 2
+            23_3:             TypeVector 21_1(int) 2
+    30_1(Buffer):             TypeStruct 23_3(ivec2)
+            32_4:             TypePointer Uniform 30_1(Buffer)
+            59_1:   32_4(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            42_1:  20_1(bool) ConstantFalse
+            44_1: 23_2(bvec2) ConstantComposite 42_1 42_1
+         uint(1):   21_1(int) Constant 1
+            44_2: 23_3(ivec2) ConstantComposite uint(1) uint(1)
+         uint(0):   21_1(int) Constant 0
+            44_3: 23_3(ivec2) ConstantComposite uint(0) uint(0)
+            32_5:             TypePointer Uniform 23_3(ivec2)
+            23_4:             TypeVector 21_1(int) 4
+   30_2(Uniform):             TypeStruct 23_4(ivec4)
+            32_6:             TypePointer Uniform 30_2(Uniform)
+            59_2:   32_6(ptr) Variable Uniform
+            32_7:             TypePointer Uniform 21_1(int)
+            32_8:             TypePointer Uniform 23_4(ivec4)
+            44_4: 23_4(ivec4) ConstantComposite uint(0) uint(0) uint(0) uint(0)
+            22_1:             TypeFloat 32
+            23_5:             TypeVector 22_1(float) 4
+            32_9:             TypePointer Output 23_5(fvec4)
+ 59_3(fragColor):   32_9(ptr) Variable Output
+            43_2: 22_1(float) Constant 0
+            43_3: 22_1(float) Constant 1065353216
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_4(param):   32_1(ptr) Variable Function
+     59_5(param):   32_2(ptr) Variable Function
+           169_1: 23_3(ivec2) Select 44_1 44_2 44_3
+            65_1:   32_5(ptr) AccessChain 59_1 43_1
+                              Store 65_1 169_1
+            65_2:   32_7(ptr) AccessChain 59_2 43_1 uint(2)
+            61_1:   21_1(int) Load 65_2
+           171_1:  20_1(bool) INotEqual 61_1 uint(0)
+                              SelectionMerge 248_3 None
+                              BranchConditional 171_1 248_2 248_3
+           248_2:               Label
+            65_3:   32_7(ptr)   AccessChain 59_2 43_1 uint(0)
+            61_2:   21_1(int)   Load 65_3
+           171_2:  20_1(bool)   INotEqual 61_2 uint(0)
+            80_1: 23_2(bvec2)   CompositeConstruct 171_2 171_2
+           169_2: 23_3(ivec2)   Select 80_1 44_2 44_3
+            65_4:   32_5(ptr)   AccessChain 59_1 43_1
+                                Store 65_4 169_2
+                                Branch 248_3
+           248_3:             Label
+            65_5:   32_7(ptr) AccessChain 59_1 43_1 uint(0)
+            61_3:   21_1(int) Load 65_5
+           171_3:  20_1(bool) INotEqual 61_3 uint(0)
+                              SelectionMerge 248_5 None
+                              BranchConditional 171_3 248_4 248_5
+           248_4:               Label
+            65_6:   32_8(ptr)   AccessChain 59_2 43_1
+            61_4: 23_4(ivec4)   Load 65_6
+           171_4: 23_1(bvec4)   INotEqual 61_4 44_4
+                                Store 59_4(param) 171_4
+            57_1:        19_1   FunctionCall 54_2(foo(vb4;vb2;) 59_4(param) 59_5(param)
+            61_5: 23_2(bvec2)   Load 59_5(param)
+           169_3: 23_3(ivec2)   Select 61_5 44_2 44_3
+            65_7:   32_5(ptr)   AccessChain 59_1 43_1
+                                Store 65_7 169_3
+                                Branch 248_5
+           248_5:             Label
+            65_8:   32_7(ptr) AccessChain 59_2 43_1 uint(0)
+            61_6:   21_1(int) Load 65_8
+           171_5:  20_1(bool) INotEqual 61_6 uint(0)
+                              SelectionMerge 248_7 None
+                              BranchConditional 171_5 248_6 248_7
+           248_6:               Label
+            65_9:   32_7(ptr)   AccessChain 59_2 43_1 uint(1)
+            61_7:   21_1(int)   Load 65_9
+           171_6:  20_1(bool)   INotEqual 61_7 uint(0)
+                                Branch 248_7
+           248_7:             Label
+           245_1:  20_1(bool) Phi 171_5 248_5 171_6 248_6
+           169_4: 22_1(float) Select 245_1 43_3 43_2
+            80_2: 23_5(fvec4) CompositeConstruct 169_4 169_4 169_4 169_4
+                              Store 59_3(fragColor) 80_2
+           65_10:   32_7(ptr) AccessChain 59_2 43_1 uint(0)
+            61_8:   21_1(int) Load 65_10
+           171_7:  20_1(bool) INotEqual 61_8 uint(0)
+           168_1:  20_1(bool) LogicalNot 171_7
+                              SelectionMerge 248_9 None
+                              BranchConditional 168_1 248_8 248_9
+           248_8:               Label
+           65_11:   32_7(ptr)   AccessChain 59_2 43_1 uint(1)
+            61_9:   21_1(int)   Load 65_11
+           171_8:  20_1(bool)   INotEqual 61_9 uint(0)
+                                Branch 248_9
+           248_9:             Label
+           245_2:  20_1(bool) Phi 171_7 248_7 171_8 248_8
+           169_5: 22_1(float) Select 245_2 43_3 43_2
+            80_3: 23_5(fvec4) CompositeConstruct 169_5 169_5 169_5 169_5
+           61_10: 23_5(fvec4) Load 59_3(fragColor)
+           131_1: 23_5(fvec4) FSub 61_10 80_3
+                              Store 59_3(fragColor) 131_1
                               Return
                               FunctionEnd
-14(foo(vb4;vb2;):           2 Function None 11
-     12(paramb4):      8(ptr) FunctionParameter
-     13(paramb2):     10(ptr) FunctionParameter
-              15:             Label
-          17(b1):     16(ptr) Variable Function
-              20:     16(ptr) AccessChain 12(paramb4) 19
-              21:     6(bool) Load 20
-                              Store 17(b1) 21
-              22:     6(bool) Load 17(b1)
-              23:    9(bvec2) CompositeConstruct 22 22
-                              Store 13(paramb2) 23
+54_2(foo(vb4;vb2;):        19_1 Function None 33_2
+   55_1(paramb4):   32_1(ptr) FunctionParameter
+   55_2(paramb2):   32_2(ptr) FunctionParameter
+          248_10:             Label
+        59_6(b1):   32_3(ptr) Variable Function
+           65_12:   32_3(ptr) AccessChain 55_1(paramb4) uint(2)
+           61_11:  20_1(bool) Load 65_12
+                              Store 59_6(b1) 61_11
+           61_12:  20_1(bool) Load 59_6(b1)
+            80_4: 23_2(bvec2) CompositeConstruct 61_12 61_12
+                              Store 55_2(paramb2) 80_4
                               Return
                               FunctionEnd

@@ -177,139 +177,139 @@ using depth_any
 
                               Capability Shader
                               Capability SampledBuffer
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 67 71
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 DepthReplacing
+                              EntryPoint Fragment 54_1  "main" 59_5 59_6
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 DepthReplacing
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "PS_OUTPUT"
-                              MemberName 8(PS_OUTPUT) 0  "Color"
-                              MemberName 8(PS_OUTPUT) 1  "Depth"
-                              Name 10  "@main("
-                              Name 13  "r00"
-                              Name 16  "g_tTexbfs"
-                              Name 22  "$Global"
-                              MemberName 22($Global) 0  "c1"
-                              MemberName 22($Global) 1  "c2"
-                              MemberName 22($Global) 2  "c3"
-                              MemberName 22($Global) 3  "c4"
-                              MemberName 22($Global) 4  "o1"
-                              MemberName 22($Global) 5  "o2"
-                              MemberName 22($Global) 6  "o3"
-                              MemberName 22($Global) 7  "o4"
-                              Name 24  ""
-                              Name 32  "r01"
-                              Name 35  "g_tTexbis"
-                              Name 43  "r02"
-                              Name 46  "g_tTexbus"
-                              Name 54  "psout"
-                              Name 64  "flattenTemp"
-                              Name 67  "@entryPointOutput.Color"
-                              Name 71  "@entryPointOutput.Depth"
-                              Name 74  "g_tTexbfs_test"
-                              Decorate 16(g_tTexbfs) Binding 1
-                              Decorate 16(g_tTexbfs) DescriptorSet 0
-                              Decorate 22($Global) Block
-                              MemberDecorate 22($Global) 0 Offset 0
-                              MemberDecorate 22($Global) 1 Offset 8
-                              MemberDecorate 22($Global) 2 Offset 16
-                              MemberDecorate 22($Global) 3 Offset 32
-                              MemberDecorate 22($Global) 4 Offset 48
-                              MemberDecorate 22($Global) 5 Offset 56
-                              MemberDecorate 22($Global) 6 Offset 64
-                              MemberDecorate 22($Global) 7 Offset 80
-                              Decorate 24 Binding 4
-                              Decorate 24 DescriptorSet 0
-                              Decorate 35(g_tTexbis) Binding 2
-                              Decorate 35(g_tTexbis) DescriptorSet 0
-                              Decorate 46(g_tTexbus) Binding 3
-                              Decorate 46(g_tTexbus) DescriptorSet 0
-                              Decorate 67(@entryPointOutput.Color) Location 0
-                              Decorate 71(@entryPointOutput.Depth) BuiltIn FragDepth
-                              Decorate 74(g_tTexbfs_test) Binding 0
-                              Decorate 74(g_tTexbfs_test) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-    8(PS_OUTPUT):             TypeStruct 7(fvec4) 6(float)
-               9:             TypeFunction 8(PS_OUTPUT)
-              12:             TypePointer Function 6(float)
-              14:             TypeImage 6(float) Buffer sampled format:R32f
-              15:             TypePointer UniformConstant 14
-   16(g_tTexbfs):     15(ptr) Variable UniformConstant
-              18:             TypeInt 32 1
-              19:             TypeVector 18(int) 2
-              20:             TypeVector 18(int) 3
-              21:             TypeVector 18(int) 4
-     22($Global):             TypeStruct 18(int) 19(ivec2) 20(ivec3) 21(ivec4) 18(int) 19(ivec2) 20(ivec3) 21(ivec4)
-              23:             TypePointer Uniform 22($Global)
-              24:     23(ptr) Variable Uniform
-              25:     18(int) Constant 0
-              26:             TypePointer Uniform 18(int)
-              31:             TypePointer Function 18(int)
-              33:             TypeImage 18(int) Buffer sampled format:R32i
-              34:             TypePointer UniformConstant 33
-   35(g_tTexbis):     34(ptr) Variable UniformConstant
-              41:             TypeInt 32 0
-              42:             TypePointer Function 41(int)
-              44:             TypeImage 41(int) Buffer sampled format:R32ui
-              45:             TypePointer UniformConstant 44
-   46(g_tTexbus):     45(ptr) Variable UniformConstant
-              50:             TypeVector 41(int) 4
-              53:             TypePointer Function 8(PS_OUTPUT)
-              55:    6(float) Constant 1065353216
-              56:    7(fvec4) ConstantComposite 55 55 55 55
-              57:             TypePointer Function 7(fvec4)
-              59:     18(int) Constant 1
-              66:             TypePointer Output 7(fvec4)
-67(@entryPointOutput.Color):     66(ptr) Variable Output
-              70:             TypePointer Output 6(float)
-71(@entryPointOutput.Depth):     70(ptr) Variable Output
-74(g_tTexbfs_test):     15(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
- 64(flattenTemp):     53(ptr) Variable Function
-              65:8(PS_OUTPUT) FunctionCall 10(@main()
-                              Store 64(flattenTemp) 65
-              68:     57(ptr) AccessChain 64(flattenTemp) 25
-              69:    7(fvec4) Load 68
-                              Store 67(@entryPointOutput.Color) 69
-              72:     12(ptr) AccessChain 64(flattenTemp) 59
-              73:    6(float) Load 72
-                              Store 71(@entryPointOutput.Depth) 73
+                              Name 54_1  "main"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              MemberName 30_1(PS_OUTPUT) 1  "Depth"
+                              Name 54_2  "@main("
+                              Name 59_9  "r00"
+                              Name 59_1  "g_tTexbfs"
+                              Name 30_2  "$Global"
+                              MemberName 30_2($Global) 0  "c1"
+                              MemberName 30_2($Global) 1  "c2"
+                              MemberName 30_2($Global) 2  "c3"
+                              MemberName 30_2($Global) 3  "c4"
+                              MemberName 30_2($Global) 4  "o1"
+                              MemberName 30_2($Global) 5  "o2"
+                              MemberName 30_2($Global) 6  "o3"
+                              MemberName 30_2($Global) 7  "o4"
+                              Name 59_2  ""
+                              Name 59_10  "r01"
+                              Name 59_3  "g_tTexbis"
+                              Name 59_11  "r02"
+                              Name 59_4  "g_tTexbus"
+                              Name 59_12  "psout"
+                              Name 59_8  "flattenTemp"
+                              Name 59_5  "@entryPointOutput.Color"
+                              Name 59_6  "@entryPointOutput.Depth"
+                              Name 59_7  "g_tTexbfs_test"
+                              Decorate 59_1(g_tTexbfs) Binding 1
+                              Decorate 59_1(g_tTexbfs) DescriptorSet 0
+                              Decorate 30_2($Global) Block
+                              MemberDecorate 30_2($Global) 0 Offset 0
+                              MemberDecorate 30_2($Global) 1 Offset 8
+                              MemberDecorate 30_2($Global) 2 Offset 16
+                              MemberDecorate 30_2($Global) 3 Offset 32
+                              MemberDecorate 30_2($Global) 4 Offset 48
+                              MemberDecorate 30_2($Global) 5 Offset 56
+                              MemberDecorate 30_2($Global) 6 Offset 64
+                              MemberDecorate 30_2($Global) 7 Offset 80
+                              Decorate 59_2 Binding 4
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 59_3(g_tTexbis) Binding 2
+                              Decorate 59_3(g_tTexbis) DescriptorSet 0
+                              Decorate 59_4(g_tTexbus) Binding 3
+                              Decorate 59_4(g_tTexbus) DescriptorSet 0
+                              Decorate 59_5(@entryPointOutput.Color) Location 0
+                              Decorate 59_6(@entryPointOutput.Depth) BuiltIn FragDepth
+                              Decorate 59_7(g_tTexbfs_test) Binding 0
+                              Decorate 59_7(g_tTexbfs_test) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4) 22_1(float)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            32_1:             TypePointer Function 22_1(float)
+            25_1:             TypeImage 22_1(float) Buffer sampled format:R32f
+            32_2:             TypePointer UniformConstant 25_1
+ 59_1(g_tTexbfs):   32_2(ptr) Variable UniformConstant
+            21_1:             TypeInt 32 1
+            23_2:             TypeVector 21_1(int) 2
+            23_3:             TypeVector 21_1(int) 3
+            23_4:             TypeVector 21_1(int) 4
+   30_2($Global):             TypeStruct 21_1(int) 23_2(ivec2) 23_3(ivec3) 23_4(ivec4) 21_1(int) 23_2(ivec2) 23_3(ivec3) 23_4(ivec4)
+            32_3:             TypePointer Uniform 30_2($Global)
+            59_2:   32_3(ptr) Variable Uniform
+            43_1:   21_1(int) Constant 0
+            32_4:             TypePointer Uniform 21_1(int)
+            32_5:             TypePointer Function 21_1(int)
+            25_2:             TypeImage 21_1(int) Buffer sampled format:R32i
+            32_6:             TypePointer UniformConstant 25_2
+ 59_3(g_tTexbis):   32_6(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 0
+            32_7:             TypePointer Function 21_2(int)
+            25_3:             TypeImage 21_2(int) Buffer sampled format:R32ui
+            32_8:             TypePointer UniformConstant 25_3
+ 59_4(g_tTexbus):   32_8(ptr) Variable UniformConstant
+            23_5:             TypeVector 21_2(int) 4
+            32_9:             TypePointer Function 30_1(PS_OUTPUT)
+            43_2: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+           32_10:             TypePointer Function 23_1(fvec4)
+            43_3:   21_1(int) Constant 1
+           32_11:             TypePointer Output 23_1(fvec4)
+59_5(@entryPointOutput.Color):  32_11(ptr) Variable Output
+           32_12:             TypePointer Output 22_1(float)
+59_6(@entryPointOutput.Depth):  32_12(ptr) Variable Output
+59_7(g_tTexbfs_test):   32_2(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_8(flattenTemp):   32_9(ptr) Variable Function
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_2(@main()
+                              Store 59_8(flattenTemp) 57_1
+            65_1:  32_10(ptr) AccessChain 59_8(flattenTemp) 43_1
+            61_1: 23_1(fvec4) Load 65_1
+                              Store 59_5(@entryPointOutput.Color) 61_1
+            65_2:   32_1(ptr) AccessChain 59_8(flattenTemp) 43_3
+            61_2: 22_1(float) Load 65_2
+                              Store 59_6(@entryPointOutput.Depth) 61_2
                               Return
                               FunctionEnd
-      10(@main():8(PS_OUTPUT) Function None 9
-              11:             Label
-         13(r00):     12(ptr) Variable Function
-         32(r01):     31(ptr) Variable Function
-         43(r02):     42(ptr) Variable Function
-       54(psout):     53(ptr) Variable Function
-              17:          14 Load 16(g_tTexbfs)
-              27:     26(ptr) AccessChain 24 25
-              28:     18(int) Load 27
-              29:    7(fvec4) ImageFetch 17 28
-              30:    6(float) CompositeExtract 29 0
-                              Store 13(r00) 30
-              36:          33 Load 35(g_tTexbis)
-              37:     26(ptr) AccessChain 24 25
-              38:     18(int) Load 37
-              39:   21(ivec4) ImageFetch 36 38
-              40:     18(int) CompositeExtract 39 0
-                              Store 32(r01) 40
-              47:          44 Load 46(g_tTexbus)
-              48:     26(ptr) AccessChain 24 25
-              49:     18(int) Load 48
-              51:   50(ivec4) ImageFetch 47 49
-              52:     41(int) CompositeExtract 51 0
-                              Store 43(r02) 52
-              58:     57(ptr) AccessChain 54(psout) 25
-                              Store 58 56
-              60:     12(ptr) AccessChain 54(psout) 59
-                              Store 60 55
-              61:8(PS_OUTPUT) Load 54(psout)
-                              ReturnValue 61
+    54_2(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_2:             Label
+       59_9(r00):   32_1(ptr) Variable Function
+      59_10(r01):   32_5(ptr) Variable Function
+      59_11(r02):   32_7(ptr) Variable Function
+    59_12(psout):   32_9(ptr) Variable Function
+            61_3:        25_1 Load 59_1(g_tTexbfs)
+            65_3:   32_4(ptr) AccessChain 59_2 43_1
+            61_4:   21_1(int) Load 65_3
+            95_1: 23_1(fvec4) ImageFetch 61_3 61_4
+            81_1: 22_1(float) CompositeExtract 95_1 0
+                              Store 59_9(r00) 81_1
+            61_5:        25_2 Load 59_3(g_tTexbis)
+            65_4:   32_4(ptr) AccessChain 59_2 43_1
+            61_6:   21_1(int) Load 65_4
+            95_2: 23_4(ivec4) ImageFetch 61_5 61_6
+            81_2:   21_1(int) CompositeExtract 95_2 0
+                              Store 59_10(r01) 81_2
+            61_7:        25_3 Load 59_4(g_tTexbus)
+            65_5:   32_4(ptr) AccessChain 59_2 43_1
+            61_8:   21_1(int) Load 65_5
+            95_3: 23_5(ivec4) ImageFetch 61_7 61_8
+            81_3:   21_2(int) CompositeExtract 95_3 0
+                              Store 59_11(r02) 81_3
+            65_6:  32_10(ptr) AccessChain 59_12(psout) 43_1
+                              Store 65_6 44_1
+            65_7:   32_1(ptr) AccessChain 59_12(psout) 43_3
+                              Store 65_7 43_2
+            61_9:30_1(PS_OUTPUT) Load 59_12(psout)
+                              ReturnValue 61_9
                               FunctionEnd

@@ -9,46 +9,46 @@ spv.WorkgroupMemoryExplicitLayout.16BitAccess.comp
                               Capability CapabilityWorkgroupMemoryExplicitLayoutKHR
                               Capability CapabilityWorkgroupMemoryExplicitLayout16BitAccessKHR
                               Extension  "SPV_KHR_workgroup_memory_explicit_layout"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 10
-                              ExecutionMode 4 LocalSize 2 1 1
+                              EntryPoint GLCompute 54_1  "main" 59_1
+                              ExecutionMode 54_1 LocalSize 2 1 1
                               Source GLSL 430
                               SourceExtension  "GL_EXT_shader_explicit_arithmetic_types"
                               SourceExtension  "GL_EXT_shared_memory_block"
-                              Name 4  "main"
-                              Name 8  "first"
-                              MemberName 8(first) 0  "a"
-                              MemberName 8(first) 1  "f"
-                              Name 10  ""
-                              Decorate 8(first) Block
-                              MemberDecorate 8(first) 0 Offset 0
-                              MemberDecorate 8(first) 1 Offset 2
-                              Decorate 24 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 16 1
-               7:             TypeFloat 16
-        8(first):             TypeStruct 6(int16_t) 7(float16_t)
-               9:             TypePointer Workgroup 8(first)
-              10:      9(ptr) Variable Workgroup
-              11:             TypeInt 32 1
-              12:     11(int) Constant 0
-              13:  6(int16_t) Constant 3
-              14:             TypePointer Workgroup 6(int16_t)
-              16:     11(int) Constant 1
-              17:7(float16_t) Constant 18982
-              18:             TypePointer Workgroup 7(float16_t)
-              20:             TypeInt 32 0
-              21:             TypeVector 20(int) 3
-              22:     20(int) Constant 2
-              23:     20(int) Constant 1
-              24:   21(ivec3) ConstantComposite 22 23 23
-         4(main):           2 Function None 3
-               5:             Label
-              15:     14(ptr) AccessChain 10 12
-                              Store 15 13
-              19:     18(ptr) AccessChain 10 16
-                              Store 19 17
+                              Name 54_1  "main"
+                              Name 30_1  "first"
+                              MemberName 30_1(first) 0  "a"
+                              MemberName 30_1(first) 1  "f"
+                              Name 59_1  ""
+                              Decorate 30_1(first) Block
+                              MemberDecorate 30_1(first) 0 Offset 0
+                              MemberDecorate 30_1(first) 1 Offset 2
+                              Decorate 44_1 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 16 1
+            22_1:             TypeFloat 16
+     30_1(first):             TypeStruct 21_1(int16_t) 22_1(float16_t)
+            32_1:             TypePointer Workgroup 30_1(first)
+            59_1:   32_1(ptr) Variable Workgroup
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            43_2:21_1(int16_t) Constant 3
+            32_2:             TypePointer Workgroup 21_1(int16_t)
+            43_3:   21_2(int) Constant 1
+            43_4:22_1(float16_t) Constant 18982
+            32_3:             TypePointer Workgroup 22_1(float16_t)
+            21_3:             TypeInt 32 0
+            23_1:             TypeVector 21_3(int) 3
+         uint(2):   21_3(int) Constant 2
+         uint(1):   21_3(int) Constant 1
+            44_1: 23_1(ivec3) ConstantComposite uint(2) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 43_1
+                              Store 65_1 43_2
+            65_2:   32_3(ptr) AccessChain 59_1 43_3
+                              Store 65_2 43_4
                               Return
                               FunctionEnd

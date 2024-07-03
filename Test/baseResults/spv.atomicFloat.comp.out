@@ -14,645 +14,645 @@ spv.atomicFloat.comp
                               Capability AtomicFloat64AddEXT
                               Extension  "SPV_EXT_shader_atomic_float_add"
                               Extension  "SPV_KHR_vulkan_memory_model"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical VulkanKHR
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 16 16 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 16 16 1
                               Source GLSL 450
                               SourceExtension  "GL_EXT_shader_atomic_float"
                               SourceExtension  "GL_KHR_memory_scope_semantics"
-                              Name 4  "main"
-                              Name 8  "resultf"
-                              Name 11  "atomf"
-                              Name 25  "Buffer"
-                              MemberName 25(Buffer) 0  "dataf"
-                              MemberName 25(Buffer) 1  "datad"
-                              Name 27  "buf"
-                              Name 34  "resultd"
-                              Name 37  "atomd"
-                              Name 143  "fimage1D"
-                              Name 189  "fimage1DArray"
-                              Name 232  "fimage2D"
-                              Name 270  "fimage2DRect"
-                              Name 308  "fimage2DArray"
-                              Name 352  "fimageCube"
-                              Name 392  "fimageCubeArray"
-                              Name 430  "fimage3D"
-                              Decorate 25(Buffer) BufferBlock
-                              MemberDecorate 25(Buffer) 0 Offset 0
-                              MemberDecorate 25(Buffer) 1 Offset 8
-                              Decorate 27(buf) Binding 0
-                              Decorate 27(buf) DescriptorSet 0
-                              Decorate 143(fimage1D) Location 0
-                              Decorate 143(fimage1D) Binding 0
-                              Decorate 143(fimage1D) DescriptorSet 0
-                              Decorate 189(fimage1DArray) Location 1
-                              Decorate 189(fimage1DArray) Binding 1
-                              Decorate 189(fimage1DArray) DescriptorSet 0
-                              Decorate 232(fimage2D) Location 2
-                              Decorate 232(fimage2D) Binding 2
-                              Decorate 232(fimage2D) DescriptorSet 0
-                              Decorate 270(fimage2DRect) Location 4
-                              Decorate 270(fimage2DRect) Binding 4
-                              Decorate 270(fimage2DRect) DescriptorSet 0
-                              Decorate 308(fimage2DArray) Location 3
-                              Decorate 308(fimage2DArray) Binding 3
-                              Decorate 308(fimage2DArray) DescriptorSet 0
-                              Decorate 352(fimageCube) Location 5
-                              Decorate 352(fimageCube) Binding 5
-                              Decorate 352(fimageCube) DescriptorSet 0
-                              Decorate 392(fimageCubeArray) Location 6
-                              Decorate 392(fimageCubeArray) Binding 6
-                              Decorate 392(fimageCubeArray) DescriptorSet 0
-                              Decorate 430(fimage3D) Location 7
-                              Decorate 430(fimage3D) Binding 9
-                              Decorate 430(fimage3D) DescriptorSet 0
-                              Decorate 469 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypePointer Function 6(float)
-               9:    6(float) Constant 0
-              10:             TypePointer Workgroup 6(float)
-       11(atomf):     10(ptr) Variable Workgroup
-              12:    6(float) Constant 1077936128
-              13:             TypeInt 32 0
-              14:     13(int) Constant 5
-              15:     13(int) Constant 0
-              17:    6(float) Constant 1083179008
-              18:             TypeInt 32 1
-              19:     18(int) Constant 1
-              20:     18(int) Constant 64
-              21:     18(int) Constant 0
-              22:     13(int) Constant 64
-              24:             TypeFloat 64
-      25(Buffer):             TypeStruct 6(float) 24(float64_t)
-              26:             TypePointer Uniform 25(Buffer)
-         27(buf):     26(ptr) Variable Uniform
-              28:             TypePointer Uniform 6(float)
-              33:             TypePointer Function 24(float64_t)
-              35:24(float64_t) Constant 0 0
-              36:             TypePointer Workgroup 24(float64_t)
-       37(atomd):     36(ptr) Variable Workgroup
-              38:24(float64_t) Constant 0 1074266112
-              40:24(float64_t) Constant 0 1074921472
-              42:             TypePointer Uniform 24(float64_t)
-              57:     18(int) Constant 256
-              58:     13(int) Constant 256
-             141:             TypeImage 6(float) 1D nonsampled format:R32f
-             142:             TypePointer UniformConstant 141
-   143(fimage1D):    142(ptr) Variable UniformConstant
-             144:    6(float) Constant 1073741824
-             145:             TypePointer Image 6(float)
-             147:     13(int) Constant 32768
-             149:     13(int) Constant 2
-             155:     18(int) Constant 2048
-             157:     13(int) Constant 2048
-             164:    6(float) Constant 1082130432
-             179:     18(int) Constant 2
-             187:             TypeImage 6(float) 1D array nonsampled format:R32f
-             188:             TypePointer UniformConstant 187
-189(fimage1DArray):    188(ptr) Variable UniformConstant
-             190:             TypeVector 18(int) 2
-             191:  190(ivec2) ConstantComposite 21 21
-             199:  190(ivec2) ConstantComposite 19 19
-             207:  190(ivec2) ConstantComposite 19 21
-             222:  190(ivec2) ConstantComposite 179 179
-             230:             TypeImage 6(float) 2D nonsampled format:R32f
-             231:             TypePointer UniformConstant 230
-   232(fimage2D):    231(ptr) Variable UniformConstant
-             268:             TypeImage 6(float) Rect nonsampled format:R32f
-             269:             TypePointer UniformConstant 268
-270(fimage2DRect):    269(ptr) Variable UniformConstant
-             306:             TypeImage 6(float) 2D array nonsampled format:R32f
-             307:             TypePointer UniformConstant 306
-308(fimage2DArray):    307(ptr) Variable UniformConstant
-             309:             TypeVector 18(int) 3
-             310:  309(ivec3) ConstantComposite 21 21 21
-             318:  309(ivec3) ConstantComposite 19 19 21
-             326:  309(ivec3) ConstantComposite 19 21 19
-             334:  309(ivec3) ConstantComposite 19 19 19
-             342:  309(ivec3) ConstantComposite 179 179 21
-             350:             TypeImage 6(float) Cube nonsampled format:R32f
-             351:             TypePointer UniformConstant 350
- 352(fimageCube):    351(ptr) Variable UniformConstant
-             367:  309(ivec3) ConstantComposite 19 21 21
-             382:  309(ivec3) ConstantComposite 179 179 19
-             390:             TypeImage 6(float) Cube array nonsampled format:R32f
-             391:             TypePointer UniformConstant 390
-392(fimageCubeArray):    391(ptr) Variable UniformConstant
-             428:             TypeImage 6(float) 3D nonsampled format:R32f
-             429:             TypePointer UniformConstant 428
-   430(fimage3D):    429(ptr) Variable UniformConstant
-             466:             TypeVector 13(int) 3
-             467:     13(int) Constant 16
-             468:     13(int) Constant 1
-             469:  466(ivec3) ConstantComposite 467 467 468
-         4(main):           2 Function None 3
-               5:             Label
-      8(resultf):      7(ptr) Variable Function
-     34(resultd):     33(ptr) Variable Function
-                              Store 8(resultf) 9
-              16:    6(float) AtomicFAddEXT 11(atomf) 14 15 12
-                              Store 8(resultf) 16
-              23:    6(float) AtomicFAddEXT 11(atomf) 19 22 17
-                              Store 8(resultf) 23
-              29:     28(ptr) AccessChain 27(buf) 21
-              30:    6(float) AtomicFAddEXT 29 14 15 12
-                              Store 8(resultf) 30
-              31:     28(ptr) AccessChain 27(buf) 21
-              32:    6(float) AtomicFAddEXT 31 19 22 17
-                              Store 8(resultf) 32
-                              Store 34(resultd) 35
-              39:24(float64_t) AtomicFAddEXT 37(atomd) 14 15 38
-                              Store 34(resultd) 39
-              41:24(float64_t) AtomicFAddEXT 37(atomd) 19 22 40
-                              Store 34(resultd) 41
-              43:     42(ptr) AccessChain 27(buf) 19
-              44:24(float64_t) AtomicFAddEXT 43 14 15 38
-                              Store 34(resultd) 44
-              45:     42(ptr) AccessChain 27(buf) 19
-              46:24(float64_t) AtomicFAddEXT 45 19 22 40
-                              Store 34(resultd) 46
-              47:     28(ptr) AccessChain 27(buf) 21
-              48:    6(float) Load 8(resultf)
-              49:    6(float) AtomicExchange 47 14 15 48
-                              Store 8(resultf) 49
-              50:    6(float) Load 8(resultf)
-              51:     28(ptr) AccessChain 27(buf) 21
-              52:    6(float) Load 51
-              53:    6(float) FAdd 52 50
-              54:     28(ptr) AccessChain 27(buf) 21
-                              Store 54 53
-              55:     28(ptr) AccessChain 27(buf) 21
-              56:    6(float) Load 8(resultf)
-              59:    6(float) AtomicExchange 55 19 58 56
-                              Store 8(resultf) 59
-              60:    6(float) Load 8(resultf)
-              61:     28(ptr) AccessChain 27(buf) 21
-              62:    6(float) Load 61
-              63:    6(float) FAdd 62 60
-              64:     28(ptr) AccessChain 27(buf) 21
-                              Store 64 63
-              65:    6(float) Load 8(resultf)
-              66:    6(float) AtomicExchange 11(atomf) 14 15 65
-                              Store 8(resultf) 66
-              67:    6(float) Load 8(resultf)
-              68:     28(ptr) AccessChain 27(buf) 21
-              69:    6(float) Load 68
-              70:    6(float) FAdd 69 67
-              71:     28(ptr) AccessChain 27(buf) 21
-                              Store 71 70
-              72:    6(float) Load 8(resultf)
-              73:    6(float) AtomicExchange 11(atomf) 19 58 72
-                              Store 8(resultf) 73
-              74:    6(float) Load 8(resultf)
-              75:     28(ptr) AccessChain 27(buf) 21
-              76:    6(float) Load 75
-              77:    6(float) FAdd 76 74
-              78:     28(ptr) AccessChain 27(buf) 21
-                              Store 78 77
-              79:     42(ptr) AccessChain 27(buf) 19
-              80:24(float64_t) Load 34(resultd)
-              81:24(float64_t) AtomicExchange 79 14 15 80
-                              Store 34(resultd) 81
-              82:24(float64_t) Load 34(resultd)
-              83:     42(ptr) AccessChain 27(buf) 19
-              84:24(float64_t) Load 83
-              85:24(float64_t) FAdd 84 82
-              86:     42(ptr) AccessChain 27(buf) 19
-                              Store 86 85
-              87:     42(ptr) AccessChain 27(buf) 19
-              88:24(float64_t) Load 34(resultd)
-              89:24(float64_t) AtomicExchange 87 19 58 88
-                              Store 34(resultd) 89
-              90:24(float64_t) Load 34(resultd)
-              91:     42(ptr) AccessChain 27(buf) 19
-              92:24(float64_t) Load 91
-              93:24(float64_t) FAdd 92 90
-              94:     42(ptr) AccessChain 27(buf) 19
-                              Store 94 93
-              95:24(float64_t) Load 34(resultd)
-              96:24(float64_t) AtomicExchange 37(atomd) 14 15 95
-                              Store 34(resultd) 96
-              97:24(float64_t) Load 34(resultd)
-              98:     42(ptr) AccessChain 27(buf) 19
-              99:24(float64_t) Load 98
-             100:24(float64_t) FAdd 99 97
-             101:     42(ptr) AccessChain 27(buf) 19
-                              Store 101 100
-             102:24(float64_t) Load 34(resultd)
-             103:24(float64_t) AtomicExchange 37(atomd) 19 58 102
-                              Store 34(resultd) 103
-             104:24(float64_t) Load 34(resultd)
-             105:     42(ptr) AccessChain 27(buf) 19
-             106:24(float64_t) Load 105
-             107:24(float64_t) FAdd 106 104
-             108:     42(ptr) AccessChain 27(buf) 19
-                              Store 108 107
-             109:     28(ptr) AccessChain 27(buf) 21
-             110:    6(float) AtomicLoad 109 19 58
-                              Store 8(resultf) 110
-             111:     28(ptr) AccessChain 27(buf) 21
-             112:    6(float) Load 8(resultf)
-                              AtomicStore 111 19 58 112
-             113:    6(float) Load 8(resultf)
-             114:     28(ptr) AccessChain 27(buf) 21
-             115:    6(float) Load 114
-             116:    6(float) FAdd 115 113
-             117:     28(ptr) AccessChain 27(buf) 21
-                              Store 117 116
-             118:    6(float) AtomicLoad 11(atomf) 19 58
-                              Store 8(resultf) 118
-             119:    6(float) Load 8(resultf)
-                              AtomicStore 11(atomf) 19 58 119
-             120:    6(float) Load 8(resultf)
-             121:     28(ptr) AccessChain 27(buf) 21
-             122:    6(float) Load 121
-             123:    6(float) FAdd 122 120
-             124:     28(ptr) AccessChain 27(buf) 21
-                              Store 124 123
-             125:     42(ptr) AccessChain 27(buf) 19
-             126:24(float64_t) AtomicLoad 125 19 58
-                              Store 34(resultd) 126
-             127:     42(ptr) AccessChain 27(buf) 19
-             128:24(float64_t) Load 34(resultd)
-                              AtomicStore 127 19 58 128
-             129:24(float64_t) Load 34(resultd)
-             130:     42(ptr) AccessChain 27(buf) 19
-             131:24(float64_t) Load 130
-             132:24(float64_t) FAdd 131 129
-             133:     42(ptr) AccessChain 27(buf) 19
-                              Store 133 132
-             134:24(float64_t) AtomicLoad 37(atomd) 19 58
-                              Store 34(resultd) 134
-             135:24(float64_t) Load 34(resultd)
-                              AtomicStore 37(atomd) 19 58 135
-             136:24(float64_t) Load 34(resultd)
-             137:     42(ptr) AccessChain 27(buf) 19
-             138:24(float64_t) Load 137
-             139:24(float64_t) FAdd 138 136
-             140:     42(ptr) AccessChain 27(buf) 19
-                              Store 140 139
-             146:    145(ptr) ImageTexelPointer 143(fimage1D) 21 15
-             148:    6(float) AtomicFAddEXT 146 14 147 144
-                              Store 11(atomf) 148 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             150:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             151:     28(ptr) AccessChain 27(buf) 21
-             152:    6(float) Load 151
-             153:    6(float) FAdd 152 150
-             154:     28(ptr) AccessChain 27(buf) 21
-                              Store 154 153
-             156:    145(ptr) ImageTexelPointer 143(fimage1D) 19 15
-             158:    6(float) AtomicFAddEXT 156 19 157 12
-                              Store 11(atomf) 158 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             159:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             160:     28(ptr) AccessChain 27(buf) 21
-             161:    6(float) Load 160
-             162:    6(float) FAdd 161 159
-             163:     28(ptr) AccessChain 27(buf) 21
-                              Store 163 162
-             165:    145(ptr) ImageTexelPointer 143(fimage1D) 19 15
-             166:    6(float) AtomicExchange 165 19 157 164
-                              Store 11(atomf) 166 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             167:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             168:     28(ptr) AccessChain 27(buf) 21
-             169:    6(float) Load 168
-             170:    6(float) FAdd 169 167
-             171:     28(ptr) AccessChain 27(buf) 21
-                              Store 171 170
-             172:    145(ptr) ImageTexelPointer 143(fimage1D) 19 15
-             173:    6(float) AtomicLoad 172 19 157
-                              Store 11(atomf) 173 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             174:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             175:     28(ptr) AccessChain 27(buf) 21
-             176:    6(float) Load 175
-             177:    6(float) FAdd 176 174
-             178:     28(ptr) AccessChain 27(buf) 21
-                              Store 178 177
-             180:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             181:    145(ptr) ImageTexelPointer 143(fimage1D) 179 15
-                              AtomicStore 181 19 157 180
-             182:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             183:     28(ptr) AccessChain 27(buf) 21
-             184:    6(float) Load 183
-             185:    6(float) FAdd 184 182
-             186:     28(ptr) AccessChain 27(buf) 21
-                              Store 186 185
-             192:    145(ptr) ImageTexelPointer 189(fimage1DArray) 191 15
-             193:    6(float) AtomicFAddEXT 192 14 147 144
-                              Store 11(atomf) 193 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             194:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             195:     28(ptr) AccessChain 27(buf) 21
-             196:    6(float) Load 195
-             197:    6(float) FAdd 196 194
-             198:     28(ptr) AccessChain 27(buf) 21
-                              Store 198 197
-             200:    145(ptr) ImageTexelPointer 189(fimage1DArray) 199 15
-             201:    6(float) AtomicFAddEXT 200 19 157 12
-                              Store 11(atomf) 201 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             202:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             203:     28(ptr) AccessChain 27(buf) 21
-             204:    6(float) Load 203
-             205:    6(float) FAdd 204 202
-             206:     28(ptr) AccessChain 27(buf) 21
-                              Store 206 205
-             208:    145(ptr) ImageTexelPointer 189(fimage1DArray) 207 15
-             209:    6(float) AtomicExchange 208 19 157 164
-                              Store 11(atomf) 209 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             210:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             211:     28(ptr) AccessChain 27(buf) 21
-             212:    6(float) Load 211
-             213:    6(float) FAdd 212 210
-             214:     28(ptr) AccessChain 27(buf) 21
-                              Store 214 213
-             215:    145(ptr) ImageTexelPointer 189(fimage1DArray) 199 15
-             216:    6(float) AtomicLoad 215 19 157
-                              Store 11(atomf) 216 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             217:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             218:     28(ptr) AccessChain 27(buf) 21
-             219:    6(float) Load 218
-             220:    6(float) FAdd 219 217
-             221:     28(ptr) AccessChain 27(buf) 21
-                              Store 221 220
-             223:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             224:    145(ptr) ImageTexelPointer 189(fimage1DArray) 222 15
-                              AtomicStore 224 19 157 223
-             225:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             226:     28(ptr) AccessChain 27(buf) 21
-             227:    6(float) Load 226
-             228:    6(float) FAdd 227 225
-             229:     28(ptr) AccessChain 27(buf) 21
-                              Store 229 228
-             233:    145(ptr) ImageTexelPointer 232(fimage2D) 191 15
-             234:    6(float) AtomicFAddEXT 233 14 147 144
-                              Store 11(atomf) 234 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             235:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             236:     28(ptr) AccessChain 27(buf) 21
-             237:    6(float) Load 236
-             238:    6(float) FAdd 237 235
-             239:     28(ptr) AccessChain 27(buf) 21
-                              Store 239 238
-             240:    145(ptr) ImageTexelPointer 232(fimage2D) 199 15
-             241:    6(float) AtomicFAddEXT 240 19 157 12
-                              Store 11(atomf) 241 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             242:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             243:     28(ptr) AccessChain 27(buf) 21
-             244:    6(float) Load 243
-             245:    6(float) FAdd 244 242
-             246:     28(ptr) AccessChain 27(buf) 21
-                              Store 246 245
-             247:    145(ptr) ImageTexelPointer 232(fimage2D) 207 15
-             248:    6(float) AtomicExchange 247 19 157 164
-                              Store 11(atomf) 248 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             249:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             250:     28(ptr) AccessChain 27(buf) 21
-             251:    6(float) Load 250
-             252:    6(float) FAdd 251 249
-             253:     28(ptr) AccessChain 27(buf) 21
-                              Store 253 252
-             254:    145(ptr) ImageTexelPointer 232(fimage2D) 199 15
-             255:    6(float) AtomicLoad 254 19 157
-                              Store 11(atomf) 255 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             256:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             257:     28(ptr) AccessChain 27(buf) 21
-             258:    6(float) Load 257
-             259:    6(float) FAdd 258 256
-             260:     28(ptr) AccessChain 27(buf) 21
-                              Store 260 259
-             261:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             262:    145(ptr) ImageTexelPointer 232(fimage2D) 222 15
-                              AtomicStore 262 19 157 261
-             263:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             264:     28(ptr) AccessChain 27(buf) 21
-             265:    6(float) Load 264
-             266:    6(float) FAdd 265 263
-             267:     28(ptr) AccessChain 27(buf) 21
-                              Store 267 266
-             271:    145(ptr) ImageTexelPointer 270(fimage2DRect) 191 15
-             272:    6(float) AtomicFAddEXT 271 14 147 144
-                              Store 11(atomf) 272 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             273:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             274:     28(ptr) AccessChain 27(buf) 21
-             275:    6(float) Load 274
-             276:    6(float) FAdd 275 273
-             277:     28(ptr) AccessChain 27(buf) 21
-                              Store 277 276
-             278:    145(ptr) ImageTexelPointer 270(fimage2DRect) 199 15
-             279:    6(float) AtomicFAddEXT 278 19 157 12
-                              Store 11(atomf) 279 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             280:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             281:     28(ptr) AccessChain 27(buf) 21
-             282:    6(float) Load 281
-             283:    6(float) FAdd 282 280
-             284:     28(ptr) AccessChain 27(buf) 21
-                              Store 284 283
-             285:    145(ptr) ImageTexelPointer 270(fimage2DRect) 207 15
-             286:    6(float) AtomicExchange 285 19 157 164
-                              Store 11(atomf) 286 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             287:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             288:     28(ptr) AccessChain 27(buf) 21
-             289:    6(float) Load 288
-             290:    6(float) FAdd 289 287
-             291:     28(ptr) AccessChain 27(buf) 21
-                              Store 291 290
-             292:    145(ptr) ImageTexelPointer 270(fimage2DRect) 199 15
-             293:    6(float) AtomicLoad 292 19 157
-                              Store 11(atomf) 293 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             294:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             295:     28(ptr) AccessChain 27(buf) 21
-             296:    6(float) Load 295
-             297:    6(float) FAdd 296 294
-             298:     28(ptr) AccessChain 27(buf) 21
-                              Store 298 297
-             299:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             300:    145(ptr) ImageTexelPointer 270(fimage2DRect) 222 15
-                              AtomicStore 300 19 157 299
-             301:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             302:     28(ptr) AccessChain 27(buf) 21
-             303:    6(float) Load 302
-             304:    6(float) FAdd 303 301
-             305:     28(ptr) AccessChain 27(buf) 21
-                              Store 305 304
-             311:    145(ptr) ImageTexelPointer 308(fimage2DArray) 310 15
-             312:    6(float) AtomicFAddEXT 311 14 147 144
-                              Store 11(atomf) 312 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             313:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             314:     28(ptr) AccessChain 27(buf) 21
-             315:    6(float) Load 314
-             316:    6(float) FAdd 315 313
-             317:     28(ptr) AccessChain 27(buf) 21
-                              Store 317 316
-             319:    145(ptr) ImageTexelPointer 308(fimage2DArray) 318 15
-             320:    6(float) AtomicFAddEXT 319 19 157 12
-                              Store 11(atomf) 320 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             321:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             322:     28(ptr) AccessChain 27(buf) 21
-             323:    6(float) Load 322
-             324:    6(float) FAdd 323 321
-             325:     28(ptr) AccessChain 27(buf) 21
-                              Store 325 324
-             327:    145(ptr) ImageTexelPointer 308(fimage2DArray) 326 15
-             328:    6(float) AtomicExchange 327 19 157 164
-                              Store 11(atomf) 328 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             329:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             330:     28(ptr) AccessChain 27(buf) 21
-             331:    6(float) Load 330
-             332:    6(float) FAdd 331 329
-             333:     28(ptr) AccessChain 27(buf) 21
-                              Store 333 332
-             335:    145(ptr) ImageTexelPointer 308(fimage2DArray) 334 15
-             336:    6(float) AtomicLoad 335 19 157
-                              Store 11(atomf) 336 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             337:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             338:     28(ptr) AccessChain 27(buf) 21
-             339:    6(float) Load 338
-             340:    6(float) FAdd 339 337
-             341:     28(ptr) AccessChain 27(buf) 21
-                              Store 341 340
-             343:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             344:    145(ptr) ImageTexelPointer 308(fimage2DArray) 342 15
-                              AtomicStore 344 19 157 343
-             345:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             346:     28(ptr) AccessChain 27(buf) 21
-             347:    6(float) Load 346
-             348:    6(float) FAdd 347 345
-             349:     28(ptr) AccessChain 27(buf) 21
-                              Store 349 348
-             353:    145(ptr) ImageTexelPointer 352(fimageCube) 310 15
-             354:    6(float) AtomicFAddEXT 353 14 147 144
-                              Store 11(atomf) 354 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             355:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             356:     28(ptr) AccessChain 27(buf) 21
-             357:    6(float) Load 356
-             358:    6(float) FAdd 357 355
-             359:     28(ptr) AccessChain 27(buf) 21
-                              Store 359 358
-             360:    145(ptr) ImageTexelPointer 352(fimageCube) 318 15
-             361:    6(float) AtomicFAddEXT 360 19 157 12
-                              Store 11(atomf) 361 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             362:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             363:     28(ptr) AccessChain 27(buf) 21
-             364:    6(float) Load 363
-             365:    6(float) FAdd 364 362
-             366:     28(ptr) AccessChain 27(buf) 21
-                              Store 366 365
-             368:    145(ptr) ImageTexelPointer 352(fimageCube) 367 15
-             369:    6(float) AtomicExchange 368 19 157 164
-                              Store 11(atomf) 369 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             370:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             371:     28(ptr) AccessChain 27(buf) 21
-             372:    6(float) Load 371
-             373:    6(float) FAdd 372 370
-             374:     28(ptr) AccessChain 27(buf) 21
-                              Store 374 373
-             375:    145(ptr) ImageTexelPointer 352(fimageCube) 334 15
-             376:    6(float) AtomicLoad 375 19 157
-                              Store 11(atomf) 376 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             377:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             378:     28(ptr) AccessChain 27(buf) 21
-             379:    6(float) Load 378
-             380:    6(float) FAdd 379 377
-             381:     28(ptr) AccessChain 27(buf) 21
-                              Store 381 380
-             383:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             384:    145(ptr) ImageTexelPointer 352(fimageCube) 382 15
-                              AtomicStore 384 19 157 383
-             385:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             386:     28(ptr) AccessChain 27(buf) 21
-             387:    6(float) Load 386
-             388:    6(float) FAdd 387 385
-             389:     28(ptr) AccessChain 27(buf) 21
-                              Store 389 388
-             393:    145(ptr) ImageTexelPointer 392(fimageCubeArray) 310 15
-             394:    6(float) AtomicFAddEXT 393 14 147 144
-                              Store 11(atomf) 394 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             395:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             396:     28(ptr) AccessChain 27(buf) 21
-             397:    6(float) Load 396
-             398:    6(float) FAdd 397 395
-             399:     28(ptr) AccessChain 27(buf) 21
-                              Store 399 398
-             400:    145(ptr) ImageTexelPointer 392(fimageCubeArray) 318 15
-             401:    6(float) AtomicFAddEXT 400 19 157 12
-                              Store 11(atomf) 401 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             402:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             403:     28(ptr) AccessChain 27(buf) 21
-             404:    6(float) Load 403
-             405:    6(float) FAdd 404 402
-             406:     28(ptr) AccessChain 27(buf) 21
-                              Store 406 405
-             407:    145(ptr) ImageTexelPointer 392(fimageCubeArray) 326 15
-             408:    6(float) AtomicExchange 407 19 157 164
-                              Store 11(atomf) 408 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             409:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             410:     28(ptr) AccessChain 27(buf) 21
-             411:    6(float) Load 410
-             412:    6(float) FAdd 411 409
-             413:     28(ptr) AccessChain 27(buf) 21
-                              Store 413 412
-             414:    145(ptr) ImageTexelPointer 392(fimageCubeArray) 334 15
-             415:    6(float) AtomicLoad 414 19 157
-                              Store 11(atomf) 415 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             416:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             417:     28(ptr) AccessChain 27(buf) 21
-             418:    6(float) Load 417
-             419:    6(float) FAdd 418 416
-             420:     28(ptr) AccessChain 27(buf) 21
-                              Store 420 419
-             421:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             422:    145(ptr) ImageTexelPointer 392(fimageCubeArray) 342 15
-                              AtomicStore 422 19 157 421
-             423:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             424:     28(ptr) AccessChain 27(buf) 21
-             425:    6(float) Load 424
-             426:    6(float) FAdd 425 423
-             427:     28(ptr) AccessChain 27(buf) 21
-                              Store 427 426
-             431:    145(ptr) ImageTexelPointer 430(fimage3D) 310 15
-             432:    6(float) AtomicFAddEXT 431 14 147 144
-                              Store 11(atomf) 432 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             433:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             434:     28(ptr) AccessChain 27(buf) 21
-             435:    6(float) Load 434
-             436:    6(float) FAdd 435 433
-             437:     28(ptr) AccessChain 27(buf) 21
-                              Store 437 436
-             438:    145(ptr) ImageTexelPointer 430(fimage3D) 318 15
-             439:    6(float) AtomicFAddEXT 438 19 157 12
-                              Store 11(atomf) 439 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             440:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             441:     28(ptr) AccessChain 27(buf) 21
-             442:    6(float) Load 441
-             443:    6(float) FAdd 442 440
-             444:     28(ptr) AccessChain 27(buf) 21
-                              Store 444 443
-             445:    145(ptr) ImageTexelPointer 430(fimage3D) 326 15
-             446:    6(float) AtomicExchange 445 19 157 164
-                              Store 11(atomf) 446 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             447:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             448:     28(ptr) AccessChain 27(buf) 21
-             449:    6(float) Load 448
-             450:    6(float) FAdd 449 447
-             451:     28(ptr) AccessChain 27(buf) 21
-                              Store 451 450
-             452:    145(ptr) ImageTexelPointer 430(fimage3D) 334 15
-             453:    6(float) AtomicLoad 452 19 157
-                              Store 11(atomf) 453 MakePointerAvailableKHR NonPrivatePointerKHR 149
-             454:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             455:     28(ptr) AccessChain 27(buf) 21
-             456:    6(float) Load 455
-             457:    6(float) FAdd 456 454
-             458:     28(ptr) AccessChain 27(buf) 21
-                              Store 458 457
-             459:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             460:    145(ptr) ImageTexelPointer 430(fimage3D) 342 15
-                              AtomicStore 460 19 157 459
-             461:    6(float) Load 11(atomf) MakePointerVisibleKHR NonPrivatePointerKHR 149
-             462:     28(ptr) AccessChain 27(buf) 21
-             463:    6(float) Load 462
-             464:    6(float) FAdd 463 461
-             465:     28(ptr) AccessChain 27(buf) 21
-                              Store 465 464
+                              Name 54_1  "main"
+                              Name 59_12  "resultf"
+                              Name 59_1  "atomf"
+                              Name 30_1  "Buffer"
+                              MemberName 30_1(Buffer) 0  "dataf"
+                              MemberName 30_1(Buffer) 1  "datad"
+                              Name 59_2  "buf"
+                              Name 59_13  "resultd"
+                              Name 59_3  "atomd"
+                              Name 59_4  "fimage1D"
+                              Name 59_5  "fimage1DArray"
+                              Name 59_6  "fimage2D"
+                              Name 59_7  "fimage2DRect"
+                              Name 59_8  "fimage2DArray"
+                              Name 59_9  "fimageCube"
+                              Name 59_10  "fimageCubeArray"
+                              Name 59_11  "fimage3D"
+                              Decorate 30_1(Buffer) BufferBlock
+                              MemberDecorate 30_1(Buffer) 0 Offset 0
+                              MemberDecorate 30_1(Buffer) 1 Offset 8
+                              Decorate 59_2(buf) Binding 0
+                              Decorate 59_2(buf) DescriptorSet 0
+                              Decorate 59_4(fimage1D) Location 0
+                              Decorate 59_4(fimage1D) Binding 0
+                              Decorate 59_4(fimage1D) DescriptorSet 0
+                              Decorate 59_5(fimage1DArray) Location 1
+                              Decorate 59_5(fimage1DArray) Binding 1
+                              Decorate 59_5(fimage1DArray) DescriptorSet 0
+                              Decorate 59_6(fimage2D) Location 2
+                              Decorate 59_6(fimage2D) Binding 2
+                              Decorate 59_6(fimage2D) DescriptorSet 0
+                              Decorate 59_7(fimage2DRect) Location 4
+                              Decorate 59_7(fimage2DRect) Binding 4
+                              Decorate 59_7(fimage2DRect) DescriptorSet 0
+                              Decorate 59_8(fimage2DArray) Location 3
+                              Decorate 59_8(fimage2DArray) Binding 3
+                              Decorate 59_8(fimage2DArray) DescriptorSet 0
+                              Decorate 59_9(fimageCube) Location 5
+                              Decorate 59_9(fimageCube) Binding 5
+                              Decorate 59_9(fimageCube) DescriptorSet 0
+                              Decorate 59_10(fimageCubeArray) Location 6
+                              Decorate 59_10(fimageCubeArray) Binding 6
+                              Decorate 59_10(fimageCubeArray) DescriptorSet 0
+                              Decorate 59_11(fimage3D) Location 7
+                              Decorate 59_11(fimage3D) Binding 9
+                              Decorate 59_11(fimage3D) DescriptorSet 0
+                              Decorate 44_12 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            43_1: 22_1(float) Constant 0
+            32_2:             TypePointer Workgroup 22_1(float)
+     59_1(atomf):   32_2(ptr) Variable Workgroup
+            43_2: 22_1(float) Constant 1077936128
+            21_1:             TypeInt 32 0
+         uint(5):   21_1(int) Constant 5
+         uint(0):   21_1(int) Constant 0
+            43_3: 22_1(float) Constant 1083179008
+            21_2:             TypeInt 32 1
+            43_4:   21_2(int) Constant 1
+            43_5:   21_2(int) Constant 64
+            43_6:   21_2(int) Constant 0
+        uint(64):   21_1(int) Constant 64
+            22_2:             TypeFloat 64
+    30_1(Buffer):             TypeStruct 22_1(float) 22_2(float64_t)
+            32_3:             TypePointer Uniform 30_1(Buffer)
+       59_2(buf):   32_3(ptr) Variable Uniform
+            32_4:             TypePointer Uniform 22_1(float)
+            32_5:             TypePointer Function 22_2(float64_t)
+            43_7:22_2(float64_t) Constant 0 0
+            32_6:             TypePointer Workgroup 22_2(float64_t)
+     59_3(atomd):   32_6(ptr) Variable Workgroup
+            43_8:22_2(float64_t) Constant 0 1074266112
+            43_9:22_2(float64_t) Constant 0 1074921472
+            32_7:             TypePointer Uniform 22_2(float64_t)
+           43_10:   21_2(int) Constant 256
+       uint(256):   21_1(int) Constant 256
+            25_1:             TypeImage 22_1(float) 1D nonsampled format:R32f
+            32_8:             TypePointer UniformConstant 25_1
+  59_4(fimage1D):   32_8(ptr) Variable UniformConstant
+           43_11: 22_1(float) Constant 1073741824
+            32_9:             TypePointer Image 22_1(float)
+     uint(32768):   21_1(int) Constant 32768
+         uint(2):   21_1(int) Constant 2
+           43_12:   21_2(int) Constant 2048
+      uint(2048):   21_1(int) Constant 2048
+           43_13: 22_1(float) Constant 1082130432
+           43_14:   21_2(int) Constant 2
+            25_2:             TypeImage 22_1(float) 1D array nonsampled format:R32f
+           32_10:             TypePointer UniformConstant 25_2
+59_5(fimage1DArray):  32_10(ptr) Variable UniformConstant
+            23_1:             TypeVector 21_2(int) 2
+            44_1: 23_1(ivec2) ConstantComposite 43_6 43_6
+            44_2: 23_1(ivec2) ConstantComposite 43_4 43_4
+            44_3: 23_1(ivec2) ConstantComposite 43_4 43_6
+            44_4: 23_1(ivec2) ConstantComposite 43_14 43_14
+            25_3:             TypeImage 22_1(float) 2D nonsampled format:R32f
+           32_11:             TypePointer UniformConstant 25_3
+  59_6(fimage2D):  32_11(ptr) Variable UniformConstant
+            25_4:             TypeImage 22_1(float) Rect nonsampled format:R32f
+           32_12:             TypePointer UniformConstant 25_4
+59_7(fimage2DRect):  32_12(ptr) Variable UniformConstant
+            25_5:             TypeImage 22_1(float) 2D array nonsampled format:R32f
+           32_13:             TypePointer UniformConstant 25_5
+59_8(fimage2DArray):  32_13(ptr) Variable UniformConstant
+            23_2:             TypeVector 21_2(int) 3
+            44_5: 23_2(ivec3) ConstantComposite 43_6 43_6 43_6
+            44_6: 23_2(ivec3) ConstantComposite 43_4 43_4 43_6
+            44_7: 23_2(ivec3) ConstantComposite 43_4 43_6 43_4
+            44_8: 23_2(ivec3) ConstantComposite 43_4 43_4 43_4
+            44_9: 23_2(ivec3) ConstantComposite 43_14 43_14 43_6
+            25_6:             TypeImage 22_1(float) Cube nonsampled format:R32f
+           32_14:             TypePointer UniformConstant 25_6
+59_9(fimageCube):  32_14(ptr) Variable UniformConstant
+           44_10: 23_2(ivec3) ConstantComposite 43_4 43_6 43_6
+           44_11: 23_2(ivec3) ConstantComposite 43_14 43_14 43_4
+            25_7:             TypeImage 22_1(float) Cube array nonsampled format:R32f
+           32_15:             TypePointer UniformConstant 25_7
+59_10(fimageCubeArray):  32_15(ptr) Variable UniformConstant
+            25_8:             TypeImage 22_1(float) 3D nonsampled format:R32f
+           32_16:             TypePointer UniformConstant 25_8
+ 59_11(fimage3D):  32_16(ptr) Variable UniformConstant
+            23_3:             TypeVector 21_1(int) 3
+        uint(16):   21_1(int) Constant 16
+         uint(1):   21_1(int) Constant 1
+           44_12: 23_3(ivec3) ConstantComposite uint(16) uint(16) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+  59_12(resultf):   32_1(ptr) Variable Function
+  59_13(resultd):   32_5(ptr) Variable Function
+                              Store 59_12(resultf) 43_1
+          6035_1: 22_1(float) AtomicFAddEXT 59_1(atomf) uint(5) uint(0) 43_2
+                              Store 59_12(resultf) 6035_1
+          6035_2: 22_1(float) AtomicFAddEXT 59_1(atomf) 43_4 uint(64) 43_3
+                              Store 59_12(resultf) 6035_2
+            65_1:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          6035_3: 22_1(float) AtomicFAddEXT 65_1 uint(5) uint(0) 43_2
+                              Store 59_12(resultf) 6035_3
+            65_2:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          6035_4: 22_1(float) AtomicFAddEXT 65_2 43_4 uint(64) 43_3
+                              Store 59_12(resultf) 6035_4
+                              Store 59_13(resultd) 43_7
+          6035_5:22_2(float64_t) AtomicFAddEXT 59_3(atomd) uint(5) uint(0) 43_8
+                              Store 59_13(resultd) 6035_5
+          6035_6:22_2(float64_t) AtomicFAddEXT 59_3(atomd) 43_4 uint(64) 43_9
+                              Store 59_13(resultd) 6035_6
+            65_3:   32_7(ptr) AccessChain 59_2(buf) 43_4
+          6035_7:22_2(float64_t) AtomicFAddEXT 65_3 uint(5) uint(0) 43_8
+                              Store 59_13(resultd) 6035_7
+            65_4:   32_7(ptr) AccessChain 59_2(buf) 43_4
+          6035_8:22_2(float64_t) AtomicFAddEXT 65_4 43_4 uint(64) 43_9
+                              Store 59_13(resultd) 6035_8
+            65_5:   32_4(ptr) AccessChain 59_2(buf) 43_6
+            61_1: 22_1(float) Load 59_12(resultf)
+           229_1: 22_1(float) AtomicExchange 65_5 uint(5) uint(0) 61_1
+                              Store 59_12(resultf) 229_1
+            61_2: 22_1(float) Load 59_12(resultf)
+            65_6:   32_4(ptr) AccessChain 59_2(buf) 43_6
+            61_3: 22_1(float) Load 65_6
+           129_1: 22_1(float) FAdd 61_3 61_2
+            65_7:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_7 129_1
+            65_8:   32_4(ptr) AccessChain 59_2(buf) 43_6
+            61_4: 22_1(float) Load 59_12(resultf)
+           229_2: 22_1(float) AtomicExchange 65_8 43_4 uint(256) 61_4
+                              Store 59_12(resultf) 229_2
+            61_5: 22_1(float) Load 59_12(resultf)
+            65_9:   32_4(ptr) AccessChain 59_2(buf) 43_6
+            61_6: 22_1(float) Load 65_9
+           129_2: 22_1(float) FAdd 61_6 61_5
+           65_10:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_10 129_2
+            61_7: 22_1(float) Load 59_12(resultf)
+           229_3: 22_1(float) AtomicExchange 59_1(atomf) uint(5) uint(0) 61_7
+                              Store 59_12(resultf) 229_3
+            61_8: 22_1(float) Load 59_12(resultf)
+           65_11:   32_4(ptr) AccessChain 59_2(buf) 43_6
+            61_9: 22_1(float) Load 65_11
+           129_3: 22_1(float) FAdd 61_9 61_8
+           65_12:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_12 129_3
+           61_10: 22_1(float) Load 59_12(resultf)
+           229_4: 22_1(float) AtomicExchange 59_1(atomf) 43_4 uint(256) 61_10
+                              Store 59_12(resultf) 229_4
+           61_11: 22_1(float) Load 59_12(resultf)
+           65_13:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_12: 22_1(float) Load 65_13
+           129_4: 22_1(float) FAdd 61_12 61_11
+           65_14:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_14 129_4
+           65_15:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           61_13:22_2(float64_t) Load 59_13(resultd)
+           229_5:22_2(float64_t) AtomicExchange 65_15 uint(5) uint(0) 61_13
+                              Store 59_13(resultd) 229_5
+           61_14:22_2(float64_t) Load 59_13(resultd)
+           65_16:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           61_15:22_2(float64_t) Load 65_16
+           129_5:22_2(float64_t) FAdd 61_15 61_14
+           65_17:   32_7(ptr) AccessChain 59_2(buf) 43_4
+                              Store 65_17 129_5
+           65_18:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           61_16:22_2(float64_t) Load 59_13(resultd)
+           229_6:22_2(float64_t) AtomicExchange 65_18 43_4 uint(256) 61_16
+                              Store 59_13(resultd) 229_6
+           61_17:22_2(float64_t) Load 59_13(resultd)
+           65_19:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           61_18:22_2(float64_t) Load 65_19
+           129_6:22_2(float64_t) FAdd 61_18 61_17
+           65_20:   32_7(ptr) AccessChain 59_2(buf) 43_4
+                              Store 65_20 129_6
+           61_19:22_2(float64_t) Load 59_13(resultd)
+           229_7:22_2(float64_t) AtomicExchange 59_3(atomd) uint(5) uint(0) 61_19
+                              Store 59_13(resultd) 229_7
+           61_20:22_2(float64_t) Load 59_13(resultd)
+           65_21:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           61_21:22_2(float64_t) Load 65_21
+           129_7:22_2(float64_t) FAdd 61_21 61_20
+           65_22:   32_7(ptr) AccessChain 59_2(buf) 43_4
+                              Store 65_22 129_7
+           61_22:22_2(float64_t) Load 59_13(resultd)
+           229_8:22_2(float64_t) AtomicExchange 59_3(atomd) 43_4 uint(256) 61_22
+                              Store 59_13(resultd) 229_8
+           61_23:22_2(float64_t) Load 59_13(resultd)
+           65_23:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           61_24:22_2(float64_t) Load 65_23
+           129_8:22_2(float64_t) FAdd 61_24 61_23
+           65_24:   32_7(ptr) AccessChain 59_2(buf) 43_4
+                              Store 65_24 129_8
+           65_25:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           227_1: 22_1(float) AtomicLoad 65_25 43_4 uint(256)
+                              Store 59_12(resultf) 227_1
+           65_26:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_25: 22_1(float) Load 59_12(resultf)
+                              AtomicStore 65_26 43_4 uint(256) 61_25
+           61_26: 22_1(float) Load 59_12(resultf)
+           65_27:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_27: 22_1(float) Load 65_27
+           129_9: 22_1(float) FAdd 61_27 61_26
+           65_28:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_28 129_9
+           227_2: 22_1(float) AtomicLoad 59_1(atomf) 43_4 uint(256)
+                              Store 59_12(resultf) 227_2
+           61_28: 22_1(float) Load 59_12(resultf)
+                              AtomicStore 59_1(atomf) 43_4 uint(256) 61_28
+           61_29: 22_1(float) Load 59_12(resultf)
+           65_29:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_30: 22_1(float) Load 65_29
+          129_10: 22_1(float) FAdd 61_30 61_29
+           65_30:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_30 129_10
+           65_31:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           227_3:22_2(float64_t) AtomicLoad 65_31 43_4 uint(256)
+                              Store 59_13(resultd) 227_3
+           65_32:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           61_31:22_2(float64_t) Load 59_13(resultd)
+                              AtomicStore 65_32 43_4 uint(256) 61_31
+           61_32:22_2(float64_t) Load 59_13(resultd)
+           65_33:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           61_33:22_2(float64_t) Load 65_33
+          129_11:22_2(float64_t) FAdd 61_33 61_32
+           65_34:   32_7(ptr) AccessChain 59_2(buf) 43_4
+                              Store 65_34 129_11
+           227_4:22_2(float64_t) AtomicLoad 59_3(atomd) 43_4 uint(256)
+                              Store 59_13(resultd) 227_4
+           61_34:22_2(float64_t) Load 59_13(resultd)
+                              AtomicStore 59_3(atomd) 43_4 uint(256) 61_34
+           61_35:22_2(float64_t) Load 59_13(resultd)
+           65_35:   32_7(ptr) AccessChain 59_2(buf) 43_4
+           61_36:22_2(float64_t) Load 65_35
+          129_12:22_2(float64_t) FAdd 61_36 61_35
+           65_36:   32_7(ptr) AccessChain 59_2(buf) 43_4
+                              Store 65_36 129_12
+            60_1:   32_9(ptr) ImageTexelPointer 59_4(fimage1D) 43_6 uint(0)
+          6035_9: 22_1(float) AtomicFAddEXT 60_1 uint(5) uint(32768) 43_11
+                              Store 59_1(atomf) 6035_9 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_37: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_37:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_38: 22_1(float) Load 65_37
+          129_13: 22_1(float) FAdd 61_38 61_37
+           65_38:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_38 129_13
+            60_2:   32_9(ptr) ImageTexelPointer 59_4(fimage1D) 43_4 uint(0)
+         6035_10: 22_1(float) AtomicFAddEXT 60_2 43_4 uint(2048) 43_2
+                              Store 59_1(atomf) 6035_10 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_39: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_39:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_40: 22_1(float) Load 65_39
+          129_14: 22_1(float) FAdd 61_40 61_39
+           65_40:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_40 129_14
+            60_3:   32_9(ptr) ImageTexelPointer 59_4(fimage1D) 43_4 uint(0)
+           229_9: 22_1(float) AtomicExchange 60_3 43_4 uint(2048) 43_13
+                              Store 59_1(atomf) 229_9 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_41: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_41:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_42: 22_1(float) Load 65_41
+          129_15: 22_1(float) FAdd 61_42 61_41
+           65_42:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_42 129_15
+            60_4:   32_9(ptr) ImageTexelPointer 59_4(fimage1D) 43_4 uint(0)
+           227_5: 22_1(float) AtomicLoad 60_4 43_4 uint(2048)
+                              Store 59_1(atomf) 227_5 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_43: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_43:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_44: 22_1(float) Load 65_43
+          129_16: 22_1(float) FAdd 61_44 61_43
+           65_44:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_44 129_16
+           61_45: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+            60_5:   32_9(ptr) ImageTexelPointer 59_4(fimage1D) 43_14 uint(0)
+                              AtomicStore 60_5 43_4 uint(2048) 61_45
+           61_46: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_45:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_47: 22_1(float) Load 65_45
+          129_17: 22_1(float) FAdd 61_47 61_46
+           65_46:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_46 129_17
+            60_6:   32_9(ptr) ImageTexelPointer 59_5(fimage1DArray) 44_1 uint(0)
+         6035_11: 22_1(float) AtomicFAddEXT 60_6 uint(5) uint(32768) 43_11
+                              Store 59_1(atomf) 6035_11 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_48: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_47:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_49: 22_1(float) Load 65_47
+          129_18: 22_1(float) FAdd 61_49 61_48
+           65_48:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_48 129_18
+            60_7:   32_9(ptr) ImageTexelPointer 59_5(fimage1DArray) 44_2 uint(0)
+         6035_12: 22_1(float) AtomicFAddEXT 60_7 43_4 uint(2048) 43_2
+                              Store 59_1(atomf) 6035_12 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_50: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_49:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_51: 22_1(float) Load 65_49
+          129_19: 22_1(float) FAdd 61_51 61_50
+           65_50:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_50 129_19
+            60_8:   32_9(ptr) ImageTexelPointer 59_5(fimage1DArray) 44_3 uint(0)
+          229_10: 22_1(float) AtomicExchange 60_8 43_4 uint(2048) 43_13
+                              Store 59_1(atomf) 229_10 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_52: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_51:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_53: 22_1(float) Load 65_51
+          129_20: 22_1(float) FAdd 61_53 61_52
+           65_52:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_52 129_20
+            60_9:   32_9(ptr) ImageTexelPointer 59_5(fimage1DArray) 44_2 uint(0)
+           227_6: 22_1(float) AtomicLoad 60_9 43_4 uint(2048)
+                              Store 59_1(atomf) 227_6 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_54: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_53:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_55: 22_1(float) Load 65_53
+          129_21: 22_1(float) FAdd 61_55 61_54
+           65_54:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_54 129_21
+           61_56: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           60_10:   32_9(ptr) ImageTexelPointer 59_5(fimage1DArray) 44_4 uint(0)
+                              AtomicStore 60_10 43_4 uint(2048) 61_56
+           61_57: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_55:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_58: 22_1(float) Load 65_55
+          129_22: 22_1(float) FAdd 61_58 61_57
+           65_56:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_56 129_22
+           60_11:   32_9(ptr) ImageTexelPointer 59_6(fimage2D) 44_1 uint(0)
+         6035_13: 22_1(float) AtomicFAddEXT 60_11 uint(5) uint(32768) 43_11
+                              Store 59_1(atomf) 6035_13 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_59: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_57:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_60: 22_1(float) Load 65_57
+          129_23: 22_1(float) FAdd 61_60 61_59
+           65_58:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_58 129_23
+           60_12:   32_9(ptr) ImageTexelPointer 59_6(fimage2D) 44_2 uint(0)
+         6035_14: 22_1(float) AtomicFAddEXT 60_12 43_4 uint(2048) 43_2
+                              Store 59_1(atomf) 6035_14 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_61: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_59:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_62: 22_1(float) Load 65_59
+          129_24: 22_1(float) FAdd 61_62 61_61
+           65_60:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_60 129_24
+           60_13:   32_9(ptr) ImageTexelPointer 59_6(fimage2D) 44_3 uint(0)
+          229_11: 22_1(float) AtomicExchange 60_13 43_4 uint(2048) 43_13
+                              Store 59_1(atomf) 229_11 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_63: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_61:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_64: 22_1(float) Load 65_61
+          129_25: 22_1(float) FAdd 61_64 61_63
+           65_62:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_62 129_25
+           60_14:   32_9(ptr) ImageTexelPointer 59_6(fimage2D) 44_2 uint(0)
+           227_7: 22_1(float) AtomicLoad 60_14 43_4 uint(2048)
+                              Store 59_1(atomf) 227_7 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_65: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_63:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_66: 22_1(float) Load 65_63
+          129_26: 22_1(float) FAdd 61_66 61_65
+           65_64:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_64 129_26
+           61_67: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           60_15:   32_9(ptr) ImageTexelPointer 59_6(fimage2D) 44_4 uint(0)
+                              AtomicStore 60_15 43_4 uint(2048) 61_67
+           61_68: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_65:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_69: 22_1(float) Load 65_65
+          129_27: 22_1(float) FAdd 61_69 61_68
+           65_66:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_66 129_27
+           60_16:   32_9(ptr) ImageTexelPointer 59_7(fimage2DRect) 44_1 uint(0)
+         6035_15: 22_1(float) AtomicFAddEXT 60_16 uint(5) uint(32768) 43_11
+                              Store 59_1(atomf) 6035_15 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_70: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_67:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_71: 22_1(float) Load 65_67
+          129_28: 22_1(float) FAdd 61_71 61_70
+           65_68:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_68 129_28
+           60_17:   32_9(ptr) ImageTexelPointer 59_7(fimage2DRect) 44_2 uint(0)
+         6035_16: 22_1(float) AtomicFAddEXT 60_17 43_4 uint(2048) 43_2
+                              Store 59_1(atomf) 6035_16 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_72: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_69:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_73: 22_1(float) Load 65_69
+          129_29: 22_1(float) FAdd 61_73 61_72
+           65_70:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_70 129_29
+           60_18:   32_9(ptr) ImageTexelPointer 59_7(fimage2DRect) 44_3 uint(0)
+          229_12: 22_1(float) AtomicExchange 60_18 43_4 uint(2048) 43_13
+                              Store 59_1(atomf) 229_12 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_74: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_71:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_75: 22_1(float) Load 65_71
+          129_30: 22_1(float) FAdd 61_75 61_74
+           65_72:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_72 129_30
+           60_19:   32_9(ptr) ImageTexelPointer 59_7(fimage2DRect) 44_2 uint(0)
+           227_8: 22_1(float) AtomicLoad 60_19 43_4 uint(2048)
+                              Store 59_1(atomf) 227_8 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_76: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_73:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_77: 22_1(float) Load 65_73
+          129_31: 22_1(float) FAdd 61_77 61_76
+           65_74:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_74 129_31
+           61_78: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           60_20:   32_9(ptr) ImageTexelPointer 59_7(fimage2DRect) 44_4 uint(0)
+                              AtomicStore 60_20 43_4 uint(2048) 61_78
+           61_79: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_75:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_80: 22_1(float) Load 65_75
+          129_32: 22_1(float) FAdd 61_80 61_79
+           65_76:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_76 129_32
+           60_21:   32_9(ptr) ImageTexelPointer 59_8(fimage2DArray) 44_5 uint(0)
+         6035_17: 22_1(float) AtomicFAddEXT 60_21 uint(5) uint(32768) 43_11
+                              Store 59_1(atomf) 6035_17 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_81: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_77:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_82: 22_1(float) Load 65_77
+          129_33: 22_1(float) FAdd 61_82 61_81
+           65_78:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_78 129_33
+           60_22:   32_9(ptr) ImageTexelPointer 59_8(fimage2DArray) 44_6 uint(0)
+         6035_18: 22_1(float) AtomicFAddEXT 60_22 43_4 uint(2048) 43_2
+                              Store 59_1(atomf) 6035_18 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_83: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_79:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_84: 22_1(float) Load 65_79
+          129_34: 22_1(float) FAdd 61_84 61_83
+           65_80:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_80 129_34
+           60_23:   32_9(ptr) ImageTexelPointer 59_8(fimage2DArray) 44_7 uint(0)
+          229_13: 22_1(float) AtomicExchange 60_23 43_4 uint(2048) 43_13
+                              Store 59_1(atomf) 229_13 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_85: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_81:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_86: 22_1(float) Load 65_81
+          129_35: 22_1(float) FAdd 61_86 61_85
+           65_82:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_82 129_35
+           60_24:   32_9(ptr) ImageTexelPointer 59_8(fimage2DArray) 44_8 uint(0)
+           227_9: 22_1(float) AtomicLoad 60_24 43_4 uint(2048)
+                              Store 59_1(atomf) 227_9 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_87: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_83:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_88: 22_1(float) Load 65_83
+          129_36: 22_1(float) FAdd 61_88 61_87
+           65_84:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_84 129_36
+           61_89: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           60_25:   32_9(ptr) ImageTexelPointer 59_8(fimage2DArray) 44_9 uint(0)
+                              AtomicStore 60_25 43_4 uint(2048) 61_89
+           61_90: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_85:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_91: 22_1(float) Load 65_85
+          129_37: 22_1(float) FAdd 61_91 61_90
+           65_86:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_86 129_37
+           60_26:   32_9(ptr) ImageTexelPointer 59_9(fimageCube) 44_5 uint(0)
+         6035_19: 22_1(float) AtomicFAddEXT 60_26 uint(5) uint(32768) 43_11
+                              Store 59_1(atomf) 6035_19 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_92: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_87:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_93: 22_1(float) Load 65_87
+          129_38: 22_1(float) FAdd 61_93 61_92
+           65_88:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_88 129_38
+           60_27:   32_9(ptr) ImageTexelPointer 59_9(fimageCube) 44_6 uint(0)
+         6035_20: 22_1(float) AtomicFAddEXT 60_27 43_4 uint(2048) 43_2
+                              Store 59_1(atomf) 6035_20 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_94: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_89:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_95: 22_1(float) Load 65_89
+          129_39: 22_1(float) FAdd 61_95 61_94
+           65_90:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_90 129_39
+           60_28:   32_9(ptr) ImageTexelPointer 59_9(fimageCube) 44_10 uint(0)
+          229_14: 22_1(float) AtomicExchange 60_28 43_4 uint(2048) 43_13
+                              Store 59_1(atomf) 229_14 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_96: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_91:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_97: 22_1(float) Load 65_91
+          129_40: 22_1(float) FAdd 61_97 61_96
+           65_92:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_92 129_40
+           60_29:   32_9(ptr) ImageTexelPointer 59_9(fimageCube) 44_8 uint(0)
+          227_10: 22_1(float) AtomicLoad 60_29 43_4 uint(2048)
+                              Store 59_1(atomf) 227_10 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+           61_98: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_93:   32_4(ptr) AccessChain 59_2(buf) 43_6
+           61_99: 22_1(float) Load 65_93
+          129_41: 22_1(float) FAdd 61_99 61_98
+           65_94:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_94 129_41
+          61_100: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           60_30:   32_9(ptr) ImageTexelPointer 59_9(fimageCube) 44_11 uint(0)
+                              AtomicStore 60_30 43_4 uint(2048) 61_100
+          61_101: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_95:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_102: 22_1(float) Load 65_95
+          129_42: 22_1(float) FAdd 61_102 61_101
+           65_96:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_96 129_42
+           60_31:   32_9(ptr) ImageTexelPointer 59_10(fimageCubeArray) 44_5 uint(0)
+         6035_21: 22_1(float) AtomicFAddEXT 60_31 uint(5) uint(32768) 43_11
+                              Store 59_1(atomf) 6035_21 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+          61_103: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_97:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_104: 22_1(float) Load 65_97
+          129_43: 22_1(float) FAdd 61_104 61_103
+           65_98:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_98 129_43
+           60_32:   32_9(ptr) ImageTexelPointer 59_10(fimageCubeArray) 44_6 uint(0)
+         6035_22: 22_1(float) AtomicFAddEXT 60_32 43_4 uint(2048) 43_2
+                              Store 59_1(atomf) 6035_22 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+          61_105: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           65_99:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_106: 22_1(float) Load 65_99
+          129_44: 22_1(float) FAdd 61_106 61_105
+          65_100:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_100 129_44
+           60_33:   32_9(ptr) ImageTexelPointer 59_10(fimageCubeArray) 44_7 uint(0)
+          229_15: 22_1(float) AtomicExchange 60_33 43_4 uint(2048) 43_13
+                              Store 59_1(atomf) 229_15 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+          61_107: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+          65_101:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_108: 22_1(float) Load 65_101
+          129_45: 22_1(float) FAdd 61_108 61_107
+          65_102:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_102 129_45
+           60_34:   32_9(ptr) ImageTexelPointer 59_10(fimageCubeArray) 44_8 uint(0)
+          227_11: 22_1(float) AtomicLoad 60_34 43_4 uint(2048)
+                              Store 59_1(atomf) 227_11 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+          61_109: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+          65_103:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_110: 22_1(float) Load 65_103
+          129_46: 22_1(float) FAdd 61_110 61_109
+          65_104:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_104 129_46
+          61_111: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           60_35:   32_9(ptr) ImageTexelPointer 59_10(fimageCubeArray) 44_9 uint(0)
+                              AtomicStore 60_35 43_4 uint(2048) 61_111
+          61_112: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+          65_105:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_113: 22_1(float) Load 65_105
+          129_47: 22_1(float) FAdd 61_113 61_112
+          65_106:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_106 129_47
+           60_36:   32_9(ptr) ImageTexelPointer 59_11(fimage3D) 44_5 uint(0)
+         6035_23: 22_1(float) AtomicFAddEXT 60_36 uint(5) uint(32768) 43_11
+                              Store 59_1(atomf) 6035_23 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+          61_114: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+          65_107:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_115: 22_1(float) Load 65_107
+          129_48: 22_1(float) FAdd 61_115 61_114
+          65_108:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_108 129_48
+           60_37:   32_9(ptr) ImageTexelPointer 59_11(fimage3D) 44_6 uint(0)
+         6035_24: 22_1(float) AtomicFAddEXT 60_37 43_4 uint(2048) 43_2
+                              Store 59_1(atomf) 6035_24 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+          61_116: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+          65_109:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_117: 22_1(float) Load 65_109
+          129_49: 22_1(float) FAdd 61_117 61_116
+          65_110:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_110 129_49
+           60_38:   32_9(ptr) ImageTexelPointer 59_11(fimage3D) 44_7 uint(0)
+          229_16: 22_1(float) AtomicExchange 60_38 43_4 uint(2048) 43_13
+                              Store 59_1(atomf) 229_16 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+          61_118: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+          65_111:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_119: 22_1(float) Load 65_111
+          129_50: 22_1(float) FAdd 61_119 61_118
+          65_112:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_112 129_50
+           60_39:   32_9(ptr) ImageTexelPointer 59_11(fimage3D) 44_8 uint(0)
+          227_12: 22_1(float) AtomicLoad 60_39 43_4 uint(2048)
+                              Store 59_1(atomf) 227_12 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
+          61_120: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+          65_113:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_121: 22_1(float) Load 65_113
+          129_51: 22_1(float) FAdd 61_121 61_120
+          65_114:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_114 129_51
+          61_122: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+           60_40:   32_9(ptr) ImageTexelPointer 59_11(fimage3D) 44_9 uint(0)
+                              AtomicStore 60_40 43_4 uint(2048) 61_122
+          61_123: 22_1(float) Load 59_1(atomf) MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+          65_115:   32_4(ptr) AccessChain 59_2(buf) 43_6
+          61_124: 22_1(float) Load 65_115
+          129_52: 22_1(float) FAdd 61_124 61_123
+          65_116:   32_4(ptr) AccessChain 59_2(buf) 43_6
+                              Store 65_116 129_52
                               Return
                               FunctionEnd

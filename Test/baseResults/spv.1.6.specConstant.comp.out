@@ -4,66 +4,66 @@ spv.1.6.specConstant.comp
 // Id's are bound by 39
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main" 18
-                              ExecutionModeId 4 LocalSizeId 7 8 9
+                              EntryPoint GLCompute 54_1  "main" 59_1
+                              ExecutionModeId 54_1 LocalSizeId 50_1 uint(32) 50_2
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 14  "foo(vu3;"
-                              Name 13  "wgs"
-                              Name 16  "bn"
-                              MemberName 16(bn) 0  "a"
-                              Name 18  "bi"
-                              Name 37  "param"
-                              Decorate 7 SpecId 18
-                              Decorate 9 SpecId 19
-                              Decorate 16(bn) Block
-                              MemberDecorate 16(bn) 0 Offset 0
-                              Decorate 18(bi) Binding 0
-                              Decorate 18(bi) DescriptorSet 0
-                              Decorate 25 SpecId 18
-                              Decorate 26 SpecId 19
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:      6(int) SpecConstant 32
-               8:      6(int) Constant 32
-               9:      6(int) SpecConstant 1
-              10:             TypeVector 6(int) 3
-              11:             TypePointer Function 10(ivec3)
-              12:             TypeFunction 2 11(ptr)
-          16(bn):             TypeStruct 6(int)
-              17:             TypePointer StorageBuffer 16(bn)
-          18(bi):     17(ptr) Variable StorageBuffer
-              19:             TypeInt 32 1
-              20:     19(int) Constant 0
-              21:      6(int) Constant 0
-              22:             TypePointer Function 6(int)
-              25:      6(int) SpecConstant 32
-              26:      6(int) SpecConstant 1
-              27:   10(ivec3) SpecConstantComposite 25 8 26
-              28:      6(int) Constant 1
-              31:      6(int) Constant 2
-              35:             TypePointer StorageBuffer 6(int)
-         4(main):           2 Function None 3
-               5:             Label
-       37(param):     11(ptr) Variable Function
-                              Store 37(param) 27
-              38:           2 FunctionCall 14(foo(vu3;) 37(param)
+                              Name 54_1  "main"
+                              Name 54_2  "foo(vu3;"
+                              Name 55_1  "wgs"
+                              Name 30_1  "bn"
+                              MemberName 30_1(bn) 0  "a"
+                              Name 59_1  "bi"
+                              Name 59_2  "param"
+                              Decorate 50_1 SpecId 18
+                              Decorate 50_2 SpecId 19
+                              Decorate 30_1(bn) Block
+                              MemberDecorate 30_1(bn) 0 Offset 0
+                              Decorate 59_1(bi) Binding 0
+                              Decorate 59_1(bi) DescriptorSet 0
+                              Decorate 50_3 SpecId 18
+                              Decorate 50_4 SpecId 19
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            50_1:   21_1(int) SpecConstant 32
+        uint(32):   21_1(int) Constant 32
+            50_2:   21_1(int) SpecConstant 1
+            23_1:             TypeVector 21_1(int) 3
+            32_1:             TypePointer Function 23_1(ivec3)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+        30_1(bn):             TypeStruct 21_1(int)
+            32_2:             TypePointer StorageBuffer 30_1(bn)
+        59_1(bi):   32_2(ptr) Variable StorageBuffer
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Function 21_1(int)
+            50_3:   21_1(int) SpecConstant 32
+            50_4:   21_1(int) SpecConstant 1
+            51_1: 23_1(ivec3) SpecConstantComposite 50_3 uint(32) 50_4
+         uint(1):   21_1(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+            32_4:             TypePointer StorageBuffer 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_2(param):   32_1(ptr) Variable Function
+                              Store 59_2(param) 51_1
+            57_1:        19_1 FunctionCall 54_2(foo(vu3;) 59_2(param)
                               Return
                               FunctionEnd
-    14(foo(vu3;):           2 Function None 12
-         13(wgs):     11(ptr) FunctionParameter
-              15:             Label
-              23:     22(ptr) AccessChain 13(wgs) 21
-              24:      6(int) Load 23
-              29:      6(int) CompositeExtract 27 1
-              30:      6(int) IMul 24 29
-              32:     22(ptr) AccessChain 13(wgs) 31
-              33:      6(int) Load 32
-              34:      6(int) IMul 30 33
-              36:     35(ptr) AccessChain 18(bi) 20
-                              Store 36 34
+  54_2(foo(vu3;):        19_1 Function None 33_2
+       55_1(wgs):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            65_1:   32_3(ptr) AccessChain 55_1(wgs) uint(0)
+            61_1:   21_1(int) Load 65_1
+            81_1:   21_1(int) CompositeExtract 51_1 1
+           132_1:   21_1(int) IMul 61_1 81_1
+            65_2:   32_3(ptr) AccessChain 55_1(wgs) uint(2)
+            61_2:   21_1(int) Load 65_2
+           132_2:   21_1(int) IMul 132_1 61_2
+            65_3:   32_4(ptr) AccessChain 59_1(bi) 43_1
+                              Store 65_3 132_2
                               Return
                               FunctionEnd

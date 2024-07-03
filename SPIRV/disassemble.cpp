@@ -44,6 +44,8 @@
 #include <sstream>
 #include <cstring>
 #include <utility>
+#include <string>
+#include <map>
 
 #include "disassemble.h"
 #include "doc.h"
@@ -121,6 +123,10 @@ protected:
     Id bound;
     std::vector<unsigned int> idInstruction;  // the word offset into the stream where the instruction for result [id] starts; 0 if not yet seen (forward reference or function parameter)
 
+    std::map<unsigned, std::string> remappedIds;
+    std::map<unsigned, unsigned> uniqueIdPerOp;
+    std::map<std::pair<unsigned, unsigned>, unsigned> uniqueIdPerExtOp;
+
     std::vector<std::string> idDescriptor;    // the best text string known for explaining the <id>
 
     // schema
@@ -166,7 +172,60 @@ void SpirvStream::validate()
 // Boiler plate for each is handled here directly, the rest is dispatched.
 void SpirvStream::processInstructions()
 {
+    auto wordBackup = word;
+    Id uintTypeId = 0;
+    while (word < size) {
+        int instructionStart = word;
+
+        // Instruction wordCount and opcode
+        unsigned int firstWord = stream[word];
+        unsigned wordCount = firstWord >> WordCountShift;
+        Op opCode = (Op)(firstWord & OpCodeMask);
+        int nextInst = instructionStart + wordCount;
+
+        // Presence of full instruction
+        if (nextInst > size)
+            Kill(out, "stream instruction terminated too early");
+
+        // Result <id>
+        Id resultId = 0;
+        if (InstructionDesc[opCode].hasResult()) {
+            resultId = stream[instructionStart+(InstructionDesc[opCode].hasType()?2:1)];
+
+            if (opCode == OpTypeInt && stream[instructionStart+2]==32 && stream[instructionStart+3]==0) {
+                uintTypeId = resultId;
+            }
+
+            if (opCode == OpExtInst) {
+                auto extSet = stream[instructionStart+3];
+                auto extOp = stream[instructionStart+4];
+                remappedIds[resultId] = 
+                    std::to_string(extSet) 
+                    + "-"
+                    + std::to_string(extOp)
+                    + "_" 
+                    + std::to_string(++uniqueIdPerExtOp[{extSet, extOp}]);
+            }
+            else if (opCode == OpConstant && stream[instructionStart+1] == uintTypeId) {
+                auto value = stream[instructionStart+3];
+                remappedIds[resultId] = 
+                    "uint("
+                    + std::to_string(value)
+                    + ")";
+            }
+            else {
+                remappedIds[resultId] = 
+                    std::to_string(opCode) 
+                    + "_" 
+                    + std::to_string(++uniqueIdPerOp[opCode]);
+            }
+        }
+
+        word += wordCount;
+    }
+
     // Instructions
+    word = wordBackup;
     while (word < size) {
         int instructionStart = word;
 
@@ -229,7 +288,7 @@ void SpirvStream::formatId(Id id, std::stringstream& idStream)
         if (id >= bound)
             Kill(out, "Bad <id>");
 
-        idStream << id;
+        idStream << remappedIds[id];
         if (idDescriptor[id].size() > 0)
             idStream << "(" << idDescriptor[id] << ")";
     }
@@ -263,7 +322,7 @@ void SpirvStream::outputId(Id id)
     if (id >= bound)
         Kill(out, "Bad <id>");
 
-    out << id;
+    out << remappedIds[id];
     if (idDescriptor[id].size() > 0)
         out << "(" << idDescriptor[id] << ")";
 }

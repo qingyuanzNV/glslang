@@ -439,285 +439,285 @@ gl_FragCoord origin is upper left
 // Id's are bound by 92
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 72 82 90
+                              EntryPoint Vertex 54_1  "main" 59_3 59_4 59_5
                               Source GLSL 460
-                              Name 4  "main"
-                              Name 9  "foo("
-                              Name 13  "j"
-                              Name 14  "gl_AtomicCounterBlock_0"
-                              MemberName 14(gl_AtomicCounterBlock_0) 0  "counter3"
-                              MemberName 14(gl_AtomicCounterBlock_0) 1  "counter2"
-                              MemberName 14(gl_AtomicCounterBlock_0) 2  "counter1"
-                              Name 16  ""
-                              Name 31  "v"
-                              Name 35  "gl_DefaultUniformBlock"
-                              MemberName 35(gl_DefaultUniformBlock) 0  "a"
-                              MemberName 35(gl_DefaultUniformBlock) 1  "b2"
-                              MemberName 35(gl_DefaultUniformBlock) 2  "b1"
-                              MemberName 35(gl_DefaultUniformBlock) 3  "c2"
-                              MemberName 35(gl_DefaultUniformBlock) 4  "d"
-                              MemberName 35(gl_DefaultUniformBlock) 5  "s"
-                              MemberName 35(gl_DefaultUniformBlock) 6  "c1"
-                              Name 37  ""
-                              Name 67  "v"
-                              Name 72  "gl_VertexIndex"
-                              Name 82  "gl_InstanceIndex"
-                              Name 90  "io"
-                              Decorate 14(gl_AtomicCounterBlock_0) BufferBlock
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 0 Volatile
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 0 Coherent
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 0 Offset 0
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 1 Volatile
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 1 Coherent
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 1 Offset 4
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 2 Volatile
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 2 Coherent
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 2 Offset 8
-                              Decorate 16 Binding 1
-                              Decorate 16 DescriptorSet 0
-                              Decorate 34 ArrayStride 16
-                              Decorate 35(gl_DefaultUniformBlock) Block
-                              MemberDecorate 35(gl_DefaultUniformBlock) 0 Offset 0
-                              MemberDecorate 35(gl_DefaultUniformBlock) 1 Offset 16
-                              MemberDecorate 35(gl_DefaultUniformBlock) 2 Offset 24
-                              MemberDecorate 35(gl_DefaultUniformBlock) 3 Offset 32
-                              MemberDecorate 35(gl_DefaultUniformBlock) 4 Offset 48
-                              MemberDecorate 35(gl_DefaultUniformBlock) 5 Offset 64
-                              MemberDecorate 35(gl_DefaultUniformBlock) 6 Offset 128
-                              Decorate 37 Binding 0
-                              Decorate 37 DescriptorSet 0
-                              Decorate 72(gl_VertexIndex) BuiltIn VertexIndex
-                              Decorate 82(gl_InstanceIndex) BuiltIn InstanceIndex
-                              Decorate 90(io) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypeInt 32 0
-              12:             TypePointer Function 11(int)
-14(gl_AtomicCounterBlock_0):             TypeStruct 11(int) 11(int) 11(int)
-              15:             TypePointer Uniform 14(gl_AtomicCounterBlock_0)
-              16:     15(ptr) Variable Uniform
-              17:             TypeInt 32 1
-              18:     17(int) Constant 1
-              19:             TypePointer Uniform 11(int)
-              21:     11(int) Constant 1
-              22:     11(int) Constant 0
-              24:     17(int) Constant 0
-              26:     11(int) Constant 4294967295
-              30:             TypePointer Function 7(fvec4)
-              32:             TypeVector 6(float) 2
-              33:     11(int) Constant 4
-              34:             TypeArray 7(fvec4) 33
-35(gl_DefaultUniformBlock):             TypeStruct 7(fvec4) 32(fvec2) 32(fvec2) 7(fvec4) 7(fvec4) 34 7(fvec4)
-              36:             TypePointer Uniform 35(gl_DefaultUniformBlock)
-              37:     36(ptr) Variable Uniform
-              38:             TypePointer Uniform 7(fvec4)
-              41:     17(int) Constant 2
-              42:             TypePointer Uniform 6(float)
-              53:     17(int) Constant 3
-              57:     17(int) Constant 4
-              70:     17(int) Constant 5
-              71:             TypePointer Input 17(int)
-72(gl_VertexIndex):     71(ptr) Variable Input
-              79:             TypePointer Function 6(float)
-82(gl_InstanceIndex):     71(ptr) Variable Input
-              89:             TypePointer Output 7(fvec4)
-          90(io):     89(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-           67(v):     30(ptr) Variable Function
-              68:    7(fvec4) FunctionCall 9(foo()
-                              Store 67(v) 68
-              69:    7(fvec4) Load 67(v)
-              73:     17(int) Load 72(gl_VertexIndex)
-              74:     17(int) Load 72(gl_VertexIndex)
-              75:     17(int) ISub 73 74
-              76:     38(ptr) AccessChain 37 70 75
-              77:    7(fvec4) Load 76
-              78:    7(fvec4) FAdd 69 77
-                              Store 67(v) 78
-              80:     79(ptr) AccessChain 67(v) 22
-              81:    6(float) Load 80
-              83:     17(int) Load 82(gl_InstanceIndex)
-              84:     17(int) Load 82(gl_InstanceIndex)
-              85:     17(int) ISub 83 84
-              86:    6(float) ConvertSToF 85
-              87:    6(float) FSub 81 86
-              88:     79(ptr) AccessChain 67(v) 22
-                              Store 88 87
-              91:    7(fvec4) Load 67(v)
-                              Store 90(io) 91
+                              Name 54_1  "main"
+                              Name 54_2  "foo("
+                              Name 59_7  "j"
+                              Name 30_1  "gl_AtomicCounterBlock_0"
+                              MemberName 30_1(gl_AtomicCounterBlock_0) 0  "counter3"
+                              MemberName 30_1(gl_AtomicCounterBlock_0) 1  "counter2"
+                              MemberName 30_1(gl_AtomicCounterBlock_0) 2  "counter1"
+                              Name 59_1  ""
+                              Name 59_8  "v"
+                              Name 30_2  "gl_DefaultUniformBlock"
+                              MemberName 30_2(gl_DefaultUniformBlock) 0  "a"
+                              MemberName 30_2(gl_DefaultUniformBlock) 1  "b2"
+                              MemberName 30_2(gl_DefaultUniformBlock) 2  "b1"
+                              MemberName 30_2(gl_DefaultUniformBlock) 3  "c2"
+                              MemberName 30_2(gl_DefaultUniformBlock) 4  "d"
+                              MemberName 30_2(gl_DefaultUniformBlock) 5  "s"
+                              MemberName 30_2(gl_DefaultUniformBlock) 6  "c1"
+                              Name 59_2  ""
+                              Name 59_6  "v"
+                              Name 59_3  "gl_VertexIndex"
+                              Name 59_4  "gl_InstanceIndex"
+                              Name 59_5  "io"
+                              Decorate 30_1(gl_AtomicCounterBlock_0) BufferBlock
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 0 Volatile
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 0 Coherent
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 0 Offset 0
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 1 Volatile
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 1 Coherent
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 1 Offset 4
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 2 Volatile
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 2 Coherent
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 2 Offset 8
+                              Decorate 59_1 Binding 1
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 28_1 ArrayStride 16
+                              Decorate 30_2(gl_DefaultUniformBlock) Block
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 0 Offset 0
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 1 Offset 16
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 2 Offset 24
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 3 Offset 32
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 4 Offset 48
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 5 Offset 64
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 6 Offset 128
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 59_3(gl_VertexIndex) BuiltIn VertexIndex
+                              Decorate 59_4(gl_InstanceIndex) BuiltIn InstanceIndex
+                              Decorate 59_5(io) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+30_1(gl_AtomicCounterBlock_0):             TypeStruct 21_1(int) 21_1(int) 21_1(int)
+            32_2:             TypePointer Uniform 30_1(gl_AtomicCounterBlock_0)
+            59_1:   32_2(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 1
+            32_3:             TypePointer Uniform 21_1(int)
+         uint(1):   21_1(int) Constant 1
+         uint(0):   21_1(int) Constant 0
+            43_2:   21_2(int) Constant 0
+uint(4294967295):   21_1(int) Constant 4294967295
+            32_4:             TypePointer Function 23_1(fvec4)
+            23_2:             TypeVector 22_1(float) 2
+         uint(4):   21_1(int) Constant 4
+            28_1:             TypeArray 23_1(fvec4) uint(4)
+30_2(gl_DefaultUniformBlock):             TypeStruct 23_1(fvec4) 23_2(fvec2) 23_2(fvec2) 23_1(fvec4) 23_1(fvec4) 28_1 23_1(fvec4)
+            32_5:             TypePointer Uniform 30_2(gl_DefaultUniformBlock)
+            59_2:   32_5(ptr) Variable Uniform
+            32_6:             TypePointer Uniform 23_1(fvec4)
+            43_3:   21_2(int) Constant 2
+            32_7:             TypePointer Uniform 22_1(float)
+            43_4:   21_2(int) Constant 3
+            43_5:   21_2(int) Constant 4
+            43_6:   21_2(int) Constant 5
+            32_8:             TypePointer Input 21_2(int)
+59_3(gl_VertexIndex):   32_8(ptr) Variable Input
+            32_9:             TypePointer Function 22_1(float)
+59_4(gl_InstanceIndex):   32_8(ptr) Variable Input
+           32_10:             TypePointer Output 23_1(fvec4)
+        59_5(io):  32_10(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_6(v):   32_4(ptr) Variable Function
+            57_1: 23_1(fvec4) FunctionCall 54_2(foo()
+                              Store 59_6(v) 57_1
+            61_1: 23_1(fvec4) Load 59_6(v)
+            61_2:   21_2(int) Load 59_3(gl_VertexIndex)
+            61_3:   21_2(int) Load 59_3(gl_VertexIndex)
+           130_1:   21_2(int) ISub 61_2 61_3
+            65_1:   32_6(ptr) AccessChain 59_2 43_6 130_1
+            61_4: 23_1(fvec4) Load 65_1
+           129_1: 23_1(fvec4) FAdd 61_1 61_4
+                              Store 59_6(v) 129_1
+            65_2:   32_9(ptr) AccessChain 59_6(v) uint(0)
+            61_5: 22_1(float) Load 65_2
+            61_6:   21_2(int) Load 59_4(gl_InstanceIndex)
+            61_7:   21_2(int) Load 59_4(gl_InstanceIndex)
+           130_2:   21_2(int) ISub 61_6 61_7
+           111_1: 22_1(float) ConvertSToF 130_2
+           131_1: 22_1(float) FSub 61_5 111_1
+            65_3:   32_9(ptr) AccessChain 59_6(v) uint(0)
+                              Store 65_3 131_1
+            61_8: 23_1(fvec4) Load 59_6(v)
+                              Store 59_5(io) 61_8
                               Return
                               FunctionEnd
-         9(foo():    7(fvec4) Function None 8
-              10:             Label
-           13(j):     12(ptr) Variable Function
-           31(v):     30(ptr) Variable Function
-              20:     19(ptr) AccessChain 16 18
-              23:     11(int) AtomicIAdd 20 21 22 21
-              25:     19(ptr) AccessChain 16 24
-              27:     11(int) AtomicIAdd 25 21 22 26
-              28:     11(int) ISub 27 21
-              29:     11(int) IAdd 23 28
-                              Store 13(j) 29
-              39:     38(ptr) AccessChain 37 24
-              40:    7(fvec4) Load 39
-              43:     42(ptr) AccessChain 37 41 22
-              44:    6(float) Load 43
-              45:     42(ptr) AccessChain 37 41 21
-              46:    6(float) Load 45
-              47:     42(ptr) AccessChain 37 18 22
-              48:    6(float) Load 47
-              49:     42(ptr) AccessChain 37 18 21
-              50:    6(float) Load 49
-              51:    7(fvec4) CompositeConstruct 44 46 48 50
-              52:    7(fvec4) FAdd 40 51
-              54:     38(ptr) AccessChain 37 53
-              55:    7(fvec4) Load 54
-              56:    7(fvec4) FAdd 52 55
-              58:     38(ptr) AccessChain 37 57
-              59:    7(fvec4) Load 58
-              60:    7(fvec4) FAdd 56 59
-                              Store 31(v) 60
-              61:     11(int) Load 13(j)
-              62:    6(float) ConvertUToF 61
-              63:    7(fvec4) Load 31(v)
-              64:    7(fvec4) VectorTimesScalar 63 62
-                              ReturnValue 64
+      54_2(foo(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+         59_7(j):   32_1(ptr) Variable Function
+         59_8(v):   32_4(ptr) Variable Function
+            65_4:   32_3(ptr) AccessChain 59_1 43_1
+           234_1:   21_1(int) AtomicIAdd 65_4 uint(1) uint(0) uint(1)
+            65_5:   32_3(ptr) AccessChain 59_1 43_2
+           234_2:   21_1(int) AtomicIAdd 65_5 uint(1) uint(0) uint(4294967295)
+           130_3:   21_1(int) ISub 234_2 uint(1)
+           128_1:   21_1(int) IAdd 234_1 130_3
+                              Store 59_7(j) 128_1
+            65_6:   32_6(ptr) AccessChain 59_2 43_2
+            61_9: 23_1(fvec4) Load 65_6
+            65_7:   32_7(ptr) AccessChain 59_2 43_3 uint(0)
+           61_10: 22_1(float) Load 65_7
+            65_8:   32_7(ptr) AccessChain 59_2 43_3 uint(1)
+           61_11: 22_1(float) Load 65_8
+            65_9:   32_7(ptr) AccessChain 59_2 43_1 uint(0)
+           61_12: 22_1(float) Load 65_9
+           65_10:   32_7(ptr) AccessChain 59_2 43_1 uint(1)
+           61_13: 22_1(float) Load 65_10
+            80_1: 23_1(fvec4) CompositeConstruct 61_10 61_11 61_12 61_13
+           129_2: 23_1(fvec4) FAdd 61_9 80_1
+           65_11:   32_6(ptr) AccessChain 59_2 43_4
+           61_14: 23_1(fvec4) Load 65_11
+           129_3: 23_1(fvec4) FAdd 129_2 61_14
+           65_12:   32_6(ptr) AccessChain 59_2 43_5
+           61_15: 23_1(fvec4) Load 65_12
+           129_4: 23_1(fvec4) FAdd 129_3 61_15
+                              Store 59_8(v) 129_4
+           61_16:   21_1(int) Load 59_7(j)
+           112_1: 22_1(float) ConvertUToF 61_16
+           61_17: 23_1(fvec4) Load 59_8(v)
+           142_1: 23_1(fvec4) VectorTimesScalar 61_17 112_1
+                              ReturnValue 142_1
                               FunctionEnd
 // Module Version 10000
 // Generated by (magic number): 8000b
 // Id's are bound by 74
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 68 70
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 460
-                              Name 4  "main"
-                              Name 9  "foo("
-                              Name 13  "j"
-                              Name 14  "gl_AtomicCounterBlock_0"
-                              MemberName 14(gl_AtomicCounterBlock_0) 0  "counter3"
-                              MemberName 14(gl_AtomicCounterBlock_0) 1  "counter2"
-                              MemberName 14(gl_AtomicCounterBlock_0) 2  "counter1"
-                              Name 16  ""
-                              Name 31  "v"
-                              Name 35  "gl_DefaultUniformBlock"
-                              MemberName 35(gl_DefaultUniformBlock) 0  "a"
-                              MemberName 35(gl_DefaultUniformBlock) 1  "b2"
-                              MemberName 35(gl_DefaultUniformBlock) 2  "b1"
-                              MemberName 35(gl_DefaultUniformBlock) 3  "c2"
-                              MemberName 35(gl_DefaultUniformBlock) 4  "d"
-                              MemberName 35(gl_DefaultUniformBlock) 5  "s"
-                              MemberName 35(gl_DefaultUniformBlock) 6  "c1"
-                              Name 37  ""
-                              Name 68  "o"
-                              Name 70  "io"
-                              Decorate 14(gl_AtomicCounterBlock_0) BufferBlock
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 0 Volatile
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 0 Coherent
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 0 Offset 0
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 1 Volatile
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 1 Coherent
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 1 Offset 4
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 2 Volatile
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 2 Coherent
-                              MemberDecorate 14(gl_AtomicCounterBlock_0) 2 Offset 8
-                              Decorate 16 Binding 1
-                              Decorate 16 DescriptorSet 0
-                              Decorate 34 ArrayStride 16
-                              Decorate 35(gl_DefaultUniformBlock) Block
-                              MemberDecorate 35(gl_DefaultUniformBlock) 0 Offset 0
-                              MemberDecorate 35(gl_DefaultUniformBlock) 1 Offset 16
-                              MemberDecorate 35(gl_DefaultUniformBlock) 2 Offset 24
-                              MemberDecorate 35(gl_DefaultUniformBlock) 3 Offset 32
-                              MemberDecorate 35(gl_DefaultUniformBlock) 4 Offset 48
-                              MemberDecorate 35(gl_DefaultUniformBlock) 5 Offset 64
-                              MemberDecorate 35(gl_DefaultUniformBlock) 6 Offset 128
-                              Decorate 37 Binding 0
-                              Decorate 37 DescriptorSet 0
-                              Decorate 68(o) Location 0
-                              Decorate 70(io) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypeInt 32 0
-              12:             TypePointer Function 11(int)
-14(gl_AtomicCounterBlock_0):             TypeStruct 11(int) 11(int) 11(int)
-              15:             TypePointer Uniform 14(gl_AtomicCounterBlock_0)
-              16:     15(ptr) Variable Uniform
-              17:             TypeInt 32 1
-              18:     17(int) Constant 2
-              19:             TypePointer Uniform 11(int)
-              21:     11(int) Constant 1
-              22:     11(int) Constant 0
-              24:     17(int) Constant 1
-              26:     11(int) Constant 4294967295
-              30:             TypePointer Function 7(fvec4)
-              32:             TypeVector 6(float) 2
-              33:     11(int) Constant 4
-              34:             TypeArray 7(fvec4) 33
-35(gl_DefaultUniformBlock):             TypeStruct 7(fvec4) 32(fvec2) 32(fvec2) 7(fvec4) 7(fvec4) 34 7(fvec4)
-              36:             TypePointer Uniform 35(gl_DefaultUniformBlock)
-              37:     36(ptr) Variable Uniform
-              38:     17(int) Constant 0
-              39:             TypePointer Uniform 7(fvec4)
-              42:             TypePointer Uniform 6(float)
-              53:     17(int) Constant 6
-              57:     17(int) Constant 4
-              67:             TypePointer Output 7(fvec4)
-           68(o):     67(ptr) Variable Output
-              69:             TypePointer Input 7(fvec4)
-          70(io):     69(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              71:    7(fvec4) Load 70(io)
-              72:    7(fvec4) FunctionCall 9(foo()
-              73:    7(fvec4) FAdd 71 72
-                              Store 68(o) 73
+                              Name 54_1  "main"
+                              Name 54_2  "foo("
+                              Name 59_5  "j"
+                              Name 30_1  "gl_AtomicCounterBlock_0"
+                              MemberName 30_1(gl_AtomicCounterBlock_0) 0  "counter3"
+                              MemberName 30_1(gl_AtomicCounterBlock_0) 1  "counter2"
+                              MemberName 30_1(gl_AtomicCounterBlock_0) 2  "counter1"
+                              Name 59_1  ""
+                              Name 59_6  "v"
+                              Name 30_2  "gl_DefaultUniformBlock"
+                              MemberName 30_2(gl_DefaultUniformBlock) 0  "a"
+                              MemberName 30_2(gl_DefaultUniformBlock) 1  "b2"
+                              MemberName 30_2(gl_DefaultUniformBlock) 2  "b1"
+                              MemberName 30_2(gl_DefaultUniformBlock) 3  "c2"
+                              MemberName 30_2(gl_DefaultUniformBlock) 4  "d"
+                              MemberName 30_2(gl_DefaultUniformBlock) 5  "s"
+                              MemberName 30_2(gl_DefaultUniformBlock) 6  "c1"
+                              Name 59_2  ""
+                              Name 59_3  "o"
+                              Name 59_4  "io"
+                              Decorate 30_1(gl_AtomicCounterBlock_0) BufferBlock
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 0 Volatile
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 0 Coherent
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 0 Offset 0
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 1 Volatile
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 1 Coherent
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 1 Offset 4
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 2 Volatile
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 2 Coherent
+                              MemberDecorate 30_1(gl_AtomicCounterBlock_0) 2 Offset 8
+                              Decorate 59_1 Binding 1
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 28_1 ArrayStride 16
+                              Decorate 30_2(gl_DefaultUniformBlock) Block
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 0 Offset 0
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 1 Offset 16
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 2 Offset 24
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 3 Offset 32
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 4 Offset 48
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 5 Offset 64
+                              MemberDecorate 30_2(gl_DefaultUniformBlock) 6 Offset 128
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 59_3(o) Location 0
+                              Decorate 59_4(io) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+30_1(gl_AtomicCounterBlock_0):             TypeStruct 21_1(int) 21_1(int) 21_1(int)
+            32_2:             TypePointer Uniform 30_1(gl_AtomicCounterBlock_0)
+            59_1:   32_2(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 2
+            32_3:             TypePointer Uniform 21_1(int)
+         uint(1):   21_1(int) Constant 1
+         uint(0):   21_1(int) Constant 0
+            43_2:   21_2(int) Constant 1
+uint(4294967295):   21_1(int) Constant 4294967295
+            32_4:             TypePointer Function 23_1(fvec4)
+            23_2:             TypeVector 22_1(float) 2
+         uint(4):   21_1(int) Constant 4
+            28_1:             TypeArray 23_1(fvec4) uint(4)
+30_2(gl_DefaultUniformBlock):             TypeStruct 23_1(fvec4) 23_2(fvec2) 23_2(fvec2) 23_1(fvec4) 23_1(fvec4) 28_1 23_1(fvec4)
+            32_5:             TypePointer Uniform 30_2(gl_DefaultUniformBlock)
+            59_2:   32_5(ptr) Variable Uniform
+            43_3:   21_2(int) Constant 0
+            32_6:             TypePointer Uniform 23_1(fvec4)
+            32_7:             TypePointer Uniform 22_1(float)
+            43_4:   21_2(int) Constant 6
+            43_5:   21_2(int) Constant 4
+            32_8:             TypePointer Output 23_1(fvec4)
+         59_3(o):   32_8(ptr) Variable Output
+            32_9:             TypePointer Input 23_1(fvec4)
+        59_4(io):   32_9(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1: 23_1(fvec4) Load 59_4(io)
+            57_1: 23_1(fvec4) FunctionCall 54_2(foo()
+           129_1: 23_1(fvec4) FAdd 61_1 57_1
+                              Store 59_3(o) 129_1
                               Return
                               FunctionEnd
-         9(foo():    7(fvec4) Function None 8
-              10:             Label
-           13(j):     12(ptr) Variable Function
-           31(v):     30(ptr) Variable Function
-              20:     19(ptr) AccessChain 16 18
-              23:     11(int) AtomicIAdd 20 21 22 21
-              25:     19(ptr) AccessChain 16 24
-              27:     11(int) AtomicIAdd 25 21 22 26
-              28:     11(int) ISub 27 21
-              29:     11(int) IAdd 23 28
-                              Store 13(j) 29
-              40:     39(ptr) AccessChain 37 38
-              41:    7(fvec4) Load 40
-              43:     42(ptr) AccessChain 37 18 22
-              44:    6(float) Load 43
-              45:     42(ptr) AccessChain 37 18 21
-              46:    6(float) Load 45
-              47:     42(ptr) AccessChain 37 24 22
-              48:    6(float) Load 47
-              49:     42(ptr) AccessChain 37 24 21
-              50:    6(float) Load 49
-              51:    7(fvec4) CompositeConstruct 44 46 48 50
-              52:    7(fvec4) FAdd 41 51
-              54:     39(ptr) AccessChain 37 53
-              55:    7(fvec4) Load 54
-              56:    7(fvec4) FAdd 52 55
-              58:     39(ptr) AccessChain 37 57
-              59:    7(fvec4) Load 58
-              60:    7(fvec4) FAdd 56 59
-                              Store 31(v) 60
-              61:     11(int) Load 13(j)
-              62:    6(float) ConvertUToF 61
-              63:    7(fvec4) Load 31(v)
-              64:    7(fvec4) VectorTimesScalar 63 62
-                              ReturnValue 64
+      54_2(foo(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+         59_5(j):   32_1(ptr) Variable Function
+         59_6(v):   32_4(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1 43_1
+           234_1:   21_1(int) AtomicIAdd 65_1 uint(1) uint(0) uint(1)
+            65_2:   32_3(ptr) AccessChain 59_1 43_2
+           234_2:   21_1(int) AtomicIAdd 65_2 uint(1) uint(0) uint(4294967295)
+           130_1:   21_1(int) ISub 234_2 uint(1)
+           128_1:   21_1(int) IAdd 234_1 130_1
+                              Store 59_5(j) 128_1
+            65_3:   32_6(ptr) AccessChain 59_2 43_3
+            61_2: 23_1(fvec4) Load 65_3
+            65_4:   32_7(ptr) AccessChain 59_2 43_1 uint(0)
+            61_3: 22_1(float) Load 65_4
+            65_5:   32_7(ptr) AccessChain 59_2 43_1 uint(1)
+            61_4: 22_1(float) Load 65_5
+            65_6:   32_7(ptr) AccessChain 59_2 43_2 uint(0)
+            61_5: 22_1(float) Load 65_6
+            65_7:   32_7(ptr) AccessChain 59_2 43_2 uint(1)
+            61_6: 22_1(float) Load 65_7
+            80_1: 23_1(fvec4) CompositeConstruct 61_3 61_4 61_5 61_6
+           129_2: 23_1(fvec4) FAdd 61_2 80_1
+            65_8:   32_6(ptr) AccessChain 59_2 43_4
+            61_7: 23_1(fvec4) Load 65_8
+           129_3: 23_1(fvec4) FAdd 129_2 61_7
+            65_9:   32_6(ptr) AccessChain 59_2 43_5
+            61_8: 23_1(fvec4) Load 65_9
+           129_4: 23_1(fvec4) FAdd 129_3 61_8
+                              Store 59_6(v) 129_4
+            61_9:   21_1(int) Load 59_5(j)
+           112_1: 22_1(float) ConvertUToF 61_9
+           61_10: 23_1(fvec4) Load 59_6(v)
+           142_1: 23_1(fvec4) VectorTimesScalar 61_10 112_1
+                              ReturnValue 142_1
                               FunctionEnd

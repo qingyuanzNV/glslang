@@ -123,83 +123,83 @@ Validation failed
 // Id's are bound by 52
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 41 47
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 6  "PS_INPUT"
-                              Name 11  "PS_OUTPUT"
-                              MemberName 11(PS_OUTPUT) 0  "vColor"
-                              MemberName 11(PS_OUTPUT) 1  "nCoverageMask"
-                              Name 14  "@main(struct-PS_INPUT1;"
-                              Name 13  "i"
-                              Name 17  "o"
-                              Name 32  "i"
-                              Name 34  "i"
-                              Name 36  "flattenTemp"
-                              Name 37  "param"
-                              Name 41  "@entryPointOutput.vColor"
-                              Name 47  "@entryPointOutput.nCoverageMask"
-                              Decorate 41(@entryPointOutput.vColor) Location 0
-                              Decorate 47(@entryPointOutput.nCoverageMask) BuiltIn SampleMask
-               2:             TypeVoid
-               3:             TypeFunction 2
-     6(PS_INPUT):             TypeStruct
-               7:             TypePointer Function 6(PS_INPUT)
-               8:             TypeFloat 32
-               9:             TypeVector 8(float) 4
-              10:             TypeInt 32 0
-   11(PS_OUTPUT):             TypeStruct 9(fvec4) 10(int)
-              12:             TypeFunction 11(PS_OUTPUT) 7(ptr)
-              16:             TypePointer Function 11(PS_OUTPUT)
-              18:             TypeInt 32 1
-              19:     18(int) Constant 0
-              20:    8(float) Constant 1065353216
-              21:    8(float) Constant 0
-              22:    9(fvec4) ConstantComposite 20 21 21 20
-              23:             TypePointer Function 9(fvec4)
-              25:     18(int) Constant 1
-              26:     10(int) Constant 0
-              27:             TypePointer Function 10(int)
-              33:             TypePointer Input 6(PS_INPUT)
-           34(i):     33(ptr) Variable Input
-              40:             TypePointer Output 9(fvec4)
-41(@entryPointOutput.vColor):     40(ptr) Variable Output
-              44:     10(int) Constant 1
-              45:             TypeArray 10(int) 44
-              46:             TypePointer Output 45
-47(@entryPointOutput.nCoverageMask):     46(ptr) Variable Output
-              50:             TypePointer Output 10(int)
-         4(main):           2 Function None 3
-               5:             Label
-           32(i):      7(ptr) Variable Function
- 36(flattenTemp):     16(ptr) Variable Function
-       37(param):      7(ptr) Variable Function
-              35: 6(PS_INPUT) Load 34(i)
-                              Store 32(i) 35
-              38: 6(PS_INPUT) Load 32(i)
-                              Store 37(param) 38
-              39:11(PS_OUTPUT) FunctionCall 14(@main(struct-PS_INPUT1;) 37(param)
-                              Store 36(flattenTemp) 39
-              42:     23(ptr) AccessChain 36(flattenTemp) 19
-              43:    9(fvec4) Load 42
-                              Store 41(@entryPointOutput.vColor) 43
-              48:     27(ptr) AccessChain 36(flattenTemp) 25
-              49:     10(int) Load 48
-              51:     50(ptr) AccessChain 47(@entryPointOutput.nCoverageMask) 19
-                              Store 51 49
+                              Name 54_1  "main"
+                              Name 30_1  "PS_INPUT"
+                              Name 30_2  "PS_OUTPUT"
+                              MemberName 30_2(PS_OUTPUT) 0  "vColor"
+                              MemberName 30_2(PS_OUTPUT) 1  "nCoverageMask"
+                              Name 54_2  "@main(struct-PS_INPUT1;"
+                              Name 55_1  "i"
+                              Name 59_7  "o"
+                              Name 59_4  "i"
+                              Name 59_1  "i"
+                              Name 59_5  "flattenTemp"
+                              Name 59_6  "param"
+                              Name 59_2  "@entryPointOutput.vColor"
+                              Name 59_3  "@entryPointOutput.nCoverageMask"
+                              Decorate 59_2(@entryPointOutput.vColor) Location 0
+                              Decorate 59_3(@entryPointOutput.nCoverageMask) BuiltIn SampleMask
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+  30_1(PS_INPUT):             TypeStruct
+            32_1:             TypePointer Function 30_1(PS_INPUT)
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            21_1:             TypeInt 32 0
+ 30_2(PS_OUTPUT):             TypeStruct 23_1(fvec4) 21_1(int)
+            33_2:             TypeFunction 30_2(PS_OUTPUT) 32_1(ptr)
+            32_2:             TypePointer Function 30_2(PS_OUTPUT)
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            43_2: 22_1(float) Constant 1065353216
+            43_3: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_3 43_3 43_2
+            32_3:             TypePointer Function 23_1(fvec4)
+            43_4:   21_2(int) Constant 1
+         uint(0):   21_1(int) Constant 0
+            32_4:             TypePointer Function 21_1(int)
+            32_5:             TypePointer Input 30_1(PS_INPUT)
+         59_1(i):   32_5(ptr) Variable Input
+            32_6:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput.vColor):   32_6(ptr) Variable Output
+         uint(1):   21_1(int) Constant 1
+            28_1:             TypeArray 21_1(int) uint(1)
+            32_7:             TypePointer Output 28_1
+59_3(@entryPointOutput.nCoverageMask):   32_7(ptr) Variable Output
+            32_8:             TypePointer Output 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_4(i):   32_1(ptr) Variable Function
+59_5(flattenTemp):   32_2(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+            61_1:30_1(PS_INPUT) Load 59_1(i)
+                              Store 59_4(i) 61_1
+            61_2:30_1(PS_INPUT) Load 59_4(i)
+                              Store 59_6(param) 61_2
+            57_1:30_2(PS_OUTPUT) FunctionCall 54_2(@main(struct-PS_INPUT1;) 59_6(param)
+                              Store 59_5(flattenTemp) 57_1
+            65_1:   32_3(ptr) AccessChain 59_5(flattenTemp) 43_1
+            61_3: 23_1(fvec4) Load 65_1
+                              Store 59_2(@entryPointOutput.vColor) 61_3
+            65_2:   32_4(ptr) AccessChain 59_5(flattenTemp) 43_4
+            61_4:   21_1(int) Load 65_2
+            65_3:   32_8(ptr) AccessChain 59_3(@entryPointOutput.nCoverageMask) 43_1
+                              Store 65_3 61_4
                               Return
                               FunctionEnd
-14(@main(struct-PS_INPUT1;):11(PS_OUTPUT) Function None 12
-           13(i):      7(ptr) FunctionParameter
-              15:             Label
-           17(o):     16(ptr) Variable Function
-              24:     23(ptr) AccessChain 17(o) 19
-                              Store 24 22
-              28:     27(ptr) AccessChain 17(o) 25
-                              Store 28 26
-              29:11(PS_OUTPUT) Load 17(o)
-                              ReturnValue 29
+54_2(@main(struct-PS_INPUT1;):30_2(PS_OUTPUT) Function None 33_2
+         55_1(i):   32_1(ptr) FunctionParameter
+           248_2:             Label
+         59_7(o):   32_2(ptr) Variable Function
+            65_4:   32_3(ptr) AccessChain 59_7(o) 43_1
+                              Store 65_4 44_1
+            65_5:   32_4(ptr) AccessChain 59_7(o) 43_4
+                              Store 65_5 uint(0)
+            61_5:30_2(PS_OUTPUT) Load 59_7(o)
+                              ReturnValue 61_5
                               FunctionEnd

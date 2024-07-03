@@ -78,54 +78,54 @@ gl_FragCoord origin is upper left
 // Id's are bound by 31
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 28
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 6  "MyFunc("
-                              Name 8  "MyFunc2("
-                              Name 12  "PS_OUTPUT"
-                              MemberName 12(PS_OUTPUT) 0  "color"
-                              Name 14  "@main("
-                              Name 17  "ps_output"
-                              Name 28  "@entryPointOutput.color"
-                              Decorate 28(@entryPointOutput.color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-              10:             TypeFloat 32
-              11:             TypeVector 10(float) 4
-   12(PS_OUTPUT):             TypeStruct 11(fvec4)
-              13:             TypeFunction 12(PS_OUTPUT)
-              16:             TypePointer Function 12(PS_OUTPUT)
-              18:             TypeInt 32 1
-              19:     18(int) Constant 0
-              20:   10(float) Constant 1065353216
-              21:   11(fvec4) ConstantComposite 20 20 20 20
-              22:             TypePointer Function 11(fvec4)
-              27:             TypePointer Output 11(fvec4)
-28(@entryPointOutput.color):     27(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              29:12(PS_OUTPUT) FunctionCall 14(@main()
-              30:   11(fvec4) CompositeExtract 29 0
-                              Store 28(@entryPointOutput.color) 30
+                              Name 54_1  "main"
+                              Name 54_2  "MyFunc("
+                              Name 54_3  "MyFunc2("
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "color"
+                              Name 54_4  "@main("
+                              Name 59_2  "ps_output"
+                              Name 59_1  "@entryPointOutput.color"
+                              Decorate 59_1(@entryPointOutput.color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4)
+            33_2:             TypeFunction 30_1(PS_OUTPUT)
+            32_1:             TypePointer Function 30_1(PS_OUTPUT)
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            43_2: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_2 43_2 43_2 43_2
+            32_2:             TypePointer Function 23_1(fvec4)
+            32_3:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput.color):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_4(@main()
+            81_1: 23_1(fvec4) CompositeExtract 57_1 0
+                              Store 59_1(@entryPointOutput.color) 81_1
                               Return
                               FunctionEnd
-      6(MyFunc():           2 Function None 3
-               7:             Label
+   54_2(MyFunc():        19_1 Function None 33_1
+           248_2:             Label
                               Return
                               FunctionEnd
-     8(MyFunc2():           2 Function None 3
-               9:             Label
+  54_3(MyFunc2():        19_1 Function None 33_1
+           248_3:             Label
                               Return
                               FunctionEnd
-      14(@main():12(PS_OUTPUT) Function None 13
-              15:             Label
-   17(ps_output):     16(ptr) Variable Function
-              23:     22(ptr) AccessChain 17(ps_output) 19
-                              Store 23 21
-              24:12(PS_OUTPUT) Load 17(ps_output)
-                              ReturnValue 24
+    54_4(@main():30_1(PS_OUTPUT) Function None 33_2
+           248_4:             Label
+ 59_2(ps_output):   32_1(ptr) Variable Function
+            65_1:   32_2(ptr) AccessChain 59_2(ps_output) 43_1
+                              Store 65_1 44_1
+            61_1:30_1(PS_OUTPUT) Load 59_2(ps_output)
+                              ReturnValue 61_1
                               FunctionEnd

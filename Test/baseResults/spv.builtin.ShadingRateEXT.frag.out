@@ -9,28 +9,28 @@ WARNING: 0:5: '' : all default precisions are highp; use precision statements to
                               Capability Shader
                               Capability FragmentShadingRateKHR
                               Extension  "SPV_KHR_fragment_shading_rate"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 8 10
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_fragment_shading_rate"
-                              Name 4  "main"
-                              Name 8  "val"
-                              Name 10  "gl_ShadingRateEXT"
-                              Decorate 8(val) Location 0
-                              Decorate 10(gl_ShadingRateEXT) BuiltIn ShadingRateKHR
-                              Decorate 10(gl_ShadingRateEXT) Flat
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Output 6(int)
-          8(val):      7(ptr) Variable Output
-               9:             TypePointer Input 6(int)
-10(gl_ShadingRateEXT):      9(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              11:      6(int) Load 10(gl_ShadingRateEXT)
-                              Store 8(val) 11
+                              Name 54_1  "main"
+                              Name 59_1  "val"
+                              Name 59_2  "gl_ShadingRateEXT"
+                              Decorate 59_1(val) Location 0
+                              Decorate 59_2(gl_ShadingRateEXT) BuiltIn ShadingRateKHR
+                              Decorate 59_2(gl_ShadingRateEXT) Flat
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Output 21_1(int)
+       59_1(val):   32_1(ptr) Variable Output
+            32_2:             TypePointer Input 21_1(int)
+59_2(gl_ShadingRateEXT):   32_2(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_2(gl_ShadingRateEXT)
+                              Store 59_1(val) 61_1
                               Return
                               FunctionEnd

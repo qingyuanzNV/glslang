@@ -6,52 +6,52 @@ spv.OVR_multiview.vert
                               Capability Shader
                               Capability MultiView
                               Extension  "SPV_KHR_multiview"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 13 17 25 26
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4
                               Source GLSL 330
                               SourceExtension  "GL_OVR_multiview"
-                              Name 4  "main"
-                              Name 11  "gl_PerVertex"
-                              MemberName 11(gl_PerVertex) 0  "gl_Position"
-                              MemberName 11(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 11(gl_PerVertex) 2  "gl_ClipDistance"
-                              Name 13  ""
-                              Name 17  "gl_ViewID_OVR"
-                              Name 25  "gl_VertexID"
-                              Name 26  "gl_InstanceID"
-                              Decorate 11(gl_PerVertex) Block
-                              MemberDecorate 11(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 11(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 11(gl_PerVertex) 2 BuiltIn ClipDistance
-                              Decorate 17(gl_ViewID_OVR) BuiltIn ViewIndex
-                              Decorate 25(gl_VertexID) BuiltIn VertexId
-                              Decorate 26(gl_InstanceID) BuiltIn InstanceId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeInt 32 0
-               9:      8(int) Constant 1
-              10:             TypeArray 6(float) 9
-11(gl_PerVertex):             TypeStruct 7(fvec4) 6(float) 10
-              12:             TypePointer Output 11(gl_PerVertex)
-              13:     12(ptr) Variable Output
-              14:             TypeInt 32 1
-              15:     14(int) Constant 0
-              16:             TypePointer Input 8(int)
-17(gl_ViewID_OVR):     16(ptr) Variable Input
-              20:    6(float) Constant 0
-              22:             TypePointer Output 7(fvec4)
-              24:             TypePointer Input 14(int)
- 25(gl_VertexID):     24(ptr) Variable Input
-26(gl_InstanceID):     24(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              18:      8(int) Load 17(gl_ViewID_OVR)
-              19:    6(float) ConvertUToF 18
-              21:    7(fvec4) CompositeConstruct 19 20 20 20
-              23:     22(ptr) AccessChain 13 15
-                              Store 23 21
+                              Name 54_1  "main"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_1(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_1(gl_PerVertex) 2  "gl_ClipDistance"
+                              Name 59_1  ""
+                              Name 59_2  "gl_ViewID_OVR"
+                              Name 59_3  "gl_VertexID"
+                              Name 59_4  "gl_InstanceID"
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_1(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_1(gl_PerVertex) 2 BuiltIn ClipDistance
+                              Decorate 59_2(gl_ViewID_OVR) BuiltIn ViewIndex
+                              Decorate 59_3(gl_VertexID) BuiltIn VertexId
+                              Decorate 59_4(gl_InstanceID) BuiltIn InstanceId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            21_1:             TypeInt 32 0
+         uint(1):   21_1(int) Constant 1
+            28_1:             TypeArray 22_1(float) uint(1)
+30_1(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float) 28_1
+            32_1:             TypePointer Output 30_1(gl_PerVertex)
+            59_1:   32_1(ptr) Variable Output
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_2:             TypePointer Input 21_1(int)
+59_2(gl_ViewID_OVR):   32_2(ptr) Variable Input
+            43_2: 22_1(float) Constant 0
+            32_3:             TypePointer Output 23_1(fvec4)
+            32_4:             TypePointer Input 21_2(int)
+59_3(gl_VertexID):   32_4(ptr) Variable Input
+59_4(gl_InstanceID):   32_4(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_2(gl_ViewID_OVR)
+           112_1: 22_1(float) ConvertUToF 61_1
+            80_1: 23_1(fvec4) CompositeConstruct 112_1 43_2 43_2 43_2
+            65_1:   32_3(ptr) AccessChain 59_1 43_1
+                              Store 65_1 80_1
                               Return
                               FunctionEnd

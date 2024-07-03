@@ -5,67 +5,67 @@ spv.atomiAddEXT.task
 
                               Capability MeshShadingEXT
                               Extension  "SPV_EXT_mesh_shader"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TaskEXT 4  "main" 9 23 28
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint TaskEXT 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 460
                               SourceExtension  "GL_EXT_mesh_shader"
-                              Name 4  "main"
-                              Name 7  "Buffer"
-                              MemberName 7(Buffer) 0  "x"
-                              Name 9  ""
-                              Name 20  "structType"
-                              MemberName 20(structType) 0  "y"
-                              Name 21  "t2"
-                              MemberName 21(t2) 0  "f"
-                              Name 23  "t"
-                              Name 26  "taskBlock"
-                              MemberName 26(taskBlock) 0  "atom1"
-                              Name 28  "mytask"
-                              Decorate 7(Buffer) Block
-                              MemberDecorate 7(Buffer) 0 Coherent
-                              MemberDecorate 7(Buffer) 0 Offset 0
-                              Decorate 9 Binding 1
-                              Decorate 9 DescriptorSet 0
-                              Decorate 19 ArrayStride 4
-                              MemberDecorate 20(structType) 0 Offset 0
-                              Decorate 21(t2) Block
-                              MemberDecorate 21(t2) 0 Offset 0
-                              Decorate 23(t) Binding 0
-                              Decorate 23(t) DescriptorSet 0
-                              Decorate 33 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-       7(Buffer):             TypeStruct 6(int)
-               8:             TypePointer StorageBuffer 7(Buffer)
-               9:      8(ptr) Variable StorageBuffer
-              10:      6(int) Constant 0
-              11:             TypePointer StorageBuffer 6(int)
-              13:      6(int) Constant 1
-              14:             TypeInt 32 0
-              15:     14(int) Constant 1
-              16:     14(int) Constant 0
-              18:     14(int) Constant 3
-              19:             TypeArray 6(int) 18
-  20(structType):             TypeStruct 19
-          21(t2):             TypeStruct 20(structType)
-              22:             TypePointer StorageBuffer 21(t2)
-           23(t):     22(ptr) Variable StorageBuffer
-   26(taskBlock):             TypeStruct 6(int)
-              27:             TypePointer TaskPayloadWorkgroupEXT 26(taskBlock)
-      28(mytask):     27(ptr) Variable TaskPayloadWorkgroupEXT
-              29:             TypePointer TaskPayloadWorkgroupEXT 6(int)
-              32:             TypeVector 14(int) 3
-              33:   32(ivec3) ConstantComposite 15 15 15
-         4(main):           2 Function None 3
-               5:             Label
-              12:     11(ptr) AccessChain 9 10
-              17:      6(int) AtomicIAdd 12 15 16 13
-              24:     11(ptr) AccessChain 23(t) 10 10 13
-              25:      6(int) AtomicIAdd 24 15 16 13
-              30:     29(ptr) AccessChain 28(mytask) 10
-              31:      6(int) AtomicIAdd 30 15 16 13
+                              Name 54_1  "main"
+                              Name 30_1  "Buffer"
+                              MemberName 30_1(Buffer) 0  "x"
+                              Name 59_1  ""
+                              Name 30_2  "structType"
+                              MemberName 30_2(structType) 0  "y"
+                              Name 30_3  "t2"
+                              MemberName 30_3(t2) 0  "f"
+                              Name 59_2  "t"
+                              Name 30_4  "taskBlock"
+                              MemberName 30_4(taskBlock) 0  "atom1"
+                              Name 59_3  "mytask"
+                              Decorate 30_1(Buffer) Block
+                              MemberDecorate 30_1(Buffer) 0 Coherent
+                              MemberDecorate 30_1(Buffer) 0 Offset 0
+                              Decorate 59_1 Binding 1
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 28_1 ArrayStride 4
+                              MemberDecorate 30_2(structType) 0 Offset 0
+                              Decorate 30_3(t2) Block
+                              MemberDecorate 30_3(t2) 0 Offset 0
+                              Decorate 59_2(t) Binding 0
+                              Decorate 59_2(t) DescriptorSet 0
+                              Decorate 44_1 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+    30_1(Buffer):             TypeStruct 21_1(int)
+            32_1:             TypePointer StorageBuffer 30_1(Buffer)
+            59_1:   32_1(ptr) Variable StorageBuffer
+            43_1:   21_1(int) Constant 0
+            32_2:             TypePointer StorageBuffer 21_1(int)
+            43_2:   21_1(int) Constant 1
+            21_2:             TypeInt 32 0
+         uint(1):   21_2(int) Constant 1
+         uint(0):   21_2(int) Constant 0
+         uint(3):   21_2(int) Constant 3
+            28_1:             TypeArray 21_1(int) uint(3)
+30_2(structType):             TypeStruct 28_1
+        30_3(t2):             TypeStruct 30_2(structType)
+            32_3:             TypePointer StorageBuffer 30_3(t2)
+         59_2(t):   32_3(ptr) Variable StorageBuffer
+ 30_4(taskBlock):             TypeStruct 21_1(int)
+            32_4:             TypePointer TaskPayloadWorkgroupEXT 30_4(taskBlock)
+    59_3(mytask):   32_4(ptr) Variable TaskPayloadWorkgroupEXT
+            32_5:             TypePointer TaskPayloadWorkgroupEXT 21_1(int)
+            23_1:             TypeVector 21_2(int) 3
+            44_1: 23_1(ivec3) ConstantComposite uint(1) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1 43_1
+           234_1:   21_1(int) AtomicIAdd 65_1 uint(1) uint(0) 43_2
+            65_2:   32_2(ptr) AccessChain 59_2(t) 43_1 43_1 43_2
+           234_2:   21_1(int) AtomicIAdd 65_2 uint(1) uint(0) 43_2
+            65_3:   32_5(ptr) AccessChain 59_3(mytask) 43_1
+           234_3:   21_1(int) AtomicIAdd 65_3 uint(1) uint(0) 43_2
                               Return
                               FunctionEnd

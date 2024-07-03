@@ -4,255 +4,255 @@ spv.loopsArtificial.frag
 // Id's are bound by 158
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 11 17 27 80 140 142 143 144 145 146 147 148 149 150 151 152 153 154 157
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8 59_9 59_10 59_11 59_12 59_13 59_14 59_15 59_16 59_17 59_18 59_19
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 9  "color"
-                              Name 11  "BaseColor"
-                              Name 17  "bigColor4"
-                              Name 27  "d4"
-                              Name 80  "d13"
-                              Name 140  "gl_FragColor"
-                              Name 142  "bigColor"
-                              Name 143  "bigColor1_1"
-                              Name 144  "bigColor1_2"
-                              Name 145  "bigColor1_3"
-                              Name 146  "bigColor2"
-                              Name 147  "bigColor3"
-                              Name 148  "bigColor5"
-                              Name 149  "bigColor6"
-                              Name 150  "bigColor7"
-                              Name 151  "bigColor8"
-                              Name 152  "d"
-                              Name 153  "d2"
-                              Name 154  "d3"
-                              Name 157  "Count"
-                              Decorate 11(BaseColor) Location 11
-                              Decorate 17(bigColor4) Location 6
-                              Decorate 27(d4) Location 15
-                              Decorate 80(d13) Location 16
-                              Decorate 140(gl_FragColor) Location 0
-                              Decorate 142(bigColor) Location 0
-                              Decorate 143(bigColor1_1) Location 1
-                              Decorate 144(bigColor1_2) Location 2
-                              Decorate 145(bigColor1_3) Location 3
-                              Decorate 146(bigColor2) Location 4
-                              Decorate 147(bigColor3) Location 5
-                              Decorate 148(bigColor5) Location 7
-                              Decorate 149(bigColor6) Location 8
-                              Decorate 150(bigColor7) Location 9
-                              Decorate 151(bigColor8) Location 10
-                              Decorate 152(d) Location 12
-                              Decorate 153(d2) Location 13
-                              Decorate 154(d3) Location 14
-                              Decorate 157(Count) Flat
-                              Decorate 157(Count) Location 17
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-              10:             TypePointer Input 7(fvec4)
-   11(BaseColor):     10(ptr) Variable Input
-   17(bigColor4):     10(ptr) Variable Input
-              21:             TypeInt 32 0
-              22:     21(int) Constant 0
-              23:             TypePointer Function 6(float)
-              26:             TypePointer Input 6(float)
-          27(d4):     26(ptr) Variable Input
-              29:             TypeBool
-              33:    6(float) Constant 1073741824
-              34:     21(int) Constant 2
-              47:    6(float) Constant 1065353216
-              50:     21(int) Constant 1
-              77:     21(int) Constant 3
-         80(d13):     26(ptr) Variable Input
-             139:             TypePointer Output 7(fvec4)
-140(gl_FragColor):    139(ptr) Variable Output
-   142(bigColor):     10(ptr) Variable Input
-143(bigColor1_1):     10(ptr) Variable Input
-144(bigColor1_2):     10(ptr) Variable Input
-145(bigColor1_3):     10(ptr) Variable Input
-  146(bigColor2):     10(ptr) Variable Input
-  147(bigColor3):     10(ptr) Variable Input
-  148(bigColor5):     10(ptr) Variable Input
-  149(bigColor6):     10(ptr) Variable Input
-  150(bigColor7):     10(ptr) Variable Input
-  151(bigColor8):     10(ptr) Variable Input
-          152(d):     26(ptr) Variable Input
-         153(d2):     26(ptr) Variable Input
-         154(d3):     26(ptr) Variable Input
-             155:             TypeInt 32 1
-             156:             TypePointer Input 155(int)
-      157(Count):    156(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-        9(color):      8(ptr) Variable Function
-              12:    7(fvec4) Load 11(BaseColor)
-                              Store 9(color) 12
-                              Branch 13
-              13:             Label
-                              LoopMerge 15 16 None
-                              Branch 14
-              14:             Label
-              18:    7(fvec4) Load 17(bigColor4)
-              19:    7(fvec4) Load 9(color)
-              20:    7(fvec4) FAdd 19 18
-                              Store 9(color) 20
-              24:     23(ptr) AccessChain 9(color) 22
-              25:    6(float) Load 24
-              28:    6(float) Load 27(d4)
-              30:    29(bool) FOrdLessThan 25 28
-                              SelectionMerge 32 None
-                              BranchConditional 30 31 32
-              31:               Label
-              35:     23(ptr)   AccessChain 9(color) 34
-              36:    6(float)   Load 35
-              37:    6(float)   FAdd 36 33
-              38:     23(ptr)   AccessChain 9(color) 34
-                                Store 38 37
-              39:     23(ptr)   AccessChain 9(color) 34
-              40:    6(float)   Load 39
-              41:    6(float)   Load 27(d4)
-              42:    29(bool)   FOrdLessThan 40 41
-                                SelectionMerge 44 None
-                                BranchConditional 42 43 44
-              43:                 Label
-              45:     23(ptr)     AccessChain 9(color) 22
-              46:    6(float)     Load 45
-              48:    6(float)     FAdd 46 47
-                                  Store 45 48
-                                  Branch 16
-              44:               Label
-                                Branch 32
-              32:             Label
-              51:     23(ptr) AccessChain 9(color) 50
-              52:    6(float) Load 51
-              53:    6(float) Load 27(d4)
-              54:    29(bool) FOrdLessThan 52 53
-                              SelectionMerge 56 None
-                              BranchConditional 54 55 62
-              55:               Label
-              57:    6(float)   Load 27(d4)
-              58:     23(ptr)   AccessChain 9(color) 50
-              59:    6(float)   Load 58
-              60:    6(float)   FAdd 59 57
-              61:     23(ptr)   AccessChain 9(color) 50
-                                Store 61 60
-                                Branch 56
-              62:               Label
-              63:    6(float)   Load 27(d4)
-              64:     23(ptr)   AccessChain 9(color) 22
-              65:    6(float)   Load 64
-              66:    6(float)   FAdd 65 63
-              67:     23(ptr)   AccessChain 9(color) 22
-                                Store 67 66
-                                Branch 56
-              56:             Label
-                              Branch 16
-              16:             Label
-              68:     23(ptr) AccessChain 9(color) 34
-              69:    6(float) Load 68
-              70:    6(float) Load 27(d4)
-              71:    29(bool) FOrdLessThan 69 70
-                              BranchConditional 71 13 15
-              15:             Label
-                              Branch 72
-              72:             Label
-                              LoopMerge 74 75 None
-                              Branch 76
-              76:             Label
-              78:     23(ptr) AccessChain 9(color) 77
-              79:    6(float) Load 78
-              81:    6(float) Load 80(d13)
-              82:    29(bool) FOrdLessThan 79 81
-                              BranchConditional 82 73 74
-              73:               Label
-              83:     23(ptr)   AccessChain 9(color) 34
-              84:    6(float)   Load 83
-              85:    6(float)   Load 80(d13)
-              86:    29(bool)   FOrdLessThan 84 85
-                                SelectionMerge 88 None
-                                BranchConditional 86 87 92
-              87:                 Label
-              89:    7(fvec4)     Load 9(color)
-              90:    7(fvec4)     CompositeConstruct 47 47 47 47
-              91:    7(fvec4)     FAdd 89 90
-                                  Store 9(color) 91
-                                  Branch 88
-              92:                 Label
-              93:    7(fvec4)     Load 9(color)
-              94:    7(fvec4)     CompositeConstruct 47 47 47 47
-              95:    7(fvec4)     FSub 93 94
-                                  Store 9(color) 95
-                                  Branch 88
-              88:               Label
-              96:    7(fvec4)   Load 17(bigColor4)
-              97:    7(fvec4)   Load 9(color)
-              98:    7(fvec4)   FAdd 97 96
-                                Store 9(color) 98
-              99:     23(ptr)   AccessChain 9(color) 22
-             100:    6(float)   Load 99
-             101:    6(float)   Load 27(d4)
-             102:    29(bool)   FOrdLessThan 100 101
-                                SelectionMerge 104 None
-                                BranchConditional 102 103 104
-             103:                 Label
-             105:     23(ptr)     AccessChain 9(color) 34
-             106:    6(float)     Load 105
-             107:    6(float)     FAdd 106 33
-             108:     23(ptr)     AccessChain 9(color) 34
-                                  Store 108 107
-             109:     23(ptr)     AccessChain 9(color) 34
-             110:    6(float)     Load 109
-             111:    6(float)     Load 27(d4)
-             112:    29(bool)     FOrdLessThan 110 111
-                                  SelectionMerge 114 None
-                                  BranchConditional 112 113 114
-             113:                   Label
-             115:     23(ptr)       AccessChain 9(color) 22
-             116:    6(float)       Load 115
-             117:    6(float)       FAdd 116 47
-                                    Store 115 117
-                                    Branch 75
-             114:                 Label
-                                  Branch 104
-             104:               Label
-             119:     23(ptr)   AccessChain 9(color) 50
-             120:    6(float)   Load 119
-             121:    6(float)   Load 27(d4)
-             122:    29(bool)   FOrdLessThan 120 121
-                                SelectionMerge 124 None
-                                BranchConditional 122 123 130
-             123:                 Label
-             125:    6(float)     Load 27(d4)
-             126:     23(ptr)     AccessChain 9(color) 50
-             127:    6(float)     Load 126
-             128:    6(float)     FAdd 127 125
-             129:     23(ptr)     AccessChain 9(color) 50
-                                  Store 129 128
-                                  Branch 124
-             130:                 Label
-             131:    6(float)     Load 27(d4)
-             132:     23(ptr)     AccessChain 9(color) 22
-             133:    6(float)     Load 132
-             134:    6(float)     FAdd 133 131
-             135:     23(ptr)     AccessChain 9(color) 22
-                                  Store 135 134
-                                  Branch 124
-             124:               Label
-                                Branch 75
-              75:               Label
-                                Branch 72
-              74:             Label
-             136:    7(fvec4) Load 9(color)
-             137:    7(fvec4) CompositeConstruct 47 47 47 47
-             138:    7(fvec4) FAdd 136 137
-                              Store 9(color) 138
-             141:    7(fvec4) Load 9(color)
-                              Store 140(gl_FragColor) 141
+                              Name 54_1  "main"
+                              Name 59_20  "color"
+                              Name 59_1  "BaseColor"
+                              Name 59_2  "bigColor4"
+                              Name 59_3  "d4"
+                              Name 59_4  "d13"
+                              Name 59_5  "gl_FragColor"
+                              Name 59_6  "bigColor"
+                              Name 59_7  "bigColor1_1"
+                              Name 59_8  "bigColor1_2"
+                              Name 59_9  "bigColor1_3"
+                              Name 59_10  "bigColor2"
+                              Name 59_11  "bigColor3"
+                              Name 59_12  "bigColor5"
+                              Name 59_13  "bigColor6"
+                              Name 59_14  "bigColor7"
+                              Name 59_15  "bigColor8"
+                              Name 59_16  "d"
+                              Name 59_17  "d2"
+                              Name 59_18  "d3"
+                              Name 59_19  "Count"
+                              Decorate 59_1(BaseColor) Location 11
+                              Decorate 59_2(bigColor4) Location 6
+                              Decorate 59_3(d4) Location 15
+                              Decorate 59_4(d13) Location 16
+                              Decorate 59_5(gl_FragColor) Location 0
+                              Decorate 59_6(bigColor) Location 0
+                              Decorate 59_7(bigColor1_1) Location 1
+                              Decorate 59_8(bigColor1_2) Location 2
+                              Decorate 59_9(bigColor1_3) Location 3
+                              Decorate 59_10(bigColor2) Location 4
+                              Decorate 59_11(bigColor3) Location 5
+                              Decorate 59_12(bigColor5) Location 7
+                              Decorate 59_13(bigColor6) Location 8
+                              Decorate 59_14(bigColor7) Location 9
+                              Decorate 59_15(bigColor8) Location 10
+                              Decorate 59_16(d) Location 12
+                              Decorate 59_17(d2) Location 13
+                              Decorate 59_18(d3) Location 14
+                              Decorate 59_19(Count) Flat
+                              Decorate 59_19(Count) Location 17
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            32_2:             TypePointer Input 23_1(fvec4)
+ 59_1(BaseColor):   32_2(ptr) Variable Input
+ 59_2(bigColor4):   32_2(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Function 22_1(float)
+            32_4:             TypePointer Input 22_1(float)
+        59_3(d4):   32_4(ptr) Variable Input
+            20_1:             TypeBool
+            43_1: 22_1(float) Constant 1073741824
+         uint(2):   21_1(int) Constant 2
+            43_2: 22_1(float) Constant 1065353216
+         uint(1):   21_1(int) Constant 1
+         uint(3):   21_1(int) Constant 3
+       59_4(d13):   32_4(ptr) Variable Input
+            32_5:             TypePointer Output 23_1(fvec4)
+59_5(gl_FragColor):   32_5(ptr) Variable Output
+  59_6(bigColor):   32_2(ptr) Variable Input
+59_7(bigColor1_1):   32_2(ptr) Variable Input
+59_8(bigColor1_2):   32_2(ptr) Variable Input
+59_9(bigColor1_3):   32_2(ptr) Variable Input
+59_10(bigColor2):   32_2(ptr) Variable Input
+59_11(bigColor3):   32_2(ptr) Variable Input
+59_12(bigColor5):   32_2(ptr) Variable Input
+59_13(bigColor6):   32_2(ptr) Variable Input
+59_14(bigColor7):   32_2(ptr) Variable Input
+59_15(bigColor8):   32_2(ptr) Variable Input
+        59_16(d):   32_4(ptr) Variable Input
+       59_17(d2):   32_4(ptr) Variable Input
+       59_18(d3):   32_4(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            32_6:             TypePointer Input 21_2(int)
+    59_19(Count):   32_6(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+    59_20(color):   32_1(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(BaseColor)
+                              Store 59_20(color) 61_1
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_12 248_11 None
+                              Branch 248_3
+           248_3:             Label
+            61_2: 23_1(fvec4) Load 59_2(bigColor4)
+            61_3: 23_1(fvec4) Load 59_20(color)
+           129_1: 23_1(fvec4) FAdd 61_3 61_2
+                              Store 59_20(color) 129_1
+            65_1:   32_3(ptr) AccessChain 59_20(color) uint(0)
+            61_4: 22_1(float) Load 65_1
+            61_5: 22_1(float) Load 59_3(d4)
+           184_1:  20_1(bool) FOrdLessThan 61_4 61_5
+                              SelectionMerge 248_7 None
+                              BranchConditional 184_1 248_4 248_7
+           248_4:               Label
+            65_2:   32_3(ptr)   AccessChain 59_20(color) uint(2)
+            61_6: 22_1(float)   Load 65_2
+           129_2: 22_1(float)   FAdd 61_6 43_1
+            65_3:   32_3(ptr)   AccessChain 59_20(color) uint(2)
+                                Store 65_3 129_2
+            65_4:   32_3(ptr)   AccessChain 59_20(color) uint(2)
+            61_7: 22_1(float)   Load 65_4
+            61_8: 22_1(float)   Load 59_3(d4)
+           184_2:  20_1(bool)   FOrdLessThan 61_7 61_8
+                                SelectionMerge 248_6 None
+                                BranchConditional 184_2 248_5 248_6
+           248_5:                 Label
+            65_5:   32_3(ptr)     AccessChain 59_20(color) uint(0)
+            61_9: 22_1(float)     Load 65_5
+           129_3: 22_1(float)     FAdd 61_9 43_2
+                                  Store 65_5 129_3
+                                  Branch 248_11
+           248_6:               Label
+                                Branch 248_7
+           248_7:             Label
+            65_6:   32_3(ptr) AccessChain 59_20(color) uint(1)
+           61_10: 22_1(float) Load 65_6
+           61_11: 22_1(float) Load 59_3(d4)
+           184_3:  20_1(bool) FOrdLessThan 61_10 61_11
+                              SelectionMerge 248_10 None
+                              BranchConditional 184_3 248_8 248_9
+           248_8:               Label
+           61_12: 22_1(float)   Load 59_3(d4)
+            65_7:   32_3(ptr)   AccessChain 59_20(color) uint(1)
+           61_13: 22_1(float)   Load 65_7
+           129_4: 22_1(float)   FAdd 61_13 61_12
+            65_8:   32_3(ptr)   AccessChain 59_20(color) uint(1)
+                                Store 65_8 129_4
+                                Branch 248_10
+           248_9:               Label
+           61_14: 22_1(float)   Load 59_3(d4)
+            65_9:   32_3(ptr)   AccessChain 59_20(color) uint(0)
+           61_15: 22_1(float)   Load 65_9
+           129_5: 22_1(float)   FAdd 61_15 61_14
+           65_10:   32_3(ptr)   AccessChain 59_20(color) uint(0)
+                                Store 65_10 129_5
+                                Branch 248_10
+          248_10:             Label
+                              Branch 248_11
+          248_11:             Label
+           65_11:   32_3(ptr) AccessChain 59_20(color) uint(2)
+           61_16: 22_1(float) Load 65_11
+           61_17: 22_1(float) Load 59_3(d4)
+           184_4:  20_1(bool) FOrdLessThan 61_16 61_17
+                              BranchConditional 184_4 248_2 248_12
+          248_12:             Label
+                              Branch 248_13
+          248_13:             Label
+                              LoopMerge 248_27 248_26 None
+                              Branch 248_14
+          248_14:             Label
+           65_12:   32_3(ptr) AccessChain 59_20(color) uint(3)
+           61_18: 22_1(float) Load 65_12
+           61_19: 22_1(float) Load 59_4(d13)
+           184_5:  20_1(bool) FOrdLessThan 61_18 61_19
+                              BranchConditional 184_5 248_15 248_27
+          248_15:               Label
+           65_13:   32_3(ptr)   AccessChain 59_20(color) uint(2)
+           61_20: 22_1(float)   Load 65_13
+           61_21: 22_1(float)   Load 59_4(d13)
+           184_6:  20_1(bool)   FOrdLessThan 61_20 61_21
+                                SelectionMerge 248_18 None
+                                BranchConditional 184_6 248_16 248_17
+          248_16:                 Label
+           61_22: 23_1(fvec4)     Load 59_20(color)
+            80_1: 23_1(fvec4)     CompositeConstruct 43_2 43_2 43_2 43_2
+           129_6: 23_1(fvec4)     FAdd 61_22 80_1
+                                  Store 59_20(color) 129_6
+                                  Branch 248_18
+          248_17:                 Label
+           61_23: 23_1(fvec4)     Load 59_20(color)
+            80_2: 23_1(fvec4)     CompositeConstruct 43_2 43_2 43_2 43_2
+           131_1: 23_1(fvec4)     FSub 61_23 80_2
+                                  Store 59_20(color) 131_1
+                                  Branch 248_18
+          248_18:               Label
+           61_24: 23_1(fvec4)   Load 59_2(bigColor4)
+           61_25: 23_1(fvec4)   Load 59_20(color)
+           129_7: 23_1(fvec4)   FAdd 61_25 61_24
+                                Store 59_20(color) 129_7
+           65_14:   32_3(ptr)   AccessChain 59_20(color) uint(0)
+           61_26: 22_1(float)   Load 65_14
+           61_27: 22_1(float)   Load 59_3(d4)
+           184_7:  20_1(bool)   FOrdLessThan 61_26 61_27
+                                SelectionMerge 248_22 None
+                                BranchConditional 184_7 248_19 248_22
+          248_19:                 Label
+           65_15:   32_3(ptr)     AccessChain 59_20(color) uint(2)
+           61_28: 22_1(float)     Load 65_15
+           129_8: 22_1(float)     FAdd 61_28 43_1
+           65_16:   32_3(ptr)     AccessChain 59_20(color) uint(2)
+                                  Store 65_16 129_8
+           65_17:   32_3(ptr)     AccessChain 59_20(color) uint(2)
+           61_29: 22_1(float)     Load 65_17
+           61_30: 22_1(float)     Load 59_3(d4)
+           184_8:  20_1(bool)     FOrdLessThan 61_29 61_30
+                                  SelectionMerge 248_21 None
+                                  BranchConditional 184_8 248_20 248_21
+          248_20:                   Label
+           65_18:   32_3(ptr)       AccessChain 59_20(color) uint(0)
+           61_31: 22_1(float)       Load 65_18
+           129_9: 22_1(float)       FAdd 61_31 43_2
+                                    Store 65_18 129_9
+                                    Branch 248_26
+          248_21:                 Label
+                                  Branch 248_22
+          248_22:               Label
+           65_19:   32_3(ptr)   AccessChain 59_20(color) uint(1)
+           61_32: 22_1(float)   Load 65_19
+           61_33: 22_1(float)   Load 59_3(d4)
+           184_9:  20_1(bool)   FOrdLessThan 61_32 61_33
+                                SelectionMerge 248_25 None
+                                BranchConditional 184_9 248_23 248_24
+          248_23:                 Label
+           61_34: 22_1(float)     Load 59_3(d4)
+           65_20:   32_3(ptr)     AccessChain 59_20(color) uint(1)
+           61_35: 22_1(float)     Load 65_20
+          129_10: 22_1(float)     FAdd 61_35 61_34
+           65_21:   32_3(ptr)     AccessChain 59_20(color) uint(1)
+                                  Store 65_21 129_10
+                                  Branch 248_25
+          248_24:                 Label
+           61_36: 22_1(float)     Load 59_3(d4)
+           65_22:   32_3(ptr)     AccessChain 59_20(color) uint(0)
+           61_37: 22_1(float)     Load 65_22
+          129_11: 22_1(float)     FAdd 61_37 61_36
+           65_23:   32_3(ptr)     AccessChain 59_20(color) uint(0)
+                                  Store 65_23 129_11
+                                  Branch 248_25
+          248_25:               Label
+                                Branch 248_26
+          248_26:               Label
+                                Branch 248_13
+          248_27:             Label
+           61_38: 23_1(fvec4) Load 59_20(color)
+            80_3: 23_1(fvec4) CompositeConstruct 43_2 43_2 43_2 43_2
+          129_12: 23_1(fvec4) FAdd 61_38 80_3
+                              Store 59_20(color) 129_12
+           61_39: 23_1(fvec4) Load 59_20(color)
+                              Store 59_5(gl_FragColor) 61_39
                               Return
                               FunctionEnd

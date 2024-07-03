@@ -200,122 +200,122 @@ Shader version: 500
 // Id's are bound by 70
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 40 44 47 51 60 64 67
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "VS_INPUT"
-                              MemberName 9(VS_INPUT) 0  "x0_in"
-                              MemberName 9(VS_INPUT) 1  "Pos_in"
-                              MemberName 9(VS_INPUT) 2  "x1_in"
-                              Name 12  "VS_OUTPUT"
-                              MemberName 12(VS_OUTPUT) 0  "x0_out"
-                              MemberName 12(VS_OUTPUT) 1  "Pos_out"
-                              MemberName 12(VS_OUTPUT) 2  "x1_out"
-                              Name 16  "@main(struct-VS_INPUT-i1-vf4-i11;vf4;"
-                              Name 14  "vsin"
-                              Name 15  "Pos_loose"
-                              Name 19  "vsout"
-                              Name 38  "vsin"
-                              Name 40  "vsin.x0_in"
-                              Name 44  "vsin.Pos_in"
-                              Name 47  "vsin.x1_in"
-                              Name 50  "Pos_loose"
-                              Name 51  "Pos_loose"
-                              Name 53  "flattenTemp"
-                              Name 54  "param"
-                              Name 56  "param"
-                              Name 60  "@entryPointOutput.x0_out"
-                              Name 64  "@entryPointOutput.Pos_out"
-                              Name 67  "@entryPointOutput.x1_out"
-                              Decorate 40(vsin.x0_in) Location 0
-                              Decorate 44(vsin.Pos_in) Location 1
-                              Decorate 47(vsin.x1_in) Location 2
-                              Decorate 51(Pos_loose) Location 3
-                              Decorate 60(@entryPointOutput.x0_out) Location 0
-                              Decorate 64(@entryPointOutput.Pos_out) BuiltIn Position
-                              Decorate 67(@entryPointOutput.x1_out) Location 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeFloat 32
-               8:             TypeVector 7(float) 4
-     9(VS_INPUT):             TypeStruct 6(int) 8(fvec4) 6(int)
-              10:             TypePointer Function 9(VS_INPUT)
-              11:             TypePointer Function 8(fvec4)
-   12(VS_OUTPUT):             TypeStruct 6(int) 8(fvec4) 6(int)
-              13:             TypeFunction 12(VS_OUTPUT) 10(ptr) 11(ptr)
-              18:             TypePointer Function 12(VS_OUTPUT)
-              20:      6(int) Constant 0
-              21:             TypePointer Function 6(int)
-              25:      6(int) Constant 1
-              31:      6(int) Constant 2
-              39:             TypePointer Input 6(int)
-  40(vsin.x0_in):     39(ptr) Variable Input
-              43:             TypePointer Input 8(fvec4)
- 44(vsin.Pos_in):     43(ptr) Variable Input
-  47(vsin.x1_in):     39(ptr) Variable Input
-   51(Pos_loose):     43(ptr) Variable Input
-              59:             TypePointer Output 6(int)
-60(@entryPointOutput.x0_out):     59(ptr) Variable Output
-              63:             TypePointer Output 8(fvec4)
-64(@entryPointOutput.Pos_out):     63(ptr) Variable Output
-67(@entryPointOutput.x1_out):     59(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-        38(vsin):     10(ptr) Variable Function
-   50(Pos_loose):     11(ptr) Variable Function
- 53(flattenTemp):     18(ptr) Variable Function
-       54(param):     10(ptr) Variable Function
-       56(param):     11(ptr) Variable Function
-              41:      6(int) Load 40(vsin.x0_in)
-              42:     21(ptr) AccessChain 38(vsin) 20
-                              Store 42 41
-              45:    8(fvec4) Load 44(vsin.Pos_in)
-              46:     11(ptr) AccessChain 38(vsin) 25
-                              Store 46 45
-              48:      6(int) Load 47(vsin.x1_in)
-              49:     21(ptr) AccessChain 38(vsin) 31
-                              Store 49 48
-              52:    8(fvec4) Load 51(Pos_loose)
-                              Store 50(Pos_loose) 52
-              55: 9(VS_INPUT) Load 38(vsin)
-                              Store 54(param) 55
-              57:    8(fvec4) Load 50(Pos_loose)
-                              Store 56(param) 57
-              58:12(VS_OUTPUT) FunctionCall 16(@main(struct-VS_INPUT-i1-vf4-i11;vf4;) 54(param) 56(param)
-                              Store 53(flattenTemp) 58
-              61:     21(ptr) AccessChain 53(flattenTemp) 20
-              62:      6(int) Load 61
-                              Store 60(@entryPointOutput.x0_out) 62
-              65:     11(ptr) AccessChain 53(flattenTemp) 25
-              66:    8(fvec4) Load 65
-                              Store 64(@entryPointOutput.Pos_out) 66
-              68:     21(ptr) AccessChain 53(flattenTemp) 31
-              69:      6(int) Load 68
-                              Store 67(@entryPointOutput.x1_out) 69
+                              Name 54_1  "main"
+                              Name 30_1  "VS_INPUT"
+                              MemberName 30_1(VS_INPUT) 0  "x0_in"
+                              MemberName 30_1(VS_INPUT) 1  "Pos_in"
+                              MemberName 30_1(VS_INPUT) 2  "x1_in"
+                              Name 30_2  "VS_OUTPUT"
+                              MemberName 30_2(VS_OUTPUT) 0  "x0_out"
+                              MemberName 30_2(VS_OUTPUT) 1  "Pos_out"
+                              MemberName 30_2(VS_OUTPUT) 2  "x1_out"
+                              Name 54_2  "@main(struct-VS_INPUT-i1-vf4-i11;vf4;"
+                              Name 55_1  "vsin"
+                              Name 55_2  "Pos_loose"
+                              Name 59_13  "vsout"
+                              Name 59_8  "vsin"
+                              Name 59_1  "vsin.x0_in"
+                              Name 59_2  "vsin.Pos_in"
+                              Name 59_3  "vsin.x1_in"
+                              Name 59_9  "Pos_loose"
+                              Name 59_4  "Pos_loose"
+                              Name 59_10  "flattenTemp"
+                              Name 59_11  "param"
+                              Name 59_12  "param"
+                              Name 59_5  "@entryPointOutput.x0_out"
+                              Name 59_6  "@entryPointOutput.Pos_out"
+                              Name 59_7  "@entryPointOutput.x1_out"
+                              Decorate 59_1(vsin.x0_in) Location 0
+                              Decorate 59_2(vsin.Pos_in) Location 1
+                              Decorate 59_3(vsin.x1_in) Location 2
+                              Decorate 59_4(Pos_loose) Location 3
+                              Decorate 59_5(@entryPointOutput.x0_out) Location 0
+                              Decorate 59_6(@entryPointOutput.Pos_out) BuiltIn Position
+                              Decorate 59_7(@entryPointOutput.x1_out) Location 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+  30_1(VS_INPUT):             TypeStruct 21_1(int) 23_1(fvec4) 21_1(int)
+            32_1:             TypePointer Function 30_1(VS_INPUT)
+            32_2:             TypePointer Function 23_1(fvec4)
+ 30_2(VS_OUTPUT):             TypeStruct 21_1(int) 23_1(fvec4) 21_1(int)
+            33_2:             TypeFunction 30_2(VS_OUTPUT) 32_1(ptr) 32_2(ptr)
+            32_3:             TypePointer Function 30_2(VS_OUTPUT)
+            43_1:   21_1(int) Constant 0
+            32_4:             TypePointer Function 21_1(int)
+            43_2:   21_1(int) Constant 1
+            43_3:   21_1(int) Constant 2
+            32_5:             TypePointer Input 21_1(int)
+59_1(vsin.x0_in):   32_5(ptr) Variable Input
+            32_6:             TypePointer Input 23_1(fvec4)
+59_2(vsin.Pos_in):   32_6(ptr) Variable Input
+59_3(vsin.x1_in):   32_5(ptr) Variable Input
+ 59_4(Pos_loose):   32_6(ptr) Variable Input
+            32_7:             TypePointer Output 21_1(int)
+59_5(@entryPointOutput.x0_out):   32_7(ptr) Variable Output
+            32_8:             TypePointer Output 23_1(fvec4)
+59_6(@entryPointOutput.Pos_out):   32_8(ptr) Variable Output
+59_7(@entryPointOutput.x1_out):   32_7(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+      59_8(vsin):   32_1(ptr) Variable Function
+ 59_9(Pos_loose):   32_2(ptr) Variable Function
+59_10(flattenTemp):   32_3(ptr) Variable Function
+    59_11(param):   32_1(ptr) Variable Function
+    59_12(param):   32_2(ptr) Variable Function
+            61_1:   21_1(int) Load 59_1(vsin.x0_in)
+            65_1:   32_4(ptr) AccessChain 59_8(vsin) 43_1
+                              Store 65_1 61_1
+            61_2: 23_1(fvec4) Load 59_2(vsin.Pos_in)
+            65_2:   32_2(ptr) AccessChain 59_8(vsin) 43_2
+                              Store 65_2 61_2
+            61_3:   21_1(int) Load 59_3(vsin.x1_in)
+            65_3:   32_4(ptr) AccessChain 59_8(vsin) 43_3
+                              Store 65_3 61_3
+            61_4: 23_1(fvec4) Load 59_4(Pos_loose)
+                              Store 59_9(Pos_loose) 61_4
+            61_5:30_1(VS_INPUT) Load 59_8(vsin)
+                              Store 59_11(param) 61_5
+            61_6: 23_1(fvec4) Load 59_9(Pos_loose)
+                              Store 59_12(param) 61_6
+            57_1:30_2(VS_OUTPUT) FunctionCall 54_2(@main(struct-VS_INPUT-i1-vf4-i11;vf4;) 59_11(param) 59_12(param)
+                              Store 59_10(flattenTemp) 57_1
+            65_4:   32_4(ptr) AccessChain 59_10(flattenTemp) 43_1
+            61_7:   21_1(int) Load 65_4
+                              Store 59_5(@entryPointOutput.x0_out) 61_7
+            65_5:   32_2(ptr) AccessChain 59_10(flattenTemp) 43_2
+            61_8: 23_1(fvec4) Load 65_5
+                              Store 59_6(@entryPointOutput.Pos_out) 61_8
+            65_6:   32_4(ptr) AccessChain 59_10(flattenTemp) 43_3
+            61_9:   21_1(int) Load 65_6
+                              Store 59_7(@entryPointOutput.x1_out) 61_9
                               Return
                               FunctionEnd
-16(@main(struct-VS_INPUT-i1-vf4-i11;vf4;):12(VS_OUTPUT) Function None 13
-        14(vsin):     10(ptr) FunctionParameter
-   15(Pos_loose):     11(ptr) FunctionParameter
-              17:             Label
-       19(vsout):     18(ptr) Variable Function
-              22:     21(ptr) AccessChain 14(vsin) 20
-              23:      6(int) Load 22
-              24:     21(ptr) AccessChain 19(vsout) 20
-                              Store 24 23
-              26:     11(ptr) AccessChain 14(vsin) 25
-              27:    8(fvec4) Load 26
-              28:    8(fvec4) Load 15(Pos_loose)
-              29:    8(fvec4) FAdd 27 28
-              30:     11(ptr) AccessChain 19(vsout) 25
-                              Store 30 29
-              32:     21(ptr) AccessChain 14(vsin) 31
-              33:      6(int) Load 32
-              34:     21(ptr) AccessChain 19(vsout) 31
-                              Store 34 33
-              35:12(VS_OUTPUT) Load 19(vsout)
-                              ReturnValue 35
+54_2(@main(struct-VS_INPUT-i1-vf4-i11;vf4;):30_2(VS_OUTPUT) Function None 33_2
+      55_1(vsin):   32_1(ptr) FunctionParameter
+ 55_2(Pos_loose):   32_2(ptr) FunctionParameter
+           248_2:             Label
+    59_13(vsout):   32_3(ptr) Variable Function
+            65_7:   32_4(ptr) AccessChain 55_1(vsin) 43_1
+           61_10:   21_1(int) Load 65_7
+            65_8:   32_4(ptr) AccessChain 59_13(vsout) 43_1
+                              Store 65_8 61_10
+            65_9:   32_2(ptr) AccessChain 55_1(vsin) 43_2
+           61_11: 23_1(fvec4) Load 65_9
+           61_12: 23_1(fvec4) Load 55_2(Pos_loose)
+           129_1: 23_1(fvec4) FAdd 61_11 61_12
+           65_10:   32_2(ptr) AccessChain 59_13(vsout) 43_2
+                              Store 65_10 129_1
+           65_11:   32_4(ptr) AccessChain 55_1(vsin) 43_3
+           61_13:   21_1(int) Load 65_11
+           65_12:   32_4(ptr) AccessChain 59_13(vsout) 43_3
+                              Store 65_12 61_13
+           61_14:30_2(VS_OUTPUT) Load 59_13(vsout)
+                              ReturnValue 61_14
                               FunctionEnd

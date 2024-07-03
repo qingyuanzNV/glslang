@@ -202,173 +202,173 @@ gl_FragCoord origin is upper left
 // Id's are bound by 99
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "PixelShaderFunction" 92 95
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "PixelShaderFunction" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "PixelShaderFunction"
-                              Name 6  "f0("
-                              Name 8  "f1("
-                              Name 14  "f2(f1;"
-                              Name 13  "input"
-                              Name 18  "f3(f1;"
-                              Name 17  "input"
-                              Name 21  "f4(f1;"
-                              Name 20  "input"
-                              Name 26  "@PixelShaderFunction(f1;"
-                              Name 25  "input"
-                              Name 77  "param"
-                              Name 80  "param"
-                              Name 83  "param"
-                              Name 90  "input"
-                              Name 92  "input"
-                              Name 95  "@entryPointOutput"
-                              Name 96  "param"
-                              Decorate 92(input) Location 0
-                              Decorate 95(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-              10:             TypeFloat 32
-              11:             TypePointer Function 10(float)
-              12:             TypeFunction 10(float) 11(ptr)
-              16:             TypeFunction 2 11(ptr)
-              23:             TypeVector 10(float) 4
-              24:             TypeFunction 23(fvec4) 11(ptr)
-              32:             TypeBool
-              33:    32(bool) ConstantFalse
-              47:   10(float) Constant 1073741824
-              55:   10(float) Constant 1065353216
-              58:   10(float) Constant 1092616192
-              91:             TypePointer Input 10(float)
-       92(input):     91(ptr) Variable Input
-              94:             TypePointer Output 23(fvec4)
-95(@entryPointOutput):     94(ptr) Variable Output
-4(PixelShaderFunction):           2 Function None 3
-               5:             Label
-       90(input):     11(ptr) Variable Function
-       96(param):     11(ptr) Variable Function
-              93:   10(float) Load 92(input)
-                              Store 90(input) 93
-              97:   10(float) Load 90(input)
-                              Store 96(param) 97
-              98:   23(fvec4) FunctionCall 26(@PixelShaderFunction(f1;) 96(param)
-                              Store 95(@entryPointOutput) 98
+                              Name 54_1  "PixelShaderFunction"
+                              Name 54_2  "f0("
+                              Name 54_3  "f1("
+                              Name 54_4  "f2(f1;"
+                              Name 55_1  "input"
+                              Name 54_5  "f3(f1;"
+                              Name 55_2  "input"
+                              Name 54_6  "f4(f1;"
+                              Name 55_3  "input"
+                              Name 54_7  "@PixelShaderFunction(f1;"
+                              Name 55_4  "input"
+                              Name 59_5  "param"
+                              Name 59_6  "param"
+                              Name 59_7  "param"
+                              Name 59_3  "input"
+                              Name 59_1  "input"
+                              Name 59_2  "@entryPointOutput"
+                              Name 59_4  "param"
+                              Decorate 59_1(input) Location 0
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            32_1:             TypePointer Function 22_1(float)
+            33_2:             TypeFunction 22_1(float) 32_1(ptr)
+            33_3:             TypeFunction 19_1 32_1(ptr)
+            23_1:             TypeVector 22_1(float) 4
+            33_4:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            20_1:             TypeBool
+            42_1:  20_1(bool) ConstantFalse
+            43_1: 22_1(float) Constant 1073741824
+            43_2: 22_1(float) Constant 1065353216
+            43_3: 22_1(float) Constant 1092616192
+            32_2:             TypePointer Input 22_1(float)
+     59_1(input):   32_2(ptr) Variable Input
+            32_3:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput):   32_3(ptr) Variable Output
+54_1(PixelShaderFunction):        19_1 Function None 33_1
+           248_1:             Label
+     59_3(input):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1: 22_1(float) Load 59_1(input)
+                              Store 59_3(input) 61_1
+            61_2: 22_1(float) Load 59_3(input)
+                              Store 59_4(param) 61_2
+            57_1: 23_1(fvec4) FunctionCall 54_7(@PixelShaderFunction(f1;) 59_4(param)
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-          6(f0():           2 Function None 3
-               7:             Label
-                              Branch 28
-              28:             Label
-                              LoopMerge 30 31 Unroll 
-                              Branch 29
-              29:             Label
-                              Branch 31
-              31:             Label
-                              BranchConditional 33 28 30
-              30:             Label
+       54_2(f0():        19_1 Function None 33_1
+           248_2:             Label
+                              Branch 248_3
+           248_3:             Label
+                              LoopMerge 248_6 248_5 Unroll 
+                              Branch 248_4
+           248_4:             Label
+                              Branch 248_5
+           248_5:             Label
+                              BranchConditional 42_1 248_3 248_6
+           248_6:             Label
                               Return
                               FunctionEnd
-          8(f1():           2 Function None 3
-               9:             Label
-                              Branch 34
-              34:             Label
-                              LoopMerge 36 37 Unroll 
-                              Branch 35
-              35:             Label
-                              Branch 37
-              37:             Label
-                              BranchConditional 33 34 36
-              36:             Label
+       54_3(f1():        19_1 Function None 33_1
+           248_7:             Label
+                              Branch 248_8
+           248_8:             Label
+                              LoopMerge 248_11 248_10 Unroll 
+                              Branch 248_9
+           248_9:             Label
+                              Branch 248_10
+          248_10:             Label
+                              BranchConditional 42_1 248_8 248_11
+          248_11:             Label
                               Return
                               FunctionEnd
-      14(f2(f1;):   10(float) Function None 12
-       13(input):     11(ptr) FunctionParameter
-              15:             Label
-                              Branch 38
-              38:             Label
-                              LoopMerge 40 41 None
-                              Branch 39
-              39:             Label
-              42:   10(float) Load 13(input)
-              43:   23(fvec4) CompositeConstruct 42 42 42 42
-              44:   10(float) CompositeExtract 43 0
-                              ReturnValue 44
-              41:             Label
-                              Branch 38
-              40:             Label
+    54_4(f2(f1;): 22_1(float) Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+          248_12:             Label
+                              Branch 248_13
+          248_13:             Label
+                              LoopMerge 248_16 248_15 None
+                              Branch 248_14
+          248_14:             Label
+            61_3: 22_1(float) Load 55_1(input)
+            80_1: 23_1(fvec4) CompositeConstruct 61_3 61_3 61_3 61_3
+            81_1: 22_1(float) CompositeExtract 80_1 0
+                              ReturnValue 81_1
+          248_15:             Label
+                              Branch 248_13
+          248_16:             Label
                               Unreachable
                               FunctionEnd
-      18(f3(f1;):           2 Function None 16
-       17(input):     11(ptr) FunctionParameter
-              19:             Label
-                              Branch 50
-              50:             Label
-                              LoopMerge 52 53 None
-                              Branch 51
-              51:             Label
-              54:   10(float) Load 17(input)
-              56:   10(float) FAdd 54 55
-                              Store 17(input) 56
-                              Branch 53
-              53:             Label
-              57:   10(float) Load 17(input)
-              59:    32(bool) FOrdLessThan 57 58
-                              BranchConditional 59 50 52
-              52:             Label
+    54_5(f3(f1;):        19_1 Function None 33_3
+     55_2(input):   32_1(ptr) FunctionParameter
+          248_17:             Label
+                              Branch 248_18
+          248_18:             Label
+                              LoopMerge 248_21 248_20 None
+                              Branch 248_19
+          248_19:             Label
+            61_4: 22_1(float) Load 55_2(input)
+           129_1: 22_1(float) FAdd 61_4 43_2
+                              Store 55_2(input) 129_1
+                              Branch 248_20
+          248_20:             Label
+            61_5: 22_1(float) Load 55_2(input)
+           184_1:  20_1(bool) FOrdLessThan 61_5 43_3
+                              BranchConditional 184_1 248_18 248_21
+          248_21:             Label
                               Return
                               FunctionEnd
-      21(f4(f1;):           2 Function None 16
-       20(input):     11(ptr) FunctionParameter
-              22:             Label
-                              Branch 60
-              60:             Label
-                              LoopMerge 62 63 None
-                              Branch 61
-              61:             Label
-                              Branch 64
-              64:             Label
-                              LoopMerge 66 67 None
-                              Branch 68
-              68:             Label
-              69:   10(float) Load 20(input)
-              70:   10(float) FAdd 69 55
-                              Store 20(input) 70
-              71:    32(bool) FOrdLessThan 70 58
-                              BranchConditional 71 65 66
-              65:               Label
-                                Branch 67
-              67:               Label
-                                Branch 64
-              66:             Label
-                              Branch 63
-              63:             Label
-              72:   10(float) Load 20(input)
-              73:   10(float) FAdd 72 55
-                              Store 20(input) 73
-              74:    32(bool) FOrdLessThan 73 58
-                              BranchConditional 74 60 62
-              62:             Label
+    54_6(f4(f1;):        19_1 Function None 33_3
+     55_3(input):   32_1(ptr) FunctionParameter
+          248_22:             Label
+                              Branch 248_23
+          248_23:             Label
+                              LoopMerge 248_31 248_30 None
+                              Branch 248_24
+          248_24:             Label
+                              Branch 248_25
+          248_25:             Label
+                              LoopMerge 248_29 248_28 None
+                              Branch 248_26
+          248_26:             Label
+            61_6: 22_1(float) Load 55_3(input)
+           129_2: 22_1(float) FAdd 61_6 43_2
+                              Store 55_3(input) 129_2
+           184_2:  20_1(bool) FOrdLessThan 129_2 43_3
+                              BranchConditional 184_2 248_27 248_29
+          248_27:               Label
+                                Branch 248_28
+          248_28:               Label
+                                Branch 248_25
+          248_29:             Label
+                              Branch 248_30
+          248_30:             Label
+            61_7: 22_1(float) Load 55_3(input)
+           129_3: 22_1(float) FAdd 61_7 43_2
+                              Store 55_3(input) 129_3
+           184_3:  20_1(bool) FOrdLessThan 129_3 43_3
+                              BranchConditional 184_3 248_23 248_31
+          248_31:             Label
                               Return
                               FunctionEnd
-26(@PixelShaderFunction(f1;):   23(fvec4) Function None 24
-       25(input):     11(ptr) FunctionParameter
-              27:             Label
-       77(param):     11(ptr) Variable Function
-       80(param):     11(ptr) Variable Function
-       83(param):     11(ptr) Variable Function
-              75:           2 FunctionCall 6(f0()
-              76:           2 FunctionCall 8(f1()
-              78:   10(float) Load 25(input)
-                              Store 77(param) 78
-              79:   10(float) FunctionCall 14(f2(f1;) 77(param)
-              81:   10(float) Load 25(input)
-                              Store 80(param) 81
-              82:           2 FunctionCall 18(f3(f1;) 80(param)
-              84:   10(float) Load 25(input)
-                              Store 83(param) 84
-              85:           2 FunctionCall 21(f4(f1;) 83(param)
-              86:   10(float) Load 25(input)
-              87:   23(fvec4) CompositeConstruct 86 86 86 86
-                              ReturnValue 87
+54_7(@PixelShaderFunction(f1;): 23_1(fvec4) Function None 33_4
+     55_4(input):   32_1(ptr) FunctionParameter
+          248_32:             Label
+     59_5(param):   32_1(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+     59_7(param):   32_1(ptr) Variable Function
+            57_2:        19_1 FunctionCall 54_2(f0()
+            57_3:        19_1 FunctionCall 54_3(f1()
+            61_8: 22_1(float) Load 55_4(input)
+                              Store 59_5(param) 61_8
+            57_4: 22_1(float) FunctionCall 54_4(f2(f1;) 59_5(param)
+            61_9: 22_1(float) Load 55_4(input)
+                              Store 59_6(param) 61_9
+            57_5:        19_1 FunctionCall 54_5(f3(f1;) 59_6(param)
+           61_10: 22_1(float) Load 55_4(input)
+                              Store 59_7(param) 61_10
+            57_6:        19_1 FunctionCall 54_6(f4(f1;) 59_7(param)
+           61_11: 22_1(float) Load 55_4(input)
+            80_2: 23_1(fvec4) CompositeConstruct 61_11 61_11 61_11 61_11
+                              ReturnValue 80_2
                               FunctionEnd

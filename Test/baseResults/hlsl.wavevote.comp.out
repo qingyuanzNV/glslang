@@ -212,106 +212,106 @@ local_size = (32, 16, 1)
                               Capability GroupNonUniform
                               Capability GroupNonUniformVote
                               Capability GroupNonUniformBallot
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "CSMain" 70
-                              ExecutionMode 4 LocalSize 32 16 1
+                              EntryPoint GLCompute 54_1  "CSMain" 59_2
+                              ExecutionMode 54_1 LocalSize 32 16 1
                               Source HLSL 500
-                              Name 4  "CSMain"
-                              Name 11  "@CSMain(vu3;"
-                              Name 10  "dti"
-                              Name 15  "data"
-                              MemberName 15(data) 0  "@data"
-                              Name 17  "data"
-                              Name 68  "dti"
-                              Name 70  "dti"
-                              Name 72  "param"
-                              Decorate 14 ArrayStride 8
-                              Decorate 15(data) Block
-                              MemberDecorate 15(data) 0 Offset 0
-                              Decorate 17(data) Binding 0
-                              Decorate 17(data) DescriptorSet 0
-                              Decorate 70(dti) BuiltIn GlobalInvocationId
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 3
-               8:             TypePointer Function 7(ivec3)
-               9:             TypeFunction 2 8(ptr)
-              13:             TypeInt 64 0
-              14:             TypeRuntimeArray 13(int64_t)
-        15(data):             TypeStruct 14
-              16:             TypePointer StorageBuffer 15(data)
-        17(data):     16(ptr) Variable StorageBuffer
-              18:             TypeInt 32 1
-              19:     18(int) Constant 0
-              20:      6(int) Constant 0
-              21:             TypePointer Function 6(int)
-              26:             TypeBool
-              28:      6(int) Constant 3
-              30:             TypeVector 6(int) 4
-              32:             TypeVector 13(int64_t) 4
-              35:             TypePointer StorageBuffer 13(int64_t)
-              37:      6(int) Constant 1
-              48:      6(int) Constant 2
-              69:             TypePointer Input 7(ivec3)
-         70(dti):     69(ptr) Variable Input
-       4(CSMain):           2 Function None 3
-               5:             Label
-         68(dti):      8(ptr) Variable Function
-       72(param):      8(ptr) Variable Function
-              71:    7(ivec3) Load 70(dti)
-                              Store 68(dti) 71
-              73:    7(ivec3) Load 68(dti)
-                              Store 72(param) 73
-              74:           2 FunctionCall 11(@CSMain(vu3;) 72(param)
+                              Name 54_1  "CSMain"
+                              Name 54_2  "@CSMain(vu3;"
+                              Name 55_1  "dti"
+                              Name 30_1  "data"
+                              MemberName 30_1(data) 0  "@data"
+                              Name 59_1  "data"
+                              Name 59_3  "dti"
+                              Name 59_2  "dti"
+                              Name 59_4  "param"
+                              Decorate 29_1 ArrayStride 8
+                              Decorate 30_1(data) Block
+                              MemberDecorate 30_1(data) 0 Offset 0
+                              Decorate 59_1(data) Binding 0
+                              Decorate 59_1(data) DescriptorSet 0
+                              Decorate 59_2(dti) BuiltIn GlobalInvocationId
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 3
+            32_1:             TypePointer Function 23_1(ivec3)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            21_2:             TypeInt 64 0
+            29_1:             TypeRuntimeArray 21_2(int64_t)
+      30_1(data):             TypeStruct 29_1
+            32_2:             TypePointer StorageBuffer 30_1(data)
+      59_1(data):   32_2(ptr) Variable StorageBuffer
+            21_3:             TypeInt 32 1
+            43_1:   21_3(int) Constant 0
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Function 21_1(int)
+            20_1:             TypeBool
+         uint(3):   21_1(int) Constant 3
+            23_2:             TypeVector 21_1(int) 4
+            23_3:             TypeVector 21_2(int64_t) 4
+            32_4:             TypePointer StorageBuffer 21_2(int64_t)
+         uint(1):   21_1(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+            32_5:             TypePointer Input 23_1(ivec3)
+       59_2(dti):   32_5(ptr) Variable Input
+    54_1(CSMain):        19_1 Function None 33_1
+           248_1:             Label
+       59_3(dti):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1: 23_1(ivec3) Load 59_2(dti)
+                              Store 59_3(dti) 61_1
+            61_2: 23_1(ivec3) Load 59_3(dti)
+                              Store 59_4(param) 61_2
+            57_1:        19_1 FunctionCall 54_2(@CSMain(vu3;) 59_4(param)
                               Return
                               FunctionEnd
-11(@CSMain(vu3;):           2 Function None 9
-         10(dti):      8(ptr) FunctionParameter
-              12:             Label
-              22:     21(ptr) AccessChain 10(dti) 20
-              23:      6(int) Load 22
-              24:     21(ptr) AccessChain 10(dti) 20
-              25:      6(int) Load 24
-              27:    26(bool) IEqual 25 20
-              29:    26(bool) GroupNonUniformAny 28 27
-              31:   30(ivec4) GroupNonUniformBallot 28 29
-              33: 32(i64vec4) UConvert 31
-              34: 13(int64_t) CompositeExtract 33 0
-              36:     35(ptr) AccessChain 17(data) 19 23
-                              Store 36 34
-              38:     21(ptr) AccessChain 10(dti) 37
-              39:      6(int) Load 38
-              40:     21(ptr) AccessChain 10(dti) 37
-              41:      6(int) Load 40
-              42:    26(bool) IEqual 41 20
-              43:    26(bool) GroupNonUniformAll 28 42
-              44:   30(ivec4) GroupNonUniformBallot 28 43
-              45: 32(i64vec4) UConvert 44
-              46: 13(int64_t) CompositeExtract 45 0
-              47:     35(ptr) AccessChain 17(data) 19 39
-                              Store 47 46
-              49:     21(ptr) AccessChain 10(dti) 48
-              50:      6(int) Load 49
-              51:     21(ptr) AccessChain 10(dti) 48
-              52:      6(int) Load 51
-              53:    26(bool) IEqual 52 20
-              54:    26(bool) GroupNonUniformAllEqual 28 53
-              55:   30(ivec4) GroupNonUniformBallot 28 54
-              56: 32(i64vec4) UConvert 55
-              57: 13(int64_t) CompositeExtract 56 0
-              58:     35(ptr) AccessChain 17(data) 19 50
-                              Store 58 57
-              59:     21(ptr) AccessChain 10(dti) 48
-              60:      6(int) Load 59
-              61:     21(ptr) AccessChain 10(dti) 48
-              62:      6(int) Load 61
-              63:    26(bool) GroupNonUniformAllEqual 28 62
-              64:   30(ivec4) GroupNonUniformBallot 28 63
-              65: 32(i64vec4) UConvert 64
-              66: 13(int64_t) CompositeExtract 65 0
-              67:     35(ptr) AccessChain 17(data) 19 60
-                              Store 67 66
+54_2(@CSMain(vu3;):        19_1 Function None 33_2
+       55_1(dti):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            65_1:   32_3(ptr) AccessChain 55_1(dti) uint(0)
+            61_3:   21_1(int) Load 65_1
+            65_2:   32_3(ptr) AccessChain 55_1(dti) uint(0)
+            61_4:   21_1(int) Load 65_2
+           170_1:  20_1(bool) IEqual 61_4 uint(0)
+           335_1:  20_1(bool) GroupNonUniformAny uint(3) 170_1
+           339_1: 23_2(ivec4) GroupNonUniformBallot uint(3) 335_1
+           113_1:23_3(i64vec4) UConvert 339_1
+            81_1:21_2(int64_t) CompositeExtract 113_1 0
+            65_3:   32_4(ptr) AccessChain 59_1(data) 43_1 61_3
+                              Store 65_3 81_1
+            65_4:   32_3(ptr) AccessChain 55_1(dti) uint(1)
+            61_5:   21_1(int) Load 65_4
+            65_5:   32_3(ptr) AccessChain 55_1(dti) uint(1)
+            61_6:   21_1(int) Load 65_5
+           170_2:  20_1(bool) IEqual 61_6 uint(0)
+           334_1:  20_1(bool) GroupNonUniformAll uint(3) 170_2
+           339_2: 23_2(ivec4) GroupNonUniformBallot uint(3) 334_1
+           113_2:23_3(i64vec4) UConvert 339_2
+            81_2:21_2(int64_t) CompositeExtract 113_2 0
+            65_6:   32_4(ptr) AccessChain 59_1(data) 43_1 61_5
+                              Store 65_6 81_2
+            65_7:   32_3(ptr) AccessChain 55_1(dti) uint(2)
+            61_7:   21_1(int) Load 65_7
+            65_8:   32_3(ptr) AccessChain 55_1(dti) uint(2)
+            61_8:   21_1(int) Load 65_8
+           170_3:  20_1(bool) IEqual 61_8 uint(0)
+           336_1:  20_1(bool) GroupNonUniformAllEqual uint(3) 170_3
+           339_3: 23_2(ivec4) GroupNonUniformBallot uint(3) 336_1
+           113_3:23_3(i64vec4) UConvert 339_3
+            81_3:21_2(int64_t) CompositeExtract 113_3 0
+            65_9:   32_4(ptr) AccessChain 59_1(data) 43_1 61_7
+                              Store 65_9 81_3
+           65_10:   32_3(ptr) AccessChain 55_1(dti) uint(2)
+            61_9:   21_1(int) Load 65_10
+           65_11:   32_3(ptr) AccessChain 55_1(dti) uint(2)
+           61_10:   21_1(int) Load 65_11
+           336_2:  20_1(bool) GroupNonUniformAllEqual uint(3) 61_10
+           339_4: 23_2(ivec4) GroupNonUniformBallot uint(3) 336_2
+           113_4:23_3(i64vec4) UConvert 339_4
+            81_4:21_2(int64_t) CompositeExtract 113_4 0
+           65_12:   32_4(ptr) AccessChain 59_1(data) 43_1 61_9
+                              Store 65_12 81_4
                               Return
                               FunctionEnd

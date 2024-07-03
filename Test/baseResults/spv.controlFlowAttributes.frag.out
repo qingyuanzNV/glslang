@@ -13,238 +13,238 @@ Validation failed
 // Id's are bound by 123
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_control_flow_attributes"
-                              Name 4  "main"
-                              Name 6  "f0("
-                              Name 8  "f1("
-                              Name 23  "i"
-                              Name 41  "i"
-                              Name 52  "cond"
-                              Name 65  "i"
-                              Name 84  "i"
-               2:             TypeVoid
-               3:             TypeFunction 2
-              19:             TypeBool
-              20:    19(bool) ConstantTrue
-              21:             TypeInt 32 1
-              22:             TypePointer Function 21(int)
-              24:     21(int) Constant 0
-              31:     21(int) Constant 8
-              34:     21(int) Constant 1
-              51:             TypePointer Private 19(bool)
-        52(cond):     51(ptr) Variable Private
-              59:    19(bool) ConstantFalse
-              60:     21(int) Constant 3
-         4(main):           2 Function None 3
-               5:             Label
-           23(i):     22(ptr) Variable Function
-           41(i):     22(ptr) Variable Function
-           65(i):     22(ptr) Variable Function
-           84(i):     22(ptr) Variable Function
-                              Store 23(i) 24
-                              Branch 25
-              25:             Label
-                              LoopMerge 27 28 Unroll 
-                              Branch 29
-              29:             Label
-              30:     21(int) Load 23(i)
-              32:    19(bool) SLessThan 30 31
-                              BranchConditional 32 26 27
-              26:               Label
-                                Branch 28
-              28:               Label
-              33:     21(int)   Load 23(i)
-              35:     21(int)   IAdd 33 34
-                                Store 23(i) 35
-                                Branch 25
-              27:             Label
-              36:           2 FunctionCall 6(f0()
-                              Branch 37
-              37:             Label
-                              LoopMerge 39 40 DependencyInfinite 
-                              Branch 38
-              38:             Label
-                              Branch 40
-              40:             Label
-                              BranchConditional 20 37 39
-              39:             Label
-                              Store 41(i) 24
-                              Branch 42
-              42:             Label
-                              LoopMerge 44 45 DependencyLength  4
-                              Branch 46
-              46:             Label
-              47:     21(int) Load 41(i)
-              48:    19(bool) SLessThan 47 31
-                              BranchConditional 48 43 44
-              43:               Label
-                                Branch 45
-              45:               Label
-              49:     21(int)   Load 41(i)
-              50:     21(int)   IAdd 49 34
-                                Store 41(i) 50
-                                Branch 42
-              44:             Label
-              53:    19(bool) Load 52(cond)
-                              SelectionMerge 55 Flatten 
-                              BranchConditional 53 54 55
-              54:               Label
-                                Branch 55
-              55:             Label
-              56:    19(bool) Load 52(cond)
-                              SelectionMerge 58 DontFlatten 
-                              BranchConditional 56 57 58
-              57:               Label
-                                Store 52(cond) 59
-                                Branch 58
-              58:             Label
-                              SelectionMerge 62 DontFlatten 
-                              Switch 60 62 
-                                     case 3: 61
-              61:               Label
-                                Branch 62
-              62:             Label
-                              Store 65(i) 24
-                              Branch 66
-              66:             Label
-                              LoopMerge 68 69 None
-                              Branch 70
-              70:             Label
-              71:     21(int) Load 65(i)
-              72:    19(bool) SLessThan 71 31
-                              BranchConditional 72 67 68
-              67:               Label
-                                Branch 69
-              69:               Label
-              73:     21(int)   Load 65(i)
-              74:     21(int)   IAdd 73 34
-                                Store 65(i) 74
-                                Branch 66
-              68:             Label
-                              Branch 75
-              75:             Label
-                              LoopMerge 77 78 None
-                              Branch 79
-              79:             Label
-                              BranchConditional 20 76 77
-              76:               Label
-                                Branch 78
-              78:               Label
-                                Branch 75
-              77:             Label
-                              Branch 80
-              80:             Label
-                              LoopMerge 82 83 None
-                              Branch 81
-              81:             Label
-                              Branch 83
-              83:             Label
-                              BranchConditional 20 80 82
-              82:             Label
-                              Store 84(i) 24
-                              Branch 85
-              85:             Label
-                              LoopMerge 87 88 None
-                              Branch 89
-              89:             Label
-              90:     21(int) Load 84(i)
-              91:    19(bool) SLessThan 90 31
-                              BranchConditional 91 86 87
-              86:               Label
-                                Branch 88
-              88:               Label
-              92:     21(int)   Load 84(i)
-              93:     21(int)   IAdd 92 34
-                                Store 84(i) 93
-                                Branch 85
-              87:             Label
-              94:    19(bool) Load 52(cond)
-                              SelectionMerge 96 None
-                              BranchConditional 94 95 96
-              95:               Label
-                                Branch 96
-              96:             Label
-              97:    19(bool) Load 52(cond)
-                              SelectionMerge 99 None
-                              BranchConditional 97 98 99
-              98:               Label
-                                Store 52(cond) 59
-                                Branch 99
-              99:             Label
-                              SelectionMerge 101 None
-                              Switch 60 101 
-                                     case 3: 100
-             100:               Label
-                                Branch 101
-             101:             Label
-                              Branch 104
-             104:             Label
-                              LoopMerge 106 107 Unroll DontUnroll DependencyLength  2
-                              Branch 108
-             108:             Label
-             109:    19(bool) Load 52(cond)
-                              BranchConditional 109 105 106
-             105:               Label
-                                Branch 107
-             107:               Label
-                                Branch 104
-             106:             Label
-                              SelectionMerge 111 DontFlatten 
-                              Switch 60 111 
-                                     case 3: 110
-             110:               Label
-                                Branch 111
-             111:             Label
-             114:    19(bool) Load 52(cond)
-                              SelectionMerge 116 Flatten 
-                              BranchConditional 114 115 116
-             115:               Label
-                                Branch 116
-             116:             Label
-                              Branch 117
-             117:             Label
-                              LoopMerge 119 120 DependencyInfinite 
-                              Branch 121
-             121:             Label
-             122:    19(bool) Load 52(cond)
-                              BranchConditional 122 118 119
-             118:               Label
-                                Branch 120
-             120:               Label
-                                Branch 117
-             119:             Label
+                              Name 54_1  "main"
+                              Name 54_2  "f0("
+                              Name 54_3  "f1("
+                              Name 59_2  "i"
+                              Name 59_3  "i"
+                              Name 59_1  "cond"
+                              Name 59_4  "i"
+                              Name 59_5  "i"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            20_1:             TypeBool
+            41_1:  20_1(bool) ConstantTrue
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 8
+            43_3:   21_1(int) Constant 1
+            32_2:             TypePointer Private 20_1(bool)
+      59_1(cond):   32_2(ptr) Variable Private
+            42_1:  20_1(bool) ConstantFalse
+            43_4:   21_1(int) Constant 3
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_2(i):   32_1(ptr) Variable Function
+         59_3(i):   32_1(ptr) Variable Function
+         59_4(i):   32_1(ptr) Variable Function
+         59_5(i):   32_1(ptr) Variable Function
+                              Store 59_2(i) 43_1
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 Unroll 
+                              Branch 248_3
+           248_3:             Label
+            61_1:   21_1(int) Load 59_2(i)
+           177_1:  20_1(bool) SLessThan 61_1 43_2
+                              BranchConditional 177_1 248_4 248_6
+           248_4:               Label
+                                Branch 248_5
+           248_5:               Label
+            61_2:   21_1(int)   Load 59_2(i)
+           128_1:   21_1(int)   IAdd 61_2 43_3
+                                Store 59_2(i) 128_1
+                                Branch 248_2
+           248_6:             Label
+            57_1:        19_1 FunctionCall 54_2(f0()
+                              Branch 248_7
+           248_7:             Label
+                              LoopMerge 248_10 248_9 DependencyInfinite 
+                              Branch 248_8
+           248_8:             Label
+                              Branch 248_9
+           248_9:             Label
+                              BranchConditional 41_1 248_7 248_10
+          248_10:             Label
+                              Store 59_3(i) 43_1
+                              Branch 248_11
+          248_11:             Label
+                              LoopMerge 248_15 248_14 DependencyLength  4
+                              Branch 248_12
+          248_12:             Label
+            61_3:   21_1(int) Load 59_3(i)
+           177_2:  20_1(bool) SLessThan 61_3 43_2
+                              BranchConditional 177_2 248_13 248_15
+          248_13:               Label
+                                Branch 248_14
+          248_14:               Label
+            61_4:   21_1(int)   Load 59_3(i)
+           128_2:   21_1(int)   IAdd 61_4 43_3
+                                Store 59_3(i) 128_2
+                                Branch 248_11
+          248_15:             Label
+            61_5:  20_1(bool) Load 59_1(cond)
+                              SelectionMerge 248_17 Flatten 
+                              BranchConditional 61_5 248_16 248_17
+          248_16:               Label
+                                Branch 248_17
+          248_17:             Label
+            61_6:  20_1(bool) Load 59_1(cond)
+                              SelectionMerge 248_19 DontFlatten 
+                              BranchConditional 61_6 248_18 248_19
+          248_18:               Label
+                                Store 59_1(cond) 42_1
+                                Branch 248_19
+          248_19:             Label
+                              SelectionMerge 248_21 DontFlatten 
+                              Switch 43_4 248_21 
+                                     case 3: 248_20
+          248_20:               Label
+                                Branch 248_21
+          248_21:             Label
+                              Store 59_4(i) 43_1
+                              Branch 248_22
+          248_22:             Label
+                              LoopMerge 248_26 248_25 None
+                              Branch 248_23
+          248_23:             Label
+            61_7:   21_1(int) Load 59_4(i)
+           177_3:  20_1(bool) SLessThan 61_7 43_2
+                              BranchConditional 177_3 248_24 248_26
+          248_24:               Label
+                                Branch 248_25
+          248_25:               Label
+            61_8:   21_1(int)   Load 59_4(i)
+           128_3:   21_1(int)   IAdd 61_8 43_3
+                                Store 59_4(i) 128_3
+                                Branch 248_22
+          248_26:             Label
+                              Branch 248_27
+          248_27:             Label
+                              LoopMerge 248_31 248_30 None
+                              Branch 248_28
+          248_28:             Label
+                              BranchConditional 41_1 248_29 248_31
+          248_29:               Label
+                                Branch 248_30
+          248_30:               Label
+                                Branch 248_27
+          248_31:             Label
+                              Branch 248_32
+          248_32:             Label
+                              LoopMerge 248_35 248_34 None
+                              Branch 248_33
+          248_33:             Label
+                              Branch 248_34
+          248_34:             Label
+                              BranchConditional 41_1 248_32 248_35
+          248_35:             Label
+                              Store 59_5(i) 43_1
+                              Branch 248_36
+          248_36:             Label
+                              LoopMerge 248_40 248_39 None
+                              Branch 248_37
+          248_37:             Label
+            61_9:   21_1(int) Load 59_5(i)
+           177_4:  20_1(bool) SLessThan 61_9 43_2
+                              BranchConditional 177_4 248_38 248_40
+          248_38:               Label
+                                Branch 248_39
+          248_39:               Label
+           61_10:   21_1(int)   Load 59_5(i)
+           128_4:   21_1(int)   IAdd 61_10 43_3
+                                Store 59_5(i) 128_4
+                                Branch 248_36
+          248_40:             Label
+           61_11:  20_1(bool) Load 59_1(cond)
+                              SelectionMerge 248_42 None
+                              BranchConditional 61_11 248_41 248_42
+          248_41:               Label
+                                Branch 248_42
+          248_42:             Label
+           61_12:  20_1(bool) Load 59_1(cond)
+                              SelectionMerge 248_44 None
+                              BranchConditional 61_12 248_43 248_44
+          248_43:               Label
+                                Store 59_1(cond) 42_1
+                                Branch 248_44
+          248_44:             Label
+                              SelectionMerge 248_46 None
+                              Switch 43_4 248_46 
+                                     case 3: 248_45
+          248_45:               Label
+                                Branch 248_46
+          248_46:             Label
+                              Branch 248_47
+          248_47:             Label
+                              LoopMerge 248_51 248_50 Unroll DontUnroll DependencyLength  2
+                              Branch 248_48
+          248_48:             Label
+           61_13:  20_1(bool) Load 59_1(cond)
+                              BranchConditional 61_13 248_49 248_51
+          248_49:               Label
+                                Branch 248_50
+          248_50:               Label
+                                Branch 248_47
+          248_51:             Label
+                              SelectionMerge 248_53 DontFlatten 
+                              Switch 43_4 248_53 
+                                     case 3: 248_52
+          248_52:               Label
+                                Branch 248_53
+          248_53:             Label
+           61_14:  20_1(bool) Load 59_1(cond)
+                              SelectionMerge 248_55 Flatten 
+                              BranchConditional 61_14 248_54 248_55
+          248_54:               Label
+                                Branch 248_55
+          248_55:             Label
+                              Branch 248_56
+          248_56:             Label
+                              LoopMerge 248_60 248_59 DependencyInfinite 
+                              Branch 248_57
+          248_57:             Label
+           61_15:  20_1(bool) Load 59_1(cond)
+                              BranchConditional 61_15 248_58 248_60
+          248_58:               Label
+                                Branch 248_59
+          248_59:               Label
+                                Branch 248_56
+          248_60:             Label
                               Return
                               FunctionEnd
-          6(f0():           2 Function None 3
-               7:             Label
-                              Branch 10
-              10:             Label
-                              LoopMerge 12 13 DontUnroll 
-                              Branch 11
-              11:             Label
-                              Branch 13
-              13:             Label
-                              Branch 10
-              12:             Label
+       54_2(f0():        19_1 Function None 33_1
+          248_61:             Label
+                              Branch 248_62
+          248_62:             Label
+                              LoopMerge 248_65 248_64 DontUnroll 
+                              Branch 248_63
+          248_63:             Label
+                              Branch 248_64
+          248_64:             Label
+                              Branch 248_62
+          248_65:             Label
                               Unreachable
                               FunctionEnd
-          8(f1():           2 Function None 3
-               9:             Label
-                              Branch 14
-              14:             Label
-                              LoopMerge 16 17 DontUnroll 
-                              Branch 18
-              18:             Label
-                              BranchConditional 20 15 16
-              15:               Label
-                                Branch 17
-              17:               Label
-                                Branch 14
-              16:             Label
+       54_3(f1():        19_1 Function None 33_1
+          248_66:             Label
+                              Branch 248_67
+          248_67:             Label
+                              LoopMerge 248_71 248_70 DontUnroll 
+                              Branch 248_68
+          248_68:             Label
+                              BranchConditional 41_1 248_69 248_71
+          248_69:               Label
+                                Branch 248_70
+          248_70:               Label
+                                Branch 248_67
+          248_71:             Label
                               Return
                               FunctionEnd

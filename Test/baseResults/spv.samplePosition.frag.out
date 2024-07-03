@@ -5,51 +5,51 @@ spv.samplePosition.frag
 
                               Capability Shader
                               Capability SampleRateShading
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 9 22 24
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "gl_SamplePosition"
-                              Name 22  "color"
-                              Name 24  "samp"
-                              Decorate 9(gl_SamplePosition) BuiltIn SamplePosition
-                              Decorate 22(color) Location 0
-                              Decorate 24(samp) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypePointer Input 7(fvec2)
-9(gl_SamplePosition):      8(ptr) Variable Input
-              10:             TypeInt 32 0
-              11:     10(int) Constant 1
-              12:             TypePointer Input 6(float)
-              15:    6(float) Constant 1056964608
-              16:             TypeBool
-              20:             TypeVector 6(float) 4
-              21:             TypePointer Output 20(fvec4)
-       22(color):     21(ptr) Variable Output
-              23:             TypePointer Input 20(fvec4)
-        24(samp):     23(ptr) Variable Input
-              27:    6(float) Constant 1073741824
-         4(main):           2 Function None 3
-               5:             Label
-              13:     12(ptr) AccessChain 9(gl_SamplePosition) 11
-              14:    6(float) Load 13
-              17:    16(bool) FOrdLessThan 14 15
-                              SelectionMerge 19 None
-                              BranchConditional 17 18 26
-              18:               Label
-              25:   20(fvec4)   Load 24(samp)
-                                Store 22(color) 25
-                                Branch 19
-              26:               Label
-              28:   20(fvec4)   Load 24(samp)
-              29:   20(fvec4)   VectorTimesScalar 28 27
-                                Store 22(color) 29
-                                Branch 19
-              19:             Label
+                              Name 54_1  "main"
+                              Name 59_1  "gl_SamplePosition"
+                              Name 59_2  "color"
+                              Name 59_3  "samp"
+                              Decorate 59_1(gl_SamplePosition) BuiltIn SamplePosition
+                              Decorate 59_2(color) Location 0
+                              Decorate 59_3(samp) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            32_1:             TypePointer Input 23_1(fvec2)
+59_1(gl_SamplePosition):   32_1(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(1):   21_1(int) Constant 1
+            32_2:             TypePointer Input 22_1(float)
+            43_1: 22_1(float) Constant 1056964608
+            20_1:             TypeBool
+            23_2:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Output 23_2(fvec4)
+     59_2(color):   32_3(ptr) Variable Output
+            32_4:             TypePointer Input 23_2(fvec4)
+      59_3(samp):   32_4(ptr) Variable Input
+            43_2: 22_1(float) Constant 1073741824
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1(gl_SamplePosition) uint(1)
+            61_1: 22_1(float) Load 65_1
+           184_1:  20_1(bool) FOrdLessThan 61_1 43_1
+                              SelectionMerge 248_4 None
+                              BranchConditional 184_1 248_2 248_3
+           248_2:               Label
+            61_2: 23_2(fvec4)   Load 59_3(samp)
+                                Store 59_2(color) 61_2
+                                Branch 248_4
+           248_3:               Label
+            61_3: 23_2(fvec4)   Load 59_3(samp)
+           142_1: 23_2(fvec4)   VectorTimesScalar 61_3 43_2
+                                Store 59_2(color) 142_1
+                                Branch 248_4
+           248_4:             Label
                               Return
                               FunctionEnd

@@ -6,24 +6,24 @@ spv.shaderStencilExport.frag
                               Capability Shader
                               Capability StencilExportEXT
                               Extension  "SPV_EXT_shader_stencil_export"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 8
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 StencilRefReplacingEXT
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 StencilRefReplacingEXT
                               Source GLSL 450
                               SourceExtension  "GL_ARB_shader_stencil_export"
-                              Name 4  "main"
-                              Name 8  "gl_FragStencilRefARB"
-                              Decorate 8(gl_FragStencilRefARB) BuiltIn FragStencilRefEXT
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Output 6(int)
-8(gl_FragStencilRefARB):      7(ptr) Variable Output
-               9:      6(int) Constant 100
-         4(main):           2 Function None 3
-               5:             Label
-                              Store 8(gl_FragStencilRefARB) 9
+                              Name 54_1  "main"
+                              Name 59_1  "gl_FragStencilRefARB"
+                              Decorate 59_1(gl_FragStencilRefARB) BuiltIn FragStencilRefEXT
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Output 21_1(int)
+59_1(gl_FragStencilRefARB):   32_1(ptr) Variable Output
+            43_1:   21_1(int) Constant 100
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+                              Store 59_1(gl_FragStencilRefARB) 43_1
                               Return
                               FunctionEnd

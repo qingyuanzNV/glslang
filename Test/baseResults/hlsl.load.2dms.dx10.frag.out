@@ -341,189 +341,189 @@ using depth_any
 
                               Capability Shader
                               Capability ImageGatherExtended
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 119 123
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 DepthReplacing
+                              EntryPoint Fragment 54_1  "main" 59_8 59_9
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 DepthReplacing
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "getOffset("
-                              Name 13  "PS_OUTPUT"
-                              MemberName 13(PS_OUTPUT) 0  "Color"
-                              MemberName 13(PS_OUTPUT) 1  "Depth"
-                              Name 15  "@main("
-                              Name 23  "g_tTex2dmsf4"
-                              Name 27  "$Global"
-                              MemberName 27($Global) 0  "c1"
-                              MemberName 27($Global) 1  "c2"
-                              MemberName 27($Global) 2  "c3"
-                              MemberName 27($Global) 3  "c4"
-                              Name 29  ""
-                              Name 37  "g_tTex2dmsi4"
-                              Name 45  "g_tTex2dmsu4"
-                              Name 68  "g_tTex2dmsf4a"
-                              Name 77  "g_tTex2dmsi4a"
-                              Name 84  "g_tTex2dmsu4a"
-                              Name 105  "psout"
-                              Name 116  "flattenTemp"
-                              Name 119  "@entryPointOutput.Color"
-                              Name 123  "@entryPointOutput.Depth"
-                              Name 128  "g_sSamp"
-                              Decorate 23(g_tTex2dmsf4) Binding 1
-                              Decorate 23(g_tTex2dmsf4) DescriptorSet 0
-                              Decorate 27($Global) Block
-                              MemberDecorate 27($Global) 0 Offset 0
-                              MemberDecorate 27($Global) 1 Offset 8
-                              MemberDecorate 27($Global) 2 Offset 16
-                              MemberDecorate 27($Global) 3 Offset 32
-                              Decorate 29 Binding 7
-                              Decorate 29 DescriptorSet 0
-                              Decorate 37(g_tTex2dmsi4) Binding 2
-                              Decorate 37(g_tTex2dmsi4) DescriptorSet 0
-                              Decorate 45(g_tTex2dmsu4) Binding 3
-                              Decorate 45(g_tTex2dmsu4) DescriptorSet 0
-                              Decorate 68(g_tTex2dmsf4a) Binding 4
-                              Decorate 68(g_tTex2dmsf4a) DescriptorSet 0
-                              Decorate 77(g_tTex2dmsi4a) Binding 5
-                              Decorate 77(g_tTex2dmsi4a) DescriptorSet 0
-                              Decorate 84(g_tTex2dmsu4a) Binding 6
-                              Decorate 84(g_tTex2dmsu4a) DescriptorSet 0
-                              Decorate 119(@entryPointOutput.Color) Location 0
-                              Decorate 123(@entryPointOutput.Depth) BuiltIn FragDepth
-                              Decorate 128(g_sSamp) Binding 0
-                              Decorate 128(g_sSamp) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypeVector 6(int) 2
-               8:             TypeFunction 7(ivec2)
-              11:             TypeFloat 32
-              12:             TypeVector 11(float) 4
-   13(PS_OUTPUT):             TypeStruct 12(fvec4) 11(float)
-              14:             TypeFunction 13(PS_OUTPUT)
-              17:      6(int) Constant 1
-              18:    7(ivec2) ConstantComposite 17 17
-              21:             TypeImage 11(float) 2D multi-sampled sampled format:Unknown
-              22:             TypePointer UniformConstant 21
-23(g_tTex2dmsf4):     22(ptr) Variable UniformConstant
-              25:             TypeVector 6(int) 3
-              26:             TypeVector 6(int) 4
-     27($Global):             TypeStruct 6(int) 7(ivec2) 25(ivec3) 26(ivec4)
-              28:             TypePointer Uniform 27($Global)
-              29:     28(ptr) Variable Uniform
-              30:             TypePointer Uniform 7(ivec2)
-              33:      6(int) Constant 3
-              35:             TypeImage 6(int) 2D multi-sampled sampled format:Unknown
-              36:             TypePointer UniformConstant 35
-37(g_tTex2dmsi4):     36(ptr) Variable UniformConstant
-              42:             TypeInt 32 0
-              43:             TypeImage 42(int) 2D multi-sampled sampled format:Unknown
-              44:             TypePointer UniformConstant 43
-45(g_tTex2dmsu4):     44(ptr) Variable UniformConstant
-              49:             TypeVector 42(int) 4
-              66:             TypeImage 11(float) 2D array multi-sampled sampled format:Unknown
-              67:             TypePointer UniformConstant 66
-68(g_tTex2dmsf4a):     67(ptr) Variable UniformConstant
-              70:      6(int) Constant 2
-              71:             TypePointer Uniform 25(ivec3)
-              75:             TypeImage 6(int) 2D array multi-sampled sampled format:Unknown
-              76:             TypePointer UniformConstant 75
-77(g_tTex2dmsi4a):     76(ptr) Variable UniformConstant
-              82:             TypeImage 42(int) 2D array multi-sampled sampled format:Unknown
-              83:             TypePointer UniformConstant 82
-84(g_tTex2dmsu4a):     83(ptr) Variable UniformConstant
-             104:             TypePointer Function 13(PS_OUTPUT)
-             106:      6(int) Constant 0
-             107:   11(float) Constant 1065353216
-             108:   12(fvec4) ConstantComposite 107 107 107 107
-             109:             TypePointer Function 12(fvec4)
-             111:             TypePointer Function 11(float)
-             118:             TypePointer Output 12(fvec4)
-119(@entryPointOutput.Color):    118(ptr) Variable Output
-             122:             TypePointer Output 11(float)
-123(@entryPointOutput.Depth):    122(ptr) Variable Output
-             126:             TypeSampler
-             127:             TypePointer UniformConstant 126
-    128(g_sSamp):    127(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-116(flattenTemp):    104(ptr) Variable Function
-             117:13(PS_OUTPUT) FunctionCall 15(@main()
-                              Store 116(flattenTemp) 117
-             120:    109(ptr) AccessChain 116(flattenTemp) 106
-             121:   12(fvec4) Load 120
-                              Store 119(@entryPointOutput.Color) 121
-             124:    111(ptr) AccessChain 116(flattenTemp) 17
-             125:   11(float) Load 124
-                              Store 123(@entryPointOutput.Depth) 125
+                              Name 54_1  "main"
+                              Name 54_2  "getOffset("
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              MemberName 30_1(PS_OUTPUT) 1  "Depth"
+                              Name 54_3  "@main("
+                              Name 59_1  "g_tTex2dmsf4"
+                              Name 30_2  "$Global"
+                              MemberName 30_2($Global) 0  "c1"
+                              MemberName 30_2($Global) 1  "c2"
+                              MemberName 30_2($Global) 2  "c3"
+                              MemberName 30_2($Global) 3  "c4"
+                              Name 59_2  ""
+                              Name 59_3  "g_tTex2dmsi4"
+                              Name 59_4  "g_tTex2dmsu4"
+                              Name 59_5  "g_tTex2dmsf4a"
+                              Name 59_6  "g_tTex2dmsi4a"
+                              Name 59_7  "g_tTex2dmsu4a"
+                              Name 59_12  "psout"
+                              Name 59_11  "flattenTemp"
+                              Name 59_8  "@entryPointOutput.Color"
+                              Name 59_9  "@entryPointOutput.Depth"
+                              Name 59_10  "g_sSamp"
+                              Decorate 59_1(g_tTex2dmsf4) Binding 1
+                              Decorate 59_1(g_tTex2dmsf4) DescriptorSet 0
+                              Decorate 30_2($Global) Block
+                              MemberDecorate 30_2($Global) 0 Offset 0
+                              MemberDecorate 30_2($Global) 1 Offset 8
+                              MemberDecorate 30_2($Global) 2 Offset 16
+                              MemberDecorate 30_2($Global) 3 Offset 32
+                              Decorate 59_2 Binding 7
+                              Decorate 59_2 DescriptorSet 0
+                              Decorate 59_3(g_tTex2dmsi4) Binding 2
+                              Decorate 59_3(g_tTex2dmsi4) DescriptorSet 0
+                              Decorate 59_4(g_tTex2dmsu4) Binding 3
+                              Decorate 59_4(g_tTex2dmsu4) DescriptorSet 0
+                              Decorate 59_5(g_tTex2dmsf4a) Binding 4
+                              Decorate 59_5(g_tTex2dmsf4a) DescriptorSet 0
+                              Decorate 59_6(g_tTex2dmsi4a) Binding 5
+                              Decorate 59_6(g_tTex2dmsi4a) DescriptorSet 0
+                              Decorate 59_7(g_tTex2dmsu4a) Binding 6
+                              Decorate 59_7(g_tTex2dmsu4a) DescriptorSet 0
+                              Decorate 59_8(@entryPointOutput.Color) Location 0
+                              Decorate 59_9(@entryPointOutput.Depth) BuiltIn FragDepth
+                              Decorate 59_10(g_sSamp) Binding 0
+                              Decorate 59_10(g_sSamp) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            23_1:             TypeVector 21_1(int) 2
+            33_2:             TypeFunction 23_1(ivec2)
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 4
+ 30_1(PS_OUTPUT):             TypeStruct 23_2(fvec4) 22_1(float)
+            33_3:             TypeFunction 30_1(PS_OUTPUT)
+            43_1:   21_1(int) Constant 1
+            44_1: 23_1(ivec2) ConstantComposite 43_1 43_1
+            25_1:             TypeImage 22_1(float) 2D multi-sampled sampled format:Unknown
+            32_1:             TypePointer UniformConstant 25_1
+59_1(g_tTex2dmsf4):   32_1(ptr) Variable UniformConstant
+            23_3:             TypeVector 21_1(int) 3
+            23_4:             TypeVector 21_1(int) 4
+   30_2($Global):             TypeStruct 21_1(int) 23_1(ivec2) 23_3(ivec3) 23_4(ivec4)
+            32_2:             TypePointer Uniform 30_2($Global)
+            59_2:   32_2(ptr) Variable Uniform
+            32_3:             TypePointer Uniform 23_1(ivec2)
+            43_2:   21_1(int) Constant 3
+            25_2:             TypeImage 21_1(int) 2D multi-sampled sampled format:Unknown
+            32_4:             TypePointer UniformConstant 25_2
+59_3(g_tTex2dmsi4):   32_4(ptr) Variable UniformConstant
+            21_2:             TypeInt 32 0
+            25_3:             TypeImage 21_2(int) 2D multi-sampled sampled format:Unknown
+            32_5:             TypePointer UniformConstant 25_3
+59_4(g_tTex2dmsu4):   32_5(ptr) Variable UniformConstant
+            23_5:             TypeVector 21_2(int) 4
+            25_4:             TypeImage 22_1(float) 2D array multi-sampled sampled format:Unknown
+            32_6:             TypePointer UniformConstant 25_4
+59_5(g_tTex2dmsf4a):   32_6(ptr) Variable UniformConstant
+            43_3:   21_1(int) Constant 2
+            32_7:             TypePointer Uniform 23_3(ivec3)
+            25_5:             TypeImage 21_1(int) 2D array multi-sampled sampled format:Unknown
+            32_8:             TypePointer UniformConstant 25_5
+59_6(g_tTex2dmsi4a):   32_8(ptr) Variable UniformConstant
+            25_6:             TypeImage 21_2(int) 2D array multi-sampled sampled format:Unknown
+            32_9:             TypePointer UniformConstant 25_6
+59_7(g_tTex2dmsu4a):   32_9(ptr) Variable UniformConstant
+           32_10:             TypePointer Function 30_1(PS_OUTPUT)
+            43_4:   21_1(int) Constant 0
+            43_5: 22_1(float) Constant 1065353216
+            44_2: 23_2(fvec4) ConstantComposite 43_5 43_5 43_5 43_5
+           32_11:             TypePointer Function 23_2(fvec4)
+           32_12:             TypePointer Function 22_1(float)
+           32_13:             TypePointer Output 23_2(fvec4)
+59_8(@entryPointOutput.Color):  32_13(ptr) Variable Output
+           32_14:             TypePointer Output 22_1(float)
+59_9(@entryPointOutput.Depth):  32_14(ptr) Variable Output
+            26_1:             TypeSampler
+           32_15:             TypePointer UniformConstant 26_1
+  59_10(g_sSamp):  32_15(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_11(flattenTemp):  32_10(ptr) Variable Function
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_3(@main()
+                              Store 59_11(flattenTemp) 57_1
+            65_1:  32_11(ptr) AccessChain 59_11(flattenTemp) 43_4
+            61_1: 23_2(fvec4) Load 65_1
+                              Store 59_8(@entryPointOutput.Color) 61_1
+            65_2:  32_12(ptr) AccessChain 59_11(flattenTemp) 43_1
+            61_2: 22_1(float) Load 65_2
+                              Store 59_9(@entryPointOutput.Depth) 61_2
                               Return
                               FunctionEnd
-   9(getOffset():    7(ivec2) Function None 8
-              10:             Label
-                              ReturnValue 18
+54_2(getOffset(): 23_1(ivec2) Function None 33_2
+           248_2:             Label
+                              ReturnValue 44_1
                               FunctionEnd
-      15(@main():13(PS_OUTPUT) Function None 14
-              16:             Label
-      105(psout):    104(ptr) Variable Function
-              24:          21 Load 23(g_tTex2dmsf4)
-              31:     30(ptr) AccessChain 29 17
-              32:    7(ivec2) Load 31
-              34:   12(fvec4) ImageFetch 24 32 Sample 33
-              38:          35 Load 37(g_tTex2dmsi4)
-              39:     30(ptr) AccessChain 29 17
-              40:    7(ivec2) Load 39
-              41:   26(ivec4) ImageFetch 38 40 Sample 33
-              46:          43 Load 45(g_tTex2dmsu4)
-              47:     30(ptr) AccessChain 29 17
-              48:    7(ivec2) Load 47
-              50:   49(ivec4) ImageFetch 46 48 Sample 33
-              51:          21 Load 23(g_tTex2dmsf4)
-              52:     30(ptr) AccessChain 29 17
-              53:    7(ivec2) Load 52
-              54:    7(ivec2) FunctionCall 9(getOffset()
-              55:   12(fvec4) ImageFetch 51 53 Offset Sample 54 33
-              56:          35 Load 37(g_tTex2dmsi4)
-              57:     30(ptr) AccessChain 29 17
-              58:    7(ivec2) Load 57
-              59:    7(ivec2) FunctionCall 9(getOffset()
-              60:   26(ivec4) ImageFetch 56 58 Offset Sample 59 33
-              61:          43 Load 45(g_tTex2dmsu4)
-              62:     30(ptr) AccessChain 29 17
-              63:    7(ivec2) Load 62
-              64:    7(ivec2) FunctionCall 9(getOffset()
-              65:   49(ivec4) ImageFetch 61 63 Offset Sample 64 33
-              69:          66 Load 68(g_tTex2dmsf4a)
-              72:     71(ptr) AccessChain 29 70
-              73:   25(ivec3) Load 72
-              74:   12(fvec4) ImageFetch 69 73 Sample 33
-              78:          75 Load 77(g_tTex2dmsi4a)
-              79:     71(ptr) AccessChain 29 70
-              80:   25(ivec3) Load 79
-              81:   26(ivec4) ImageFetch 78 80 Sample 33
-              85:          82 Load 84(g_tTex2dmsu4a)
-              86:     71(ptr) AccessChain 29 70
-              87:   25(ivec3) Load 86
-              88:   49(ivec4) ImageFetch 85 87 Sample 33
-              89:          66 Load 68(g_tTex2dmsf4a)
-              90:     71(ptr) AccessChain 29 70
-              91:   25(ivec3) Load 90
-              92:    7(ivec2) FunctionCall 9(getOffset()
-              93:   12(fvec4) ImageFetch 89 91 Offset Sample 92 33
-              94:          75 Load 77(g_tTex2dmsi4a)
-              95:     71(ptr) AccessChain 29 70
-              96:   25(ivec3) Load 95
-              97:    7(ivec2) FunctionCall 9(getOffset()
-              98:   26(ivec4) ImageFetch 94 96 Offset Sample 97 33
-              99:          82 Load 84(g_tTex2dmsu4a)
-             100:     71(ptr) AccessChain 29 70
-             101:   25(ivec3) Load 100
-             102:    7(ivec2) FunctionCall 9(getOffset()
-             103:   49(ivec4) ImageFetch 99 101 Offset Sample 102 33
-             110:    109(ptr) AccessChain 105(psout) 106
-                              Store 110 108
-             112:    111(ptr) AccessChain 105(psout) 17
-                              Store 112 107
-             113:13(PS_OUTPUT) Load 105(psout)
-                              ReturnValue 113
+    54_3(@main():30_1(PS_OUTPUT) Function None 33_3
+           248_3:             Label
+    59_12(psout):  32_10(ptr) Variable Function
+            61_3:        25_1 Load 59_1(g_tTex2dmsf4)
+            65_3:   32_3(ptr) AccessChain 59_2 43_1
+            61_4: 23_1(ivec2) Load 65_3
+            95_1: 23_2(fvec4) ImageFetch 61_3 61_4 Sample 43_2
+            61_5:        25_2 Load 59_3(g_tTex2dmsi4)
+            65_4:   32_3(ptr) AccessChain 59_2 43_1
+            61_6: 23_1(ivec2) Load 65_4
+            95_2: 23_4(ivec4) ImageFetch 61_5 61_6 Sample 43_2
+            61_7:        25_3 Load 59_4(g_tTex2dmsu4)
+            65_5:   32_3(ptr) AccessChain 59_2 43_1
+            61_8: 23_1(ivec2) Load 65_5
+            95_3: 23_5(ivec4) ImageFetch 61_7 61_8 Sample 43_2
+            61_9:        25_1 Load 59_1(g_tTex2dmsf4)
+            65_6:   32_3(ptr) AccessChain 59_2 43_1
+           61_10: 23_1(ivec2) Load 65_6
+            57_2: 23_1(ivec2) FunctionCall 54_2(getOffset()
+            95_4: 23_2(fvec4) ImageFetch 61_9 61_10 Offset Sample 57_2 43_2
+           61_11:        25_2 Load 59_3(g_tTex2dmsi4)
+            65_7:   32_3(ptr) AccessChain 59_2 43_1
+           61_12: 23_1(ivec2) Load 65_7
+            57_3: 23_1(ivec2) FunctionCall 54_2(getOffset()
+            95_5: 23_4(ivec4) ImageFetch 61_11 61_12 Offset Sample 57_3 43_2
+           61_13:        25_3 Load 59_4(g_tTex2dmsu4)
+            65_8:   32_3(ptr) AccessChain 59_2 43_1
+           61_14: 23_1(ivec2) Load 65_8
+            57_4: 23_1(ivec2) FunctionCall 54_2(getOffset()
+            95_6: 23_5(ivec4) ImageFetch 61_13 61_14 Offset Sample 57_4 43_2
+           61_15:        25_4 Load 59_5(g_tTex2dmsf4a)
+            65_9:   32_7(ptr) AccessChain 59_2 43_3
+           61_16: 23_3(ivec3) Load 65_9
+            95_7: 23_2(fvec4) ImageFetch 61_15 61_16 Sample 43_2
+           61_17:        25_5 Load 59_6(g_tTex2dmsi4a)
+           65_10:   32_7(ptr) AccessChain 59_2 43_3
+           61_18: 23_3(ivec3) Load 65_10
+            95_8: 23_4(ivec4) ImageFetch 61_17 61_18 Sample 43_2
+           61_19:        25_6 Load 59_7(g_tTex2dmsu4a)
+           65_11:   32_7(ptr) AccessChain 59_2 43_3
+           61_20: 23_3(ivec3) Load 65_11
+            95_9: 23_5(ivec4) ImageFetch 61_19 61_20 Sample 43_2
+           61_21:        25_4 Load 59_5(g_tTex2dmsf4a)
+           65_12:   32_7(ptr) AccessChain 59_2 43_3
+           61_22: 23_3(ivec3) Load 65_12
+            57_5: 23_1(ivec2) FunctionCall 54_2(getOffset()
+           95_10: 23_2(fvec4) ImageFetch 61_21 61_22 Offset Sample 57_5 43_2
+           61_23:        25_5 Load 59_6(g_tTex2dmsi4a)
+           65_13:   32_7(ptr) AccessChain 59_2 43_3
+           61_24: 23_3(ivec3) Load 65_13
+            57_6: 23_1(ivec2) FunctionCall 54_2(getOffset()
+           95_11: 23_4(ivec4) ImageFetch 61_23 61_24 Offset Sample 57_6 43_2
+           61_25:        25_6 Load 59_7(g_tTex2dmsu4a)
+           65_14:   32_7(ptr) AccessChain 59_2 43_3
+           61_26: 23_3(ivec3) Load 65_14
+            57_7: 23_1(ivec2) FunctionCall 54_2(getOffset()
+           95_12: 23_5(ivec4) ImageFetch 61_25 61_26 Offset Sample 57_7 43_2
+           65_15:  32_11(ptr) AccessChain 59_12(psout) 43_4
+                              Store 65_15 44_2
+           65_16:  32_12(ptr) AccessChain 59_12(psout) 43_1
+                              Store 65_16 43_5
+           61_27:30_1(PS_OUTPUT) Load 59_12(psout)
+                              ReturnValue 61_27
                               FunctionEnd

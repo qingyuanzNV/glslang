@@ -6,183 +6,183 @@ spv.400.tese
                               Capability Tessellation
                               Capability TessellationPointSize
                               Capability ClipDistance
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationEvaluation 4  "main" 21 38 41 47 53 61 66 75 79 80 84 88 91 92 95
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 SpacingFractionalOdd
-                              ExecutionMode 4 VertexOrderCcw
-                              ExecutionMode 4 PointMode
+                              EntryPoint TessellationEvaluation 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8 59_9 59_10 59_11 59_12 59_13 59_14 59_15
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 SpacingFractionalOdd
+                              ExecutionMode 54_1 VertexOrderCcw
+                              ExecutionMode 54_1 PointMode
                               Source GLSL 400
                               SourceExtension  "GL_ARB_separate_shader_objects"
-                              Name 4  "main"
-                              Name 8  "a"
-                              Name 13  "p"
-                              Name 17  "gl_PerVertex"
-                              MemberName 17(gl_PerVertex) 0  "gl_Position"
-                              MemberName 17(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 17(gl_PerVertex) 2  "gl_ClipDistance"
-                              Name 21  "gl_in"
-                              Name 28  "ps"
-                              Name 32  "cd"
-                              Name 36  "pvi"
-                              Name 38  "gl_PatchVerticesIn"
-                              Name 40  "pid"
-                              Name 41  "gl_PrimitiveID"
-                              Name 45  "tc"
-                              Name 47  "gl_TessCoord"
-                              Name 49  "tlo"
-                              Name 53  "gl_TessLevelOuter"
-                              Name 57  "tli"
-                              Name 61  "gl_TessLevelInner"
-                              Name 64  "gl_PerVertex"
-                              MemberName 64(gl_PerVertex) 0  "gl_Position"
-                              MemberName 64(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 64(gl_PerVertex) 2  "gl_ClipDistance"
-                              Name 66  ""
-                              Name 75  "patchIn"
-                              Name 79  "inb"
-                              Name 80  "ind"
-                              Name 81  "testblb"
-                              MemberName 81(testblb) 0  "f"
-                              Name 84  "blb"
-                              Name 85  "testbld"
-                              MemberName 85(testbld) 0  "f"
-                              Name 88  "bld"
-                              Name 91  "ivla"
-                              Name 92  "ivlb"
-                              Name 95  "ovla"
-                              Decorate 17(gl_PerVertex) Block
-                              MemberDecorate 17(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 17(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 17(gl_PerVertex) 2 BuiltIn ClipDistance
-                              Decorate 38(gl_PatchVerticesIn) BuiltIn PatchVertices
-                              Decorate 41(gl_PrimitiveID) BuiltIn PrimitiveId
-                              Decorate 47(gl_TessCoord) BuiltIn TessCoord
-                              Decorate 53(gl_TessLevelOuter) BuiltIn TessLevelOuter
-                              Decorate 53(gl_TessLevelOuter) Patch
-                              Decorate 61(gl_TessLevelInner) BuiltIn TessLevelInner
-                              Decorate 61(gl_TessLevelInner) Patch
-                              Decorate 64(gl_PerVertex) Block
-                              MemberDecorate 64(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 64(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 64(gl_PerVertex) 2 BuiltIn ClipDistance
-                              Decorate 75(patchIn) Patch
-                              Decorate 75(patchIn) Location 0
-                              Decorate 79(inb) Location 1
-                              Decorate 80(ind) Location 2
-                              Decorate 81(testblb) Block
-                              Decorate 84(blb) Location 3
-                              Decorate 85(testbld) Block
-                              Decorate 88(bld) Location 4
-                              Decorate 91(ivla) Location 23
-                              Decorate 92(ivlb) Location 24
-                              Decorate 95(ovla) Location 23
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:      6(int) Constant 1512
-              10:             TypeFloat 32
-              11:             TypeVector 10(float) 4
-              12:             TypePointer Function 11(fvec4)
-              14:             TypeInt 32 0
-              15:     14(int) Constant 3
-              16:             TypeArray 10(float) 15
-17(gl_PerVertex):             TypeStruct 11(fvec4) 10(float) 16
-              18:     14(int) Constant 32
-              19:             TypeArray 17(gl_PerVertex) 18
-              20:             TypePointer Input 19
-       21(gl_in):     20(ptr) Variable Input
-              22:      6(int) Constant 1
-              23:      6(int) Constant 0
-              24:             TypePointer Input 11(fvec4)
-              27:             TypePointer Function 10(float)
-              29:             TypePointer Input 10(float)
-              33:      6(int) Constant 2
-              37:             TypePointer Input 6(int)
-38(gl_PatchVerticesIn):     37(ptr) Variable Input
-41(gl_PrimitiveID):     37(ptr) Variable Input
-              43:             TypeVector 10(float) 3
-              44:             TypePointer Function 43(fvec3)
-              46:             TypePointer Input 43(fvec3)
-47(gl_TessCoord):     46(ptr) Variable Input
-              50:     14(int) Constant 4
-              51:             TypeArray 10(float) 50
-              52:             TypePointer Input 51
-53(gl_TessLevelOuter):     52(ptr) Variable Input
-              54:      6(int) Constant 3
-              58:     14(int) Constant 2
-              59:             TypeArray 10(float) 58
-              60:             TypePointer Input 59
-61(gl_TessLevelInner):     60(ptr) Variable Input
-64(gl_PerVertex):             TypeStruct 11(fvec4) 10(float) 16
-              65:             TypePointer Output 64(gl_PerVertex)
-              66:     65(ptr) Variable Output
-              68:             TypePointer Output 11(fvec4)
-              71:             TypePointer Output 10(float)
-     75(patchIn):     24(ptr) Variable Input
-              76:             TypeVector 10(float) 2
-              77:             TypeArray 76(fvec2) 18
-              78:             TypePointer Input 77
-         79(inb):     78(ptr) Variable Input
-         80(ind):     78(ptr) Variable Input
-     81(testblb):             TypeStruct 6(int)
-              82:             TypeArray 81(testblb) 18
-              83:             TypePointer Input 82
-         84(blb):     83(ptr) Variable Input
-     85(testbld):             TypeStruct 6(int)
-              86:             TypeArray 85(testbld) 18
-              87:             TypePointer Input 86
-         88(bld):     87(ptr) Variable Input
-              89:             TypeArray 11(fvec4) 18
-              90:             TypePointer Input 89
-        91(ivla):     90(ptr) Variable Input
-        92(ivlb):     90(ptr) Variable Input
-              93:             TypeArray 11(fvec4) 58
-              94:             TypePointer Output 93
-        95(ovla):     94(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-            8(a):      7(ptr) Variable Function
-           13(p):     12(ptr) Variable Function
-          28(ps):     27(ptr) Variable Function
-          32(cd):     27(ptr) Variable Function
-         36(pvi):      7(ptr) Variable Function
-         40(pid):      7(ptr) Variable Function
-          45(tc):     44(ptr) Variable Function
-         49(tlo):     27(ptr) Variable Function
-         57(tli):     27(ptr) Variable Function
-                              Store 8(a) 9
-              25:     24(ptr) AccessChain 21(gl_in) 22 23
-              26:   11(fvec4) Load 25
-                              Store 13(p) 26
-              30:     29(ptr) AccessChain 21(gl_in) 22 22
-              31:   10(float) Load 30
-                              Store 28(ps) 31
-              34:     29(ptr) AccessChain 21(gl_in) 22 33 33
-              35:   10(float) Load 34
-                              Store 32(cd) 35
-              39:      6(int) Load 38(gl_PatchVerticesIn)
-                              Store 36(pvi) 39
-              42:      6(int) Load 41(gl_PrimitiveID)
-                              Store 40(pid) 42
-              48:   43(fvec3) Load 47(gl_TessCoord)
-                              Store 45(tc) 48
-              55:     29(ptr) AccessChain 53(gl_TessLevelOuter) 54
-              56:   10(float) Load 55
-                              Store 49(tlo) 56
-              62:     29(ptr) AccessChain 61(gl_TessLevelInner) 22
-              63:   10(float) Load 62
-                              Store 57(tli) 63
-              67:   11(fvec4) Load 13(p)
-              69:     68(ptr) AccessChain 66 23
-                              Store 69 67
-              70:   10(float) Load 28(ps)
-              72:     71(ptr) AccessChain 66 22
-                              Store 72 70
-              73:   10(float) Load 32(cd)
-              74:     71(ptr) AccessChain 66 33 33
-                              Store 74 73
+                              Name 54_1  "main"
+                              Name 59_16  "a"
+                              Name 59_17  "p"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_1(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_1(gl_PerVertex) 2  "gl_ClipDistance"
+                              Name 59_1  "gl_in"
+                              Name 59_18  "ps"
+                              Name 59_19  "cd"
+                              Name 59_20  "pvi"
+                              Name 59_2  "gl_PatchVerticesIn"
+                              Name 59_21  "pid"
+                              Name 59_3  "gl_PrimitiveID"
+                              Name 59_22  "tc"
+                              Name 59_4  "gl_TessCoord"
+                              Name 59_23  "tlo"
+                              Name 59_5  "gl_TessLevelOuter"
+                              Name 59_24  "tli"
+                              Name 59_6  "gl_TessLevelInner"
+                              Name 30_2  "gl_PerVertex"
+                              MemberName 30_2(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_2(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_2(gl_PerVertex) 2  "gl_ClipDistance"
+                              Name 59_7  ""
+                              Name 59_8  "patchIn"
+                              Name 59_9  "inb"
+                              Name 59_10  "ind"
+                              Name 30_3  "testblb"
+                              MemberName 30_3(testblb) 0  "f"
+                              Name 59_11  "blb"
+                              Name 30_4  "testbld"
+                              MemberName 30_4(testbld) 0  "f"
+                              Name 59_12  "bld"
+                              Name 59_13  "ivla"
+                              Name 59_14  "ivlb"
+                              Name 59_15  "ovla"
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_1(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_1(gl_PerVertex) 2 BuiltIn ClipDistance
+                              Decorate 59_2(gl_PatchVerticesIn) BuiltIn PatchVertices
+                              Decorate 59_3(gl_PrimitiveID) BuiltIn PrimitiveId
+                              Decorate 59_4(gl_TessCoord) BuiltIn TessCoord
+                              Decorate 59_5(gl_TessLevelOuter) BuiltIn TessLevelOuter
+                              Decorate 59_5(gl_TessLevelOuter) Patch
+                              Decorate 59_6(gl_TessLevelInner) BuiltIn TessLevelInner
+                              Decorate 59_6(gl_TessLevelInner) Patch
+                              Decorate 30_2(gl_PerVertex) Block
+                              MemberDecorate 30_2(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_2(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_2(gl_PerVertex) 2 BuiltIn ClipDistance
+                              Decorate 59_8(patchIn) Patch
+                              Decorate 59_8(patchIn) Location 0
+                              Decorate 59_9(inb) Location 1
+                              Decorate 59_10(ind) Location 2
+                              Decorate 30_3(testblb) Block
+                              Decorate 59_11(blb) Location 3
+                              Decorate 30_4(testbld) Block
+                              Decorate 59_12(bld) Location 4
+                              Decorate 59_13(ivla) Location 23
+                              Decorate 59_14(ivlb) Location 24
+                              Decorate 59_15(ovla) Location 23
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 1512
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_2:             TypePointer Function 23_1(fvec4)
+            21_2:             TypeInt 32 0
+         uint(3):   21_2(int) Constant 3
+            28_1:             TypeArray 22_1(float) uint(3)
+30_1(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float) 28_1
+        uint(32):   21_2(int) Constant 32
+            28_2:             TypeArray 30_1(gl_PerVertex) uint(32)
+            32_3:             TypePointer Input 28_2
+     59_1(gl_in):   32_3(ptr) Variable Input
+            43_2:   21_1(int) Constant 1
+            43_3:   21_1(int) Constant 0
+            32_4:             TypePointer Input 23_1(fvec4)
+            32_5:             TypePointer Function 22_1(float)
+            32_6:             TypePointer Input 22_1(float)
+            43_4:   21_1(int) Constant 2
+            32_7:             TypePointer Input 21_1(int)
+59_2(gl_PatchVerticesIn):   32_7(ptr) Variable Input
+59_3(gl_PrimitiveID):   32_7(ptr) Variable Input
+            23_2:             TypeVector 22_1(float) 3
+            32_8:             TypePointer Function 23_2(fvec3)
+            32_9:             TypePointer Input 23_2(fvec3)
+59_4(gl_TessCoord):   32_9(ptr) Variable Input
+         uint(4):   21_2(int) Constant 4
+            28_3:             TypeArray 22_1(float) uint(4)
+           32_10:             TypePointer Input 28_3
+59_5(gl_TessLevelOuter):  32_10(ptr) Variable Input
+            43_5:   21_1(int) Constant 3
+         uint(2):   21_2(int) Constant 2
+            28_4:             TypeArray 22_1(float) uint(2)
+           32_11:             TypePointer Input 28_4
+59_6(gl_TessLevelInner):  32_11(ptr) Variable Input
+30_2(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float) 28_1
+           32_12:             TypePointer Output 30_2(gl_PerVertex)
+            59_7:  32_12(ptr) Variable Output
+           32_13:             TypePointer Output 23_1(fvec4)
+           32_14:             TypePointer Output 22_1(float)
+   59_8(patchIn):   32_4(ptr) Variable Input
+            23_3:             TypeVector 22_1(float) 2
+            28_5:             TypeArray 23_3(fvec2) uint(32)
+           32_15:             TypePointer Input 28_5
+       59_9(inb):  32_15(ptr) Variable Input
+      59_10(ind):  32_15(ptr) Variable Input
+   30_3(testblb):             TypeStruct 21_1(int)
+            28_6:             TypeArray 30_3(testblb) uint(32)
+           32_16:             TypePointer Input 28_6
+      59_11(blb):  32_16(ptr) Variable Input
+   30_4(testbld):             TypeStruct 21_1(int)
+            28_7:             TypeArray 30_4(testbld) uint(32)
+           32_17:             TypePointer Input 28_7
+      59_12(bld):  32_17(ptr) Variable Input
+            28_8:             TypeArray 23_1(fvec4) uint(32)
+           32_18:             TypePointer Input 28_8
+     59_13(ivla):  32_18(ptr) Variable Input
+     59_14(ivlb):  32_18(ptr) Variable Input
+            28_9:             TypeArray 23_1(fvec4) uint(2)
+           32_19:             TypePointer Output 28_9
+     59_15(ovla):  32_19(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_16(a):   32_1(ptr) Variable Function
+        59_17(p):   32_2(ptr) Variable Function
+       59_18(ps):   32_5(ptr) Variable Function
+       59_19(cd):   32_5(ptr) Variable Function
+      59_20(pvi):   32_1(ptr) Variable Function
+      59_21(pid):   32_1(ptr) Variable Function
+       59_22(tc):   32_8(ptr) Variable Function
+      59_23(tlo):   32_5(ptr) Variable Function
+      59_24(tli):   32_5(ptr) Variable Function
+                              Store 59_16(a) 43_1
+            65_1:   32_4(ptr) AccessChain 59_1(gl_in) 43_2 43_3
+            61_1: 23_1(fvec4) Load 65_1
+                              Store 59_17(p) 61_1
+            65_2:   32_6(ptr) AccessChain 59_1(gl_in) 43_2 43_2
+            61_2: 22_1(float) Load 65_2
+                              Store 59_18(ps) 61_2
+            65_3:   32_6(ptr) AccessChain 59_1(gl_in) 43_2 43_4 43_4
+            61_3: 22_1(float) Load 65_3
+                              Store 59_19(cd) 61_3
+            61_4:   21_1(int) Load 59_2(gl_PatchVerticesIn)
+                              Store 59_20(pvi) 61_4
+            61_5:   21_1(int) Load 59_3(gl_PrimitiveID)
+                              Store 59_21(pid) 61_5
+            61_6: 23_2(fvec3) Load 59_4(gl_TessCoord)
+                              Store 59_22(tc) 61_6
+            65_4:   32_6(ptr) AccessChain 59_5(gl_TessLevelOuter) 43_5
+            61_7: 22_1(float) Load 65_4
+                              Store 59_23(tlo) 61_7
+            65_5:   32_6(ptr) AccessChain 59_6(gl_TessLevelInner) 43_2
+            61_8: 22_1(float) Load 65_5
+                              Store 59_24(tli) 61_8
+            61_9: 23_1(fvec4) Load 59_17(p)
+            65_6:  32_13(ptr) AccessChain 59_7 43_3
+                              Store 65_6 61_9
+           61_10: 22_1(float) Load 59_18(ps)
+            65_7:  32_14(ptr) AccessChain 59_7 43_2
+                              Store 65_7 61_10
+           61_11: 22_1(float) Load 59_19(cd)
+            65_8:  32_14(ptr) AccessChain 59_7 43_4 43_4
+                              Store 65_8 61_11
                               Return
                               FunctionEnd

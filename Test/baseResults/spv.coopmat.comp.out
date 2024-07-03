@@ -14,362 +14,362 @@ spv.coopmat.comp
                               Extension  "SPV_KHR_storage_buffer_storage_class"
                               Extension  "SPV_KHR_vulkan_memory_model"
                               Extension  "SPV_NV_cooperative_matrix"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT VulkanKHR
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 64 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 64 1 1
                               Source GLSL 450
                               SourceExtension  "GL_EXT_buffer_reference"
                               SourceExtension  "GL_EXT_shader_explicit_arithmetic_types_float16"
                               SourceExtension  "GL_KHR_memory_scope_semantics"
                               SourceExtension  "GL_NV_cooperative_matrix"
-                              Name 4  "main"
-                              Name 14  "f16(f161;"
-                              Name 13  "m"
-                              Name 21  "f32(f1;"
-                              Name 20  "m"
-                              Name 34  "m"
-                              Name 52  "m2"
-                              Name 56  "x"
-                              Name 64  "tempArg"
-                              Name 68  "Block"
-                              MemberName 68(Block) 0  "y"
-                              MemberName 68(Block) 1  "x"
-                              Name 70  "block"
-                              Name 81  "tempArg"
-                              Name 86  "Block16"
-                              MemberName 86(Block16) 0  "y"
-                              MemberName 86(Block16) 1  "x"
-                              MemberName 86(Block16) 2  "b"
-                              Name 89  "Block"
-                              MemberName 89(Block) 0  "y"
-                              MemberName 89(Block) 1  "x"
-                              Name 91  "block16"
-                              Name 98  "tempArg"
-                              Name 111  "D"
-                              Name 112  "A"
-                              Name 114  "B"
-                              Name 116  "C"
-                              Name 120  "l"
-                              Name 124  "Y"
-                              Name 125  "Z"
-                              Name 128  "F"
-                              Name 133  "a"
-                              Name 137  "md1"
-                              Name 148  "mC2"
-                              Name 153  "tempArg"
-                              Name 159  "tempArg"
-                              Name 165  "p1"
-                              Name 166  "param"
-                              Name 169  "p2"
-                              Name 170  "param"
-                              Name 184  "tempArg"
-                              Name 189  "shmatrix"
-                              Name 194  "ms"
-                              Name 201  "mC"
-                              Name 206  "arr"
-                              Name 211  "arr2"
-                              Name 212  "F"
-                              Name 217  "S"
-                              MemberName 217(S) 0  "a"
-                              MemberName 217(S) 1  "b"
-                              MemberName 217(S) 2  "c"
-                              Name 222  "SC"
-                              Name 227  "scm"
-                              Decorate 66 ArrayStride 4
-                              Decorate 67 ArrayStride 4
-                              Decorate 68(Block) Block
-                              MemberDecorate 68(Block) 0 Offset 0
-                              MemberDecorate 68(Block) 1 Offset 4194304
-                              Decorate 70(block) Binding 0
-                              Decorate 70(block) DescriptorSet 0
-                              Decorate 82 ArrayStride 2
-                              Decorate 84 ArrayStride 2
-                              Decorate 86(Block16) Block
-                              MemberDecorate 86(Block16) 0 Offset 0
-                              MemberDecorate 86(Block16) 1 Offset 2097152
-                              MemberDecorate 86(Block16) 2 Offset 2097160
-                              Decorate 87 ArrayStride 4
-                              Decorate 88 ArrayStride 4
-                              Decorate 89(Block) Block
-                              MemberDecorate 89(Block) 0 Offset 0
-                              MemberDecorate 89(Block) 1 Offset 4194304
-                              Decorate 91(block16) Binding 0
-                              Decorate 91(block16) DescriptorSet 0
-                              Decorate 124(Y) SpecId 0
-                              Decorate 200 BuiltIn WorkgroupSize
-                              Decorate 212(F) SpecId 1
-                              Decorate 222(SC) SpecId 2
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 16
-               7:             TypeInt 32 0
-               8:      7(int) Constant 3
-               9:      7(int) Constant 8
-              10:             TypeCooperativeMatrixNV 6(float16_t) 8 9 9
-              11:             TypePointer Function 10
-              12:             TypeFunction 10 11(ptr)
-              16:             TypeFloat 32
-              17:             TypeCooperativeMatrixNV 16(float) 8 9 9
-              18:             TypePointer Function 17
-              19:             TypeFunction 17 18(ptr)
-              31:      7(int) Constant 16
-              32:             TypeCooperativeMatrixNV 16(float) 8 31 9
-              33:             TypePointer Function 32
-              35:   16(float) Constant 0
-              36:          32 ConstantComposite 35
-              45:   16(float) Constant 1073741824
-              50:             TypeCooperativeMatrixNV 6(float16_t) 8 31 9
-              51:             TypePointer Function 50
-              55:             TypePointer Function 16(float)
-              57:             TypeInt 32 1
-              58:     57(int) Constant 1
-              61:     57(int) Constant 0
-              65:      7(int) Constant 1048576
-              66:             TypeArray 16(float) 65
-              67:             TypeRuntimeArray 16(float)
-       68(Block):             TypeStruct 66 67
-              69:             TypePointer StorageBuffer 68(Block)
-       70(block):     69(ptr) Variable StorageBuffer
-              71:      7(int) Constant 5
-              72:             TypePointer StorageBuffer 16(float)
-              74:      7(int) Constant 128
-              75:             TypeBool
-              76:    75(bool) ConstantFalse
-              82:             TypeArray 6(float16_t) 65
-              83:      7(int) Constant 1
-              84:             TypeArray 6(float16_t) 83
-                              TypeForwardPointer 85 PhysicalStorageBufferEXT
-     86(Block16):             TypeStruct 82 84 85
-              87:             TypeArray 16(float) 65
-              88:             TypeRuntimeArray 16(float)
-       89(Block):             TypeStruct 87 88
-              85:             TypePointer PhysicalStorageBufferEXT 89(Block)
-              90:             TypePointer StorageBuffer 86(Block16)
-     91(block16):     90(ptr) Variable StorageBuffer
-              92:             TypePointer StorageBuffer 6(float16_t)
-              99:     57(int) Constant 2
-             100:             TypePointer StorageBuffer 85(ptr)
-             103:             TypePointer PhysicalStorageBufferEXT 16(float)
-             119:             TypePointer Function 57(int)
-             121:      7(int) SpecConstantOp 5362 32
-             122:     57(int) SpecConstantOp 128 121 61
-             123:     57(int) Constant 8
-          124(Y):     57(int) SpecConstant 2
-          125(Z):     57(int) SpecConstantOp 132 123 124(Y)
-             126:             TypeCooperativeMatrixNV 6(float16_t) 8 125(Z) 125(Z)
-             127:             TypePointer Function 126
-             129:6(float16_t) Constant 0
-             130:         126 ConstantComposite 129
-             131:             TypeArray 32 71
-             132:             TypePointer Function 131
-             134:     57(int) Constant 3
-             135:   16(float) Constant 1065353216
-             141:     57(int) Constant 1234
-             145:             TypeCooperativeMatrixNV 6(float16_t) 8 125(Z) 9
-             146:             TypeArray 145 8
-             147:             TypePointer Private 146
-        148(mC2):    147(ptr) Variable Private
-             149:             TypePointer Private 145
-             173:          10 ConstantComposite 129
-             174:          17 ConstantComposite 35
-             178:6(float16_t) Constant 16384
-             181:   16(float) Constant 1082130432
-             185:             TypeVector 7(int) 4
-             186:      7(int) Constant 32
-             187:             TypeArray 185(ivec4) 186
-             188:             TypePointer Workgroup 187
-   189(shmatrix):    188(ptr) Variable Workgroup
-             190:      7(int) Constant 2
-             191:             TypePointer Workgroup 185(ivec4)
-             198:             TypeVector 7(int) 3
-             199:      7(int) Constant 64
-             200:  198(ivec3) ConstantComposite 199 83 83
-         201(mC):    149(ptr) Variable Private
-             202:      7(int) SpecConstantOp 5362 145
-             203:     57(int) SpecConstantOp 128 202 61
-             204:             TypeArray 57(int) 203
-             205:             TypePointer Private 204
-        206(arr):    205(ptr) Variable Private
-             207:      7(int) SpecConstantOp 5362 145
-             208:     57(int) SpecConstantOp 128 207 61
-             209:             TypeArray 57(int) 208
-             210:             TypePointer Private 209
-       211(arr2):    210(ptr) Variable Private
-          212(F):   16(float) SpecConstant 1077936128
-             213:             TypeCooperativeMatrixNV 16(float) 8 125(Z) 9
-             214:         213 ConstantComposite 35
-             215:6(float16_t) Constant 15360
-             216:          10 ConstantComposite 215
-          217(S):             TypeStruct 57(int) 57(int) 57(int)
-             218:     57(int) Constant 12
-             219:     57(int) Constant 23
-             220:     57(int) Constant 34
-             221:      217(S) ConstantComposite 218 219 220
-         222(SC):     57(int) SpecConstant 1
-             223:             TypeCooperativeMatrixNV 6(float16_t) 8 222(SC) 222(SC)
-             224:             TypeArray 223 222(SC)
-             225:             TypeArray 224 222(SC)
-             226:             TypePointer Private 225
-        227(scm):    226(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-           34(m):     33(ptr) Variable Function
-          52(m2):     51(ptr) Variable Function
-           56(x):     55(ptr) Variable Function
-     64(tempArg):     33(ptr) Variable Function
-     81(tempArg):     51(ptr) Variable Function
-     98(tempArg):     33(ptr) Variable Function
-          111(D):     33(ptr) Variable Function
-          112(A):     51(ptr) Variable Function
-          114(B):     11(ptr) Variable Function
-          116(C):     33(ptr) Variable Function
-          120(l):    119(ptr) Variable Function
-          128(F):    127(ptr) Variable Function
-          133(a):    132(ptr) Variable Function
-        137(md1):     55(ptr) Variable Function
-    153(tempArg):     33(ptr) Variable Function
-    159(tempArg):     51(ptr) Variable Function
-         165(p1):     11(ptr) Variable Function
-      166(param):     11(ptr) Variable Function
-         169(p2):     18(ptr) Variable Function
-      170(param):     18(ptr) Variable Function
-    184(tempArg):     51(ptr) Variable Function
-         194(ms):     51(ptr) Variable Function
-                              Store 34(m) 36
-              37:          32 Load 34(m)
-              38:          32 Load 34(m)
-              39:          32 FAdd 37 38
-                              Store 34(m) 39
-              40:          32 Load 34(m)
-              41:          32 Load 34(m)
-              42:          32 FSub 40 41
-                              Store 34(m) 42
-              43:          32 Load 34(m)
-              44:          32 FNegate 43
-                              Store 34(m) 44
-              46:          32 Load 34(m)
-              47:          32 MatrixTimesScalar 46 45
-                              Store 34(m) 47
-              48:          32 Load 34(m)
-              49:          32 MatrixTimesScalar 48 45
-                              Store 34(m) 49
-              53:          32 Load 34(m)
-              54:          50 FConvert 53
-                              Store 52(m2) 54
-              59:     55(ptr) AccessChain 34(m) 58
-              60:   16(float) Load 59
-                              Store 56(x) 60
-              62:   16(float) Load 56(x)
-              63:     55(ptr) AccessChain 34(m) 61
-                              Store 63 62
-              73:     72(ptr) AccessChain 70(block) 58 31
-              77:          32 CooperativeMatrixLoadNV 73 74 76 MakePointerVisibleKHR NonPrivatePointerKHR 71
-                              Store 64(tempArg) 77
-              78:          32 Load 64(tempArg)
-                              Store 34(m) 78
-              79:          32 Load 34(m)
-              80:     72(ptr) AccessChain 70(block) 58 31
-                              CooperativeMatrixStoreNV 80 79 74 76 MakePointerAvailableKHR NonPrivatePointerKHR 71
-              93:     92(ptr) AccessChain 91(block16) 58 31
-              94:          50 CooperativeMatrixLoadNV 93 74 76 MakePointerVisibleKHR NonPrivatePointerKHR 71
-                              Store 81(tempArg) 94
-              95:          50 Load 81(tempArg)
-                              Store 52(m2) 95
-              96:          50 Load 52(m2)
-              97:     92(ptr) AccessChain 91(block16) 58 31
-                              CooperativeMatrixStoreNV 97 96 74 76 MakePointerAvailableKHR NonPrivatePointerKHR 71
-             101:    100(ptr) AccessChain 91(block16) 99
-             102:     85(ptr) Load 101 MakePointerVisibleKHR NonPrivatePointerKHR 71
-             104:    103(ptr) AccessChain 102 58 31
-             105:          32 CooperativeMatrixLoadNV 104 74 76 Aligned MakePointerVisibleKHR NonPrivatePointerKHR 16 71
-                              Store 98(tempArg) 105
-             106:          32 Load 98(tempArg)
-                              Store 34(m) 106
-             107:          32 Load 34(m)
-             108:    100(ptr) AccessChain 91(block16) 99
-             109:     85(ptr) Load 108 MakePointerVisibleKHR NonPrivatePointerKHR 71
-             110:    103(ptr) AccessChain 109 58 31
-                              CooperativeMatrixStoreNV 110 107 74 76 Aligned MakePointerAvailableKHR NonPrivatePointerKHR 16 71
-             113:          50 Load 112(A)
-             115:          10 Load 114(B)
-             117:          32 Load 116(C)
-             118:          32 CooperativeMatrixMulAddNV 113 115 117
-                              Store 111(D) 118
-                              Store 120(l) 122
-                              Store 128(F) 130
-             136:     55(ptr) AccessChain 133(a) 134 61
-                              Store 136 135
-                              Store 137(md1) 35
-             138:          32 Load 34(m)
-             139:          32 Load 34(m)
-             140:          32 FAdd 139 138
-                              Store 34(m) 140
-             142:   16(float) CompositeExtract 140 1234
-             143:   16(float) Load 137(md1)
-             144:   16(float) FAdd 143 142
-                              Store 137(md1) 144
-             150:    149(ptr) AccessChain 148(mC2) 99
-             151:         145 Load 150
-             152:    149(ptr) AccessChain 148(mC2) 58
-                              Store 152 151
-             154:     72(ptr) AccessChain 70(block) 61 31
-             155:          32 CooperativeMatrixLoadNV 154 74 76 MakePointerVisibleKHR NonPrivatePointerKHR 71
-                              Store 153(tempArg) 155
-             156:          32 Load 153(tempArg)
-                              Store 34(m) 156
-             157:          32 Load 34(m)
-             158:     72(ptr) AccessChain 70(block) 61 31
-                              CooperativeMatrixStoreNV 158 157 74 76 MakePointerAvailableKHR NonPrivatePointerKHR 71
-             160:     92(ptr) AccessChain 91(block16) 61 31
-             161:          50 CooperativeMatrixLoadNV 160 74 76 MakePointerVisibleKHR NonPrivatePointerKHR 71
-                              Store 159(tempArg) 161
-             162:          50 Load 159(tempArg)
-                              Store 52(m2) 162
-             163:          50 Load 52(m2)
-             164:     92(ptr) AccessChain 91(block16) 61 31
-                              CooperativeMatrixStoreNV 164 163 74 76 MakePointerAvailableKHR NonPrivatePointerKHR 71
-             167:          10 Load 165(p1)
-                              Store 166(param) 167
-             168:          10 FunctionCall 14(f16(f161;) 166(param)
-                              Store 165(p1) 168
-             171:          17 Load 169(p2)
-                              Store 170(param) 171
-             172:          17 FunctionCall 21(f32(f1;) 170(param)
-                              Store 169(p2) 172
-                              Store 165(p1) 173
-                              Store 169(p2) 174
-             175:          10 Load 165(p1)
-             176:          10 Load 165(p1)
-             177:          10 FDiv 176 175
-                              Store 165(p1) 177
-             179:          10 Load 165(p1)
-             180:          10 MatrixTimesScalar 179 178
-                              Store 165(p1) 180
-             182:          17 Load 169(p2)
-             183:          17 MatrixTimesScalar 182 181
-                              Store 169(p2) 183
-             192:    191(ptr) AccessChain 189(shmatrix) 83
-             193:          50 CooperativeMatrixLoadNV 192 190 76 MakePointerVisibleKHR NonPrivatePointerKHR 190
-                              Store 184(tempArg) 193
-             195:          50 Load 184(tempArg)
-                              Store 194(ms) 195
-             196:          50 Load 194(ms)
-             197:    191(ptr) AccessChain 189(shmatrix) 83
-                              CooperativeMatrixStoreNV 197 196 190 76 MakePointerAvailableKHR NonPrivatePointerKHR 190
+                              Name 54_1  "main"
+                              Name 54_2  "f16(f161;"
+                              Name 55_1  "m"
+                              Name 54_3  "f32(f1;"
+                              Name 55_2  "m"
+                              Name 59_9  "m"
+                              Name 59_10  "m2"
+                              Name 59_11  "x"
+                              Name 59_12  "tempArg"
+                              Name 30_1  "Block"
+                              MemberName 30_1(Block) 0  "y"
+                              MemberName 30_1(Block) 1  "x"
+                              Name 59_1  "block"
+                              Name 59_13  "tempArg"
+                              Name 30_2  "Block16"
+                              MemberName 30_2(Block16) 0  "y"
+                              MemberName 30_2(Block16) 1  "x"
+                              MemberName 30_2(Block16) 2  "b"
+                              Name 30_3  "Block"
+                              MemberName 30_3(Block) 0  "y"
+                              MemberName 30_3(Block) 1  "x"
+                              Name 59_2  "block16"
+                              Name 59_14  "tempArg"
+                              Name 59_15  "D"
+                              Name 59_16  "A"
+                              Name 59_17  "B"
+                              Name 59_18  "C"
+                              Name 59_19  "l"
+                              Name 50_1  "Y"
+                              Name 52_3  "Z"
+                              Name 59_20  "F"
+                              Name 59_21  "a"
+                              Name 59_22  "md1"
+                              Name 59_3  "mC2"
+                              Name 59_23  "tempArg"
+                              Name 59_24  "tempArg"
+                              Name 59_25  "p1"
+                              Name 59_26  "param"
+                              Name 59_27  "p2"
+                              Name 59_28  "param"
+                              Name 59_29  "tempArg"
+                              Name 59_4  "shmatrix"
+                              Name 59_30  "ms"
+                              Name 59_5  "mC"
+                              Name 59_6  "arr"
+                              Name 59_7  "arr2"
+                              Name 50_2  "F"
+                              Name 30_4  "S"
+                              MemberName 30_4(S) 0  "a"
+                              MemberName 30_4(S) 1  "b"
+                              MemberName 30_4(S) 2  "c"
+                              Name 50_3  "SC"
+                              Name 59_8  "scm"
+                              Decorate 28_1 ArrayStride 4
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_1(Block) Block
+                              MemberDecorate 30_1(Block) 0 Offset 0
+                              MemberDecorate 30_1(Block) 1 Offset 4194304
+                              Decorate 59_1(block) Binding 0
+                              Decorate 59_1(block) DescriptorSet 0
+                              Decorate 28_2 ArrayStride 2
+                              Decorate 28_3 ArrayStride 2
+                              Decorate 30_2(Block16) Block
+                              MemberDecorate 30_2(Block16) 0 Offset 0
+                              MemberDecorate 30_2(Block16) 1 Offset 2097152
+                              MemberDecorate 30_2(Block16) 2 Offset 2097160
+                              Decorate 28_4 ArrayStride 4
+                              Decorate 29_2 ArrayStride 4
+                              Decorate 30_3(Block) Block
+                              MemberDecorate 30_3(Block) 0 Offset 0
+                              MemberDecorate 30_3(Block) 1 Offset 4194304
+                              Decorate 59_2(block16) Binding 0
+                              Decorate 59_2(block16) DescriptorSet 0
+                              Decorate 50_1(Y) SpecId 0
+                              Decorate 44_5 BuiltIn WorkgroupSize
+                              Decorate 50_2(F) SpecId 1
+                              Decorate 50_3(SC) SpecId 2
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 16
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+         uint(8):   21_1(int) Constant 8
+          5358_1:             TypeCooperativeMatrixNV 22_1(float16_t) uint(3) uint(8) uint(8)
+            32_1:             TypePointer Function 5358_1
+            33_2:             TypeFunction 5358_1 32_1(ptr)
+            22_2:             TypeFloat 32
+          5358_2:             TypeCooperativeMatrixNV 22_2(float) uint(3) uint(8) uint(8)
+            32_2:             TypePointer Function 5358_2
+            33_3:             TypeFunction 5358_2 32_2(ptr)
+        uint(16):   21_1(int) Constant 16
+          5358_3:             TypeCooperativeMatrixNV 22_2(float) uint(3) uint(16) uint(8)
+            32_3:             TypePointer Function 5358_3
+            43_1: 22_2(float) Constant 0
+            44_1:      5358_3 ConstantComposite 43_1
+            43_2: 22_2(float) Constant 1073741824
+          5358_4:             TypeCooperativeMatrixNV 22_1(float16_t) uint(3) uint(16) uint(8)
+            32_4:             TypePointer Function 5358_4
+            32_5:             TypePointer Function 22_2(float)
+            21_2:             TypeInt 32 1
+            43_3:   21_2(int) Constant 1
+            43_4:   21_2(int) Constant 0
+   uint(1048576):   21_1(int) Constant 1048576
+            28_1:             TypeArray 22_2(float) uint(1048576)
+            29_1:             TypeRuntimeArray 22_2(float)
+     30_1(Block):             TypeStruct 28_1 29_1
+            32_6:             TypePointer StorageBuffer 30_1(Block)
+     59_1(block):   32_6(ptr) Variable StorageBuffer
+         uint(5):   21_1(int) Constant 5
+            32_7:             TypePointer StorageBuffer 22_2(float)
+       uint(128):   21_1(int) Constant 128
+            20_1:             TypeBool
+            42_1:  20_1(bool) ConstantFalse
+            28_2:             TypeArray 22_1(float16_t) uint(1048576)
+         uint(1):   21_1(int) Constant 1
+            28_3:             TypeArray 22_1(float16_t) uint(1)
+                              TypeForwardPointer 32_8 PhysicalStorageBufferEXT
+   30_2(Block16):             TypeStruct 28_2 28_3 32_8
+            28_4:             TypeArray 22_2(float) uint(1048576)
+            29_2:             TypeRuntimeArray 22_2(float)
+     30_3(Block):             TypeStruct 28_4 29_2
+            32_8:             TypePointer PhysicalStorageBufferEXT 30_3(Block)
+            32_9:             TypePointer StorageBuffer 30_2(Block16)
+   59_2(block16):   32_9(ptr) Variable StorageBuffer
+           32_10:             TypePointer StorageBuffer 22_1(float16_t)
+            43_5:   21_2(int) Constant 2
+           32_11:             TypePointer StorageBuffer 32_8(ptr)
+           32_12:             TypePointer PhysicalStorageBufferEXT 22_2(float)
+           32_13:             TypePointer Function 21_2(int)
+            52_1:   21_1(int) SpecConstantOp 5362 5358_3
+            52_2:   21_2(int) SpecConstantOp 128 52_1 43_4
+            43_6:   21_2(int) Constant 8
+         50_1(Y):   21_2(int) SpecConstant 2
+         52_3(Z):   21_2(int) SpecConstantOp 132 43_6 50_1(Y)
+          5358_5:             TypeCooperativeMatrixNV 22_1(float16_t) uint(3) 52_3(Z) 52_3(Z)
+           32_14:             TypePointer Function 5358_5
+            43_7:22_1(float16_t) Constant 0
+            44_2:      5358_5 ConstantComposite 43_7
+            28_5:             TypeArray 5358_3 uint(5)
+           32_15:             TypePointer Function 28_5
+            43_8:   21_2(int) Constant 3
+            43_9: 22_2(float) Constant 1065353216
+           43_10:   21_2(int) Constant 1234
+          5358_6:             TypeCooperativeMatrixNV 22_1(float16_t) uint(3) 52_3(Z) uint(8)
+            28_6:             TypeArray 5358_6 uint(3)
+           32_16:             TypePointer Private 28_6
+       59_3(mC2):  32_16(ptr) Variable Private
+           32_17:             TypePointer Private 5358_6
+            44_3:      5358_1 ConstantComposite 43_7
+            44_4:      5358_2 ConstantComposite 43_1
+           43_11:22_1(float16_t) Constant 16384
+           43_12: 22_2(float) Constant 1082130432
+            23_1:             TypeVector 21_1(int) 4
+        uint(32):   21_1(int) Constant 32
+            28_7:             TypeArray 23_1(ivec4) uint(32)
+           32_18:             TypePointer Workgroup 28_7
+  59_4(shmatrix):  32_18(ptr) Variable Workgroup
+         uint(2):   21_1(int) Constant 2
+           32_19:             TypePointer Workgroup 23_1(ivec4)
+            23_2:             TypeVector 21_1(int) 3
+        uint(64):   21_1(int) Constant 64
+            44_5: 23_2(ivec3) ConstantComposite uint(64) uint(1) uint(1)
+        59_5(mC):  32_17(ptr) Variable Private
+            52_4:   21_1(int) SpecConstantOp 5362 5358_6
+            52_5:   21_2(int) SpecConstantOp 128 52_4 43_4
+            28_8:             TypeArray 21_2(int) 52_5
+           32_20:             TypePointer Private 28_8
+       59_6(arr):  32_20(ptr) Variable Private
+            52_6:   21_1(int) SpecConstantOp 5362 5358_6
+            52_7:   21_2(int) SpecConstantOp 128 52_6 43_4
+            28_9:             TypeArray 21_2(int) 52_7
+           32_21:             TypePointer Private 28_9
+      59_7(arr2):  32_21(ptr) Variable Private
+         50_2(F): 22_2(float) SpecConstant 1077936128
+          5358_7:             TypeCooperativeMatrixNV 22_2(float) uint(3) 52_3(Z) uint(8)
+            44_6:      5358_7 ConstantComposite 43_1
+           43_13:22_1(float16_t) Constant 15360
+            44_7:      5358_1 ConstantComposite 43_13
+         30_4(S):             TypeStruct 21_2(int) 21_2(int) 21_2(int)
+           43_14:   21_2(int) Constant 12
+           43_15:   21_2(int) Constant 23
+           43_16:   21_2(int) Constant 34
+            44_8:     30_4(S) ConstantComposite 43_14 43_15 43_16
+        50_3(SC):   21_2(int) SpecConstant 1
+          5358_8:             TypeCooperativeMatrixNV 22_1(float16_t) uint(3) 50_3(SC) 50_3(SC)
+           28_10:             TypeArray 5358_8 50_3(SC)
+           28_11:             TypeArray 28_10 50_3(SC)
+           32_22:             TypePointer Private 28_11
+       59_8(scm):  32_22(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_9(m):   32_3(ptr) Variable Function
+       59_10(m2):   32_4(ptr) Variable Function
+        59_11(x):   32_5(ptr) Variable Function
+  59_12(tempArg):   32_3(ptr) Variable Function
+  59_13(tempArg):   32_4(ptr) Variable Function
+  59_14(tempArg):   32_3(ptr) Variable Function
+        59_15(D):   32_3(ptr) Variable Function
+        59_16(A):   32_4(ptr) Variable Function
+        59_17(B):   32_1(ptr) Variable Function
+        59_18(C):   32_3(ptr) Variable Function
+        59_19(l):  32_13(ptr) Variable Function
+        59_20(F):  32_14(ptr) Variable Function
+        59_21(a):  32_15(ptr) Variable Function
+      59_22(md1):   32_5(ptr) Variable Function
+  59_23(tempArg):   32_3(ptr) Variable Function
+  59_24(tempArg):   32_4(ptr) Variable Function
+       59_25(p1):   32_1(ptr) Variable Function
+    59_26(param):   32_1(ptr) Variable Function
+       59_27(p2):   32_2(ptr) Variable Function
+    59_28(param):   32_2(ptr) Variable Function
+  59_29(tempArg):   32_4(ptr) Variable Function
+       59_30(ms):   32_4(ptr) Variable Function
+                              Store 59_9(m) 44_1
+            61_1:      5358_3 Load 59_9(m)
+            61_2:      5358_3 Load 59_9(m)
+           129_1:      5358_3 FAdd 61_1 61_2
+                              Store 59_9(m) 129_1
+            61_3:      5358_3 Load 59_9(m)
+            61_4:      5358_3 Load 59_9(m)
+           131_1:      5358_3 FSub 61_3 61_4
+                              Store 59_9(m) 131_1
+            61_5:      5358_3 Load 59_9(m)
+           127_1:      5358_3 FNegate 61_5
+                              Store 59_9(m) 127_1
+            61_6:      5358_3 Load 59_9(m)
+           143_1:      5358_3 MatrixTimesScalar 61_6 43_2
+                              Store 59_9(m) 143_1
+            61_7:      5358_3 Load 59_9(m)
+           143_2:      5358_3 MatrixTimesScalar 61_7 43_2
+                              Store 59_9(m) 143_2
+            61_8:      5358_3 Load 59_9(m)
+           115_1:      5358_4 FConvert 61_8
+                              Store 59_10(m2) 115_1
+            65_1:   32_5(ptr) AccessChain 59_9(m) 43_3
+            61_9: 22_2(float) Load 65_1
+                              Store 59_11(x) 61_9
+           61_10: 22_2(float) Load 59_11(x)
+            65_2:   32_5(ptr) AccessChain 59_9(m) 43_4
+                              Store 65_2 61_10
+            65_3:   32_7(ptr) AccessChain 59_1(block) 43_3 uint(16)
+          5359_1:      5358_3 CooperativeMatrixLoadNV 65_3 uint(128) 42_1 MakePointerVisibleKHR NonPrivatePointerKHR uint(5)
+                              Store 59_12(tempArg) 5359_1
+           61_11:      5358_3 Load 59_12(tempArg)
+                              Store 59_9(m) 61_11
+           61_12:      5358_3 Load 59_9(m)
+            65_4:   32_7(ptr) AccessChain 59_1(block) 43_3 uint(16)
+                              CooperativeMatrixStoreNV 65_4 61_12 uint(128) 42_1 MakePointerAvailableKHR NonPrivatePointerKHR uint(5)
+            65_5:  32_10(ptr) AccessChain 59_2(block16) 43_3 uint(16)
+          5359_2:      5358_4 CooperativeMatrixLoadNV 65_5 uint(128) 42_1 MakePointerVisibleKHR NonPrivatePointerKHR uint(5)
+                              Store 59_13(tempArg) 5359_2
+           61_13:      5358_4 Load 59_13(tempArg)
+                              Store 59_10(m2) 61_13
+           61_14:      5358_4 Load 59_10(m2)
+            65_6:  32_10(ptr) AccessChain 59_2(block16) 43_3 uint(16)
+                              CooperativeMatrixStoreNV 65_6 61_14 uint(128) 42_1 MakePointerAvailableKHR NonPrivatePointerKHR uint(5)
+            65_7:  32_11(ptr) AccessChain 59_2(block16) 43_5
+           61_15:   32_8(ptr) Load 65_7 MakePointerVisibleKHR NonPrivatePointerKHR uint(5)
+            65_8:  32_12(ptr) AccessChain 61_15 43_3 uint(16)
+          5359_3:      5358_3 CooperativeMatrixLoadNV 65_8 uint(128) 42_1 Aligned MakePointerVisibleKHR NonPrivatePointerKHR 16 uint(5)
+                              Store 59_14(tempArg) 5359_3
+           61_16:      5358_3 Load 59_14(tempArg)
+                              Store 59_9(m) 61_16
+           61_17:      5358_3 Load 59_9(m)
+            65_9:  32_11(ptr) AccessChain 59_2(block16) 43_5
+           61_18:   32_8(ptr) Load 65_9 MakePointerVisibleKHR NonPrivatePointerKHR uint(5)
+           65_10:  32_12(ptr) AccessChain 61_18 43_3 uint(16)
+                              CooperativeMatrixStoreNV 65_10 61_17 uint(128) 42_1 Aligned MakePointerAvailableKHR NonPrivatePointerKHR 16 uint(5)
+           61_19:      5358_4 Load 59_16(A)
+           61_20:      5358_1 Load 59_17(B)
+           61_21:      5358_3 Load 59_18(C)
+          5361_1:      5358_3 CooperativeMatrixMulAddNV 61_19 61_20 61_21
+                              Store 59_15(D) 5361_1
+                              Store 59_19(l) 52_2
+                              Store 59_20(F) 44_2
+           65_11:   32_5(ptr) AccessChain 59_21(a) 43_8 43_4
+                              Store 65_11 43_9
+                              Store 59_22(md1) 43_1
+           61_22:      5358_3 Load 59_9(m)
+           61_23:      5358_3 Load 59_9(m)
+           129_2:      5358_3 FAdd 61_23 61_22
+                              Store 59_9(m) 129_2
+            81_1: 22_2(float) CompositeExtract 129_2 1234
+           61_24: 22_2(float) Load 59_22(md1)
+           129_3: 22_2(float) FAdd 61_24 81_1
+                              Store 59_22(md1) 129_3
+           65_12:  32_17(ptr) AccessChain 59_3(mC2) 43_5
+           61_25:      5358_6 Load 65_12
+           65_13:  32_17(ptr) AccessChain 59_3(mC2) 43_3
+                              Store 65_13 61_25
+           65_14:   32_7(ptr) AccessChain 59_1(block) 43_4 uint(16)
+          5359_4:      5358_3 CooperativeMatrixLoadNV 65_14 uint(128) 42_1 MakePointerVisibleKHR NonPrivatePointerKHR uint(5)
+                              Store 59_23(tempArg) 5359_4
+           61_26:      5358_3 Load 59_23(tempArg)
+                              Store 59_9(m) 61_26
+           61_27:      5358_3 Load 59_9(m)
+           65_15:   32_7(ptr) AccessChain 59_1(block) 43_4 uint(16)
+                              CooperativeMatrixStoreNV 65_15 61_27 uint(128) 42_1 MakePointerAvailableKHR NonPrivatePointerKHR uint(5)
+           65_16:  32_10(ptr) AccessChain 59_2(block16) 43_4 uint(16)
+          5359_5:      5358_4 CooperativeMatrixLoadNV 65_16 uint(128) 42_1 MakePointerVisibleKHR NonPrivatePointerKHR uint(5)
+                              Store 59_24(tempArg) 5359_5
+           61_28:      5358_4 Load 59_24(tempArg)
+                              Store 59_10(m2) 61_28
+           61_29:      5358_4 Load 59_10(m2)
+           65_17:  32_10(ptr) AccessChain 59_2(block16) 43_4 uint(16)
+                              CooperativeMatrixStoreNV 65_17 61_29 uint(128) 42_1 MakePointerAvailableKHR NonPrivatePointerKHR uint(5)
+           61_30:      5358_1 Load 59_25(p1)
+                              Store 59_26(param) 61_30
+            57_1:      5358_1 FunctionCall 54_2(f16(f161;) 59_26(param)
+                              Store 59_25(p1) 57_1
+           61_31:      5358_2 Load 59_27(p2)
+                              Store 59_28(param) 61_31
+            57_2:      5358_2 FunctionCall 54_3(f32(f1;) 59_28(param)
+                              Store 59_27(p2) 57_2
+                              Store 59_25(p1) 44_3
+                              Store 59_27(p2) 44_4
+           61_32:      5358_1 Load 59_25(p1)
+           61_33:      5358_1 Load 59_25(p1)
+           136_1:      5358_1 FDiv 61_33 61_32
+                              Store 59_25(p1) 136_1
+           61_34:      5358_1 Load 59_25(p1)
+           143_3:      5358_1 MatrixTimesScalar 61_34 43_11
+                              Store 59_25(p1) 143_3
+           61_35:      5358_2 Load 59_27(p2)
+           143_4:      5358_2 MatrixTimesScalar 61_35 43_12
+                              Store 59_27(p2) 143_4
+           65_18:  32_19(ptr) AccessChain 59_4(shmatrix) uint(1)
+          5359_6:      5358_4 CooperativeMatrixLoadNV 65_18 uint(2) 42_1 MakePointerVisibleKHR NonPrivatePointerKHR uint(2)
+                              Store 59_29(tempArg) 5359_6
+           61_36:      5358_4 Load 59_29(tempArg)
+                              Store 59_30(ms) 61_36
+           61_37:      5358_4 Load 59_30(ms)
+           65_19:  32_19(ptr) AccessChain 59_4(shmatrix) uint(1)
+                              CooperativeMatrixStoreNV 65_19 61_37 uint(2) 42_1 MakePointerAvailableKHR NonPrivatePointerKHR uint(2)
                               Return
                               FunctionEnd
-   14(f16(f161;):          10 Function None 12
-           13(m):     11(ptr) FunctionParameter
-              15:             Label
-              23:          10 Load 13(m)
-              24:          10 FNegate 23
-                              ReturnValue 24
+ 54_2(f16(f161;):      5358_1 Function None 33_2
+         55_1(m):   32_1(ptr) FunctionParameter
+           248_2:             Label
+           61_38:      5358_1 Load 55_1(m)
+           127_2:      5358_1 FNegate 61_38
+                              ReturnValue 127_2
                               FunctionEnd
-     21(f32(f1;):          17 Function None 19
-           20(m):     18(ptr) FunctionParameter
-              22:             Label
-              27:          17 Load 20(m)
-              28:          17 FNegate 27
-                              ReturnValue 28
+   54_3(f32(f1;):      5358_2 Function None 33_3
+         55_2(m):   32_2(ptr) FunctionParameter
+           248_3:             Label
+           61_39:      5358_2 Load 55_2(m)
+           127_3:      5358_2 FNegate 61_39
+                              ReturnValue 127_3
                               FunctionEnd

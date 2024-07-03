@@ -6,147 +6,147 @@ rayQuery-types.comp
                               Capability Shader
                               Capability RayQueryKHR
                               Extension  "SPV_KHR_ray_query"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 16 8 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 16 8 1
                               Source GLSL 460
                               SourceExtension  "GL_EXT_ray_query"
-                              Name 4  "main"
-                              Name 8  "rayQuery"
-                              Name 11  "tlas"
-                              Name 25  "rq_proceed"
-                              Name 35  "intersectionType"
-                              Name 41  "rayTMin"
-                              Name 43  "rayFlags"
-                              Name 46  "worldRayOrigin"
-                              Name 48  "worldDirection"
-                              Name 50  "intersectionT"
-                              Name 53  "customIndex"
-                              Name 55  "instanceId"
-                              Name 57  "sbtOffset"
-                              Name 59  "geometryIndex"
-                              Name 61  "primitiveIndex"
-                              Name 65  "barys"
-                              Name 67  "frontface"
-                              Name 69  "aabbOpaque"
-                              Name 71  "objRayDirection"
-                              Name 73  "objRayOrigin"
-                              Name 77  "objToWorld"
-                              Name 79  "worldToObj"
-                              Decorate 11(tlas) Binding 0
-                              Decorate 11(tlas) DescriptorSet 0
-                              Decorate 85 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeRayQueryKHR
-               7:             TypePointer Private 6
-     8(rayQuery):      7(ptr) Variable Private
-               9:             TypeAccelerationStructureKHR
-              10:             TypePointer UniformConstant 9
-        11(tlas):     10(ptr) Variable UniformConstant
-              13:             TypeInt 32 0
-              14:     13(int) Constant 0
-              15:     13(int) Constant 255
-              16:             TypeFloat 32
-              17:             TypeVector 16(float) 3
-              18:   16(float) Constant 0
-              19:   17(fvec3) ConstantComposite 18 18 18
-              20:   16(float) Constant 1065353216
-              21:   17(fvec3) ConstantComposite 20 18 18
-              22:   16(float) Constant 1176256512
-              23:             TypeBool
-              24:             TypePointer Function 23(bool)
-              34:             TypePointer Function 13(int)
-              36:    23(bool) ConstantTrue
-              37:             TypeInt 32 1
-              38:     37(int) Constant 1
-              40:             TypePointer Function 16(float)
-              45:             TypePointer Function 17(fvec3)
-              52:             TypePointer Function 37(int)
-              63:             TypeVector 16(float) 2
-              64:             TypePointer Function 63(fvec2)
-              75:             TypeMatrix 17(fvec3) 4
-              76:             TypePointer Function 75
-              81:             TypeVector 13(int) 3
-              82:     13(int) Constant 16
-              83:     13(int) Constant 8
-              84:     13(int) Constant 1
-              85:   81(ivec3) ConstantComposite 82 83 84
-         4(main):           2 Function None 3
-               5:             Label
-  25(rq_proceed):     24(ptr) Variable Function
-35(intersectionType):     34(ptr) Variable Function
-     41(rayTMin):     40(ptr) Variable Function
-    43(rayFlags):     34(ptr) Variable Function
-46(worldRayOrigin):     45(ptr) Variable Function
-48(worldDirection):     45(ptr) Variable Function
-50(intersectionT):     40(ptr) Variable Function
- 53(customIndex):     52(ptr) Variable Function
-  55(instanceId):     52(ptr) Variable Function
-   57(sbtOffset):     34(ptr) Variable Function
-59(geometryIndex):     52(ptr) Variable Function
-61(primitiveIndex):     52(ptr) Variable Function
-       65(barys):     64(ptr) Variable Function
-   67(frontface):     24(ptr) Variable Function
-  69(aabbOpaque):     24(ptr) Variable Function
-71(objRayDirection):     45(ptr) Variable Function
-73(objRayOrigin):     45(ptr) Variable Function
-  77(objToWorld):     76(ptr) Variable Function
-  79(worldToObj):     76(ptr) Variable Function
-              12:           9 Load 11(tlas)
-                              RayQueryInitializeKHR 8(rayQuery) 12 14 15 19 18 21 22
-              26:    23(bool) RayQueryProceedKHR 8(rayQuery)
-                              Store 25(rq_proceed) 26
-                              Branch 27
-              27:             Label
-                              LoopMerge 29 30 None
-                              Branch 31
-              31:             Label
-              32:    23(bool) Load 25(rq_proceed)
-                              BranchConditional 32 28 29
-              28:               Label
-              33:    23(bool)   RayQueryProceedKHR 8(rayQuery)
-                                Store 25(rq_proceed) 33
-                                Branch 30
-              30:               Label
-                                Branch 27
-              29:             Label
-              39:     13(int) RayQueryGetIntersectionTypeKHR 8(rayQuery) 38
-                              Store 35(intersectionType) 39
-              42:   16(float) RayQueryGetRayTMinKHR 8(rayQuery)
-                              Store 41(rayTMin) 42
-              44:     13(int) RayQueryGetRayFlagsKHR 8(rayQuery)
-                              Store 43(rayFlags) 44
-              47:   17(fvec3) RayQueryGetWorldRayOriginKHR 8(rayQuery)
-                              Store 46(worldRayOrigin) 47
-              49:   17(fvec3) RayQueryGetWorldRayDirectionKHR 8(rayQuery)
-                              Store 48(worldDirection) 49
-              51:   16(float) RayQueryGetIntersectionTKHR 8(rayQuery) 38
-                              Store 50(intersectionT) 51
-              54:     37(int) RayQueryGetIntersectionInstanceCustomIndexKHR 8(rayQuery) 38
-                              Store 53(customIndex) 54
-              56:     37(int) RayQueryGetIntersectionInstanceIdKHR 8(rayQuery) 38
-                              Store 55(instanceId) 56
-              58:     13(int) RayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR 8(rayQuery) 38
-                              Store 57(sbtOffset) 58
-              60:     37(int) RayQueryGetIntersectionGeometryIndexKHR 8(rayQuery) 38
-                              Store 59(geometryIndex) 60
-              62:     37(int) RayQueryGetIntersectionPrimitiveIndexKHR 8(rayQuery) 38
-                              Store 61(primitiveIndex) 62
-              66:   63(fvec2) RayQueryGetIntersectionBarycentricsKHR 8(rayQuery) 38
-                              Store 65(barys) 66
-              68:    23(bool) RayQueryGetIntersectionFrontFaceKHR 8(rayQuery) 38
-                              Store 67(frontface) 68
-              70:    23(bool) RayQueryGetIntersectionCandidateAABBOpaqueKHR 8(rayQuery)
-                              Store 69(aabbOpaque) 70
-              72:   17(fvec3) RayQueryGetIntersectionObjectRayDirectionKHR 8(rayQuery) 38
-                              Store 71(objRayDirection) 72
-              74:   17(fvec3) RayQueryGetIntersectionObjectRayOriginKHR 8(rayQuery) 38
-                              Store 73(objRayOrigin) 74
-              78:          75 RayQueryGetIntersectionObjectToWorldKHR 8(rayQuery) 38
-                              Store 77(objToWorld) 78
-              80:          75 RayQueryGetIntersectionWorldToObjectKHR 8(rayQuery) 38
-                              Store 79(worldToObj) 80
+                              Name 54_1  "main"
+                              Name 59_1  "rayQuery"
+                              Name 59_2  "tlas"
+                              Name 59_3  "rq_proceed"
+                              Name 59_4  "intersectionType"
+                              Name 59_5  "rayTMin"
+                              Name 59_6  "rayFlags"
+                              Name 59_7  "worldRayOrigin"
+                              Name 59_8  "worldDirection"
+                              Name 59_9  "intersectionT"
+                              Name 59_10  "customIndex"
+                              Name 59_11  "instanceId"
+                              Name 59_12  "sbtOffset"
+                              Name 59_13  "geometryIndex"
+                              Name 59_14  "primitiveIndex"
+                              Name 59_15  "barys"
+                              Name 59_16  "frontface"
+                              Name 59_17  "aabbOpaque"
+                              Name 59_18  "objRayDirection"
+                              Name 59_19  "objRayOrigin"
+                              Name 59_20  "objToWorld"
+                              Name 59_21  "worldToObj"
+                              Decorate 59_2(tlas) Binding 0
+                              Decorate 59_2(tlas) DescriptorSet 0
+                              Decorate 44_3 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+          4472_1:             TypeRayQueryKHR
+            32_1:             TypePointer Private 4472_1
+  59_1(rayQuery):   32_1(ptr) Variable Private
+          5341_1:             TypeAccelerationStructureKHR
+            32_2:             TypePointer UniformConstant 5341_1
+      59_2(tlas):   32_2(ptr) Variable UniformConstant
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+       uint(255):   21_1(int) Constant 255
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec3) ConstantComposite 43_1 43_1 43_1
+            43_2: 22_1(float) Constant 1065353216
+            44_2: 23_1(fvec3) ConstantComposite 43_2 43_1 43_1
+            43_3: 22_1(float) Constant 1176256512
+            20_1:             TypeBool
+            32_3:             TypePointer Function 20_1(bool)
+            32_4:             TypePointer Function 21_1(int)
+            41_1:  20_1(bool) ConstantTrue
+            21_2:             TypeInt 32 1
+            43_4:   21_2(int) Constant 1
+            32_5:             TypePointer Function 22_1(float)
+            32_6:             TypePointer Function 23_1(fvec3)
+            32_7:             TypePointer Function 21_2(int)
+            23_2:             TypeVector 22_1(float) 2
+            32_8:             TypePointer Function 23_2(fvec2)
+            24_1:             TypeMatrix 23_1(fvec3) 4
+            32_9:             TypePointer Function 24_1
+            23_3:             TypeVector 21_1(int) 3
+        uint(16):   21_1(int) Constant 16
+         uint(8):   21_1(int) Constant 8
+         uint(1):   21_1(int) Constant 1
+            44_3: 23_3(ivec3) ConstantComposite uint(16) uint(8) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_3(rq_proceed):   32_3(ptr) Variable Function
+59_4(intersectionType):   32_4(ptr) Variable Function
+   59_5(rayTMin):   32_5(ptr) Variable Function
+  59_6(rayFlags):   32_4(ptr) Variable Function
+59_7(worldRayOrigin):   32_6(ptr) Variable Function
+59_8(worldDirection):   32_6(ptr) Variable Function
+59_9(intersectionT):   32_5(ptr) Variable Function
+59_10(customIndex):   32_7(ptr) Variable Function
+59_11(instanceId):   32_7(ptr) Variable Function
+59_12(sbtOffset):   32_4(ptr) Variable Function
+59_13(geometryIndex):   32_7(ptr) Variable Function
+59_14(primitiveIndex):   32_7(ptr) Variable Function
+    59_15(barys):   32_8(ptr) Variable Function
+59_16(frontface):   32_3(ptr) Variable Function
+59_17(aabbOpaque):   32_3(ptr) Variable Function
+59_18(objRayDirection):   32_6(ptr) Variable Function
+59_19(objRayOrigin):   32_6(ptr) Variable Function
+59_20(objToWorld):   32_9(ptr) Variable Function
+59_21(worldToObj):   32_9(ptr) Variable Function
+            61_1:      5341_1 Load 59_2(tlas)
+                              RayQueryInitializeKHR 59_1(rayQuery) 61_1 uint(0) uint(255) 44_1 43_1 44_2 43_3
+          4477_1:  20_1(bool) RayQueryProceedKHR 59_1(rayQuery)
+                              Store 59_3(rq_proceed) 4477_1
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 None
+                              Branch 248_3
+           248_3:             Label
+            61_2:  20_1(bool) Load 59_3(rq_proceed)
+                              BranchConditional 61_2 248_4 248_6
+           248_4:               Label
+          4477_2:  20_1(bool)   RayQueryProceedKHR 59_1(rayQuery)
+                                Store 59_3(rq_proceed) 4477_2
+                                Branch 248_5
+           248_5:               Label
+                                Branch 248_2
+           248_6:             Label
+          4479_1:   21_1(int) RayQueryGetIntersectionTypeKHR 59_1(rayQuery) 43_4
+                              Store 59_4(intersectionType) 4479_1
+          6016_1: 22_1(float) RayQueryGetRayTMinKHR 59_1(rayQuery)
+                              Store 59_5(rayTMin) 6016_1
+          6017_1:   21_1(int) RayQueryGetRayFlagsKHR 59_1(rayQuery)
+                              Store 59_6(rayFlags) 6017_1
+          6030_1: 23_1(fvec3) RayQueryGetWorldRayOriginKHR 59_1(rayQuery)
+                              Store 59_7(worldRayOrigin) 6030_1
+          6029_1: 23_1(fvec3) RayQueryGetWorldRayDirectionKHR 59_1(rayQuery)
+                              Store 59_8(worldDirection) 6029_1
+          6018_1: 22_1(float) RayQueryGetIntersectionTKHR 59_1(rayQuery) 43_4
+                              Store 59_9(intersectionT) 6018_1
+          6019_1:   21_2(int) RayQueryGetIntersectionInstanceCustomIndexKHR 59_1(rayQuery) 43_4
+                              Store 59_10(customIndex) 6019_1
+          6020_1:   21_2(int) RayQueryGetIntersectionInstanceIdKHR 59_1(rayQuery) 43_4
+                              Store 59_11(instanceId) 6020_1
+          6021_1:   21_1(int) RayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR 59_1(rayQuery) 43_4
+                              Store 59_12(sbtOffset) 6021_1
+          6022_1:   21_2(int) RayQueryGetIntersectionGeometryIndexKHR 59_1(rayQuery) 43_4
+                              Store 59_13(geometryIndex) 6022_1
+          6023_1:   21_2(int) RayQueryGetIntersectionPrimitiveIndexKHR 59_1(rayQuery) 43_4
+                              Store 59_14(primitiveIndex) 6023_1
+          6024_1: 23_2(fvec2) RayQueryGetIntersectionBarycentricsKHR 59_1(rayQuery) 43_4
+                              Store 59_15(barys) 6024_1
+          6025_1:  20_1(bool) RayQueryGetIntersectionFrontFaceKHR 59_1(rayQuery) 43_4
+                              Store 59_16(frontface) 6025_1
+          6026_1:  20_1(bool) RayQueryGetIntersectionCandidateAABBOpaqueKHR 59_1(rayQuery)
+                              Store 59_17(aabbOpaque) 6026_1
+          6027_1: 23_1(fvec3) RayQueryGetIntersectionObjectRayDirectionKHR 59_1(rayQuery) 43_4
+                              Store 59_18(objRayDirection) 6027_1
+          6028_1: 23_1(fvec3) RayQueryGetIntersectionObjectRayOriginKHR 59_1(rayQuery) 43_4
+                              Store 59_19(objRayOrigin) 6028_1
+          6031_1:        24_1 RayQueryGetIntersectionObjectToWorldKHR 59_1(rayQuery) 43_4
+                              Store 59_20(objToWorld) 6031_1
+          6032_1:        24_1 RayQueryGetIntersectionWorldToObjectKHR 59_1(rayQuery) 43_4
+                              Store 59_21(worldToObj) 6032_1
                               Return
                               FunctionEnd

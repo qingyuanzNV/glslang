@@ -4,37 +4,37 @@ spv.volatileAtomic.comp
 // Id's are bound by 18
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 8  "D"
-                              MemberName 8(D) 0  "d"
-                              Name 10  "d"
-                              Decorate 7 ArrayStride 4
-                              Decorate 8(D) BufferBlock
-                              MemberDecorate 8(D) 0 Volatile
-                              MemberDecorate 8(D) 0 Coherent
-                              MemberDecorate 8(D) 0 Offset 0
-                              Decorate 10(d) Binding 3
-                              Decorate 10(d) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeRuntimeArray 6(int)
-            8(D):             TypeStruct 7
-               9:             TypePointer Uniform 8(D)
-           10(d):      9(ptr) Variable Uniform
-              11:             TypeInt 32 1
-              12:     11(int) Constant 0
-              13:             TypePointer Uniform 6(int)
-              15:      6(int) Constant 0
-              16:      6(int) Constant 1
-         4(main):           2 Function None 3
-               5:             Label
-              14:     13(ptr) AccessChain 10(d) 12 12
-              17:      6(int) AtomicExchange 14 16 15 15
+                              Name 54_1  "main"
+                              Name 30_1  "D"
+                              MemberName 30_1(D) 0  "d"
+                              Name 59_1  "d"
+                              Decorate 29_1 ArrayStride 4
+                              Decorate 30_1(D) BufferBlock
+                              MemberDecorate 30_1(D) 0 Volatile
+                              MemberDecorate 30_1(D) 0 Coherent
+                              MemberDecorate 30_1(D) 0 Offset 0
+                              Decorate 59_1(d) Binding 3
+                              Decorate 59_1(d) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            29_1:             TypeRuntimeArray 21_1(int)
+         30_1(D):             TypeStruct 29_1
+            32_1:             TypePointer Uniform 30_1(D)
+         59_1(d):   32_1(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_2:             TypePointer Uniform 21_1(int)
+         uint(0):   21_1(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1(d) 43_1 43_1
+           229_1:   21_1(int) AtomicExchange 65_1 uint(1) uint(0) uint(0)
                               Return
                               FunctionEnd

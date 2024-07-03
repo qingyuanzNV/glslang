@@ -404,165 +404,165 @@ Validation failed
 // Id's are bound by 104
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "PixelShaderFunction" 80 87 91 95 99
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "PixelShaderFunction" 59_3 59_4 59_5 59_6 59_7
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "PixelShaderFunction"
-                              Name 11  "outs"
-                              MemberName 11(outs) 0  "a"
-                              MemberName 11(outs) 1  "b"
-                              MemberName 11(outs) 2  "c"
-                              MemberName 11(outs) 3  "v"
-                              Name 14  "@PixelShaderFunction(vf4;"
-                              Name 13  "input"
-                              Name 17  "gv"
-                              Name 25  "gfa"
-                              Name 28  "o2"
-                              Name 33  "o4"
-                              Name 41  "o1"
-                              Name 44  "o3"
-                              Name 51  "Nest"
-                              MemberName 51(Nest) 0  "m"
-                              MemberName 51(Nest) 1  "os"
-                              MemberName 51(Nest) 2  "b"
-                              Name 53  "nest"
-                              Name 61  "gf2a"
-                              Name 65  "cgi"
-                              Name 78  "input"
-                              Name 80  "input"
-                              Name 82  "flattenTemp"
-                              Name 83  "param"
-                              Name 87  "@entryPointOutput.a"
-                              Name 91  "@entryPointOutput.b"
-                              Name 95  "@entryPointOutput.c"
-                              Name 99  "@entryPointOutput.v"
-                              Decorate 80(input) Location 0
-                              Decorate 87(@entryPointOutput.a) Location 0
-                              Decorate 91(@entryPointOutput.b) Location 1
-                              Decorate 95(@entryPointOutput.c) Location 2
-                              Decorate 99(@entryPointOutput.v) Location 3
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeInt 32 1
-              10:             TypeBool
-        11(outs):             TypeStruct 9(int) 6(float) 10(bool) 7(fvec4)
-              12:             TypeFunction 11(outs) 8(ptr)
-              16:             TypePointer Private 7(fvec4)
-          17(gv):     16(ptr) Variable Private
-              18:    6(float) Constant 0
-              19:    6(float) Constant 1065353216
-              20:    7(fvec4) ConstantComposite 18 18 19 18
-              21:             TypeInt 32 0
-              22:     21(int) Constant 3
-              23:             TypeArray 6(float) 22
-              24:             TypePointer Private 23
-         25(gfa):     24(ptr) Variable Private
-              26:          23 ConstantComposite 18 18 18
-              27:             TypePointer Function 11(outs)
-              29:      9(int) Constant 3
-              30:    10(bool) ConstantFalse
-              31:    7(fvec4) ConstantComposite 18 18 18 18
-              32:    11(outs) ConstantComposite 29 18 30 31
-              35:      9(int) Constant 2
-              36:             TypePointer Private 6(float)
-              42:      9(int) Constant 0
-              43:    11(outs) ConstantComposite 42 18 30 31
-              45:             TypePointer Function 10(bool)
-              49:             TypeVector 6(float) 3
-              50:             TypeMatrix 49(fvec3) 4
-        51(Nest):             TypeStruct 50 11(outs) 10(bool)
-              52:             TypePointer Function 51(Nest)
-              54:   49(fvec3) ConstantComposite 18 18 18
-              55:          50 ConstantComposite 54 54 54 54
-              56:    51(Nest) ConstantComposite 55 43 30
-              57:             TypeVector 6(float) 2
-              58:     21(int) Constant 4
-              59:             TypeArray 57(fvec2) 58
-              60:             TypePointer Function 59
-              62:   57(fvec2) ConstantComposite 18 18
-              63:          59 ConstantComposite 62 62 62 62
-              64:             TypePointer Function 9(int)
-              66:      9(int) Constant 1
-              67:     21(int) Constant 1
-              68:             TypePointer Function 6(float)
-              79:             TypePointer Input 7(fvec4)
-       80(input):     79(ptr) Variable Input
-              86:             TypePointer Output 9(int)
-87(@entryPointOutput.a):     86(ptr) Variable Output
-              90:             TypePointer Output 6(float)
-91(@entryPointOutput.b):     90(ptr) Variable Output
-              94:             TypePointer Output 10(bool)
-95(@entryPointOutput.c):     94(ptr) Variable Output
-              98:             TypePointer Output 7(fvec4)
-99(@entryPointOutput.v):     98(ptr) Variable Output
-             102:             TypeArray 57(fvec2) 22
-             103:         102 ConstantComposite 62 62 62
-4(PixelShaderFunction):           2 Function None 3
-               5:             Label
-       78(input):      8(ptr) Variable Function
- 82(flattenTemp):     27(ptr) Variable Function
-       83(param):      8(ptr) Variable Function
-                              Store 17(gv) 20
-                              Store 25(gfa) 26
-              81:    7(fvec4) Load 80(input)
-                              Store 78(input) 81
-              84:    7(fvec4) Load 78(input)
-                              Store 83(param) 84
-              85:    11(outs) FunctionCall 14(@PixelShaderFunction(vf4;) 83(param)
-                              Store 82(flattenTemp) 85
-              88:     64(ptr) AccessChain 82(flattenTemp) 42
-              89:      9(int) Load 88
-                              Store 87(@entryPointOutput.a) 89
-              92:     68(ptr) AccessChain 82(flattenTemp) 66
-              93:    6(float) Load 92
-                              Store 91(@entryPointOutput.b) 93
-              96:     45(ptr) AccessChain 82(flattenTemp) 35
-              97:    10(bool) Load 96
-                              Store 95(@entryPointOutput.c) 97
-             100:      8(ptr) AccessChain 82(flattenTemp) 29
-             101:    7(fvec4) Load 100
-                              Store 99(@entryPointOutput.v) 101
+                              Name 54_1  "PixelShaderFunction"
+                              Name 30_1  "outs"
+                              MemberName 30_1(outs) 0  "a"
+                              MemberName 30_1(outs) 1  "b"
+                              MemberName 30_1(outs) 2  "c"
+                              MemberName 30_1(outs) 3  "v"
+                              Name 54_2  "@PixelShaderFunction(vf4;"
+                              Name 55_1  "input"
+                              Name 59_1  "gv"
+                              Name 59_2  "gfa"
+                              Name 59_11  "o2"
+                              Name 59_12  "o4"
+                              Name 59_13  "o1"
+                              Name 59_14  "o3"
+                              Name 30_2  "Nest"
+                              MemberName 30_2(Nest) 0  "m"
+                              MemberName 30_2(Nest) 1  "os"
+                              MemberName 30_2(Nest) 2  "b"
+                              Name 59_15  "nest"
+                              Name 59_16  "gf2a"
+                              Name 59_17  "cgi"
+                              Name 59_8  "input"
+                              Name 59_3  "input"
+                              Name 59_9  "flattenTemp"
+                              Name 59_10  "param"
+                              Name 59_4  "@entryPointOutput.a"
+                              Name 59_5  "@entryPointOutput.b"
+                              Name 59_6  "@entryPointOutput.c"
+                              Name 59_7  "@entryPointOutput.v"
+                              Decorate 59_3(input) Location 0
+                              Decorate 59_4(@entryPointOutput.a) Location 0
+                              Decorate 59_5(@entryPointOutput.b) Location 1
+                              Decorate 59_6(@entryPointOutput.c) Location 2
+                              Decorate 59_7(@entryPointOutput.v) Location 3
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            21_1:             TypeInt 32 1
+            20_1:             TypeBool
+      30_1(outs):             TypeStruct 21_1(int) 22_1(float) 20_1(bool) 23_1(fvec4)
+            33_2:             TypeFunction 30_1(outs) 32_1(ptr)
+            32_2:             TypePointer Private 23_1(fvec4)
+        59_1(gv):   32_2(ptr) Variable Private
+            43_1: 22_1(float) Constant 0
+            43_2: 22_1(float) Constant 1065353216
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_2 43_1
+            21_2:             TypeInt 32 0
+         uint(3):   21_2(int) Constant 3
+            28_1:             TypeArray 22_1(float) uint(3)
+            32_3:             TypePointer Private 28_1
+       59_2(gfa):   32_3(ptr) Variable Private
+            44_2:        28_1 ConstantComposite 43_1 43_1 43_1
+            32_4:             TypePointer Function 30_1(outs)
+            43_3:   21_1(int) Constant 3
+            42_1:  20_1(bool) ConstantFalse
+            44_3: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            44_4:  30_1(outs) ConstantComposite 43_3 43_1 42_1 44_3
+            43_4:   21_1(int) Constant 2
+            32_5:             TypePointer Private 22_1(float)
+            43_5:   21_1(int) Constant 0
+            44_5:  30_1(outs) ConstantComposite 43_5 43_1 42_1 44_3
+            32_6:             TypePointer Function 20_1(bool)
+            23_2:             TypeVector 22_1(float) 3
+            24_1:             TypeMatrix 23_2(fvec3) 4
+      30_2(Nest):             TypeStruct 24_1 30_1(outs) 20_1(bool)
+            32_7:             TypePointer Function 30_2(Nest)
+            44_6: 23_2(fvec3) ConstantComposite 43_1 43_1 43_1
+            44_7:        24_1 ConstantComposite 44_6 44_6 44_6 44_6
+            44_8:  30_2(Nest) ConstantComposite 44_7 44_5 42_1
+            23_3:             TypeVector 22_1(float) 2
+         uint(4):   21_2(int) Constant 4
+            28_2:             TypeArray 23_3(fvec2) uint(4)
+            32_8:             TypePointer Function 28_2
+            44_9: 23_3(fvec2) ConstantComposite 43_1 43_1
+           44_10:        28_2 ConstantComposite 44_9 44_9 44_9 44_9
+            32_9:             TypePointer Function 21_1(int)
+            43_6:   21_1(int) Constant 1
+         uint(1):   21_2(int) Constant 1
+           32_10:             TypePointer Function 22_1(float)
+           32_11:             TypePointer Input 23_1(fvec4)
+     59_3(input):  32_11(ptr) Variable Input
+           32_12:             TypePointer Output 21_1(int)
+59_4(@entryPointOutput.a):  32_12(ptr) Variable Output
+           32_13:             TypePointer Output 22_1(float)
+59_5(@entryPointOutput.b):  32_13(ptr) Variable Output
+           32_14:             TypePointer Output 20_1(bool)
+59_6(@entryPointOutput.c):  32_14(ptr) Variable Output
+           32_15:             TypePointer Output 23_1(fvec4)
+59_7(@entryPointOutput.v):  32_15(ptr) Variable Output
+            28_3:             TypeArray 23_3(fvec2) uint(3)
+           44_11:        28_3 ConstantComposite 44_9 44_9 44_9
+54_1(PixelShaderFunction):        19_1 Function None 33_1
+           248_1:             Label
+     59_8(input):   32_1(ptr) Variable Function
+59_9(flattenTemp):   32_4(ptr) Variable Function
+    59_10(param):   32_1(ptr) Variable Function
+                              Store 59_1(gv) 44_1
+                              Store 59_2(gfa) 44_2
+            61_1: 23_1(fvec4) Load 59_3(input)
+                              Store 59_8(input) 61_1
+            61_2: 23_1(fvec4) Load 59_8(input)
+                              Store 59_10(param) 61_2
+            57_1:  30_1(outs) FunctionCall 54_2(@PixelShaderFunction(vf4;) 59_10(param)
+                              Store 59_9(flattenTemp) 57_1
+            65_1:   32_9(ptr) AccessChain 59_9(flattenTemp) 43_5
+            61_3:   21_1(int) Load 65_1
+                              Store 59_4(@entryPointOutput.a) 61_3
+            65_2:  32_10(ptr) AccessChain 59_9(flattenTemp) 43_6
+            61_4: 22_1(float) Load 65_2
+                              Store 59_5(@entryPointOutput.b) 61_4
+            65_3:   32_6(ptr) AccessChain 59_9(flattenTemp) 43_4
+            61_5:  20_1(bool) Load 65_3
+                              Store 59_6(@entryPointOutput.c) 61_5
+            65_4:   32_1(ptr) AccessChain 59_9(flattenTemp) 43_3
+            61_6: 23_1(fvec4) Load 65_4
+                              Store 59_7(@entryPointOutput.v) 61_6
                               Return
                               FunctionEnd
-14(@PixelShaderFunction(vf4;):    11(outs) Function None 12
-       13(input):      8(ptr) FunctionParameter
-              15:             Label
-          28(o2):     27(ptr) Variable Function
-          33(o4):     27(ptr) Variable Function
-          41(o1):     27(ptr) Variable Function
-          44(o3):     27(ptr) Variable Function
-        53(nest):     52(ptr) Variable Function
-        61(gf2a):     60(ptr) Variable Function
-         65(cgi):     64(ptr) Variable Function
-                              Store 28(o2) 32
-              34:    7(fvec4) Load 17(gv)
-              37:     36(ptr) AccessChain 25(gfa) 35
-              38:    6(float) Load 37
-              39:    7(fvec4) VectorTimesScalar 34 38
-              40:      8(ptr) AccessChain 33(o4) 29
-                              Store 40 39
-                              Store 41(o1) 43
-                              Store 44(o3) 43
-                              Store 33(o4) 43
-              46:     45(ptr) AccessChain 41(o1) 35
-              47:    10(bool) Load 46
-              48:     45(ptr) AccessChain 33(o4) 35
-                              Store 48 47
-                              Store 53(nest) 56
-                              Store 61(gf2a) 63
-                              Store 65(cgi) 42
-              69:     68(ptr) AccessChain 61(gf2a) 35 67
-              70:    6(float) Load 69
-              71:      9(int) Load 65(cgi)
-              72:    6(float) ConvertSToF 71
-              73:    6(float) FMul 70 72
-              74:     68(ptr) AccessChain 33(o4) 66
-                              Store 74 73
-              75:    11(outs) Load 33(o4)
-                              ReturnValue 75
+54_2(@PixelShaderFunction(vf4;):  30_1(outs) Function None 33_2
+     55_1(input):   32_1(ptr) FunctionParameter
+           248_2:             Label
+       59_11(o2):   32_4(ptr) Variable Function
+       59_12(o4):   32_4(ptr) Variable Function
+       59_13(o1):   32_4(ptr) Variable Function
+       59_14(o3):   32_4(ptr) Variable Function
+     59_15(nest):   32_7(ptr) Variable Function
+     59_16(gf2a):   32_8(ptr) Variable Function
+      59_17(cgi):   32_9(ptr) Variable Function
+                              Store 59_11(o2) 44_4
+            61_7: 23_1(fvec4) Load 59_1(gv)
+            65_5:   32_5(ptr) AccessChain 59_2(gfa) 43_4
+            61_8: 22_1(float) Load 65_5
+           142_1: 23_1(fvec4) VectorTimesScalar 61_7 61_8
+            65_6:   32_1(ptr) AccessChain 59_12(o4) 43_3
+                              Store 65_6 142_1
+                              Store 59_13(o1) 44_5
+                              Store 59_14(o3) 44_5
+                              Store 59_12(o4) 44_5
+            65_7:   32_6(ptr) AccessChain 59_13(o1) 43_4
+            61_9:  20_1(bool) Load 65_7
+            65_8:   32_6(ptr) AccessChain 59_12(o4) 43_4
+                              Store 65_8 61_9
+                              Store 59_15(nest) 44_8
+                              Store 59_16(gf2a) 44_10
+                              Store 59_17(cgi) 43_5
+            65_9:  32_10(ptr) AccessChain 59_16(gf2a) 43_4 uint(1)
+           61_10: 22_1(float) Load 65_9
+           61_11:   21_1(int) Load 59_17(cgi)
+           111_1: 22_1(float) ConvertSToF 61_11
+           133_1: 22_1(float) FMul 61_10 111_1
+           65_10:  32_10(ptr) AccessChain 59_12(o4) 43_6
+                              Store 65_10 133_1
+           61_12:  30_1(outs) Load 59_12(o4)
+                              ReturnValue 61_12
                               FunctionEnd

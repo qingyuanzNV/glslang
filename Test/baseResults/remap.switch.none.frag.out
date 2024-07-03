@@ -7,74 +7,74 @@ WARNING: 0:5: '' : all default precisions are highp; use precision statements to
 // Id's are bound by 48
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 9 23
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "in0"
-                              Name 23  "FragColor"
-                              Decorate 9(in0) Location 0
-                              Decorate 23(FragColor) RelaxedPrecision
-                              Decorate 23(FragColor) Location 0
-                              Decorate 29 RelaxedPrecision
-                              Decorate 36 RelaxedPrecision
-                              Decorate 43 RelaxedPrecision
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Input 7(fvec4)
-          9(in0):      8(ptr) Variable Input
-              10:             TypeInt 32 0
-              11:     10(int) Constant 3
-              12:             TypePointer Input 6(float)
-              15:             TypeInt 32 1
-              22:             TypePointer Output 7(fvec4)
-   23(FragColor):     22(ptr) Variable Output
-              24:     10(int) Constant 0
-              27:    6(float) Constant 0
-              31:     10(int) Constant 1
-              34:    6(float) Constant 1065353216
-              38:     10(int) Constant 2
-              41:    6(float) Constant 1073741824
-              45:    6(float) Constant 3212836864
-              46:    7(fvec4) ConstantComposite 45 45 45 45
-         4(main):           2 Function None 3
-               5:             Label
-              13:     12(ptr) AccessChain 9(in0) 11
-              14:    6(float) Load 13
-              16:     15(int) ConvertFToS 14
-                              SelectionMerge 21 None
-                              Switch 16 20 
-                                     case 0: 17
-                                     case 1: 18
-                                     case 2: 19
-              20:               Label
-                                Store 23(FragColor) 46
-                                Branch 21
-              17:               Label
-              25:     12(ptr)   AccessChain 9(in0) 24
-              26:    6(float)   Load 25
-              28:    6(float)   FAdd 26 27
-              29:    7(fvec4)   CompositeConstruct 28 28 28 28
-                                Store 23(FragColor) 29
-                                Branch 21
-              18:               Label
-              32:     12(ptr)   AccessChain 9(in0) 31
-              33:    6(float)   Load 32
-              35:    6(float)   FAdd 33 34
-              36:    7(fvec4)   CompositeConstruct 35 35 35 35
-                                Store 23(FragColor) 36
-                                Branch 21
-              19:               Label
-              39:     12(ptr)   AccessChain 9(in0) 38
-              40:    6(float)   Load 39
-              42:    6(float)   FAdd 40 41
-              43:    7(fvec4)   CompositeConstruct 42 42 42 42
-                                Store 23(FragColor) 43
-                                Branch 21
-              21:             Label
+                              Name 54_1  "main"
+                              Name 59_1  "in0"
+                              Name 59_2  "FragColor"
+                              Decorate 59_1(in0) Location 0
+                              Decorate 59_2(FragColor) RelaxedPrecision
+                              Decorate 59_2(FragColor) Location 0
+                              Decorate 80_1 RelaxedPrecision
+                              Decorate 80_2 RelaxedPrecision
+                              Decorate 80_3 RelaxedPrecision
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Input 23_1(fvec4)
+       59_1(in0):   32_1(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            32_2:             TypePointer Input 22_1(float)
+            21_2:             TypeInt 32 1
+            32_3:             TypePointer Output 23_1(fvec4)
+ 59_2(FragColor):   32_3(ptr) Variable Output
+         uint(0):   21_1(int) Constant 0
+            43_1: 22_1(float) Constant 0
+         uint(1):   21_1(int) Constant 1
+            43_2: 22_1(float) Constant 1065353216
+         uint(2):   21_1(int) Constant 2
+            43_3: 22_1(float) Constant 1073741824
+            43_4: 22_1(float) Constant 3212836864
+            44_1: 23_1(fvec4) ConstantComposite 43_4 43_4 43_4 43_4
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1(in0) uint(3)
+            61_1: 22_1(float) Load 65_1
+           110_1:   21_2(int) ConvertFToS 61_1
+                              SelectionMerge 248_6 None
+                              Switch 110_1 248_2 
+                                     case 0: 248_3
+                                     case 1: 248_4
+                                     case 2: 248_5
+           248_2:               Label
+                                Store 59_2(FragColor) 44_1
+                                Branch 248_6
+           248_3:               Label
+            65_2:   32_2(ptr)   AccessChain 59_1(in0) uint(0)
+            61_2: 22_1(float)   Load 65_2
+           129_1: 22_1(float)   FAdd 61_2 43_1
+            80_1: 23_1(fvec4)   CompositeConstruct 129_1 129_1 129_1 129_1
+                                Store 59_2(FragColor) 80_1
+                                Branch 248_6
+           248_4:               Label
+            65_3:   32_2(ptr)   AccessChain 59_1(in0) uint(1)
+            61_3: 22_1(float)   Load 65_3
+           129_2: 22_1(float)   FAdd 61_3 43_2
+            80_2: 23_1(fvec4)   CompositeConstruct 129_2 129_2 129_2 129_2
+                                Store 59_2(FragColor) 80_2
+                                Branch 248_6
+           248_5:               Label
+            65_4:   32_2(ptr)   AccessChain 59_1(in0) uint(2)
+            61_4: 22_1(float)   Load 65_4
+           129_3: 22_1(float)   FAdd 61_4 43_3
+            80_3: 23_1(fvec4)   CompositeConstruct 129_3 129_3 129_3 129_3
+                                Store 59_2(FragColor) 80_3
+                                Branch 248_6
+           248_6:             Label
                               Return
                               FunctionEnd

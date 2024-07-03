@@ -10,123 +10,123 @@ spv.replicatespec.comp
                               Extension  "SPV_EXT_replicated_composites"
                               Extension  "SPV_KHR_cooperative_matrix"
                               Extension  "SPV_KHR_vulkan_memory_model"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical VulkanKHR
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 1 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 1 1 1
                               Source GLSL 450
                               SourceExtension  "GL_EXT_spec_constant_composites"
                               SourceExtension  "GL_KHR_cooperative_matrix"
                               SourceExtension  "GL_KHR_memory_scope_semantics"
-                              Name 4  "main"
-                              Name 13  "coop"
-                              Name 17  "a"
-                              Name 21  "v"
-                              Name 24  "spec_float"
-                              Name 25  "cv"
-                              Name 28  "m"
-                              Name 33  "five"
-                              Name 35  "six"
-                              Name 39  "arr"
-                              Name 44  "arr2"
-                              Name 47  "cfive"
-                              Name 48  "carr"
-                              Name 49  "carr2"
-                              Name 50  "S"
-                              MemberName 50(S) 0  "a"
-                              MemberName 50(S) 1  "b"
-                              MemberName 50(S) 2  "c"
-                              Name 52  "s2"
-                              Name 55  "SS"
-                              MemberName 55(SS) 0  "s1"
-                              MemberName 55(SS) 1  "s2"
-                              Name 57  "ss"
-                              Name 63  "csix"
-                              Name 64  "cs"
-                              Name 65  "css"
-                              Name 66  "cm"
-                              Name 67  "ccoop"
-                              Decorate 24(spec_float) SpecId 2
-                              Decorate 47(cfive) SpecId 0
-                              Decorate 62 BuiltIn WorkgroupSize
-                              Decorate 63(csix) SpecId 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeInt 32 0
-               8:      7(int) Constant 3
-               9:      7(int) Constant 16
-              10:      7(int) Constant 0
-              11:             TypeCooperativeMatrixKHR 6(float) 8 9 9 10
-              12:             TypePointer Function 11
-              14:    6(float) Constant 1065353216
-              15:          11 ConstantCompositeReplicateEXT 14
-              16:             TypePointer Function 6(float)
-              18:    6(float) Constant 1073741824
-              19:             TypeVector 6(float) 4
-              20:             TypePointer Function 19(fvec4)
-  24(spec_float):    6(float) SpecConstant 1077936128
-          25(cv):   19(fvec4) SpecConstantCompositeReplicateEXT 24(spec_float)
-              26:             TypeMatrix 19(fvec4) 4
-              27:             TypePointer Function 26
-              31:             TypeInt 32 1
-              32:             TypePointer Function 31(int)
-              34:     31(int) Constant 5
-              36:     31(int) Constant 6
-              37:             TypeArray 31(int) 8
-              38:             TypePointer Function 37
-              42:             TypeArray 37 8
-              43:             TypePointer Function 42
-       47(cfive):     31(int) SpecConstant 5
-        48(carr):          37 SpecConstantCompositeReplicateEXT 47(cfive)
-       49(carr2):          42 SpecConstantCompositeReplicateEXT 48(carr)
-           50(S):             TypeStruct 31(int) 31(int) 31(int)
-              51:             TypePointer Function 50(S)
-          55(SS):             TypeStruct 50(S) 50(S)
-              56:             TypePointer Function 55(SS)
-              60:             TypeVector 7(int) 3
-              61:      7(int) Constant 1
-              62:   60(ivec3) ConstantCompositeReplicateEXT 61
-        63(csix):     31(int) SpecConstant 6
-          64(cs):       50(S) SpecConstantCompositeReplicateEXT 63(csix)
-         65(css):      55(SS) SpecConstantCompositeReplicateEXT 64(cs)
-          66(cm):          26 SpecConstantCompositeReplicateEXT 25(cv)
-       67(ccoop):          11 SpecConstantCompositeReplicateEXT 24(spec_float)
-         4(main):           2 Function None 3
-               5:             Label
-        13(coop):     12(ptr) Variable Function
-           17(a):     16(ptr) Variable Function
-           21(v):     20(ptr) Variable Function
-           28(m):     27(ptr) Variable Function
-        33(five):     32(ptr) Variable Function
-         35(six):     32(ptr) Variable Function
-         39(arr):     38(ptr) Variable Function
-        44(arr2):     43(ptr) Variable Function
-          52(s2):     51(ptr) Variable Function
-          57(ss):     56(ptr) Variable Function
-                              Store 13(coop) 15
-                              Store 17(a) 18
-              22:    6(float) Load 17(a)
-              23:   19(fvec4) CompositeConstructReplicateEXT 22
-                              Store 21(v) 23
-                              Store 21(v) 25(cv)
-              29:   19(fvec4) Load 21(v)
-              30:          26 CompositeConstructReplicateEXT 29
-                              Store 28(m) 30
-                              Store 33(five) 34
-                              Store 35(six) 36
-              40:     31(int) Load 33(five)
-              41:          37 CompositeConstructReplicateEXT 40
-                              Store 39(arr) 41
-              45:          37 Load 39(arr)
-              46:          42 CompositeConstructReplicateEXT 45
-                              Store 44(arr2) 46
-                              Store 44(arr2) 49(carr2)
-              53:     31(int) Load 35(six)
-              54:       50(S) CompositeConstructReplicateEXT 53
-                              Store 52(s2) 54
-              58:       50(S) Load 52(s2)
-              59:      55(SS) CompositeConstructReplicateEXT 58
-                              Store 57(ss) 59
+                              Name 54_1  "main"
+                              Name 59_1  "coop"
+                              Name 59_2  "a"
+                              Name 59_3  "v"
+                              Name 50_1  "spec_float"
+                              Name 4462_1  "cv"
+                              Name 59_4  "m"
+                              Name 59_5  "five"
+                              Name 59_6  "six"
+                              Name 59_7  "arr"
+                              Name 59_8  "arr2"
+                              Name 50_2  "cfive"
+                              Name 4462_2  "carr"
+                              Name 4462_3  "carr2"
+                              Name 30_1  "S"
+                              MemberName 30_1(S) 0  "a"
+                              MemberName 30_1(S) 1  "b"
+                              MemberName 30_1(S) 2  "c"
+                              Name 59_9  "s2"
+                              Name 30_2  "SS"
+                              MemberName 30_2(SS) 0  "s1"
+                              MemberName 30_2(SS) 1  "s2"
+                              Name 59_10  "ss"
+                              Name 50_3  "csix"
+                              Name 4462_4  "cs"
+                              Name 4462_5  "css"
+                              Name 4462_6  "cm"
+                              Name 4462_7  "ccoop"
+                              Decorate 50_1(spec_float) SpecId 2
+                              Decorate 50_2(cfive) SpecId 0
+                              Decorate 4461_2 BuiltIn WorkgroupSize
+                              Decorate 50_3(csix) SpecId 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+        uint(16):   21_1(int) Constant 16
+         uint(0):   21_1(int) Constant 0
+          4456_1:             TypeCooperativeMatrixKHR 22_1(float) uint(3) uint(16) uint(16) uint(0)
+            32_1:             TypePointer Function 4456_1
+            43_1: 22_1(float) Constant 1065353216
+          4461_1:      4456_1 ConstantCompositeReplicateEXT 43_1
+            32_2:             TypePointer Function 22_1(float)
+            43_2: 22_1(float) Constant 1073741824
+            23_1:             TypeVector 22_1(float) 4
+            32_3:             TypePointer Function 23_1(fvec4)
+50_1(spec_float): 22_1(float) SpecConstant 1077936128
+      4462_1(cv): 23_1(fvec4) SpecConstantCompositeReplicateEXT 50_1(spec_float)
+            24_1:             TypeMatrix 23_1(fvec4) 4
+            32_4:             TypePointer Function 24_1
+            21_2:             TypeInt 32 1
+            32_5:             TypePointer Function 21_2(int)
+            43_3:   21_2(int) Constant 5
+            43_4:   21_2(int) Constant 6
+            28_1:             TypeArray 21_2(int) uint(3)
+            32_6:             TypePointer Function 28_1
+            28_2:             TypeArray 28_1 uint(3)
+            32_7:             TypePointer Function 28_2
+     50_2(cfive):   21_2(int) SpecConstant 5
+    4462_2(carr):        28_1 SpecConstantCompositeReplicateEXT 50_2(cfive)
+   4462_3(carr2):        28_2 SpecConstantCompositeReplicateEXT 4462_2(carr)
+         30_1(S):             TypeStruct 21_2(int) 21_2(int) 21_2(int)
+            32_8:             TypePointer Function 30_1(S)
+        30_2(SS):             TypeStruct 30_1(S) 30_1(S)
+            32_9:             TypePointer Function 30_2(SS)
+            23_2:             TypeVector 21_1(int) 3
+         uint(1):   21_1(int) Constant 1
+          4461_2: 23_2(ivec3) ConstantCompositeReplicateEXT uint(1)
+      50_3(csix):   21_2(int) SpecConstant 6
+      4462_4(cs):     30_1(S) SpecConstantCompositeReplicateEXT 50_3(csix)
+     4462_5(css):    30_2(SS) SpecConstantCompositeReplicateEXT 4462_4(cs)
+      4462_6(cm):        24_1 SpecConstantCompositeReplicateEXT 4462_1(cv)
+   4462_7(ccoop):      4456_1 SpecConstantCompositeReplicateEXT 50_1(spec_float)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+      59_1(coop):   32_1(ptr) Variable Function
+         59_2(a):   32_2(ptr) Variable Function
+         59_3(v):   32_3(ptr) Variable Function
+         59_4(m):   32_4(ptr) Variable Function
+      59_5(five):   32_5(ptr) Variable Function
+       59_6(six):   32_5(ptr) Variable Function
+       59_7(arr):   32_6(ptr) Variable Function
+      59_8(arr2):   32_7(ptr) Variable Function
+        59_9(s2):   32_8(ptr) Variable Function
+       59_10(ss):   32_9(ptr) Variable Function
+                              Store 59_1(coop) 4461_1
+                              Store 59_2(a) 43_2
+            61_1: 22_1(float) Load 59_2(a)
+          4463_1: 23_1(fvec4) CompositeConstructReplicateEXT 61_1
+                              Store 59_3(v) 4463_1
+                              Store 59_3(v) 4462_1(cv)
+            61_2: 23_1(fvec4) Load 59_3(v)
+          4463_2:        24_1 CompositeConstructReplicateEXT 61_2
+                              Store 59_4(m) 4463_2
+                              Store 59_5(five) 43_3
+                              Store 59_6(six) 43_4
+            61_3:   21_2(int) Load 59_5(five)
+          4463_3:        28_1 CompositeConstructReplicateEXT 61_3
+                              Store 59_7(arr) 4463_3
+            61_4:        28_1 Load 59_7(arr)
+          4463_4:        28_2 CompositeConstructReplicateEXT 61_4
+                              Store 59_8(arr2) 4463_4
+                              Store 59_8(arr2) 4462_3(carr2)
+            61_5:   21_2(int) Load 59_6(six)
+          4463_5:     30_1(S) CompositeConstructReplicateEXT 61_5
+                              Store 59_9(s2) 4463_5
+            61_6:     30_1(S) Load 59_9(s2)
+          4463_6:    30_2(SS) CompositeConstructReplicateEXT 61_6
+                              Store 59_10(ss) 4463_6
                               Return
                               FunctionEnd

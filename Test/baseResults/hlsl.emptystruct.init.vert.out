@@ -64,49 +64,49 @@ Shader version: 500
 // Id's are bound by 29
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 20 23
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 12  "@main(u1;"
-                              Name 11  "vertexIndex"
-                              Name 18  "vertexIndex"
-                              Name 20  "vertexIndex"
-                              Name 23  "@entryPointOutput"
-                              Name 24  "param"
-                              Name 27  "Test"
-                              Decorate 20(vertexIndex) Location 0
-                              Decorate 23(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               8:             TypeFloat 32
-               9:             TypeVector 8(float) 4
-              10:             TypeFunction 9(fvec4) 7(ptr)
-              14:    8(float) Constant 0
-              15:    9(fvec4) ConstantComposite 14 14 14 14
-              19:             TypePointer Input 6(int)
- 20(vertexIndex):     19(ptr) Variable Input
-              22:             TypePointer Output 9(fvec4)
-23(@entryPointOutput):     22(ptr) Variable Output
-        27(Test):             TypeStruct
-              28:    27(Test) ConstantComposite
-         4(main):           2 Function None 3
-               5:             Label
- 18(vertexIndex):      7(ptr) Variable Function
-       24(param):      7(ptr) Variable Function
-              21:      6(int) Load 20(vertexIndex)
-                              Store 18(vertexIndex) 21
-              25:      6(int) Load 18(vertexIndex)
-                              Store 24(param) 25
-              26:    9(fvec4) FunctionCall 12(@main(u1;) 24(param)
-                              Store 23(@entryPointOutput) 26
+                              Name 54_1  "main"
+                              Name 54_2  "@main(u1;"
+                              Name 55_1  "vertexIndex"
+                              Name 59_3  "vertexIndex"
+                              Name 59_1  "vertexIndex"
+                              Name 59_2  "@entryPointOutput"
+                              Name 59_4  "param"
+                              Name 30_1  "Test"
+                              Decorate 59_1(vertexIndex) Location 0
+                              Decorate 59_2(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            32_2:             TypePointer Input 21_1(int)
+59_1(vertexIndex):   32_2(ptr) Variable Input
+            32_3:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput):   32_3(ptr) Variable Output
+      30_1(Test):             TypeStruct
+            44_2:  30_1(Test) ConstantComposite
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+59_3(vertexIndex):   32_1(ptr) Variable Function
+     59_4(param):   32_1(ptr) Variable Function
+            61_1:   21_1(int) Load 59_1(vertexIndex)
+                              Store 59_3(vertexIndex) 61_1
+            61_2:   21_1(int) Load 59_3(vertexIndex)
+                              Store 59_4(param) 61_2
+            57_1: 23_1(fvec4) FunctionCall 54_2(@main(u1;) 59_4(param)
+                              Store 59_2(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-   12(@main(u1;):    9(fvec4) Function None 10
- 11(vertexIndex):      7(ptr) FunctionParameter
-              13:             Label
-                              ReturnValue 15
+ 54_2(@main(u1;): 23_1(fvec4) Function None 33_2
+55_1(vertexIndex):   32_1(ptr) FunctionParameter
+           248_2:             Label
+                              ReturnValue 44_1
                               FunctionEnd

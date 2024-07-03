@@ -4,70 +4,70 @@ spv.while-continue-break.vert
 // Id's are bound by 41
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main"
+                              EntryPoint Vertex 54_1  "main"
                               Source ESSL 310
-                              Name 4  "main"
-                              Name 8  "i"
-                              Name 19  "A"
-                              Name 27  "B"
-                              Name 29  "C"
-                              Name 39  "D"
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Function 6(int)
-               9:      6(int) Constant 0
-              16:      6(int) Constant 10
-              17:             TypeBool
-              20:      6(int) Constant 1
-              22:      6(int) Constant 2
-              31:      6(int) Constant 5
-              40:      6(int) Constant 3
-         4(main):           2 Function None 3
-               5:             Label
-            8(i):      7(ptr) Variable Function
-           19(A):      7(ptr) Variable Function
-           27(B):      7(ptr) Variable Function
-           29(C):      7(ptr) Variable Function
-           39(D):      7(ptr) Variable Function
-                              Store 8(i) 9
-                              Branch 10
-              10:             Label
-                              LoopMerge 12 13 None
-                              Branch 14
-              14:             Label
-              15:      6(int) Load 8(i)
-              18:    17(bool) SLessThan 15 16
-                              BranchConditional 18 11 12
-              11:               Label
-                                Store 19(A) 20
-              21:      6(int)   Load 8(i)
-              23:      6(int)   SMod 21 22
-              24:    17(bool)   IEqual 23 9
-                                SelectionMerge 26 None
-                                BranchConditional 24 25 26
-              25:                 Label
-                                  Store 27(B) 22
-                                  Branch 13
-              26:               Label
-              30:      6(int)   Load 8(i)
-              32:      6(int)   SMod 30 31
-              33:    17(bool)   IEqual 32 9
-                                SelectionMerge 35 None
-                                BranchConditional 33 34 35
-              34:                 Label
-                                  Store 27(B) 22
-                                  Branch 12
-              35:               Label
-              37:      6(int)   Load 8(i)
-              38:      6(int)   IAdd 37 20
-                                Store 8(i) 38
-                                Branch 13
-              13:               Label
-                                Branch 10
-              12:             Label
-                              Store 39(D) 40
+                              Name 54_1  "main"
+                              Name 59_1  "i"
+                              Name 59_2  "A"
+                              Name 59_3  "B"
+                              Name 59_4  "C"
+                              Name 59_5  "D"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Function 21_1(int)
+            43_1:   21_1(int) Constant 0
+            43_2:   21_1(int) Constant 10
+            20_1:             TypeBool
+            43_3:   21_1(int) Constant 1
+            43_4:   21_1(int) Constant 2
+            43_5:   21_1(int) Constant 5
+            43_6:   21_1(int) Constant 3
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_1(i):   32_1(ptr) Variable Function
+         59_2(A):   32_1(ptr) Variable Function
+         59_3(B):   32_1(ptr) Variable Function
+         59_4(C):   32_1(ptr) Variable Function
+         59_5(D):   32_1(ptr) Variable Function
+                              Store 59_1(i) 43_1
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_10 248_9 None
+                              Branch 248_3
+           248_3:             Label
+            61_1:   21_1(int) Load 59_1(i)
+           177_1:  20_1(bool) SLessThan 61_1 43_2
+                              BranchConditional 177_1 248_4 248_10
+           248_4:               Label
+                                Store 59_2(A) 43_3
+            61_2:   21_1(int)   Load 59_1(i)
+           139_1:   21_1(int)   SMod 61_2 43_4
+           170_1:  20_1(bool)   IEqual 139_1 43_1
+                                SelectionMerge 248_6 None
+                                BranchConditional 170_1 248_5 248_6
+           248_5:                 Label
+                                  Store 59_3(B) 43_4
+                                  Branch 248_9
+           248_6:               Label
+            61_3:   21_1(int)   Load 59_1(i)
+           139_2:   21_1(int)   SMod 61_3 43_5
+           170_2:  20_1(bool)   IEqual 139_2 43_1
+                                SelectionMerge 248_8 None
+                                BranchConditional 170_2 248_7 248_8
+           248_7:                 Label
+                                  Store 59_3(B) 43_4
+                                  Branch 248_10
+           248_8:               Label
+            61_4:   21_1(int)   Load 59_1(i)
+           128_1:   21_1(int)   IAdd 61_4 43_3
+                                Store 59_1(i) 128_1
+                                Branch 248_9
+           248_9:               Label
+                                Branch 248_2
+          248_10:             Label
+                              Store 59_5(D) 43_6
                               Return
                               FunctionEnd

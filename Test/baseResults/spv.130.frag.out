@@ -12,10 +12,10 @@ Validation failed
                               Capability Sampled1D
                               Capability SampledCubeArray
                               Capability ImageQuery
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 17 68 79 99 173 184 185 186
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_6 59_8 59_10 59_15 59_17 59_18 59_19
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
                               SourceExtension  "GL_ARB_gpu_shader5"
                               SourceExtension  "GL_ARB_shader_texture_lod"
@@ -23,309 +23,309 @@ Validation failed
                               SourceExtension  "GL_ARB_texture_cube_map_array"
                               SourceExtension  "GL_ARB_texture_gather"
                               SourceExtension  "GL_ARB_texture_rectangle"
-                              Name 4  "main"
-                              Name 6  "bar3("
-                              Name 8  "bar4("
-                              Name 10  "bar5("
-                              Name 12  "bar6("
-                              Name 17  "o"
-                              Name 21  "samp2D"
-                              Name 37  "samp2DA"
-                              Name 47  "samp2DR"
-                              Name 55  "samp2DS"
-                              Name 68  "io"
-                              Name 72  "Sca"
-                              Name 79  "i"
-                              Name 87  "Isca"
-                              Name 99  "uo"
-                              Name 103  "Usca"
-                              Name 114  "a"
-                              Name 118  "Scas"
-                              Name 124  "f"
-                              Name 133  "c"
-                              Name 154  "a1"
-                              Name 157  "m43"
-                              Name 160  "b"
-                              Name 167  "sampC"
-                              Name 173  "gl_ClipDistance"
-                              Name 183  "b"
-                              Name 184  "fflat"
-                              Name 185  "fsmooth"
-                              Name 186  "fnop"
-                              Name 193  "bounds"
-                              Name 194  "s2D"
-                              Name 195  "s2DR"
-                              Name 199  "s2DRS"
-                              Name 203  "s1D"
-                              Name 204  "s2DS"
-                              Decorate 17(o) Location 0
-                              Decorate 21(samp2D) Binding 2
-                              Decorate 21(samp2D) DescriptorSet 0
-                              Decorate 37(samp2DA) Binding 5
-                              Decorate 37(samp2DA) DescriptorSet 0
-                              Decorate 47(samp2DR) Binding 4
-                              Decorate 47(samp2DR) DescriptorSet 0
-                              Decorate 55(samp2DS) Binding 3
-                              Decorate 55(samp2DS) DescriptorSet 0
-                              Decorate 68(io) Location 1
-                              Decorate 72(Sca) Binding 6
-                              Decorate 72(Sca) DescriptorSet 0
-                              Decorate 79(i) Location 0
-                              Decorate 87(Isca) Binding 7
-                              Decorate 87(Isca) DescriptorSet 0
-                              Decorate 99(uo) Location 2
-                              Decorate 103(Usca) Binding 8
-                              Decorate 103(Usca) DescriptorSet 0
-                              Decorate 118(Scas) Binding 9
-                              Decorate 118(Scas) DescriptorSet 0
-                              Decorate 167(sampC) Binding 1
-                              Decorate 167(sampC) DescriptorSet 0
-                              Decorate 173(gl_ClipDistance) BuiltIn ClipDistance
-                              Decorate 184(fflat) Flat
-                              Decorate 184(fflat) Location 1
-                              Decorate 185(fsmooth) Location 2
-                              Decorate 186(fnop) NoPerspective
-                              Decorate 186(fnop) Location 3
-                              Decorate 193(bounds) Binding 0
-                              Decorate 193(bounds) DescriptorSet 0
-                              Decorate 194(s2D) Binding 0
-                              Decorate 194(s2D) DescriptorSet 0
-                              Decorate 195(s2DR) Binding 0
-                              Decorate 195(s2DR) DescriptorSet 0
-                              Decorate 199(s2DRS) Binding 0
-                              Decorate 199(s2DRS) DescriptorSet 0
-                              Decorate 203(s1D) Binding 0
-                              Decorate 203(s1D) DescriptorSet 0
-                              Decorate 204(s2DS) Binding 0
-                              Decorate 204(s2DS) DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-              14:             TypeFloat 32
-              15:             TypeVector 14(float) 4
-              16:             TypePointer Output 15(fvec4)
-           17(o):     16(ptr) Variable Output
-              18:             TypeImage 14(float) 2D sampled format:Unknown
-              19:             TypeSampledImage 18
-              20:             TypePointer UniformConstant 19
-      21(samp2D):     20(ptr) Variable UniformConstant
-              23:             TypeVector 14(float) 2
-              24:   14(float) Constant 1050253722
-              25:   23(fvec2) ConstantComposite 24 24
-              26:             TypeInt 32 1
-              27:             TypeVector 26(int) 2
-              28:     26(int) Constant 1
-              29:   27(ivec2) ConstantComposite 28 28
-              30:     26(int) Constant 0
-              34:             TypeImage 14(float) 2D array sampled format:Unknown
-              35:             TypeSampledImage 34
-              36:             TypePointer UniformConstant 35
-     37(samp2DA):     36(ptr) Variable UniformConstant
-              39:             TypeVector 14(float) 3
-              40:   39(fvec3) ConstantComposite 24 24 24
-              44:             TypeImage 14(float) Rect sampled format:Unknown
-              45:             TypeSampledImage 44
-              46:             TypePointer UniformConstant 45
-     47(samp2DR):     46(ptr) Variable UniformConstant
-              52:             TypeImage 14(float) 2D depth sampled format:Unknown
-              53:             TypeSampledImage 52
-              54:             TypePointer UniformConstant 53
-     55(samp2DS):     54(ptr) Variable UniformConstant
-              57:   14(float) Constant 1067869798
-              62:     26(int) Constant 2
-              66:             TypeVector 26(int) 3
-              67:             TypePointer Output 66(ivec3)
-          68(io):     67(ptr) Variable Output
-              69:             TypeImage 14(float) Cube array sampled format:Unknown
-              70:             TypeSampledImage 69
-              71:             TypePointer UniformConstant 70
-         72(Sca):     71(ptr) Variable UniformConstant
-              74:     26(int) Constant 3
-              78:             TypePointer Input 15(fvec4)
-           79(i):     78(ptr) Variable Input
-              84:             TypeImage 26(int) Cube array sampled format:Unknown
-              85:             TypeSampledImage 84
-              86:             TypePointer UniformConstant 85
-        87(Isca):     86(ptr) Variable UniformConstant
-              90:   14(float) Constant 1060320051
-              91:             TypeVector 26(int) 4
-              96:             TypeInt 32 0
-              97:             TypeVector 96(int) 4
-              98:             TypePointer Output 97(ivec4)
-          99(uo):     98(ptr) Variable Output
-             100:             TypeImage 96(int) Cube array sampled format:Unknown
-             101:             TypeSampledImage 100
-             102:             TypePointer UniformConstant 101
-       103(Usca):    102(ptr) Variable UniformConstant
-             109:   14(float) Constant 1071225242
-             113:             TypePointer Private 39(fvec3)
-          114(a):    113(ptr) Variable Private
-             115:             TypeImage 14(float) Cube depth array sampled format:Unknown
-             116:             TypeSampledImage 115
-             117:             TypePointer UniformConstant 116
-       118(Scas):    117(ptr) Variable UniformConstant
-             123:             TypePointer Function 14(float)
-             127:     96(int) Constant 1
-             128:             TypePointer Input 14(float)
-             132:             TypePointer Function 91(ivec4)
-             136:   14(float) Constant 1036831949
-             137:   39(fvec3) ConstantComposite 136 136 136
-             138:   14(float) Constant 1045220557
-             139:   39(fvec3) ConstantComposite 138 138 138
-             155:             TypeMatrix 39(fvec3) 4
-             156:             TypePointer Function 155
-             161:   14(float) Constant 1073741824
-             164:             TypeImage 14(float) Cube sampled format:Unknown
-             165:             TypeSampledImage 164
-             166:             TypePointer UniformConstant 165
-      167(sampC):    166(ptr) Variable UniformConstant
-             170:     96(int) Constant 4
-             171:             TypeArray 14(float) 170
-             172:             TypePointer Input 171
-173(gl_ClipDistance):    172(ptr) Variable Input
-             176:             TypePointer Output 14(float)
-             182:             TypePointer Private 14(float)
-          183(b):    182(ptr) Variable Private
-      184(fflat):    128(ptr) Variable Input
-    185(fsmooth):    128(ptr) Variable Input
-       186(fnop):    128(ptr) Variable Input
-             187:     96(int) Constant 3
-             188:             TypeArray 26(int) 187
-             189:     26(int) Constant 10
-             190:     26(int) Constant 23
-             191:     26(int) Constant 32
-             192:         188 ConstantComposite 189 190 191
-     193(bounds):     20(ptr) Variable UniformConstant
-        194(s2D):     20(ptr) Variable UniformConstant
-       195(s2DR):     46(ptr) Variable UniformConstant
-             196:             TypeImage 14(float) Rect depth sampled format:Unknown
-             197:             TypeSampledImage 196
-             198:             TypePointer UniformConstant 197
-      199(s2DRS):    198(ptr) Variable UniformConstant
-             200:             TypeImage 14(float) 1D sampled format:Unknown
-             201:             TypeSampledImage 200
-             202:             TypePointer UniformConstant 201
-        203(s1D):    202(ptr) Variable UniformConstant
-       204(s2DS):     54(ptr) Variable UniformConstant
-         4(main):           2 Function None 3
-               5:             Label
-             168:         165 Load 167(sampC)
-             169:   15(fvec4) ImageGather 168 139 30
-                              Store 17(o) 169
-             174:    128(ptr) AccessChain 173(gl_ClipDistance) 74
-             175:   14(float) Load 174
-             177:    176(ptr) AccessChain 17(o) 127
-                              Store 177 175
-             178:           2 FunctionCall 6(bar3()
-             179:           2 FunctionCall 8(bar4()
-             180:           2 FunctionCall 10(bar5()
-             181:           2 FunctionCall 12(bar6()
+                              Name 54_1  "main"
+                              Name 54_2  "bar3("
+                              Name 54_3  "bar4("
+                              Name 54_4  "bar5("
+                              Name 54_5  "bar6("
+                              Name 59_1  "o"
+                              Name 59_2  "samp2D"
+                              Name 59_3  "samp2DA"
+                              Name 59_4  "samp2DR"
+                              Name 59_5  "samp2DS"
+                              Name 59_6  "io"
+                              Name 59_7  "Sca"
+                              Name 59_8  "i"
+                              Name 59_9  "Isca"
+                              Name 59_10  "uo"
+                              Name 59_11  "Usca"
+                              Name 59_12  "a"
+                              Name 59_13  "Scas"
+                              Name 59_26  "f"
+                              Name 59_27  "c"
+                              Name 59_28  "a1"
+                              Name 59_29  "m43"
+                              Name 59_30  "b"
+                              Name 59_14  "sampC"
+                              Name 59_15  "gl_ClipDistance"
+                              Name 59_16  "b"
+                              Name 59_17  "fflat"
+                              Name 59_18  "fsmooth"
+                              Name 59_19  "fnop"
+                              Name 59_20  "bounds"
+                              Name 59_21  "s2D"
+                              Name 59_22  "s2DR"
+                              Name 59_23  "s2DRS"
+                              Name 59_24  "s1D"
+                              Name 59_25  "s2DS"
+                              Decorate 59_1(o) Location 0
+                              Decorate 59_2(samp2D) Binding 2
+                              Decorate 59_2(samp2D) DescriptorSet 0
+                              Decorate 59_3(samp2DA) Binding 5
+                              Decorate 59_3(samp2DA) DescriptorSet 0
+                              Decorate 59_4(samp2DR) Binding 4
+                              Decorate 59_4(samp2DR) DescriptorSet 0
+                              Decorate 59_5(samp2DS) Binding 3
+                              Decorate 59_5(samp2DS) DescriptorSet 0
+                              Decorate 59_6(io) Location 1
+                              Decorate 59_7(Sca) Binding 6
+                              Decorate 59_7(Sca) DescriptorSet 0
+                              Decorate 59_8(i) Location 0
+                              Decorate 59_9(Isca) Binding 7
+                              Decorate 59_9(Isca) DescriptorSet 0
+                              Decorate 59_10(uo) Location 2
+                              Decorate 59_11(Usca) Binding 8
+                              Decorate 59_11(Usca) DescriptorSet 0
+                              Decorate 59_13(Scas) Binding 9
+                              Decorate 59_13(Scas) DescriptorSet 0
+                              Decorate 59_14(sampC) Binding 1
+                              Decorate 59_14(sampC) DescriptorSet 0
+                              Decorate 59_15(gl_ClipDistance) BuiltIn ClipDistance
+                              Decorate 59_17(fflat) Flat
+                              Decorate 59_17(fflat) Location 1
+                              Decorate 59_18(fsmooth) Location 2
+                              Decorate 59_19(fnop) NoPerspective
+                              Decorate 59_19(fnop) Location 3
+                              Decorate 59_20(bounds) Binding 0
+                              Decorate 59_20(bounds) DescriptorSet 0
+                              Decorate 59_21(s2D) Binding 0
+                              Decorate 59_21(s2D) DescriptorSet 0
+                              Decorate 59_22(s2DR) Binding 0
+                              Decorate 59_22(s2DR) DescriptorSet 0
+                              Decorate 59_23(s2DRS) Binding 0
+                              Decorate 59_23(s2DRS) DescriptorSet 0
+                              Decorate 59_24(s1D) Binding 0
+                              Decorate 59_24(s1D) DescriptorSet 0
+                              Decorate 59_25(s2DS) Binding 0
+                              Decorate 59_25(s2DS) DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Output 23_1(fvec4)
+         59_1(o):   32_1(ptr) Variable Output
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_2:             TypePointer UniformConstant 27_1
+    59_2(samp2D):   32_2(ptr) Variable UniformConstant
+            23_2:             TypeVector 22_1(float) 2
+            43_1: 22_1(float) Constant 1050253722
+            44_1: 23_2(fvec2) ConstantComposite 43_1 43_1
+            21_1:             TypeInt 32 1
+            23_3:             TypeVector 21_1(int) 2
+            43_2:   21_1(int) Constant 1
+            44_2: 23_3(ivec2) ConstantComposite 43_2 43_2
+            43_3:   21_1(int) Constant 0
+            25_2:             TypeImage 22_1(float) 2D array sampled format:Unknown
+            27_2:             TypeSampledImage 25_2
+            32_3:             TypePointer UniformConstant 27_2
+   59_3(samp2DA):   32_3(ptr) Variable UniformConstant
+            23_4:             TypeVector 22_1(float) 3
+            44_3: 23_4(fvec3) ConstantComposite 43_1 43_1 43_1
+            25_3:             TypeImage 22_1(float) Rect sampled format:Unknown
+            27_3:             TypeSampledImage 25_3
+            32_4:             TypePointer UniformConstant 27_3
+   59_4(samp2DR):   32_4(ptr) Variable UniformConstant
+            25_4:             TypeImage 22_1(float) 2D depth sampled format:Unknown
+            27_4:             TypeSampledImage 25_4
+            32_5:             TypePointer UniformConstant 27_4
+   59_5(samp2DS):   32_5(ptr) Variable UniformConstant
+            43_4: 22_1(float) Constant 1067869798
+            43_5:   21_1(int) Constant 2
+            23_5:             TypeVector 21_1(int) 3
+            32_6:             TypePointer Output 23_5(ivec3)
+        59_6(io):   32_6(ptr) Variable Output
+            25_5:             TypeImage 22_1(float) Cube array sampled format:Unknown
+            27_5:             TypeSampledImage 25_5
+            32_7:             TypePointer UniformConstant 27_5
+       59_7(Sca):   32_7(ptr) Variable UniformConstant
+            43_6:   21_1(int) Constant 3
+            32_8:             TypePointer Input 23_1(fvec4)
+         59_8(i):   32_8(ptr) Variable Input
+            25_6:             TypeImage 21_1(int) Cube array sampled format:Unknown
+            27_6:             TypeSampledImage 25_6
+            32_9:             TypePointer UniformConstant 27_6
+      59_9(Isca):   32_9(ptr) Variable UniformConstant
+            43_7: 22_1(float) Constant 1060320051
+            23_6:             TypeVector 21_1(int) 4
+            21_2:             TypeInt 32 0
+            23_7:             TypeVector 21_2(int) 4
+           32_10:             TypePointer Output 23_7(ivec4)
+       59_10(uo):  32_10(ptr) Variable Output
+            25_7:             TypeImage 21_2(int) Cube array sampled format:Unknown
+            27_7:             TypeSampledImage 25_7
+           32_11:             TypePointer UniformConstant 27_7
+     59_11(Usca):  32_11(ptr) Variable UniformConstant
+            43_8: 22_1(float) Constant 1071225242
+           32_12:             TypePointer Private 23_4(fvec3)
+        59_12(a):  32_12(ptr) Variable Private
+            25_8:             TypeImage 22_1(float) Cube depth array sampled format:Unknown
+            27_8:             TypeSampledImage 25_8
+           32_13:             TypePointer UniformConstant 27_8
+     59_13(Scas):  32_13(ptr) Variable UniformConstant
+           32_14:             TypePointer Function 22_1(float)
+         uint(1):   21_2(int) Constant 1
+           32_15:             TypePointer Input 22_1(float)
+           32_16:             TypePointer Function 23_6(ivec4)
+            43_9: 22_1(float) Constant 1036831949
+            44_4: 23_4(fvec3) ConstantComposite 43_9 43_9 43_9
+           43_10: 22_1(float) Constant 1045220557
+            44_5: 23_4(fvec3) ConstantComposite 43_10 43_10 43_10
+            24_1:             TypeMatrix 23_4(fvec3) 4
+           32_17:             TypePointer Function 24_1
+           43_11: 22_1(float) Constant 1073741824
+            25_9:             TypeImage 22_1(float) Cube sampled format:Unknown
+            27_9:             TypeSampledImage 25_9
+           32_18:             TypePointer UniformConstant 27_9
+    59_14(sampC):  32_18(ptr) Variable UniformConstant
+         uint(4):   21_2(int) Constant 4
+            28_1:             TypeArray 22_1(float) uint(4)
+           32_19:             TypePointer Input 28_1
+59_15(gl_ClipDistance):  32_19(ptr) Variable Input
+           32_20:             TypePointer Output 22_1(float)
+           32_21:             TypePointer Private 22_1(float)
+        59_16(b):  32_21(ptr) Variable Private
+    59_17(fflat):  32_15(ptr) Variable Input
+  59_18(fsmooth):  32_15(ptr) Variable Input
+     59_19(fnop):  32_15(ptr) Variable Input
+         uint(3):   21_2(int) Constant 3
+            28_2:             TypeArray 21_1(int) uint(3)
+           43_12:   21_1(int) Constant 10
+           43_13:   21_1(int) Constant 23
+           43_14:   21_1(int) Constant 32
+            44_6:        28_2 ConstantComposite 43_12 43_13 43_14
+   59_20(bounds):   32_2(ptr) Variable UniformConstant
+      59_21(s2D):   32_2(ptr) Variable UniformConstant
+     59_22(s2DR):   32_4(ptr) Variable UniformConstant
+           25_10:             TypeImage 22_1(float) Rect depth sampled format:Unknown
+           27_10:             TypeSampledImage 25_10
+           32_22:             TypePointer UniformConstant 27_10
+    59_23(s2DRS):  32_22(ptr) Variable UniformConstant
+           25_11:             TypeImage 22_1(float) 1D sampled format:Unknown
+           27_11:             TypeSampledImage 25_11
+           32_23:             TypePointer UniformConstant 27_11
+      59_24(s1D):  32_23(ptr) Variable UniformConstant
+     59_25(s2DS):   32_5(ptr) Variable UniformConstant
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:        27_9 Load 59_14(sampC)
+            96_1: 23_1(fvec4) ImageGather 61_1 44_5 43_3
+                              Store 59_1(o) 96_1
+            65_1:  32_15(ptr) AccessChain 59_15(gl_ClipDistance) 43_6
+            61_2: 22_1(float) Load 65_1
+            65_2:  32_20(ptr) AccessChain 59_1(o) uint(1)
+                              Store 65_2 61_2
+            57_1:        19_1 FunctionCall 54_2(bar3()
+            57_2:        19_1 FunctionCall 54_3(bar4()
+            57_3:        19_1 FunctionCall 54_4(bar5()
+            57_4:        19_1 FunctionCall 54_5(bar6()
                               Return
                               FunctionEnd
-        6(bar3():           2 Function None 3
-               7:             Label
-              22:          19 Load 21(samp2D)
-              31:   15(fvec4) ImageGather 22 25 30 ConstOffset 29
-              32:   15(fvec4) Load 17(o)
-              33:   15(fvec4) FAdd 32 31
-                              Store 17(o) 33
-              38:          35 Load 37(samp2DA)
-              41:   15(fvec4) ImageGather 38 40 30 ConstOffset 29
-              42:   15(fvec4) Load 17(o)
-              43:   15(fvec4) FAdd 42 41
-                              Store 17(o) 43
+     54_2(bar3():        19_1 Function None 33_1
+           248_2:             Label
+            61_3:        27_1 Load 59_2(samp2D)
+            96_2: 23_1(fvec4) ImageGather 61_3 44_1 43_3 ConstOffset 44_2
+            61_4: 23_1(fvec4) Load 59_1(o)
+           129_1: 23_1(fvec4) FAdd 61_4 96_2
+                              Store 59_1(o) 129_1
+            61_5:        27_2 Load 59_3(samp2DA)
+            96_3: 23_1(fvec4) ImageGather 61_5 44_3 43_3 ConstOffset 44_2
+            61_6: 23_1(fvec4) Load 59_1(o)
+           129_2: 23_1(fvec4) FAdd 61_6 96_3
+                              Store 59_1(o) 129_2
                               Return
                               FunctionEnd
-        8(bar4():           2 Function None 3
-               9:             Label
-              48:          45 Load 47(samp2DR)
-              49:   15(fvec4) ImageGather 48 25 30 ConstOffset 29
-              50:   15(fvec4) Load 17(o)
-              51:   15(fvec4) FAdd 50 49
-                              Store 17(o) 51
-              56:          53 Load 55(samp2DS)
-              58:   15(fvec4) ImageDrefGather 56 25 57 ConstOffset 29
-              59:   15(fvec4) Load 17(o)
-              60:   15(fvec4) FAdd 59 58
-                              Store 17(o) 60
-              61:          19 Load 21(samp2D)
-              63:   15(fvec4) ImageGather 61 25 62 ConstOffset 29
-              64:   15(fvec4) Load 17(o)
-              65:   15(fvec4) FAdd 64 63
-                              Store 17(o) 65
+     54_3(bar4():        19_1 Function None 33_1
+           248_3:             Label
+            61_7:        27_3 Load 59_4(samp2DR)
+            96_4: 23_1(fvec4) ImageGather 61_7 44_1 43_3 ConstOffset 44_2
+            61_8: 23_1(fvec4) Load 59_1(o)
+           129_3: 23_1(fvec4) FAdd 61_8 96_4
+                              Store 59_1(o) 129_3
+            61_9:        27_4 Load 59_5(samp2DS)
+            97_1: 23_1(fvec4) ImageDrefGather 61_9 44_1 43_4 ConstOffset 44_2
+           61_10: 23_1(fvec4) Load 59_1(o)
+           129_4: 23_1(fvec4) FAdd 61_10 97_1
+                              Store 59_1(o) 129_4
+           61_11:        27_1 Load 59_2(samp2D)
+            96_5: 23_1(fvec4) ImageGather 61_11 44_1 43_5 ConstOffset 44_2
+           61_12: 23_1(fvec4) Load 59_1(o)
+           129_5: 23_1(fvec4) FAdd 61_12 96_5
+                              Store 59_1(o) 129_5
                               Return
                               FunctionEnd
-       10(bar5():           2 Function None 3
-              11:             Label
-          124(f):    123(ptr) Variable Function
-          133(c):    132(ptr) Variable Function
-              73:          70 Load 72(Sca)
-              75:          69 Image 73
-              76:   66(ivec3) ImageQuerySizeLod 75 74
-                              Store 68(io) 76
-              77:          70 Load 72(Sca)
-              80:   15(fvec4) Load 79(i)
-              81:   15(fvec4) ImageSampleImplicitLod 77 80
-              82:   15(fvec4) Load 17(o)
-              83:   15(fvec4) FAdd 82 81
-                              Store 17(o) 83
-              88:          85 Load 87(Isca)
-              89:   15(fvec4) Load 79(i)
-              92:   91(ivec4) ImageSampleImplicitLod 88 89 Bias 90
-              93:   66(ivec3) VectorShuffle 92 92 0 1 2
-              94:   66(ivec3) Load 68(io)
-              95:   66(ivec3) IAdd 94 93
-                              Store 68(io) 95
-             104:         101 Load 103(Usca)
-             105:   15(fvec4) Load 79(i)
-             106:   97(ivec4) ImageSampleImplicitLod 104 105
-                              Store 99(uo) 106
-             107:          70 Load 72(Sca)
-             108:   15(fvec4) Load 79(i)
-             110:   15(fvec4) ImageSampleExplicitLod 107 108 Lod 109
-             111:   15(fvec4) Load 17(o)
-             112:   15(fvec4) FAdd 111 110
-                              Store 17(o) 112
-             119:         116 Load 118(Scas)
-             120:         115 Image 119
-             121:   66(ivec3) ImageQuerySizeLod 120 74
-             122:   39(fvec3) ConvertSToF 121
-                              Store 114(a) 122
-             125:         116 Load 118(Scas)
-             126:   15(fvec4) Load 79(i)
-             129:    128(ptr) AccessChain 79(i) 127
-             130:   14(float) Load 129
-             131:   14(float) ImageSampleDrefImplicitLod 125 126 130
-                              Store 124(f) 131
-             134:          85 Load 87(Isca)
-             135:   15(fvec4) Load 79(i)
-             140:   91(ivec4) ImageSampleExplicitLod 134 135 Grad 137 139
-                              Store 133(c) 140
-             141:   39(fvec3) Load 114(a)
-             142:   14(float) Load 124(f)
-             143:   91(ivec4) Load 133(c)
-             144:   15(fvec4) ConvertSToF 143
-             145:   15(fvec4) CompositeConstruct 142 142 142 142
-             146:   15(fvec4) FAdd 145 144
-             147:   14(float) CompositeExtract 141 0
-             148:   14(float) CompositeExtract 141 1
-             149:   14(float) CompositeExtract 141 2
-             150:   14(float) CompositeExtract 146 0
-             151:   15(fvec4) CompositeConstruct 147 148 149 150
-             152:   15(fvec4) Load 17(o)
-             153:   15(fvec4) FAdd 152 151
-                              Store 17(o) 153
+     54_4(bar5():        19_1 Function None 33_1
+           248_4:             Label
+        59_26(f):  32_14(ptr) Variable Function
+        59_27(c):  32_16(ptr) Variable Function
+           61_13:        27_5 Load 59_7(Sca)
+           100_1:        25_5 Image 61_13
+           103_1: 23_5(ivec3) ImageQuerySizeLod 100_1 43_6
+                              Store 59_6(io) 103_1
+           61_14:        27_5 Load 59_7(Sca)
+           61_15: 23_1(fvec4) Load 59_8(i)
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 61_14 61_15
+           61_16: 23_1(fvec4) Load 59_1(o)
+           129_6: 23_1(fvec4) FAdd 61_16 87_1
+                              Store 59_1(o) 129_6
+           61_17:        27_6 Load 59_9(Isca)
+           61_18: 23_1(fvec4) Load 59_8(i)
+            87_2: 23_6(ivec4) ImageSampleImplicitLod 61_17 61_18 Bias 43_7
+            79_1: 23_5(ivec3) VectorShuffle 87_2 87_2 0 1 2
+           61_19: 23_5(ivec3) Load 59_6(io)
+           128_1: 23_5(ivec3) IAdd 61_19 79_1
+                              Store 59_6(io) 128_1
+           61_20:        27_7 Load 59_11(Usca)
+           61_21: 23_1(fvec4) Load 59_8(i)
+            87_3: 23_7(ivec4) ImageSampleImplicitLod 61_20 61_21
+                              Store 59_10(uo) 87_3
+           61_22:        27_5 Load 59_7(Sca)
+           61_23: 23_1(fvec4) Load 59_8(i)
+            88_1: 23_1(fvec4) ImageSampleExplicitLod 61_22 61_23 Lod 43_8
+           61_24: 23_1(fvec4) Load 59_1(o)
+           129_7: 23_1(fvec4) FAdd 61_24 88_1
+                              Store 59_1(o) 129_7
+           61_25:        27_8 Load 59_13(Scas)
+           100_2:        25_8 Image 61_25
+           103_2: 23_5(ivec3) ImageQuerySizeLod 100_2 43_6
+           111_1: 23_4(fvec3) ConvertSToF 103_2
+                              Store 59_12(a) 111_1
+           61_26:        27_8 Load 59_13(Scas)
+           61_27: 23_1(fvec4) Load 59_8(i)
+            65_3:  32_15(ptr) AccessChain 59_8(i) uint(1)
+           61_28: 22_1(float) Load 65_3
+            89_1: 22_1(float) ImageSampleDrefImplicitLod 61_26 61_27 61_28
+                              Store 59_26(f) 89_1
+           61_29:        27_6 Load 59_9(Isca)
+           61_30: 23_1(fvec4) Load 59_8(i)
+            88_2: 23_6(ivec4) ImageSampleExplicitLod 61_29 61_30 Grad 44_4 44_5
+                              Store 59_27(c) 88_2
+           61_31: 23_4(fvec3) Load 59_12(a)
+           61_32: 22_1(float) Load 59_26(f)
+           61_33: 23_6(ivec4) Load 59_27(c)
+           111_2: 23_1(fvec4) ConvertSToF 61_33
+            80_1: 23_1(fvec4) CompositeConstruct 61_32 61_32 61_32 61_32
+           129_8: 23_1(fvec4) FAdd 80_1 111_2
+            81_1: 22_1(float) CompositeExtract 61_31 0
+            81_2: 22_1(float) CompositeExtract 61_31 1
+            81_3: 22_1(float) CompositeExtract 61_31 2
+            81_4: 22_1(float) CompositeExtract 129_8 0
+            80_2: 23_1(fvec4) CompositeConstruct 81_1 81_2 81_3 81_4
+           61_34: 23_1(fvec4) Load 59_1(o)
+           129_9: 23_1(fvec4) FAdd 61_34 80_2
+                              Store 59_1(o) 129_9
                               Return
                               FunctionEnd
-       12(bar6():           2 Function None 3
-              13:             Label
-         154(a1):    123(ptr) Variable Function
-        157(m43):    156(ptr) Variable Function
-          160(b):    123(ptr) Variable Function
-             158:    123(ptr) AccessChain 157(m43) 74 127
-             159:   14(float) Load 158
-                              Store 154(a1) 159
-             162:   14(float) Load 154(a1)
-             163:   14(float) FMul 161 162
-                              Store 160(b) 163
+     54_5(bar6():        19_1 Function None 33_1
+           248_5:             Label
+       59_28(a1):  32_14(ptr) Variable Function
+      59_29(m43):  32_17(ptr) Variable Function
+        59_30(b):  32_14(ptr) Variable Function
+            65_4:  32_14(ptr) AccessChain 59_29(m43) 43_6 uint(1)
+           61_35: 22_1(float) Load 65_4
+                              Store 59_28(a1) 61_35
+           61_36: 22_1(float) Load 59_28(a1)
+           133_1: 22_1(float) FMul 43_11 61_36
+                              Store 59_30(b) 133_1
                               Return
                               FunctionEnd

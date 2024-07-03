@@ -266,152 +266,152 @@ gl_FragCoord origin is upper left
 // Id's are bound by 96
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 90
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 11  "Bug1(vf4;"
-                              Name 10  "a"
-                              Name 13  "PS_OUTPUT"
-                              MemberName 13(PS_OUTPUT) 0  "Color"
-                              Name 15  "@main("
-                              Name 17  "v04"
-                              Name 21  "v01"
-                              Name 25  "r00"
-                              Name 29  "r01"
-                              Name 33  "r02"
-                              Name 37  "r03"
-                              Name 41  "r10"
-                              Name 46  "r11"
-                              Name 51  "r12"
-                              Name 56  "r13"
-                              Name 61  "r20"
-                              Name 66  "r21"
-                              Name 71  "r22"
-                              Name 76  "r23"
-                              Name 82  "psout"
-                              Name 90  "@entryPointOutput.Color"
-                              Name 93  "$Global"
-                              MemberName 93($Global) 0  "uf4"
-                              Name 95  ""
-                              Decorate 90(@entryPointOutput.Color) Location 0
-                              Decorate 93($Global) Block
-                              MemberDecorate 93($Global) 0 Offset 0
-                              Decorate 95 Binding 0
-                              Decorate 95 DescriptorSet 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-               9:             TypeFunction 2 8(ptr)
-   13(PS_OUTPUT):             TypeStruct 7(fvec4)
-              14:             TypeFunction 13(PS_OUTPUT)
-              18:    6(float) Constant 0
-              19:    7(fvec4) ConstantComposite 18 18 18 18
-              20:             TypePointer Function 6(float)
-              22:             TypeBool
-              23:             TypeVector 22(bool) 4
-              24:             TypePointer Function 23(bvec4)
-              81:             TypePointer Function 13(PS_OUTPUT)
-              83:             TypeInt 32 1
-              84:     83(int) Constant 0
-              89:             TypePointer Output 7(fvec4)
-90(@entryPointOutput.Color):     89(ptr) Variable Output
-     93($Global):             TypeStruct 7(fvec4)
-              94:             TypePointer Uniform 93($Global)
-              95:     94(ptr) Variable Uniform
-         4(main):           2 Function None 3
-               5:             Label
-              91:13(PS_OUTPUT) FunctionCall 15(@main()
-              92:    7(fvec4) CompositeExtract 91 0
-                              Store 90(@entryPointOutput.Color) 92
+                              Name 54_1  "main"
+                              Name 54_2  "Bug1(vf4;"
+                              Name 55_1  "a"
+                              Name 30_1  "PS_OUTPUT"
+                              MemberName 30_1(PS_OUTPUT) 0  "Color"
+                              Name 54_3  "@main("
+                              Name 59_3  "v04"
+                              Name 59_4  "v01"
+                              Name 59_5  "r00"
+                              Name 59_6  "r01"
+                              Name 59_7  "r02"
+                              Name 59_8  "r03"
+                              Name 59_9  "r10"
+                              Name 59_10  "r11"
+                              Name 59_11  "r12"
+                              Name 59_12  "r13"
+                              Name 59_13  "r20"
+                              Name 59_14  "r21"
+                              Name 59_15  "r22"
+                              Name 59_16  "r23"
+                              Name 59_17  "psout"
+                              Name 59_1  "@entryPointOutput.Color"
+                              Name 30_2  "$Global"
+                              MemberName 30_2($Global) 0  "uf4"
+                              Name 59_2  ""
+                              Decorate 59_1(@entryPointOutput.Color) Location 0
+                              Decorate 30_2($Global) Block
+                              MemberDecorate 30_2($Global) 0 Offset 0
+                              Decorate 59_2 Binding 0
+                              Decorate 59_2 DescriptorSet 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+ 30_1(PS_OUTPUT):             TypeStruct 23_1(fvec4)
+            33_3:             TypeFunction 30_1(PS_OUTPUT)
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            32_2:             TypePointer Function 22_1(float)
+            20_1:             TypeBool
+            23_2:             TypeVector 20_1(bool) 4
+            32_3:             TypePointer Function 23_2(bvec4)
+            32_4:             TypePointer Function 30_1(PS_OUTPUT)
+            21_1:             TypeInt 32 1
+            43_2:   21_1(int) Constant 0
+            32_5:             TypePointer Output 23_1(fvec4)
+59_1(@entryPointOutput.Color):   32_5(ptr) Variable Output
+   30_2($Global):             TypeStruct 23_1(fvec4)
+            32_6:             TypePointer Uniform 30_2($Global)
+            59_2:   32_6(ptr) Variable Uniform
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:30_1(PS_OUTPUT) FunctionCall 54_3(@main()
+            81_1: 23_1(fvec4) CompositeExtract 57_1 0
+                              Store 59_1(@entryPointOutput.Color) 81_1
                               Return
                               FunctionEnd
-   11(Bug1(vf4;):           2 Function None 9
-           10(a):      8(ptr) FunctionParameter
-              12:             Label
-         17(v04):      8(ptr) Variable Function
-         21(v01):     20(ptr) Variable Function
-         25(r00):     24(ptr) Variable Function
-         29(r01):     24(ptr) Variable Function
-         33(r02):     24(ptr) Variable Function
-         37(r03):     24(ptr) Variable Function
-         41(r10):     24(ptr) Variable Function
-         46(r11):     24(ptr) Variable Function
-         51(r12):     24(ptr) Variable Function
-         56(r13):     24(ptr) Variable Function
-         61(r20):     24(ptr) Variable Function
-         66(r21):     24(ptr) Variable Function
-         71(r22):     24(ptr) Variable Function
-         76(r23):     24(ptr) Variable Function
-                              Store 17(v04) 19
-                              Store 21(v01) 18
-              26:    7(fvec4) Load 10(a)
-              27:    7(fvec4) Load 17(v04)
-              28:   23(bvec4) FOrdEqual 26 27
-                              Store 25(r00) 28
-              30:    7(fvec4) Load 10(a)
-              31:    7(fvec4) Load 17(v04)
-              32:   23(bvec4) FUnordNotEqual 30 31
-                              Store 29(r01) 32
-              34:    7(fvec4) Load 10(a)
-              35:    7(fvec4) Load 17(v04)
-              36:   23(bvec4) FOrdLessThan 34 35
-                              Store 33(r02) 36
-              38:    7(fvec4) Load 10(a)
-              39:    7(fvec4) Load 17(v04)
-              40:   23(bvec4) FOrdGreaterThan 38 39
-                              Store 37(r03) 40
-              42:    7(fvec4) Load 10(a)
-              43:    6(float) Load 21(v01)
-              44:    7(fvec4) CompositeConstruct 43 43 43 43
-              45:   23(bvec4) FOrdEqual 42 44
-                              Store 41(r10) 45
-              47:    7(fvec4) Load 10(a)
-              48:    6(float) Load 21(v01)
-              49:    7(fvec4) CompositeConstruct 48 48 48 48
-              50:   23(bvec4) FUnordNotEqual 47 49
-                              Store 46(r11) 50
-              52:    7(fvec4) Load 10(a)
-              53:    6(float) Load 21(v01)
-              54:    7(fvec4) CompositeConstruct 53 53 53 53
-              55:   23(bvec4) FOrdLessThan 52 54
-                              Store 51(r12) 55
-              57:    7(fvec4) Load 10(a)
-              58:    6(float) Load 21(v01)
-              59:    7(fvec4) CompositeConstruct 58 58 58 58
-              60:   23(bvec4) FOrdGreaterThan 57 59
-                              Store 56(r13) 60
-              62:    6(float) Load 21(v01)
-              63:    7(fvec4) CompositeConstruct 62 62 62 62
-              64:    7(fvec4) Load 10(a)
-              65:   23(bvec4) FOrdEqual 63 64
-                              Store 61(r20) 65
-              67:    6(float) Load 21(v01)
-              68:    7(fvec4) CompositeConstruct 67 67 67 67
-              69:    7(fvec4) Load 10(a)
-              70:   23(bvec4) FUnordNotEqual 68 69
-                              Store 66(r21) 70
-              72:    6(float) Load 21(v01)
-              73:    7(fvec4) CompositeConstruct 72 72 72 72
-              74:    7(fvec4) Load 10(a)
-              75:   23(bvec4) FOrdLessThan 73 74
-                              Store 71(r22) 75
-              77:    6(float) Load 21(v01)
-              78:    7(fvec4) CompositeConstruct 77 77 77 77
-              79:    7(fvec4) Load 10(a)
-              80:   23(bvec4) FOrdGreaterThan 78 79
-                              Store 76(r23) 80
+ 54_2(Bug1(vf4;):        19_1 Function None 33_2
+         55_1(a):   32_1(ptr) FunctionParameter
+           248_2:             Label
+       59_3(v04):   32_1(ptr) Variable Function
+       59_4(v01):   32_2(ptr) Variable Function
+       59_5(r00):   32_3(ptr) Variable Function
+       59_6(r01):   32_3(ptr) Variable Function
+       59_7(r02):   32_3(ptr) Variable Function
+       59_8(r03):   32_3(ptr) Variable Function
+       59_9(r10):   32_3(ptr) Variable Function
+      59_10(r11):   32_3(ptr) Variable Function
+      59_11(r12):   32_3(ptr) Variable Function
+      59_12(r13):   32_3(ptr) Variable Function
+      59_13(r20):   32_3(ptr) Variable Function
+      59_14(r21):   32_3(ptr) Variable Function
+      59_15(r22):   32_3(ptr) Variable Function
+      59_16(r23):   32_3(ptr) Variable Function
+                              Store 59_3(v04) 44_1
+                              Store 59_4(v01) 43_1
+            61_1: 23_1(fvec4) Load 55_1(a)
+            61_2: 23_1(fvec4) Load 59_3(v04)
+           180_1: 23_2(bvec4) FOrdEqual 61_1 61_2
+                              Store 59_5(r00) 180_1
+            61_3: 23_1(fvec4) Load 55_1(a)
+            61_4: 23_1(fvec4) Load 59_3(v04)
+           183_1: 23_2(bvec4) FUnordNotEqual 61_3 61_4
+                              Store 59_6(r01) 183_1
+            61_5: 23_1(fvec4) Load 55_1(a)
+            61_6: 23_1(fvec4) Load 59_3(v04)
+           184_1: 23_2(bvec4) FOrdLessThan 61_5 61_6
+                              Store 59_7(r02) 184_1
+            61_7: 23_1(fvec4) Load 55_1(a)
+            61_8: 23_1(fvec4) Load 59_3(v04)
+           186_1: 23_2(bvec4) FOrdGreaterThan 61_7 61_8
+                              Store 59_8(r03) 186_1
+            61_9: 23_1(fvec4) Load 55_1(a)
+           61_10: 22_1(float) Load 59_4(v01)
+            80_1: 23_1(fvec4) CompositeConstruct 61_10 61_10 61_10 61_10
+           180_2: 23_2(bvec4) FOrdEqual 61_9 80_1
+                              Store 59_9(r10) 180_2
+           61_11: 23_1(fvec4) Load 55_1(a)
+           61_12: 22_1(float) Load 59_4(v01)
+            80_2: 23_1(fvec4) CompositeConstruct 61_12 61_12 61_12 61_12
+           183_2: 23_2(bvec4) FUnordNotEqual 61_11 80_2
+                              Store 59_10(r11) 183_2
+           61_13: 23_1(fvec4) Load 55_1(a)
+           61_14: 22_1(float) Load 59_4(v01)
+            80_3: 23_1(fvec4) CompositeConstruct 61_14 61_14 61_14 61_14
+           184_2: 23_2(bvec4) FOrdLessThan 61_13 80_3
+                              Store 59_11(r12) 184_2
+           61_15: 23_1(fvec4) Load 55_1(a)
+           61_16: 22_1(float) Load 59_4(v01)
+            80_4: 23_1(fvec4) CompositeConstruct 61_16 61_16 61_16 61_16
+           186_2: 23_2(bvec4) FOrdGreaterThan 61_15 80_4
+                              Store 59_12(r13) 186_2
+           61_17: 22_1(float) Load 59_4(v01)
+            80_5: 23_1(fvec4) CompositeConstruct 61_17 61_17 61_17 61_17
+           61_18: 23_1(fvec4) Load 55_1(a)
+           180_3: 23_2(bvec4) FOrdEqual 80_5 61_18
+                              Store 59_13(r20) 180_3
+           61_19: 22_1(float) Load 59_4(v01)
+            80_6: 23_1(fvec4) CompositeConstruct 61_19 61_19 61_19 61_19
+           61_20: 23_1(fvec4) Load 55_1(a)
+           183_3: 23_2(bvec4) FUnordNotEqual 80_6 61_20
+                              Store 59_14(r21) 183_3
+           61_21: 22_1(float) Load 59_4(v01)
+            80_7: 23_1(fvec4) CompositeConstruct 61_21 61_21 61_21 61_21
+           61_22: 23_1(fvec4) Load 55_1(a)
+           184_3: 23_2(bvec4) FOrdLessThan 80_7 61_22
+                              Store 59_15(r22) 184_3
+           61_23: 22_1(float) Load 59_4(v01)
+            80_8: 23_1(fvec4) CompositeConstruct 61_23 61_23 61_23 61_23
+           61_24: 23_1(fvec4) Load 55_1(a)
+           186_3: 23_2(bvec4) FOrdGreaterThan 80_8 61_24
+                              Store 59_16(r23) 186_3
                               Return
                               FunctionEnd
-      15(@main():13(PS_OUTPUT) Function None 14
-              16:             Label
-       82(psout):     81(ptr) Variable Function
-              85:      8(ptr) AccessChain 82(psout) 84
-                              Store 85 19
-              86:13(PS_OUTPUT) Load 82(psout)
-                              ReturnValue 86
+    54_3(@main():30_1(PS_OUTPUT) Function None 33_3
+           248_3:             Label
+    59_17(psout):   32_4(ptr) Variable Function
+            65_1:   32_1(ptr) AccessChain 59_17(psout) 43_2
+                              Store 65_1 44_1
+           61_25:30_1(PS_OUTPUT) Load 59_17(psout)
+                              ReturnValue 61_25
                               FunctionEnd

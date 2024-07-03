@@ -4,47 +4,47 @@ spv.specConstant.comp
 // Id's are bound by 27
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 32 32 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 32 32 1
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 7  "bn"
-                              MemberName 7(bn) 0  "a"
-                              Name 9  "bi"
-                              Decorate 7(bn) BufferBlock
-                              MemberDecorate 7(bn) 0 Offset 0
-                              Decorate 9(bi) Binding 0
-                              Decorate 9(bi) DescriptorSet 0
-                              Decorate 12 SpecId 18
-                              Decorate 14 SpecId 19
-                              Decorate 16 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-           7(bn):             TypeStruct 6(int)
-               8:             TypePointer Uniform 7(bn)
-           9(bi):      8(ptr) Variable Uniform
-              10:             TypeInt 32 1
-              11:     10(int) Constant 0
-              12:      6(int) SpecConstant 32
-              13:      6(int) Constant 32
-              14:      6(int) SpecConstant 1
-              15:             TypeVector 6(int) 3
-              16:   15(ivec3) SpecConstantComposite 12 13 14
-              17:      6(int) Constant 0
-              18:      6(int) SpecConstantOp 81 16 0
-              19:      6(int) Constant 1
-              20:      6(int) SpecConstantOp 81 16 1(GLSL.std.450)
-              21:      6(int) SpecConstantOp 132 18 20
-              22:      6(int) Constant 2
-              23:      6(int) SpecConstantOp 81 16 2
-              24:      6(int) SpecConstantOp 132 21 23
-              25:             TypePointer Uniform 6(int)
-         4(main):           2 Function None 3
-               5:             Label
-              26:     25(ptr) AccessChain 9(bi) 11
-                              Store 26 24
+                              Name 54_1  "main"
+                              Name 30_1  "bn"
+                              MemberName 30_1(bn) 0  "a"
+                              Name 59_1  "bi"
+                              Decorate 30_1(bn) BufferBlock
+                              MemberDecorate 30_1(bn) 0 Offset 0
+                              Decorate 59_1(bi) Binding 0
+                              Decorate 59_1(bi) DescriptorSet 0
+                              Decorate 50_1 SpecId 18
+                              Decorate 50_2 SpecId 19
+                              Decorate 51_1 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+        30_1(bn):             TypeStruct 21_1(int)
+            32_1:             TypePointer Uniform 30_1(bn)
+        59_1(bi):   32_1(ptr) Variable Uniform
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            50_1:   21_1(int) SpecConstant 32
+        uint(32):   21_1(int) Constant 32
+            50_2:   21_1(int) SpecConstant 1
+            23_1:             TypeVector 21_1(int) 3
+            51_1: 23_1(ivec3) SpecConstantComposite 50_1 uint(32) 50_2
+         uint(0):   21_1(int) Constant 0
+            52_1:   21_1(int) SpecConstantOp 81 51_1 
+         uint(1):   21_1(int) Constant 1
+            52_2:   21_1(int) SpecConstantOp 81 51_1 11_1(GLSL.std.450)
+            52_3:   21_1(int) SpecConstantOp 132 52_1 52_2
+         uint(2):   21_1(int) Constant 2
+            52_4:   21_1(int) SpecConstantOp 81 51_1 19_1
+            52_5:   21_1(int) SpecConstantOp 132 52_3 52_4
+            32_2:             TypePointer Uniform 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1(bi) 43_1
+                              Store 65_1 52_5
                               Return
                               FunctionEnd

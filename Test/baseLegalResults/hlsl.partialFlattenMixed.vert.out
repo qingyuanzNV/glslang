@@ -4,26 +4,26 @@ hlsl.partialFlattenMixed.vert
 // Id's are bound by 36
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 32 35
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 32  "pos"
-                              Name 35  "@entryPointOutput"
-                              Decorate 32(pos) Location 0
-                              Decorate 35(@entryPointOutput) BuiltIn Position
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-              31:             TypePointer Input 7(fvec4)
-         32(pos):     31(ptr) Variable Input
-              34:             TypePointer Output 7(fvec4)
-35(@entryPointOutput):     34(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              33:    7(fvec4) Load 32(pos)
-                              Store 35(@entryPointOutput) 33
+                              Name 54_1  "main"
+                              Name 59_1  "pos"
+                              Name 59_2  "@entryPointOutput"
+                              Decorate 59_1(pos) Location 0
+                              Decorate 59_2(@entryPointOutput) BuiltIn Position
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Input 23_1(fvec4)
+       59_1(pos):   32_1(ptr) Variable Input
+            32_2:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput):   32_2(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1: 23_1(fvec4) Load 59_1(pos)
+                              Store 59_2(@entryPointOutput) 61_1
                               Return
                               FunctionEnd

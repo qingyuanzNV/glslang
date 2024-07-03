@@ -4,14 +4,14 @@ hlsl.pp.line4.frag
 // Id's are bound by 116
 
                               Capability Shader
-               2:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 5  "MainPs" 70 74
-                              ExecutionMode 5 OriginUpperLeft
-               1:             String  "hlsl.pp.line4.frag"
-               7:             String  "C:\\Users\\Greg\\shaders\\line\\foo4.frag"
-              32:             String  "C:\\Users\\Greg\\shaders\\line\\u1.h"
-                              Source HLSL 500 1  "// OpModuleProcessed auto-map-locations
+                              EntryPoint Fragment 54_1  "MainPs" 59_4 59_5
+                              ExecutionMode 54_1 OriginUpperLeft
+             7_1:             String  "hlsl.pp.line4.frag"
+             7_2:             String  "C:\\Users\\Greg\\shaders\\line\\foo4.frag"
+             7_3:             String  "C:\\Users\\Greg\\shaders\\line\\u1.h"
+                              Source HLSL 500 7_1  "// OpModuleProcessed auto-map-locations
 // OpModuleProcessed auto-map-bindings
 // OpModuleProcessed entry-point MainPs
 // OpModuleProcessed client vulkan100
@@ -62,87 +62,87 @@ PS_OUTPUT MainPs ( PS_INPUT i )
 }
 
 "
-                              Name 5  "MainPs"
-                              Name 19  "PerViewConstantBuffer_t"
-                              MemberName 19(PerViewConstantBuffer_t) 0  "g_nDataIdx"
-                              MemberName 19(PerViewConstantBuffer_t) 1  "g_nDataIdx2"
-                              MemberName 19(PerViewConstantBuffer_t) 2  "g_B"
-                              Name 21  ""
-                              Name 48  "g_tColor"
-                              Name 55  "g_sAniso"
-                              Name 70  "i.vTextureCoords"
-                              Name 74  "@entryPointOutput.vColor"
-                              Decorate 19(PerViewConstantBuffer_t) Block
-                              MemberDecorate 19(PerViewConstantBuffer_t) 0 Offset 0
-                              MemberDecorate 19(PerViewConstantBuffer_t) 1 Offset 4
-                              MemberDecorate 19(PerViewConstantBuffer_t) 2 Offset 8
-                              Decorate 48(g_tColor) Binding 0
-                              Decorate 48(g_tColor) DescriptorSet 0
-                              Decorate 55(g_sAniso) Binding 1
-                              Decorate 55(g_sAniso) DescriptorSet 0
-                              Decorate 70(i.vTextureCoords) Location 0
-                              Decorate 74(@entryPointOutput.vColor) Location 0
-               3:             TypeVoid
-               4:             TypeFunction 3
-               8:             TypeFloat 32
-               9:             TypeVector 8(float) 2
-              12:             TypeVector 8(float) 4
-              18:             TypeInt 32 0
-19(PerViewConstantBuffer_t):             TypeStruct 18(int) 18(int) 18(int)
-              20:             TypePointer PushConstant 19(PerViewConstantBuffer_t)
-              21:     20(ptr) Variable PushConstant
-              22:             TypeInt 32 1
-              23:     22(int) Constant 2
-              24:             TypePointer PushConstant 18(int)
-              27:             TypeBool
-              28:     18(int) Constant 0
-              35:     22(int) Constant 0
-              39:     22(int) Constant 1
-              44:             TypeImage 8(float) 2D sampled format:Unknown
-              45:     18(int) Constant 128
-              46:             TypeArray 44 45
-              47:             TypePointer UniformConstant 46
-    48(g_tColor):     47(ptr) Variable UniformConstant
-              50:             TypePointer UniformConstant 44
-              53:             TypeSampler
-              54:             TypePointer UniformConstant 53
-    55(g_sAniso):     54(ptr) Variable UniformConstant
-              57:             TypeSampledImage 44
-              69:             TypePointer Input 9(fvec2)
-70(i.vTextureCoords):     69(ptr) Variable Input
-              73:             TypePointer Output 12(fvec4)
-74(@entryPointOutput.vColor):     73(ptr) Variable Output
-                              Line 7 25 1
-       5(MainPs):           3 Function None 4
+                              Name 54_1  "MainPs"
+                              Name 30_1  "PerViewConstantBuffer_t"
+                              MemberName 30_1(PerViewConstantBuffer_t) 0  "g_nDataIdx"
+                              MemberName 30_1(PerViewConstantBuffer_t) 1  "g_nDataIdx2"
+                              MemberName 30_1(PerViewConstantBuffer_t) 2  "g_B"
+                              Name 59_1  ""
+                              Name 59_2  "g_tColor"
+                              Name 59_3  "g_sAniso"
+                              Name 59_4  "i.vTextureCoords"
+                              Name 59_5  "@entryPointOutput.vColor"
+                              Decorate 30_1(PerViewConstantBuffer_t) Block
+                              MemberDecorate 30_1(PerViewConstantBuffer_t) 0 Offset 0
+                              MemberDecorate 30_1(PerViewConstantBuffer_t) 1 Offset 4
+                              MemberDecorate 30_1(PerViewConstantBuffer_t) 2 Offset 8
+                              Decorate 59_2(g_tColor) Binding 0
+                              Decorate 59_2(g_tColor) DescriptorSet 0
+                              Decorate 59_3(g_sAniso) Binding 1
+                              Decorate 59_3(g_sAniso) DescriptorSet 0
+                              Decorate 59_4(i.vTextureCoords) Location 0
+                              Decorate 59_5(@entryPointOutput.vColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            23_2:             TypeVector 22_1(float) 4
+            21_1:             TypeInt 32 0
+30_1(PerViewConstantBuffer_t):             TypeStruct 21_1(int) 21_1(int) 21_1(int)
+            32_1:             TypePointer PushConstant 30_1(PerViewConstantBuffer_t)
+            59_1:   32_1(ptr) Variable PushConstant
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 2
+            32_2:             TypePointer PushConstant 21_1(int)
+            20_1:             TypeBool
+         uint(0):   21_1(int) Constant 0
+            43_2:   21_2(int) Constant 0
+            43_3:   21_2(int) Constant 1
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+       uint(128):   21_1(int) Constant 128
+            28_1:             TypeArray 25_1 uint(128)
+            32_3:             TypePointer UniformConstant 28_1
+  59_2(g_tColor):   32_3(ptr) Variable UniformConstant
+            32_4:             TypePointer UniformConstant 25_1
+            26_1:             TypeSampler
+            32_5:             TypePointer UniformConstant 26_1
+  59_3(g_sAniso):   32_5(ptr) Variable UniformConstant
+            27_1:             TypeSampledImage 25_1
+            32_6:             TypePointer Input 23_1(fvec2)
+59_4(i.vTextureCoords):   32_6(ptr) Variable Input
+            32_7:             TypePointer Output 23_2(fvec4)
+59_5(@entryPointOutput.vColor):   32_7(ptr) Variable Output
+                              Line 7_2 25 1
+    54_1(MainPs):        19_1 Function None 33_1
                               NoLine
-               6:             Label
-                              Line 7 25 0
-              71:    9(fvec2) Load 70(i.vTextureCoords)
-                              Line 7 29 0
-              83:     24(ptr) AccessChain 21 23
-              84:     18(int) Load 83
-              85:    27(bool) INotEqual 84 28
-                              SelectionMerge 92 None
-                              BranchConditional 85 86 89
-              86:               Label
-                                Line 32 1 0
-              87:     24(ptr)   AccessChain 21 35
-              88:     18(int)   Load 87
-                                Branch 92
-              89:               Label
-                                Line 7 32 0
-              90:     24(ptr)   AccessChain 21 39
-              91:     18(int)   Load 90
-                                Branch 92
-              92:             Label
-             115:     18(int) Phi 88 86 91 89
-                              Line 7 33 0
-              94:     50(ptr) AccessChain 48(g_tColor) 115
-              95:          44 Load 94
-              96:          53 Load 55(g_sAniso)
-              97:          57 SampledImage 95 96
-             100:   12(fvec4) ImageSampleImplicitLod 97 71
-                              Line 7 25 0
-                              Store 74(@entryPointOutput.vColor) 100
+           248_1:             Label
+                              Line 7_2 25 0
+            61_1: 23_1(fvec2) Load 59_4(i.vTextureCoords)
+                              Line 7_2 29 0
+            65_1:   32_2(ptr) AccessChain 59_1 43_1
+            61_2:   21_1(int) Load 65_1
+           171_1:  20_1(bool) INotEqual 61_2 uint(0)
+                              SelectionMerge 248_4 None
+                              BranchConditional 171_1 248_2 248_3
+           248_2:               Label
+                                Line 7_3 1 0
+            65_2:   32_2(ptr)   AccessChain 59_1 43_2
+            61_3:   21_1(int)   Load 65_2
+                                Branch 248_4
+           248_3:               Label
+                                Line 7_2 32 0
+            65_3:   32_2(ptr)   AccessChain 59_1 43_3
+            61_4:   21_1(int)   Load 65_3
+                                Branch 248_4
+           248_4:             Label
+           245_1:   21_1(int) Phi 61_3 248_2 61_4 248_3
+                              Line 7_2 33 0
+            65_4:   32_4(ptr) AccessChain 59_2(g_tColor) 245_1
+            61_5:        25_1 Load 65_4
+            61_6:        26_1 Load 59_3(g_sAniso)
+            86_1:        27_1 SampledImage 61_5 61_6
+            87_1: 23_2(fvec4) ImageSampleImplicitLod 86_1 61_1
+                              Line 7_2 25 0
+                              Store 59_5(@entryPointOutput.vColor) 87_1
                               Return
                               FunctionEnd

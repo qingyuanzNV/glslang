@@ -12,812 +12,812 @@ spv.int16.amd.frag
                               Capability StorageInputOutput16
                               Extension  "SPV_AMD_gpu_shader_int16"
                               Extension  "SPV_KHR_16bit_storage"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 535 537
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_AMD_gpu_shader_half_float"
                               SourceExtension  "GL_AMD_gpu_shader_int16"
                               SourceExtension  "GL_ARB_gpu_shader_int64"
-                              Name 4  "main"
-                              Name 6  "literal("
-                              Name 8  "operators("
-                              Name 10  "typeCast("
-                              Name 12  "builtinFuncs("
-                              Name 16  "u16"
-                              Name 25  "Uniforms"
-                              MemberName 25(Uniforms) 0  "i"
-                              Name 27  ""
-                              Name 34  "indexable"
-                              Name 45  "indexable"
-                              Name 51  "u16v"
-                              Name 57  "i16"
-                              Name 70  "u16"
-                              Name 127  "b"
-                              Name 148  "u"
-                              Name 159  "i"
-                              Name 189  "i16v"
-                              Name 192  "bv"
-                              Name 200  "u16v"
-                              Name 213  "iv"
-                              Name 226  "uv"
-                              Name 240  "fv"
-                              Name 252  "dv"
-                              Name 264  "f16v"
-                              Name 276  "i64v"
-                              Name 290  "u64v"
-                              Name 305  "i16v"
-                              Name 311  "i16"
-                              Name 319  "u16v"
-                              Name 321  "u16"
-                              Name 393  "f16v"
-                              Name 396  "exp"
-                              Name 397  "ResType"
-                              Name 420  "packi"
-                              Name 425  "packu"
-                              Name 436  "packi64"
-                              Name 445  "packu64"
-                              Name 454  "bv"
-                              Name 531  "Block"
-                              MemberName 531(Block) 0  "i16v"
-                              MemberName 531(Block) 1  "u16"
-                              Name 533  "block"
-                              Name 535  "iu16v"
-                              Name 537  "ii16"
-                              Name 538  "si64"
-                              Name 539  "su64"
-                              Name 540  "si"
-                              Name 541  "su"
-                              Name 542  "sb"
-                              Name 543  "si16"
-                              Name 544  "su16"
-                              Name 545  "i16_to_b"
-                              Name 546  "u16_to_b"
-                              Name 547  "b_to_i16"
-                              Name 548  "b_to_u16"
-                              Name 549  "i16_to_i"
-                              Name 551  "u16_to_i"
-                              Name 552  "i_to_i16"
-                              Name 554  "i_to_u16"
-                              Name 556  "i16_to_u"
-                              Name 557  "u16_to_u"
-                              Name 559  "u_to_i16"
-                              Name 560  "u_to_u16"
-                              Name 561  "i16_to_i64"
-                              Name 564  "u16_to_i64"
-                              Name 565  "i64_to_i16"
-                              Name 567  "i64_to_u16"
-                              Name 569  "i16_to_u64"
-                              Name 570  "u16_to_u64"
-                              Name 572  "u64_to_i16"
-                              Name 573  "u64_to_u16"
-                              Name 574  "i16_to_u16"
-                              Name 575  "u16_to_i16"
-                              Decorate 25(Uniforms) Block
-                              MemberDecorate 25(Uniforms) 0 Offset 0
-                              Decorate 27 Binding 0
-                              Decorate 27 DescriptorSet 0
-                              Decorate 531(Block) Block
-                              MemberDecorate 531(Block) 0 Offset 0
-                              MemberDecorate 531(Block) 1 Offset 6
-                              Decorate 533(block) Binding 1
-                              Decorate 533(block) DescriptorSet 0
-                              Decorate 535(iu16v) Flat
-                              Decorate 535(iu16v) Location 0
-                              Decorate 537(ii16) Flat
-                              Decorate 537(ii16) Location 1
-                              Decorate 538(si64) SpecId 100
-                              Decorate 539(su64) SpecId 101
-                              Decorate 540(si) SpecId 102
-                              Decorate 541(su) SpecId 103
-                              Decorate 542(sb) SpecId 104
-                              Decorate 543(si16) SpecId 105
-                              Decorate 544(su16) SpecId 106
-               2:             TypeVoid
-               3:             TypeFunction 2
-              14:             TypeInt 16 0
-              15:             TypePointer Function 14(int16_t)
-              17:             TypeInt 16 1
-              18:             TypeInt 32 0
-              19:     18(int) Constant 3
-              20:             TypeArray 17(int16_t) 19
-              21: 17(int16_t) Constant 273
-              22: 17(int16_t) Constant 4294967294
-              23: 17(int16_t) Constant 256
-              24:          20 ConstantComposite 21 22 23
-    25(Uniforms):             TypeStruct 18(int)
-              26:             TypePointer Uniform 25(Uniforms)
-              27:     26(ptr) Variable Uniform
-              28:             TypeInt 32 1
-              29:     28(int) Constant 0
-              30:             TypePointer Uniform 18(int)
-              33:             TypePointer Function 20
-              35:             TypePointer Function 17(int16_t)
-              39:             TypeArray 14(int16_t) 19
-              40: 14(int16_t) Constant 65535
-              41:          39 ConstantComposite 40 40 40
-              44:             TypePointer Function 39
-              49:             TypeVector 14(int16_t) 3
-              50:             TypePointer Function 49(i16vec3)
-              53: 17(int16_t) Constant 1
-              54:             TypeVector 17(int16_t) 3
-             111:     18(int) Constant 1
-             117:     18(int) Constant 2
-             125:             TypeBool
-             126:             TypePointer Function 125(bool)
-             128:     18(int) Constant 0
-             147:             TypePointer Function 18(int)
-             158:             TypePointer Function 28(int)
-             187:             TypeVector 17(int16_t) 2
-             188:             TypePointer Function 187(i16vec2)
-             190:             TypeVector 125(bool) 2
-             191:             TypePointer Function 190(bvec2)
-             194: 17(int16_t) Constant 0
-             195:187(i16vec2) ConstantComposite 194 194
-             196:187(i16vec2) ConstantComposite 53 53
-             198:             TypeVector 14(int16_t) 2
-             199:             TypePointer Function 198(i16vec2)
-             202: 14(int16_t) Constant 0
-             203: 14(int16_t) Constant 1
-             204:198(i16vec2) ConstantComposite 202 202
-             205:198(i16vec2) ConstantComposite 203 203
-             211:             TypeVector 28(int) 2
-             212:             TypePointer Function 211(ivec2)
-             222:             TypeVector 18(int) 2
-             225:             TypePointer Function 222(ivec2)
-             237:             TypeFloat 32
-             238:             TypeVector 237(float) 2
-             239:             TypePointer Function 238(fvec2)
-             249:             TypeFloat 64
-             250:             TypeVector 249(float64_t) 2
-             251:             TypePointer Function 250(f64vec2)
-             261:             TypeFloat 16
-             262:             TypeVector 261(float16_t) 2
-             263:             TypePointer Function 262(f16vec2)
-             273:             TypeInt 64 1
-             274:             TypeVector 273(int64_t) 2
-             275:             TypePointer Function 274(i64vec2)
-             285:             TypeInt 64 0
-             286:             TypeVector 285(int64_t) 2
-             289:             TypePointer Function 286(i64vec2)
-             316: 17(int16_t) Constant 4294967295
-             317:187(i16vec2) ConstantComposite 316 316
-             326: 49(i16vec3) ConstantComposite 202 202 202
-             368:   125(bool) ConstantTrue
-             375:   125(bool) ConstantFalse
-             376:  190(bvec2) ConstantComposite 375 375
-             388:             TypeVector 125(bool) 3
-             389:  388(bvec3) ConstantComposite 375 375 375
-             391:             TypeVector 261(float16_t) 3
-             392:             TypePointer Function 391(f16vec3)
-             395:             TypePointer Function 54(i16vec3)
-    397(ResType):             TypeStruct 391(f16vec3) 54(i16vec3)
-             407:             TypePointer Function 261(float16_t)
-             435:             TypePointer Function 273(int64_t)
-             438:             TypeVector 17(int16_t) 4
-             444:             TypePointer Function 285(int64_t)
-             447:             TypeVector 14(int16_t) 4
-             453:             TypePointer Function 388(bvec3)
-      531(Block):             TypeStruct 54(i16vec3) 14(int16_t)
-             532:             TypePointer Uniform 531(Block)
-      533(block):    532(ptr) Variable Uniform
-             534:             TypePointer Input 49(i16vec3)
-      535(iu16v):    534(ptr) Variable Input
-             536:             TypePointer Input 17(int16_t)
-       537(ii16):    536(ptr) Variable Input
-       538(si64):273(int64_t) SpecConstant 4294967286 4294967295
-       539(su64):285(int64_t) SpecConstant 20 0
-         540(si):     28(int) SpecConstant 4294967291
-         541(su):     18(int) SpecConstant 4
-         542(sb):   125(bool) SpecConstantTrue
-       543(si16): 17(int16_t) SpecConstant 4294967291
-       544(su16): 14(int16_t) SpecConstant 4
-   545(i16_to_b):   125(bool) SpecConstantOp 171 543(si16) 202
-   546(u16_to_b):   125(bool) SpecConstantOp 171 544(su16) 202
-   547(b_to_i16): 17(int16_t) SpecConstantOp 169 542(sb) 53 194
-   548(b_to_u16): 14(int16_t) SpecConstantOp 169 542(sb) 203 202
-   549(i16_to_i):     28(int) SpecConstantOp 114 543(si16)
-             550:     18(int) SpecConstantOp 113 544(su16)
-   551(u16_to_i):     28(int) SpecConstantOp 128 550 128
-   552(i_to_i16): 17(int16_t) SpecConstantOp 114 540(si)
-             553: 17(int16_t) SpecConstantOp 114 540(si)
-   554(i_to_u16): 14(int16_t) SpecConstantOp 128 553 202
-             555:     28(int) SpecConstantOp 114 543(si16)
-   556(i16_to_u):     18(int) SpecConstantOp 128 555 128
-   557(u16_to_u):     18(int) SpecConstantOp 113 544(su16)
-             558: 14(int16_t) SpecConstantOp 113 541(su)
-   559(u_to_i16): 17(int16_t) SpecConstantOp 128 558 202
-   560(u_to_u16): 14(int16_t) SpecConstantOp 113 541(su)
- 561(i16_to_i64):273(int64_t) SpecConstantOp 114 543(si16)
-             562:285(int64_t) SpecConstantOp 113 544(su16)
-             563:285(int64_t) Constant 0 0
- 564(u16_to_i64):273(int64_t) SpecConstantOp 128 562 563
- 565(i64_to_i16): 17(int16_t) SpecConstantOp 114 538(si64)
-             566: 17(int16_t) SpecConstantOp 114 538(si64)
- 567(i64_to_u16): 14(int16_t) SpecConstantOp 128 566 202
-             568:273(int64_t) SpecConstantOp 114 543(si16)
- 569(i16_to_u64):285(int64_t) SpecConstantOp 128 568 563
- 570(u16_to_u64):285(int64_t) SpecConstantOp 113 544(su16)
-             571: 14(int16_t) SpecConstantOp 113 539(su64)
- 572(u64_to_i16): 17(int16_t) SpecConstantOp 128 571 202
- 573(u64_to_u16): 14(int16_t) SpecConstantOp 113 539(su64)
- 574(i16_to_u16): 14(int16_t) SpecConstantOp 128 543(si16) 202
- 575(u16_to_i16): 17(int16_t) SpecConstantOp 128 544(su16) 202
-         4(main):           2 Function None 3
-               5:             Label
-             527:           2 FunctionCall 6(literal()
-             528:           2 FunctionCall 8(operators()
-             529:           2 FunctionCall 10(typeCast()
-             530:           2 FunctionCall 12(builtinFuncs()
+                              Name 54_1  "main"
+                              Name 54_2  "literal("
+                              Name 54_3  "operators("
+                              Name 54_4  "typeCast("
+                              Name 54_5  "builtinFuncs("
+                              Name 59_5  "u16"
+                              Name 30_1  "Uniforms"
+                              MemberName 30_1(Uniforms) 0  "i"
+                              Name 59_1  ""
+                              Name 59_6  "indexable"
+                              Name 59_7  "indexable"
+                              Name 59_8  "u16v"
+                              Name 59_9  "i16"
+                              Name 59_10  "u16"
+                              Name 59_11  "b"
+                              Name 59_12  "u"
+                              Name 59_13  "i"
+                              Name 59_14  "i16v"
+                              Name 59_15  "bv"
+                              Name 59_16  "u16v"
+                              Name 59_17  "iv"
+                              Name 59_18  "uv"
+                              Name 59_19  "fv"
+                              Name 59_20  "dv"
+                              Name 59_21  "f16v"
+                              Name 59_22  "i64v"
+                              Name 59_23  "u64v"
+                              Name 59_24  "i16v"
+                              Name 59_25  "i16"
+                              Name 59_26  "u16v"
+                              Name 59_27  "u16"
+                              Name 59_28  "f16v"
+                              Name 59_29  "exp"
+                              Name 30_2  "ResType"
+                              Name 59_30  "packi"
+                              Name 59_31  "packu"
+                              Name 59_32  "packi64"
+                              Name 59_33  "packu64"
+                              Name 59_34  "bv"
+                              Name 30_3  "Block"
+                              MemberName 30_3(Block) 0  "i16v"
+                              MemberName 30_3(Block) 1  "u16"
+                              Name 59_2  "block"
+                              Name 59_3  "iu16v"
+                              Name 59_4  "ii16"
+                              Name 50_1  "si64"
+                              Name 50_2  "su64"
+                              Name 50_3  "si"
+                              Name 50_4  "su"
+                              Name 48_1  "sb"
+                              Name 50_5  "si16"
+                              Name 50_6  "su16"
+                              Name 52_1  "i16_to_b"
+                              Name 52_2  "u16_to_b"
+                              Name 52_3  "b_to_i16"
+                              Name 52_4  "b_to_u16"
+                              Name 52_5  "i16_to_i"
+                              Name 52_7  "u16_to_i"
+                              Name 52_8  "i_to_i16"
+                              Name 52_10  "i_to_u16"
+                              Name 52_12  "i16_to_u"
+                              Name 52_13  "u16_to_u"
+                              Name 52_15  "u_to_i16"
+                              Name 52_16  "u_to_u16"
+                              Name 52_17  "i16_to_i64"
+                              Name 52_19  "u16_to_i64"
+                              Name 52_20  "i64_to_i16"
+                              Name 52_22  "i64_to_u16"
+                              Name 52_24  "i16_to_u64"
+                              Name 52_25  "u16_to_u64"
+                              Name 52_27  "u64_to_i16"
+                              Name 52_28  "u64_to_u16"
+                              Name 52_29  "i16_to_u16"
+                              Name 52_30  "u16_to_i16"
+                              Decorate 30_1(Uniforms) Block
+                              MemberDecorate 30_1(Uniforms) 0 Offset 0
+                              Decorate 59_1 Binding 0
+                              Decorate 59_1 DescriptorSet 0
+                              Decorate 30_3(Block) Block
+                              MemberDecorate 30_3(Block) 0 Offset 0
+                              MemberDecorate 30_3(Block) 1 Offset 6
+                              Decorate 59_2(block) Binding 1
+                              Decorate 59_2(block) DescriptorSet 0
+                              Decorate 59_3(iu16v) Flat
+                              Decorate 59_3(iu16v) Location 0
+                              Decorate 59_4(ii16) Flat
+                              Decorate 59_4(ii16) Location 1
+                              Decorate 50_1(si64) SpecId 100
+                              Decorate 50_2(su64) SpecId 101
+                              Decorate 50_3(si) SpecId 102
+                              Decorate 50_4(su) SpecId 103
+                              Decorate 48_1(sb) SpecId 104
+                              Decorate 50_5(si16) SpecId 105
+                              Decorate 50_6(su16) SpecId 106
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 16 0
+            32_1:             TypePointer Function 21_1(int16_t)
+            21_2:             TypeInt 16 1
+            21_3:             TypeInt 32 0
+         uint(3):   21_3(int) Constant 3
+            28_1:             TypeArray 21_2(int16_t) uint(3)
+            43_1:21_2(int16_t) Constant 273
+            43_2:21_2(int16_t) Constant 4294967294
+            43_3:21_2(int16_t) Constant 256
+            44_1:        28_1 ConstantComposite 43_1 43_2 43_3
+  30_1(Uniforms):             TypeStruct 21_3(int)
+            32_2:             TypePointer Uniform 30_1(Uniforms)
+            59_1:   32_2(ptr) Variable Uniform
+            21_4:             TypeInt 32 1
+            43_4:   21_4(int) Constant 0
+            32_3:             TypePointer Uniform 21_3(int)
+            32_4:             TypePointer Function 28_1
+            32_5:             TypePointer Function 21_2(int16_t)
+            28_2:             TypeArray 21_1(int16_t) uint(3)
+            43_5:21_1(int16_t) Constant 65535
+            44_2:        28_2 ConstantComposite 43_5 43_5 43_5
+            32_6:             TypePointer Function 28_2
+            23_1:             TypeVector 21_1(int16_t) 3
+            32_7:             TypePointer Function 23_1(i16vec3)
+            43_6:21_2(int16_t) Constant 1
+            23_2:             TypeVector 21_2(int16_t) 3
+         uint(1):   21_3(int) Constant 1
+         uint(2):   21_3(int) Constant 2
+            20_1:             TypeBool
+            32_8:             TypePointer Function 20_1(bool)
+         uint(0):   21_3(int) Constant 0
+            32_9:             TypePointer Function 21_3(int)
+           32_10:             TypePointer Function 21_4(int)
+            23_3:             TypeVector 21_2(int16_t) 2
+           32_11:             TypePointer Function 23_3(i16vec2)
+            23_4:             TypeVector 20_1(bool) 2
+           32_12:             TypePointer Function 23_4(bvec2)
+            43_7:21_2(int16_t) Constant 0
+            44_3:23_3(i16vec2) ConstantComposite 43_7 43_7
+            44_4:23_3(i16vec2) ConstantComposite 43_6 43_6
+            23_5:             TypeVector 21_1(int16_t) 2
+           32_13:             TypePointer Function 23_5(i16vec2)
+            43_8:21_1(int16_t) Constant 0
+            43_9:21_1(int16_t) Constant 1
+            44_5:23_5(i16vec2) ConstantComposite 43_8 43_8
+            44_6:23_5(i16vec2) ConstantComposite 43_9 43_9
+            23_6:             TypeVector 21_4(int) 2
+           32_14:             TypePointer Function 23_6(ivec2)
+            23_7:             TypeVector 21_3(int) 2
+           32_15:             TypePointer Function 23_7(ivec2)
+            22_1:             TypeFloat 32
+            23_8:             TypeVector 22_1(float) 2
+           32_16:             TypePointer Function 23_8(fvec2)
+            22_2:             TypeFloat 64
+            23_9:             TypeVector 22_2(float64_t) 2
+           32_17:             TypePointer Function 23_9(f64vec2)
+            22_3:             TypeFloat 16
+           23_10:             TypeVector 22_3(float16_t) 2
+           32_18:             TypePointer Function 23_10(f16vec2)
+            21_5:             TypeInt 64 1
+           23_11:             TypeVector 21_5(int64_t) 2
+           32_19:             TypePointer Function 23_11(i64vec2)
+            21_6:             TypeInt 64 0
+           23_12:             TypeVector 21_6(int64_t) 2
+           32_20:             TypePointer Function 23_12(i64vec2)
+           43_10:21_2(int16_t) Constant 4294967295
+            44_7:23_3(i16vec2) ConstantComposite 43_10 43_10
+            44_8:23_1(i16vec3) ConstantComposite 43_8 43_8 43_8
+            41_1:  20_1(bool) ConstantTrue
+            42_1:  20_1(bool) ConstantFalse
+            44_9: 23_4(bvec2) ConstantComposite 42_1 42_1
+           23_13:             TypeVector 20_1(bool) 3
+           44_10:23_13(bvec3) ConstantComposite 42_1 42_1 42_1
+           23_14:             TypeVector 22_3(float16_t) 3
+           32_21:             TypePointer Function 23_14(f16vec3)
+           32_22:             TypePointer Function 23_2(i16vec3)
+   30_2(ResType):             TypeStruct 23_14(f16vec3) 23_2(i16vec3)
+           32_23:             TypePointer Function 22_3(float16_t)
+           32_24:             TypePointer Function 21_5(int64_t)
+           23_15:             TypeVector 21_2(int16_t) 4
+           32_25:             TypePointer Function 21_6(int64_t)
+           23_16:             TypeVector 21_1(int16_t) 4
+           32_26:             TypePointer Function 23_13(bvec3)
+     30_3(Block):             TypeStruct 23_2(i16vec3) 21_1(int16_t)
+           32_27:             TypePointer Uniform 30_3(Block)
+     59_2(block):  32_27(ptr) Variable Uniform
+           32_28:             TypePointer Input 23_1(i16vec3)
+     59_3(iu16v):  32_28(ptr) Variable Input
+           32_29:             TypePointer Input 21_2(int16_t)
+      59_4(ii16):  32_29(ptr) Variable Input
+      50_1(si64):21_5(int64_t) SpecConstant 4294967286 4294967295
+      50_2(su64):21_6(int64_t) SpecConstant 20 0
+        50_3(si):   21_4(int) SpecConstant 4294967291
+        50_4(su):   21_3(int) SpecConstant 4
+        48_1(sb):  20_1(bool) SpecConstantTrue
+      50_5(si16):21_2(int16_t) SpecConstant 4294967291
+      50_6(su16):21_1(int16_t) SpecConstant 4
+  52_1(i16_to_b):  20_1(bool) SpecConstantOp 171 50_5(si16) 43_8
+  52_2(u16_to_b):  20_1(bool) SpecConstantOp 171 50_6(su16) 43_8
+  52_3(b_to_i16):21_2(int16_t) SpecConstantOp 169 48_1(sb) 43_6 43_7
+  52_4(b_to_u16):21_1(int16_t) SpecConstantOp 169 48_1(sb) 43_9 43_8
+  52_5(i16_to_i):   21_4(int) SpecConstantOp 114 50_5(si16)
+            52_6:   21_3(int) SpecConstantOp 113 50_6(su16)
+  52_7(u16_to_i):   21_4(int) SpecConstantOp 128 52_6 uint(0)
+  52_8(i_to_i16):21_2(int16_t) SpecConstantOp 114 50_3(si)
+            52_9:21_2(int16_t) SpecConstantOp 114 50_3(si)
+ 52_10(i_to_u16):21_1(int16_t) SpecConstantOp 128 52_9 43_8
+           52_11:   21_4(int) SpecConstantOp 114 50_5(si16)
+ 52_12(i16_to_u):   21_3(int) SpecConstantOp 128 52_11 uint(0)
+ 52_13(u16_to_u):   21_3(int) SpecConstantOp 113 50_6(su16)
+           52_14:21_1(int16_t) SpecConstantOp 113 50_4(su)
+ 52_15(u_to_i16):21_2(int16_t) SpecConstantOp 128 52_14 43_8
+ 52_16(u_to_u16):21_1(int16_t) SpecConstantOp 113 50_4(su)
+52_17(i16_to_i64):21_5(int64_t) SpecConstantOp 114 50_5(si16)
+           52_18:21_6(int64_t) SpecConstantOp 113 50_6(su16)
+           43_11:21_6(int64_t) Constant 0 0
+52_19(u16_to_i64):21_5(int64_t) SpecConstantOp 128 52_18 43_11
+52_20(i64_to_i16):21_2(int16_t) SpecConstantOp 114 50_1(si64)
+           52_21:21_2(int16_t) SpecConstantOp 114 50_1(si64)
+52_22(i64_to_u16):21_1(int16_t) SpecConstantOp 128 52_21 43_8
+           52_23:21_5(int64_t) SpecConstantOp 114 50_5(si16)
+52_24(i16_to_u64):21_6(int64_t) SpecConstantOp 128 52_23 43_11
+52_25(u16_to_u64):21_6(int64_t) SpecConstantOp 113 50_6(su16)
+           52_26:21_1(int16_t) SpecConstantOp 113 50_2(su64)
+52_27(u64_to_i16):21_2(int16_t) SpecConstantOp 128 52_26 43_8
+52_28(u64_to_u16):21_1(int16_t) SpecConstantOp 113 50_2(su64)
+52_29(i16_to_u16):21_1(int16_t) SpecConstantOp 128 50_5(si16) 43_8
+52_30(u16_to_i16):21_2(int16_t) SpecConstantOp 128 50_6(su16) 43_8
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1:        19_1 FunctionCall 54_2(literal()
+            57_2:        19_1 FunctionCall 54_3(operators()
+            57_3:        19_1 FunctionCall 54_4(typeCast()
+            57_4:        19_1 FunctionCall 54_5(builtinFuncs()
                               Return
                               FunctionEnd
-     6(literal():           2 Function None 3
-               7:             Label
-         16(u16):     15(ptr) Variable Function
-   34(indexable):     33(ptr) Variable Function
-   45(indexable):     44(ptr) Variable Function
-              31:     30(ptr) AccessChain 27 29
-              32:     18(int) Load 31
-                              Store 34(indexable) 24
-              36:     35(ptr) AccessChain 34(indexable) 32
-              37: 17(int16_t) Load 36
-              38: 14(int16_t) Bitcast 37
-              42:     30(ptr) AccessChain 27 29
-              43:     18(int) Load 42
-                              Store 45(indexable) 41
-              46:     15(ptr) AccessChain 45(indexable) 43
-              47: 14(int16_t) Load 46
-              48: 14(int16_t) IAdd 38 47
-                              Store 16(u16) 48
+  54_2(literal():        19_1 Function None 33_1
+           248_2:             Label
+       59_5(u16):   32_1(ptr) Variable Function
+ 59_6(indexable):   32_4(ptr) Variable Function
+ 59_7(indexable):   32_6(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1 43_4
+            61_1:   21_3(int) Load 65_1
+                              Store 59_6(indexable) 44_1
+            65_2:   32_5(ptr) AccessChain 59_6(indexable) 61_1
+            61_2:21_2(int16_t) Load 65_2
+           124_1:21_1(int16_t) Bitcast 61_2
+            65_3:   32_3(ptr) AccessChain 59_1 43_4
+            61_3:   21_3(int) Load 65_3
+                              Store 59_7(indexable) 44_2
+            65_4:   32_1(ptr) AccessChain 59_7(indexable) 61_3
+            61_4:21_1(int16_t) Load 65_4
+           128_1:21_1(int16_t) IAdd 124_1 61_4
+                              Store 59_5(u16) 128_1
                               Return
                               FunctionEnd
-   8(operators():           2 Function None 3
-               9:             Label
-        51(u16v):     50(ptr) Variable Function
-         57(i16):     35(ptr) Variable Function
-         70(u16):     15(ptr) Variable Function
-          127(b):    126(ptr) Variable Function
-          148(u):    147(ptr) Variable Function
-          159(i):    158(ptr) Variable Function
-              52: 49(i16vec3) Load 51(u16v)
-              55: 54(i16vec3) CompositeConstruct 53 53 53
-              56: 49(i16vec3) IAdd 52 55
-                              Store 51(u16v) 56
-              58: 17(int16_t) Load 57(i16)
-              59: 17(int16_t) ISub 58 53
-                              Store 57(i16) 59
-              60: 17(int16_t) Load 57(i16)
-              61: 17(int16_t) IAdd 60 53
-                              Store 57(i16) 61
-              62: 49(i16vec3) Load 51(u16v)
-              63: 54(i16vec3) CompositeConstruct 53 53 53
-              64: 49(i16vec3) ISub 62 63
-                              Store 51(u16v) 64
-              65: 49(i16vec3) Load 51(u16v)
-              66: 49(i16vec3) Not 65
-                              Store 51(u16v) 66
-              67: 17(int16_t) Load 57(i16)
-                              Store 57(i16) 67
-              68: 49(i16vec3) Load 51(u16v)
-              69: 49(i16vec3) SNegate 68
-                              Store 51(u16v) 69
-              71: 17(int16_t) Load 57(i16)
-              72: 14(int16_t) Bitcast 71
-              73: 14(int16_t) Load 70(u16)
-              74: 14(int16_t) IAdd 73 72
-                              Store 70(u16) 74
-              75: 49(i16vec3) Load 51(u16v)
-              76: 49(i16vec3) Load 51(u16v)
-              77: 49(i16vec3) ISub 76 75
-                              Store 51(u16v) 77
-              78: 17(int16_t) Load 57(i16)
-              79: 17(int16_t) Load 57(i16)
-              80: 17(int16_t) IMul 79 78
-                              Store 57(i16) 80
-              81: 49(i16vec3) Load 51(u16v)
-              82: 49(i16vec3) Load 51(u16v)
-              83: 49(i16vec3) UDiv 82 81
-                              Store 51(u16v) 83
-              84: 17(int16_t) Load 57(i16)
-              85: 14(int16_t) Bitcast 84
-              86: 49(i16vec3) Load 51(u16v)
-              87: 49(i16vec3) CompositeConstruct 85 85 85
-              88: 49(i16vec3) UMod 86 87
-                              Store 51(u16v) 88
-              89: 49(i16vec3) Load 51(u16v)
-              90: 49(i16vec3) Load 51(u16v)
-              91: 49(i16vec3) IAdd 89 90
-                              Store 51(u16v) 91
-              92: 17(int16_t) Load 57(i16)
-              93: 14(int16_t) Bitcast 92
-              94: 14(int16_t) Load 70(u16)
-              95: 14(int16_t) ISub 93 94
-                              Store 70(u16) 95
-              96: 49(i16vec3) Load 51(u16v)
-              97: 17(int16_t) Load 57(i16)
-              98: 14(int16_t) Bitcast 97
-              99: 49(i16vec3) CompositeConstruct 98 98 98
-             100: 49(i16vec3) IMul 96 99
-                              Store 51(u16v) 100
-             101: 17(int16_t) Load 57(i16)
-             102: 17(int16_t) Load 57(i16)
-             103: 17(int16_t) IMul 101 102
-                              Store 57(i16) 103
-             104: 17(int16_t) Load 57(i16)
-             105: 17(int16_t) Load 57(i16)
-             106: 17(int16_t) SMod 104 105
-                              Store 57(i16) 106
-             107: 17(int16_t) Load 57(i16)
-             108: 49(i16vec3) Load 51(u16v)
-             109: 54(i16vec3) CompositeConstruct 107 107 107
-             110: 49(i16vec3) ShiftLeftLogical 108 109
-                              Store 51(u16v) 110
-             112:     15(ptr) AccessChain 51(u16v) 111
-             113: 14(int16_t) Load 112
-             114: 17(int16_t) Load 57(i16)
-             115: 17(int16_t) ShiftRightArithmetic 114 113
-                              Store 57(i16) 115
-             116: 17(int16_t) Load 57(i16)
-             118:     15(ptr) AccessChain 51(u16v) 117
-             119: 14(int16_t) Load 118
-             120: 17(int16_t) ShiftLeftLogical 116 119
-                              Store 57(i16) 120
-             121: 49(i16vec3) Load 51(u16v)
-             122: 17(int16_t) Load 57(i16)
-             123: 54(i16vec3) CompositeConstruct 122 122 122
-             124: 49(i16vec3) ShiftLeftLogical 121 123
-                              Store 51(u16v) 124
-             129:     15(ptr) AccessChain 51(u16v) 128
-             130: 14(int16_t) Load 129
-             131: 17(int16_t) Load 57(i16)
-             132: 14(int16_t) Bitcast 131
-             133:   125(bool) INotEqual 130 132
-                              Store 127(b) 133
-             134: 17(int16_t) Load 57(i16)
-             135: 14(int16_t) Bitcast 134
-             136:     15(ptr) AccessChain 51(u16v) 128
-             137: 14(int16_t) Load 136
-             138:   125(bool) IEqual 135 137
-                              Store 127(b) 138
-             139:     15(ptr) AccessChain 51(u16v) 128
-             140: 14(int16_t) Load 139
-             141:     15(ptr) AccessChain 51(u16v) 111
-             142: 14(int16_t) Load 141
-             143:   125(bool) UGreaterThan 140 142
-                              Store 127(b) 143
-             144: 17(int16_t) Load 57(i16)
-             145:     28(int) SConvert 144
-             146:     18(int) Bitcast 145
-             149:     18(int) Load 148(u)
-             150:   125(bool) ULessThan 146 149
-                              Store 127(b) 150
-             151:     15(ptr) AccessChain 51(u16v) 111
-             152: 14(int16_t) Load 151
-             153:     15(ptr) AccessChain 51(u16v) 128
-             154: 14(int16_t) Load 153
-             155:   125(bool) UGreaterThanEqual 152 154
-                              Store 127(b) 155
-             156: 17(int16_t) Load 57(i16)
-             157:     28(int) SConvert 156
-             160:     28(int) Load 159(i)
-             161:   125(bool) SLessThanEqual 157 160
-                              Store 127(b) 161
-             162: 17(int16_t) Load 57(i16)
-             163: 14(int16_t) Bitcast 162
-             164: 49(i16vec3) Load 51(u16v)
-             165: 49(i16vec3) CompositeConstruct 163 163 163
-             166: 49(i16vec3) BitwiseOr 164 165
-                              Store 51(u16v) 166
-             167: 17(int16_t) Load 57(i16)
-             168: 14(int16_t) Bitcast 167
-             169: 14(int16_t) Load 70(u16)
-             170: 14(int16_t) BitwiseOr 168 169
-                              Store 70(u16) 170
-             171: 17(int16_t) Load 57(i16)
-             172: 17(int16_t) Load 57(i16)
-             173: 17(int16_t) BitwiseAnd 172 171
-                              Store 57(i16) 173
-             174: 49(i16vec3) Load 51(u16v)
-             175: 49(i16vec3) Load 51(u16v)
-             176: 49(i16vec3) BitwiseAnd 174 175
-                              Store 51(u16v) 176
-             177: 17(int16_t) Load 57(i16)
-             178: 14(int16_t) Bitcast 177
-             179: 49(i16vec3) Load 51(u16v)
-             180: 49(i16vec3) CompositeConstruct 178 178 178
-             181: 49(i16vec3) BitwiseXor 179 180
-                              Store 51(u16v) 181
-             182: 49(i16vec3) Load 51(u16v)
-             183: 17(int16_t) Load 57(i16)
-             184: 14(int16_t) Bitcast 183
-             185: 49(i16vec3) CompositeConstruct 184 184 184
-             186: 49(i16vec3) BitwiseXor 182 185
-                              Store 51(u16v) 186
+54_3(operators():        19_1 Function None 33_1
+           248_3:             Label
+      59_8(u16v):   32_7(ptr) Variable Function
+       59_9(i16):   32_5(ptr) Variable Function
+      59_10(u16):   32_1(ptr) Variable Function
+        59_11(b):   32_8(ptr) Variable Function
+        59_12(u):   32_9(ptr) Variable Function
+        59_13(i):  32_10(ptr) Variable Function
+            61_5:23_1(i16vec3) Load 59_8(u16v)
+            80_1:23_2(i16vec3) CompositeConstruct 43_6 43_6 43_6
+           128_2:23_1(i16vec3) IAdd 61_5 80_1
+                              Store 59_8(u16v) 128_2
+            61_6:21_2(int16_t) Load 59_9(i16)
+           130_1:21_2(int16_t) ISub 61_6 43_6
+                              Store 59_9(i16) 130_1
+            61_7:21_2(int16_t) Load 59_9(i16)
+           128_3:21_2(int16_t) IAdd 61_7 43_6
+                              Store 59_9(i16) 128_3
+            61_8:23_1(i16vec3) Load 59_8(u16v)
+            80_2:23_2(i16vec3) CompositeConstruct 43_6 43_6 43_6
+           130_2:23_1(i16vec3) ISub 61_8 80_2
+                              Store 59_8(u16v) 130_2
+            61_9:23_1(i16vec3) Load 59_8(u16v)
+           200_1:23_1(i16vec3) Not 61_9
+                              Store 59_8(u16v) 200_1
+           61_10:21_2(int16_t) Load 59_9(i16)
+                              Store 59_9(i16) 61_10
+           61_11:23_1(i16vec3) Load 59_8(u16v)
+           126_1:23_1(i16vec3) SNegate 61_11
+                              Store 59_8(u16v) 126_1
+           61_12:21_2(int16_t) Load 59_9(i16)
+           124_2:21_1(int16_t) Bitcast 61_12
+           61_13:21_1(int16_t) Load 59_10(u16)
+           128_4:21_1(int16_t) IAdd 61_13 124_2
+                              Store 59_10(u16) 128_4
+           61_14:23_1(i16vec3) Load 59_8(u16v)
+           61_15:23_1(i16vec3) Load 59_8(u16v)
+           130_3:23_1(i16vec3) ISub 61_15 61_14
+                              Store 59_8(u16v) 130_3
+           61_16:21_2(int16_t) Load 59_9(i16)
+           61_17:21_2(int16_t) Load 59_9(i16)
+           132_1:21_2(int16_t) IMul 61_17 61_16
+                              Store 59_9(i16) 132_1
+           61_18:23_1(i16vec3) Load 59_8(u16v)
+           61_19:23_1(i16vec3) Load 59_8(u16v)
+           134_1:23_1(i16vec3) UDiv 61_19 61_18
+                              Store 59_8(u16v) 134_1
+           61_20:21_2(int16_t) Load 59_9(i16)
+           124_3:21_1(int16_t) Bitcast 61_20
+           61_21:23_1(i16vec3) Load 59_8(u16v)
+            80_3:23_1(i16vec3) CompositeConstruct 124_3 124_3 124_3
+           137_1:23_1(i16vec3) UMod 61_21 80_3
+                              Store 59_8(u16v) 137_1
+           61_22:23_1(i16vec3) Load 59_8(u16v)
+           61_23:23_1(i16vec3) Load 59_8(u16v)
+           128_5:23_1(i16vec3) IAdd 61_22 61_23
+                              Store 59_8(u16v) 128_5
+           61_24:21_2(int16_t) Load 59_9(i16)
+           124_4:21_1(int16_t) Bitcast 61_24
+           61_25:21_1(int16_t) Load 59_10(u16)
+           130_4:21_1(int16_t) ISub 124_4 61_25
+                              Store 59_10(u16) 130_4
+           61_26:23_1(i16vec3) Load 59_8(u16v)
+           61_27:21_2(int16_t) Load 59_9(i16)
+           124_5:21_1(int16_t) Bitcast 61_27
+            80_4:23_1(i16vec3) CompositeConstruct 124_5 124_5 124_5
+           132_2:23_1(i16vec3) IMul 61_26 80_4
+                              Store 59_8(u16v) 132_2
+           61_28:21_2(int16_t) Load 59_9(i16)
+           61_29:21_2(int16_t) Load 59_9(i16)
+           132_3:21_2(int16_t) IMul 61_28 61_29
+                              Store 59_9(i16) 132_3
+           61_30:21_2(int16_t) Load 59_9(i16)
+           61_31:21_2(int16_t) Load 59_9(i16)
+           139_1:21_2(int16_t) SMod 61_30 61_31
+                              Store 59_9(i16) 139_1
+           61_32:21_2(int16_t) Load 59_9(i16)
+           61_33:23_1(i16vec3) Load 59_8(u16v)
+            80_5:23_2(i16vec3) CompositeConstruct 61_32 61_32 61_32
+           196_1:23_1(i16vec3) ShiftLeftLogical 61_33 80_5
+                              Store 59_8(u16v) 196_1
+            65_5:   32_1(ptr) AccessChain 59_8(u16v) uint(1)
+           61_34:21_1(int16_t) Load 65_5
+           61_35:21_2(int16_t) Load 59_9(i16)
+           195_1:21_2(int16_t) ShiftRightArithmetic 61_35 61_34
+                              Store 59_9(i16) 195_1
+           61_36:21_2(int16_t) Load 59_9(i16)
+            65_6:   32_1(ptr) AccessChain 59_8(u16v) uint(2)
+           61_37:21_1(int16_t) Load 65_6
+           196_2:21_2(int16_t) ShiftLeftLogical 61_36 61_37
+                              Store 59_9(i16) 196_2
+           61_38:23_1(i16vec3) Load 59_8(u16v)
+           61_39:21_2(int16_t) Load 59_9(i16)
+            80_6:23_2(i16vec3) CompositeConstruct 61_39 61_39 61_39
+           196_3:23_1(i16vec3) ShiftLeftLogical 61_38 80_6
+                              Store 59_8(u16v) 196_3
+            65_7:   32_1(ptr) AccessChain 59_8(u16v) uint(0)
+           61_40:21_1(int16_t) Load 65_7
+           61_41:21_2(int16_t) Load 59_9(i16)
+           124_6:21_1(int16_t) Bitcast 61_41
+           171_1:  20_1(bool) INotEqual 61_40 124_6
+                              Store 59_11(b) 171_1
+           61_42:21_2(int16_t) Load 59_9(i16)
+           124_7:21_1(int16_t) Bitcast 61_42
+            65_8:   32_1(ptr) AccessChain 59_8(u16v) uint(0)
+           61_43:21_1(int16_t) Load 65_8
+           170_1:  20_1(bool) IEqual 124_7 61_43
+                              Store 59_11(b) 170_1
+            65_9:   32_1(ptr) AccessChain 59_8(u16v) uint(0)
+           61_44:21_1(int16_t) Load 65_9
+           65_10:   32_1(ptr) AccessChain 59_8(u16v) uint(1)
+           61_45:21_1(int16_t) Load 65_10
+           172_1:  20_1(bool) UGreaterThan 61_44 61_45
+                              Store 59_11(b) 172_1
+           61_46:21_2(int16_t) Load 59_9(i16)
+           114_1:   21_4(int) SConvert 61_46
+           124_8:   21_3(int) Bitcast 114_1
+           61_47:   21_3(int) Load 59_12(u)
+           176_1:  20_1(bool) ULessThan 124_8 61_47
+                              Store 59_11(b) 176_1
+           65_11:   32_1(ptr) AccessChain 59_8(u16v) uint(1)
+           61_48:21_1(int16_t) Load 65_11
+           65_12:   32_1(ptr) AccessChain 59_8(u16v) uint(0)
+           61_49:21_1(int16_t) Load 65_12
+           174_1:  20_1(bool) UGreaterThanEqual 61_48 61_49
+                              Store 59_11(b) 174_1
+           61_50:21_2(int16_t) Load 59_9(i16)
+           114_2:   21_4(int) SConvert 61_50
+           61_51:   21_4(int) Load 59_13(i)
+           179_1:  20_1(bool) SLessThanEqual 114_2 61_51
+                              Store 59_11(b) 179_1
+           61_52:21_2(int16_t) Load 59_9(i16)
+           124_9:21_1(int16_t) Bitcast 61_52
+           61_53:23_1(i16vec3) Load 59_8(u16v)
+            80_7:23_1(i16vec3) CompositeConstruct 124_9 124_9 124_9
+           197_1:23_1(i16vec3) BitwiseOr 61_53 80_7
+                              Store 59_8(u16v) 197_1
+           61_54:21_2(int16_t) Load 59_9(i16)
+          124_10:21_1(int16_t) Bitcast 61_54
+           61_55:21_1(int16_t) Load 59_10(u16)
+           197_2:21_1(int16_t) BitwiseOr 124_10 61_55
+                              Store 59_10(u16) 197_2
+           61_56:21_2(int16_t) Load 59_9(i16)
+           61_57:21_2(int16_t) Load 59_9(i16)
+           199_1:21_2(int16_t) BitwiseAnd 61_57 61_56
+                              Store 59_9(i16) 199_1
+           61_58:23_1(i16vec3) Load 59_8(u16v)
+           61_59:23_1(i16vec3) Load 59_8(u16v)
+           199_2:23_1(i16vec3) BitwiseAnd 61_58 61_59
+                              Store 59_8(u16v) 199_2
+           61_60:21_2(int16_t) Load 59_9(i16)
+          124_11:21_1(int16_t) Bitcast 61_60
+           61_61:23_1(i16vec3) Load 59_8(u16v)
+            80_8:23_1(i16vec3) CompositeConstruct 124_11 124_11 124_11
+           198_1:23_1(i16vec3) BitwiseXor 61_61 80_8
+                              Store 59_8(u16v) 198_1
+           61_62:23_1(i16vec3) Load 59_8(u16v)
+           61_63:21_2(int16_t) Load 59_9(i16)
+          124_12:21_1(int16_t) Bitcast 61_63
+            80_9:23_1(i16vec3) CompositeConstruct 124_12 124_12 124_12
+           198_2:23_1(i16vec3) BitwiseXor 61_62 80_9
+                              Store 59_8(u16v) 198_2
                               Return
                               FunctionEnd
-   10(typeCast():           2 Function None 3
-              11:             Label
-       189(i16v):    188(ptr) Variable Function
-         192(bv):    191(ptr) Variable Function
-       200(u16v):    199(ptr) Variable Function
-         213(iv):    212(ptr) Variable Function
-         226(uv):    225(ptr) Variable Function
-         240(fv):    239(ptr) Variable Function
-         252(dv):    251(ptr) Variable Function
-       264(f16v):    263(ptr) Variable Function
-       276(i64v):    275(ptr) Variable Function
-       290(u64v):    289(ptr) Variable Function
-             193:  190(bvec2) Load 192(bv)
-             197:187(i16vec2) Select 193 196 195
-                              Store 189(i16v) 197
-             201:  190(bvec2) Load 192(bv)
-             206:198(i16vec2) Select 201 205 204
-                              Store 200(u16v) 206
-             207:187(i16vec2) Load 189(i16v)
-             208:  190(bvec2) INotEqual 207 204
-                              Store 192(bv) 208
-             209:198(i16vec2) Load 200(u16v)
-             210:  190(bvec2) INotEqual 209 204
-                              Store 192(bv) 210
-             214:  211(ivec2) Load 213(iv)
-             215:187(i16vec2) SConvert 214
-                              Store 189(i16v) 215
-             216:  211(ivec2) Load 213(iv)
-             217:187(i16vec2) SConvert 216
-             218:198(i16vec2) Bitcast 217
-                              Store 200(u16v) 218
-             219:187(i16vec2) Load 189(i16v)
-             220:  211(ivec2) SConvert 219
-                              Store 213(iv) 220
-             221:198(i16vec2) Load 200(u16v)
-             223:  222(ivec2) UConvert 221
-             224:  211(ivec2) Bitcast 223
-                              Store 213(iv) 224
-             227:  222(ivec2) Load 226(uv)
-             228:198(i16vec2) UConvert 227
-             229:187(i16vec2) Bitcast 228
-                              Store 189(i16v) 229
-             230:  222(ivec2) Load 226(uv)
-             231:198(i16vec2) UConvert 230
-                              Store 200(u16v) 231
-             232:187(i16vec2) Load 189(i16v)
-             233:  211(ivec2) SConvert 232
-             234:  222(ivec2) Bitcast 233
-                              Store 226(uv) 234
-             235:198(i16vec2) Load 200(u16v)
-             236:  222(ivec2) UConvert 235
-                              Store 226(uv) 236
-             241:  238(fvec2) Load 240(fv)
-             242:187(i16vec2) ConvertFToS 241
-                              Store 189(i16v) 242
-             243:  238(fvec2) Load 240(fv)
-             244:198(i16vec2) ConvertFToU 243
-                              Store 200(u16v) 244
-             245:187(i16vec2) Load 189(i16v)
-             246:  238(fvec2) ConvertSToF 245
-                              Store 240(fv) 246
-             247:198(i16vec2) Load 200(u16v)
-             248:  238(fvec2) ConvertUToF 247
-                              Store 240(fv) 248
-             253:250(f64vec2) Load 252(dv)
-             254:187(i16vec2) ConvertFToS 253
-                              Store 189(i16v) 254
-             255:250(f64vec2) Load 252(dv)
-             256:198(i16vec2) ConvertFToU 255
-                              Store 200(u16v) 256
-             257:187(i16vec2) Load 189(i16v)
-             258:250(f64vec2) ConvertSToF 257
-                              Store 252(dv) 258
-             259:198(i16vec2) Load 200(u16v)
-             260:250(f64vec2) ConvertUToF 259
-                              Store 252(dv) 260
-             265:262(f16vec2) Load 264(f16v)
-             266:187(i16vec2) ConvertFToS 265
-                              Store 189(i16v) 266
-             267:262(f16vec2) Load 264(f16v)
-             268:198(i16vec2) ConvertFToU 267
-                              Store 200(u16v) 268
-             269:187(i16vec2) Load 189(i16v)
-             270:262(f16vec2) ConvertSToF 269
-                              Store 264(f16v) 270
-             271:198(i16vec2) Load 200(u16v)
-             272:262(f16vec2) ConvertUToF 271
-                              Store 264(f16v) 272
-             277:274(i64vec2) Load 276(i64v)
-             278:187(i16vec2) SConvert 277
-                              Store 189(i16v) 278
-             279:274(i64vec2) Load 276(i64v)
-             280:187(i16vec2) SConvert 279
-             281:198(i16vec2) Bitcast 280
-                              Store 200(u16v) 281
-             282:187(i16vec2) Load 189(i16v)
-             283:274(i64vec2) SConvert 282
-                              Store 276(i64v) 283
-             284:198(i16vec2) Load 200(u16v)
-             287:286(i64vec2) UConvert 284
-             288:274(i64vec2) Bitcast 287
-                              Store 276(i64v) 288
-             291:286(i64vec2) Load 290(u64v)
-             292:198(i16vec2) UConvert 291
-             293:187(i16vec2) Bitcast 292
-                              Store 189(i16v) 293
-             294:286(i64vec2) Load 290(u64v)
-             295:198(i16vec2) UConvert 294
-                              Store 200(u16v) 295
-             296:187(i16vec2) Load 189(i16v)
-             297:274(i64vec2) SConvert 296
-             298:286(i64vec2) Bitcast 297
-                              Store 290(u64v) 298
-             299:198(i16vec2) Load 200(u16v)
-             300:286(i64vec2) UConvert 299
-                              Store 290(u64v) 300
-             301:198(i16vec2) Load 200(u16v)
-             302:187(i16vec2) Bitcast 301
-                              Store 189(i16v) 302
-             303:187(i16vec2) Load 189(i16v)
-             304:198(i16vec2) Bitcast 303
-                              Store 200(u16v) 304
+ 54_4(typeCast():        19_1 Function None 33_1
+           248_4:             Label
+     59_14(i16v):  32_11(ptr) Variable Function
+       59_15(bv):  32_12(ptr) Variable Function
+     59_16(u16v):  32_13(ptr) Variable Function
+       59_17(iv):  32_14(ptr) Variable Function
+       59_18(uv):  32_15(ptr) Variable Function
+       59_19(fv):  32_16(ptr) Variable Function
+       59_20(dv):  32_17(ptr) Variable Function
+     59_21(f16v):  32_18(ptr) Variable Function
+     59_22(i64v):  32_19(ptr) Variable Function
+     59_23(u64v):  32_20(ptr) Variable Function
+           61_64: 23_4(bvec2) Load 59_15(bv)
+           169_1:23_3(i16vec2) Select 61_64 44_4 44_3
+                              Store 59_14(i16v) 169_1
+           61_65: 23_4(bvec2) Load 59_15(bv)
+           169_2:23_5(i16vec2) Select 61_65 44_6 44_5
+                              Store 59_16(u16v) 169_2
+           61_66:23_3(i16vec2) Load 59_14(i16v)
+           171_2: 23_4(bvec2) INotEqual 61_66 44_5
+                              Store 59_15(bv) 171_2
+           61_67:23_5(i16vec2) Load 59_16(u16v)
+           171_3: 23_4(bvec2) INotEqual 61_67 44_5
+                              Store 59_15(bv) 171_3
+           61_68: 23_6(ivec2) Load 59_17(iv)
+           114_3:23_3(i16vec2) SConvert 61_68
+                              Store 59_14(i16v) 114_3
+           61_69: 23_6(ivec2) Load 59_17(iv)
+           114_4:23_3(i16vec2) SConvert 61_69
+          124_13:23_5(i16vec2) Bitcast 114_4
+                              Store 59_16(u16v) 124_13
+           61_70:23_3(i16vec2) Load 59_14(i16v)
+           114_5: 23_6(ivec2) SConvert 61_70
+                              Store 59_17(iv) 114_5
+           61_71:23_5(i16vec2) Load 59_16(u16v)
+           113_1: 23_7(ivec2) UConvert 61_71
+          124_14: 23_6(ivec2) Bitcast 113_1
+                              Store 59_17(iv) 124_14
+           61_72: 23_7(ivec2) Load 59_18(uv)
+           113_2:23_5(i16vec2) UConvert 61_72
+          124_15:23_3(i16vec2) Bitcast 113_2
+                              Store 59_14(i16v) 124_15
+           61_73: 23_7(ivec2) Load 59_18(uv)
+           113_3:23_5(i16vec2) UConvert 61_73
+                              Store 59_16(u16v) 113_3
+           61_74:23_3(i16vec2) Load 59_14(i16v)
+           114_6: 23_6(ivec2) SConvert 61_74
+          124_16: 23_7(ivec2) Bitcast 114_6
+                              Store 59_18(uv) 124_16
+           61_75:23_5(i16vec2) Load 59_16(u16v)
+           113_4: 23_7(ivec2) UConvert 61_75
+                              Store 59_18(uv) 113_4
+           61_76: 23_8(fvec2) Load 59_19(fv)
+           110_1:23_3(i16vec2) ConvertFToS 61_76
+                              Store 59_14(i16v) 110_1
+           61_77: 23_8(fvec2) Load 59_19(fv)
+           109_1:23_5(i16vec2) ConvertFToU 61_77
+                              Store 59_16(u16v) 109_1
+           61_78:23_3(i16vec2) Load 59_14(i16v)
+           111_1: 23_8(fvec2) ConvertSToF 61_78
+                              Store 59_19(fv) 111_1
+           61_79:23_5(i16vec2) Load 59_16(u16v)
+           112_1: 23_8(fvec2) ConvertUToF 61_79
+                              Store 59_19(fv) 112_1
+           61_80:23_9(f64vec2) Load 59_20(dv)
+           110_2:23_3(i16vec2) ConvertFToS 61_80
+                              Store 59_14(i16v) 110_2
+           61_81:23_9(f64vec2) Load 59_20(dv)
+           109_2:23_5(i16vec2) ConvertFToU 61_81
+                              Store 59_16(u16v) 109_2
+           61_82:23_3(i16vec2) Load 59_14(i16v)
+           111_2:23_9(f64vec2) ConvertSToF 61_82
+                              Store 59_20(dv) 111_2
+           61_83:23_5(i16vec2) Load 59_16(u16v)
+           112_2:23_9(f64vec2) ConvertUToF 61_83
+                              Store 59_20(dv) 112_2
+           61_84:23_10(f16vec2) Load 59_21(f16v)
+           110_3:23_3(i16vec2) ConvertFToS 61_84
+                              Store 59_14(i16v) 110_3
+           61_85:23_10(f16vec2) Load 59_21(f16v)
+           109_3:23_5(i16vec2) ConvertFToU 61_85
+                              Store 59_16(u16v) 109_3
+           61_86:23_3(i16vec2) Load 59_14(i16v)
+           111_3:23_10(f16vec2) ConvertSToF 61_86
+                              Store 59_21(f16v) 111_3
+           61_87:23_5(i16vec2) Load 59_16(u16v)
+           112_3:23_10(f16vec2) ConvertUToF 61_87
+                              Store 59_21(f16v) 112_3
+           61_88:23_11(i64vec2) Load 59_22(i64v)
+           114_7:23_3(i16vec2) SConvert 61_88
+                              Store 59_14(i16v) 114_7
+           61_89:23_11(i64vec2) Load 59_22(i64v)
+           114_8:23_3(i16vec2) SConvert 61_89
+          124_17:23_5(i16vec2) Bitcast 114_8
+                              Store 59_16(u16v) 124_17
+           61_90:23_3(i16vec2) Load 59_14(i16v)
+           114_9:23_11(i64vec2) SConvert 61_90
+                              Store 59_22(i64v) 114_9
+           61_91:23_5(i16vec2) Load 59_16(u16v)
+           113_5:23_12(i64vec2) UConvert 61_91
+          124_18:23_11(i64vec2) Bitcast 113_5
+                              Store 59_22(i64v) 124_18
+           61_92:23_12(i64vec2) Load 59_23(u64v)
+           113_6:23_5(i16vec2) UConvert 61_92
+          124_19:23_3(i16vec2) Bitcast 113_6
+                              Store 59_14(i16v) 124_19
+           61_93:23_12(i64vec2) Load 59_23(u64v)
+           113_7:23_5(i16vec2) UConvert 61_93
+                              Store 59_16(u16v) 113_7
+           61_94:23_3(i16vec2) Load 59_14(i16v)
+          114_10:23_11(i64vec2) SConvert 61_94
+          124_20:23_12(i64vec2) Bitcast 114_10
+                              Store 59_23(u64v) 124_20
+           61_95:23_5(i16vec2) Load 59_16(u16v)
+           113_8:23_12(i64vec2) UConvert 61_95
+                              Store 59_23(u64v) 113_8
+           61_96:23_5(i16vec2) Load 59_16(u16v)
+          124_21:23_3(i16vec2) Bitcast 61_96
+                              Store 59_14(i16v) 124_21
+           61_97:23_3(i16vec2) Load 59_14(i16v)
+          124_22:23_5(i16vec2) Bitcast 61_97
+                              Store 59_16(u16v) 124_22
                               Return
                               FunctionEnd
-12(builtinFuncs():           2 Function None 3
-              13:             Label
-       305(i16v):    188(ptr) Variable Function
-        311(i16):     35(ptr) Variable Function
-       319(u16v):     50(ptr) Variable Function
-        321(u16):     15(ptr) Variable Function
-       393(f16v):    392(ptr) Variable Function
-        396(exp):    395(ptr) Variable Function
-      420(packi):    158(ptr) Variable Function
-      425(packu):    147(ptr) Variable Function
-    436(packi64):    435(ptr) Variable Function
-    445(packu64):    444(ptr) Variable Function
-         454(bv):    453(ptr) Variable Function
-             306:187(i16vec2) Load 305(i16v)
-             307:187(i16vec2) ExtInst 1(GLSL.std.450) 5(SAbs) 306
-                              Store 305(i16v) 307
-             308:187(i16vec2) Load 305(i16v)
-             309:187(i16vec2) ExtInst 1(GLSL.std.450) 7(SSign) 308
-                              Store 305(i16v) 309
-             310:187(i16vec2) Load 305(i16v)
-             312: 17(int16_t) Load 311(i16)
-             313:187(i16vec2) CompositeConstruct 312 312
-             314:187(i16vec2) ExtInst 1(GLSL.std.450) 39(SMin) 310 313
-                              Store 305(i16v) 314
-             315:187(i16vec2) Load 305(i16v)
-             318:187(i16vec2) ExtInst 1(GLSL.std.450) 39(SMin) 315 317
-                              Store 305(i16v) 318
-             320: 49(i16vec3) Load 319(u16v)
-             322: 14(int16_t) Load 321(u16)
-             323: 49(i16vec3) CompositeConstruct 322 322 322
-             324: 49(i16vec3) ExtInst 1(GLSL.std.450) 38(UMin) 320 323
-                              Store 319(u16v) 324
-             325: 49(i16vec3) Load 319(u16v)
-             327: 49(i16vec3) ExtInst 1(GLSL.std.450) 38(UMin) 325 326
-                              Store 319(u16v) 327
-             328:187(i16vec2) Load 305(i16v)
-             329: 17(int16_t) Load 311(i16)
-             330:187(i16vec2) CompositeConstruct 329 329
-             331:187(i16vec2) ExtInst 1(GLSL.std.450) 42(SMax) 328 330
-                              Store 305(i16v) 331
-             332:187(i16vec2) Load 305(i16v)
-             333:187(i16vec2) ExtInst 1(GLSL.std.450) 42(SMax) 332 317
-                              Store 305(i16v) 333
-             334: 49(i16vec3) Load 319(u16v)
-             335: 14(int16_t) Load 321(u16)
-             336: 49(i16vec3) CompositeConstruct 335 335 335
-             337: 49(i16vec3) ExtInst 1(GLSL.std.450) 41(UMax) 334 336
-                              Store 319(u16v) 337
-             338: 49(i16vec3) Load 319(u16v)
-             339: 49(i16vec3) ExtInst 1(GLSL.std.450) 41(UMax) 338 326
-                              Store 319(u16v) 339
-             340:187(i16vec2) Load 305(i16v)
-             341: 17(int16_t) Load 311(i16)
-             342: 17(int16_t) SNegate 341
-             343: 17(int16_t) Load 311(i16)
-             344:187(i16vec2) CompositeConstruct 342 342
-             345:187(i16vec2) CompositeConstruct 343 343
-             346:187(i16vec2) ExtInst 1(GLSL.std.450) 45(SClamp) 340 344 345
-                              Store 305(i16v) 346
-             347:187(i16vec2) Load 305(i16v)
-             348:187(i16vec2) Load 305(i16v)
-             349:187(i16vec2) SNegate 348
-             350:187(i16vec2) Load 305(i16v)
-             351:187(i16vec2) ExtInst 1(GLSL.std.450) 45(SClamp) 347 349 350
-                              Store 305(i16v) 351
-             352: 49(i16vec3) Load 319(u16v)
-             353: 14(int16_t) Load 321(u16)
-             354: 14(int16_t) SNegate 353
-             355: 14(int16_t) Load 321(u16)
-             356: 49(i16vec3) CompositeConstruct 354 354 354
-             357: 49(i16vec3) CompositeConstruct 355 355 355
-             358: 49(i16vec3) ExtInst 1(GLSL.std.450) 44(UClamp) 352 356 357
-                              Store 319(u16v) 358
-             359: 49(i16vec3) Load 319(u16v)
-             360: 49(i16vec3) Load 319(u16v)
-             361: 49(i16vec3) SNegate 360
-             362: 49(i16vec3) Load 319(u16v)
-             363: 49(i16vec3) ExtInst 1(GLSL.std.450) 44(UClamp) 359 361 362
-                              Store 319(u16v) 363
-             364:     35(ptr) AccessChain 305(i16v) 128
-             365: 17(int16_t) Load 364
-             366:     35(ptr) AccessChain 305(i16v) 111
-             367: 17(int16_t) Load 366
-             369: 17(int16_t) Select 368 367 365
-                              Store 311(i16) 369
-             370: 17(int16_t) Load 311(i16)
-             371:187(i16vec2) CompositeConstruct 370 370
-             372: 17(int16_t) Load 311(i16)
-             373: 17(int16_t) SNegate 372
-             374:187(i16vec2) CompositeConstruct 373 373
-             377:187(i16vec2) Select 376 374 371
-                              Store 305(i16v) 377
-             378:     15(ptr) AccessChain 319(u16v) 128
-             379: 14(int16_t) Load 378
-             380:     15(ptr) AccessChain 319(u16v) 111
-             381: 14(int16_t) Load 380
-             382: 14(int16_t) Select 368 381 379
-                              Store 321(u16) 382
-             383: 14(int16_t) Load 321(u16)
-             384: 49(i16vec3) CompositeConstruct 383 383 383
-             385: 14(int16_t) Load 321(u16)
-             386: 14(int16_t) SNegate 385
-             387: 49(i16vec3) CompositeConstruct 386 386 386
-             390: 49(i16vec3) Select 389 387 384
-                              Store 319(u16v) 390
-             394:391(f16vec3) Load 393(f16v)
-             398:397(ResType) ExtInst 1(GLSL.std.450) 52(FrexpStruct) 394
-             399: 54(i16vec3) CompositeExtract 398 1
-                              Store 396(exp) 399
-             400:391(f16vec3) CompositeExtract 398 0
-                              Store 393(f16v) 400
-             401:391(f16vec3) Load 393(f16v)
-             402: 54(i16vec3) Load 396(exp)
-             403:391(f16vec3) ExtInst 1(GLSL.std.450) 53(Ldexp) 401 402
-                              Store 393(f16v) 403
-             404:391(f16vec3) Load 393(f16v)
-             405:262(f16vec2) VectorShuffle 404 404 0 1
-             406:187(i16vec2) Bitcast 405
-                              Store 305(i16v) 406
-             408:    407(ptr) AccessChain 393(f16v) 117
-             409:261(float16_t) Load 408
-             410: 14(int16_t) Bitcast 409
-             411:     15(ptr) AccessChain 319(u16v) 128
-                              Store 411 410
-             412:187(i16vec2) Load 305(i16v)
-             413:262(f16vec2) Bitcast 412
-             414:    407(ptr) AccessChain 393(f16v) 128
-             415:261(float16_t) CompositeExtract 413 0
-                              Store 414 415
-             416:    407(ptr) AccessChain 393(f16v) 111
-             417:261(float16_t) CompositeExtract 413 1
-                              Store 416 417
-             418: 49(i16vec3) Load 319(u16v)
-             419:391(f16vec3) Bitcast 418
-                              Store 393(f16v) 419
-             421:187(i16vec2) Load 305(i16v)
-             422:     28(int) Bitcast 421
-                              Store 420(packi) 422
-             423:     28(int) Load 420(packi)
-             424:187(i16vec2) Bitcast 423
-                              Store 305(i16v) 424
-             426: 49(i16vec3) Load 319(u16v)
-             427:198(i16vec2) VectorShuffle 426 426 0 1
-             428:     18(int) Bitcast 427
-                              Store 425(packu) 428
-             429:     18(int) Load 425(packu)
-             430:198(i16vec2) Bitcast 429
-             431:     15(ptr) AccessChain 319(u16v) 128
-             432: 14(int16_t) CompositeExtract 430 0
-                              Store 431 432
-             433:     15(ptr) AccessChain 319(u16v) 111
-             434: 14(int16_t) CompositeExtract 430 1
-                              Store 433 434
-             437: 17(int16_t) Load 311(i16)
-             439:438(i16vec4) CompositeConstruct 437 437 437 437
-             440:273(int64_t) Bitcast 439
-                              Store 436(packi64) 440
-             441:273(int64_t) Load 436(packi64)
-             442:438(i16vec4) Bitcast 441
-             443:187(i16vec2) VectorShuffle 442 442 0 1
-                              Store 305(i16v) 443
-             446: 14(int16_t) Load 321(u16)
-             448:447(i16vec4) CompositeConstruct 446 446 446 446
-             449:285(int64_t) Bitcast 448
-                              Store 445(packu64) 449
-             450:285(int64_t) Load 445(packu64)
-             451:447(i16vec4) Bitcast 450
-             452: 49(i16vec3) VectorShuffle 451 451 0 1 2
-                              Store 319(u16v) 452
-             455: 49(i16vec3) Load 319(u16v)
-             456: 14(int16_t) Load 321(u16)
-             457: 49(i16vec3) CompositeConstruct 456 456 456
-             458:  388(bvec3) ULessThan 455 457
-                              Store 454(bv) 458
-             459:187(i16vec2) Load 305(i16v)
-             460: 17(int16_t) Load 311(i16)
-             461:187(i16vec2) CompositeConstruct 460 460
-             462:  190(bvec2) SLessThan 459 461
-             463:    126(ptr) AccessChain 454(bv) 128
-             464:   125(bool) CompositeExtract 462 0
-                              Store 463 464
-             465:    126(ptr) AccessChain 454(bv) 111
-             466:   125(bool) CompositeExtract 462 1
-                              Store 465 466
-             467: 49(i16vec3) Load 319(u16v)
-             468: 14(int16_t) Load 321(u16)
-             469: 49(i16vec3) CompositeConstruct 468 468 468
-             470:  388(bvec3) ULessThanEqual 467 469
-                              Store 454(bv) 470
-             471:187(i16vec2) Load 305(i16v)
-             472: 17(int16_t) Load 311(i16)
-             473:187(i16vec2) CompositeConstruct 472 472
-             474:  190(bvec2) SLessThanEqual 471 473
-             475:    126(ptr) AccessChain 454(bv) 128
-             476:   125(bool) CompositeExtract 474 0
-                              Store 475 476
-             477:    126(ptr) AccessChain 454(bv) 111
-             478:   125(bool) CompositeExtract 474 1
-                              Store 477 478
-             479: 49(i16vec3) Load 319(u16v)
-             480: 14(int16_t) Load 321(u16)
-             481: 49(i16vec3) CompositeConstruct 480 480 480
-             482:  388(bvec3) UGreaterThan 479 481
-                              Store 454(bv) 482
-             483:187(i16vec2) Load 305(i16v)
-             484: 17(int16_t) Load 311(i16)
-             485:187(i16vec2) CompositeConstruct 484 484
-             486:  190(bvec2) SGreaterThan 483 485
-             487:    126(ptr) AccessChain 454(bv) 128
-             488:   125(bool) CompositeExtract 486 0
-                              Store 487 488
-             489:    126(ptr) AccessChain 454(bv) 111
-             490:   125(bool) CompositeExtract 486 1
-                              Store 489 490
-             491: 49(i16vec3) Load 319(u16v)
-             492: 14(int16_t) Load 321(u16)
-             493: 49(i16vec3) CompositeConstruct 492 492 492
-             494:  388(bvec3) UGreaterThanEqual 491 493
-                              Store 454(bv) 494
-             495:187(i16vec2) Load 305(i16v)
-             496: 17(int16_t) Load 311(i16)
-             497:187(i16vec2) CompositeConstruct 496 496
-             498:  190(bvec2) SGreaterThanEqual 495 497
-             499:    126(ptr) AccessChain 454(bv) 128
-             500:   125(bool) CompositeExtract 498 0
-                              Store 499 500
-             501:    126(ptr) AccessChain 454(bv) 111
-             502:   125(bool) CompositeExtract 498 1
-                              Store 501 502
-             503: 49(i16vec3) Load 319(u16v)
-             504: 14(int16_t) Load 321(u16)
-             505: 49(i16vec3) CompositeConstruct 504 504 504
-             506:  388(bvec3) IEqual 503 505
-                              Store 454(bv) 506
-             507:187(i16vec2) Load 305(i16v)
-             508: 17(int16_t) Load 311(i16)
-             509:187(i16vec2) CompositeConstruct 508 508
-             510:  190(bvec2) IEqual 507 509
-             511:    126(ptr) AccessChain 454(bv) 128
-             512:   125(bool) CompositeExtract 510 0
-                              Store 511 512
-             513:    126(ptr) AccessChain 454(bv) 111
-             514:   125(bool) CompositeExtract 510 1
-                              Store 513 514
-             515: 49(i16vec3) Load 319(u16v)
-             516: 14(int16_t) Load 321(u16)
-             517: 49(i16vec3) CompositeConstruct 516 516 516
-             518:  388(bvec3) INotEqual 515 517
-                              Store 454(bv) 518
-             519:187(i16vec2) Load 305(i16v)
-             520: 17(int16_t) Load 311(i16)
-             521:187(i16vec2) CompositeConstruct 520 520
-             522:  190(bvec2) INotEqual 519 521
-             523:    126(ptr) AccessChain 454(bv) 128
-             524:   125(bool) CompositeExtract 522 0
-                              Store 523 524
-             525:    126(ptr) AccessChain 454(bv) 111
-             526:   125(bool) CompositeExtract 522 1
-                              Store 525 526
+54_5(builtinFuncs():        19_1 Function None 33_1
+           248_5:             Label
+     59_24(i16v):  32_11(ptr) Variable Function
+      59_25(i16):   32_5(ptr) Variable Function
+     59_26(u16v):   32_7(ptr) Variable Function
+      59_27(u16):   32_1(ptr) Variable Function
+     59_28(f16v):  32_21(ptr) Variable Function
+      59_29(exp):  32_22(ptr) Variable Function
+    59_30(packi):  32_10(ptr) Variable Function
+    59_31(packu):   32_9(ptr) Variable Function
+  59_32(packi64):  32_24(ptr) Variable Function
+  59_33(packu64):  32_25(ptr) Variable Function
+       59_34(bv):  32_26(ptr) Variable Function
+           61_98:23_3(i16vec2) Load 59_24(i16v)
+           1-5_1:23_3(i16vec2) ExtInst 11_1(GLSL.std.450) 5(SAbs) 61_98
+                              Store 59_24(i16v) 1-5_1
+           61_99:23_3(i16vec2) Load 59_24(i16v)
+           1-7_1:23_3(i16vec2) ExtInst 11_1(GLSL.std.450) 7(SSign) 61_99
+                              Store 59_24(i16v) 1-7_1
+          61_100:23_3(i16vec2) Load 59_24(i16v)
+          61_101:21_2(int16_t) Load 59_25(i16)
+           80_10:23_3(i16vec2) CompositeConstruct 61_101 61_101
+          1-39_1:23_3(i16vec2) ExtInst 11_1(GLSL.std.450) 39(SMin) 61_100 80_10
+                              Store 59_24(i16v) 1-39_1
+          61_102:23_3(i16vec2) Load 59_24(i16v)
+          1-39_2:23_3(i16vec2) ExtInst 11_1(GLSL.std.450) 39(SMin) 61_102 44_7
+                              Store 59_24(i16v) 1-39_2
+          61_103:23_1(i16vec3) Load 59_26(u16v)
+          61_104:21_1(int16_t) Load 59_27(u16)
+           80_11:23_1(i16vec3) CompositeConstruct 61_104 61_104 61_104
+          1-38_1:23_1(i16vec3) ExtInst 11_1(GLSL.std.450) 38(UMin) 61_103 80_11
+                              Store 59_26(u16v) 1-38_1
+          61_105:23_1(i16vec3) Load 59_26(u16v)
+          1-38_2:23_1(i16vec3) ExtInst 11_1(GLSL.std.450) 38(UMin) 61_105 44_8
+                              Store 59_26(u16v) 1-38_2
+          61_106:23_3(i16vec2) Load 59_24(i16v)
+          61_107:21_2(int16_t) Load 59_25(i16)
+           80_12:23_3(i16vec2) CompositeConstruct 61_107 61_107
+          1-42_1:23_3(i16vec2) ExtInst 11_1(GLSL.std.450) 42(SMax) 61_106 80_12
+                              Store 59_24(i16v) 1-42_1
+          61_108:23_3(i16vec2) Load 59_24(i16v)
+          1-42_2:23_3(i16vec2) ExtInst 11_1(GLSL.std.450) 42(SMax) 61_108 44_7
+                              Store 59_24(i16v) 1-42_2
+          61_109:23_1(i16vec3) Load 59_26(u16v)
+          61_110:21_1(int16_t) Load 59_27(u16)
+           80_13:23_1(i16vec3) CompositeConstruct 61_110 61_110 61_110
+          1-41_1:23_1(i16vec3) ExtInst 11_1(GLSL.std.450) 41(UMax) 61_109 80_13
+                              Store 59_26(u16v) 1-41_1
+          61_111:23_1(i16vec3) Load 59_26(u16v)
+          1-41_2:23_1(i16vec3) ExtInst 11_1(GLSL.std.450) 41(UMax) 61_111 44_8
+                              Store 59_26(u16v) 1-41_2
+          61_112:23_3(i16vec2) Load 59_24(i16v)
+          61_113:21_2(int16_t) Load 59_25(i16)
+           126_2:21_2(int16_t) SNegate 61_113
+          61_114:21_2(int16_t) Load 59_25(i16)
+           80_14:23_3(i16vec2) CompositeConstruct 126_2 126_2
+           80_15:23_3(i16vec2) CompositeConstruct 61_114 61_114
+          1-45_1:23_3(i16vec2) ExtInst 11_1(GLSL.std.450) 45(SClamp) 61_112 80_14 80_15
+                              Store 59_24(i16v) 1-45_1
+          61_115:23_3(i16vec2) Load 59_24(i16v)
+          61_116:23_3(i16vec2) Load 59_24(i16v)
+           126_3:23_3(i16vec2) SNegate 61_116
+          61_117:23_3(i16vec2) Load 59_24(i16v)
+          1-45_2:23_3(i16vec2) ExtInst 11_1(GLSL.std.450) 45(SClamp) 61_115 126_3 61_117
+                              Store 59_24(i16v) 1-45_2
+          61_118:23_1(i16vec3) Load 59_26(u16v)
+          61_119:21_1(int16_t) Load 59_27(u16)
+           126_4:21_1(int16_t) SNegate 61_119
+          61_120:21_1(int16_t) Load 59_27(u16)
+           80_16:23_1(i16vec3) CompositeConstruct 126_4 126_4 126_4
+           80_17:23_1(i16vec3) CompositeConstruct 61_120 61_120 61_120
+          1-44_1:23_1(i16vec3) ExtInst 11_1(GLSL.std.450) 44(UClamp) 61_118 80_16 80_17
+                              Store 59_26(u16v) 1-44_1
+          61_121:23_1(i16vec3) Load 59_26(u16v)
+          61_122:23_1(i16vec3) Load 59_26(u16v)
+           126_5:23_1(i16vec3) SNegate 61_122
+          61_123:23_1(i16vec3) Load 59_26(u16v)
+          1-44_2:23_1(i16vec3) ExtInst 11_1(GLSL.std.450) 44(UClamp) 61_121 126_5 61_123
+                              Store 59_26(u16v) 1-44_2
+           65_13:   32_5(ptr) AccessChain 59_24(i16v) uint(0)
+          61_124:21_2(int16_t) Load 65_13
+           65_14:   32_5(ptr) AccessChain 59_24(i16v) uint(1)
+          61_125:21_2(int16_t) Load 65_14
+           169_3:21_2(int16_t) Select 41_1 61_125 61_124
+                              Store 59_25(i16) 169_3
+          61_126:21_2(int16_t) Load 59_25(i16)
+           80_18:23_3(i16vec2) CompositeConstruct 61_126 61_126
+          61_127:21_2(int16_t) Load 59_25(i16)
+           126_6:21_2(int16_t) SNegate 61_127
+           80_19:23_3(i16vec2) CompositeConstruct 126_6 126_6
+           169_4:23_3(i16vec2) Select 44_9 80_19 80_18
+                              Store 59_24(i16v) 169_4
+           65_15:   32_1(ptr) AccessChain 59_26(u16v) uint(0)
+          61_128:21_1(int16_t) Load 65_15
+           65_16:   32_1(ptr) AccessChain 59_26(u16v) uint(1)
+          61_129:21_1(int16_t) Load 65_16
+           169_5:21_1(int16_t) Select 41_1 61_129 61_128
+                              Store 59_27(u16) 169_5
+          61_130:21_1(int16_t) Load 59_27(u16)
+           80_20:23_1(i16vec3) CompositeConstruct 61_130 61_130 61_130
+          61_131:21_1(int16_t) Load 59_27(u16)
+           126_7:21_1(int16_t) SNegate 61_131
+           80_21:23_1(i16vec3) CompositeConstruct 126_7 126_7 126_7
+           169_6:23_1(i16vec3) Select 44_10 80_21 80_20
+                              Store 59_26(u16v) 169_6
+          61_132:23_14(f16vec3) Load 59_28(f16v)
+          1-52_1:30_2(ResType) ExtInst 11_1(GLSL.std.450) 52(FrexpStruct) 61_132
+            81_1:23_2(i16vec3) CompositeExtract 1-52_1 1
+                              Store 59_29(exp) 81_1
+            81_2:23_14(f16vec3) CompositeExtract 1-52_1 0
+                              Store 59_28(f16v) 81_2
+          61_133:23_14(f16vec3) Load 59_28(f16v)
+          61_134:23_2(i16vec3) Load 59_29(exp)
+          1-53_1:23_14(f16vec3) ExtInst 11_1(GLSL.std.450) 53(Ldexp) 61_133 61_134
+                              Store 59_28(f16v) 1-53_1
+          61_135:23_14(f16vec3) Load 59_28(f16v)
+            79_1:23_10(f16vec2) VectorShuffle 61_135 61_135 0 1
+          124_23:23_3(i16vec2) Bitcast 79_1
+                              Store 59_24(i16v) 124_23
+           65_17:  32_23(ptr) AccessChain 59_28(f16v) uint(2)
+          61_136:22_3(float16_t) Load 65_17
+          124_24:21_1(int16_t) Bitcast 61_136
+           65_18:   32_1(ptr) AccessChain 59_26(u16v) uint(0)
+                              Store 65_18 124_24
+          61_137:23_3(i16vec2) Load 59_24(i16v)
+          124_25:23_10(f16vec2) Bitcast 61_137
+           65_19:  32_23(ptr) AccessChain 59_28(f16v) uint(0)
+            81_3:22_3(float16_t) CompositeExtract 124_25 0
+                              Store 65_19 81_3
+           65_20:  32_23(ptr) AccessChain 59_28(f16v) uint(1)
+            81_4:22_3(float16_t) CompositeExtract 124_25 1
+                              Store 65_20 81_4
+          61_138:23_1(i16vec3) Load 59_26(u16v)
+          124_26:23_14(f16vec3) Bitcast 61_138
+                              Store 59_28(f16v) 124_26
+          61_139:23_3(i16vec2) Load 59_24(i16v)
+          124_27:   21_4(int) Bitcast 61_139
+                              Store 59_30(packi) 124_27
+          61_140:   21_4(int) Load 59_30(packi)
+          124_28:23_3(i16vec2) Bitcast 61_140
+                              Store 59_24(i16v) 124_28
+          61_141:23_1(i16vec3) Load 59_26(u16v)
+            79_2:23_5(i16vec2) VectorShuffle 61_141 61_141 0 1
+          124_29:   21_3(int) Bitcast 79_2
+                              Store 59_31(packu) 124_29
+          61_142:   21_3(int) Load 59_31(packu)
+          124_30:23_5(i16vec2) Bitcast 61_142
+           65_21:   32_1(ptr) AccessChain 59_26(u16v) uint(0)
+            81_5:21_1(int16_t) CompositeExtract 124_30 0
+                              Store 65_21 81_5
+           65_22:   32_1(ptr) AccessChain 59_26(u16v) uint(1)
+            81_6:21_1(int16_t) CompositeExtract 124_30 1
+                              Store 65_22 81_6
+          61_143:21_2(int16_t) Load 59_25(i16)
+           80_22:23_15(i16vec4) CompositeConstruct 61_143 61_143 61_143 61_143
+          124_31:21_5(int64_t) Bitcast 80_22
+                              Store 59_32(packi64) 124_31
+          61_144:21_5(int64_t) Load 59_32(packi64)
+          124_32:23_15(i16vec4) Bitcast 61_144
+            79_3:23_3(i16vec2) VectorShuffle 124_32 124_32 0 1
+                              Store 59_24(i16v) 79_3
+          61_145:21_1(int16_t) Load 59_27(u16)
+           80_23:23_16(i16vec4) CompositeConstruct 61_145 61_145 61_145 61_145
+          124_33:21_6(int64_t) Bitcast 80_23
+                              Store 59_33(packu64) 124_33
+          61_146:21_6(int64_t) Load 59_33(packu64)
+          124_34:23_16(i16vec4) Bitcast 61_146
+            79_4:23_1(i16vec3) VectorShuffle 124_34 124_34 0 1 2
+                              Store 59_26(u16v) 79_4
+          61_147:23_1(i16vec3) Load 59_26(u16v)
+          61_148:21_1(int16_t) Load 59_27(u16)
+           80_24:23_1(i16vec3) CompositeConstruct 61_148 61_148 61_148
+           176_2:23_13(bvec3) ULessThan 61_147 80_24
+                              Store 59_34(bv) 176_2
+          61_149:23_3(i16vec2) Load 59_24(i16v)
+          61_150:21_2(int16_t) Load 59_25(i16)
+           80_25:23_3(i16vec2) CompositeConstruct 61_150 61_150
+           177_1: 23_4(bvec2) SLessThan 61_149 80_25
+           65_23:   32_8(ptr) AccessChain 59_34(bv) uint(0)
+            81_7:  20_1(bool) CompositeExtract 177_1 0
+                              Store 65_23 81_7
+           65_24:   32_8(ptr) AccessChain 59_34(bv) uint(1)
+            81_8:  20_1(bool) CompositeExtract 177_1 1
+                              Store 65_24 81_8
+          61_151:23_1(i16vec3) Load 59_26(u16v)
+          61_152:21_1(int16_t) Load 59_27(u16)
+           80_26:23_1(i16vec3) CompositeConstruct 61_152 61_152 61_152
+           178_1:23_13(bvec3) ULessThanEqual 61_151 80_26
+                              Store 59_34(bv) 178_1
+          61_153:23_3(i16vec2) Load 59_24(i16v)
+          61_154:21_2(int16_t) Load 59_25(i16)
+           80_27:23_3(i16vec2) CompositeConstruct 61_154 61_154
+           179_2: 23_4(bvec2) SLessThanEqual 61_153 80_27
+           65_25:   32_8(ptr) AccessChain 59_34(bv) uint(0)
+            81_9:  20_1(bool) CompositeExtract 179_2 0
+                              Store 65_25 81_9
+           65_26:   32_8(ptr) AccessChain 59_34(bv) uint(1)
+           81_10:  20_1(bool) CompositeExtract 179_2 1
+                              Store 65_26 81_10
+          61_155:23_1(i16vec3) Load 59_26(u16v)
+          61_156:21_1(int16_t) Load 59_27(u16)
+           80_28:23_1(i16vec3) CompositeConstruct 61_156 61_156 61_156
+           172_2:23_13(bvec3) UGreaterThan 61_155 80_28
+                              Store 59_34(bv) 172_2
+          61_157:23_3(i16vec2) Load 59_24(i16v)
+          61_158:21_2(int16_t) Load 59_25(i16)
+           80_29:23_3(i16vec2) CompositeConstruct 61_158 61_158
+           173_1: 23_4(bvec2) SGreaterThan 61_157 80_29
+           65_27:   32_8(ptr) AccessChain 59_34(bv) uint(0)
+           81_11:  20_1(bool) CompositeExtract 173_1 0
+                              Store 65_27 81_11
+           65_28:   32_8(ptr) AccessChain 59_34(bv) uint(1)
+           81_12:  20_1(bool) CompositeExtract 173_1 1
+                              Store 65_28 81_12
+          61_159:23_1(i16vec3) Load 59_26(u16v)
+          61_160:21_1(int16_t) Load 59_27(u16)
+           80_30:23_1(i16vec3) CompositeConstruct 61_160 61_160 61_160
+           174_2:23_13(bvec3) UGreaterThanEqual 61_159 80_30
+                              Store 59_34(bv) 174_2
+          61_161:23_3(i16vec2) Load 59_24(i16v)
+          61_162:21_2(int16_t) Load 59_25(i16)
+           80_31:23_3(i16vec2) CompositeConstruct 61_162 61_162
+           175_1: 23_4(bvec2) SGreaterThanEqual 61_161 80_31
+           65_29:   32_8(ptr) AccessChain 59_34(bv) uint(0)
+           81_13:  20_1(bool) CompositeExtract 175_1 0
+                              Store 65_29 81_13
+           65_30:   32_8(ptr) AccessChain 59_34(bv) uint(1)
+           81_14:  20_1(bool) CompositeExtract 175_1 1
+                              Store 65_30 81_14
+          61_163:23_1(i16vec3) Load 59_26(u16v)
+          61_164:21_1(int16_t) Load 59_27(u16)
+           80_32:23_1(i16vec3) CompositeConstruct 61_164 61_164 61_164
+           170_2:23_13(bvec3) IEqual 61_163 80_32
+                              Store 59_34(bv) 170_2
+          61_165:23_3(i16vec2) Load 59_24(i16v)
+          61_166:21_2(int16_t) Load 59_25(i16)
+           80_33:23_3(i16vec2) CompositeConstruct 61_166 61_166
+           170_3: 23_4(bvec2) IEqual 61_165 80_33
+           65_31:   32_8(ptr) AccessChain 59_34(bv) uint(0)
+           81_15:  20_1(bool) CompositeExtract 170_3 0
+                              Store 65_31 81_15
+           65_32:   32_8(ptr) AccessChain 59_34(bv) uint(1)
+           81_16:  20_1(bool) CompositeExtract 170_3 1
+                              Store 65_32 81_16
+          61_167:23_1(i16vec3) Load 59_26(u16v)
+          61_168:21_1(int16_t) Load 59_27(u16)
+           80_34:23_1(i16vec3) CompositeConstruct 61_168 61_168 61_168
+           171_4:23_13(bvec3) INotEqual 61_167 80_34
+                              Store 59_34(bv) 171_4
+          61_169:23_3(i16vec2) Load 59_24(i16v)
+          61_170:21_2(int16_t) Load 59_25(i16)
+           80_35:23_3(i16vec2) CompositeConstruct 61_170 61_170
+           171_5: 23_4(bvec2) INotEqual 61_169 80_35
+           65_33:   32_8(ptr) AccessChain 59_34(bv) uint(0)
+           81_17:  20_1(bool) CompositeExtract 171_5 0
+                              Store 65_33 81_17
+           65_34:   32_8(ptr) AccessChain 59_34(bv) uint(1)
+           81_18:  20_1(bool) CompositeExtract 171_5 1
+                              Store 65_34 81_18
                               Return
                               FunctionEnd

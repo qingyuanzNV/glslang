@@ -147,99 +147,99 @@ gl_FragCoord origin is upper left
 // Id's are bound by 64
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 62
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 9  "OS"
-                              MemberName 9(OS) 0  "ss"
-                              MemberName 9(OS) 1  "a"
-                              MemberName 9(OS) 2  "tex"
-                              Name 14  "osCall(struct-OS-p1-f1-t211;"
-                              Name 13  "s"
-                              Name 17  "@main("
-                              Name 42  "os"
-                              Name 44  "gss2"
-                              Name 47  "gss"
-                              Name 51  "gtex"
-                              Name 56  "param"
-                              Name 62  "@entryPointOutput"
-                              Decorate 44(gss2) Binding 1
-                              Decorate 44(gss2) DescriptorSet 0
-                              Decorate 47(gss) Binding 0
-                              Decorate 47(gss) DescriptorSet 0
-                              Decorate 51(gtex) Binding 2
-                              Decorate 51(gtex) DescriptorSet 0
-                              Decorate 62(@entryPointOutput) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeSampler
-               7:             TypeFloat 32
-               8:             TypeImage 7(float) 2D sampled format:Unknown
-           9(OS):             TypeStruct 6 7(float) 8
-              10:             TypePointer Function 9(OS)
-              11:             TypeVector 7(float) 4
-              12:             TypeFunction 11(fvec4) 10(ptr)
-              16:             TypeFunction 11(fvec4)
-              19:             TypeInt 32 1
-              20:     19(int) Constant 1
-              21:             TypePointer Function 7(float)
-              24:     19(int) Constant 2
-              25:             TypePointer Function 8
-              28:     19(int) Constant 0
-              29:             TypePointer Function 6
-              32:             TypeSampledImage 8
-              34:             TypeVector 7(float) 2
-              35:    7(float) Constant 1045220557
-              36:    7(float) Constant 1050253722
-              37:   34(fvec2) ConstantComposite 35 36
-              43:             TypePointer UniformConstant 6
-        44(gss2):     43(ptr) Variable UniformConstant
-         47(gss):     43(ptr) Variable UniformConstant
-              50:             TypePointer UniformConstant 8
-        51(gtex):     50(ptr) Variable UniformConstant
-              54:    7(float) Constant 1077936128
-              61:             TypePointer Output 11(fvec4)
-62(@entryPointOutput):     61(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              63:   11(fvec4) FunctionCall 17(@main()
-                              Store 62(@entryPointOutput) 63
+                              Name 54_1  "main"
+                              Name 30_1  "OS"
+                              MemberName 30_1(OS) 0  "ss"
+                              MemberName 30_1(OS) 1  "a"
+                              MemberName 30_1(OS) 2  "tex"
+                              Name 54_2  "osCall(struct-OS-p1-f1-t211;"
+                              Name 55_1  "s"
+                              Name 54_3  "@main("
+                              Name 59_5  "os"
+                              Name 59_1  "gss2"
+                              Name 59_2  "gss"
+                              Name 59_3  "gtex"
+                              Name 59_6  "param"
+                              Name 59_4  "@entryPointOutput"
+                              Decorate 59_1(gss2) Binding 1
+                              Decorate 59_1(gss2) DescriptorSet 0
+                              Decorate 59_2(gss) Binding 0
+                              Decorate 59_2(gss) DescriptorSet 0
+                              Decorate 59_3(gtex) Binding 2
+                              Decorate 59_3(gtex) DescriptorSet 0
+                              Decorate 59_4(@entryPointOutput) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            26_1:             TypeSampler
+            22_1:             TypeFloat 32
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+        30_1(OS):             TypeStruct 26_1 22_1(float) 25_1
+            32_1:             TypePointer Function 30_1(OS)
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4) 32_1(ptr)
+            33_3:             TypeFunction 23_1(fvec4)
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 1
+            32_2:             TypePointer Function 22_1(float)
+            43_2:   21_1(int) Constant 2
+            32_3:             TypePointer Function 25_1
+            43_3:   21_1(int) Constant 0
+            32_4:             TypePointer Function 26_1
+            27_1:             TypeSampledImage 25_1
+            23_2:             TypeVector 22_1(float) 2
+            43_4: 22_1(float) Constant 1045220557
+            43_5: 22_1(float) Constant 1050253722
+            44_1: 23_2(fvec2) ConstantComposite 43_4 43_5
+            32_5:             TypePointer UniformConstant 26_1
+      59_1(gss2):   32_5(ptr) Variable UniformConstant
+       59_2(gss):   32_5(ptr) Variable UniformConstant
+            32_6:             TypePointer UniformConstant 25_1
+      59_3(gtex):   32_6(ptr) Variable UniformConstant
+            43_6: 22_1(float) Constant 1077936128
+            32_7:             TypePointer Output 23_1(fvec4)
+59_4(@entryPointOutput):   32_7(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            57_1: 23_1(fvec4) FunctionCall 54_3(@main()
+                              Store 59_4(@entryPointOutput) 57_1
                               Return
                               FunctionEnd
-14(osCall(struct-OS-p1-f1-t211;):   11(fvec4) Function None 12
-           13(s):     10(ptr) FunctionParameter
-              15:             Label
-              22:     21(ptr) AccessChain 13(s) 20
-              23:    7(float) Load 22
-              26:     25(ptr) AccessChain 13(s) 24
-              27:           8 Load 26
-              30:     29(ptr) AccessChain 13(s) 28
-              31:           6 Load 30
-              33:          32 SampledImage 27 31
-              38:   11(fvec4) ImageSampleImplicitLod 33 37
-              39:   11(fvec4) VectorTimesScalar 38 23
-                              ReturnValue 39
+54_2(osCall(struct-OS-p1-f1-t211;): 23_1(fvec4) Function None 33_2
+         55_1(s):   32_1(ptr) FunctionParameter
+           248_2:             Label
+            65_1:   32_2(ptr) AccessChain 55_1(s) 43_1
+            61_1: 22_1(float) Load 65_1
+            65_2:   32_3(ptr) AccessChain 55_1(s) 43_2
+            61_2:        25_1 Load 65_2
+            65_3:   32_4(ptr) AccessChain 55_1(s) 43_3
+            61_3:        26_1 Load 65_3
+            86_1:        27_1 SampledImage 61_2 61_3
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 86_1 44_1
+           142_1: 23_1(fvec4) VectorTimesScalar 87_1 61_1
+                              ReturnValue 142_1
                               FunctionEnd
-      17(@main():   11(fvec4) Function None 16
-              18:             Label
-          42(os):     10(ptr) Variable Function
-       56(param):     10(ptr) Variable Function
-              45:           6 Load 44(gss2)
-              46:     29(ptr) AccessChain 42(os) 28
-                              Store 46 45
-              48:           6 Load 47(gss)
-              49:     29(ptr) AccessChain 42(os) 28
-                              Store 49 48
-              52:           8 Load 51(gtex)
-              53:     25(ptr) AccessChain 42(os) 24
-                              Store 53 52
-              55:     21(ptr) AccessChain 42(os) 20
-                              Store 55 54
-              57:       9(OS) Load 42(os)
-                              Store 56(param) 57
-              58:   11(fvec4) FunctionCall 14(osCall(struct-OS-p1-f1-t211;) 56(param)
-                              ReturnValue 58
+    54_3(@main(): 23_1(fvec4) Function None 33_3
+           248_3:             Label
+        59_5(os):   32_1(ptr) Variable Function
+     59_6(param):   32_1(ptr) Variable Function
+            61_4:        26_1 Load 59_1(gss2)
+            65_4:   32_4(ptr) AccessChain 59_5(os) 43_3
+                              Store 65_4 61_4
+            61_5:        26_1 Load 59_2(gss)
+            65_5:   32_4(ptr) AccessChain 59_5(os) 43_3
+                              Store 65_5 61_5
+            61_6:        25_1 Load 59_3(gtex)
+            65_6:   32_3(ptr) AccessChain 59_5(os) 43_2
+                              Store 65_6 61_6
+            65_7:   32_2(ptr) AccessChain 59_5(os) 43_1
+                              Store 65_7 43_6
+            61_7:    30_1(OS) Load 59_5(os)
+                              Store 59_6(param) 61_7
+            57_2: 23_1(fvec4) FunctionCall 54_2(osCall(struct-OS-p1-f1-t211;) 59_6(param)
+                              ReturnValue 57_2
                               FunctionEnd

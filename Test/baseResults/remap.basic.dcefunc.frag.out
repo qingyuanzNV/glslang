@@ -4,32 +4,32 @@ remap.basic.dcefunc.frag
 // Id's are bound by 22
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 17 19
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 17  "outf4"
-                              Name 19  "inf"
-                              Decorate 17(outf4) Location 0
-                              Decorate 19(inf) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 3
-               8:             TypeFunction 7(fvec3)
-              11:    6(float) Constant 0
-              12:    7(fvec3) ConstantComposite 11 11 11
-              15:             TypeVector 6(float) 4
-              16:             TypePointer Output 15(fvec4)
-       17(outf4):     16(ptr) Variable Output
-              18:             TypePointer Input 6(float)
-         19(inf):     18(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              20:    6(float) Load 19(inf)
-              21:   15(fvec4) CompositeConstruct 20 20 20 20
-                              Store 17(outf4) 21
+                              Name 54_1  "main"
+                              Name 59_1  "outf4"
+                              Name 59_2  "inf"
+                              Decorate 59_1(outf4) Location 0
+                              Decorate 59_2(inf) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 3
+            33_2:             TypeFunction 23_1(fvec3)
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec3) ConstantComposite 43_1 43_1 43_1
+            23_2:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Output 23_2(fvec4)
+     59_1(outf4):   32_1(ptr) Variable Output
+            32_2:             TypePointer Input 22_1(float)
+       59_2(inf):   32_2(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1: 22_1(float) Load 59_2(inf)
+            80_1: 23_2(fvec4) CompositeConstruct 61_1 61_1 61_1 61_1
+                              Store 59_1(outf4) 80_1
                               Return
                               FunctionEnd

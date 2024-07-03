@@ -462,195 +462,195 @@ triangle order = cw
 // Id's are bound by 124
 
                               Capability Tessellation
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationControl 4  "main" 56 61 80 83 107 120
-                              ExecutionMode 4 OutputVertices 3
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 SpacingFractionalOdd
-                              ExecutionMode 4 VertexOrderCw
+                              EntryPoint TessellationControl 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6
+                              ExecutionMode 54_1 OutputVertices 3
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 SpacingFractionalOdd
+                              ExecutionMode 54_1 VertexOrderCw
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 8  "HS_Input"
-                              MemberName 8(HS_Input) 0  "m_Position"
-                              MemberName 8(HS_Input) 1  "m_Normal"
-                              Name 14  "HS_Output"
-                              MemberName 14(HS_Output) 0  "fTessFactor"
-                              MemberName 14(HS_Output) 1  "fInsideTessFactor"
-                              Name 17  "HS_ConstFunc(struct-HS_Input-vf4-vf41[3];"
-                              Name 16  "I"
-                              Name 20  "HS_Main_Output"
-                              MemberName 20(HS_Main_Output) 0  "m_Position"
-                              Name 24  "@main(struct-HS_Input-vf4-vf41[3];u1;"
-                              Name 22  "I"
-                              Name 23  "cpid"
-                              Name 27  "O"
-                              Name 45  "output"
-                              Name 53  "I"
-                              Name 56  "I.m_Position"
-                              Name 61  "I.m_Normal"
-                              Name 78  "cpid"
-                              Name 80  "cpid"
-                              Name 83  "@entryPointOutput.m_Position"
-                              Name 85  "param"
-                              Name 87  "param"
-                              Name 101  "@patchConstantResult"
-                              Name 102  "param"
-                              Name 107  "@patchConstantOutput.fTessFactor"
-                              Name 120  "@patchConstantOutput.fInsideTessFactor"
-                              Decorate 56(I.m_Position) BuiltIn Position
-                              Decorate 61(I.m_Normal) Location 0
-                              Decorate 80(cpid) BuiltIn InvocationId
-                              Decorate 83(@entryPointOutput.m_Position) BuiltIn Position
-                              Decorate 107(@patchConstantOutput.fTessFactor) BuiltIn TessLevelOuter
-                              Decorate 107(@patchConstantOutput.fTessFactor) Patch
-                              Decorate 120(@patchConstantOutput.fInsideTessFactor) BuiltIn TessLevelInner
-                              Decorate 120(@patchConstantOutput.fInsideTessFactor) Patch
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-     8(HS_Input):             TypeStruct 7(fvec4) 7(fvec4)
-               9:             TypeInt 32 0
-              10:      9(int) Constant 3
-              11:             TypeArray 8(HS_Input) 10
-              12:             TypePointer Function 11
-              13:             TypeArray 6(float) 10
-   14(HS_Output):             TypeStruct 13 6(float)
-              15:             TypeFunction 14(HS_Output) 12(ptr)
-              19:             TypePointer Function 9(int)
-20(HS_Main_Output):             TypeStruct 7(fvec4)
-              21:             TypeFunction 20(HS_Main_Output) 12(ptr) 19(ptr)
-              26:             TypePointer Function 14(HS_Output)
-              28:    6(float) Constant 0
-              29:          13 ConstantComposite 28 28 28
-              30:14(HS_Output) ConstantComposite 29 28
-              31:             TypeInt 32 1
-              32:     31(int) Constant 1
-              33:     31(int) Constant 0
-              34:             TypePointer Function 6(float)
-              44:             TypePointer Function 20(HS_Main_Output)
-              46:    7(fvec4) ConstantComposite 28 28 28 28
-              47:20(HS_Main_Output) ConstantComposite 46
-              48:             TypePointer Function 7(fvec4)
-              54:             TypeArray 7(fvec4) 10
-              55:             TypePointer Input 54
-56(I.m_Position):     55(ptr) Variable Input
-              57:             TypePointer Input 7(fvec4)
-  61(I.m_Normal):     55(ptr) Variable Input
-              71:     31(int) Constant 2
-              79:             TypePointer Input 9(int)
-        80(cpid):     79(ptr) Variable Input
-              82:             TypePointer Output 54
-83(@entryPointOutput.m_Position):     82(ptr) Variable Output
-              91:             TypePointer Output 7(fvec4)
-              93:      9(int) Constant 2
-              94:      9(int) Constant 4
-              95:      9(int) Constant 0
-              97:             TypeBool
-             105:             TypeArray 6(float) 94
-             106:             TypePointer Output 105
-107(@patchConstantOutput.fTessFactor):    106(ptr) Variable Output
-             110:             TypePointer Output 6(float)
-             118:             TypeArray 6(float) 93
-             119:             TypePointer Output 118
-120(@patchConstantOutput.fInsideTessFactor):    119(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-           53(I):     12(ptr) Variable Function
-        78(cpid):     19(ptr) Variable Function
-       85(param):     12(ptr) Variable Function
-       87(param):     19(ptr) Variable Function
-101(@patchConstantResult):     26(ptr) Variable Function
-      102(param):     12(ptr) Variable Function
-              58:     57(ptr) AccessChain 56(I.m_Position) 33
-              59:    7(fvec4) Load 58
-              60:     48(ptr) AccessChain 53(I) 33 33
-                              Store 60 59
-              62:     57(ptr) AccessChain 61(I.m_Normal) 33
-              63:    7(fvec4) Load 62
-              64:     48(ptr) AccessChain 53(I) 33 32
-                              Store 64 63
-              65:     57(ptr) AccessChain 56(I.m_Position) 32
-              66:    7(fvec4) Load 65
-              67:     48(ptr) AccessChain 53(I) 32 33
-                              Store 67 66
-              68:     57(ptr) AccessChain 61(I.m_Normal) 32
-              69:    7(fvec4) Load 68
-              70:     48(ptr) AccessChain 53(I) 32 32
-                              Store 70 69
-              72:     57(ptr) AccessChain 56(I.m_Position) 71
-              73:    7(fvec4) Load 72
-              74:     48(ptr) AccessChain 53(I) 71 33
-                              Store 74 73
-              75:     57(ptr) AccessChain 61(I.m_Normal) 71
-              76:    7(fvec4) Load 75
-              77:     48(ptr) AccessChain 53(I) 71 32
-                              Store 77 76
-              81:      9(int) Load 80(cpid)
-                              Store 78(cpid) 81
-              84:      9(int) Load 80(cpid)
-              86:          11 Load 53(I)
-                              Store 85(param) 86
-              88:      9(int) Load 78(cpid)
-                              Store 87(param) 88
-              89:20(HS_Main_Output) FunctionCall 24(@main(struct-HS_Input-vf4-vf41[3];u1;) 85(param) 87(param)
-              90:    7(fvec4) CompositeExtract 89 0
-              92:     91(ptr) AccessChain 83(@entryPointOutput.m_Position) 84
-                              Store 92 90
-                              ControlBarrier 93 94 95
-              96:      9(int) Load 80(cpid)
-              98:    97(bool) IEqual 96 33
-                              SelectionMerge 100 None
-                              BranchConditional 98 99 100
-              99:               Label
-             103:          11   Load 53(I)
-                                Store 102(param) 103
-             104:14(HS_Output)   FunctionCall 17(HS_ConstFunc(struct-HS_Input-vf4-vf41[3];) 102(param)
-                                Store 101(@patchConstantResult) 104
-             108:     34(ptr)   AccessChain 101(@patchConstantResult) 33 33
-             109:    6(float)   Load 108
-             111:    110(ptr)   AccessChain 107(@patchConstantOutput.fTessFactor) 33
-                                Store 111 109
-             112:     34(ptr)   AccessChain 101(@patchConstantResult) 33 32
-             113:    6(float)   Load 112
-             114:    110(ptr)   AccessChain 107(@patchConstantOutput.fTessFactor) 32
-                                Store 114 113
-             115:     34(ptr)   AccessChain 101(@patchConstantResult) 33 71
-             116:    6(float)   Load 115
-             117:    110(ptr)   AccessChain 107(@patchConstantOutput.fTessFactor) 71
-                                Store 117 116
-             121:     34(ptr)   AccessChain 101(@patchConstantResult) 32
-             122:    6(float)   Load 121
-             123:    110(ptr)   AccessChain 120(@patchConstantOutput.fInsideTessFactor) 33
-                                Store 123 122
-                                Branch 100
-             100:             Label
+                              Name 54_1  "main"
+                              Name 30_1  "HS_Input"
+                              MemberName 30_1(HS_Input) 0  "m_Position"
+                              MemberName 30_1(HS_Input) 1  "m_Normal"
+                              Name 30_2  "HS_Output"
+                              MemberName 30_2(HS_Output) 0  "fTessFactor"
+                              MemberName 30_2(HS_Output) 1  "fInsideTessFactor"
+                              Name 54_2  "HS_ConstFunc(struct-HS_Input-vf4-vf41[3];"
+                              Name 55_1  "I"
+                              Name 30_3  "HS_Main_Output"
+                              MemberName 30_3(HS_Main_Output) 0  "m_Position"
+                              Name 54_3  "@main(struct-HS_Input-vf4-vf41[3];u1;"
+                              Name 55_2  "I"
+                              Name 55_3  "cpid"
+                              Name 59_13  "O"
+                              Name 59_14  "output"
+                              Name 59_7  "I"
+                              Name 59_1  "I.m_Position"
+                              Name 59_2  "I.m_Normal"
+                              Name 59_8  "cpid"
+                              Name 59_3  "cpid"
+                              Name 59_4  "@entryPointOutput.m_Position"
+                              Name 59_9  "param"
+                              Name 59_10  "param"
+                              Name 59_11  "@patchConstantResult"
+                              Name 59_12  "param"
+                              Name 59_5  "@patchConstantOutput.fTessFactor"
+                              Name 59_6  "@patchConstantOutput.fInsideTessFactor"
+                              Decorate 59_1(I.m_Position) BuiltIn Position
+                              Decorate 59_2(I.m_Normal) Location 0
+                              Decorate 59_3(cpid) BuiltIn InvocationId
+                              Decorate 59_4(@entryPointOutput.m_Position) BuiltIn Position
+                              Decorate 59_5(@patchConstantOutput.fTessFactor) BuiltIn TessLevelOuter
+                              Decorate 59_5(@patchConstantOutput.fTessFactor) Patch
+                              Decorate 59_6(@patchConstantOutput.fInsideTessFactor) BuiltIn TessLevelInner
+                              Decorate 59_6(@patchConstantOutput.fInsideTessFactor) Patch
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+  30_1(HS_Input):             TypeStruct 23_1(fvec4) 23_1(fvec4)
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 30_1(HS_Input) uint(3)
+            32_1:             TypePointer Function 28_1
+            28_2:             TypeArray 22_1(float) uint(3)
+ 30_2(HS_Output):             TypeStruct 28_2 22_1(float)
+            33_2:             TypeFunction 30_2(HS_Output) 32_1(ptr)
+            32_2:             TypePointer Function 21_1(int)
+30_3(HS_Main_Output):             TypeStruct 23_1(fvec4)
+            33_3:             TypeFunction 30_3(HS_Main_Output) 32_1(ptr) 32_2(ptr)
+            32_3:             TypePointer Function 30_2(HS_Output)
+            43_1: 22_1(float) Constant 0
+            44_1:        28_2 ConstantComposite 43_1 43_1 43_1
+            44_2:30_2(HS_Output) ConstantComposite 44_1 43_1
+            21_2:             TypeInt 32 1
+            43_2:   21_2(int) Constant 1
+            43_3:   21_2(int) Constant 0
+            32_4:             TypePointer Function 22_1(float)
+            32_5:             TypePointer Function 30_3(HS_Main_Output)
+            44_3: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            44_4:30_3(HS_Main_Output) ConstantComposite 44_3
+            32_6:             TypePointer Function 23_1(fvec4)
+            28_3:             TypeArray 23_1(fvec4) uint(3)
+            32_7:             TypePointer Input 28_3
+59_1(I.m_Position):   32_7(ptr) Variable Input
+            32_8:             TypePointer Input 23_1(fvec4)
+59_2(I.m_Normal):   32_7(ptr) Variable Input
+            43_4:   21_2(int) Constant 2
+            32_9:             TypePointer Input 21_1(int)
+      59_3(cpid):   32_9(ptr) Variable Input
+           32_10:             TypePointer Output 28_3
+59_4(@entryPointOutput.m_Position):  32_10(ptr) Variable Output
+           32_11:             TypePointer Output 23_1(fvec4)
+         uint(2):   21_1(int) Constant 2
+         uint(4):   21_1(int) Constant 4
+         uint(0):   21_1(int) Constant 0
+            20_1:             TypeBool
+            28_4:             TypeArray 22_1(float) uint(4)
+           32_12:             TypePointer Output 28_4
+59_5(@patchConstantOutput.fTessFactor):  32_12(ptr) Variable Output
+           32_13:             TypePointer Output 22_1(float)
+            28_5:             TypeArray 22_1(float) uint(2)
+           32_14:             TypePointer Output 28_5
+59_6(@patchConstantOutput.fInsideTessFactor):  32_14(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_7(I):   32_1(ptr) Variable Function
+      59_8(cpid):   32_2(ptr) Variable Function
+     59_9(param):   32_1(ptr) Variable Function
+    59_10(param):   32_2(ptr) Variable Function
+59_11(@patchConstantResult):   32_3(ptr) Variable Function
+    59_12(param):   32_1(ptr) Variable Function
+            65_1:   32_8(ptr) AccessChain 59_1(I.m_Position) 43_3
+            61_1: 23_1(fvec4) Load 65_1
+            65_2:   32_6(ptr) AccessChain 59_7(I) 43_3 43_3
+                              Store 65_2 61_1
+            65_3:   32_8(ptr) AccessChain 59_2(I.m_Normal) 43_3
+            61_2: 23_1(fvec4) Load 65_3
+            65_4:   32_6(ptr) AccessChain 59_7(I) 43_3 43_2
+                              Store 65_4 61_2
+            65_5:   32_8(ptr) AccessChain 59_1(I.m_Position) 43_2
+            61_3: 23_1(fvec4) Load 65_5
+            65_6:   32_6(ptr) AccessChain 59_7(I) 43_2 43_3
+                              Store 65_6 61_3
+            65_7:   32_8(ptr) AccessChain 59_2(I.m_Normal) 43_2
+            61_4: 23_1(fvec4) Load 65_7
+            65_8:   32_6(ptr) AccessChain 59_7(I) 43_2 43_2
+                              Store 65_8 61_4
+            65_9:   32_8(ptr) AccessChain 59_1(I.m_Position) 43_4
+            61_5: 23_1(fvec4) Load 65_9
+           65_10:   32_6(ptr) AccessChain 59_7(I) 43_4 43_3
+                              Store 65_10 61_5
+           65_11:   32_8(ptr) AccessChain 59_2(I.m_Normal) 43_4
+            61_6: 23_1(fvec4) Load 65_11
+           65_12:   32_6(ptr) AccessChain 59_7(I) 43_4 43_2
+                              Store 65_12 61_6
+            61_7:   21_1(int) Load 59_3(cpid)
+                              Store 59_8(cpid) 61_7
+            61_8:   21_1(int) Load 59_3(cpid)
+            61_9:        28_1 Load 59_7(I)
+                              Store 59_9(param) 61_9
+           61_10:   21_1(int) Load 59_8(cpid)
+                              Store 59_10(param) 61_10
+            57_1:30_3(HS_Main_Output) FunctionCall 54_3(@main(struct-HS_Input-vf4-vf41[3];u1;) 59_9(param) 59_10(param)
+            81_1: 23_1(fvec4) CompositeExtract 57_1 0
+           65_13:  32_11(ptr) AccessChain 59_4(@entryPointOutput.m_Position) 61_8
+                              Store 65_13 81_1
+                              ControlBarrier uint(2) uint(4) uint(0)
+           61_11:   21_1(int) Load 59_3(cpid)
+           170_1:  20_1(bool) IEqual 61_11 43_3
+                              SelectionMerge 248_3 None
+                              BranchConditional 170_1 248_2 248_3
+           248_2:               Label
+           61_12:        28_1   Load 59_7(I)
+                                Store 59_12(param) 61_12
+            57_2:30_2(HS_Output)   FunctionCall 54_2(HS_ConstFunc(struct-HS_Input-vf4-vf41[3];) 59_12(param)
+                                Store 59_11(@patchConstantResult) 57_2
+           65_14:   32_4(ptr)   AccessChain 59_11(@patchConstantResult) 43_3 43_3
+           61_13: 22_1(float)   Load 65_14
+           65_15:  32_13(ptr)   AccessChain 59_5(@patchConstantOutput.fTessFactor) 43_3
+                                Store 65_15 61_13
+           65_16:   32_4(ptr)   AccessChain 59_11(@patchConstantResult) 43_3 43_2
+           61_14: 22_1(float)   Load 65_16
+           65_17:  32_13(ptr)   AccessChain 59_5(@patchConstantOutput.fTessFactor) 43_2
+                                Store 65_17 61_14
+           65_18:   32_4(ptr)   AccessChain 59_11(@patchConstantResult) 43_3 43_4
+           61_15: 22_1(float)   Load 65_18
+           65_19:  32_13(ptr)   AccessChain 59_5(@patchConstantOutput.fTessFactor) 43_4
+                                Store 65_19 61_15
+           65_20:   32_4(ptr)   AccessChain 59_11(@patchConstantResult) 43_2
+           61_16: 22_1(float)   Load 65_20
+           65_21:  32_13(ptr)   AccessChain 59_6(@patchConstantOutput.fInsideTessFactor) 43_3
+                                Store 65_21 61_16
+                                Branch 248_3
+           248_3:             Label
                               Return
                               FunctionEnd
-17(HS_ConstFunc(struct-HS_Input-vf4-vf41[3];):14(HS_Output) Function None 15
-           16(I):     12(ptr) FunctionParameter
-              18:             Label
-           27(O):     26(ptr) Variable Function
-                              Store 27(O) 30
-              35:     34(ptr) AccessChain 16(I) 33 33 10
-              36:    6(float) Load 35
-              37:     34(ptr) AccessChain 16(I) 33 32 10
-              38:    6(float) Load 37
-              39:    6(float) FAdd 36 38
-              40:     34(ptr) AccessChain 27(O) 32
-                              Store 40 39
-              41:14(HS_Output) Load 27(O)
-                              ReturnValue 41
+54_2(HS_ConstFunc(struct-HS_Input-vf4-vf41[3];):30_2(HS_Output) Function None 33_2
+         55_1(I):   32_1(ptr) FunctionParameter
+           248_4:             Label
+        59_13(O):   32_3(ptr) Variable Function
+                              Store 59_13(O) 44_2
+           65_22:   32_4(ptr) AccessChain 55_1(I) 43_3 43_3 uint(3)
+           61_17: 22_1(float) Load 65_22
+           65_23:   32_4(ptr) AccessChain 55_1(I) 43_3 43_2 uint(3)
+           61_18: 22_1(float) Load 65_23
+           129_1: 22_1(float) FAdd 61_17 61_18
+           65_24:   32_4(ptr) AccessChain 59_13(O) 43_2
+                              Store 65_24 129_1
+           61_19:30_2(HS_Output) Load 59_13(O)
+                              ReturnValue 61_19
                               FunctionEnd
-24(@main(struct-HS_Input-vf4-vf41[3];u1;):20(HS_Main_Output) Function None 21
-           22(I):     12(ptr) FunctionParameter
-        23(cpid):     19(ptr) FunctionParameter
-              25:             Label
-      45(output):     44(ptr) Variable Function
-                              Store 45(output) 47
-              49:     48(ptr) AccessChain 45(output) 33
-                              Store 49 46
-              50:20(HS_Main_Output) Load 45(output)
-                              ReturnValue 50
+54_3(@main(struct-HS_Input-vf4-vf41[3];u1;):30_3(HS_Main_Output) Function None 33_3
+         55_2(I):   32_1(ptr) FunctionParameter
+      55_3(cpid):   32_2(ptr) FunctionParameter
+           248_5:             Label
+   59_14(output):   32_5(ptr) Variable Function
+                              Store 59_14(output) 44_4
+           65_25:   32_6(ptr) AccessChain 59_14(output) 43_3
+                              Store 65_25 44_3
+           61_20:30_3(HS_Main_Output) Load 59_14(output)
+                              ReturnValue 61_20
                               FunctionEnd

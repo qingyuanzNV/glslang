@@ -4,83 +4,83 @@ hlsl.partialFlattenLocal.vert
 // Id's are bound by 164
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 86 89
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2
                               Source HLSL 500
-                              Name 4  "main"
-                              Name 86  "pos"
-                              Name 89  "@entryPointOutput"
-                              Decorate 86(pos) Location 0
-                              Decorate 89(@entryPointOutput) BuiltIn Position
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-              14:             TypeVector 6(float) 3
-              15:             TypeInt 32 0
-              16:     15(int) Constant 3
-              17:             TypeArray 14(fvec3) 16
-              18:             TypeVector 6(float) 2
-              19:     15(int) Constant 2
-              20:             TypeArray 18(fvec2) 19
-              21:             TypeInt 32 1
-              25:     21(int) Constant 0
-              31:     21(int) Constant 1
-              32:    6(float) Constant 0
-              33:   14(fvec3) ConstantComposite 32 32 32
-              34:             TypePointer Function 14(fvec3)
-              37:    6(float) Constant 1065353216
-              38:   18(fvec2) ConstantComposite 32 37
-              39:             TypePointer Function 18(fvec2)
-              42:             TypePointer Function 6(float)
-              54:             TypeBool
-              64:     15(int) Constant 0
-              67:     15(int) Constant 1
-              85:             TypePointer Input 7(fvec4)
-         86(pos):     85(ptr) Variable Input
-              88:             TypePointer Output 7(fvec4)
-89(@entryPointOutput):     88(ptr) Variable Output
-             135:             TypePointer Function 17
-             137:             TypePointer Function 20
-         4(main):           2 Function None 3
-               5:             Label
-             138:    137(ptr) Variable Function
-             136:    135(ptr) Variable Function
-              87:    7(fvec4) Load 86(pos)
-             141:     34(ptr) AccessChain 136 25
-                              Store 141 33
-             142:     39(ptr) AccessChain 138 25
-                              Store 142 38
-                              Branch 104
-             104:             Label
-             163:     21(int) Phi 25 5 123 108
-             107:    54(bool) SLessThan 163 31
-                              LoopMerge 124 108 None
-                              BranchConditional 107 108 124
-             108:               Label
-             143:     39(ptr)   AccessChain 138 163
-             112:   18(fvec2)   Load 143
-             144:     34(ptr)   AccessChain 136 163
-             114:   14(fvec3)   Load 144
-             115:   18(fvec2)   VectorShuffle 114 114 0 1
-             116:   18(fvec2)   FAdd 115 112
-             145:     42(ptr)   AccessChain 136 163 64
-             118:    6(float)   CompositeExtract 116 0
-                                Store 145 118
-             146:     42(ptr)   AccessChain 136 163 67
-             120:    6(float)   CompositeExtract 116 1
-                                Store 146 120
-             123:     21(int)   IAdd 163 31
-                                Branch 104
-             124:             Label
-             148:          17 Load 136
-             162:   14(fvec3) CompositeExtract 148 0
-             129:    6(float) CompositeExtract 162 0
-             130:    6(float) CompositeExtract 162 1
-             131:    6(float) CompositeExtract 162 2
-             132:    7(fvec4) CompositeConstruct 129 130 131 32
-             133:    7(fvec4) FAdd 87 132
-                              Store 89(@entryPointOutput) 133
+                              Name 54_1  "main"
+                              Name 59_1  "pos"
+                              Name 59_2  "@entryPointOutput"
+                              Decorate 59_1(pos) Location 0
+                              Decorate 59_2(@entryPointOutput) BuiltIn Position
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            23_2:             TypeVector 22_1(float) 3
+            21_1:             TypeInt 32 0
+         uint(3):   21_1(int) Constant 3
+            28_1:             TypeArray 23_2(fvec3) uint(3)
+            23_3:             TypeVector 22_1(float) 2
+         uint(2):   21_1(int) Constant 2
+            28_2:             TypeArray 23_3(fvec2) uint(2)
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            43_2:   21_2(int) Constant 1
+            43_3: 22_1(float) Constant 0
+            44_1: 23_2(fvec3) ConstantComposite 43_3 43_3 43_3
+            32_1:             TypePointer Function 23_2(fvec3)
+            43_4: 22_1(float) Constant 1065353216
+            44_2: 23_3(fvec2) ConstantComposite 43_3 43_4
+            32_2:             TypePointer Function 23_3(fvec2)
+            32_3:             TypePointer Function 22_1(float)
+            20_1:             TypeBool
+         uint(0):   21_1(int) Constant 0
+         uint(1):   21_1(int) Constant 1
+            32_4:             TypePointer Input 23_1(fvec4)
+       59_1(pos):   32_4(ptr) Variable Input
+            32_5:             TypePointer Output 23_1(fvec4)
+59_2(@entryPointOutput):   32_5(ptr) Variable Output
+            32_6:             TypePointer Function 28_1
+            32_7:             TypePointer Function 28_2
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            59_3:   32_7(ptr) Variable Function
+            59_4:   32_6(ptr) Variable Function
+            61_1: 23_1(fvec4) Load 59_1(pos)
+            65_1:   32_1(ptr) AccessChain 59_4 43_1
+                              Store 65_1 44_1
+            65_2:   32_2(ptr) AccessChain 59_3 43_1
+                              Store 65_2 44_2
+                              Branch 248_2
+           248_2:             Label
+           245_1:   21_2(int) Phi 43_1 248_1 128_1 248_3
+           177_1:  20_1(bool) SLessThan 245_1 43_2
+                              LoopMerge 248_4 248_3 None
+                              BranchConditional 177_1 248_3 248_4
+           248_3:               Label
+            65_3:   32_2(ptr)   AccessChain 59_3 245_1
+            61_2: 23_3(fvec2)   Load 65_3
+            65_4:   32_1(ptr)   AccessChain 59_4 245_1
+            61_3: 23_2(fvec3)   Load 65_4
+            79_1: 23_3(fvec2)   VectorShuffle 61_3 61_3 0 1
+           129_1: 23_3(fvec2)   FAdd 79_1 61_2
+            65_5:   32_3(ptr)   AccessChain 59_4 245_1 uint(0)
+            81_1: 22_1(float)   CompositeExtract 129_1 0
+                                Store 65_5 81_1
+            65_6:   32_3(ptr)   AccessChain 59_4 245_1 uint(1)
+            81_2: 22_1(float)   CompositeExtract 129_1 1
+                                Store 65_6 81_2
+           128_1:   21_2(int)   IAdd 245_1 43_2
+                                Branch 248_2
+           248_4:             Label
+            61_4:        28_1 Load 59_4
+            81_3: 23_2(fvec3) CompositeExtract 61_4 0
+            81_4: 22_1(float) CompositeExtract 81_3 0
+            81_5: 22_1(float) CompositeExtract 81_3 1
+            81_6: 22_1(float) CompositeExtract 81_3 2
+            80_1: 23_1(fvec4) CompositeConstruct 81_4 81_5 81_6 43_3
+           129_2: 23_1(fvec4) FAdd 61_1 80_1
+                              Store 59_2(@entryPointOutput) 129_2
                               Return
                               FunctionEnd

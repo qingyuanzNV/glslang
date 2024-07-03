@@ -5,85 +5,85 @@ spv.specConstantComposite.vert
 
                               Capability Shader
                               Capability Float64
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main" 27 42
+                              EntryPoint Vertex 54_1  "main" 59_1 59_2
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 6  "refer_primary_spec_const("
-                              Name 8  "refer_composite_spec_const("
-                              Name 10  "refer_copmosite_dot_dereference("
-                              Name 12  "refer_composite_bracket_dereference("
-                              Name 16  "refer_spec_const_array_length("
-                              Name 18  "declare_spec_const_in_func("
-                              Name 21  "spec_bool"
-                              Name 27  "color"
-                              Name 28  "spec_int"
-                              Name 33  "len"
-                              Name 37  "spec_float"
-                              Name 39  "spec_double"
-                              Name 42  "global_vec4_array_with_spec_length"
-                              Decorate 21(spec_bool) SpecId 203
-                              Decorate 27(color) Location 0
-                              Decorate 28(spec_int) SpecId 200
-                              Decorate 37(spec_float) SpecId 201
-                              Decorate 39(spec_double) SpecId 202
-                              Decorate 42(global_vec4_array_with_spec_length) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-              14:             TypeInt 32 1
-              15:             TypeFunction 14(int)
-              20:             TypeBool
-   21(spec_bool):    20(bool) SpecConstantTrue
-              24:             TypeFloat 32
-              25:             TypeVector 24(float) 4
-              26:             TypePointer Output 25(fvec4)
-       27(color):     26(ptr) Variable Output
-    28(spec_int):     14(int) SpecConstant 3
-              32:             TypePointer Function 14(int)
-  37(spec_float):   24(float) SpecConstant 1078523331
-              38:             TypeFloat 64
- 39(spec_double):38(float64_t) SpecConstant 1413754136 1074340347
-              40:             TypeArray 25(fvec4) 28(spec_int)
-              41:             TypePointer Input 40
-42(global_vec4_array_with_spec_length):     41(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
+                              Name 54_1  "main"
+                              Name 54_2  "refer_primary_spec_const("
+                              Name 54_3  "refer_composite_spec_const("
+                              Name 54_4  "refer_copmosite_dot_dereference("
+                              Name 54_5  "refer_composite_bracket_dereference("
+                              Name 54_6  "refer_spec_const_array_length("
+                              Name 54_7  "declare_spec_const_in_func("
+                              Name 48_1  "spec_bool"
+                              Name 59_1  "color"
+                              Name 50_1  "spec_int"
+                              Name 59_3  "len"
+                              Name 50_2  "spec_float"
+                              Name 50_3  "spec_double"
+                              Name 59_2  "global_vec4_array_with_spec_length"
+                              Decorate 48_1(spec_bool) SpecId 203
+                              Decorate 59_1(color) Location 0
+                              Decorate 50_1(spec_int) SpecId 200
+                              Decorate 50_2(spec_float) SpecId 201
+                              Decorate 50_3(spec_double) SpecId 202
+                              Decorate 59_2(global_vec4_array_with_spec_length) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            33_2:             TypeFunction 21_1(int)
+            20_1:             TypeBool
+ 48_1(spec_bool):  20_1(bool) SpecConstantTrue
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Output 23_1(fvec4)
+     59_1(color):   32_1(ptr) Variable Output
+  50_1(spec_int):   21_1(int) SpecConstant 3
+            32_2:             TypePointer Function 21_1(int)
+50_2(spec_float): 22_1(float) SpecConstant 1078523331
+            22_2:             TypeFloat 64
+50_3(spec_double):22_2(float64_t) SpecConstant 1413754136 1074340347
+            28_1:             TypeArray 23_1(fvec4) 50_1(spec_int)
+            32_3:             TypePointer Input 28_1
+59_2(global_vec4_array_with_spec_length):   32_3(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
                               Return
                               FunctionEnd
-6(refer_primary_spec_const():           2 Function None 3
-               7:             Label
-                              SelectionMerge 23 None
-                              BranchConditional 21(spec_bool) 22 23
-              22:               Label
-              29:   24(float)   ConvertSToF 28(spec_int)
-              30:   25(fvec4)   Load 27(color)
-              31:   25(fvec4)   VectorTimesScalar 30 29
-                                Store 27(color) 31
-                                Branch 23
-              23:             Label
+54_2(refer_primary_spec_const():        19_1 Function None 33_1
+           248_2:             Label
+                              SelectionMerge 248_4 None
+                              BranchConditional 48_1(spec_bool) 248_3 248_4
+           248_3:               Label
+           111_1: 22_1(float)   ConvertSToF 50_1(spec_int)
+            61_1: 23_1(fvec4)   Load 59_1(color)
+           142_1: 23_1(fvec4)   VectorTimesScalar 61_1 111_1
+                                Store 59_1(color) 142_1
+                                Branch 248_4
+           248_4:             Label
                               Return
                               FunctionEnd
-8(refer_composite_spec_const():           2 Function None 3
-               9:             Label
+54_3(refer_composite_spec_const():        19_1 Function None 33_1
+           248_5:             Label
                               Return
                               FunctionEnd
-10(refer_copmosite_dot_dereference():           2 Function None 3
-              11:             Label
+54_4(refer_copmosite_dot_dereference():        19_1 Function None 33_1
+           248_6:             Label
                               Return
                               FunctionEnd
-12(refer_composite_bracket_dereference():           2 Function None 3
-              13:             Label
+54_5(refer_composite_bracket_dereference():        19_1 Function None 33_1
+           248_7:             Label
                               Return
                               FunctionEnd
-16(refer_spec_const_array_length():     14(int) Function None 15
-              17:             Label
-         33(len):     32(ptr) Variable Function
-                              Store 33(len) 28(spec_int)
-              34:     14(int) Load 33(len)
-                              ReturnValue 34
+54_6(refer_spec_const_array_length():   21_1(int) Function None 33_2
+           248_8:             Label
+       59_3(len):   32_2(ptr) Variable Function
+                              Store 59_3(len) 50_1(spec_int)
+            61_2:   21_1(int) Load 59_3(len)
+                              ReturnValue 61_2
                               FunctionEnd
-18(declare_spec_const_in_func():           2 Function None 3
-              19:             Label
+54_7(declare_spec_const_in_func():        19_1 Function None 33_1
+           248_9:             Label
                               Return
                               FunctionEnd

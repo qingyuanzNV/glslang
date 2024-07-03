@@ -5,169 +5,169 @@ spv.interpOps.frag
 
                               Capability Shader
                               Capability InterpolationFunction
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 13 24 36 49 55 86 118
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "f4"
-                              Name 13  "if1"
-                              Name 24  "if2"
-                              Name 36  "if3"
-                              Name 49  "if4"
-                              Name 55  "samp"
-                              Name 86  "offset"
-                              Name 118  "fragColor"
-                              Decorate 13(if1) Location 0
-                              Decorate 24(if2) Location 1
-                              Decorate 36(if3) Location 2
-                              Decorate 49(if4) Location 3
-                              Decorate 55(samp) Flat
-                              Decorate 55(samp) Location 4
-                              Decorate 86(offset) Flat
-                              Decorate 86(offset) Location 5
-                              Decorate 118(fragColor) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-              10:    6(float) Constant 0
-              11:    7(fvec4) ConstantComposite 10 10 10 10
-              12:             TypePointer Input 6(float)
-         13(if1):     12(ptr) Variable Input
-              15:             TypeInt 32 0
-              16:     15(int) Constant 0
-              17:             TypePointer Function 6(float)
-              22:             TypeVector 6(float) 2
-              23:             TypePointer Input 22(fvec2)
-         24(if2):     23(ptr) Variable Input
-              31:     15(int) Constant 1
-              34:             TypeVector 6(float) 3
-              35:             TypePointer Input 34(fvec3)
-         36(if3):     35(ptr) Variable Input
-              45:     15(int) Constant 2
-              48:             TypePointer Input 7(fvec4)
-         49(if4):     48(ptr) Variable Input
-              53:             TypeInt 32 1
-              54:             TypePointer Input 53(int)
-        55(samp):     54(ptr) Variable Input
-      86(offset):     23(ptr) Variable Input
-             117:             TypePointer Output 7(fvec4)
-  118(fragColor):    117(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-           9(f4):      8(ptr) Variable Function
-                              Store 9(f4) 11
-              14:    6(float) ExtInst 1(GLSL.std.450) 76(InterpolateAtCentroid) 13(if1)
-              18:     17(ptr) AccessChain 9(f4) 16
-              19:    6(float) Load 18
-              20:    6(float) FAdd 19 14
-              21:     17(ptr) AccessChain 9(f4) 16
-                              Store 21 20
-              25:   22(fvec2) ExtInst 1(GLSL.std.450) 76(InterpolateAtCentroid) 24(if2)
-              26:    7(fvec4) Load 9(f4)
-              27:   22(fvec2) VectorShuffle 26 26 0 1
-              28:   22(fvec2) FAdd 27 25
-              29:     17(ptr) AccessChain 9(f4) 16
-              30:    6(float) CompositeExtract 28 0
-                              Store 29 30
-              32:     17(ptr) AccessChain 9(f4) 31
-              33:    6(float) CompositeExtract 28 1
-                              Store 32 33
-              37:   34(fvec3) ExtInst 1(GLSL.std.450) 76(InterpolateAtCentroid) 36(if3)
-              38:    7(fvec4) Load 9(f4)
-              39:   34(fvec3) VectorShuffle 38 38 0 1 2
-              40:   34(fvec3) FAdd 39 37
-              41:     17(ptr) AccessChain 9(f4) 16
-              42:    6(float) CompositeExtract 40 0
-                              Store 41 42
-              43:     17(ptr) AccessChain 9(f4) 31
-              44:    6(float) CompositeExtract 40 1
-                              Store 43 44
-              46:     17(ptr) AccessChain 9(f4) 45
-              47:    6(float) CompositeExtract 40 2
-                              Store 46 47
-              50:    7(fvec4) ExtInst 1(GLSL.std.450) 76(InterpolateAtCentroid) 49(if4)
-              51:    7(fvec4) Load 9(f4)
-              52:    7(fvec4) FAdd 51 50
-                              Store 9(f4) 52
-              56:     53(int) Load 55(samp)
-              57:    6(float) ExtInst 1(GLSL.std.450) 77(InterpolateAtSample) 13(if1) 56
-              58:     17(ptr) AccessChain 9(f4) 16
-              59:    6(float) Load 58
-              60:    6(float) FAdd 59 57
-              61:     17(ptr) AccessChain 9(f4) 16
-                              Store 61 60
-              62:     53(int) Load 55(samp)
-              63:   22(fvec2) ExtInst 1(GLSL.std.450) 77(InterpolateAtSample) 24(if2) 62
-              64:    7(fvec4) Load 9(f4)
-              65:   22(fvec2) VectorShuffle 64 64 0 1
-              66:   22(fvec2) FAdd 65 63
-              67:     17(ptr) AccessChain 9(f4) 16
-              68:    6(float) CompositeExtract 66 0
-                              Store 67 68
-              69:     17(ptr) AccessChain 9(f4) 31
-              70:    6(float) CompositeExtract 66 1
-                              Store 69 70
-              71:     53(int) Load 55(samp)
-              72:   34(fvec3) ExtInst 1(GLSL.std.450) 77(InterpolateAtSample) 36(if3) 71
-              73:    7(fvec4) Load 9(f4)
-              74:   34(fvec3) VectorShuffle 73 73 0 1 2
-              75:   34(fvec3) FAdd 74 72
-              76:     17(ptr) AccessChain 9(f4) 16
-              77:    6(float) CompositeExtract 75 0
-                              Store 76 77
-              78:     17(ptr) AccessChain 9(f4) 31
-              79:    6(float) CompositeExtract 75 1
-                              Store 78 79
-              80:     17(ptr) AccessChain 9(f4) 45
-              81:    6(float) CompositeExtract 75 2
-                              Store 80 81
-              82:     53(int) Load 55(samp)
-              83:    7(fvec4) ExtInst 1(GLSL.std.450) 77(InterpolateAtSample) 49(if4) 82
-              84:    7(fvec4) Load 9(f4)
-              85:    7(fvec4) FAdd 84 83
-                              Store 9(f4) 85
-              87:   22(fvec2) Load 86(offset)
-              88:    6(float) ExtInst 1(GLSL.std.450) 78(InterpolateAtOffset) 13(if1) 87
-              89:     17(ptr) AccessChain 9(f4) 16
-              90:    6(float) Load 89
-              91:    6(float) FAdd 90 88
-              92:     17(ptr) AccessChain 9(f4) 16
-                              Store 92 91
-              93:   22(fvec2) Load 86(offset)
-              94:   22(fvec2) ExtInst 1(GLSL.std.450) 78(InterpolateAtOffset) 24(if2) 93
-              95:    7(fvec4) Load 9(f4)
-              96:   22(fvec2) VectorShuffle 95 95 0 1
-              97:   22(fvec2) FAdd 96 94
-              98:     17(ptr) AccessChain 9(f4) 16
-              99:    6(float) CompositeExtract 97 0
-                              Store 98 99
-             100:     17(ptr) AccessChain 9(f4) 31
-             101:    6(float) CompositeExtract 97 1
-                              Store 100 101
-             102:   22(fvec2) Load 86(offset)
-             103:   34(fvec3) ExtInst 1(GLSL.std.450) 78(InterpolateAtOffset) 36(if3) 102
-             104:    7(fvec4) Load 9(f4)
-             105:   34(fvec3) VectorShuffle 104 104 0 1 2
-             106:   34(fvec3) FAdd 105 103
-             107:     17(ptr) AccessChain 9(f4) 16
-             108:    6(float) CompositeExtract 106 0
-                              Store 107 108
-             109:     17(ptr) AccessChain 9(f4) 31
-             110:    6(float) CompositeExtract 106 1
-                              Store 109 110
-             111:     17(ptr) AccessChain 9(f4) 45
-             112:    6(float) CompositeExtract 106 2
-                              Store 111 112
-             113:   22(fvec2) Load 86(offset)
-             114:    7(fvec4) ExtInst 1(GLSL.std.450) 78(InterpolateAtOffset) 49(if4) 113
-             115:    7(fvec4) Load 9(f4)
-             116:    7(fvec4) FAdd 115 114
-                              Store 9(f4) 116
-             119:    7(fvec4) Load 9(f4)
-                              Store 118(fragColor) 119
+                              Name 54_1  "main"
+                              Name 59_8  "f4"
+                              Name 59_1  "if1"
+                              Name 59_2  "if2"
+                              Name 59_3  "if3"
+                              Name 59_4  "if4"
+                              Name 59_5  "samp"
+                              Name 59_6  "offset"
+                              Name 59_7  "fragColor"
+                              Decorate 59_1(if1) Location 0
+                              Decorate 59_2(if2) Location 1
+                              Decorate 59_3(if3) Location 2
+                              Decorate 59_4(if4) Location 3
+                              Decorate 59_5(samp) Flat
+                              Decorate 59_5(samp) Location 4
+                              Decorate 59_6(offset) Flat
+                              Decorate 59_6(offset) Location 5
+                              Decorate 59_7(fragColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            43_1: 22_1(float) Constant 0
+            44_1: 23_1(fvec4) ConstantComposite 43_1 43_1 43_1 43_1
+            32_2:             TypePointer Input 22_1(float)
+       59_1(if1):   32_2(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Function 22_1(float)
+            23_2:             TypeVector 22_1(float) 2
+            32_4:             TypePointer Input 23_2(fvec2)
+       59_2(if2):   32_4(ptr) Variable Input
+         uint(1):   21_1(int) Constant 1
+            23_3:             TypeVector 22_1(float) 3
+            32_5:             TypePointer Input 23_3(fvec3)
+       59_3(if3):   32_5(ptr) Variable Input
+         uint(2):   21_1(int) Constant 2
+            32_6:             TypePointer Input 23_1(fvec4)
+       59_4(if4):   32_6(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            32_7:             TypePointer Input 21_2(int)
+      59_5(samp):   32_7(ptr) Variable Input
+    59_6(offset):   32_4(ptr) Variable Input
+            32_8:             TypePointer Output 23_1(fvec4)
+ 59_7(fragColor):   32_8(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+        59_8(f4):   32_1(ptr) Variable Function
+                              Store 59_8(f4) 44_1
+          1-76_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 76(InterpolateAtCentroid) 59_1(if1)
+            65_1:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+            61_1: 22_1(float) Load 65_1
+           129_1: 22_1(float) FAdd 61_1 1-76_1
+            65_2:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+                              Store 65_2 129_1
+          1-76_2: 23_2(fvec2) ExtInst 11_1(GLSL.std.450) 76(InterpolateAtCentroid) 59_2(if2)
+            61_2: 23_1(fvec4) Load 59_8(f4)
+            79_1: 23_2(fvec2) VectorShuffle 61_2 61_2 0 1
+           129_2: 23_2(fvec2) FAdd 79_1 1-76_2
+            65_3:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+            81_1: 22_1(float) CompositeExtract 129_2 0
+                              Store 65_3 81_1
+            65_4:   32_3(ptr) AccessChain 59_8(f4) uint(1)
+            81_2: 22_1(float) CompositeExtract 129_2 1
+                              Store 65_4 81_2
+          1-76_3: 23_3(fvec3) ExtInst 11_1(GLSL.std.450) 76(InterpolateAtCentroid) 59_3(if3)
+            61_3: 23_1(fvec4) Load 59_8(f4)
+            79_2: 23_3(fvec3) VectorShuffle 61_3 61_3 0 1 2
+           129_3: 23_3(fvec3) FAdd 79_2 1-76_3
+            65_5:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+            81_3: 22_1(float) CompositeExtract 129_3 0
+                              Store 65_5 81_3
+            65_6:   32_3(ptr) AccessChain 59_8(f4) uint(1)
+            81_4: 22_1(float) CompositeExtract 129_3 1
+                              Store 65_6 81_4
+            65_7:   32_3(ptr) AccessChain 59_8(f4) uint(2)
+            81_5: 22_1(float) CompositeExtract 129_3 2
+                              Store 65_7 81_5
+          1-76_4: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 76(InterpolateAtCentroid) 59_4(if4)
+            61_4: 23_1(fvec4) Load 59_8(f4)
+           129_4: 23_1(fvec4) FAdd 61_4 1-76_4
+                              Store 59_8(f4) 129_4
+            61_5:   21_2(int) Load 59_5(samp)
+          1-77_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 77(InterpolateAtSample) 59_1(if1) 61_5
+            65_8:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+            61_6: 22_1(float) Load 65_8
+           129_5: 22_1(float) FAdd 61_6 1-77_1
+            65_9:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+                              Store 65_9 129_5
+            61_7:   21_2(int) Load 59_5(samp)
+          1-77_2: 23_2(fvec2) ExtInst 11_1(GLSL.std.450) 77(InterpolateAtSample) 59_2(if2) 61_7
+            61_8: 23_1(fvec4) Load 59_8(f4)
+            79_3: 23_2(fvec2) VectorShuffle 61_8 61_8 0 1
+           129_6: 23_2(fvec2) FAdd 79_3 1-77_2
+           65_10:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+            81_6: 22_1(float) CompositeExtract 129_6 0
+                              Store 65_10 81_6
+           65_11:   32_3(ptr) AccessChain 59_8(f4) uint(1)
+            81_7: 22_1(float) CompositeExtract 129_6 1
+                              Store 65_11 81_7
+            61_9:   21_2(int) Load 59_5(samp)
+          1-77_3: 23_3(fvec3) ExtInst 11_1(GLSL.std.450) 77(InterpolateAtSample) 59_3(if3) 61_9
+           61_10: 23_1(fvec4) Load 59_8(f4)
+            79_4: 23_3(fvec3) VectorShuffle 61_10 61_10 0 1 2
+           129_7: 23_3(fvec3) FAdd 79_4 1-77_3
+           65_12:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+            81_8: 22_1(float) CompositeExtract 129_7 0
+                              Store 65_12 81_8
+           65_13:   32_3(ptr) AccessChain 59_8(f4) uint(1)
+            81_9: 22_1(float) CompositeExtract 129_7 1
+                              Store 65_13 81_9
+           65_14:   32_3(ptr) AccessChain 59_8(f4) uint(2)
+           81_10: 22_1(float) CompositeExtract 129_7 2
+                              Store 65_14 81_10
+           61_11:   21_2(int) Load 59_5(samp)
+          1-77_4: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 77(InterpolateAtSample) 59_4(if4) 61_11
+           61_12: 23_1(fvec4) Load 59_8(f4)
+           129_8: 23_1(fvec4) FAdd 61_12 1-77_4
+                              Store 59_8(f4) 129_8
+           61_13: 23_2(fvec2) Load 59_6(offset)
+          1-78_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 78(InterpolateAtOffset) 59_1(if1) 61_13
+           65_15:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+           61_14: 22_1(float) Load 65_15
+           129_9: 22_1(float) FAdd 61_14 1-78_1
+           65_16:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+                              Store 65_16 129_9
+           61_15: 23_2(fvec2) Load 59_6(offset)
+          1-78_2: 23_2(fvec2) ExtInst 11_1(GLSL.std.450) 78(InterpolateAtOffset) 59_2(if2) 61_15
+           61_16: 23_1(fvec4) Load 59_8(f4)
+            79_5: 23_2(fvec2) VectorShuffle 61_16 61_16 0 1
+          129_10: 23_2(fvec2) FAdd 79_5 1-78_2
+           65_17:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+           81_11: 22_1(float) CompositeExtract 129_10 0
+                              Store 65_17 81_11
+           65_18:   32_3(ptr) AccessChain 59_8(f4) uint(1)
+           81_12: 22_1(float) CompositeExtract 129_10 1
+                              Store 65_18 81_12
+           61_17: 23_2(fvec2) Load 59_6(offset)
+          1-78_3: 23_3(fvec3) ExtInst 11_1(GLSL.std.450) 78(InterpolateAtOffset) 59_3(if3) 61_17
+           61_18: 23_1(fvec4) Load 59_8(f4)
+            79_6: 23_3(fvec3) VectorShuffle 61_18 61_18 0 1 2
+          129_11: 23_3(fvec3) FAdd 79_6 1-78_3
+           65_19:   32_3(ptr) AccessChain 59_8(f4) uint(0)
+           81_13: 22_1(float) CompositeExtract 129_11 0
+                              Store 65_19 81_13
+           65_20:   32_3(ptr) AccessChain 59_8(f4) uint(1)
+           81_14: 22_1(float) CompositeExtract 129_11 1
+                              Store 65_20 81_14
+           65_21:   32_3(ptr) AccessChain 59_8(f4) uint(2)
+           81_15: 22_1(float) CompositeExtract 129_11 2
+                              Store 65_21 81_15
+           61_19: 23_2(fvec2) Load 59_6(offset)
+          1-78_4: 23_1(fvec4) ExtInst 11_1(GLSL.std.450) 78(InterpolateAtOffset) 59_4(if4) 61_19
+           61_20: 23_1(fvec4) Load 59_8(f4)
+          129_12: 23_1(fvec4) FAdd 61_20 1-78_4
+                              Store 59_8(f4) 129_12
+           61_21: 23_1(fvec4) Load 59_8(f4)
+                              Store 59_7(fragColor) 61_21
                               Return
                               FunctionEnd

@@ -7,158 +7,158 @@ spv.ext.IntersectShader.rint
                               Capability RayCullMaskKHR
                               Extension  "SPV_KHR_ray_cull_mask"
                               Extension  "SPV_KHR_ray_tracing"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint IntersectionKHR 4  "main" 11 14 20 23 26 33 36 39 42 47 50 56 59 73 76
+                              EntryPoint IntersectionKHR 54_1  "main" 59_1 59_2 59_3 59_4 59_5 59_6 59_7 59_8 59_9 59_10 59_11 59_12 59_13 59_14 59_15
                               Source GLSL 460
                               SourceExtension  "GL_EXT_ray_cull_mask"
                               SourceExtension  "GL_EXT_ray_tracing"
-                              Name 4  "main"
-                              Name 9  "v0"
-                              Name 11  "gl_LaunchIDEXT"
-                              Name 13  "v1"
-                              Name 14  "gl_LaunchSizeEXT"
-                              Name 18  "v2"
-                              Name 20  "gl_PrimitiveID"
-                              Name 22  "v3"
-                              Name 23  "gl_InstanceID"
-                              Name 25  "v4"
-                              Name 26  "gl_InstanceCustomIndexEXT"
-                              Name 31  "v5"
-                              Name 33  "gl_WorldRayOriginEXT"
-                              Name 35  "v6"
-                              Name 36  "gl_WorldRayDirectionEXT"
-                              Name 38  "v7"
-                              Name 39  "gl_ObjectRayOriginEXT"
-                              Name 41  "v8"
-                              Name 42  "gl_ObjectRayDirectionEXT"
-                              Name 45  "v9"
-                              Name 47  "gl_RayTminEXT"
-                              Name 49  "v10"
-                              Name 50  "gl_RayTmaxEXT"
-                              Name 54  "v11"
-                              Name 56  "gl_ObjectToWorldEXT"
-                              Name 58  "v12"
-                              Name 59  "gl_WorldToObjectEXT"
-                              Name 64  "v13"
-                              Name 67  "v14"
-                              Name 71  "v15"
-                              Name 73  "gl_CullMaskEXT"
-                              Name 76  "iAttr"
-                              Decorate 11(gl_LaunchIDEXT) BuiltIn LaunchIdKHR
-                              Decorate 14(gl_LaunchSizeEXT) BuiltIn LaunchSizeKHR
-                              Decorate 20(gl_PrimitiveID) BuiltIn PrimitiveId
-                              Decorate 23(gl_InstanceID) BuiltIn InstanceId
-                              Decorate 26(gl_InstanceCustomIndexEXT) BuiltIn InstanceCustomIndexKHR
-                              Decorate 33(gl_WorldRayOriginEXT) BuiltIn WorldRayOriginKHR
-                              Decorate 36(gl_WorldRayDirectionEXT) BuiltIn WorldRayDirectionKHR
-                              Decorate 39(gl_ObjectRayOriginEXT) BuiltIn ObjectRayOriginKHR
-                              Decorate 42(gl_ObjectRayDirectionEXT) BuiltIn ObjectRayDirectionKHR
-                              Decorate 47(gl_RayTminEXT) BuiltIn RayTminKHR
-                              Decorate 50(gl_RayTmaxEXT) BuiltIn RayTmaxKHR
-                              Decorate 50(gl_RayTmaxEXT) Volatile
-                              Decorate 50(gl_RayTmaxEXT) Coherent
-                              Decorate 56(gl_ObjectToWorldEXT) BuiltIn ObjectToWorldKHR
-                              Decorate 59(gl_WorldToObjectEXT) BuiltIn WorldToObjectKHR
-                              Decorate 73(gl_CullMaskEXT) BuiltIn CullMaskKHR
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypeVector 6(int) 3
-               8:             TypePointer Function 7(ivec3)
-              10:             TypePointer Input 7(ivec3)
-11(gl_LaunchIDEXT):     10(ptr) Variable Input
-14(gl_LaunchSizeEXT):     10(ptr) Variable Input
-              16:             TypeInt 32 1
-              17:             TypePointer Function 16(int)
-              19:             TypePointer Input 16(int)
-20(gl_PrimitiveID):     19(ptr) Variable Input
-23(gl_InstanceID):     19(ptr) Variable Input
-26(gl_InstanceCustomIndexEXT):     19(ptr) Variable Input
-              28:             TypeFloat 32
-              29:             TypeVector 28(float) 3
-              30:             TypePointer Function 29(fvec3)
-              32:             TypePointer Input 29(fvec3)
-33(gl_WorldRayOriginEXT):     32(ptr) Variable Input
-36(gl_WorldRayDirectionEXT):     32(ptr) Variable Input
-39(gl_ObjectRayOriginEXT):     32(ptr) Variable Input
-42(gl_ObjectRayDirectionEXT):     32(ptr) Variable Input
-              44:             TypePointer Function 28(float)
-              46:             TypePointer Input 28(float)
-47(gl_RayTminEXT):     46(ptr) Variable Input
-50(gl_RayTmaxEXT):     46(ptr) Variable Input
-              52:             TypeMatrix 29(fvec3) 4
-              53:             TypePointer Function 52
-              55:             TypePointer Input 52
-56(gl_ObjectToWorldEXT):     55(ptr) Variable Input
-59(gl_WorldToObjectEXT):     55(ptr) Variable Input
-              61:             TypeVector 28(float) 4
-              62:             TypeMatrix 61(fvec4) 3
-              63:             TypePointer Function 62
-              70:             TypePointer Function 6(int)
-              72:             TypePointer Input 6(int)
-73(gl_CullMaskEXT):     72(ptr) Variable Input
-              75:             TypePointer HitAttributeKHR 61(fvec4)
-       76(iAttr):     75(ptr) Variable HitAttributeKHR
-              77:   28(float) Constant 1056964608
-              78:   28(float) Constant 0
-              79:   28(float) Constant 1065353216
-              80:   61(fvec4) ConstantComposite 77 77 78 79
-              81:      6(int) Constant 1
-              82:             TypeBool
-         4(main):           2 Function None 3
-               5:             Label
-           9(v0):      8(ptr) Variable Function
-          13(v1):      8(ptr) Variable Function
-          18(v2):     17(ptr) Variable Function
-          22(v3):     17(ptr) Variable Function
-          25(v4):     17(ptr) Variable Function
-          31(v5):     30(ptr) Variable Function
-          35(v6):     30(ptr) Variable Function
-          38(v7):     30(ptr) Variable Function
-          41(v8):     30(ptr) Variable Function
-          45(v9):     44(ptr) Variable Function
-         49(v10):     44(ptr) Variable Function
-         54(v11):     53(ptr) Variable Function
-         58(v12):     53(ptr) Variable Function
-         64(v13):     63(ptr) Variable Function
-         67(v14):     63(ptr) Variable Function
-         71(v15):     70(ptr) Variable Function
-              12:    7(ivec3) Load 11(gl_LaunchIDEXT)
-                              Store 9(v0) 12
-              15:    7(ivec3) Load 14(gl_LaunchSizeEXT)
-                              Store 13(v1) 15
-              21:     16(int) Load 20(gl_PrimitiveID)
-                              Store 18(v2) 21
-              24:     16(int) Load 23(gl_InstanceID)
-                              Store 22(v3) 24
-              27:     16(int) Load 26(gl_InstanceCustomIndexEXT)
-                              Store 25(v4) 27
-              34:   29(fvec3) Load 33(gl_WorldRayOriginEXT)
-                              Store 31(v5) 34
-              37:   29(fvec3) Load 36(gl_WorldRayDirectionEXT)
-                              Store 35(v6) 37
-              40:   29(fvec3) Load 39(gl_ObjectRayOriginEXT)
-                              Store 38(v7) 40
-              43:   29(fvec3) Load 42(gl_ObjectRayDirectionEXT)
-                              Store 41(v8) 43
-              48:   28(float) Load 47(gl_RayTminEXT)
-                              Store 45(v9) 48
-              51:   28(float) Load 50(gl_RayTmaxEXT)
-                              Store 49(v10) 51
-              57:          52 Load 56(gl_ObjectToWorldEXT)
-                              Store 54(v11) 57
-              60:          52 Load 59(gl_WorldToObjectEXT)
-                              Store 58(v12) 60
-              65:          52 Load 56(gl_ObjectToWorldEXT)
-              66:          62 Transpose 65
-                              Store 64(v13) 66
-              68:          52 Load 59(gl_WorldToObjectEXT)
-              69:          62 Transpose 68
-                              Store 67(v14) 69
-              74:      6(int) Load 73(gl_CullMaskEXT)
-                              Store 71(v15) 74
-                              Store 76(iAttr) 80
-              83:    82(bool) ReportIntersectionKHR 77 81
+                              Name 54_1  "main"
+                              Name 59_16  "v0"
+                              Name 59_1  "gl_LaunchIDEXT"
+                              Name 59_17  "v1"
+                              Name 59_2  "gl_LaunchSizeEXT"
+                              Name 59_18  "v2"
+                              Name 59_3  "gl_PrimitiveID"
+                              Name 59_19  "v3"
+                              Name 59_4  "gl_InstanceID"
+                              Name 59_20  "v4"
+                              Name 59_5  "gl_InstanceCustomIndexEXT"
+                              Name 59_21  "v5"
+                              Name 59_6  "gl_WorldRayOriginEXT"
+                              Name 59_22  "v6"
+                              Name 59_7  "gl_WorldRayDirectionEXT"
+                              Name 59_23  "v7"
+                              Name 59_8  "gl_ObjectRayOriginEXT"
+                              Name 59_24  "v8"
+                              Name 59_9  "gl_ObjectRayDirectionEXT"
+                              Name 59_25  "v9"
+                              Name 59_10  "gl_RayTminEXT"
+                              Name 59_26  "v10"
+                              Name 59_11  "gl_RayTmaxEXT"
+                              Name 59_27  "v11"
+                              Name 59_12  "gl_ObjectToWorldEXT"
+                              Name 59_28  "v12"
+                              Name 59_13  "gl_WorldToObjectEXT"
+                              Name 59_29  "v13"
+                              Name 59_30  "v14"
+                              Name 59_31  "v15"
+                              Name 59_14  "gl_CullMaskEXT"
+                              Name 59_15  "iAttr"
+                              Decorate 59_1(gl_LaunchIDEXT) BuiltIn LaunchIdKHR
+                              Decorate 59_2(gl_LaunchSizeEXT) BuiltIn LaunchSizeKHR
+                              Decorate 59_3(gl_PrimitiveID) BuiltIn PrimitiveId
+                              Decorate 59_4(gl_InstanceID) BuiltIn InstanceId
+                              Decorate 59_5(gl_InstanceCustomIndexEXT) BuiltIn InstanceCustomIndexKHR
+                              Decorate 59_6(gl_WorldRayOriginEXT) BuiltIn WorldRayOriginKHR
+                              Decorate 59_7(gl_WorldRayDirectionEXT) BuiltIn WorldRayDirectionKHR
+                              Decorate 59_8(gl_ObjectRayOriginEXT) BuiltIn ObjectRayOriginKHR
+                              Decorate 59_9(gl_ObjectRayDirectionEXT) BuiltIn ObjectRayDirectionKHR
+                              Decorate 59_10(gl_RayTminEXT) BuiltIn RayTminKHR
+                              Decorate 59_11(gl_RayTmaxEXT) BuiltIn RayTmaxKHR
+                              Decorate 59_11(gl_RayTmaxEXT) Volatile
+                              Decorate 59_11(gl_RayTmaxEXT) Coherent
+                              Decorate 59_12(gl_ObjectToWorldEXT) BuiltIn ObjectToWorldKHR
+                              Decorate 59_13(gl_WorldToObjectEXT) BuiltIn WorldToObjectKHR
+                              Decorate 59_14(gl_CullMaskEXT) BuiltIn CullMaskKHR
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            23_1:             TypeVector 21_1(int) 3
+            32_1:             TypePointer Function 23_1(ivec3)
+            32_2:             TypePointer Input 23_1(ivec3)
+59_1(gl_LaunchIDEXT):   32_2(ptr) Variable Input
+59_2(gl_LaunchSizeEXT):   32_2(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            32_3:             TypePointer Function 21_2(int)
+            32_4:             TypePointer Input 21_2(int)
+59_3(gl_PrimitiveID):   32_4(ptr) Variable Input
+59_4(gl_InstanceID):   32_4(ptr) Variable Input
+59_5(gl_InstanceCustomIndexEXT):   32_4(ptr) Variable Input
+            22_1:             TypeFloat 32
+            23_2:             TypeVector 22_1(float) 3
+            32_5:             TypePointer Function 23_2(fvec3)
+            32_6:             TypePointer Input 23_2(fvec3)
+59_6(gl_WorldRayOriginEXT):   32_6(ptr) Variable Input
+59_7(gl_WorldRayDirectionEXT):   32_6(ptr) Variable Input
+59_8(gl_ObjectRayOriginEXT):   32_6(ptr) Variable Input
+59_9(gl_ObjectRayDirectionEXT):   32_6(ptr) Variable Input
+            32_7:             TypePointer Function 22_1(float)
+            32_8:             TypePointer Input 22_1(float)
+59_10(gl_RayTminEXT):   32_8(ptr) Variable Input
+59_11(gl_RayTmaxEXT):   32_8(ptr) Variable Input
+            24_1:             TypeMatrix 23_2(fvec3) 4
+            32_9:             TypePointer Function 24_1
+           32_10:             TypePointer Input 24_1
+59_12(gl_ObjectToWorldEXT):  32_10(ptr) Variable Input
+59_13(gl_WorldToObjectEXT):  32_10(ptr) Variable Input
+            23_3:             TypeVector 22_1(float) 4
+            24_2:             TypeMatrix 23_3(fvec4) 3
+           32_11:             TypePointer Function 24_2
+           32_12:             TypePointer Function 21_1(int)
+           32_13:             TypePointer Input 21_1(int)
+59_14(gl_CullMaskEXT):  32_13(ptr) Variable Input
+           32_14:             TypePointer HitAttributeKHR 23_3(fvec4)
+    59_15(iAttr):  32_14(ptr) Variable HitAttributeKHR
+            43_1: 22_1(float) Constant 1056964608
+            43_2: 22_1(float) Constant 0
+            43_3: 22_1(float) Constant 1065353216
+            44_1: 23_3(fvec4) ConstantComposite 43_1 43_1 43_2 43_3
+         uint(1):   21_1(int) Constant 1
+            20_1:             TypeBool
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_16(v0):   32_1(ptr) Variable Function
+       59_17(v1):   32_1(ptr) Variable Function
+       59_18(v2):   32_3(ptr) Variable Function
+       59_19(v3):   32_3(ptr) Variable Function
+       59_20(v4):   32_3(ptr) Variable Function
+       59_21(v5):   32_5(ptr) Variable Function
+       59_22(v6):   32_5(ptr) Variable Function
+       59_23(v7):   32_5(ptr) Variable Function
+       59_24(v8):   32_5(ptr) Variable Function
+       59_25(v9):   32_7(ptr) Variable Function
+      59_26(v10):   32_7(ptr) Variable Function
+      59_27(v11):   32_9(ptr) Variable Function
+      59_28(v12):   32_9(ptr) Variable Function
+      59_29(v13):  32_11(ptr) Variable Function
+      59_30(v14):  32_11(ptr) Variable Function
+      59_31(v15):  32_12(ptr) Variable Function
+            61_1: 23_1(ivec3) Load 59_1(gl_LaunchIDEXT)
+                              Store 59_16(v0) 61_1
+            61_2: 23_1(ivec3) Load 59_2(gl_LaunchSizeEXT)
+                              Store 59_17(v1) 61_2
+            61_3:   21_2(int) Load 59_3(gl_PrimitiveID)
+                              Store 59_18(v2) 61_3
+            61_4:   21_2(int) Load 59_4(gl_InstanceID)
+                              Store 59_19(v3) 61_4
+            61_5:   21_2(int) Load 59_5(gl_InstanceCustomIndexEXT)
+                              Store 59_20(v4) 61_5
+            61_6: 23_2(fvec3) Load 59_6(gl_WorldRayOriginEXT)
+                              Store 59_21(v5) 61_6
+            61_7: 23_2(fvec3) Load 59_7(gl_WorldRayDirectionEXT)
+                              Store 59_22(v6) 61_7
+            61_8: 23_2(fvec3) Load 59_8(gl_ObjectRayOriginEXT)
+                              Store 59_23(v7) 61_8
+            61_9: 23_2(fvec3) Load 59_9(gl_ObjectRayDirectionEXT)
+                              Store 59_24(v8) 61_9
+           61_10: 22_1(float) Load 59_10(gl_RayTminEXT)
+                              Store 59_25(v9) 61_10
+           61_11: 22_1(float) Load 59_11(gl_RayTmaxEXT)
+                              Store 59_26(v10) 61_11
+           61_12:        24_1 Load 59_12(gl_ObjectToWorldEXT)
+                              Store 59_27(v11) 61_12
+           61_13:        24_1 Load 59_13(gl_WorldToObjectEXT)
+                              Store 59_28(v12) 61_13
+           61_14:        24_1 Load 59_12(gl_ObjectToWorldEXT)
+            84_1:        24_2 Transpose 61_14
+                              Store 59_29(v13) 84_1
+           61_15:        24_1 Load 59_13(gl_WorldToObjectEXT)
+            84_2:        24_2 Transpose 61_15
+                              Store 59_30(v14) 84_2
+           61_16:   21_1(int) Load 59_14(gl_CullMaskEXT)
+                              Store 59_31(v15) 61_16
+                              Store 59_15(iAttr) 44_1
+          5334_1:  20_1(bool) ReportIntersectionKHR 43_1 uint(1)
                               Return
                               FunctionEnd

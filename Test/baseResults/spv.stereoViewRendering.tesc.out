@@ -10,81 +10,81 @@ spv.stereoViewRendering.tesc
                               Extension  "SPV_EXT_shader_viewport_index_layer"
                               Extension  "SPV_NV_stereo_view_rendering"
                               Extension  "SPV_NV_viewport_array2"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationControl 4  "main" 16 18 31 41
-                              ExecutionMode 4 OutputVertices 4
+                              EntryPoint TessellationControl 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 OutputVertices 4
                               Source GLSL 450
                               SourceExtension  "GL_NV_stereo_view_rendering"
                               SourceExtension  "GL_NV_viewport_array2"
-                              Name 4  "main"
-                              Name 12  "gl_PerVertex"
-                              MemberName 12(gl_PerVertex) 0  "gl_SecondaryPositionNV"
-                              MemberName 12(gl_PerVertex) 1  "gl_SecondaryViewportMaskNV"
-                              Name 16  "gl_out"
-                              Name 18  "gl_InvocationID"
-                              Name 27  "gl_PerVertex"
-                              MemberName 27(gl_PerVertex) 0  "gl_Position"
-                              MemberName 27(gl_PerVertex) 1  "gl_PointSize"
-                              MemberName 27(gl_PerVertex) 2  "gl_ClipDistance"
-                              MemberName 27(gl_PerVertex) 3  "gl_CullDistance"
-                              MemberName 27(gl_PerVertex) 4  "gl_SecondaryPositionNV"
-                              Name 31  "gl_in"
-                              Name 41  "gl_Layer"
-                              Decorate 12(gl_PerVertex) Block
-                              MemberDecorate 12(gl_PerVertex) 0 BuiltIn SecondaryPositionNV
-                              MemberDecorate 12(gl_PerVertex) 1 BuiltIn SecondaryViewportMaskNV
-                              Decorate 18(gl_InvocationID) BuiltIn InvocationId
-                              Decorate 27(gl_PerVertex) Block
-                              MemberDecorate 27(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 27(gl_PerVertex) 1 BuiltIn PointSize
-                              MemberDecorate 27(gl_PerVertex) 2 BuiltIn ClipDistance
-                              MemberDecorate 27(gl_PerVertex) 3 BuiltIn CullDistance
-                              MemberDecorate 27(gl_PerVertex) 4 BuiltIn SecondaryPositionNV
-                              Decorate 41(gl_Layer) BuiltIn Layer
-                              Decorate 41(gl_Layer) ViewportRelativeNV
-                              Decorate 41(gl_Layer) SecondaryViewportRelativeNV 1
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeInt 32 1
-               9:             TypeInt 32 0
-              10:      9(int) Constant 2
-              11:             TypeArray 8(int) 10
-12(gl_PerVertex):             TypeStruct 7(fvec4) 11
-              13:      9(int) Constant 4
-              14:             TypeArray 12(gl_PerVertex) 13
-              15:             TypePointer Output 14
-      16(gl_out):     15(ptr) Variable Output
-              17:             TypePointer Input 8(int)
-18(gl_InvocationID):     17(ptr) Variable Input
-              20:      8(int) Constant 1
-              21:      8(int) Constant 0
-              22:             TypePointer Output 8(int)
-              25:      9(int) Constant 1
-              26:             TypeArray 6(float) 25
-27(gl_PerVertex):             TypeStruct 7(fvec4) 6(float) 26 26 7(fvec4)
-              28:      9(int) Constant 32
-              29:             TypeArray 27(gl_PerVertex) 28
-              30:             TypePointer Input 29
-       31(gl_in):     30(ptr) Variable Input
-              32:             TypePointer Input 7(fvec4)
-              35:      8(int) Constant 4
-              39:             TypePointer Output 7(fvec4)
-    41(gl_Layer):     22(ptr) Variable Output
-         4(main):           2 Function None 3
-               5:             Label
-              19:      8(int) Load 18(gl_InvocationID)
-              23:     22(ptr) AccessChain 16(gl_out) 19 20 21
-                              Store 23 20
-              24:      8(int) Load 18(gl_InvocationID)
-              33:     32(ptr) AccessChain 31(gl_in) 20 21
-              34:    7(fvec4) Load 33
-              36:     32(ptr) AccessChain 31(gl_in) 20 35
-              37:    7(fvec4) Load 36
-              38:    7(fvec4) FAdd 34 37
-              40:     39(ptr) AccessChain 16(gl_out) 24 21
-                              Store 40 38
+                              Name 54_1  "main"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_SecondaryPositionNV"
+                              MemberName 30_1(gl_PerVertex) 1  "gl_SecondaryViewportMaskNV"
+                              Name 59_1  "gl_out"
+                              Name 59_2  "gl_InvocationID"
+                              Name 30_2  "gl_PerVertex"
+                              MemberName 30_2(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_2(gl_PerVertex) 1  "gl_PointSize"
+                              MemberName 30_2(gl_PerVertex) 2  "gl_ClipDistance"
+                              MemberName 30_2(gl_PerVertex) 3  "gl_CullDistance"
+                              MemberName 30_2(gl_PerVertex) 4  "gl_SecondaryPositionNV"
+                              Name 59_3  "gl_in"
+                              Name 59_4  "gl_Layer"
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn SecondaryPositionNV
+                              MemberDecorate 30_1(gl_PerVertex) 1 BuiltIn SecondaryViewportMaskNV
+                              Decorate 59_2(gl_InvocationID) BuiltIn InvocationId
+                              Decorate 30_2(gl_PerVertex) Block
+                              MemberDecorate 30_2(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_2(gl_PerVertex) 1 BuiltIn PointSize
+                              MemberDecorate 30_2(gl_PerVertex) 2 BuiltIn ClipDistance
+                              MemberDecorate 30_2(gl_PerVertex) 3 BuiltIn CullDistance
+                              MemberDecorate 30_2(gl_PerVertex) 4 BuiltIn SecondaryPositionNV
+                              Decorate 59_4(gl_Layer) BuiltIn Layer
+                              Decorate 59_4(gl_Layer) ViewportRelativeNV
+                              Decorate 59_4(gl_Layer) SecondaryViewportRelativeNV 1
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            21_1:             TypeInt 32 1
+            21_2:             TypeInt 32 0
+         uint(2):   21_2(int) Constant 2
+            28_1:             TypeArray 21_1(int) uint(2)
+30_1(gl_PerVertex):             TypeStruct 23_1(fvec4) 28_1
+         uint(4):   21_2(int) Constant 4
+            28_2:             TypeArray 30_1(gl_PerVertex) uint(4)
+            32_1:             TypePointer Output 28_2
+    59_1(gl_out):   32_1(ptr) Variable Output
+            32_2:             TypePointer Input 21_1(int)
+59_2(gl_InvocationID):   32_2(ptr) Variable Input
+            43_1:   21_1(int) Constant 1
+            43_2:   21_1(int) Constant 0
+            32_3:             TypePointer Output 21_1(int)
+         uint(1):   21_2(int) Constant 1
+            28_3:             TypeArray 22_1(float) uint(1)
+30_2(gl_PerVertex):             TypeStruct 23_1(fvec4) 22_1(float) 28_3 28_3 23_1(fvec4)
+        uint(32):   21_2(int) Constant 32
+            28_4:             TypeArray 30_2(gl_PerVertex) uint(32)
+            32_4:             TypePointer Input 28_4
+     59_3(gl_in):   32_4(ptr) Variable Input
+            32_5:             TypePointer Input 23_1(fvec4)
+            43_3:   21_1(int) Constant 4
+            32_6:             TypePointer Output 23_1(fvec4)
+  59_4(gl_Layer):   32_3(ptr) Variable Output
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_2(gl_InvocationID)
+            65_1:   32_3(ptr) AccessChain 59_1(gl_out) 61_1 43_1 43_2
+                              Store 65_1 43_1
+            61_2:   21_1(int) Load 59_2(gl_InvocationID)
+            65_2:   32_5(ptr) AccessChain 59_3(gl_in) 43_1 43_2
+            61_3: 23_1(fvec4) Load 65_2
+            65_3:   32_5(ptr) AccessChain 59_3(gl_in) 43_1 43_3
+            61_4: 23_1(fvec4) Load 65_3
+           129_1: 23_1(fvec4) FAdd 61_3 61_4
+            65_4:   32_6(ptr) AccessChain 59_1(gl_out) 61_2 43_2
+                              Store 65_4 129_1
                               Return
                               FunctionEnd

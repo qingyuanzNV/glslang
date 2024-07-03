@@ -4,73 +4,73 @@ remap.uniformarray.everything.frag
 // Id's are bound by 25030
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 5663  "main" 3608 4957 4339 5139
-                              ExecutionMode 5663 OriginUpperLeft
-                              Decorate 3608 Location 1
-                              Decorate 4957 Location 0
-                              Decorate 4339 Location 7
-                              Decorate 5139 Location 0
-               8:             TypeVoid
-            1282:             TypeFunction 8
-              13:             TypeFloat 32
-              29:             TypeVector 13(float) 4
-             666:             TypePointer Function 29(fvec4)
-              11:             TypeInt 32 0
-            2588:     11(int) Constant 6
-             740:             TypeArray 29(fvec4) 2588
-            1377:             TypePointer Input 740
-            3608:   1377(ptr) Variable Input
-              12:             TypeInt 32 1
-            2574:     12(int) Constant 1
-             667:             TypePointer Input 29(fvec4)
-              24:             TypeVector 13(float) 3
-             661:             TypePointer Input 24(fvec3)
-            4957:    661(ptr) Variable Input
-            2570:     11(int) Constant 0
-             650:             TypePointer Function 13(float)
-            2573:     11(int) Constant 1
-            2576:     11(int) Constant 2
-            2618:     11(int) Constant 16
-             709:             TypeArray 13(float) 2618
-            1346:             TypePointer Input 709
-            4339:   1346(ptr) Variable Input
-            2607:     12(int) Constant 12
-             651:             TypePointer Input 13(float)
-            2579:     11(int) Constant 3
-             668:             TypePointer Output 29(fvec4)
-            5139:    668(ptr) Variable Output
-            5663:           8 Function None 1282
-           25029:             Label
-            4902:    666(ptr) Variable Function
-           10645:    667(ptr) AccessChain 3608 2574
-            8181:   29(fvec4) Load 10645
-           21370:    667(ptr) AccessChain 3608 2574
-           11355:   29(fvec4) Load 21370
-           23084:   29(fvec4) FAdd 8181 11355
-                              Store 4902 23084
-           21218:   24(fvec3) Load 4957
-           13695:   29(fvec4) Load 4902
-           23959:   24(fvec3) VectorShuffle 13695 13695 0 1 2
-           14937:   24(fvec3) FAdd 23959 21218
-           15653:    650(ptr) AccessChain 4902 2570
-           21354:   13(float) CompositeExtract 14937 0
-                              Store 15653 21354
-           16378:    650(ptr) AccessChain 4902 2573
-           15746:   13(float) CompositeExtract 14937 1
-                              Store 16378 15746
-           16379:    650(ptr) AccessChain 4902 2576
-           15747:   13(float) CompositeExtract 14937 2
-                              Store 16379 15747
-           19895:    651(ptr) AccessChain 4339 2607
-            7372:   13(float) Load 19895
-           21371:    650(ptr) AccessChain 4902 2579
-           11412:   13(float) Load 21371
-           22584:   13(float) FAdd 11412 7372
-           17318:    650(ptr) AccessChain 4902 2579
-                              Store 17318 22584
-           17934:   29(fvec4) Load 4902
-                              Store 5139 17934
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 OriginUpperLeft
+                              Decorate 59_1 Location 1
+                              Decorate 59_2 Location 0
+                              Decorate 59_3 Location 7
+                              Decorate 59_4 Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            21_1:             TypeInt 32 0
+         uint(6):   21_1(int) Constant 6
+            28_1:             TypeArray 23_1(fvec4) uint(6)
+            32_2:             TypePointer Input 28_1
+            59_1:   32_2(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 1
+            32_3:             TypePointer Input 23_1(fvec4)
+            23_2:             TypeVector 22_1(float) 3
+            32_4:             TypePointer Input 23_2(fvec3)
+            59_2:   32_4(ptr) Variable Input
+         uint(0):   21_1(int) Constant 0
+            32_5:             TypePointer Function 22_1(float)
+         uint(1):   21_1(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+        uint(16):   21_1(int) Constant 16
+            28_2:             TypeArray 22_1(float) uint(16)
+            32_6:             TypePointer Input 28_2
+            59_3:   32_6(ptr) Variable Input
+            43_2:   21_2(int) Constant 12
+            32_7:             TypePointer Input 22_1(float)
+         uint(3):   21_1(int) Constant 3
+            32_8:             TypePointer Output 23_1(fvec4)
+            59_4:   32_8(ptr) Variable Output
+            54_1:        19_1 Function None 33_1
+           248_1:             Label
+            59_5:   32_1(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1 43_1
+            61_1: 23_1(fvec4) Load 65_1
+            65_2:   32_3(ptr) AccessChain 59_1 43_1
+            61_2: 23_1(fvec4) Load 65_2
+           129_1: 23_1(fvec4) FAdd 61_1 61_2
+                              Store 59_5 129_1
+            61_3: 23_2(fvec3) Load 59_2
+            61_4: 23_1(fvec4) Load 59_5
+            79_1: 23_2(fvec3) VectorShuffle 61_4 61_4 0 1 2
+           129_2: 23_2(fvec3) FAdd 79_1 61_3
+            65_3:   32_5(ptr) AccessChain 59_5 uint(0)
+            81_1: 22_1(float) CompositeExtract 129_2 0
+                              Store 65_3 81_1
+            65_4:   32_5(ptr) AccessChain 59_5 uint(1)
+            81_2: 22_1(float) CompositeExtract 129_2 1
+                              Store 65_4 81_2
+            65_5:   32_5(ptr) AccessChain 59_5 uint(2)
+            81_3: 22_1(float) CompositeExtract 129_2 2
+                              Store 65_5 81_3
+            65_6:   32_7(ptr) AccessChain 59_3 43_2
+            61_5: 22_1(float) Load 65_6
+            65_7:   32_5(ptr) AccessChain 59_5 uint(3)
+            61_6: 22_1(float) Load 65_7
+           129_3: 22_1(float) FAdd 61_6 61_5
+            65_8:   32_5(ptr) AccessChain 59_5 uint(3)
+                              Store 65_8 129_3
+            61_7: 23_1(fvec4) Load 59_5
+                              Store 59_4 61_7
                               Return
                               FunctionEnd

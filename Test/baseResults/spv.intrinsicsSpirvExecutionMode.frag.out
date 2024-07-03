@@ -6,29 +6,29 @@ spv.intrinsicsSpirvExecutionMode.frag
                               Capability Shader
                               Capability StencilExportEXT
                               Extension  "SPV_EXT_shader_stencil_export"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 8 10
-                              ExecutionMode 4 OriginUpperLeft
-                              ExecutionMode 4 StencilRefReplacingEXT
+                              EntryPoint Fragment 54_1  "main" 59_1 59_2
+                              ExecutionMode 54_1 OriginUpperLeft
+                              ExecutionMode 54_1 StencilRefReplacingEXT
                               Source GLSL 450
                               SourceExtension  "GL_EXT_spirv_intrinsics"
-                              Name 4  "main"
-                              Name 8  "gl_FragStencilRef"
-                              Name 10  "color"
-                              Decorate 8(gl_FragStencilRef) BuiltIn FragStencilRefEXT
-                              Decorate 10(color) Flat
-                              Decorate 10(color) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-               7:             TypePointer Output 6(int)
-8(gl_FragStencilRef):      7(ptr) Variable Output
-               9:             TypePointer Input 6(int)
-       10(color):      9(ptr) Variable Input
-         4(main):           2 Function None 3
-               5:             Label
-              11:      6(int) Load 10(color)
-                              Store 8(gl_FragStencilRef) 11
+                              Name 54_1  "main"
+                              Name 59_1  "gl_FragStencilRef"
+                              Name 59_2  "color"
+                              Decorate 59_1(gl_FragStencilRef) BuiltIn FragStencilRefEXT
+                              Decorate 59_2(color) Flat
+                              Decorate 59_2(color) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+            32_1:             TypePointer Output 21_1(int)
+59_1(gl_FragStencilRef):   32_1(ptr) Variable Output
+            32_2:             TypePointer Input 21_1(int)
+     59_2(color):   32_2(ptr) Variable Input
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            61_1:   21_1(int) Load 59_2(color)
+                              Store 59_1(gl_FragStencilRef) 61_1
                               Return
                               FunctionEnd

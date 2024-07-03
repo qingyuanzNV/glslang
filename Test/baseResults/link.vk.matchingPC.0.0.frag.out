@@ -94,62 +94,62 @@ gl_FragCoord origin is upper left
 // Id's are bound by 39
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 15
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_1
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
-                              Name 4  "main"
-                              Name 9  "getColor2("
-                              Name 12  "getScale("
-                              Name 15  "color"
-                              Name 16  "PushConstantBlock"
-                              MemberName 16(PushConstantBlock) 0  "color"
-                              MemberName 16(PushConstantBlock) 1  "color2"
-                              MemberName 16(PushConstantBlock) 2  "scale"
-                              Name 18  "uPC"
-                              Decorate 15(color) Location 0
-                              Decorate 16(PushConstantBlock) Block
-                              MemberDecorate 16(PushConstantBlock) 0 Offset 0
-                              MemberDecorate 16(PushConstantBlock) 1 Offset 16
-                              MemberDecorate 16(PushConstantBlock) 2 Offset 32
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypeFunction 7(fvec4)
-              11:             TypeFunction 6(float)
-              14:             TypePointer Output 7(fvec4)
-       15(color):     14(ptr) Variable Output
-16(PushConstantBlock):             TypeStruct 7(fvec4) 7(fvec4) 6(float)
-              17:             TypePointer PushConstant 16(PushConstantBlock)
-         18(uPC):     17(ptr) Variable PushConstant
-              19:             TypeInt 32 1
-              20:     19(int) Constant 0
-              21:             TypePointer PushConstant 7(fvec4)
-              28:     19(int) Constant 1
-              33:     19(int) Constant 2
-              34:             TypePointer PushConstant 6(float)
-         4(main):           2 Function None 3
-               5:             Label
-              22:     21(ptr) AccessChain 18(uPC) 20
-              23:    7(fvec4) Load 22
-              24:    7(fvec4) FunctionCall 9(getColor2()
-              25:    6(float) FunctionCall 12(getScale()
-              26:    7(fvec4) VectorTimesScalar 24 25
-              27:    7(fvec4) FAdd 23 26
-                              Store 15(color) 27
+                              Name 54_1  "main"
+                              Name 54_2  "getColor2("
+                              Name 54_3  "getScale("
+                              Name 59_1  "color"
+                              Name 30_1  "PushConstantBlock"
+                              MemberName 30_1(PushConstantBlock) 0  "color"
+                              MemberName 30_1(PushConstantBlock) 1  "color2"
+                              MemberName 30_1(PushConstantBlock) 2  "scale"
+                              Name 59_2  "uPC"
+                              Decorate 59_1(color) Location 0
+                              Decorate 30_1(PushConstantBlock) Block
+                              MemberDecorate 30_1(PushConstantBlock) 0 Offset 0
+                              MemberDecorate 30_1(PushConstantBlock) 1 Offset 16
+                              MemberDecorate 30_1(PushConstantBlock) 2 Offset 32
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            33_2:             TypeFunction 23_1(fvec4)
+            33_3:             TypeFunction 22_1(float)
+            32_1:             TypePointer Output 23_1(fvec4)
+     59_1(color):   32_1(ptr) Variable Output
+30_1(PushConstantBlock):             TypeStruct 23_1(fvec4) 23_1(fvec4) 22_1(float)
+            32_2:             TypePointer PushConstant 30_1(PushConstantBlock)
+       59_2(uPC):   32_2(ptr) Variable PushConstant
+            21_1:             TypeInt 32 1
+            43_1:   21_1(int) Constant 0
+            32_3:             TypePointer PushConstant 23_1(fvec4)
+            43_2:   21_1(int) Constant 1
+            43_3:   21_1(int) Constant 2
+            32_4:             TypePointer PushConstant 22_1(float)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_3(ptr) AccessChain 59_2(uPC) 43_1
+            61_1: 23_1(fvec4) Load 65_1
+            57_1: 23_1(fvec4) FunctionCall 54_2(getColor2()
+            57_2: 22_1(float) FunctionCall 54_3(getScale()
+           142_1: 23_1(fvec4) VectorTimesScalar 57_1 57_2
+           129_1: 23_1(fvec4) FAdd 61_1 142_1
+                              Store 59_1(color) 129_1
                               Return
                               FunctionEnd
-   9(getColor2():    7(fvec4) Function None 8
-              10:             Label
-              29:     21(ptr) AccessChain 18(uPC) 28
-              30:    7(fvec4) Load 29
-                              ReturnValue 30
+54_2(getColor2(): 23_1(fvec4) Function None 33_2
+           248_2:             Label
+            65_2:   32_3(ptr) AccessChain 59_2(uPC) 43_2
+            61_2: 23_1(fvec4) Load 65_2
+                              ReturnValue 61_2
                               FunctionEnd
-   12(getScale():    6(float) Function None 11
-              13:             Label
-              35:     34(ptr) AccessChain 18(uPC) 33
-              36:    6(float) Load 35
-                              ReturnValue 36
+ 54_3(getScale(): 22_1(float) Function None 33_3
+           248_3:             Label
+            65_3:   32_4(ptr) AccessChain 59_2(uPC) 43_3
+            61_3: 22_1(float) Load 65_3
+                              ReturnValue 61_3
                               FunctionEnd

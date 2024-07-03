@@ -6,42 +6,42 @@ spv.expect_assume.assumeEXT.comp
                               Capability Shader
                               Capability ExpectAssumeKHR
                               Extension  "SPV_KHR_expect_assume"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint GLCompute 4  "main"
-                              ExecutionMode 4 LocalSize 8 1 1
+                              EntryPoint GLCompute 54_1  "main"
+                              ExecutionMode 54_1 LocalSize 8 1 1
                               Source GLSL 450
                               SourceExtension  "GL_EXT_expect_assume"
-                              Name 4  "main"
-                              Name 7  "roblock"
-                              MemberName 7(roblock) 0  "i"
-                              Name 9  "ro"
-                              Decorate 7(roblock) BufferBlock
-                              MemberDecorate 7(roblock) 0 NonWritable
-                              MemberDecorate 7(roblock) 0 Offset 0
-                              Decorate 9(ro) Binding 0
-                              Decorate 9(ro) DescriptorSet 0
-                              Decorate 21 BuiltIn WorkgroupSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 1
-      7(roblock):             TypeStruct 6(int)
-               8:             TypePointer Uniform 7(roblock)
-           9(ro):      8(ptr) Variable Uniform
-              10:      6(int) Constant 0
-              11:             TypePointer Uniform 6(int)
-              14:      6(int) Constant 42
-              15:             TypeBool
-              17:             TypeInt 32 0
-              18:             TypeVector 17(int) 3
-              19:     17(int) Constant 8
-              20:     17(int) Constant 1
-              21:   18(ivec3) ConstantComposite 19 20 20
-         4(main):           2 Function None 3
-               5:             Label
-              12:     11(ptr) AccessChain 9(ro) 10
-              13:      6(int) Load 12
-              16:    15(bool) SGreaterThan 13 14
-                              AssumeTrueKHR 16
+                              Name 54_1  "main"
+                              Name 30_1  "roblock"
+                              MemberName 30_1(roblock) 0  "i"
+                              Name 59_1  "ro"
+                              Decorate 30_1(roblock) BufferBlock
+                              MemberDecorate 30_1(roblock) 0 NonWritable
+                              MemberDecorate 30_1(roblock) 0 Offset 0
+                              Decorate 59_1(ro) Binding 0
+                              Decorate 59_1(ro) DescriptorSet 0
+                              Decorate 44_1 BuiltIn WorkgroupSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 1
+   30_1(roblock):             TypeStruct 21_1(int)
+            32_1:             TypePointer Uniform 30_1(roblock)
+        59_1(ro):   32_1(ptr) Variable Uniform
+            43_1:   21_1(int) Constant 0
+            32_2:             TypePointer Uniform 21_1(int)
+            43_2:   21_1(int) Constant 42
+            20_1:             TypeBool
+            21_2:             TypeInt 32 0
+            23_1:             TypeVector 21_2(int) 3
+         uint(8):   21_2(int) Constant 8
+         uint(1):   21_2(int) Constant 1
+            44_1: 23_1(ivec3) ConstantComposite uint(8) uint(1) uint(1)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+            65_1:   32_2(ptr) AccessChain 59_1(ro) 43_1
+            61_1:   21_1(int) Load 65_1
+           173_1:  20_1(bool) SGreaterThan 61_1 43_2
+                              AssumeTrueKHR 173_1
                               Return
                               FunctionEnd

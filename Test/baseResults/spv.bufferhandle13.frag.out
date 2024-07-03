@@ -7,109 +7,109 @@ spv.bufferhandle13.frag
                               Capability PhysicalStorageBufferAddressesEXT
                               Extension  "SPV_KHR_physical_storage_buffer"
                               Extension  "SPV_KHR_storage_buffer_storage_class"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT GLSL450
-                              EntryPoint Fragment 4  "main"
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main"
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 450
                               SourceExtension  "GL_EXT_buffer_reference"
-                              Name 4  "main"
-                              Name 8  "t4"
-                              MemberName 8(t4) 0  "j"
-                              Name 11  "f1(1;"
-                              Name 10  "y"
-                              Name 16  "f2(1;"
-                              Name 15  "y"
-                              Name 19  "f3(1;"
-                              Name 18  "y"
-                              Name 22  "f4(1;"
-                              Name 21  "y"
-                              Name 34  "a"
-                              Name 35  "t5"
-                              MemberName 35(t5) 0  "m"
-                              Name 37  "s5"
-                              Name 42  "b"
-                              Name 47  "param"
-                              Name 52  "param"
-                              Name 56  "g1"
-                              Name 57  "g2"
-                              Decorate 8(t4) Block
-                              MemberDecorate 8(t4) 0 Offset 0
-                              Decorate 10(y) Aliased
-                              Decorate 15(y) DecorationAliasedPointerEXT
-                              Decorate 18(y) Restrict
-                              Decorate 21(y) Restrict
-                              Decorate 21(y) DecorationRestrictPointerEXT
-                              Decorate 34(a) DecorationAliasedPointerEXT
-                              Decorate 35(t5) Block
-                              MemberDecorate 35(t5) 0 Offset 0
-                              Decorate 37(s5) Binding 0
-                              Decorate 37(s5) DescriptorSet 0
-                              Decorate 42(b) DecorationRestrictPointerEXT
-                              Decorate 47(param) DecorationAliasedPointerEXT
-                              Decorate 52(param) DecorationAliasedPointerEXT
-                              Decorate 56(g1) DecorationAliasedPointerEXT
-                              Decorate 57(g2) DecorationRestrictPointerEXT
-               2:             TypeVoid
-               3:             TypeFunction 2
-                              TypeForwardPointer 6 PhysicalStorageBufferEXT
-               7:             TypeInt 32 1
-           8(t4):             TypeStruct 7(int)
-               6:             TypePointer PhysicalStorageBufferEXT 8(t4)
-               9:             TypeFunction 6(ptr) 6(ptr)
-              13:             TypePointer Function 6(ptr)
-              14:             TypeFunction 6(ptr) 13(ptr)
-          35(t5):             TypeStruct 6(ptr)
-              36:             TypePointer StorageBuffer 35(t5)
-          37(s5):     36(ptr) Variable StorageBuffer
-              38:      7(int) Constant 0
-              39:             TypePointer StorageBuffer 6(ptr)
-              55:             TypePointer Private 6(ptr)
-          56(g1):     55(ptr) Variable Private
-         4(main):           2 Function None 3
-               5:             Label
-           34(a):     13(ptr) Variable Function
-           42(b):     13(ptr) Variable Function
-       47(param):     13(ptr) Variable Function
-       52(param):     13(ptr) Variable Function
-          57(g2):     13(ptr) Variable Function
-              40:     39(ptr) AccessChain 37(s5) 38
-              41:      6(ptr) Load 40
-                              Store 34(a) 41
-              43:     39(ptr) AccessChain 37(s5) 38
-              44:      6(ptr) Load 43
-                              Store 42(b) 44
-              45:      6(ptr) Load 34(a)
-              46:      6(ptr) FunctionCall 11(f1(1;) 45
-              48:      6(ptr) Load 34(a)
-                              Store 47(param) 48
-              49:      6(ptr) FunctionCall 16(f2(1;) 47(param)
-              50:      6(ptr) Load 34(a)
-              51:      6(ptr) FunctionCall 19(f3(1;) 50
-              53:      6(ptr) Load 34(a)
-                              Store 52(param) 53
-              54:      6(ptr) FunctionCall 22(f4(1;) 52(param)
+                              Name 54_1  "main"
+                              Name 30_1  "t4"
+                              MemberName 30_1(t4) 0  "j"
+                              Name 54_2  "f1(1;"
+                              Name 55_1  "y"
+                              Name 54_3  "f2(1;"
+                              Name 55_2  "y"
+                              Name 54_4  "f3(1;"
+                              Name 55_3  "y"
+                              Name 54_5  "f4(1;"
+                              Name 55_4  "y"
+                              Name 59_3  "a"
+                              Name 30_2  "t5"
+                              MemberName 30_2(t5) 0  "m"
+                              Name 59_1  "s5"
+                              Name 59_4  "b"
+                              Name 59_5  "param"
+                              Name 59_6  "param"
+                              Name 59_2  "g1"
+                              Name 59_7  "g2"
+                              Decorate 30_1(t4) Block
+                              MemberDecorate 30_1(t4) 0 Offset 0
+                              Decorate 55_1(y) Aliased
+                              Decorate 55_2(y) DecorationAliasedPointerEXT
+                              Decorate 55_3(y) Restrict
+                              Decorate 55_4(y) Restrict
+                              Decorate 55_4(y) DecorationRestrictPointerEXT
+                              Decorate 59_3(a) DecorationAliasedPointerEXT
+                              Decorate 30_2(t5) Block
+                              MemberDecorate 30_2(t5) 0 Offset 0
+                              Decorate 59_1(s5) Binding 0
+                              Decorate 59_1(s5) DescriptorSet 0
+                              Decorate 59_4(b) DecorationRestrictPointerEXT
+                              Decorate 59_5(param) DecorationAliasedPointerEXT
+                              Decorate 59_6(param) DecorationAliasedPointerEXT
+                              Decorate 59_2(g1) DecorationAliasedPointerEXT
+                              Decorate 59_7(g2) DecorationRestrictPointerEXT
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+                              TypeForwardPointer 32_1 PhysicalStorageBufferEXT
+            21_1:             TypeInt 32 1
+        30_1(t4):             TypeStruct 21_1(int)
+            32_1:             TypePointer PhysicalStorageBufferEXT 30_1(t4)
+            33_2:             TypeFunction 32_1(ptr) 32_1(ptr)
+            32_2:             TypePointer Function 32_1(ptr)
+            33_3:             TypeFunction 32_1(ptr) 32_2(ptr)
+        30_2(t5):             TypeStruct 32_1(ptr)
+            32_3:             TypePointer StorageBuffer 30_2(t5)
+        59_1(s5):   32_3(ptr) Variable StorageBuffer
+            43_1:   21_1(int) Constant 0
+            32_4:             TypePointer StorageBuffer 32_1(ptr)
+            32_5:             TypePointer Private 32_1(ptr)
+        59_2(g1):   32_5(ptr) Variable Private
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+         59_3(a):   32_2(ptr) Variable Function
+         59_4(b):   32_2(ptr) Variable Function
+     59_5(param):   32_2(ptr) Variable Function
+     59_6(param):   32_2(ptr) Variable Function
+        59_7(g2):   32_2(ptr) Variable Function
+            65_1:   32_4(ptr) AccessChain 59_1(s5) 43_1
+            61_1:   32_1(ptr) Load 65_1
+                              Store 59_3(a) 61_1
+            65_2:   32_4(ptr) AccessChain 59_1(s5) 43_1
+            61_2:   32_1(ptr) Load 65_2
+                              Store 59_4(b) 61_2
+            61_3:   32_1(ptr) Load 59_3(a)
+            57_1:   32_1(ptr) FunctionCall 54_2(f1(1;) 61_3
+            61_4:   32_1(ptr) Load 59_3(a)
+                              Store 59_5(param) 61_4
+            57_2:   32_1(ptr) FunctionCall 54_3(f2(1;) 59_5(param)
+            61_5:   32_1(ptr) Load 59_3(a)
+            57_3:   32_1(ptr) FunctionCall 54_4(f3(1;) 61_5
+            61_6:   32_1(ptr) Load 59_3(a)
+                              Store 59_6(param) 61_6
+            57_4:   32_1(ptr) FunctionCall 54_5(f4(1;) 59_6(param)
                               Return
                               FunctionEnd
-       11(f1(1;):      6(ptr) Function None 9
-           10(y):      6(ptr) FunctionParameter
-              12:             Label
-                              ReturnValue 10(y)
+     54_2(f1(1;):   32_1(ptr) Function None 33_2
+         55_1(y):   32_1(ptr) FunctionParameter
+           248_2:             Label
+                              ReturnValue 55_1(y)
                               FunctionEnd
-       16(f2(1;):      6(ptr) Function None 14
-           15(y):     13(ptr) FunctionParameter
-              17:             Label
-              26:      6(ptr) Load 15(y)
-                              ReturnValue 26
+     54_3(f2(1;):   32_1(ptr) Function None 33_3
+         55_2(y):   32_2(ptr) FunctionParameter
+           248_3:             Label
+            61_7:   32_1(ptr) Load 55_2(y)
+                              ReturnValue 61_7
                               FunctionEnd
-       19(f3(1;):      6(ptr) Function None 9
-           18(y):      6(ptr) FunctionParameter
-              20:             Label
-                              ReturnValue 18(y)
+     54_4(f3(1;):   32_1(ptr) Function None 33_2
+         55_3(y):   32_1(ptr) FunctionParameter
+           248_4:             Label
+                              ReturnValue 55_3(y)
                               FunctionEnd
-       22(f4(1;):      6(ptr) Function None 14
-           21(y):     13(ptr) FunctionParameter
-              23:             Label
-              31:      6(ptr) Load 21(y)
-                              ReturnValue 31
+     54_5(f4(1;):   32_1(ptr) Function None 33_3
+         55_4(y):   32_2(ptr) FunctionParameter
+           248_5:             Label
+            61_8:   32_1(ptr) Load 55_4(y)
+                              ReturnValue 61_8
                               FunctionEnd

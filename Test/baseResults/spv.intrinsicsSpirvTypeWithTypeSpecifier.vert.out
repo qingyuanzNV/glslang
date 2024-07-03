@@ -9,27 +9,27 @@ spv.intrinsicsSpirvTypeWithTypeSpecifier.vert
                               Extension  "SPV_EXT_physical_storage_buffer"
                               Extension  "SPV_KHR_physical_storage_buffer"
                               Extension  "SPV_KHR_variable_pointers"
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel PhysicalStorageBuffer64EXT GLSL450
-                              EntryPoint Vertex 4  "main"
+                              EntryPoint Vertex 54_1  "main"
                               Source GLSL 450
                               SourceExtension  "GL_ARB_gpu_shader_int64"
                               SourceExtension  "GL_EXT_buffer_reference"
                               SourceExtension  "GL_EXT_spirv_intrinsics"
-                              Name 4  "main"
-                              Name 8  "value"
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeInt 32 0
-               7:             TypePointer Function 6(int)
-               9:             TypeInt 64 0
-              10:  9(int64_t) Constant 1 0
-              11:             TypePointer PhysicalStorageBufferEXT 6(int)
-         4(main):           2 Function None 3
-               5:             Label
-        8(value):      7(ptr) Variable Function
-              12:     11(ptr) ConvertUToPtr 10
-              13:      6(int) Load 12 Aligned 32
-                              Store 8(value) 13
+                              Name 54_1  "main"
+                              Name 59_1  "value"
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            21_1:             TypeInt 32 0
+            32_1:             TypePointer Function 21_1(int)
+            21_2:             TypeInt 64 0
+            43_1:21_2(int64_t) Constant 1 0
+            32_2:             TypePointer PhysicalStorageBufferEXT 21_1(int)
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_1(value):   32_1(ptr) Variable Function
+           120_1:   32_2(ptr) ConvertUToPtr 43_1
+            61_1:   21_1(int) Load 120_1 Aligned 32
+                              Store 59_1(value) 61_1
                               Return
                               FunctionEnd

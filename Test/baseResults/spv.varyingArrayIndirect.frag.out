@@ -4,103 +4,103 @@ spv.varyingArrayIndirect.frag
 // Id's are bound by 70
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Fragment 4  "main" 19 22 30 31 45 50 56
-                              ExecutionMode 4 OriginUpperLeft
+                              EntryPoint Fragment 54_1  "main" 59_2 59_3 59_4 59_5 59_6 59_7 59_8
+                              ExecutionMode 54_1 OriginUpperLeft
                               Source GLSL 140
-                              Name 4  "main"
-                              Name 9  "texColor"
-                              Name 13  "texSampler2D"
-                              Name 19  "userIn"
-                              Name 22  "b"
-                              Name 30  "TexCoord"
-                              Name 31  "a"
-                              Name 45  "color"
-                              Name 50  "alpha"
-                              Name 56  "gl_FragColor"
-                              Decorate 13(texSampler2D) Binding 0
-                              Decorate 13(texSampler2D) DescriptorSet 0
-                              Decorate 19(userIn) Location 8
-                              Decorate 22(b) Flat
-                              Decorate 22(b) Location 11
-                              Decorate 30(TexCoord) Location 2
-                              Decorate 31(a) Flat
-                              Decorate 31(a) Location 10
-                              Decorate 45(color) Location 0
-                              Decorate 50(alpha) Location 1
-                              Decorate 56(gl_FragColor) Location 0
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 4
-               8:             TypePointer Function 7(fvec4)
-              10:             TypeImage 6(float) 2D sampled format:Unknown
-              11:             TypeSampledImage 10
-              12:             TypePointer UniformConstant 11
-13(texSampler2D):     12(ptr) Variable UniformConstant
-              15:             TypeInt 32 0
-              16:     15(int) Constant 2
-              17:             TypeArray 7(fvec4) 16
-              18:             TypePointer Input 17
-      19(userIn):     18(ptr) Variable Input
-              20:             TypeInt 32 1
-              21:             TypePointer Input 20(int)
-           22(b):     21(ptr) Variable Input
-              24:             TypePointer Input 7(fvec4)
-              27:     15(int) Constant 6
-              28:             TypeArray 7(fvec4) 27
-              29:             TypePointer Input 28
-    30(TexCoord):     29(ptr) Variable Input
-           31(a):     21(ptr) Variable Input
-              36:     20(int) Constant 5
-              40:             TypeVector 6(float) 2
-       45(color):     24(ptr) Variable Input
-              49:             TypePointer Input 6(float)
-       50(alpha):     49(ptr) Variable Input
-              52:     15(int) Constant 3
-              53:             TypePointer Function 6(float)
-              55:             TypePointer Output 7(fvec4)
-56(gl_FragColor):     55(ptr) Variable Output
-              57:     20(int) Constant 0
-         4(main):           2 Function None 3
-               5:             Label
-     9(texColor):      8(ptr) Variable Function
-              14:          11 Load 13(texSampler2D)
-              23:     20(int) Load 22(b)
-              25:     24(ptr) AccessChain 19(userIn) 23
-              26:    7(fvec4) Load 25
-              32:     20(int) Load 31(a)
-              33:     24(ptr) AccessChain 30(TexCoord) 32
-              34:    7(fvec4) Load 33
-              35:    7(fvec4) FAdd 26 34
-              37:     24(ptr) AccessChain 30(TexCoord) 36
-              38:    7(fvec4) Load 37
-              39:    7(fvec4) FAdd 35 38
-              41:    6(float) CompositeExtract 39 0
-              42:    6(float) CompositeExtract 39 1
-              43:   40(fvec2) CompositeConstruct 41 42
-              44:    7(fvec4) ImageSampleImplicitLod 14 43
-                              Store 9(texColor) 44
-              46:    7(fvec4) Load 45(color)
-              47:    7(fvec4) Load 9(texColor)
-              48:    7(fvec4) FAdd 47 46
-                              Store 9(texColor) 48
-              51:    6(float) Load 50(alpha)
-              54:     53(ptr) AccessChain 9(texColor) 52
-                              Store 54 51
-              58:     24(ptr) AccessChain 30(TexCoord) 57
-              59:    7(fvec4) Load 58
-              60:     20(int) Load 22(b)
-              61:     24(ptr) AccessChain 30(TexCoord) 60
-              62:    7(fvec4) Load 61
-              63:    7(fvec4) FAdd 59 62
-              64:    7(fvec4) Load 9(texColor)
-              65:    7(fvec4) FAdd 63 64
-              66:     20(int) Load 31(a)
-              67:     24(ptr) AccessChain 19(userIn) 66
-              68:    7(fvec4) Load 67
-              69:    7(fvec4) FAdd 65 68
-                              Store 56(gl_FragColor) 69
+                              Name 54_1  "main"
+                              Name 59_9  "texColor"
+                              Name 59_1  "texSampler2D"
+                              Name 59_2  "userIn"
+                              Name 59_3  "b"
+                              Name 59_4  "TexCoord"
+                              Name 59_5  "a"
+                              Name 59_6  "color"
+                              Name 59_7  "alpha"
+                              Name 59_8  "gl_FragColor"
+                              Decorate 59_1(texSampler2D) Binding 0
+                              Decorate 59_1(texSampler2D) DescriptorSet 0
+                              Decorate 59_2(userIn) Location 8
+                              Decorate 59_3(b) Flat
+                              Decorate 59_3(b) Location 11
+                              Decorate 59_4(TexCoord) Location 2
+                              Decorate 59_5(a) Flat
+                              Decorate 59_5(a) Location 10
+                              Decorate 59_6(color) Location 0
+                              Decorate 59_7(alpha) Location 1
+                              Decorate 59_8(gl_FragColor) Location 0
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 4
+            32_1:             TypePointer Function 23_1(fvec4)
+            25_1:             TypeImage 22_1(float) 2D sampled format:Unknown
+            27_1:             TypeSampledImage 25_1
+            32_2:             TypePointer UniformConstant 27_1
+59_1(texSampler2D):   32_2(ptr) Variable UniformConstant
+            21_1:             TypeInt 32 0
+         uint(2):   21_1(int) Constant 2
+            28_1:             TypeArray 23_1(fvec4) uint(2)
+            32_3:             TypePointer Input 28_1
+    59_2(userIn):   32_3(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            32_4:             TypePointer Input 21_2(int)
+         59_3(b):   32_4(ptr) Variable Input
+            32_5:             TypePointer Input 23_1(fvec4)
+         uint(6):   21_1(int) Constant 6
+            28_2:             TypeArray 23_1(fvec4) uint(6)
+            32_6:             TypePointer Input 28_2
+  59_4(TexCoord):   32_6(ptr) Variable Input
+         59_5(a):   32_4(ptr) Variable Input
+            43_1:   21_2(int) Constant 5
+            23_2:             TypeVector 22_1(float) 2
+     59_6(color):   32_5(ptr) Variable Input
+            32_7:             TypePointer Input 22_1(float)
+     59_7(alpha):   32_7(ptr) Variable Input
+         uint(3):   21_1(int) Constant 3
+            32_8:             TypePointer Function 22_1(float)
+            32_9:             TypePointer Output 23_1(fvec4)
+59_8(gl_FragColor):   32_9(ptr) Variable Output
+            43_2:   21_2(int) Constant 0
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+  59_9(texColor):   32_1(ptr) Variable Function
+            61_1:        27_1 Load 59_1(texSampler2D)
+            61_2:   21_2(int) Load 59_3(b)
+            65_1:   32_5(ptr) AccessChain 59_2(userIn) 61_2
+            61_3: 23_1(fvec4) Load 65_1
+            61_4:   21_2(int) Load 59_5(a)
+            65_2:   32_5(ptr) AccessChain 59_4(TexCoord) 61_4
+            61_5: 23_1(fvec4) Load 65_2
+           129_1: 23_1(fvec4) FAdd 61_3 61_5
+            65_3:   32_5(ptr) AccessChain 59_4(TexCoord) 43_1
+            61_6: 23_1(fvec4) Load 65_3
+           129_2: 23_1(fvec4) FAdd 129_1 61_6
+            81_1: 22_1(float) CompositeExtract 129_2 0
+            81_2: 22_1(float) CompositeExtract 129_2 1
+            80_1: 23_2(fvec2) CompositeConstruct 81_1 81_2
+            87_1: 23_1(fvec4) ImageSampleImplicitLod 61_1 80_1
+                              Store 59_9(texColor) 87_1
+            61_7: 23_1(fvec4) Load 59_6(color)
+            61_8: 23_1(fvec4) Load 59_9(texColor)
+           129_3: 23_1(fvec4) FAdd 61_8 61_7
+                              Store 59_9(texColor) 129_3
+            61_9: 22_1(float) Load 59_7(alpha)
+            65_4:   32_8(ptr) AccessChain 59_9(texColor) uint(3)
+                              Store 65_4 61_9
+            65_5:   32_5(ptr) AccessChain 59_4(TexCoord) 43_2
+           61_10: 23_1(fvec4) Load 65_5
+           61_11:   21_2(int) Load 59_3(b)
+            65_6:   32_5(ptr) AccessChain 59_4(TexCoord) 61_11
+           61_12: 23_1(fvec4) Load 65_6
+           129_4: 23_1(fvec4) FAdd 61_10 61_12
+           61_13: 23_1(fvec4) Load 59_9(texColor)
+           129_5: 23_1(fvec4) FAdd 129_4 61_13
+           61_14:   21_2(int) Load 59_5(a)
+            65_7:   32_5(ptr) AccessChain 59_2(userIn) 61_14
+           61_15: 23_1(fvec4) Load 65_7
+           129_6: 23_1(fvec4) FAdd 129_5 61_15
+                              Store 59_8(gl_FragColor) 129_6
                               Return
                               FunctionEnd

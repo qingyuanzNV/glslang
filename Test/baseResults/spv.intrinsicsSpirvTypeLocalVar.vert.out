@@ -4,40 +4,40 @@ spv.intrinsicsSpirvTypeLocalVar.vert
 // Id's are bound by 22
 
                               Capability Shader
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint Vertex 4  "main"
+                              EntryPoint Vertex 54_1  "main"
                               Source GLSL 460
                               SourceExtension  "GL_EXT_spirv_intrinsics"
-                              Name 4  "main"
-                              Name 10  "func(spv-t1;"
-                              Name 9  "emptyStruct"
-                              Name 13  "size"
-                              Name 16  "dummy"
-                              Name 18  "param"
-                              Decorate 13(size) SpecId 9
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeStruct
-               7:             TypePointer Function 6(struct)
-               8:             TypeFunction 2 7(ptr)
-              12:             TypeInt 32 1
-        13(size):     12(int) SpecConstant 9
-              14:             TypeArray 6(struct) 13(size)
-              15:             TypePointer Function 14
-              17:     12(int) Constant 1
-         4(main):           2 Function None 3
-               5:             Label
-       16(dummy):     15(ptr) Variable Function
-       18(param):      7(ptr) Variable Function
-              19:      7(ptr) AccessChain 16(dummy) 17
-              20:   6(struct) Load 19
-                              Store 18(param) 20
-              21:           2 FunctionCall 10(func(spv-t1;) 18(param)
+                              Name 54_1  "main"
+                              Name 54_2  "func(spv-t1;"
+                              Name 55_1  "emptyStruct"
+                              Name 50_1  "size"
+                              Name 59_1  "dummy"
+                              Name 59_2  "param"
+                              Decorate 50_1(size) SpecId 9
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            30_1:             TypeStruct
+            32_1:             TypePointer Function 30_1(struct)
+            33_2:             TypeFunction 19_1 32_1(ptr)
+            21_1:             TypeInt 32 1
+      50_1(size):   21_1(int) SpecConstant 9
+            28_1:             TypeArray 30_1(struct) 50_1(size)
+            32_2:             TypePointer Function 28_1
+            43_1:   21_1(int) Constant 1
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+     59_1(dummy):   32_2(ptr) Variable Function
+     59_2(param):   32_1(ptr) Variable Function
+            65_1:   32_1(ptr) AccessChain 59_1(dummy) 43_1
+            61_1:30_1(struct) Load 65_1
+                              Store 59_2(param) 61_1
+            57_1:        19_1 FunctionCall 54_2(func(spv-t1;) 59_2(param)
                               Return
                               FunctionEnd
-10(func(spv-t1;):           2 Function None 8
-  9(emptyStruct):      7(ptr) FunctionParameter
-              11:             Label
+54_2(func(spv-t1;):        19_1 Function None 33_2
+55_1(emptyStruct):   32_1(ptr) FunctionParameter
+           248_2:             Label
                               Return
                               FunctionEnd

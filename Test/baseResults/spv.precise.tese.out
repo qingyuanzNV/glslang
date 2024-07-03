@@ -4,178 +4,178 @@ spv.precise.tese
 // Id's are bound by 119
 
                               Capability Tessellation
-               1:             ExtInstImport  "GLSL.std.450"
+            11_1:             ExtInstImport  "GLSL.std.450"
                               MemoryModel Logical GLSL450
-                              EntryPoint TessellationEvaluation 4  "main" 12 21 62 112
-                              ExecutionMode 4 Triangles
-                              ExecutionMode 4 SpacingEqual
-                              ExecutionMode 4 VertexOrderCcw
+                              EntryPoint TessellationEvaluation 54_1  "main" 59_1 59_2 59_3 59_4
+                              ExecutionMode 54_1 Triangles
+                              ExecutionMode 54_1 SpacingEqual
+                              ExecutionMode 54_1 VertexOrderCcw
                               Source ESSL 310
                               SourceExtension  "GL_EXT_gpu_shader5"
                               SourceExtension  "GL_EXT_shader_io_blocks"
                               SourceExtension  "GL_EXT_tessellation_shader"
-                              Name 4  "main"
-                              Name 9  "pos"
-                              Name 12  "gl_TessCoord"
-                              Name 21  "in_te_position"
-                              Name 45  "f"
-                              Name 62  "in_f_color"
-                              Name 73  "bits"
-                              Name 77  "numBits"
-                              Name 78  "i"
-                              Name 110  "gl_PerVertex"
-                              MemberName 110(gl_PerVertex) 0  "gl_Position"
-                              MemberName 110(gl_PerVertex) 1  "gl_PointSize"
-                              Name 112  ""
-                              Decorate 12(gl_TessCoord) BuiltIn TessCoord
-                              Decorate 21(in_te_position) Location 0
-                              Decorate 27 NoContraction
-                              Decorate 34 NoContraction
-                              Decorate 35 NoContraction
-                              Decorate 42 NoContraction
-                              Decorate 43 NoContraction
-                              Decorate 62(in_f_color) RelaxedPrecision
-                              Decorate 62(in_f_color) Location 0
-                              Decorate 97 NoContraction
-                              Decorate 99 NoContraction
-                              Decorate 101 NoContraction
-                              Decorate 106 NoContraction
-                              Decorate 109 NoContraction
-                              Decorate 110(gl_PerVertex) Block
-                              MemberDecorate 110(gl_PerVertex) 0 BuiltIn Position
-                              MemberDecorate 110(gl_PerVertex) 1 BuiltIn PointSize
-               2:             TypeVoid
-               3:             TypeFunction 2
-               6:             TypeFloat 32
-               7:             TypeVector 6(float) 2
-               8:             TypePointer Function 7(fvec2)
-              10:             TypeVector 6(float) 3
-              11:             TypePointer Input 10(fvec3)
-12(gl_TessCoord):     11(ptr) Variable Input
-              13:             TypeInt 32 0
-              14:     13(int) Constant 0
-              15:             TypePointer Input 6(float)
-              18:     13(int) Constant 32
-              19:             TypeArray 7(fvec2) 18
-              20:             TypePointer Input 19
-21(in_te_position):     20(ptr) Variable Input
-              22:             TypeInt 32 1
-              23:     22(int) Constant 0
-              24:             TypePointer Input 7(fvec2)
-              28:     13(int) Constant 1
-              31:     22(int) Constant 1
-              36:     13(int) Constant 2
-              39:     22(int) Constant 2
-              44:             TypePointer Function 6(float)
-              46:    6(float) Constant 1077936128
-              57:    6(float) Constant 1056964608
-              60:             TypeVector 6(float) 4
-              61:             TypePointer Output 60(fvec4)
-  62(in_f_color):     61(ptr) Variable Output
-              66:    6(float) Constant 1065353216
-              71:             TypeVector 13(int) 2
-              72:             TypePointer Function 71(ivec2)
-              76:             TypePointer Function 13(int)
-              85:             TypeBool
-             105:    6(float) Constant 1025758986
-110(gl_PerVertex):             TypeStruct 60(fvec4) 6(float)
-             111:             TypePointer Output 110(gl_PerVertex)
-             112:    111(ptr) Variable Output
-             114:    6(float) Constant 0
-         4(main):           2 Function None 3
-               5:             Label
-          9(pos):      8(ptr) Variable Function
-           45(f):     44(ptr) Variable Function
-        73(bits):     72(ptr) Variable Function
-     77(numBits):     76(ptr) Variable Function
-           78(i):     76(ptr) Variable Function
-              16:     15(ptr) AccessChain 12(gl_TessCoord) 14
-              17:    6(float) Load 16
-              25:     24(ptr) AccessChain 21(in_te_position) 23
-              26:    7(fvec2) Load 25
-              27:    7(fvec2) VectorTimesScalar 26 17
-              29:     15(ptr) AccessChain 12(gl_TessCoord) 28
-              30:    6(float) Load 29
-              32:     24(ptr) AccessChain 21(in_te_position) 31
-              33:    7(fvec2) Load 32
-              34:    7(fvec2) VectorTimesScalar 33 30
-              35:    7(fvec2) FAdd 27 34
-              37:     15(ptr) AccessChain 12(gl_TessCoord) 36
-              38:    6(float) Load 37
-              40:     24(ptr) AccessChain 21(in_te_position) 39
-              41:    7(fvec2) Load 40
-              42:    7(fvec2) VectorTimesScalar 41 38
-              43:    7(fvec2) FAdd 35 42
-                              Store 9(pos) 43
-              47:     15(ptr) AccessChain 12(gl_TessCoord) 14
-              48:    6(float) Load 47
-              49:     15(ptr) AccessChain 12(gl_TessCoord) 28
-              50:    6(float) Load 49
-              51:     15(ptr) AccessChain 12(gl_TessCoord) 36
-              52:    6(float) Load 51
-              53:    6(float) ExtInst 1(GLSL.std.450) 37(FMin) 50 52
-              54:    6(float) ExtInst 1(GLSL.std.450) 37(FMin) 48 53
-              55:    6(float) FMul 46 54
-              56:    6(float) ExtInst 1(GLSL.std.450) 31(Sqrt) 55
-              58:    6(float) FMul 56 57
-              59:    6(float) FAdd 58 57
-                              Store 45(f) 59
-              63:   10(fvec3) Load 12(gl_TessCoord)
-              64:    6(float) Load 45(f)
-              65:   10(fvec3) VectorTimesScalar 63 64
-              67:    6(float) CompositeExtract 65 0
-              68:    6(float) CompositeExtract 65 1
-              69:    6(float) CompositeExtract 65 2
-              70:   60(fvec4) CompositeConstruct 67 68 69 66
-                              Store 62(in_f_color) 70
-              74:    7(fvec2) Load 9(pos)
-              75:   71(ivec2) Bitcast 74
-                              Store 73(bits) 75
-                              Store 77(numBits) 14
-                              Store 78(i) 14
-                              Branch 79
-              79:             Label
-                              LoopMerge 81 82 None
-                              Branch 83
-              83:             Label
-              84:     13(int) Load 78(i)
-              86:    85(bool) ULessThan 84 18
-                              BranchConditional 86 80 81
-              80:               Label
-              87:     76(ptr)   AccessChain 73(bits) 14
-              88:     13(int)   Load 87
-              89:     13(int)   Load 78(i)
-              90:     13(int)   ShiftLeftLogical 88 89
-              91:     13(int)   BitwiseAnd 90 28
-              92:     76(ptr)   AccessChain 73(bits) 28
-              93:     13(int)   Load 92
-              94:     13(int)   Load 78(i)
-              95:     13(int)   ShiftLeftLogical 93 94
-              96:     13(int)   BitwiseAnd 95 28
-              97:     13(int)   IAdd 91 96
-              98:     13(int)   Load 77(numBits)
-              99:     13(int)   IAdd 98 97
-                                Store 77(numBits) 99
-                                Branch 82
-              82:               Label
-             100:     13(int)   Load 78(i)
-             101:     13(int)   IAdd 100 31
-                                Store 78(i) 101
-                                Branch 79
-              81:             Label
-             102:     13(int) Load 77(numBits)
-             103:     13(int) BitwiseAnd 102 28
-             104:    6(float) ConvertUToF 103
-             106:    6(float) FMul 104 105
-             107:    7(fvec2) Load 9(pos)
-             108:    7(fvec2) CompositeConstruct 106 106
-             109:    7(fvec2) FAdd 107 108
-                              Store 9(pos) 109
-             113:    7(fvec2) Load 9(pos)
-             115:    6(float) CompositeExtract 113 0
-             116:    6(float) CompositeExtract 113 1
-             117:   60(fvec4) CompositeConstruct 115 116 114 66
-             118:     61(ptr) AccessChain 112 23
-                              Store 118 117
+                              Name 54_1  "main"
+                              Name 59_5  "pos"
+                              Name 59_1  "gl_TessCoord"
+                              Name 59_2  "in_te_position"
+                              Name 59_6  "f"
+                              Name 59_3  "in_f_color"
+                              Name 59_7  "bits"
+                              Name 59_8  "numBits"
+                              Name 59_9  "i"
+                              Name 30_1  "gl_PerVertex"
+                              MemberName 30_1(gl_PerVertex) 0  "gl_Position"
+                              MemberName 30_1(gl_PerVertex) 1  "gl_PointSize"
+                              Name 59_4  ""
+                              Decorate 59_1(gl_TessCoord) BuiltIn TessCoord
+                              Decorate 59_2(in_te_position) Location 0
+                              Decorate 142_1 NoContraction
+                              Decorate 142_2 NoContraction
+                              Decorate 129_1 NoContraction
+                              Decorate 142_3 NoContraction
+                              Decorate 129_2 NoContraction
+                              Decorate 59_3(in_f_color) RelaxedPrecision
+                              Decorate 59_3(in_f_color) Location 0
+                              Decorate 128_1 NoContraction
+                              Decorate 128_2 NoContraction
+                              Decorate 128_3 NoContraction
+                              Decorate 133_3 NoContraction
+                              Decorate 129_4 NoContraction
+                              Decorate 30_1(gl_PerVertex) Block
+                              MemberDecorate 30_1(gl_PerVertex) 0 BuiltIn Position
+                              MemberDecorate 30_1(gl_PerVertex) 1 BuiltIn PointSize
+            19_1:             TypeVoid
+            33_1:             TypeFunction 19_1
+            22_1:             TypeFloat 32
+            23_1:             TypeVector 22_1(float) 2
+            32_1:             TypePointer Function 23_1(fvec2)
+            23_2:             TypeVector 22_1(float) 3
+            32_2:             TypePointer Input 23_2(fvec3)
+59_1(gl_TessCoord):   32_2(ptr) Variable Input
+            21_1:             TypeInt 32 0
+         uint(0):   21_1(int) Constant 0
+            32_3:             TypePointer Input 22_1(float)
+        uint(32):   21_1(int) Constant 32
+            28_1:             TypeArray 23_1(fvec2) uint(32)
+            32_4:             TypePointer Input 28_1
+59_2(in_te_position):   32_4(ptr) Variable Input
+            21_2:             TypeInt 32 1
+            43_1:   21_2(int) Constant 0
+            32_5:             TypePointer Input 23_1(fvec2)
+         uint(1):   21_1(int) Constant 1
+            43_2:   21_2(int) Constant 1
+         uint(2):   21_1(int) Constant 2
+            43_3:   21_2(int) Constant 2
+            32_6:             TypePointer Function 22_1(float)
+            43_4: 22_1(float) Constant 1077936128
+            43_5: 22_1(float) Constant 1056964608
+            23_3:             TypeVector 22_1(float) 4
+            32_7:             TypePointer Output 23_3(fvec4)
+59_3(in_f_color):   32_7(ptr) Variable Output
+            43_6: 22_1(float) Constant 1065353216
+            23_4:             TypeVector 21_1(int) 2
+            32_8:             TypePointer Function 23_4(ivec2)
+            32_9:             TypePointer Function 21_1(int)
+            20_1:             TypeBool
+            43_7: 22_1(float) Constant 1025758986
+30_1(gl_PerVertex):             TypeStruct 23_3(fvec4) 22_1(float)
+           32_10:             TypePointer Output 30_1(gl_PerVertex)
+            59_4:  32_10(ptr) Variable Output
+            43_8: 22_1(float) Constant 0
+      54_1(main):        19_1 Function None 33_1
+           248_1:             Label
+       59_5(pos):   32_1(ptr) Variable Function
+         59_6(f):   32_6(ptr) Variable Function
+      59_7(bits):   32_8(ptr) Variable Function
+   59_8(numBits):   32_9(ptr) Variable Function
+         59_9(i):   32_9(ptr) Variable Function
+            65_1:   32_3(ptr) AccessChain 59_1(gl_TessCoord) uint(0)
+            61_1: 22_1(float) Load 65_1
+            65_2:   32_5(ptr) AccessChain 59_2(in_te_position) 43_1
+            61_2: 23_1(fvec2) Load 65_2
+           142_1: 23_1(fvec2) VectorTimesScalar 61_2 61_1
+            65_3:   32_3(ptr) AccessChain 59_1(gl_TessCoord) uint(1)
+            61_3: 22_1(float) Load 65_3
+            65_4:   32_5(ptr) AccessChain 59_2(in_te_position) 43_2
+            61_4: 23_1(fvec2) Load 65_4
+           142_2: 23_1(fvec2) VectorTimesScalar 61_4 61_3
+           129_1: 23_1(fvec2) FAdd 142_1 142_2
+            65_5:   32_3(ptr) AccessChain 59_1(gl_TessCoord) uint(2)
+            61_5: 22_1(float) Load 65_5
+            65_6:   32_5(ptr) AccessChain 59_2(in_te_position) 43_3
+            61_6: 23_1(fvec2) Load 65_6
+           142_3: 23_1(fvec2) VectorTimesScalar 61_6 61_5
+           129_2: 23_1(fvec2) FAdd 129_1 142_3
+                              Store 59_5(pos) 129_2
+            65_7:   32_3(ptr) AccessChain 59_1(gl_TessCoord) uint(0)
+            61_7: 22_1(float) Load 65_7
+            65_8:   32_3(ptr) AccessChain 59_1(gl_TessCoord) uint(1)
+            61_8: 22_1(float) Load 65_8
+            65_9:   32_3(ptr) AccessChain 59_1(gl_TessCoord) uint(2)
+            61_9: 22_1(float) Load 65_9
+          1-37_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 37(FMin) 61_8 61_9
+          1-37_2: 22_1(float) ExtInst 11_1(GLSL.std.450) 37(FMin) 61_7 1-37_1
+           133_1: 22_1(float) FMul 43_4 1-37_2
+          1-31_1: 22_1(float) ExtInst 11_1(GLSL.std.450) 31(Sqrt) 133_1
+           133_2: 22_1(float) FMul 1-31_1 43_5
+           129_3: 22_1(float) FAdd 133_2 43_5
+                              Store 59_6(f) 129_3
+           61_10: 23_2(fvec3) Load 59_1(gl_TessCoord)
+           61_11: 22_1(float) Load 59_6(f)
+           142_4: 23_2(fvec3) VectorTimesScalar 61_10 61_11
+            81_1: 22_1(float) CompositeExtract 142_4 0
+            81_2: 22_1(float) CompositeExtract 142_4 1
+            81_3: 22_1(float) CompositeExtract 142_4 2
+            80_1: 23_3(fvec4) CompositeConstruct 81_1 81_2 81_3 43_6
+                              Store 59_3(in_f_color) 80_1
+           61_12: 23_1(fvec2) Load 59_5(pos)
+           124_1: 23_4(ivec2) Bitcast 61_12
+                              Store 59_7(bits) 124_1
+                              Store 59_8(numBits) uint(0)
+                              Store 59_9(i) uint(0)
+                              Branch 248_2
+           248_2:             Label
+                              LoopMerge 248_6 248_5 None
+                              Branch 248_3
+           248_3:             Label
+           61_13:   21_1(int) Load 59_9(i)
+           176_1:  20_1(bool) ULessThan 61_13 uint(32)
+                              BranchConditional 176_1 248_4 248_6
+           248_4:               Label
+           65_10:   32_9(ptr)   AccessChain 59_7(bits) uint(0)
+           61_14:   21_1(int)   Load 65_10
+           61_15:   21_1(int)   Load 59_9(i)
+           196_1:   21_1(int)   ShiftLeftLogical 61_14 61_15
+           199_1:   21_1(int)   BitwiseAnd 196_1 uint(1)
+           65_11:   32_9(ptr)   AccessChain 59_7(bits) uint(1)
+           61_16:   21_1(int)   Load 65_11
+           61_17:   21_1(int)   Load 59_9(i)
+           196_2:   21_1(int)   ShiftLeftLogical 61_16 61_17
+           199_2:   21_1(int)   BitwiseAnd 196_2 uint(1)
+           128_1:   21_1(int)   IAdd 199_1 199_2
+           61_18:   21_1(int)   Load 59_8(numBits)
+           128_2:   21_1(int)   IAdd 61_18 128_1
+                                Store 59_8(numBits) 128_2
+                                Branch 248_5
+           248_5:               Label
+           61_19:   21_1(int)   Load 59_9(i)
+           128_3:   21_1(int)   IAdd 61_19 43_2
+                                Store 59_9(i) 128_3
+                                Branch 248_2
+           248_6:             Label
+           61_20:   21_1(int) Load 59_8(numBits)
+           199_3:   21_1(int) BitwiseAnd 61_20 uint(1)
+           112_1: 22_1(float) ConvertUToF 199_3
+           133_3: 22_1(float) FMul 112_1 43_7
+           61_21: 23_1(fvec2) Load 59_5(pos)
+            80_2: 23_1(fvec2) CompositeConstruct 133_3 133_3
+           129_4: 23_1(fvec2) FAdd 61_21 80_2
+                              Store 59_5(pos) 129_4
+           61_22: 23_1(fvec2) Load 59_5(pos)
+            81_4: 22_1(float) CompositeExtract 61_22 0
+            81_5: 22_1(float) CompositeExtract 61_22 1
+            80_3: 23_3(fvec4) CompositeConstruct 81_4 81_5 43_8 43_6
+           65_12:   32_7(ptr) AccessChain 59_4 43_1
+                              Store 65_12 80_3
                               Return
                               FunctionEnd
