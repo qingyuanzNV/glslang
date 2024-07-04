@@ -37,6 +37,7 @@
 //
 
 #include <cstdlib>
+#include <cstdint>
 #include <cstring>
 #include <cassert>
 #include <iomanip>
@@ -44,6 +45,8 @@
 #include <sstream>
 #include <cstring>
 #include <utility>
+#include <string>
+#include <map>
 
 #include "disassemble.h"
 #include "doc.h"
@@ -71,6 +74,16 @@ static void Kill(std::ostream& out, const char* message)
 {
     out << std::endl << "Disassembly failed: " << message << std::endl;
     exit(1);
+}
+
+template <class To, class From>
+std::enable_if_t<sizeof(To) == sizeof(From) && std::is_trivially_copyable_v<From> && std::is_trivially_copyable_v<To>,
+                 To>
+BitCast(const From& src) noexcept
+{
+    To dst;
+    std::memcpy(&dst, &src, sizeof(To));
+    return dst;
 }
 
 // used to identify the extended instruction library imported when printing
@@ -121,6 +134,13 @@ protected:
     Id bound;
     std::vector<unsigned int> idInstruction;  // the word offset into the stream where the instruction for result [id] starts; 0 if not yet seen (forward reference or function parameter)
 
+    // Stablized display string for ids, aiming to avoid mass diffs when id shifts
+    std::map<unsigned, std::string> remappedIds;
+    // opcode -> counter
+    std::map<unsigned, unsigned> uniqueIdPerOp;
+    // (ext-set, ext-op) -> counter
+    std::map<std::pair<unsigned, unsigned>, unsigned> uniqueIdPerExtOp;
+
     std::vector<std::string> idDescriptor;    // the best text string known for explaining the <id>
 
     // schema
@@ -166,7 +186,66 @@ void SpirvStream::validate()
 // Boiler plate for each is handled here directly, the rest is dispatched.
 void SpirvStream::processInstructions()
 {
+    auto firstInstructionWord = word;
+
+    // Preprocess
+    Id int32TypeId = 0;
+    Id uint32TypeId = 0;
+    while (word < size) {
+        int instructionStart = word;
+
+        // Instruction wordCount and opcode
+        unsigned int firstWord = stream[word];
+        unsigned wordCount = firstWord >> WordCountShift;
+        Op opCode = (Op)(firstWord & OpCodeMask);
+        int nextInst = instructionStart + wordCount;
+        ++word;
+
+        // Presence of full instruction
+        if (nextInst > size)
+            Kill(out, "stream instruction terminated too early");
+
+        // Type <id>
+        Id typeId = 0;
+        if (InstructionDesc[opCode].hasType()) {
+            typeId = stream[word++];
+        }
+
+        // Result <id>
+        Id resultId = 0;
+        if (InstructionDesc[opCode].hasResult()) {
+            resultId = stream[word++];
+        }
+
+        if (resultId != 0) {
+            // Collect some frequently used types. Their ids should be inlined with their value
+            if (opCode == OpTypeInt && stream[instructionStart + 2] == 32) {
+                if (stream[instructionStart + 3] == 0) {
+                    uint32TypeId = resultId;
+                } else {
+                    int32TypeId = resultId;
+                }
+            }
+
+            if (opCode == OpExtInst) {
+                auto extSet = stream[instructionStart + 3];
+                auto extOp = stream[instructionStart + 4];
+                remappedIds[resultId] = std::to_string(extSet) + "-" + std::to_string(extOp) + "_" +
+                                        std::to_string(++uniqueIdPerExtOp[{extSet, extOp}]);
+            } else if (opCode == OpConstant && typeId == int32TypeId) {
+                remappedIds[resultId] = "int(" + std::to_string(BitCast<int>(stream[instructionStart + 3])) + ")";
+            } else if (opCode == OpConstant && typeId == uint32TypeId) {
+                remappedIds[resultId] = "uint(" + std::to_string(stream[instructionStart + 3]) + ")";
+            } else {
+                remappedIds[resultId] = std::to_string(opCode) + "_" + std::to_string(++uniqueIdPerOp[opCode]);
+            }
+        }
+
+        word += wordCount;
+    }
+
     // Instructions
+    word = firstInstructionWord;
     while (word < size) {
         int instructionStart = word;
 
@@ -229,7 +308,7 @@ void SpirvStream::formatId(Id id, std::stringstream& idStream)
         if (id >= bound)
             Kill(out, "Bad <id>");
 
-        idStream << id;
+        idStream << remappedIds[id];
         if (idDescriptor[id].size() > 0)
             idStream << "(" << idDescriptor[id] << ")";
     }
@@ -263,7 +342,7 @@ void SpirvStream::outputId(Id id)
     if (id >= bound)
         Kill(out, "Bad <id>");
 
-    out << id;
+    out << remappedIds[id];
     if (idDescriptor[id].size() > 0)
         out << "(" << idDescriptor[id] << ")";
 }
